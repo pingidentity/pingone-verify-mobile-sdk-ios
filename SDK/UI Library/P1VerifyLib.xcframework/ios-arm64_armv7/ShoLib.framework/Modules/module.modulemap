@@ -1,0 +1,11 @@
+framework module ShoLib {
+  umbrella header "ShoLib.h"
+
+  export *
+  module * { export * }
+}
+
+module ShoLib.Swift {
+    header "ShoLib-Swift.h"
+    requires objc
+}

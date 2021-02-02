@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "iCarousel",
+        "repositoryURL": "https://github.com/ShoCardInc/iCarousel",
+        "state": {
+          "branch": "master",
+          "revision": "091cce99a888f1c42b7081c9fac03859250653de",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

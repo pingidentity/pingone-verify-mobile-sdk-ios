@@ -1,0 +1,20 @@
+//
+//  LiveFaceVerification.strings
+//  P1VerifyApp
+//
+//  Created by Ping Identity on 12/31/20.
+//  Copyright © 2021 Ping Identity. All rights reserved.
+//
+
+"different_face_error" = "Different face in the frame";
+"face_moved_out_of_frame_error" = "Face moved out of frame";
+"missed_expression_error" = "Whoops, missed it. Please try again.";
+"no_face_error" = "No Face Detected";
+"multiple_faces_error" = "Multiple faces in the frame";
+"camera_permission_rationale" = "Access to the camera is required for scanning your IDs and taking pictures.";
+"generic_error" = "An error occurred while performing the requested operation. %@";
+"capture_selfie_step_instruction" = "This photo is for your profile and can be shared with others.";
+"smile_step_instruction" = "Give us a Smile!";
+"no_smile_step_instruction" = "Keep a straight face.";
+"close_left_eye_step_instruction" = "Close your left eye";
+"close_right_eye_step_instruction" = "Close your right eye";

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDWalletCardView" customModule="P1VerifyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cardName" destination="pLG-co-X0A" id="VPG-94-z1J"/>
+                <outlet property="cardThumb" destination="VeD-Sv-Rch" id="6EX-fM-UDF"/>
+                <outlet property="view" destination="iN0-l3-epB" id="XKv-FS-QLI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Card Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLG-co-X0A">
+                    <rect key="frame" x="20" y="10" width="107.5" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-Sv-Rch">
+                    <rect key="frame" x="21.5" y="44" width="294" height="196"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="VeD-Sv-Rch" secondAttribute="height" multiplier="1.5" id="pst-Mm-OUQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VeD-Sv-Rch" secondAttribute="trailing" priority="750" constant="20" id="LyG-tf-BRZ"/>
+                <constraint firstItem="VeD-Sv-Rch" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bDJ-di-Vji"/>
+                <constraint firstItem="pLG-co-X0A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cDX-CS-crZ"/>
+                <constraint firstItem="VeD-Sv-Rch" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" constant="20" id="dMK-J5-jFV"/>
+                <constraint firstItem="pLG-co-X0A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="gc9-36-r6E"/>
+                <constraint firstItem="VeD-Sv-Rch" firstAttribute="top" secondItem="pLG-co-X0A" secondAttribute="bottom" constant="10" id="kvw-Sh-1Gp"/>
+                <constraint firstAttribute="bottom" secondItem="VeD-Sv-Rch" secondAttribute="bottom" constant="20" id="n1s-SE-uo8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="2.1739130434782612" y="100.44642857142857"/>
+        </view>
+    </objects>
+</document>

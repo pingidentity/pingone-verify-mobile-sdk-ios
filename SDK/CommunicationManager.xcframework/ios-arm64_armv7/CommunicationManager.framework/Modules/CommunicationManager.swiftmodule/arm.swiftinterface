@@ -1,0 +1,125 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommunicationManager
+import Foundation
+import P1VerifyIDSchema
+import Swift
+public protocol CoderProtocol {
+  var contentType: Swift.String { get }
+  func encodeRequestBody(requestBody: CommunicationManager.RequestBody) throws -> Foundation.Data
+  func decodeResponseData(responseData: Foundation.Data) throws -> Any
+}
+public class JsonCoder : CommunicationManager.CoderProtocol {
+  final public let contentType: Swift.String
+  public init()
+  public func encodeRequestBody(requestBody: CommunicationManager.RequestBody) throws -> Foundation.Data
+  public func decodeResponseData(responseData: Foundation.Data) throws -> Any
+  @objc deinit
+}
+public enum HttpMethod : Swift.String {
+  case POST
+  case GET
+  case PUT
+  case DELETE
+  case PATCH
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class Request {
+  public init(url: Swift.String) throws
+  @discardableResult
+  public func setHeader(_ header: CommunicationManager.RequestHeader) -> CommunicationManager.Request
+  @discardableResult
+  public func setBody(_ body: CommunicationManager.RequestBody) -> CommunicationManager.Request
+  @discardableResult
+  public func setHeaderField(_ headerField: Swift.String, headerValue: Swift.String) -> CommunicationManager.Request
+  @discardableResult
+  public func setBodyParam(_ bodyField: Swift.String, bodyValue: Swift.Codable) -> CommunicationManager.Request
+  @discardableResult
+  public func get(coder: CommunicationManager.CoderProtocol, completionHandler: @escaping (Any?, CommunicationManager.RequestError?) -> Swift.Void) -> CommunicationManager.Request
+  @discardableResult
+  public func post(coder: CommunicationManager.CoderProtocol, completionHandler: @escaping (Any?, CommunicationManager.RequestError?) -> Swift.Void) -> CommunicationManager.Request
+  @discardableResult
+  public func put(coder: CommunicationManager.CoderProtocol, completionHandler: @escaping (Any?, CommunicationManager.RequestError?) -> Swift.Void) -> CommunicationManager.Request
+  @discardableResult
+  public func delete(coder: CommunicationManager.CoderProtocol, completionHandler: @escaping (Any?, CommunicationManager.RequestError?) -> Swift.Void) -> CommunicationManager.Request
+  @discardableResult
+  public func response(coder: CommunicationManager.CoderProtocol, httpMethod: CommunicationManager.HttpMethod, completionHandler: @escaping (Any?, CommunicationManager.RequestError?) -> Swift.Void) -> CommunicationManager.Request
+  @objc deinit
+}
+public class RequestBody {
+  public init(body: [Swift.String : Any])
+  convenience public init()
+  public subscript(bodyField: Swift.String) -> Any? {
+    get
+    set(newValue)
+  }
+  @discardableResult
+  public func setBodyParam(_ bodyField: Swift.String, bodyValue: Swift.Codable) -> CommunicationManager.RequestBody
+  public func getParams() -> [Swift.String : Any]
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+extension RequestBody : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension RequestBody : Swift.Sequence {
+  public typealias Iterator = Swift.DictionaryIterator<Swift.String, Any>
+  public func makeIterator() -> CommunicationManager.RequestBody.Iterator
+  public typealias Element = Swift.Dictionary<Swift.String, Any>.Iterator.Element
+}
+public enum RequestError : Swift.Error {
+  case cannotCreateURL(_: Swift.String)
+  case failedToParseJson(_: Swift.Error? = nil, description: Swift.String)
+  case cannotSerializeRequestBody(_: Swift.Error? = nil, description: Swift.String)
+  case cannotParseResponse(_: Swift.Error? = nil, description: Swift.String)
+  case requestFailedWithError(_: Swift.String, _: Swift.Int?)
+}
+extension RequestError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension RequestError : Swift.Equatable {
+  public static func == (lhs: CommunicationManager.RequestError, rhs: CommunicationManager.RequestError) -> Swift.Bool
+}
+public class RequestHeader {
+  public static let header_content_type: Swift.String
+  public static let header_content_type_json: Swift.String
+  public static let header_content_type_urlencoded: Swift.String
+  public static let header_content_type_jwks: Swift.String
+  public static let header_content_type_jwt: Swift.String
+  public static let header_content_type_text_plain: Swift.String
+  public init(headers: [Swift.String : Swift.String])
+  convenience public init()
+  public subscript(headerField: Swift.String) -> Swift.String? {
+    get
+    set(newValue)
+  }
+  @discardableResult
+  public func setHeaderField(_ headerField: Swift.String, headerValue: Swift.String) -> CommunicationManager.RequestHeader
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+extension RequestHeader : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension RequestHeader : Swift.Sequence {
+  public typealias Iterator = Swift.DictionaryIterator<Swift.String, Swift.String>
+  public func makeIterator() -> CommunicationManager.RequestHeader.Iterator
+  public typealias Element = Swift.Dictionary<Swift.String, Swift.String>.Iterator.Element
+}
+extension CommunicationManager.HttpMethod : Swift.Equatable {}
+extension CommunicationManager.HttpMethod : Swift.Hashable {}
+extension CommunicationManager.HttpMethod : Swift.RawRepresentable {}

@@ -1,0 +1,26 @@
+
+//  IdScanner.strings
+//  P1VerifyApp
+//
+//  Created by Ping Identity on 12/31/20.
+//  Copyright © 2021 Ping Identity. All rights reserved.
+//
+
+"license_capture_error" = "An error occurred while capturing your license. Please try again.";
+"cannot_find_face_error" = "An error occurred while looking for a face in the captured image. Please try again.";
+"cannot_scan_barcode_error" = "An error occurred while scanning the code on your license. Please try again.";
+"id_information_captured" = "ID information captured";
+"scan_barcode" = "Scan the barcode on the back";
+"capture_back" = "Capture the back side";
+"no_face_found_error" = "No face found in the picture.\nPlease try again and make sure you don\'t crop out the face after taking the picture.";
+"flip_id_message" = "Now flip your ID to %@.";
+"picker_default_instruction" = "Choose an option to continue.";
+"select_country_instruction" = "Select the issuing country of your Driver License.";
+"Driver License" = "Driver License";
+"Driver License %@" = "Driver License %@";
+"confirm_capture_instruction" = "Confirm you can see your photo clearly and approve the %@.";
+"scan_barcode_instruction" = "Align ID inside the guidelines and scan the barcode on the back of your drivers license.";
+"capture_photo_instruction" = "Align ID inside the guidelines and take a photo of the %@ of your %@.";
+"capture_passport" = "Capture Passport";
+"info_page" = "info page";
+"Approve %@" = "Approve %@";
