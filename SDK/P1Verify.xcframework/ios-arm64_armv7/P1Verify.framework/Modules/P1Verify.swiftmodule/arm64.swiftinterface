@@ -24,6 +24,7 @@ public enum IdvError : Swift.Error {
   case invalidReponseFromIdvService(_: Swift.String)
   case missingJoseHelper(_: Swift.String)
   case failedToLoadSavedConfig(_: Swift.String)
+  case failedToProcessNotification(_: Swift.String)
 }
 extension IdvError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
@@ -47,18 +48,29 @@ extension IdvService {
     public static func initWithNewConfigFromQr(_ qrUrl: Swift.String) -> P1Verify.IdvService.Builder
     public static func initWithSavedConfig() -> P1Verify.IdvService.Builder
     @discardableResult
+    public func setNotificationHandler(_ handler: P1Verify.NotificationHandler) -> P1Verify.IdvService.Builder
+    @discardableResult
     public func setPushNotificationToken(_ pnToken: Foundation.Data) -> P1Verify.IdvService.Builder
+    @discardableResult
+    public func setPushSandbox(_ pushSandbox: Swift.Bool) -> P1Verify.IdvService.Builder
     public func create(onComplete: @escaping (Swift.Result<P1Verify.IdvService, Swift.Error>) -> Swift.Void)
     @objc deinit
   }
 }
 @_hasMissingDesignatedInitializers public class IdvService {
+  public func isSandbox() -> Swift.Bool
+  public func setPushSandbox(_ pushSandbox: Swift.Bool)
   public func setUniqueToken(_ uniqueToken: Swift.String)
+  public func setNotificationHandler(_ handler: P1Verify.NotificationHandler)
   public func getStoredClaims() -> [P1Verify.Claim]
   public func submitDataForVerification(data: [P1VerifyIDSchema.IdCard], onComplete: @escaping (Swift.Result<P1Verify.VerifyStatus, P1Verify.IdvError>) -> Swift.Void)
-  public func getVerificationStatus(onComplete: @escaping (Swift.Result<P1Verify.VerificationResult, P1Verify.IdvError>) -> Swift.Void)
-  public func processNotification(userInfo: [Swift.AnyHashable : Any]?, onComplete: @escaping (Swift.Result<P1Verify.VerificationResult, P1Verify.IdvError>) -> Swift.Void)
+  public func checkVerificationStatus(handler: P1Verify.NotificationHandler? = nil)
+  public func processNotification(userInfo: [Swift.AnyHashable : Any]?, handler: P1Verify.NotificationHandler? = nil) -> Swift.Bool
   @objc deinit
+}
+public protocol NotificationHandler {
+  func handlerResult(_ verificationResult: P1Verify.VerificationResult)
+  func handleError(_ error: P1Verify.IdvError)
 }
 @_hasMissingDesignatedInitializers public class VerificationResult {
   public func getTransactionId() -> Swift.String
@@ -84,8 +96,8 @@ extension IdvService {
   public func getHolder() -> P1Verify.SaltedData
   public func getSubject() -> P1Verify.SaltedData
   public func getReferenceClaimId() -> P1Verify.SaltedData?
-  public func getClaimSaltedData() -> [P1Verify.SaltedData : P1Verify.SaltedData]
-  public func getClaimData() -> [Swift.String : Swift.String]
+  public func getClaimData() -> [P1Verify.SaltedData : P1Verify.SaltedData]
+  public func getData() -> [Swift.String : Swift.String]
   public func getDataJson() -> Swift.String
   public func getDataSignature() -> Swift.String
   public func getDataHash() -> Swift.String

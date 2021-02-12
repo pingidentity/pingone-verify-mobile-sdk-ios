@@ -14,7 +14,7 @@ import P1VerifyIDSchema
 class WizardDriverLicenseViewController: WizardStepViewController {
     
     class func getViewController(containerViewController: UIViewController) -> WizardDriverLicenseViewController {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WizardDriverLicenseViewController") as! WizardDriverLicenseViewController
+        let vc = UIStoryboard(name: "Verify", bundle: nil).instantiateViewController(withIdentifier: "WizardDriverLicenseViewController") as! WizardDriverLicenseViewController
         vc.wizardPageContainerViewController = containerViewController
         return vc
     }

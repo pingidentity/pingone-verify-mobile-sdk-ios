@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var pnToken: Data?
     var notificationUserInfo: [AnyHashable: Any]? {
         didSet {
-            NotificationCenter.default.post(name: NSNotification.Name(StorageManager.REMOTE_PUSH_RECEIVED_NOTIFICATION_CENTER_KEY), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(StorageManager.REMOTE_PUSH_RECEIVED_NOTIFICATION_CENTER_KEY), object: nil, userInfo: self.notificationUserInfo)
         }
     }
 

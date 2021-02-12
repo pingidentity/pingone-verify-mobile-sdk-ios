@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C299B1325E6C62800D970C6 /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B0D25E6C62800D970C6 /* CryptoTools.xcframework */; };
+		1C299B1425E6C62800D970C6 /* CryptoTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B0D25E6C62800D970C6 /* CryptoTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C299B1525E6C62800D970C6 /* P1Verify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B0E25E6C62800D970C6 /* P1Verify.xcframework */; };
+		1C299B1625E6C62800D970C6 /* P1Verify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B0E25E6C62800D970C6 /* P1Verify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C299B1725E6C62800D970C6 /* JOSESwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B0F25E6C62800D970C6 /* JOSESwift.xcframework */; };
+		1C299B1825E6C62800D970C6 /* JOSESwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B0F25E6C62800D970C6 /* JOSESwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C299B1925E6C62900D970C6 /* CommunicationManager.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B1025E6C62800D970C6 /* CommunicationManager.xcframework */; };
+		1C299B1A25E6C62900D970C6 /* CommunicationManager.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B1025E6C62800D970C6 /* CommunicationManager.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C299B1B25E6C62900D970C6 /* JOSETools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B1125E6C62800D970C6 /* JOSETools.xcframework */; };
+		1C299B1C25E6C62900D970C6 /* JOSETools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B1125E6C62800D970C6 /* JOSETools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C299B1D25E6C62900D970C6 /* P1VerifyIDSchema.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B1225E6C62800D970C6 /* P1VerifyIDSchema.xcframework */; };
+		1C299B1E25E6C62900D970C6 /* P1VerifyIDSchema.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C299B1225E6C62800D970C6 /* P1VerifyIDSchema.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C394D48259E7DB30013AD3F /* LiveFaceVerification.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4A259E7DB30013AD3F /* LiveFaceVerification.strings */; };
 		1C394D4D259E7DE40013AD3F /* IdScanner.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4F259E7DE40013AD3F /* IdScanner.strings */; };
 		1C971192256468760028466E /* iCarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 1C971191256468760028466E /* iCarousel */; };
@@ -24,7 +36,7 @@
 		1C9711AD256492150028466E /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9711AC256492150028466E /* UIView+Border.swift */; };
 		1C9711AF256496E70028466E /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9711AE256496E70028466E /* QRScannerViewController.swift */; };
 		1C9711B1256497750028466E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9711B0256497750028466E /* SettingsViewController.swift */; };
-		1CBD1CEE256DA6AD001BFAB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC66ED255F030B00BE4B6F /* HomeViewController.swift */; };
+		1CBD1CEE256DA6AD001BFAB8 /* VerifyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC66ED255F030B00BE4B6F /* VerifyHomeViewController.swift */; };
 		1CBE3E88257AD69F009BD632 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE3E87257AD69F009BD632 /* String+localized.swift */; };
 		1CBE3E8B257AD815009BD632 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CBE3E89257AD815009BD632 /* Localizable.strings */; };
 		1CBE3E94257AF036009BD632 /* PollingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE3E93257AF036009BD632 /* PollingHelper.swift */; };
@@ -41,22 +53,10 @@
 		1CC18E9B256CB27900A6842E /* IDWalletCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CC18E99256CB27900A6842E /* IDWalletCardView.xib */; };
 		1CC18E9D256D85F600A6842E /* TicketEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC18E9C256D85F600A6842E /* TicketEntryViewController.swift */; };
 		1CC18E9F256D88DC00A6842E /* IdvHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC18E9E256D88DC00A6842E /* IdvHelper.swift */; };
-		1CCD9DB425C8AD8300A017F1 /* JOSESwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DAE25C8AD8300A017F1 /* JOSESwift.xcframework */; };
-		1CCD9DB525C8AD8300A017F1 /* JOSESwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DAE25C8AD8300A017F1 /* JOSESwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CCD9DB625C8AD8300A017F1 /* P1VerifyIDSchema.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DAF25C8AD8300A017F1 /* P1VerifyIDSchema.xcframework */; };
-		1CCD9DB725C8AD8300A017F1 /* P1VerifyIDSchema.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DAF25C8AD8300A017F1 /* P1VerifyIDSchema.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CCD9DB825C8AD8300A017F1 /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB025C8AD8300A017F1 /* CryptoTools.xcframework */; };
-		1CCD9DB925C8AD8300A017F1 /* CryptoTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB025C8AD8300A017F1 /* CryptoTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CCD9DBA25C8AD8300A017F1 /* CommunicationManager.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB125C8AD8300A017F1 /* CommunicationManager.xcframework */; };
-		1CCD9DBB25C8AD8300A017F1 /* CommunicationManager.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB125C8AD8300A017F1 /* CommunicationManager.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CCD9DBC25C8AD8300A017F1 /* JOSETools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB225C8AD8300A017F1 /* JOSETools.xcframework */; };
-		1CCD9DBD25C8AD8400A017F1 /* JOSETools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB225C8AD8300A017F1 /* JOSETools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CCD9DBE25C8AD8400A017F1 /* P1Verify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB325C8AD8300A017F1 /* P1Verify.xcframework */; };
-		1CCD9DBF25C8AD8400A017F1 /* P1Verify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DB325C8AD8300A017F1 /* P1Verify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CCD9DC225C8AD9200A017F1 /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DC125C8AD9200A017F1 /* P1VerifyLib.xcframework */; };
-		1CCD9DC325C8AD9200A017F1 /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCD9DC125C8AD9200A017F1 /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1CD0F93325D67C4E005B1F82 /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD0F93225D67C4E005B1F82 /* P1VerifyLib.xcframework */; };
+		1CD0F93425D67C4E005B1F82 /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD0F93225D67C4E005B1F82 /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1CEC66EA255F030B00BE4B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC66E9255F030B00BE4B6F /* AppDelegate.swift */; };
-		1CEC66F1255F030B00BE4B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC66EF255F030B00BE4B6F /* Main.storyboard */; };
+		1CEC66F1255F030B00BE4B6F /* Verify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC66EF255F030B00BE4B6F /* Verify.storyboard */; };
 		1CEC66F3255F030C00BE4B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC66F2255F030C00BE4B6F /* Assets.xcassets */; };
 		1CEC66F6255F030C00BE4B6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC66F4255F030C00BE4B6F /* LaunchScreen.storyboard */; };
 		1CF47BF3256DB8E6001C3C18 /* UIApplication+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF47BF2256DB8E6001C3C18 /* UIApplication+ErrorAlert.swift */; };
@@ -64,19 +64,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1CCD9DC025C8AD8400A017F1 /* Embed Frameworks */ = {
+		1CCD9DD725C8B32000A017F1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1CCD9DC325C8AD9200A017F1 /* P1VerifyLib.xcframework in Embed Frameworks */,
-				1CCD9DBB25C8AD8300A017F1 /* CommunicationManager.xcframework in Embed Frameworks */,
-				1CCD9DB525C8AD8300A017F1 /* JOSESwift.xcframework in Embed Frameworks */,
-				1CCD9DB925C8AD8300A017F1 /* CryptoTools.xcframework in Embed Frameworks */,
-				1CCD9DBF25C8AD8400A017F1 /* P1Verify.xcframework in Embed Frameworks */,
-				1CCD9DBD25C8AD8400A017F1 /* JOSETools.xcframework in Embed Frameworks */,
-				1CCD9DB725C8AD8300A017F1 /* P1VerifyIDSchema.xcframework in Embed Frameworks */,
+				1C299B1625E6C62800D970C6 /* P1Verify.xcframework in Embed Frameworks */,
+				1C299B1A25E6C62900D970C6 /* CommunicationManager.xcframework in Embed Frameworks */,
+				1C299B1E25E6C62900D970C6 /* P1VerifyIDSchema.xcframework in Embed Frameworks */,
+				1C299B1425E6C62800D970C6 /* CryptoTools.xcframework in Embed Frameworks */,
+				1C299B1825E6C62800D970C6 /* JOSESwift.xcframework in Embed Frameworks */,
+				1C299B1C25E6C62900D970C6 /* JOSETools.xcframework in Embed Frameworks */,
+				1CD0F93425D67C4E005B1F82 /* P1VerifyLib.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +84,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C299B0D25E6C62800D970C6 /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CryptoTools.xcframework; path = ../SDK/CryptoTools.xcframework; sourceTree = "<group>"; };
+		1C299B0E25E6C62800D970C6 /* P1Verify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1Verify.xcframework; path = ../SDK/P1Verify.xcframework; sourceTree = "<group>"; };
+		1C299B0F25E6C62800D970C6 /* JOSESwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JOSESwift.xcframework; path = ../SDK/JOSESwift.xcframework; sourceTree = "<group>"; };
+		1C299B1025E6C62800D970C6 /* CommunicationManager.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CommunicationManager.xcframework; path = ../SDK/CommunicationManager.xcframework; sourceTree = "<group>"; };
+		1C299B1125E6C62800D970C6 /* JOSETools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JOSETools.xcframework; path = ../SDK/JOSETools.xcframework; sourceTree = "<group>"; };
+		1C299B1225E6C62800D970C6 /* P1VerifyIDSchema.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1VerifyIDSchema.xcframework; path = ../SDK/P1VerifyIDSchema.xcframework; sourceTree = "<group>"; };
 		1C394D49259E7DB30013AD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LiveFaceVerification.strings; sourceTree = "<group>"; };
 		1C394D4E259E7DE40013AD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/IdScanner.strings; sourceTree = "<group>"; };
 		1C97114F25643C310028466E /* P1VerifyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P1VerifyApp.entitlements; sourceTree = "<group>"; };
@@ -104,7 +110,7 @@
 		1CBE3E87257AD69F009BD632 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		1CBE3E8A257AD815009BD632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = P1VerifyApp/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		1CBE3E8C257AD824009BD632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1CBE3E92257ADA09009BD632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1CBE3E92257ADA09009BD632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Verify.strings; sourceTree = "<group>"; };
 		1CBE3E93257AF036009BD632 /* PollingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingHelper.swift; sourceTree = "<group>"; };
 		1CC18E24256A331300A6842E /* WizardStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardStep.swift; sourceTree = "<group>"; };
 		1CC18E7C256C219200A6842E /* CardDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
@@ -119,17 +125,11 @@
 		1CC18E99256CB27900A6842E /* IDWalletCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDWalletCardView.xib; sourceTree = "<group>"; };
 		1CC18E9C256D85F600A6842E /* TicketEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketEntryViewController.swift; sourceTree = "<group>"; };
 		1CC18E9E256D88DC00A6842E /* IdvHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdvHelper.swift; sourceTree = "<group>"; };
-		1CCD9DAE25C8AD8300A017F1 /* JOSESwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JOSESwift.xcframework; path = ../SDK/JOSESwift.xcframework; sourceTree = "<group>"; };
-		1CCD9DAF25C8AD8300A017F1 /* P1VerifyIDSchema.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1VerifyIDSchema.xcframework; path = ../SDK/P1VerifyIDSchema.xcframework; sourceTree = "<group>"; };
-		1CCD9DB025C8AD8300A017F1 /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CryptoTools.xcframework; path = ../SDK/CryptoTools.xcframework; sourceTree = "<group>"; };
-		1CCD9DB125C8AD8300A017F1 /* CommunicationManager.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CommunicationManager.xcframework; path = ../SDK/CommunicationManager.xcframework; sourceTree = "<group>"; };
-		1CCD9DB225C8AD8300A017F1 /* JOSETools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JOSETools.xcframework; path = ../SDK/JOSETools.xcframework; sourceTree = "<group>"; };
-		1CCD9DB325C8AD8300A017F1 /* P1Verify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1Verify.xcframework; path = ../SDK/P1Verify.xcframework; sourceTree = "<group>"; };
-		1CCD9DC125C8AD9200A017F1 /* P1VerifyLib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1VerifyLib.xcframework; path = "../SDK/UI Library/P1VerifyLib.xcframework"; sourceTree = "<group>"; };
+		1CD0F93225D67C4E005B1F82 /* P1VerifyLib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1VerifyLib.xcframework; path = "../SDK/UI Library/P1VerifyLib.xcframework"; sourceTree = "<group>"; };
 		1CEC66E6255F030B00BE4B6F /* P1VerifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P1VerifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEC66E9255F030B00BE4B6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CEC66ED255F030B00BE4B6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1CEC66F0255F030B00BE4B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CEC66ED255F030B00BE4B6F /* VerifyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyHomeViewController.swift; sourceTree = "<group>"; };
+		1CEC66F0255F030B00BE4B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Verify.storyboard; sourceTree = "<group>"; };
 		1CEC66F2255F030C00BE4B6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CEC66F5255F030C00BE4B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CEC66F7255F030C00BE4B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,14 +142,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CCD9DB825C8AD8300A017F1 /* CryptoTools.xcframework in Frameworks */,
-				1CCD9DBA25C8AD8300A017F1 /* CommunicationManager.xcframework in Frameworks */,
-				1CCD9DB625C8AD8300A017F1 /* P1VerifyIDSchema.xcframework in Frameworks */,
-				1CCD9DC225C8AD9200A017F1 /* P1VerifyLib.xcframework in Frameworks */,
-				1CCD9DBE25C8AD8400A017F1 /* P1Verify.xcframework in Frameworks */,
-				1CCD9DB425C8AD8300A017F1 /* JOSESwift.xcframework in Frameworks */,
-				1CCD9DBC25C8AD8300A017F1 /* JOSETools.xcframework in Frameworks */,
 				1C971192256468760028466E /* iCarousel in Frameworks */,
+				1C299B1725E6C62800D970C6 /* JOSESwift.xcframework in Frameworks */,
+				1C299B1525E6C62800D970C6 /* P1Verify.xcframework in Frameworks */,
+				1C299B1325E6C62800D970C6 /* CryptoTools.xcframework in Frameworks */,
+				1C299B1B25E6C62900D970C6 /* JOSETools.xcframework in Frameworks */,
+				1C299B1925E6C62900D970C6 /* CommunicationManager.xcframework in Frameworks */,
+				1CD0F93325D67C4E005B1F82 /* P1VerifyLib.xcframework in Frameworks */,
+				1C299B1D25E6C62900D970C6 /* P1VerifyIDSchema.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,13 +159,13 @@
 		1C97113825643B570028466E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CCD9DC125C8AD9200A017F1 /* P1VerifyLib.xcframework */,
-				1CCD9DB125C8AD8300A017F1 /* CommunicationManager.xcframework */,
-				1CCD9DB025C8AD8300A017F1 /* CryptoTools.xcframework */,
-				1CCD9DAE25C8AD8300A017F1 /* JOSESwift.xcframework */,
-				1CCD9DB225C8AD8300A017F1 /* JOSETools.xcframework */,
-				1CCD9DB325C8AD8300A017F1 /* P1Verify.xcframework */,
-				1CCD9DAF25C8AD8300A017F1 /* P1VerifyIDSchema.xcframework */,
+				1C299B1025E6C62800D970C6 /* CommunicationManager.xcframework */,
+				1C299B0D25E6C62800D970C6 /* CryptoTools.xcframework */,
+				1C299B0F25E6C62800D970C6 /* JOSESwift.xcframework */,
+				1C299B1125E6C62800D970C6 /* JOSETools.xcframework */,
+				1C299B0E25E6C62800D970C6 /* P1Verify.xcframework */,
+				1C299B1225E6C62800D970C6 /* P1VerifyIDSchema.xcframework */,
+				1CD0F93225D67C4E005B1F82 /* P1VerifyLib.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 		1CBE3E6B25795851009BD632 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				1CEC66ED255F030B00BE4B6F /* HomeViewController.swift */,
+				1CEC66ED255F030B00BE4B6F /* VerifyHomeViewController.swift */,
 				1CC18E7C256C219200A6842E /* CardDetailsViewController.swift */,
 				1C9711AE256496E70028466E /* QRScannerViewController.swift */,
 				1CC18E9C256D85F600A6842E /* TicketEntryViewController.swift */,
@@ -225,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEC66F4255F030C00BE4B6F /* LaunchScreen.storyboard */,
-				1CEC66EF255F030B00BE4B6F /* Main.storyboard */,
+				1CEC66EF255F030B00BE4B6F /* Verify.storyboard */,
 				1CC18E99256CB27900A6842E /* IDWalletCardView.xib */,
 				1CC18E83256C228900A6842E /* CardParamTableViewCell.xib */,
 				1CC18E92256C4E1000A6842E /* WaitOverlayView.xib */,
@@ -301,7 +301,7 @@
 				1CEC66E2255F030B00BE4B6F /* Sources */,
 				1CEC66E3255F030B00BE4B6F /* Frameworks */,
 				1CEC66E4255F030B00BE4B6F /* Resources */,
-				1CCD9DC025C8AD8400A017F1 /* Embed Frameworks */,
+				1CCD9DD725C8B32000A017F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,7 +361,7 @@
 				1CC18E94256C4E1000A6842E /* WaitOverlayView.xib in Resources */,
 				1CBE3E8B257AD815009BD632 /* Localizable.strings in Resources */,
 				1CEC66F3255F030C00BE4B6F /* Assets.xcassets in Resources */,
-				1CEC66F1255F030B00BE4B6F /* Main.storyboard in Resources */,
+				1CEC66F1255F030B00BE4B6F /* Verify.storyboard in Resources */,
 				1C394D48259E7DB30013AD3F /* LiveFaceVerification.strings in Resources */,
 				1CC18E8A256C23CC00A6842E /* CardParamTableViewCell.xib in Resources */,
 			);
@@ -388,7 +388,7 @@
 				1CF47BF3256DB8E6001C3C18 /* UIApplication+ErrorAlert.swift in Sources */,
 				1CC18E8F256C2AB900A6842E /* UIColor+netHex.swift in Sources */,
 				1C9711B1256497750028466E /* SettingsViewController.swift in Sources */,
-				1CBD1CEE256DA6AD001BFAB8 /* HomeViewController.swift in Sources */,
+				1CBD1CEE256DA6AD001BFAB8 /* VerifyHomeViewController.swift in Sources */,
 				1CC18E88256C23CC00A6842E /* CardParamTableViewCell.swift in Sources */,
 				1CC18E9A256CB27900A6842E /* IDWalletCardView.swift in Sources */,
 				1C9711A3256483390028466E /* UIImage+FixPortraitOrientation.swift in Sources */,
@@ -435,13 +435,13 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		1CEC66EF255F030B00BE4B6F /* Main.storyboard */ = {
+		1CEC66EF255F030B00BE4B6F /* Verify.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1CEC66F0255F030B00BE4B6F /* Base */,
 				1CBE3E92257ADA09009BD632 /* en */,
 			);
-			name = Main.storyboard;
+			name = Verify.storyboard;
 			sourceTree = "<group>";
 		};
 		1CEC66F4255F030C00BE4B6F /* LaunchScreen.storyboard */ = {
@@ -586,7 +586,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sample.P1VerifyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -609,7 +609,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sample.P1VerifyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

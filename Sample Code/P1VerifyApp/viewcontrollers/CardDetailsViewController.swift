@@ -37,7 +37,7 @@ class CardDetailsViewController: UIViewController {
     var keys: [[String]] = [[IdCardKeys.fullName], [IdCardKeys.address], [IdCardKeys.idNumber, IdCardKeys.expirationDate, IdCardKeys.birthDate, IdCardKeys.country, IdCardKeys.gender, IdCardKeys.hairColor, IdCardKeys.eyeColor, IdCardKeys.height, IdCardKeys.weight]]
     
     class func getViewControllerFor(cardParams: [String: Any], frontImage: UIImage?, backImage: UIImage?) -> CardDetailsViewController {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CardDetailsViewController") as! CardDetailsViewController
+        let vc = UIStoryboard(name: "Verify", bundle: nil).instantiateViewController(withIdentifier: "CardDetailsViewController") as! CardDetailsViewController
         vc.cardParams = cardParams
         vc.frontImage = frontImage
         vc.backImage = backImage

@@ -17,7 +17,7 @@ class WizardViewController: UIViewController {
     var wizardSteps: [WizardStep] = [.captureSelfie, .captureDriverLicense, .capturePassport]
     
     static func startWizardFor(steps: [WizardStep]) -> WizardViewController {
-        let wizardViewController: WizardViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WizardViewController") as! WizardViewController
+        let wizardViewController: WizardViewController = UIStoryboard(name: "Verify", bundle: nil).instantiateViewController(withIdentifier: "WizardViewController") as! WizardViewController
         wizardViewController.wizardSteps = steps
         return wizardViewController
     }

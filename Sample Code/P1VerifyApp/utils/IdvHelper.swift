@@ -14,8 +14,7 @@ import P1VerifyIDSchema
 public class IdvHelper {
     
     private static let POLL_FOR_VALIDATION_STATUS_KEY = "POLL_FOR_VALIDATION_STATUS"
-    var observer: NSObjectProtocol?
-
+    
     private static var _shared: IdvHelper!
     public static var shared: IdvHelper! {
         if let shared = _shared {
@@ -31,13 +30,6 @@ public class IdvHelper {
     private init() {}
     
     private var idvService: IdvService?
-    private var uniqueToken: String? {
-        didSet {
-            if let uniqueToken = self.uniqueToken {
-                NotificationCenter.default.post(name: Notification.Name(rawValue: StorageManager.UNIQUE_TOKEN_SET_NOTIFICATION_CENTER_KEY), object: self, userInfo: ["uniqueToken": uniqueToken])
-            }
-        }
-    }
     
     private func initIdvService(ticketId: String?, qrUrl: String?, onComplete: @escaping (Result<Bool, Error>) -> Void) {
         let builder: IdvService.Builder
@@ -50,6 +42,13 @@ public class IdvHelper {
         }
         
         DispatchQueue.main.async {
+            #if DEBUG
+            builder.setPushSandbox(true)
+            #else
+            builder.setPushSandbox(false)
+            #endif
+            
+            builder.setNotificationHandler(self)
             if let pnToken = (UIApplication.shared.delegate as? AppDelegate)?.pnToken {
                 builder.setPushNotificationToken(pnToken)
             }
@@ -67,8 +66,30 @@ public class IdvHelper {
         }
     }
     
-    public func setUniqueToken(uniqueToken: String) {
-        self.uniqueToken = uniqueToken
+    public func processNotification(userInfo: [AnyHashable: Any]?) {
+        if (self.idvService == nil) {
+            self.initIdvService(ticketId: nil, qrUrl: nil) { (result) in
+                switch result {
+                case .failure(let error):
+                    self.handleError(error as? IdvError ?? IdvError.cannotInitializeIdvService(error.localizedDescription))
+                case .success(_):
+                    self.processPingOneNotification(userInfo: userInfo)
+                }
+            }
+            return
+        }
+        
+        self.processPingOneNotification(userInfo: userInfo)
+    }
+    
+    private func processPingOneNotification(userInfo: [AnyHashable: Any]?) {
+        guard let idvService = self.idvService else {
+            return
+        }
+        if (!idvService.processNotification(userInfo: userInfo)) {
+            // Notification cannot be handled by SDK
+            // Handle your app notifications here
+        }
     }
     
     public func submitVerificationData(ticketId: String?, qrUrl: String?, pollForResult: Bool = true) {
@@ -99,71 +120,27 @@ public class IdvHelper {
             case .failure(let error):
                 onComplete(Result.failure(error))
             case .success(_):
-                if let uniqueToken = self.uniqueToken {
-                    self.uniqueToken = nil
-                    self.submitVerificationData(uniqueToken: uniqueToken, cards: cards, onComplete: onComplete)
-                } else {
-                    self.observer = NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: StorageManager.UNIQUE_TOKEN_SET_NOTIFICATION_CENTER_KEY), object: nil, queue: nil) { (notification) in
-                        guard let uniqueToken = notification.userInfo?["uniqueToken"] as? String else {
-                            print("Cannot submit data. Must pass uniqueToken in notification.")
-                            return
-                        }
-                        
-                        if let observer = self.observer {
-                            NotificationCenter.default.removeObserver(observer)
-                        }
-                        
-                        self.submitVerificationData(uniqueToken: uniqueToken, cards: cards, onComplete: onComplete)
-                    }
-                }
+                self.idvService!.submitDataForVerification(data: cards, onComplete: { (result) in
+                    onComplete(result.mapError( { return $0 as Error } ))
+                })
             }
         }
     }
     
-    private func submitVerificationData(uniqueToken: String, cards: [IdCard], onComplete: @escaping ((Result<VerifyStatus, Error>) -> Void)) {
-        self.uniqueToken = nil
-        self.idvService!.setUniqueToken(uniqueToken)
-        self.idvService!.submitDataForVerification(data: cards, onComplete: { (result) in
-            onComplete(result.mapError( { return $0 as Error } ))
-        })
-    }
-        
     public func checkVerificationStatus() {
-        self.checkVerificationStatus { (result) in
-            switch result {
-            case .failure(let error):
-                print("Error checking verification status: \(error.localizedDescription)")
-                UIApplication.showErrorAlert(message: "check_status_error_message".localized, alertAction: nil)
-            case .success(let verificationResult):
-                print("Verification Result: \(verificationResult.getValidationStatus())")
-                if let verificationErrors = verificationResult.getValidationErrors() {
-                    verificationErrors.forEach { print("Error: \((try? $0.toJsonString()) ?? "Failed to parse to json") ") }
-                }
-                StorageManager.shared.updateVerificationStatus(status: verificationResult.getValidationStatus())
-            }
-        }
-    }
-    
-    private func checkVerificationStatus(onComplete: @escaping ((Result<VerificationResult, Error>) -> Void)) {
         if (self.idvService == nil) {
             self.initIdvService(ticketId: nil, qrUrl: nil) { (result) in
                 switch result {
                 case .failure(let error):
-                    onComplete(Result.failure(error))
+                    self.handleError(error as? IdvError ?? IdvError.cannotInitializeIdvService(error.localizedDescription))
                 case .success(_):
-                    self.getVerificationStatus(onComplete: onComplete)
+                    self.idvService?.checkVerificationStatus()
                 }
             }
             return
         }
         
-        self.getVerificationStatus(onComplete: onComplete)
-    }
-    
-    private func getVerificationStatus(onComplete: @escaping ((Result<VerificationResult, Error>) -> Void)) {
-        self.idvService?.getVerificationStatus { (result) in
-            onComplete(result.mapError( { return $0 as Error } ))
-        }        
+        self.idvService?.checkVerificationStatus()
     }
     
     public func startPollingForVerificationStatus() {
@@ -206,5 +183,23 @@ public class IdvHelper {
         
         return nil
     }
+    
+}
+
+extension IdvHelper: NotificationHandler {
+    
+    public func handlerResult(_ verificationResult: VerificationResult) {
+        print("Verification Result: \(verificationResult.getValidationStatus())")
+        if let verificationErrors = verificationResult.getValidationErrors() {
+            verificationErrors.forEach { print("Error: \((try? $0.toJsonString()) ?? "Failed to parse to json") ") }
+        }
+        StorageManager.shared.updateVerificationStatus(status: verificationResult.getValidationStatus())
+    }
+    
+    public func handleError(_ error: IdvError) {
+        print("Error checking verification status: \(error.localizedDescription)")
+        UIApplication.showErrorAlert(message: "check_status_error_message".localized, alertAction: nil)
+    }
+    
     
 }

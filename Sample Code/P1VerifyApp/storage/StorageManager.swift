@@ -15,7 +15,6 @@ import CryptoTools
 public class StorageManager {
     
     static let HAS_CARDS_DEFAULTS_KEY = "has_cards_defaults_key"
-    static let UNIQUE_TOKEN_SET_NOTIFICATION_CENTER_KEY = "unique_token_set_notification_center_key"
     static let REMOTE_PUSH_RECEIVED_NOTIFICATION_CENTER_KEY = "remote_push_received_notification_center_key"
     static let STORAGE_INITIALIZED_NOTIFICATION_CENTER_KEY = "storage_initialized_notification_center_key"
     static let CARD_ADDED_NOTIFICATION_CENTER_KEY = "card_added_notification_center_key"

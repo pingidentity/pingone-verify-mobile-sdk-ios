@@ -14,7 +14,7 @@ import P1VerifyIDSchema
 class WizardPassportViewController: WizardStepViewController {
     
     class func getViewController(containerViewController: UIViewController) -> WizardPassportViewController {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WizardPassportViewController") as! WizardPassportViewController
+        let vc = UIStoryboard(name: "Verify", bundle: nil).instantiateViewController(withIdentifier: "WizardPassportViewController") as! WizardPassportViewController
         vc.wizardPageContainerViewController = containerViewController
         return vc
     }

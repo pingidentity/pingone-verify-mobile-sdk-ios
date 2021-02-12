@@ -2,7 +2,7 @@
 
 **Legal Details**
 
-The information contained here relates to software used from web-based sources and contained in this commercial release from Ping Identity. This document contains attribution, copyright notices, notices of change as needed, and a collection of licenses. It also contains information ensuring compliance with all licenses supporting distribution of the open source material.
+The information contained here relates to software used from web-based sources and contained in this non-commercial release from Ping Identity. This document contains attribution, copyright notices, notices of change as needed, and a collection of licenses. It also contains information ensuring compliance with all licenses supporting distribution of the open source material.
 
 This release contains software written by Ping Identity plus software written by others as noted below. Ping Identity thanks these individuals and companies for their effort and contributions of software to the development community.
 
