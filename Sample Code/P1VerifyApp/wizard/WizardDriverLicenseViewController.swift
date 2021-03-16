@@ -20,7 +20,7 @@ class WizardDriverLicenseViewController: WizardStepViewController {
     }
     
     @IBAction func onInfoClicked(_ sender: UIButton) {
-        let alert = UIAlertController(title: "more_info_title", message: "more_info_driver_license".localized, preferredStyle: .alert)
+        let alert = UIAlertController(title: "more_info_title".localized, message: "more_info_driver_license".localized, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay".localized, style: .default, handler: nil))
         alert.show()
     }

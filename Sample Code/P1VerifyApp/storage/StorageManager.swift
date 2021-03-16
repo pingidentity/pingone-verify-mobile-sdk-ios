@@ -101,10 +101,14 @@ public class StorageManager {
         return arr.sorted(by: { $0.cardType < $1.cardType })
     }
     
-    func saveCard(card: IdCard) {
+    func updateCard(card: IdCard) {
+        saveCard(card: card, isUpdate: true)
+    }
+    
+    func saveCard(card: IdCard, isUpdate: Bool = false) {
         DispatchQueue.global().async {
             if let card = self.getCardForType(card.cardType) {
-                self.deleteCardForType(card.cardType)
+                self.deleteCardForType(card.cardType, notify: !isUpdate)
             }
             self.storage.saveCard(card)
             UserDefaults.standard.set(true, forKey: StorageManager.HAS_CARDS_DEFAULTS_KEY)
@@ -112,14 +116,18 @@ public class StorageManager {
         }
     }
     
-    func deleteCardWithId(_ cardId: String) {
+    func deleteCardWithId(_ cardId: String, notify: Bool = true) {
         self.storage.deleteCardWithId(cardId)
-        self.onCardDeleted()
+        if (notify) {
+            self.onCardDeleted()
+        }
     }
     
-    func deleteCardForType(_ cardType: String) {
+    func deleteCardForType(_ cardType: String, notify: Bool = true) {
         self.storage.deleteCardOfType(cardType)
-        self.onCardDeleted()
+        if (notify) {
+            self.onCardDeleted()
+        }
     }
     
     private func onCardDeleted() {

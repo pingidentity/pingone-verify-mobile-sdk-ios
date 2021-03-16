@@ -57,10 +57,12 @@ class VerifyHomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if StorageManager.hasCards(),
-           let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-           appDelegate.pnToken == nil {
-            AppDelegate.registerForAPNS()
+        if StorageManager.hasCards() {
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+               appDelegate.pnToken == nil {
+                AppDelegate.registerForAPNS()
+            }
+            self.refreshHomeScreen()
         }
     }
     
@@ -206,8 +208,6 @@ class VerifyHomeViewController: UIViewController {
             return self.idvSubmittingView
         case .FAIL:
             return self.idvFailedView
-        @unknown default:
-            return self.idvNotStartedView
         }
     }
     
@@ -321,6 +321,7 @@ extension VerifyHomeViewController: iCarouselDataSource, iCarouselDelegate {
         } else if let passport = selectedCard as? Passport {
             frontImage = passport.frontImage
             backImage = nil
+            cardParams = passport.getClaims().filter( { $0.key != IdCardKeys.frontImage && $0.key != IdCardKeys.backImage })
         } else {
             frontImage = nil
             backImage = nil

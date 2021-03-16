@@ -21,3 +21,4 @@ DerivedData
 *~
 # osx
 .DS_Store
+/APNS_Certs

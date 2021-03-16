@@ -143,7 +143,7 @@ extension LiveFaceVerificationViewController : ShoLib.SCLiveFaceVerifierListener
 extension LiveFaceVerificationViewController : ShoLib.SCImageProcessingDelegate {
   public func capturedImage(_ image: UIKit.UIImage, rect: CoreGraphics.CGRect)
   public func capturedMetadata(_ metadata: Swift.String)
-  public func onFrameReceived(_ sampleBuffer: CoreMedia.CMSampleBuffer?)
+  public func onFrameCaptured(_ sampleBuffer: CoreMedia.CMSampleBuffer?)
 }
 extension LiveFaceVerificationViewController : UIKit.UIScrollViewDelegate {
   @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
@@ -288,37 +288,6 @@ extension CALayer {
     set
   }
 }
-@objc @_inheritsConvenienceInitializers public class FaceTrackingViewController : UIKit.UIViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  public var facialChecks: [ShoLib.FaceTrackingViewController.type]
-  public var completion: (([Swift.String : Swift.Double], Swift.Bool, UIKit.UIImage?) -> ())!
-  public var scanTime: Swift.Double
-  public var delayTime: Swift.Double
-  public var threshold: Swift.Double
-  public var maxAttempts: Swift.Int
-  public static func getViewController() -> ShoLib.FaceTrackingViewController
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewDidLayoutSubviews()
-  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
-  @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-}
-extension FaceTrackingViewController {
-  public enum type : Swift.Int {
-    case closeLeft
-    case closeRight
-    case openBoth
-    case closeBoth
-    case straightFace
-    case smile
-    public typealias RawValue = Swift.Int
-    public init?(rawValue: Swift.Int)
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-}
 public class SCBarcode {
   public init(rawValue: Swift.String, boundingBox: CoreGraphics.CGRect? = nil)
   @objc deinit
@@ -448,6 +417,33 @@ public enum CameraDevicePosition {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
+public enum FocusMode {
+  case auto, continuousAuto, locked
+  public static func == (a: ShoLib.FocusMode, b: ShoLib.FocusMode) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum MetadataObjectType {
+  case qr, pdf417, face, other(objectType: AVFoundation.AVMetadataObject.ObjectType)
+}
+public enum FlashMode {
+  case on, off, auto
+  public static func == (a: ShoLib.FlashMode, b: ShoLib.FlashMode) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum TorchMode {
+  case on, off, auto
+  public static func == (a: ShoLib.TorchMode, b: ShoLib.TorchMode) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
 public enum CroppedOptions {
   case none, croppedToViewPort, croppedToEdges
   public static func == (a: ShoLib.CroppedOptions, b: ShoLib.CroppedOptions) -> Swift.Bool
@@ -462,15 +458,14 @@ public enum CroppedOptions {
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-@objc open class SCAVCaptureWrapper : ObjectiveC.NSObject, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
-  open var previewLayer: AVFoundation.AVCaptureVideoPreviewLayer!
+@objc public class SCAVCaptureWrapper : ObjectiveC.NSObject, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  public var previewLayer: AVFoundation.AVCaptureVideoPreviewLayer!
   public var qrburst: Swift.Bool
   public var flipImage: Swift.Bool
   public init(captureView: ShoLib.CameraView, delegate: ShoLib.SCImageProcessingDelegate? = nil, videoOrientation: UIKit.UIInterfaceOrientation)
   @objc deinit
   @objc public func captureViewTapped(sender: UIKit.UITapGestureRecognizer? = nil)
-  open func addStillCameraOutput(_ cameraDevicePosition: ShoLib.CameraDevicePosition)
-  open func addStillCameraOutput(_ preferredCamera: AVFoundation.AVCaptureDevice.Position)
+  public func addStillCameraOutput(_ preferredCamera: ShoLib.CameraDevicePosition)
   public func hasObjectRect() -> Swift.Bool
   public func drawObjectRect(rect: CoreGraphics.CGRect, borderColor: CoreGraphics.CGColor = UIColor.green.cgColor, cornerRadius: CoreGraphics.CGFloat = 0, borderWidth: CoreGraphics.CGFloat = 3)
   public func updateObjectRectBounds(rect: CoreGraphics.CGRect)
@@ -481,29 +476,28 @@ public enum CroppedOptions {
     case faceFoundInFrame(face: ShoLib.SCFace)
     case multipleFacesInFrame(faces: [ShoLib.SCFace])
   }
-  public func addFaceDetection(_ preferredCamera: ShoLib.CameraDevicePosition, onFaceDetectionEvent: ((ShoLib.SCAVCaptureWrapper.FaceDetectionEvent) -> Swift.Void)?, drawRect: Swift.Bool = false)
+  public func addFaceDetection(_ preferredCamera: ShoLib.CameraDevicePosition, onFaceDetectionEvent: ((ShoLib.SCAVCaptureWrapper.FaceDetectionEvent) -> Swift.Void)?, drawFaceRect: Swift.Bool = false, onFrameCaptured: ((CoreMedia.CMSampleBuffer?) -> Swift.Void)?)
   @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
-  open func takeStillImage(_ cropped: ShoLib.CroppedOptions = .none)
-  open func disableMetadataCapture(_ types: [AVFoundation.AVMetadataObject.ObjectType] = [])
-  open func addMetadataCapture(_ types: [AVFoundation.AVMetadataObject.ObjectType] = [])
-  open func addVideoFrameCapture(_ preferredCamera: ShoLib.CameraDevicePosition, onFrameReceived: ((CoreMedia.CMSampleBuffer?) -> Swift.Void)? = nil)
-  open func addVideoFrameCapture(_ preferredCamera: AVFoundation.AVCaptureDevice.Position, onFrameReceived: ((CoreMedia.CMSampleBuffer?) -> Swift.Void)? = nil)
-  open func addQRCodeCapture()
-  open func switchToMetadataCapture(_ types: [AVFoundation.AVMetadataObject.ObjectType] = [])
-  open func setFlashMode(_ flashMode: AVFoundation.AVCaptureDevice.FlashMode, device: AVFoundation.AVCaptureDevice)
-  open func setTorchMode(_ torchMode: AVFoundation.AVCaptureDevice.TorchMode, device: AVFoundation.AVCaptureDevice)
+  public func takeStillImage(_ cropped: ShoLib.CroppedOptions = .none)
+  public func disableMetadataCapture()
+  public func addMetadataCapture(_ types: [ShoLib.MetadataObjectType] = [])
+  public func addVideoFrameCapture(_ preferredCamera: ShoLib.CameraDevicePosition, onFrameReceived: ((CoreMedia.CMSampleBuffer?) -> Swift.Void)? = nil)
+  public func addQRCodeCapture()
+  public func switchToMetadataCapture(_ types: [ShoLib.MetadataObjectType] = [])
+  public func setFlashMode(_ flashMode: ShoLib.FlashMode)
+  public func setTorchMode(_ torchMode: ShoLib.TorchMode)
   public func setTorchOn()
   public func setTorchOff()
   public func setFlashOn()
   public func setFlashOff()
   public func setFlashAuto()
-  public func setFocus(device: AVFoundation.AVCaptureDevice)
-  public func toggleFlash() -> AVFoundation.AVCaptureDevice.FlashMode
-  open func hideQRBox()
-  open func changeOrientation(_ orientation: UIKit.UIInterfaceOrientation)
-  @objc open func orientationChanged()
-  open func stop()
-  open func start()
+  public func setFocus(focusMode: ShoLib.FocusMode)
+  public func toggleFlash() -> ShoLib.FlashMode
+  public func hideQRBox()
+  public func changeOrientation(_ orientation: UIKit.UIInterfaceOrientation)
+  @objc public func orientationChanged()
+  public func stop()
+  public func start()
   public static func isCameraPermissionGranted() -> Swift.Bool
   public static func requestCameraPermission(onComplete: @escaping (Swift.Bool) -> Swift.Void)
   public static func showCameraPermissionRationale(parentViewController: UIKit.UIViewController, message: Swift.String, onCanceled: (() -> Swift.Void)? = nil)
@@ -514,6 +508,9 @@ extension SCAVCaptureWrapper : AVFoundation.AVCaptureVideoDataOutputSampleBuffer
   @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
   public func getLastVideoFrameBuffer(cropped: Swift.Bool = true) -> CoreMedia.CMSampleBuffer?
   public func getLastVideoFrame(cropped: Swift.Bool = true) -> UIKit.UIImage?
+}
+extension SCAVCaptureWrapper : AVFoundation.AVCapturePhotoCaptureDelegate {
+  @objc dynamic public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CoreMedia.CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CoreMedia.CMSampleBuffer?, resolvedSettings: AVFoundation.AVCaptureResolvedPhotoSettings, bracketSettings: AVFoundation.AVCaptureBracketedStillImageSettings?, error: Swift.Error?)
 }
 @_hasMissingDesignatedInitializers public class USStates {
   public static let stateCodes: [Swift.String : Swift.String]
@@ -692,7 +689,8 @@ extension UIImageView {
 extension UILabel {
   public func changeTextWithSlidingAnimation(direction: ShoLib.AnimationDirection, text: Swift.String?, duration: Foundation.TimeInterval)
 }
-@objc @_hasMissingDesignatedInitializers public class AnimationListener : ObjectiveC.NSObject, QuartzCore.CAAnimationDelegate {
+@objc public class AnimationListener : ObjectiveC.NSObject, QuartzCore.CAAnimationDelegate {
+  public init(onStart: (() -> Swift.Void)?, onStop: ((Swift.Bool) -> Swift.Void)?)
   @objc public func animationDidStart(_ anim: QuartzCore.CAAnimation)
   @objc public func animationDidStop(_ anim: QuartzCore.CAAnimation, finished flag: Swift.Bool)
   @objc deinit
@@ -861,7 +859,8 @@ extension SCLiveFaceVerifierError {
 }
 extension UIColor {
   public static func named(_ name: Swift.String) -> UIKit.UIColor
-  public static func named(_ name: Swift.String, in bundle: Foundation.Bundle? = nil) -> UIKit.UIColor?
+  public static func named(_ name: Swift.String, defaultColor: UIKit.UIColor) -> UIKit.UIColor
+  public static func named(_ name: Swift.String, in bundle: Foundation.Bundle?) -> UIKit.UIColor?
   public static func defaultColor(named name: Swift.String, in bundle: Foundation.Bundle? = nil, default defaultColor: UIKit.UIColor = .black) -> UIKit.UIColor
 }
 public protocol IDScannerListener {
@@ -872,11 +871,14 @@ public protocol IDScannerListener {
   @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
-extension ShoLib.FaceTrackingViewController.type : Swift.Equatable {}
-extension ShoLib.FaceTrackingViewController.type : Swift.Hashable {}
-extension ShoLib.FaceTrackingViewController.type : Swift.RawRepresentable {}
 extension ShoLib.CameraDevicePosition : Swift.Equatable {}
 extension ShoLib.CameraDevicePosition : Swift.Hashable {}
+extension ShoLib.FocusMode : Swift.Equatable {}
+extension ShoLib.FocusMode : Swift.Hashable {}
+extension ShoLib.FlashMode : Swift.Equatable {}
+extension ShoLib.FlashMode : Swift.Hashable {}
+extension ShoLib.TorchMode : Swift.Equatable {}
+extension ShoLib.TorchMode : Swift.Hashable {}
 extension ShoLib.CroppedOptions : Swift.Equatable {}
 extension ShoLib.CroppedOptions : Swift.Hashable {}
 extension ShoLib.SCLiveFaceVerificationStep : Swift.Equatable {}

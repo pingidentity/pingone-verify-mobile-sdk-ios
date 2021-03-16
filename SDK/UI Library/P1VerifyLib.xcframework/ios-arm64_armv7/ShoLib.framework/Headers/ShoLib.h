@@ -2,6 +2,9 @@
 // ShoLib.h
 // ShoLib
 //
+//  Copyright © 2021 Ping Identity. All rights reserved.
+//
+
 #import <UIKit/UIKit.h>
 
 //! Project version number for ShoLib.

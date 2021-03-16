@@ -17,6 +17,7 @@ public enum IdvError : Swift.Error {
   case cannotGetValidationStatus(_: Swift.String)
   case cannotSubmitData(_: Swift.String)
   case cannotUpdatePublicKeys(_: Swift.String)
+  case publicKeyAlreadyExists(_: Swift.String)
   case cannotGetServicePublicKey(_: Swift.String)
   case cannotFindFaceOnDriverLicenseImage(_: Swift.String)
   case claimValidationFailed(_: Swift.String)
@@ -34,8 +35,16 @@ extension IdvError : Foundation.LocalizedError {
 extension IdvError : Swift.Equatable {
   public static func == (lhs: P1Verify.IdvError, rhs: P1Verify.IdvError) -> Swift.Bool
 }
-public enum VerifyStatus : Swift.String {
-  case NOT_STARTED, REQUESTED, IN_PROGRESS, PARTIAL, SUCCESS, SUCCESS_MANUAL, APPROVED_NO_REQUEST, NOT_REQUIRED, FAIL
+@frozen public enum VerifyStatus : Swift.String {
+  case NOT_STARTED
+  case REQUESTED
+  case IN_PROGRESS
+  case PARTIAL
+  case SUCCESS
+  case SUCCESS_MANUAL
+  case APPROVED_NO_REQUEST
+  case NOT_REQUIRED
+  case FAIL
   public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
   public var rawValue: Swift.String {
@@ -60,22 +69,40 @@ extension IdvService {
 @_hasMissingDesignatedInitializers public class IdvService {
   public func isSandbox() -> Swift.Bool
   public func setPushSandbox(_ pushSandbox: Swift.Bool)
-  public func setUniqueToken(_ uniqueToken: Swift.String)
   public func setNotificationHandler(_ handler: P1Verify.NotificationHandler)
-  public func getStoredClaims() -> [P1Verify.Claim]
   public func submitDataForVerification(data: [P1VerifyIDSchema.IdCard], onComplete: @escaping (Swift.Result<P1Verify.VerifyStatus, P1Verify.IdvError>) -> Swift.Void)
   public func checkVerificationStatus(handler: P1Verify.NotificationHandler? = nil)
   public func processNotification(userInfo: [Swift.AnyHashable : Any]?, handler: P1Verify.NotificationHandler? = nil) -> Swift.Bool
   @objc deinit
 }
 public protocol NotificationHandler {
-  func handlerResult(_ verificationResult: P1Verify.VerificationResult)
+  func handleResult(_ verificationResult: P1Verify.VerificationResult)
   func handleError(_ error: P1Verify.IdvError)
+}
+@_hasMissingDesignatedInitializers public class UserData : P1VerifyIDSchema.JsonSerializable {
+  required public init(dict: [Swift.String : Any]) throws
+  public func isEmpty() -> Swift.Bool
+  public func getFirstName() -> Swift.String
+  public func getLastName() -> Swift.String
+  public func getBirthDate() -> Swift.String
+  public func getAddressStreet() -> Swift.String
+  public func getAddressCity() -> Swift.String
+  public func getAddressState() -> Swift.String
+  public func getCountry() -> Swift.String
+  public func getAddressZip() -> Swift.String
+  public func getIdNumber() -> Swift.String
+  public func getExpirationDate() -> Swift.String
+  public func getIssueDate() -> Swift.String
+  public func getIdType() -> Swift.String
+  public func getCardType() -> Swift.String
+  @objc deinit
+  override public init()
 }
 @_hasMissingDesignatedInitializers public class VerificationResult {
   public func getTransactionId() -> Swift.String
   public func getValidationStatus() -> P1Verify.VerifyStatus
   public func getValidationClaims() -> [P1Verify.Claim]?
+  public func getUserData() -> P1Verify.UserData?
   public func getValidationErrors() -> [P1Verify.ProviderError]?
   @objc deinit
 }

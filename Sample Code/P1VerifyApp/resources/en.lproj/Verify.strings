@@ -50,8 +50,8 @@
 /* Class = "UIBarButtonItem"; title = "Skip"; ObjectID = "VaI-d3-L9f"; */
 "VaI-d3-L9f.title" = "Skip";
 
-/* Class = "UILabel"; text = "To start ID verification, scan the qr code or enter the 12-digit verification key."; ObjectID = "WYB-D1-XkZ"; */
-"WYB-D1-XkZ.text" = "To start ID verification, scan the qr code or enter the 12-digit verification key.";
+/* Class = "UILabel"; text = "To start ID verification, scan the QR code or enter the 12-digit verification key."; ObjectID = "WYB-D1-XkZ"; */
+"WYB-D1-XkZ.text" = "To start ID verification, scan the QR code or enter the 12-digit verification key.";
 
 /* Class = "UIButton"; normalTitle = "Capture Selfie"; ObjectID = "WZq-j2-iyI"; */
 "WZq-j2-iyI.normalTitle" = "Capture Selfie";

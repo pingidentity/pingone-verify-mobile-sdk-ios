@@ -15,12 +15,14 @@ class WizardStepViewController: UIViewController {
     var wizardPageContainerViewController: UIViewController?
     
     func moveToNextStep() {
-        guard let wizardPageViewController = self.wizardPageContainerViewController as? WizardPageViewController else {
-            print("ViewController not child of a UIPageController.")
-            return
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            guard let wizardPageViewController = self.wizardPageContainerViewController as? WizardPageViewController else {
+                print("ViewController not child of a UIPageController.")
+                return
+            }
+            
+            wizardPageViewController.nextPage()
         }
-        
-        wizardPageViewController.nextPage()
     }
     
     func getContainerViewController() -> UIViewController {

@@ -315,20 +315,6 @@ SWIFT_CLASS("_TtC6ShoLib34DriverLicenseScannerViewController")
 
 
 
-@class AVCaptureOutput;
-@class AVCaptureConnection;
-
-SWIFT_CLASS("_TtC6ShoLib26FaceTrackingViewController")
-@interface FaceTrackingViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
-- (void)viewDidLoad;
-- (void)viewDidLayoutSubviews;
-- (void)viewDidAppear:(BOOL)animated;
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 @class SCCircularProgressView;
 
 SWIFT_CLASS("_TtC6ShoLib34LiveFaceVerificationViewController")
@@ -416,6 +402,7 @@ SWIFT_CLASS("_TtC6ShoLib29PassportScannerViewController")
 @class UITapGestureRecognizer;
 @class AVCaptureMetadataOutput;
 @class AVMetadataObject;
+@class AVCaptureConnection;
 
 SWIFT_CLASS("_TtC6ShoLib18SCAVCaptureWrapper")
 @interface SCAVCaptureWrapper : NSObject <AVCaptureMetadataOutputObjectsDelegate>
@@ -426,6 +413,15 @@ SWIFT_CLASS("_TtC6ShoLib18SCAVCaptureWrapper")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+@class AVCapturePhotoOutput;
+@class AVCaptureResolvedPhotoSettings;
+@class AVCaptureBracketedStillImageSettings;
+
+@interface SCAVCaptureWrapper (SWIFT_EXTENSION(ShoLib)) <AVCapturePhotoCaptureDelegate>
+- (void)captureOutput:(AVCapturePhotoOutput * _Nonnull)output didFinishProcessingPhotoSampleBuffer:(CMSampleBufferRef _Nullable)photoSampleBuffer previewPhotoSampleBuffer:(CMSampleBufferRef _Nullable)previewPhotoSampleBuffer resolvedSettings:(AVCaptureResolvedPhotoSettings * _Nonnull)resolvedSettings bracketSettings:(AVCaptureBracketedStillImageSettings * _Nullable)bracketSettings error:(NSError * _Nullable)error;
+@end
+
+@class AVCaptureOutput;
 
 @interface SCAVCaptureWrapper (SWIFT_EXTENSION(ShoLib)) <AVCaptureVideoDataOutputSampleBufferDelegate>
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
@@ -801,20 +797,6 @@ SWIFT_CLASS("_TtC6ShoLib34DriverLicenseScannerViewController")
 
 
 
-@class AVCaptureOutput;
-@class AVCaptureConnection;
-
-SWIFT_CLASS("_TtC6ShoLib26FaceTrackingViewController")
-@interface FaceTrackingViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
-- (void)viewDidLoad;
-- (void)viewDidLayoutSubviews;
-- (void)viewDidAppear:(BOOL)animated;
-- (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 @class SCCircularProgressView;
 
 SWIFT_CLASS("_TtC6ShoLib34LiveFaceVerificationViewController")
@@ -902,6 +884,7 @@ SWIFT_CLASS("_TtC6ShoLib29PassportScannerViewController")
 @class UITapGestureRecognizer;
 @class AVCaptureMetadataOutput;
 @class AVMetadataObject;
+@class AVCaptureConnection;
 
 SWIFT_CLASS("_TtC6ShoLib18SCAVCaptureWrapper")
 @interface SCAVCaptureWrapper : NSObject <AVCaptureMetadataOutputObjectsDelegate>
@@ -912,6 +895,15 @@ SWIFT_CLASS("_TtC6ShoLib18SCAVCaptureWrapper")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+@class AVCapturePhotoOutput;
+@class AVCaptureResolvedPhotoSettings;
+@class AVCaptureBracketedStillImageSettings;
+
+@interface SCAVCaptureWrapper (SWIFT_EXTENSION(ShoLib)) <AVCapturePhotoCaptureDelegate>
+- (void)captureOutput:(AVCapturePhotoOutput * _Nonnull)output didFinishProcessingPhotoSampleBuffer:(CMSampleBufferRef _Nullable)photoSampleBuffer previewPhotoSampleBuffer:(CMSampleBufferRef _Nullable)previewPhotoSampleBuffer resolvedSettings:(AVCaptureResolvedPhotoSettings * _Nonnull)resolvedSettings bracketSettings:(AVCaptureBracketedStillImageSettings * _Nullable)bracketSettings error:(NSError * _Nullable)error;
+@end
+
+@class AVCaptureOutput;
 
 @interface SCAVCaptureWrapper (SWIFT_EXTENSION(ShoLib)) <AVCaptureVideoDataOutputSampleBufferDelegate>
 - (void)captureOutput:(AVCaptureOutput * _Nonnull)output didOutputSampleBuffer:(CMSampleBufferRef _Nonnull)sampleBuffer fromConnection:(AVCaptureConnection * _Nonnull)connection;

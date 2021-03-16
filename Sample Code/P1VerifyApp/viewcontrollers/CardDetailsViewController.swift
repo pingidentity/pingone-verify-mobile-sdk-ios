@@ -34,7 +34,11 @@ class CardDetailsViewController: UIViewController {
     @IBOutlet weak var deleteCardButton: UIButton!
     @IBOutlet weak var paramsTable: UITableView!
     
-    var keys: [[String]] = [[IdCardKeys.fullName], [IdCardKeys.address], [IdCardKeys.idNumber, IdCardKeys.expirationDate, IdCardKeys.birthDate, IdCardKeys.country, IdCardKeys.gender, IdCardKeys.hairColor, IdCardKeys.eyeColor, IdCardKeys.height, IdCardKeys.weight]]
+    let dlKeys: [[String]] = [[IdCardKeys.fullName], [IdCardKeys.address], [IdCardKeys.idNumber, IdCardKeys.expirationDate, IdCardKeys.birthDate, IdCardKeys.country, IdCardKeys.gender, IdCardKeys.hairColor, IdCardKeys.eyeColor, IdCardKeys.height, IdCardKeys.weight]]
+
+    let passportKeys: [[String]] = [[IdCardKeys.fullName], [IdCardKeys.idNumber, IdCardKeys.expirationDate, IdCardKeys.birthDate, IdCardKeys.country, IdCardKeys.gender]]
+
+    var keys: [[String]] = []
     
     class func getViewControllerFor(cardParams: [String: Any], frontImage: UIImage?, backImage: UIImage?) -> CardDetailsViewController {
         let vc = UIStoryboard(name: "Verify", bundle: nil).instantiateViewController(withIdentifier: "CardDetailsViewController") as! CardDetailsViewController
@@ -57,8 +61,16 @@ class CardDetailsViewController: UIViewController {
         }
         self.editCardButton.isHidden = true
         
-        guard let cardType = self.cardParams[IdCardKeys.cardType] as? String,
-              cardType == IdCardKeys.cardTypeDriverLicense else {
+        guard let cardType = self.cardParams[IdCardKeys.cardType] as? String else {
+            return
+        }
+        
+        switch cardType {
+        case IdCardKeys.cardTypeDriverLicense:
+            self.keys = self.dlKeys
+        case IdCardKeys.cardTypePassport:
+            self.keys = self.passportKeys
+        default:
             return
         }
  
@@ -73,9 +85,6 @@ class CardDetailsViewController: UIViewController {
         var fullName = ""
         if let firstName = self.cardDictionary[IdCardKeys.firstName] {
             fullName += firstName + " "
-        }
-        if let middleName = self.cardDictionary[IdCardKeys.middleName] {
-            fullName += middleName + " "
         }
         if let lastName = self.cardDictionary[IdCardKeys.lastName] {
             fullName += lastName + " "

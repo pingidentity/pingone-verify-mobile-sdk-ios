@@ -106,7 +106,9 @@ public class IdvHelper {
             case .failure(let error):
                 print("Error submitting data: \(error.localizedDescription)")
                 UIApplication.showErrorAlert(message: "submit_data_error_message".localized, alertAction: nil)
-                StorageManager.shared.updateVerificationStatus(status: .NOT_STARTED)
+                if (error as? IdvError != IdvError.cannotInitializeIdvService("")) {
+                    StorageManager.shared.updateVerificationStatus(status: .NOT_STARTED)
+                }
             case .success(let status):
                 StorageManager.shared.updateVerificationStatus(status: status)
             }
@@ -114,12 +116,12 @@ public class IdvHelper {
     }
     
     private func submitVerificationData(ticketId: String?, qrUrl: String?, cards: [IdCard], onComplete: @escaping ((Result<VerifyStatus, Error>) -> Void)) {
-        StorageManager.shared.updateVerificationStatus(status: .REQUESTED)
         self.initIdvService(ticketId: ticketId, qrUrl: qrUrl) { (result) in
             switch result {
             case .failure(let error):
                 onComplete(Result.failure(error))
             case .success(_):
+                StorageManager.shared.updateVerificationStatus(status: .REQUESTED)
                 self.idvService!.submitDataForVerification(data: cards, onComplete: { (result) in
                     onComplete(result.mapError( { return $0 as Error } ))
                 })
@@ -188,8 +190,13 @@ public class IdvHelper {
 
 extension IdvHelper: NotificationHandler {
     
-    public func handlerResult(_ verificationResult: VerificationResult) {
+    public func handleResult(_ verificationResult: VerificationResult) {
         print("Verification Result: \(verificationResult.getValidationStatus())")
+        if let userData = verificationResult.getUserData(), !userData.isEmpty() {
+            self.updateIdCard(from: userData)
+        } else {
+            print("Verification Result doesn't contain any UserData")
+        }
         if let verificationErrors = verificationResult.getValidationErrors() {
             verificationErrors.forEach { print("Error: \((try? $0.toJsonString()) ?? "Failed to parse to json") ") }
         }
@@ -201,5 +208,55 @@ extension IdvHelper: NotificationHandler {
         UIApplication.showErrorAlert(message: "check_status_error_message".localized, alertAction: nil)
     }
     
-    
+    private func updateIdCard(from userData: UserData) {
+        print("Verified User Data: \((try? userData.toJsonString()) ?? "No user data")")
+        
+        switch userData.getCardType() {
+        case IdCardKeys.cardTypeDriverLicense:
+            self.updateDriverLicense(from: userData)
+        case IdCardKeys.cardTypePassport:
+            self.updatePassport(from: userData)
+        default:
+            return
+        }
+    }
+ 
+    private func updateDriverLicense(from userData: UserData) {
+        guard let card = StorageManager.shared.getCardForType(IdCardKeys.cardTypeDriverLicense),
+              let driverLicense = card as? DriverLicense else {
+            print("Cannot find card for type \(userData.getCardType())")
+            return
+        }
+        driverLicense.setFirstName(userData.getFirstName().isEmpty ? driverLicense.getFirstName() : userData.getFirstName())
+        driverLicense.setLastName(userData.getLastName().isEmpty ? driverLicense.getLastName() : userData.getLastName())
+        driverLicense.setBirthDate(userData.getBirthDate().isEmpty ? driverLicense.getBirthDate() : userData.getBirthDate())
+        driverLicense.setAddressStreet(userData.getAddressStreet().isEmpty ? driverLicense.getAddressStreet() : userData.getAddressStreet())
+        driverLicense.setAddressCity(userData.getAddressCity().isEmpty ? driverLicense.getAddressCity() : userData.getAddressCity())
+        driverLicense.setAddressState(userData.getAddressState().isEmpty ? driverLicense.getAddressState() : userData.getAddressState())
+        driverLicense.setAddressZip(userData.getAddressZip().isEmpty ? driverLicense.getAddressZip() : userData.getAddressZip())
+        driverLicense.setCountry(userData.getCountry().isEmpty ? driverLicense.getCountry() : userData.getCountry())
+        driverLicense.setIdNumber(userData.getIdNumber().isEmpty ? driverLicense.getIdNumber() : userData.getIdNumber())
+        driverLicense.setExpirationDate(userData.getExpirationDate().isEmpty ? driverLicense.getExpirationDate() : userData.getExpirationDate())
+        driverLicense.setIssueDate(userData.getIssueDate().isEmpty ? driverLicense.getIssueDate() : userData.getIssueDate())
+        
+        StorageManager.shared.updateCard(card: driverLicense)
+    }
+
+    private func updatePassport(from userData: UserData) {
+        guard let card = StorageManager.shared.getCardForType(IdCardKeys.cardTypePassport),
+              let passport = card as? Passport else {
+            print("Cannot find card for type \(userData.getCardType())")
+            return
+        }
+        passport.setFirstName(userData.getFirstName().isEmpty ? passport.getFirstName() : userData.getFirstName())
+        passport.setLastName(userData.getLastName().isEmpty ? passport.getLastName() : userData.getLastName())
+        passport.setBirthDate(userData.getBirthDate().isEmpty ? passport.getBirthDate() : userData.getBirthDate())
+        passport.setCountry(userData.getCountry().isEmpty ? passport.getCountry() : userData.getCountry())
+        passport.setIdNumber(userData.getIdNumber().isEmpty ? passport.getIdNumber() : userData.getIdNumber())
+        passport.setExpirationDate(userData.getExpirationDate().isEmpty ? passport.getExpirationDate() : userData.getExpirationDate())
+        
+        StorageManager.shared.updateCard(card: passport)
+
+    }
+
 }
