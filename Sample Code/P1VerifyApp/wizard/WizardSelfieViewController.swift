@@ -35,29 +35,22 @@ class WizardSelfieViewController: WizardStepViewController {
     }
     
     func startLiveFaceVerificationVC() {
-        do {
-            try LiveFaceVerificationViewController.Builder { (isComplete, selfie) in
-                guard isComplete,
-                      let selfie = selfie else {
-                    return
-                }
-                
-                let selfieCard = Selfie(selfie: selfie.getSelfie().fixPortraitOrientation().fitImageIn(maxSize: 1024))
-                DispatchQueue.global().async {
-                    print("Saving card \(selfieCard.cardType)")
-                    StorageManager.shared.saveCard(card: selfieCard)
-                    DispatchQueue.main.async {
-                        self.moveToNextStep()
-                    }
+        SelfieCaptureViewController.Builder { (isComplete, selfie) in
+            guard isComplete,
+                  let selfie = selfie else {
+                return
+            }
+            
+            let selfieCard = Selfie(selfie: selfie.getSelfie().fixPortraitOrientation().fitImageIn(maxSize: 1024))
+            DispatchQueue.global().async {
+                print("Saving card \(selfieCard.cardType)")
+                StorageManager.shared.saveCard(card: selfieCard)
+                DispatchQueue.main.async {
+                    self.moveToNextStep()
                 }
             }
-            .setAccuracy(accuracy: .low)
-            .setVerificationTime(verificationTime: 2.0)
-            .setVerificationSteps(verificationSteps: SCLiveFaceVerificationStep.lfv_smile, SCLiveFaceVerificationStep.lfv_straight_face)
-            .create().show(parentViewController: self.getContainerViewController())
-        } catch {
-            print("Error capturing selfie: \(error.localizedDescription)")
-            UIApplication.showErrorAlert(message: "generic_error_message", alertAction: nil)
         }
+        .performExpressionCheck(true)
+        .start(parentViewController: self.getContainerViewController())
     }
 }

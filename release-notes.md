@@ -1,3 +1,8 @@
+## PingOneVerify UI Library Update - December 17th, 2021
+Features:
+- New selfie capture flow
+- Minor bug fixes and UI enhancements
+
 ## v1.0.2 - April 16th, 2021
 Features:
 - Verified information from ID cards is passed back to user  

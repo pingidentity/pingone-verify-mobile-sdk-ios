@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C394D48259E7DB30013AD3F /* LiveFaceVerification.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4A259E7DB30013AD3F /* LiveFaceVerification.strings */; };
+		1C2372A1276BBD6100F0A70B /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; };
+		1C2372A2276BBD6100F0A70B /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C394D48259E7DB30013AD3F /* SelfieCapture.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4A259E7DB30013AD3F /* SelfieCapture.strings */; };
 		1C394D4D259E7DE40013AD3F /* IdScanner.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4F259E7DE40013AD3F /* IdScanner.strings */; };
-		1C47C7E82626326800A2DE01 /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; };
-		1C47C7E92626326800A2DE01 /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C971192256468760028466E /* iCarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 1C971191256468760028466E /* iCarousel */; };
 		1C97119825646DD30028466E /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C97119425646DD30028466E /* StorageProtocol.swift */; };
 		1C97119925646DD30028466E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C97119525646DD30028466E /* StorageManager.swift */; };
@@ -70,7 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C47C7E92626326800A2DE01 /* P1VerifyLib.xcframework in Embed Frameworks */,
+				1C2372A2276BBD6100F0A70B /* P1VerifyLib.xcframework in Embed Frameworks */,
 				1CE56874262176BC00994E7B /* CommunicationManager.xcframework in Embed Frameworks */,
 				1CE5687A262176BC00994E7B /* P1Verify.xcframework in Embed Frameworks */,
 				1CE56876262176BC00994E7B /* JOSETools.xcframework in Embed Frameworks */,
@@ -84,7 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C394D49259E7DB30013AD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LiveFaceVerification.strings; sourceTree = "<group>"; };
+		1C394D49259E7DB30013AD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SelfieCapture.strings; sourceTree = "<group>"; };
 		1C394D4E259E7DE40013AD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/IdScanner.strings; sourceTree = "<group>"; };
 		1C97114F25643C310028466E /* P1VerifyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P1VerifyApp.entitlements; sourceTree = "<group>"; };
 		1C97119425646DD30028466E /* StorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 				1CE56871262176BC00994E7B /* JOSESwift.xcframework in Frameworks */,
 				1CE56873262176BC00994E7B /* CommunicationManager.xcframework in Frameworks */,
 				1CE56877262176BC00994E7B /* P1VerifyIDSchema.xcframework in Frameworks */,
-				1C47C7E82626326800A2DE01 /* P1VerifyLib.xcframework in Frameworks */,
+				1C2372A1276BBD6100F0A70B /* P1VerifyLib.xcframework in Frameworks */,
 				1CE56879262176BC00994E7B /* P1Verify.xcframework in Frameworks */,
 				1CE5687B262176BC00994E7B /* CryptoTools.xcframework in Frameworks */,
 				1CE56875262176BC00994E7B /* JOSETools.xcframework in Frameworks */,
@@ -230,7 +230,7 @@
 				1CC18E83256C228900A6842E /* CardParamTableViewCell.xib */,
 				1CC18E92256C4E1000A6842E /* WaitOverlayView.xib */,
 				1CBE3E89257AD815009BD632 /* Localizable.strings */,
-				1C394D4A259E7DB30013AD3F /* LiveFaceVerification.strings */,
+				1C394D4A259E7DB30013AD3F /* SelfieCapture.strings */,
 				1C394D4F259E7DE40013AD3F /* IdScanner.strings */,
 			);
 			path = resources;
@@ -362,7 +362,7 @@
 				1CBE3E8B257AD815009BD632 /* Localizable.strings in Resources */,
 				1CEC66F3255F030C00BE4B6F /* Assets.xcassets in Resources */,
 				1CEC66F1255F030B00BE4B6F /* Verify.storyboard in Resources */,
-				1C394D48259E7DB30013AD3F /* LiveFaceVerification.strings in Resources */,
+				1C394D48259E7DB30013AD3F /* SelfieCapture.strings in Resources */,
 				1CC18E8A256C23CC00A6842E /* CardParamTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,12 +410,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1C394D4A259E7DB30013AD3F /* LiveFaceVerification.strings */ = {
+		1C394D4A259E7DB30013AD3F /* SelfieCapture.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1C394D49259E7DB30013AD3F /* en */,
 			);
-			name = LiveFaceVerification.strings;
+			name = SelfieCapture.strings;
 			sourceTree = "<group>";
 		};
 		1C394D4F259E7DE40013AD3F /* IdScanner.strings */ = {
@@ -578,7 +578,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = P1VerifyApp/P1VerifyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BFE6CEM8L5;
 				INFOPLIST_FILE = P1VerifyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -601,7 +601,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = P1VerifyApp/P1VerifyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = BFE6CEM8L5;
 				INFOPLIST_FILE = P1VerifyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;

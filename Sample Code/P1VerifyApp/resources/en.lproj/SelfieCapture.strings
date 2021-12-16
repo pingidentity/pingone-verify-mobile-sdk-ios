@@ -1,0 +1,43 @@
+//
+//  SelfieCapture.strings
+//  P1VerifyApp
+//
+//  Created by Ping Identity on 12/31/20.
+//  Copyright © 2021 Ping Identity. All rights reserved.
+//
+
+// Expressions
+"smile" = "Smile!";
+"no_smile" = "No Smile.";
+"blink_eyes" = "Blink both your eyes";
+"open_eyes" = "Make sure that both your eyes are open";
+
+// Errors
+"cannotInitFaceDetector" = "Failed to initialize face detection. Please restart the app to try again.";
+"invalidObjectInResult" = "Found unknown object in the frame. Please restart the process to try again.";
+"noFaceFound" = "No Face Detected";
+"multipleFacesFound" = "Multiple faces in the frame";
+"faceMovedOutOfFrame" = "Face moved out of frame";
+".cannotGetCIImage" = "Failed to process the camera frames. Please restart the process to try again.";
+"invalidSampleBuffer" = "Failed to process the camera frames. Please restart the process to try again.";
+"cannotCaptureImage" = "Failed to capture the selfie. Please try again.";
+
+"cannotSetFocusMode" = "Failed to set focus mode. Camera may have abnormally.";
+"cannotInitializeInputForCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
+"cannotAddOutputsToCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
+"cannotGetCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
+
+//Buttons
+"next" = "Next";
+"retake" = "Re-take";
+"cancel" = "Cancel";
+"okay" = "Okay";
+
+// ImageQA instructions
+"center_face" = "Center your face in the frame";
+"straight_face" = "Make sure your face is straight";
+"hold_camera_further" = "Hold the camera further away from your face";
+"hold_camera_near" = "Hold the camera closer to your face";
+
+
+"camera_permission_rationale" = "Access to the camera is required for scanning your IDs and taking pictures.";
