@@ -157,4 +157,13 @@ public class StorageManager {
         NotificationCenter.default.post(name: NSNotification.Name(StorageManager.IDV_STATUS_UPDATED_NOTIFICATION_CENTER_KEY), object: nil)
     }
     
+    static func getAppVersionAndBuild() -> String? {
+        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            if let appBuild = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+                return "v\(appVersion)(\(appBuild))"
+            }
+        }
+        return nil
+    }
+    
 }

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C394D48259E7DB30013AD3F /* SelfieCapture.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4A259E7DB30013AD3F /* SelfieCapture.strings */; };
 		1C394D4D259E7DE40013AD3F /* IdScanner.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4F259E7DE40013AD3F /* IdScanner.strings */; };
-		1C53C4412792229300E89C32 /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; };
-		1C53C4422792229300E89C32 /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C971192256468760028466E /* iCarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 1C971191256468760028466E /* iCarousel */; };
 		1C97119825646DD30028466E /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C97119425646DD30028466E /* StorageProtocol.swift */; };
 		1C97119925646DD30028466E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C97119525646DD30028466E /* StorageManager.swift */; };
@@ -26,6 +24,10 @@
 		1C9711AD256492150028466E /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9711AC256492150028466E /* UIView+Border.swift */; };
 		1C9711AF256496E70028466E /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9711AE256496E70028466E /* QRScannerViewController.swift */; };
 		1C9711B1256497750028466E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9711B0256497750028466E /* SettingsViewController.swift */; };
+		1C9C6A6327EA677B00F2D281 /* P1VerifyIDSchema.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686E262176BC00994E7B /* P1VerifyIDSchema.xcframework */; };
+		1C9C6A6427EA677B00F2D281 /* P1VerifyIDSchema.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686E262176BC00994E7B /* P1VerifyIDSchema.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C9C6A6527EA678200F2D281 /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBC9D6D2790AAC9000ABA3B /* P1VerifyLib.xcframework */; };
+		1C9C6A6627EA678200F2D281 /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBC9D6D2790AAC9000ABA3B /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1CBD1CEE256DA6AD001BFAB8 /* VerifyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC66ED255F030B00BE4B6F /* VerifyHomeViewController.swift */; };
 		1CBE3E88257AD69F009BD632 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE3E87257AD69F009BD632 /* String+localized.swift */; };
 		1CBE3E8B257AD815009BD632 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CBE3E89257AD815009BD632 /* Localizable.strings */; };
@@ -49,8 +51,6 @@
 		1CE56874262176BC00994E7B /* CommunicationManager.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686C262176BC00994E7B /* CommunicationManager.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1CE56875262176BC00994E7B /* JOSETools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686D262176BC00994E7B /* JOSETools.xcframework */; };
 		1CE56876262176BC00994E7B /* JOSETools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686D262176BC00994E7B /* JOSETools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CE56877262176BC00994E7B /* P1VerifyIDSchema.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686E262176BC00994E7B /* P1VerifyIDSchema.xcframework */; };
-		1CE56878262176BC00994E7B /* P1VerifyIDSchema.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686E262176BC00994E7B /* P1VerifyIDSchema.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1CE56879262176BC00994E7B /* P1Verify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686F262176BC00994E7B /* P1Verify.xcframework */; };
 		1CE5687A262176BC00994E7B /* P1Verify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5686F262176BC00994E7B /* P1Verify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1CE5687B262176BC00994E7B /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE56870262176BC00994E7B /* CryptoTools.xcframework */; };
@@ -70,13 +70,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C53C4422792229300E89C32 /* P1VerifyLib.xcframework in Embed Frameworks */,
+				1C9C6A6627EA678200F2D281 /* P1VerifyLib.xcframework in Embed Frameworks */,
 				1CE56874262176BC00994E7B /* CommunicationManager.xcframework in Embed Frameworks */,
 				1CE5687A262176BC00994E7B /* P1Verify.xcframework in Embed Frameworks */,
 				1CE56876262176BC00994E7B /* JOSETools.xcframework in Embed Frameworks */,
+				1C9C6A6427EA677B00F2D281 /* P1VerifyIDSchema.xcframework in Embed Frameworks */,
 				1CE56872262176BC00994E7B /* JOSESwift.xcframework in Embed Frameworks */,
 				1CE5687C262176BC00994E7B /* CryptoTools.xcframework in Embed Frameworks */,
-				1CE56878262176BC00994E7B /* P1VerifyIDSchema.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +101,7 @@
 		1C9711AC256492150028466E /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		1C9711AE256496E70028466E /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		1C9711B0256497750028466E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1CBC9D6D2790AAC9000ABA3B /* P1VerifyLib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1VerifyLib.xcframework; path = "../SDK/UI Library/P1VerifyLib.xcframework"; sourceTree = "<group>"; };
 		1CBE3E87257AD69F009BD632 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		1CBE3E8A257AD815009BD632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = P1VerifyApp/Base.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		1CBE3E8C257AD824009BD632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		1CE5686E262176BC00994E7B /* P1VerifyIDSchema.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1VerifyIDSchema.xcframework; path = ../SDK/P1VerifyIDSchema.xcframework; sourceTree = "<group>"; };
 		1CE5686F262176BC00994E7B /* P1Verify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1Verify.xcframework; path = ../SDK/P1Verify.xcframework; sourceTree = "<group>"; };
 		1CE56870262176BC00994E7B /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CryptoTools.xcframework; path = ../SDK/CryptoTools.xcframework; sourceTree = "<group>"; };
-		1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = P1VerifyLib.xcframework; path = "../SDK/UI Library/P1VerifyLib.xcframework"; sourceTree = "<group>"; };
 		1CEC66E6255F030B00BE4B6F /* P1VerifyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P1VerifyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEC66E9255F030B00BE4B6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CEC66ED255F030B00BE4B6F /* VerifyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyHomeViewController.swift; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 			files = (
 				1CE56871262176BC00994E7B /* JOSESwift.xcframework in Frameworks */,
 				1CE56873262176BC00994E7B /* CommunicationManager.xcframework in Frameworks */,
-				1CE56877262176BC00994E7B /* P1VerifyIDSchema.xcframework in Frameworks */,
-				1C53C4412792229300E89C32 /* P1VerifyLib.xcframework in Frameworks */,
+				1C9C6A6327EA677B00F2D281 /* P1VerifyIDSchema.xcframework in Frameworks */,
+				1C9C6A6527EA678200F2D281 /* P1VerifyLib.xcframework in Frameworks */,
 				1CE56879262176BC00994E7B /* P1Verify.xcframework in Frameworks */,
 				1CE5687B262176BC00994E7B /* CryptoTools.xcframework in Frameworks */,
 				1CE56875262176BC00994E7B /* JOSETools.xcframework in Frameworks */,
@@ -159,7 +159,7 @@
 		1C97113825643B570028466E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */,
+				1CBC9D6D2790AAC9000ABA3B /* P1VerifyLib.xcframework */,
 				1CE5686C262176BC00994E7B /* CommunicationManager.xcframework */,
 				1CE56870262176BC00994E7B /* CryptoTools.xcframework */,
 				1CE5686F262176BC00994E7B /* P1Verify.xcframework */,
@@ -455,6 +455,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1C509B3B27B3261A002D8B46 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Test;
+		};
+		1C509B3C27B3261A002D8B46 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = P1VerifyApp/P1VerifyApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = YZYUGL7S48;
+				INFOPLIST_FILE = P1VerifyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sample.pingoneverify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Test;
+		};
 		1CEC66F8255F030C00BE4B6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -578,16 +662,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = P1VerifyApp/P1VerifyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = BFE6CEM8L5;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = YZYUGL7S48;
 				INFOPLIST_FILE = P1VerifyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sample.P1VerifyApp;
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sample.pingoneverify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -601,16 +685,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = P1VerifyApp/P1VerifyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = BFE6CEM8L5;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = YZYUGL7S48;
 				INFOPLIST_FILE = P1VerifyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sample.P1VerifyApp;
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sample.pingoneverify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -624,6 +708,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CEC66F8255F030C00BE4B6F /* Debug */,
+				1C509B3B27B3261A002D8B46 /* Test */,
 				1CEC66F9255F030C00BE4B6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -633,6 +718,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CEC66FB255F030C00BE4B6F /* Debug */,
+				1C509B3C27B3261A002D8B46 /* Test */,
 				1CEC66FC255F030C00BE4B6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import ShoLib
 
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var settingsHeader: UILabel!
+    @IBOutlet weak var versionString: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,13 @@ class SettingsViewController: UIViewController {
         tapGestureRecognizer.numberOfTapsRequired = 4
         self.settingsHeader.isUserInteractionEnabled = true
         self.settingsHeader.addGestureRecognizer(tapGestureRecognizer)
+        
+        if let appVersion = StorageManager.getAppVersionAndBuild() {
+            self.versionString.isHidden = false
+            self.versionString.text = appVersion
+        } else {
+            self.versionString.isHidden = true
+        }
     }
     
     @objc func headerViewTapped(sender: UITapGestureRecognizer) {
@@ -40,15 +49,15 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func onSelfieClicked(_ sender: UIButton) {
-        self.dismissAndStartForWizardStep(.captureSelfie)
+        self.dismissAndStartForWizardStep(.captureSelfie, sender: sender)
     }
     
     @IBAction func onDriverLicenseClicked(_ sender: UIButton) {
-        self.dismissAndStartForWizardStep(.captureDriverLicense)
+        self.dismissAndStartForWizardStep(.captureDriverLicense, sender: sender)
     }
     
     @IBAction func onPassportClicked(_ sender: UIButton) {
-        self.dismissAndStartForWizardStep(.capturePassport)
+        self.dismissAndStartForWizardStep(.capturePassport, sender: sender)
     }
     
     @IBAction func onCheckVerificationClicked(_ sender: UIButton) {
@@ -57,8 +66,15 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    func dismissAndStartForWizardStep(_ wizardStep: WizardStep) {
-        let vc = WizardViewController.startWizardFor(steps: [wizardStep])
+    func dismissAndStartForWizardStep(_ wizardStep: WizardStep, sender: UIButton?) {
+        sender?.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: { [weak self] in
+            guard let _ = sender, let _ = self else {
+                return
+            }
+            sender?.isEnabled = true
+        })
+        let vc = WizardViewController.startWizardFor(steps: [wizardStep], isUpdatingDocument: true)
         if let parentViewController = self.navigationController?.presentingViewController as? UINavigationController {
             parentViewController.pushViewController(vc, animated: true)
             self.navigationController?.dismiss(animated: true, completion: nil)

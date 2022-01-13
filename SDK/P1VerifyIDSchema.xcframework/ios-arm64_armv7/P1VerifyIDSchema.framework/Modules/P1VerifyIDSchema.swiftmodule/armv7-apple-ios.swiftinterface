@@ -1,10 +1,11 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name P1VerifyIDSchema
 import CoreImage
 import Foundation
 import Swift
 import UIKit
+import _Concurrency
 @_hasMissingDesignatedInitializers open class Card : P1VerifyIDSchema.JsonSerializable, P1VerifyIDSchema.IdCard {
   public var cardId: Swift.String
   final public let cardType: Swift.String
@@ -17,7 +18,6 @@ import UIKit
   public func addCardImage(_ images: UIKit.UIImage...)
   override public func toDictionary() throws -> [Swift.String : Any]
   @objc deinit
-  override public init()
 }
 open class DriverLicense : P1VerifyIDSchema.JsonSerializable, P1VerifyIDSchema.IdCardWithFace {
   final public let cardType: Swift.String
@@ -26,11 +26,11 @@ open class DriverLicense : P1VerifyIDSchema.JsonSerializable, P1VerifyIDSchema.I
   public var frontImage: UIKit.UIImage! {
     get
   }
-  public init(cardId: Swift.String? = nil, firstName: Swift.String, middleName: Swift.String?, lastName: Swift.String, gender: Swift.String, addressStreet: Swift.String, addressCity: Swift.String, addressState: Swift.String, addressZip: Swift.String, country: Swift.String, issueDate: Swift.String, expirationDate: Swift.String, birthDate: Swift.String, idNumber: Swift.String, weight: Swift.String?, height: Swift.String?, hairColor: Swift.String?, eyeColor: Swift.String?)
+  public init(cardId: Swift.String? = nil, firstName: Swift.String, middleName: Swift.String?, lastName: Swift.String, gender: Swift.String, addressStreet: Swift.String, addressCity: Swift.String, addressState: Swift.String, addressZip: Swift.String, country: Swift.String, issueDate: Swift.String, expirationDate: Swift.String, birthDate: Swift.String, idNumber: Swift.String, weight: Swift.String?, height: Swift.String?, hairColor: Swift.String?, eyeColor: Swift.String?, rawBarcodeData: Swift.String?)
   required convenience public init(dict: [Swift.String : Any]) throws
   public func setFrontImage(_ value: UIKit.UIImage) throws
   public func setBackImage(_ value: UIKit.UIImage)
-  public func getBackImage() -> UIKit.UIImage
+  public func getBackImage() -> UIKit.UIImage?
   public func setFirstName(_ value: Swift.String)
   public func getFirstName() -> Swift.String
   public func setMiddleName(_ value: Swift.String)
@@ -65,9 +65,10 @@ open class DriverLicense : P1VerifyIDSchema.JsonSerializable, P1VerifyIDSchema.I
   public func getHairColor() -> Swift.String
   public func setEyeColor(_ value: Swift.String)
   public func getEyeColor() -> Swift.String
+  public func setRawBarcodeData(_ value: Swift.String?)
+  public func getRawBarcodeData() -> Swift.String?
   override public func toDictionary() throws -> [Swift.String : Any]
   @objc deinit
-  override public init()
 }
 public protocol IdCard : P1VerifyIDSchema.JsonSerializableObject, P1VerifyIDSchema.JsonSerializableProtocol {
   var cardId: Swift.String { get set }
@@ -77,7 +78,7 @@ public protocol IdCard : P1VerifyIDSchema.JsonSerializableObject, P1VerifyIDSche
   func getCardId() -> Swift.String
   func getCardType() -> Swift.String
 }
-extension IdCard {
+extension P1VerifyIDSchema.IdCard {
   public func setCardId(_ value: Swift.String)
   public func getCardId() -> Swift.String
   public func getCardType() -> Swift.String
@@ -86,12 +87,12 @@ extension IdCard {
 public enum IdCardError : Swift.Error {
   case cannotFindFaceOnIdCardImage(description: Swift.String)
 }
-extension IdCardError : Foundation.LocalizedError {
+extension P1VerifyIDSchema.IdCardError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
-extension IdCardError : Swift.Equatable {
+extension P1VerifyIDSchema.IdCardError : Swift.Equatable {
   public static func == (lhs: P1VerifyIDSchema.IdCardError, rhs: P1VerifyIDSchema.IdCardError) -> Swift.Bool
 }
 public protocol IdCardWithFace : P1VerifyIDSchema.IdCard {
@@ -104,7 +105,7 @@ public protocol IdCardWithFace : P1VerifyIDSchema.IdCard {
   func getFrontImage() -> UIKit.UIImage
   func getFaceCoordinates() -> CoreGraphics.CGRect
 }
-extension IdCardWithFace {
+extension P1VerifyIDSchema.IdCardWithFace {
   public func getFaceCoordinates() -> CoreGraphics.CGRect
   public func getFrontImage() -> UIKit.UIImage
   public func getIdFaceRect() -> CoreGraphics.CGRect?
@@ -141,7 +142,6 @@ open class Passport : P1VerifyIDSchema.JsonSerializable, P1VerifyIDSchema.IdCard
   public func getPersonalNumber() -> Swift.String
   override public func toDictionary() throws -> [Swift.String : Any]
   @objc deinit
-  override public init()
 }
 open class Selfie : P1VerifyIDSchema.JsonSerializable, P1VerifyIDSchema.IdCard {
   public var cardId: Swift.String
@@ -152,12 +152,11 @@ open class Selfie : P1VerifyIDSchema.JsonSerializable, P1VerifyIDSchema.IdCard {
   public func getSelfie() -> UIKit.UIImage
   override public func toDictionary() throws -> [Swift.String : Any]
   @objc deinit
-  override public init()
 }
-extension Data {
+extension Foundation.Data {
   public func toString() -> Swift.String
 }
-extension String {
+extension Swift.String {
   public func toData() -> Foundation.Data
 }
 public enum JsonSerializableError : Swift.Error {
@@ -166,12 +165,12 @@ public enum JsonSerializableError : Swift.Error {
   case invalidJsonString
   case missingRequiredInformationForKey(_: Swift.String)
 }
-extension JsonSerializableError : Foundation.LocalizedError {
+extension P1VerifyIDSchema.JsonSerializableError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
-extension JsonSerializableError : Swift.Equatable {
+extension P1VerifyIDSchema.JsonSerializableError : Swift.Equatable {
   public static func == (lhs: P1VerifyIDSchema.JsonSerializableError, rhs: P1VerifyIDSchema.JsonSerializableError) -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers public class JsonHelper {
@@ -191,10 +190,10 @@ open class JsonSerializableObject {
   open func toJsonString() throws -> Swift.String
   @objc deinit
 }
-extension JsonSerializableProtocol where Self : P1VerifyIDSchema.JsonSerializableObject {
+extension P1VerifyIDSchema.JsonSerializableProtocol where Self : P1VerifyIDSchema.JsonSerializableObject {
   public init(jsonString: Swift.String) throws
 }
 public typealias JsonSerializable = P1VerifyIDSchema.JsonSerializableObject & P1VerifyIDSchema.JsonSerializableProtocol
-extension Mirror {
+extension Swift.Mirror {
   public func toDictionary() throws -> [Swift.String : Any]
 }

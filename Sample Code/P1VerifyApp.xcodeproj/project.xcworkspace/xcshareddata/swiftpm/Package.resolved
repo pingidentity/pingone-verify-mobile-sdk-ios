@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "iCarousel",
-        "repositoryURL": "https://github.com/ShoCardInc/iCarousel",
-        "state": {
-          "branch": "master",
-          "revision": "091cce99a888f1c42b7081c9fac03859250653de",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "icarousel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ShoCardInc/iCarousel",
+      "state" : {
+        "branch" : "master",
+        "revision" : "091cce99a888f1c42b7081c9fac03859250653de"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

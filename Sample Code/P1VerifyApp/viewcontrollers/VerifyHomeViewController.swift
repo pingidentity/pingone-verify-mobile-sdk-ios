@@ -25,11 +25,20 @@ class VerifyHomeViewController: UIViewController {
     @IBOutlet weak var cardCarousel: iCarousel!
     @IBOutlet var qrScannerButton: UIBarButtonItem!
     @IBOutlet var settingsButton: UIBarButtonItem!
+    @IBOutlet weak var versionString: UILabel!
     
     var currentVerifyStatus, previousStatus: VerifyStatus!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let appVersion = StorageManager.getAppVersionAndBuild() {
+            self.versionString.isHidden = false
+            self.versionString.text = appVersion
+        } else {
+            self.versionString.isHidden = true
+        }
+        
         self.initializeObservers()
         
         self.idvFailedView.isUserInteractionEnabled = true
@@ -200,9 +209,9 @@ class VerifyHomeViewController: UIViewController {
         switch verificationStatus {
         case .NOT_STARTED, .NOT_REQUIRED:
             return self.idvNotStartedView
-        case .APPROVED_NO_REQUEST, .SUCCESS, .SUCCESS_MANUAL, .PARTIAL:
+        case .APPROVED_NO_REQUEST, .SUCCESS, .SUCCESS_MANUAL:
             return self.idvSuccessfulView
-        case .IN_PROGRESS:
+        case .IN_PROGRESS, .PARTIAL:
             return self.idvWaitingView
         case .REQUESTED:
             return self.idvSubmittingView

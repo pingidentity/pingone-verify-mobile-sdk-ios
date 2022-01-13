@@ -20,7 +20,8 @@ class WizardPageViewController: UIPageViewController, UIPageViewControllerDataSo
         return 0
     }
     var wizardSteps: [WizardStep] = [.captureSelfie, .captureDriverLicense, .capturePassport]
-    
+    var isUpdatingDocument: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
@@ -87,10 +88,11 @@ class WizardPageViewController: UIPageViewController, UIPageViewControllerDataSo
     }
     
     @discardableResult public func nextPage() -> Bool {
+        print("isUpdatingDocument: \(isUpdatingDocument)")
         let currentIndex = self.currentPageIndex
         let newIndex = currentIndex + 1
         guard newIndex >= 0, newIndex < self.wizardViewControllers.count else {
-            guard IdvHelper.hasRequiredInfo() else {
+            guard (isUpdatingDocument || IdvHelper.hasRequiredInfo()) else {
                 DispatchQueue.main.async {
                     let alertVc = UIAlertController(title: "insufficient_info_error_title".localized, message: "insufficient_info_error_message".localized, preferredStyle: .alert)
                     alertVc.addAction(UIAlertAction(title: "Okay".localized, style: .default, handler: nil))

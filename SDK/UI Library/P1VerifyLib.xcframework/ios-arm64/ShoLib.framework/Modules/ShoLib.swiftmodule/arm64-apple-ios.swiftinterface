@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.6 effective-4.2 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name ShoLib
 import ARKit
 import AVFoundation
@@ -15,17 +15,18 @@ import Swift
 import UIKit
 import VideoToolbox
 import Vision
+import _Concurrency
 public enum SCFaceDetectorError : Swift.Error {
   case FailedToInitialize(message: Swift.String)
   case IllegalArgument(message: Swift.String)
   case Unknown(message: Swift.String? = nil, cause: Swift.Error? = nil)
 }
-extension SCFaceDetectorError {
+extension ShoLib.SCFaceDetectorError {
   public var localizedDescription: Swift.String {
     get
   }
 }
-extension UIImage {
+extension UIKit.UIImage {
   public static func named(_ name: Swift.String, in bundle: Foundation.Bundle? = nil) -> UIKit.UIImage?
 }
 public class SCLibError {
@@ -39,7 +40,7 @@ public enum BuilderError : Swift.Error {
   case InvalidCountry(message: Swift.String = "Invalid country name. If unsure, leave the field empty and pick a country from the list.".localized)
   case NotEnoughScannerSteps(message: Swift.String = "Must have at least one step to run the scanner.".localized)
 }
-extension BuilderError {
+extension ShoLib.BuilderError {
   public var localizedDescription: Swift.String {
     get
   }
@@ -48,7 +49,7 @@ extension BuilderError {
   public class func start(parentViewController: UIKit.UIViewController, onComplete: ((Swift.Bool, Swift.Int?, Swift.String?) -> Swift.Void)?)
   @objc deinit
 }
-extension PassportScannerViewController {
+extension ShoLib.PassportScannerViewController {
   public class Builder {
     public init(onComplete: @escaping (Swift.Bool, P1VerifyIDSchema.Passport?) -> Swift.Void)
     public func setCheckHasFace(checkHasFace: Swift.Bool) -> ShoLib.PassportScannerViewController.Builder
@@ -56,23 +57,23 @@ extension PassportScannerViewController {
     @objc deinit
   }
 }
-@objc @_inheritsConvenienceInitializers public class CustomPickerViewController : UIKit.UIViewController {
-  public var onComplete: ((Swift.Bool, Swift.Int?, Swift.String?) -> Swift.Void)?
-  @objc override dynamic public func viewDidLoad()
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CustomPickerViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var onComplete: ((Swift.Bool, Swift.Int?, Swift.String?) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension CustomPickerViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @objc override dynamic public func willMove(toParent parent: UIKit.UIViewController?)
-  @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+extension ShoLib.CustomPickerViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willMove(toParent parent: UIKit.UIViewController?)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
 }
-extension CustomPickerViewController : UIKit.UIPickerViewDataSource, UIKit.UIPickerViewDelegate {
-  @objc dynamic public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
-  @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
-  @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+extension ShoLib.CustomPickerViewController : UIKit.UIPickerViewDataSource, UIKit.UIPickerViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
 }
-extension CustomPickerViewController {
+extension ShoLib.CustomPickerViewController {
   public class Builder {
     public init(parentViewController: UIKit.UIViewController)
     public func setCompletionListener(onComplete: @escaping (Swift.Bool, Swift.Int?, Swift.String?) -> Swift.Void) -> ShoLib.CustomPickerViewController.Builder
@@ -108,59 +109,58 @@ public protocol SCLiveFaceVerifierListener {
   func onVerificationProgress(step: ShoLib.SCLiveFaceVerificationStep, face: ShoLib.SCFace, result: Swift.Bool)
   func onVerificationError(error: ShoLib.SCLiveFaceVerifierError)
 }
-@objc @_inheritsConvenienceInitializers public class LiveFaceVerificationViewController : UIKit.UIViewController {
-  @objc @IBOutlet weak public var bgImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var navBar: UIKit.UIView!
-  @objc @IBOutlet weak public var navBarLogoImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var cameraView: ShoLib.CameraView!
-  @objc @IBOutlet weak public var guidelineImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var errorTextView: UIKit.UILabel!
-  @objc @IBOutlet weak public var stepIndicatorImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var stepLabelTextView: UIKit.UILabel!
-  @objc @IBOutlet weak public var instructionTextView: UIKit.UILabel!
-  @objc @IBOutlet weak public var progressTimer: ShoLib.SCCircularProgressView!
-  @objc @IBOutlet weak public var captureButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var confirmButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var retakeButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var skipButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var previewImageView: UIKit.UIImageView!
-  public func show(parentViewController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewDidLayoutSubviews()
-  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class LiveFaceVerificationViewController : UIKit.UIViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var bgImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var navBar: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var navBarLogoImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cameraView: ShoLib.CameraView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var guidelineImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var errorTextView: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var stepIndicatorImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var stepLabelTextView: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var instructionTextView: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var progressTimer: ShoLib.SCCircularProgressView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var captureButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var confirmButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var retakeButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var skipButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var previewImageView: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public func show(parentViewController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension LiveFaceVerificationViewController : ShoLib.SCLiveFaceVerifierListener {
-  public func onVerificationResult(step: ShoLib.SCLiveFaceVerificationStep, faceId: Swift.Int, percentageOfValidFrames: Swift.Float)
-  public func onVerificationProgress(step: ShoLib.SCLiveFaceVerificationStep, face: ShoLib.SCFace, result: Swift.Bool)
-  public func isFullFaceWithinCameraBounds(_ face: ShoLib.SCFace) -> Swift.Bool
-  public func isFaceWithinGuidelines(_ face: ShoLib.SCFace) -> Swift.Bool
-  public func onVerificationError(error: ShoLib.SCLiveFaceVerifierError)
-  public func onError(error: ShoLib.SCLiveFaceVerifierError)
+extension ShoLib.LiveFaceVerificationViewController : ShoLib.SCLiveFaceVerifierListener {
+  @_Concurrency.MainActor(unsafe) public func onVerificationResult(step: ShoLib.SCLiveFaceVerificationStep, faceId: Swift.Int, percentageOfValidFrames: Swift.Float)
+  @_Concurrency.MainActor(unsafe) public func onVerificationProgress(step: ShoLib.SCLiveFaceVerificationStep, face: ShoLib.SCFace, result: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func isFullFaceWithinCameraBounds(_ face: ShoLib.SCFace) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isFaceWithinGuidelines(_ face: ShoLib.SCFace) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func onVerificationError(error: ShoLib.SCLiveFaceVerifierError)
+  @_Concurrency.MainActor(unsafe) public func onError(error: ShoLib.SCLiveFaceVerifierError)
 }
-extension LiveFaceVerificationViewController : ShoLib.SCImageProcessingDelegate {
-  public func capturedImage(_ image: UIKit.UIImage, rect: CoreGraphics.CGRect)
-  public func capturedMetadata(_ metadata: Swift.String)
-  public func onFrameCaptured(_ sampleBuffer: CoreMedia.CMSampleBuffer?)
+extension ShoLib.LiveFaceVerificationViewController : ShoLib.SCImageProcessingDelegate {
+  @_Concurrency.MainActor(unsafe) public func capturedImage(_ image: UIKit.UIImage, rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func capturedMetadata(_ metadata: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func onFrameCaptured(_ sampleBuffer: CoreMedia.CMSampleBuffer?)
 }
-extension LiveFaceVerificationViewController : UIKit.UIScrollViewDelegate {
-  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+extension ShoLib.LiveFaceVerificationViewController : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
-@objc public class CameraOverlayView : UIKit.UIView {
-  public var previewRectFrame: CoreGraphics.CGRect?
-  public var overlayBackgroundColor: UIKit.UIColor
-  public var drawOutline: Swift.Bool
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+@objc @_Concurrency.MainActor(unsafe) public class CameraOverlayView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var previewRectFrame: CoreGraphics.CGRect?
+  @_Concurrency.MainActor(unsafe) public var overlayBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var drawOutline: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
   @objc deinit
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
-extension SelfieCaptureViewController {
+extension ShoLib.SelfieCaptureViewController {
   public class Builder {
     public init(onComplete: @escaping (Swift.Bool, P1VerifyIDSchema.Selfie?) -> Swift.Void)
     public func performExpressionCheck(_ bool: Swift.Bool) -> ShoLib.SelfieCaptureViewController.Builder
@@ -169,42 +169,42 @@ extension SelfieCaptureViewController {
     @objc deinit
   }
 }
-@objc @_inheritsConvenienceInitializers public class PassportScannerViewController : UIKit.UIViewController {
-  @objc @IBOutlet weak public var bgImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var navBar: UIKit.UIView!
-  @objc @IBOutlet weak public var navBarLogoImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var cameraView: ShoLib.CameraView!
-  @objc @IBOutlet weak public var overlayReferenceView: UIKit.UIView!
-  @objc @IBOutlet weak public var overlayView: ShoLib.CameraOverlayView!
-  @objc @IBOutlet weak public var stepIndicatorImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var stepLabelTextView: UIKit.UILabel!
-  @objc @IBOutlet weak public var instructionTextView: UIKit.UILabel!
-  @objc @IBOutlet weak public var torchButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var captureButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var confirmButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var retakeButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var cropView: ShoLib.SCResizableView!
-  @objc @IBOutlet weak public var previewImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var idStepInstructionView: UIKit.UIView!
-  @objc @IBOutlet weak public var idStepInstructionLabel: UIKit.UILabel!
-  public func show(parentViewController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewDidLayoutSubviews()
-  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class PassportScannerViewController : UIKit.UIViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var bgImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var navBar: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var navBarLogoImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cameraView: ShoLib.CameraView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var overlayReferenceView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var overlayView: ShoLib.CameraOverlayView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var stepIndicatorImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var stepLabelTextView: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var instructionTextView: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var torchButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var captureButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var confirmButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var retakeButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cropView: ShoLib.SCResizableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var previewImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var idStepInstructionView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var idStepInstructionLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public func show(parentViewController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension PassportScannerViewController : ShoLib.SCImageProcessingDelegate {
-  public func capturedImage(_ image: UIKit.UIImage, rect: CoreGraphics.CGRect)
-  public func capturedMetadata(_ metadata: Swift.String)
+extension ShoLib.PassportScannerViewController : ShoLib.SCImageProcessingDelegate {
+  @_Concurrency.MainActor(unsafe) public func capturedImage(_ image: UIKit.UIImage, rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func capturedMetadata(_ metadata: Swift.String)
 }
-extension PassportScannerViewController : UIKit.UIScrollViewDelegate {
+extension ShoLib.PassportScannerViewController : UIKit.UIScrollViewDelegate {
 }
-extension SCLiveFaceVerifier {
+extension ShoLib.SCLiveFaceVerifier {
   public class Builder {
     public init(listener: ShoLib.SCLiveFaceVerifierListener)
     public func setFaceDetector(faceDetector: ShoLib.SCFaceDetector) -> ShoLib.SCLiveFaceVerifier.Builder
@@ -215,13 +215,13 @@ extension SCLiveFaceVerifier {
     @objc deinit
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SCCircularProgressView : UIKit.UIView {
-  public var progressColor: UIKit.UIColor
-  public var trackColor: UIKit.UIColor
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  public func reset()
-  public func setProgress(_ progress: CoreGraphics.CGFloat)
-  public func startTimerForDuration(_ duration: Foundation.TimeInterval = 1.0)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SCCircularProgressView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var progressColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var trackColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func reset()
+  @_Concurrency.MainActor(unsafe) public func setProgress(_ progress: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func startTimerForDuration(_ duration: Foundation.TimeInterval = 1.0)
   @objc deinit
 }
 public class SCFace {
@@ -242,7 +242,7 @@ public struct UIImageColors {
   public var secondaryColor: UIKit.UIColor!
   public var detailColor: UIKit.UIColor!
 }
-extension UIImage {
+extension UIKit.UIImage {
   public func getColors(scaleDownSize: CoreGraphics.CGSize = CGSize.zero, completionHandler: @escaping (ShoLib.UIImageColors) -> Swift.Void)
   public func getColors(scaleDownSize: CoreGraphics.CGSize = CGSize.zero) -> ShoLib.UIImageColors
 }
@@ -253,7 +253,7 @@ extension UIImage {
   public class func stringFromDate(date: Foundation.Date, dateFormat: Swift.String) -> Swift.String
   @objc deinit
 }
-extension Date {
+extension Foundation.Date {
   public var age: Swift.Int {
     get
   }
@@ -294,7 +294,7 @@ public struct ImageTransformations {
   public static func imageToBase64(image: UIKit.UIImage) -> Swift.String
   public static func imageFromBase64(imageStr: Swift.String) -> UIKit.UIImage?
 }
-extension CALayer {
+extension QuartzCore.CALayer {
   public var borderUIColor: UIKit.UIColor? {
     get
     set
@@ -330,7 +330,6 @@ public class Logger {
   public func getMessage() -> Swift.String
   public func getDetails() -> Swift.String
   @objc deinit
-  @objc override dynamic public init()
 }
 @_hasMissingDesignatedInitializers public class AuthenticationHelper {
   public class func askUserApproval(_ reason: Swift.String, successHandler: @escaping () -> Swift.Void, failureHandler: @escaping () -> Swift.Void)
@@ -352,14 +351,14 @@ public class Logger {
   open class func getImageFromSampleBuffer(context: CoreImage.CIContext, sampleBuffer: CoreMedia.CMSampleBuffer) -> UIKit.UIImage?
   @objc deinit
 }
-extension LiveFaceVerificationViewController.Builder {
+extension ShoLib.LiveFaceVerificationViewController.Builder {
   public enum BuilderError : Swift.Error {
     case MissingVerificationStep(message: Swift.String = "Verifier must have at least one verification step.".localized)
     case NotEnoughVerificationSteps(message: Swift.String = "Must have at least two Verification Steps for the test.".localized)
     case InvalidVerificationTime(message: Swift.String = "Verification Time cannot be negative.".localized)
   }
 }
-extension LiveFaceVerificationViewController.Builder.BuilderError {
+extension ShoLib.LiveFaceVerificationViewController.Builder.BuilderError {
   public var localizedDescription: Swift.String {
     get
   }
@@ -378,7 +377,7 @@ public func logattention(_ message: Any, fileName: Swift.String = #file, functio
   public func detectFaces(url: Foundation.URL)
   @objc deinit
 }
-extension DriverLicenseScannerViewController {
+extension ShoLib.DriverLicenseScannerViewController {
   public class Builder {
     public init(onComplete: @escaping (Swift.Bool, P1VerifyIDSchema.DriverLicense?) -> Swift.Void)
     public func setCountry(country: Swift.String) throws -> ShoLib.DriverLicenseScannerViewController.Builder
@@ -390,7 +389,7 @@ extension DriverLicenseScannerViewController {
     @objc deinit
   }
 }
-extension LiveFaceVerificationViewController {
+extension ShoLib.LiveFaceVerificationViewController {
   public class Builder {
     public init(onComplete: @escaping (Swift.Bool, P1VerifyIDSchema.Selfie?) -> Swift.Void)
     public func setVerificationTime(verificationTime: Foundation.TimeInterval) -> ShoLib.LiveFaceVerificationViewController.Builder
@@ -406,32 +405,31 @@ extension LiveFaceVerificationViewController {
   public class func numberOfFacesInImage(image: UIKit.UIImage) -> Swift.Int
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class SelfieCaptureViewController : UIKit.UIViewController {
-  @objc @IBOutlet weak public var nextButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var retakeButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewDidLayoutSubviews()
-  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SelfieCaptureViewController : UIKit.UIViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var nextButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var retakeButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cancelButton: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension SelfieCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+extension ShoLib.SelfieCaptureViewController : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
 }
-extension SelfieCaptureViewController : AVFoundation.AVCapturePhotoCaptureDelegate {
-  @objc dynamic public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVFoundation.AVCapturePhoto, error: Swift.Error?)
+extension ShoLib.SelfieCaptureViewController : AVFoundation.AVCapturePhotoCaptureDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVFoundation.AVCapturePhoto, error: Swift.Error?)
 }
-@objc public class OvalCameraOverlayView : UIKit.UIView {
-  public var previewRectFrame: CoreGraphics.CGRect?
-  public var overlayBackgroundColor: UIKit.UIColor
-  public var drawOutline: Swift.Bool
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
-  public func updateOutlineColor(_ newColor: UIKit.UIColor)
+@objc @_Concurrency.MainActor(unsafe) public class OvalCameraOverlayView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var previewRectFrame: CoreGraphics.CGRect?
+  @_Concurrency.MainActor(unsafe) public var overlayBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var drawOutline: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func updateOutlineColor(_ newColor: UIKit.UIColor)
   @objc deinit
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 public protocol SCFaceDetectorListener {
   func onFacesDetected(faces: [ShoLib.SCFace])
@@ -458,18 +456,18 @@ public protocol SCImageProcessingDelegate {
 public enum CameraDevicePosition {
   case frontcamera, backcamera
   public static func == (a: ShoLib.CameraDevicePosition, b: ShoLib.CameraDevicePosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public enum FocusMode {
   case auto, continuousAuto, locked
   public static func == (a: ShoLib.FocusMode, b: ShoLib.FocusMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public enum MetadataObjectType {
   case qr, pdf417, face, other(objectType: AVFoundation.AVMetadataObject.ObjectType)
@@ -477,32 +475,32 @@ public enum MetadataObjectType {
 public enum FlashMode {
   case on, off, auto
   public static func == (a: ShoLib.FlashMode, b: ShoLib.FlashMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public enum TorchMode {
   case on, off, auto
   public static func == (a: ShoLib.TorchMode, b: ShoLib.TorchMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public enum CroppedOptions {
   case none, croppedToViewPort, croppedToEdges
   public static func == (a: ShoLib.CroppedOptions, b: ShoLib.CroppedOptions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
-@objc @_inheritsConvenienceInitializers public class CameraView : UIKit.UIView {
-  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CameraView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
 @objc public class SCAVCaptureWrapper : ObjectiveC.NSObject, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
   public var previewLayer: AVFoundation.AVCaptureVideoPreviewLayer!
@@ -522,7 +520,7 @@ public enum CroppedOptions {
     case faceFoundInFrame(face: ShoLib.SCFace)
     case multipleFacesInFrame(faces: [ShoLib.SCFace])
   }
-  public func addFaceDetection(_ preferredCamera: ShoLib.CameraDevicePosition, onFaceDetectionEvent: ((ShoLib.SCAVCaptureWrapper.FaceDetectionEvent) -> Swift.Void)?, drawFaceRect: Swift.Bool = false, onFrameCaptured: ((CoreMedia.CMSampleBuffer?) -> Swift.Void)?)
+  public func addFaceDetection(_ preferredCamera: ShoLib.CameraDevicePosition, onFaceDetectionEvent: ((_ event: ShoLib.SCAVCaptureWrapper.FaceDetectionEvent) -> Swift.Void)?, drawFaceRect: Swift.Bool = false, onFrameCaptured: ((CoreMedia.CMSampleBuffer?) -> Swift.Void)?)
   @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
   public func takeStillImage(_ cropped: ShoLib.CroppedOptions = .none)
   public func disableMetadataCapture()
@@ -548,14 +546,13 @@ public enum CroppedOptions {
   public static func requestCameraPermission(onComplete: @escaping (Swift.Bool) -> Swift.Void)
   public static func showCameraPermissionRationale(parentViewController: UIKit.UIViewController, message: Swift.String, onCanceled: (() -> Swift.Void)? = nil)
   public func getContext() -> CoreImage.CIContext
-  @objc override dynamic public init()
 }
-extension SCAVCaptureWrapper : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+extension ShoLib.SCAVCaptureWrapper : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
   public func getLastVideoFrameBuffer(cropped: Swift.Bool = true) -> CoreMedia.CMSampleBuffer?
   public func getLastVideoFrame(cropped: Swift.Bool = true) -> UIKit.UIImage?
 }
-extension SCAVCaptureWrapper : AVFoundation.AVCapturePhotoCaptureDelegate {
+extension ShoLib.SCAVCaptureWrapper : AVFoundation.AVCapturePhotoCaptureDelegate {
   @objc dynamic public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CoreMedia.CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CoreMedia.CMSampleBuffer?, resolvedSettings: AVFoundation.AVCaptureResolvedPhotoSettings, bracketSettings: AVFoundation.AVCaptureBracketedStillImageSettings?, error: Swift.Error?)
 }
 @_hasMissingDesignatedInitializers public class USStates {
@@ -572,8 +569,8 @@ public enum SCLiveFaceVerificationStep : Swift.String {
   public func getThreshold(_ accuracy: ShoLib.SCLiveFaceVerificationAccuracy) -> Swift.Float
   public func getStepLabel() -> Swift.String
   public func getStepIndicator() -> UIKit.UIImage?
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -584,10 +581,10 @@ public enum SCLiveFaceVerificationAccuracy {
   case high
   public func getMinValidFrames() -> Swift.Float
   public static func == (a: ShoLib.SCLiveFaceVerificationAccuracy, b: ShoLib.SCLiveFaceVerificationAccuracy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public protocol SCFaceDetectorProtocol {
   var listener: ShoLib.SCFaceDetectorListener? { get set }
@@ -607,7 +604,7 @@ public typealias SCFaceDetector = ShoLib.SCFaceDetectorTask & ShoLib.SCFaceDetec
 public enum IDScannerError : Swift.Error {
   case Unknown(message: Swift.String? = nil, cause: Swift.Error? = nil)
 }
-extension IDScannerError {
+extension ShoLib.IDScannerError {
   public var localizedDescription: Swift.String {
     get
   }
@@ -626,13 +623,13 @@ public enum IDScannerStep : Swift.String {
   public func getStepLabel(confirmation: Swift.Bool) -> Swift.String
   public func getStepDescription(confirmation: Swift.Bool) -> Swift.String
   public func getStepIndicator() -> UIKit.UIImage?
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
-extension UIColor {
+extension UIKit.UIColor {
   public func toHexString() -> Swift.String
   public var redComponent: CoreGraphics.CGFloat {
     get
@@ -655,10 +652,10 @@ extension UIColor {
   public func execute(task: @escaping ((Any?) throws -> T?), arg: Any?)
   @objc deinit
 }
-extension UIButton {
-  public func preventRepeatedClicks(inNext seconds: Foundation.TimeInterval = 1)
+extension UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public func preventRepeatedClicks(inNext seconds: Foundation.TimeInterval = 1)
 }
-extension String {
+extension Swift.String {
   public var localized: Swift.String {
     get
   }
@@ -667,20 +664,19 @@ extension String {
   public func localized(in fileName: Swift.String, with args: Swift.CVarArg...) -> Swift.String
   public func localized(_ args: Swift.CVarArg...) -> Swift.String
 }
-extension UIAlertController {
-  public func show()
-  public class func showAlertWithTextField(title: Swift.String?, message: Swift.String, saveButtonLabel: Swift.String, cancelButtonLabel: Swift.String, textFieldPlaceholder: Swift.String = "", keyboardType: UIKit.UIKeyboardType = .default, returnKeyType: UIKit.UIReturnKeyType = .done, textFieldDelegate: ShoLib.TextFieldDelegate? = nil, completion: @escaping ((Swift.String) -> Swift.Void))
-  public class func showAlertWithTwoButtons(title: Swift.String?, message: Swift.String, button1Label: Swift.String, button2Label: Swift.String, button1Handler: ((UIKit.UIAlertAction) -> Swift.Void)?, button2Handler: ((UIKit.UIAlertAction) -> Swift.Void)?)
-  public class func showAlertWithOneButton(title: Swift.String?, message: Swift.String, buttonLabel: Swift.String, buttonHandler: ((UIKit.UIAlertAction) -> Swift.Void)?)
-  public class func showAlertWithoutButtons(title: Swift.String = "Error", message: Swift.String)
+extension UIKit.UIAlertController {
+  @_Concurrency.MainActor(unsafe) public func show()
+  @_Concurrency.MainActor(unsafe) public class func showAlertWithTextField(title: Swift.String?, message: Swift.String, saveButtonLabel: Swift.String, cancelButtonLabel: Swift.String, textFieldPlaceholder: Swift.String = "", keyboardType: UIKit.UIKeyboardType = .default, returnKeyType: UIKit.UIReturnKeyType = .done, textFieldDelegate: ShoLib.TextFieldDelegate? = nil, completion: @escaping ((Swift.String) -> Swift.Void))
+  @_Concurrency.MainActor(unsafe) public class func showAlertWithTwoButtons(title: Swift.String?, message: Swift.String, button1Label: Swift.String, button2Label: Swift.String, button1Handler: ((UIKit.UIAlertAction) -> Swift.Void)?, button2Handler: ((UIKit.UIAlertAction) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public class func showAlertWithOneButton(title: Swift.String?, message: Swift.String, buttonLabel: Swift.String, buttonHandler: ((UIKit.UIAlertAction) -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public class func showAlertWithoutButtons(title: Swift.String = "Error", message: Swift.String)
 }
-extension UIWindow {
-  public func visibleViewController() -> UIKit.UIViewController?
-  public class func getVisibleViewControllerFrom(_ vc: UIKit.UIViewController) -> UIKit.UIViewController
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) public func visibleViewController() -> UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) public class func getVisibleViewControllerFrom(_ vc: UIKit.UIViewController) -> UIKit.UIViewController
 }
-@objc @_hasMissingDesignatedInitializers public class TextFieldDelegate : ObjectiveC.NSObject, UIKit.UITextFieldDelegate {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class TextFieldDelegate : ObjectiveC.NSObject, UIKit.UITextFieldDelegate {
   @objc deinit
-  @objc override dynamic public init()
 }
 @_hasMissingDesignatedInitializers public class Country {
   public static let COUNTRY_CODES: [Swift.String : Swift.String]
@@ -689,70 +685,69 @@ extension UIWindow {
   public class func getCountryCodeForName(name: Swift.String) -> Swift.String
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class DriverLicenseScannerViewController : UIKit.UIViewController {
-  @objc @IBOutlet weak public var bgImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var navBar: UIKit.UIView!
-  @objc @IBOutlet weak public var navBarLogoImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var cameraView: ShoLib.CameraView!
-  @objc @IBOutlet weak public var overlayReferenceView: UIKit.UIView!
-  @objc @IBOutlet weak public var overlayView: ShoLib.CameraOverlayView!
-  @objc @IBOutlet weak public var stepIndicatorImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var stepLabelTextView: UIKit.UILabel!
-  @objc @IBOutlet weak public var instructionTextView: UIKit.UILabel!
-  @objc @IBOutlet weak public var torchButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var captureButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var confirmButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var retakeButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var skipButton: UIKit.UIButton!
-  @objc @IBOutlet weak public var cropView: ShoLib.SCResizableView!
-  @objc @IBOutlet weak public var previewImageView: UIKit.UIImageView!
-  @objc @IBOutlet weak public var idStepInstructionView: UIKit.UIView!
-  @objc @IBOutlet weak public var idStepInstructionLabel: UIKit.UILabel!
-  public func show(parentViewController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewDidLayoutSubviews()
-  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class DriverLicenseScannerViewController : UIKit.UIViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var bgImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var navBar: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var navBarLogoImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cameraView: ShoLib.CameraView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var overlayReferenceView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var overlayView: ShoLib.CameraOverlayView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var stepIndicatorImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var stepLabelTextView: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var instructionTextView: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var torchButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var captureButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var confirmButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var retakeButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var skipButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var cropView: ShoLib.SCResizableView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var previewImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var idStepInstructionView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var idStepInstructionLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public func show(parentViewController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension DriverLicenseScannerViewController : ShoLib.SCImageProcessingDelegate {
-  public func capturedImage(_ image: UIKit.UIImage, rect: CoreGraphics.CGRect)
-  public func capturedMetadata(_ metadata: Swift.String)
-  public func onFrameReceived(_ sampleBuffer: CoreMedia.CMSampleBuffer?)
+extension ShoLib.DriverLicenseScannerViewController : ShoLib.SCImageProcessingDelegate {
+  @_Concurrency.MainActor(unsafe) public func capturedImage(_ image: UIKit.UIImage, rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func capturedMetadata(_ metadata: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func onFrameReceived(_ sampleBuffer: CoreMedia.CMSampleBuffer?)
 }
-extension DriverLicenseScannerViewController : ShoLib.IDScannerListener {
-  public func onBarcodeScanned(barcode: ShoLib.SCBarcode)
-  public func onScannerError(error: ShoLib.IDScannerError)
+extension ShoLib.DriverLicenseScannerViewController : ShoLib.IDScannerListener {
+  @_Concurrency.MainActor(unsafe) public func onBarcodeScanned(barcode: ShoLib.SCBarcode)
+  @_Concurrency.MainActor(unsafe) public func onScannerError(error: ShoLib.IDScannerError)
 }
-extension DriverLicenseScannerViewController : ShoLib.SCFaceDetectorListener {
-  public func onFacesDetected(faces: [ShoLib.SCFace])
-  public func onFaceDetectorError(error: ShoLib.SCFaceDetectorError)
+extension ShoLib.DriverLicenseScannerViewController : ShoLib.SCFaceDetectorListener {
+  @_Concurrency.MainActor(unsafe) public func onFacesDetected(faces: [ShoLib.SCFace])
+  @_Concurrency.MainActor(unsafe) public func onFaceDetectorError(error: ShoLib.SCFaceDetectorError)
 }
-extension DriverLicenseScannerViewController : UIKit.UIScrollViewDelegate {
-  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+extension ShoLib.DriverLicenseScannerViewController : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
-extension UIImageView {
-  public func changeImageWithSlidingAnimation(direction: ShoLib.AnimationDirection, image: UIKit.UIImage?, duration: Foundation.TimeInterval)
-  public func changeImageWithFlipAnimation(direction: ShoLib.AnimationDirection, image: UIKit.UIImage?, duration: Foundation.TimeInterval)
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func changeImageWithSlidingAnimation(direction: ShoLib.AnimationDirection, image: UIKit.UIImage?, duration: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) public func changeImageWithFlipAnimation(direction: ShoLib.AnimationDirection, image: UIKit.UIImage?, duration: Foundation.TimeInterval)
 }
-extension UILabel {
-  public func changeTextWithSlidingAnimation(direction: ShoLib.AnimationDirection, text: Swift.String?, duration: Foundation.TimeInterval)
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func changeTextWithSlidingAnimation(direction: ShoLib.AnimationDirection, text: Swift.String?, duration: Foundation.TimeInterval)
 }
 @objc public class AnimationListener : ObjectiveC.NSObject, QuartzCore.CAAnimationDelegate {
   public init(onStart: (() -> Swift.Void)?, onStop: ((Swift.Bool) -> Swift.Void)?)
   @objc public func animationDidStart(_ anim: QuartzCore.CAAnimation)
   @objc public func animationDidStop(_ anim: QuartzCore.CAAnimation, finished flag: Swift.Bool)
   @objc deinit
-  @objc override dynamic public init()
 }
-extension UIView {
-  public func hideWithSlidingAnimation(direction: ShoLib.AnimationDirection, duration: Foundation.TimeInterval, listener: ShoLib.AnimationListener? = nil)
-  public func showWithSlidingAnimation(direction: ShoLib.AnimationDirection, duration: Foundation.TimeInterval, listener: ShoLib.AnimationListener? = nil)
-  public func slide(direction: ShoLib.AnimationDirection, slide: ShoLib.AnimationSlide, duration: Foundation.TimeInterval, listener: ShoLib.AnimationListener? = nil)
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func hideWithSlidingAnimation(direction: ShoLib.AnimationDirection, duration: Foundation.TimeInterval, listener: ShoLib.AnimationListener? = nil)
+  @_Concurrency.MainActor(unsafe) public func showWithSlidingAnimation(direction: ShoLib.AnimationDirection, duration: Foundation.TimeInterval, listener: ShoLib.AnimationListener? = nil)
+  @_Concurrency.MainActor(unsafe) public func slide(direction: ShoLib.AnimationDirection, slide: ShoLib.AnimationSlide, duration: Foundation.TimeInterval, listener: ShoLib.AnimationListener? = nil)
 }
 public enum AnimationDirection {
   case fromLeft
@@ -760,12 +755,12 @@ public enum AnimationDirection {
   case fromTop
   case fromBottom
   public static func == (a: ShoLib.AnimationDirection, b: ShoLib.AnimationDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
-extension AnimationDirection {
+extension ShoLib.AnimationDirection {
   public var transitionSubType: QuartzCore.CATransitionSubtype {
     get
   }
@@ -780,12 +775,12 @@ public enum AnimationSlide {
   case slideIn
   case slideOut
   public static func == (a: ShoLib.AnimationSlide, b: ShoLib.AnimationSlide) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
-extension AnimationSlide {
+extension ShoLib.AnimationSlide {
   public var transitionType: QuartzCore.CATransitionType {
     get
   }
@@ -793,14 +788,14 @@ extension AnimationSlide {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SCResizableView : UIKit.UIView {
-  @objc override dynamic public func layoutSubviews()
-  @objc override dynamic public var frame: CoreGraphics.CGRect {
-    @objc get
-    @objc set
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SCResizableView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
   }
-  @objc override dynamic public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc override dynamic public func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
   @objc deinit
 }
 public class SCExpressionVerifier {
@@ -818,7 +813,7 @@ public class SCExpressionVerifier {
   public func stop()
   @objc deinit
 }
-extension SCExpressionVerifier : ShoLib.SCFaceDetectorListener {
+extension ShoLib.SCExpressionVerifier : ShoLib.SCFaceDetectorListener {
   public func onFacesDetected(faces: [ShoLib.SCFace])
   public func onFaceDetectorError(error: ShoLib.SCFaceDetectorError)
 }
@@ -855,11 +850,11 @@ extension SCExpressionVerifier : ShoLib.SCFaceDetectorListener {
   public func onError(error: ShoLib.SCLiveFaceVerifierError)
   @objc deinit
 }
-extension UIImageView {
-  public func loadGif(name: Swift.String)
-  public func loadGif(url: Swift.String)
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func loadGif(name: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func loadGif(url: Swift.String)
 }
-extension UIImage {
+extension UIKit.UIImage {
   public class func gif(data: Foundation.Data) -> UIKit.UIImage?
   public class func gif(url: Swift.String) -> UIKit.UIImage?
   public class func gif(name: Swift.String) -> UIKit.UIImage?
@@ -905,7 +900,7 @@ public enum SCLiveFaceVerifierError : Swift.Error {
   case Unknown(message: Swift.String = "missed_expression_error".localized(in: "LiveFaceVerification"), cause: Swift.Error? = nil)
   case IllegalArgument(message: Swift.String)
 }
-extension SCLiveFaceVerifierError : Foundation.LocalizedError {
+extension ShoLib.SCLiveFaceVerifierError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -913,7 +908,7 @@ extension SCLiveFaceVerifierError : Foundation.LocalizedError {
     get
   }
 }
-extension UIColor {
+extension UIKit.UIColor {
   public static func named(_ name: Swift.String) -> UIKit.UIColor
   public static func named(_ name: Swift.String, defaultColor: UIKit.UIColor) -> UIKit.UIColor
   public static func named(_ name: Swift.String, in bundle: Foundation.Bundle?) -> UIKit.UIColor?
@@ -923,8 +918,8 @@ public protocol IDScannerListener {
   func onBarcodeScanned(barcode: ShoLib.SCBarcode)
   func onScannerError(error: ShoLib.IDScannerError)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SCDottedLineView : UIKit.UIView {
-  @objc override dynamic public func layoutSubviews()
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SCDottedLineView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 extension ShoLib.CameraDevicePosition : Swift.Equatable {}

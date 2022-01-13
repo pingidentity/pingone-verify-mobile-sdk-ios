@@ -15,10 +15,12 @@ class WizardViewController: UIViewController {
     
     var pageViewController: WizardPageViewController?
     var wizardSteps: [WizardStep] = [.captureSelfie, .captureDriverLicense, .capturePassport]
+    var isUpdatingDocument: Bool = false
     
-    static func startWizardFor(steps: [WizardStep]) -> WizardViewController {
+    static func startWizardFor(steps: [WizardStep], isUpdatingDocument: Bool = false) -> WizardViewController {
         let wizardViewController: WizardViewController = UIStoryboard(name: "Verify", bundle: nil).instantiateViewController(withIdentifier: "WizardViewController") as! WizardViewController
         wizardViewController.wizardSteps = steps
+        wizardViewController.isUpdatingDocument = isUpdatingDocument
         return wizardViewController
     }
     
@@ -43,6 +45,7 @@ class WizardViewController: UIViewController {
         self.pageViewController = destinationViewController
         self.pageViewController?.containerViewController = self
         self.pageViewController?.wizardSteps = self.wizardSteps
+        self.pageViewController?.isUpdatingDocument = self.isUpdatingDocument
     }
     
     @IBAction func onCancelClicked(_ sender: UIBarButtonItem) {

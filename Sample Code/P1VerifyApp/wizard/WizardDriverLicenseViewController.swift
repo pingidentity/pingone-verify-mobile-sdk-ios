@@ -38,7 +38,9 @@ class WizardDriverLicenseViewController: WizardStepViewController {
                 } catch {
                     print("Failed to downsize image. App will save original image.")
                 }
-                dl.setBackImage(dl.getBackImage().fitImageIn(maxSize: 1024))
+                if let backImage = dl.getBackImage() {
+                    dl.setBackImage(backImage.fitImageIn(maxSize: 1024))
+                }
                 print("Saving card \(dl.cardType)")
                 StorageManager.shared.saveCard(card: dl)
                 DispatchQueue.main.async {
