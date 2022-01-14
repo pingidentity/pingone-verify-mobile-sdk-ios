@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C2372A1276BBD6100F0A70B /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; };
-		1C2372A2276BBD6100F0A70B /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C394D48259E7DB30013AD3F /* SelfieCapture.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4A259E7DB30013AD3F /* SelfieCapture.strings */; };
 		1C394D4D259E7DE40013AD3F /* IdScanner.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C394D4F259E7DE40013AD3F /* IdScanner.strings */; };
+		1C53C4412792229300E89C32 /* P1VerifyLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; };
+		1C53C4422792229300E89C32 /* P1VerifyLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5687E262176C400994E7B /* P1VerifyLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C971192256468760028466E /* iCarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 1C971191256468760028466E /* iCarousel */; };
 		1C97119825646DD30028466E /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C97119425646DD30028466E /* StorageProtocol.swift */; };
 		1C97119925646DD30028466E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C97119525646DD30028466E /* StorageManager.swift */; };
@@ -70,7 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C2372A2276BBD6100F0A70B /* P1VerifyLib.xcframework in Embed Frameworks */,
+				1C53C4422792229300E89C32 /* P1VerifyLib.xcframework in Embed Frameworks */,
 				1CE56874262176BC00994E7B /* CommunicationManager.xcframework in Embed Frameworks */,
 				1CE5687A262176BC00994E7B /* P1Verify.xcframework in Embed Frameworks */,
 				1CE56876262176BC00994E7B /* JOSETools.xcframework in Embed Frameworks */,
@@ -145,7 +145,7 @@
 				1CE56871262176BC00994E7B /* JOSESwift.xcframework in Frameworks */,
 				1CE56873262176BC00994E7B /* CommunicationManager.xcframework in Frameworks */,
 				1CE56877262176BC00994E7B /* P1VerifyIDSchema.xcframework in Frameworks */,
-				1C2372A1276BBD6100F0A70B /* P1VerifyLib.xcframework in Frameworks */,
+				1C53C4412792229300E89C32 /* P1VerifyLib.xcframework in Frameworks */,
 				1CE56879262176BC00994E7B /* P1Verify.xcframework in Frameworks */,
 				1CE5687B262176BC00994E7B /* CryptoTools.xcframework in Frameworks */,
 				1CE56875262176BC00994E7B /* JOSETools.xcframework in Frameworks */,

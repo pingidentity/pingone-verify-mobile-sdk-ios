@@ -1,3 +1,7 @@
+## PingOneVerify UI Library Update - January 21st, 2021
+Bug fixes:
+- Fixed selfie capture UI for some devices where buttons were getting squashed
+
 ## PingOneVerify UI Library Update - December 17th, 2021
 Features:
 - New selfie capture flow

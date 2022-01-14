@@ -27,6 +27,8 @@
 "cannotAddOutputsToCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
 "cannotGetCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
 
+"tap_to_capture" = "Tap anywhere on the screen to capture image";
+
 //Buttons
 "next" = "Next";
 "retake" = "Re-take";
