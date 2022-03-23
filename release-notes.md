@@ -1,3 +1,12 @@
+## v2.0.0 - December 2nd, 2022
+- Simplified interface for integrating with the PingOneVerify service
+- Added support for several new features in the service:
+    - SDK UI can be updated dynamically from PingOne Admin console
+    - Document collection based on verify policies
+    - Transaction timeouts
+    - Email and phone verification 
+    - Document collection only 
+    
 ## PingOneVerify UI Library Update - April 12th, 2022
 - Enhanced Document collection when capturing license with a barcode
 - Minor bug fixes
