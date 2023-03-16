@@ -3,7 +3,7 @@
 //  PingOne Verify
 //
 //  Created by Ping Identity on 10/26/22.
-//  Copyright © 2022 Ping Identity. All rights reserved.
+//  Copyright © 2023 Ping Identity. All rights reserved.
 //
 
 import UIKit

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		VSjZ+LoHF4f5cupGgvv9I41OPow=
+		YfdfCmUIEeYGx7Rz56SIUZV0on4=
 		</data>
 		<key>CustomMenu.nib</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Frameworks/Microblink.framework/Microblink</key>
 		<data>
-		wgzA1tKYKgTdj672fkEo2KHMJbo=
+		x9y6Og4VVOkUeq5TBdS92bB6Yd8=
 		</data>
 		<key>Frameworks/Microblink.framework/Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
 		<data>
@@ -654,7 +654,7 @@
 		</data>
 		<key>Headers/PingOneVerify_iOS-Swift.h</key>
 		<data>
-		8q6hsDGZdAShNm1KymIW+zu2VFk=
+		e3Ovgli7b5cVhlZdrHroTPBDkO4=
 		</data>
 		<key>IdCaptureViewController.nib</key>
 		<data>
@@ -666,7 +666,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TgQjghrx8bBZ9FSfFVHc7CX/JTQ=
+		fOa3HGY8yifbZmpvyVBuMEyBcZU=
 		</data>
 		<key>LabelCell.nib</key>
 		<data>
@@ -674,23 +674,23 @@
 		</data>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		9+gbKqkaNKUBLB4UGXqqRRvIf64=
+		bkolpZoqtTso0pm8cVf8cUrMfP4=
 		</data>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		L3KMIVXhXjmSuQsMyyzHkX6bltY=
+		vC++UtqjzdLJEA2UNyk/Tq6iYNQ=
 		</data>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		G6Q4A957nilUcP8A/Q5m1/TskwU=
+		jNl8fTOoeQZU2W/nwl4l7T2hO8o=
 		</data>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		L3KMIVXhXjmSuQsMyyzHkX6bltY=
+		vC++UtqjzdLJEA2UNyk/Tq6iYNQ=
 		</data>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		cVGn6qBA3PoX4PMkHdXgH/9Ukps=
+		Zp2BFq8MvLTXIPFxQUckMkYdz9w=
 		</data>
 		<key>OtpViewController.nib</key>
 		<data>
@@ -723,7 +723,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4ZyE8hZiDJcVvAxghKKN+T0BB6v97pJ1TQV5gpJfICw=
+			A3yHaA/iBTUUCUdKXCzqEASU1rNKGlak3uB73m+b4ZY=
 			</data>
 		</dict>
 		<key>CustomMenu.nib</key>
@@ -779,7 +779,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T/3sa77EuadsNIXYXFtVpQEwyIDfoBaq/1wyFNGLj8Q=
+			2JkaY+jEDjmWmDcuclGTB3ZwSKwfVimqkbwAE+751rc=
 			</data>
 		</dict>
 		<key>Frameworks/Microblink.framework/Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
@@ -1857,7 +1857,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z52gMkz3+70lJmzSTnRwtN9viG2FPl7CHV98FphdCBk=
+			Dp70EgnPgCsHwyoNwjvXnn4Xu1lNOhkhhUTPXF6KB6c=
 			</data>
 		</dict>
 		<key>IdCaptureViewController.nib</key>
@@ -1885,35 +1885,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZGwz2X1v3LhYmeof3a2dlbCc6tXWJHZNAn+6+xDgKOY=
+			S71+6otpRvLr3gSLO7IjcXU1rIZZ/X5REmZZNRRDmRs=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R+irlbopW5QzigFJor4kwAjIVR8FFGRZhKSAF9HZzSE=
+			/3G5YT30CEJd2E76/UCt2wxAqEyZ4Vqoyh5vBnUf+/k=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kIAOhTvgj2zflldjpZEHXilcfCuaWVmnp8HfyGGfoQs=
+			H7X+4t1XHBGGc7Iw7dGuq1o7H2O7lq9/pIlaqXP3PDg=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R+irlbopW5QzigFJor4kwAjIVR8FFGRZhKSAF9HZzSE=
+			/3G5YT30CEJd2E76/UCt2wxAqEyZ4Vqoyh5vBnUf+/k=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify_iOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yBG4wX0dPkVrFspawkaA0YQCQj4XRZm9KX9f4HIzWlw=
+			bfHu35fdDxnOlYEmvIDazasDpLwOvyUlmwnCsg0eAcg=
 			</data>
 		</dict>
 		<key>OtpViewController.nib</key>

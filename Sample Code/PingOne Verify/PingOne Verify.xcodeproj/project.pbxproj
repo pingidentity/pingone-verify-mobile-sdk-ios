@@ -12,22 +12,21 @@
 		1C42537A2909C179008E871B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253792909C179008E871B /* Assets.xcassets */; };
 		1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C42537B2909C179008E871B /* LaunchScreen.storyboard */; };
 		1C4253862909C286008E871B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253842909C286008E871B /* Main.storyboard */; };
-		1C42538F2909C78B008E871B /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253892909C2A3008E871B /* Microblink.xcframework */; };
-		1C4253902909C78B008E871B /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253892909C2A3008E871B /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1CB9C1D1290C7BD500837FF3 /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253892909C2A3008E871B /* Microblink.xcframework */; };
-		1CB9C20D2912D3AD00837FF3 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253882909C2A2008E871B /* PingOneVerify.xcframework */; };
-		1CB9C20E2912D3AD00837FF3 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253882909C2A2008E871B /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C4DAB9629C39D200043F160 /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253892909C2A3008E871B /* Microblink.xcframework */; };
+		1C4DAB9729C39D200043F160 /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253892909C2A3008E871B /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C4DAB9B29C39EAD0043F160 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253882909C2A2008E871B /* PingOneVerify.xcframework */; };
+		1C4DAB9C29C39EAD0043F160 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253882909C2A2008E871B /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1C4253932909C78C008E871B /* Embed Frameworks */ = {
+		1C4DAB9A29C39D200043F160 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C4253902909C78B008E871B /* Microblink.xcframework in Embed Frameworks */,
-				1CB9C20E2912D3AD00837FF3 /* PingOneVerify.xcframework in Embed Frameworks */,
+				1C4DAB9729C39D200043F160 /* Microblink.xcframework in Embed Frameworks */,
+				1C4DAB9C29C39EAD0043F160 /* PingOneVerify.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,9 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CB9C20D2912D3AD00837FF3 /* PingOneVerify.xcframework in Frameworks */,
-				1C42538F2909C78B008E871B /* Microblink.xcframework in Frameworks */,
-				1CB9C1D1290C7BD500837FF3 /* Microblink.xcframework in Frameworks */,
+				1C4DAB9629C39D200043F160 /* Microblink.xcframework in Frameworks */,
+				1C4DAB9B29C39EAD0043F160 /* PingOneVerify.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +107,7 @@
 				1C4253692909C178008E871B /* Sources */,
 				1C42536A2909C178008E871B /* Frameworks */,
 				1C42536B2909C178008E871B /* Resources */,
-				1C4253932909C78C008E871B /* Embed Frameworks */,
+				1C4DAB9A29C39D200043F160 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

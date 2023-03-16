@@ -1,3 +1,7 @@
+## v2.0.1 - March 17th, 2023
+- SDK will compile for simulator now, still requires real device to run the verification flow
+- Minor bug fixes
+
 ## v2.0.0 - December 2nd, 2022
 - Simplified interface for integrating with the PingOneVerify service
 - Added support for several new features in the service:
