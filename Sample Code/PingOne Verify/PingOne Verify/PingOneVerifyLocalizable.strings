@@ -1,0 +1,173 @@
+/*
+  PingOneVerifyLocalizable.strings
+  PingOne Verify
+ 
+  Created by Ping Identity on 10/26/23.
+  Copyright © 2023 Ping Identity. All rights reserved.
+ */
+/**
+ QrScanner
+ */
+
+"idv_qr_scan" = "Scan a PingOne QR Code";
+
+/**
+ DocumentCapture
+ */
+
+"idv_documentCapture_start" = "Next";
+"idv_documentCapture_step" = "Step %@/%@";
+
+//GovernmentID (Including both License and Passport)
+"idv_documentCapture_header_governmentId" = "Scan your ID";
+"idv_documentCapture_description_governmentId" = "Grab your photo ID. This can be a passport, driver’s license or any other government issued ID. Ensure the edges of your ID are in the frame and clearly visible. Hold it in your hand to avoid any glare. Pay attention to the live feedback. For some ID’s you may need to scan the back as well.";
+
+// License
+"idv_documentCapture_header_driverLicense" = "Capture Driver License";
+"idv_documentCapture_description_driverLicense" = "Verification requires a photo of the front and back of your government issued drivers license/ID.";
+
+// Passport
+"idv_documentCapture_header_passport" = "Capture Passport";
+"idv_documentCapture_description_passport" = "Verification requires a photo page of your passport.";
+
+// Selfie
+"idv_documentCapture_header_selfie" = "Capture Selfie";
+"idv_documentCapture_description_selfie" = "Center your face in the oval. Tap the button or anywhere on the screen to capture your selfie.";
+"idv_selfie_preview_submit_button" = "Submit";
+"idv_selfie_preview_retake_button" = "Re-take";
+
+// Email
+"idv_emailCapture_title" = "Email Verification";
+"idv_emailCapture_button" = "Submit";
+"idv_emailCapture_description" = "Please enter your email address";
+"idv_emailCapture_description_option" = "Please choose your email address";
+"idv_emailCapture_description_value" = "Email to be verified:";
+"idv_emailCapture_placeholder" = "Email Address";
+"idv_emailCapture_menu_option" = "Select an option";
+
+// Phone
+"idv_phoneCapture_title" = "Phone Verification";
+"idv_phoneCapture_button" = "Submit";
+"idv_phoneCapture_description" = "Please enter your phone number";
+"idv_phoneCapture_description_option" = "Please choose your phone number";
+"idv_phoneCapture_description_value" = "Phone number to be verified:";
+"idv_phoneCapture_placeholder" = "Phone Number";
+"idv_phoneCapture_menu_option" = "Select an option";
+"idv_countryCode_description_option" = "Select an option";
+"idv_countryCode_search_bar_placeholder" = "Search";
+"idv_countryCode_nav_title" = "Select a Country";
+
+//Voice
+"idv_voiceCapture_title" = "Voice Verification";
+"idv_voiceCapture_button" = "Tap to Record";
+"idv_voiceCapture_recording" = "Recording in progress";
+"idv_voiceCapture_textDependent_placeholder" = "Use PingOne Verify for Voice Verification";
+"idv_documentCapture_header_voice" = "Record Your Voice";
+"idv_documentCapture_description_voice" = "Make sure to sit in a quiet environment and bring your device closer to your mouth for recording your voice.";
+"idv_voice_sample" = "Voice Sample #%@";
+"idv_voice_error_alert_title" = "Recording Error";
+"idv_voice_result" = "%@ of %@ Voice Sample Recording is Complete";
+"idv_voice_try_again" = "Try Again";
+"idv_voice_complete" = "Voice Recording is Now Complete";
+"idv_voice_next_record" = "Next Recording";
+"idv_voice_one_recording_text" = "\n\nYou will record 1 time";
+"idv_voice_multi_recording_text" = "\n\nYou will record %@ times";
+"idv_voiceCapture_instruction" = "Speak the following phrase into your device microphone:";
+
+//OTP
+"idv_otp_placeholder" = "Verification Code";
+"idv_otp_invalid_code_error_description" = "One Time Passcode is incorrect";
+
+// Expressions
+"idv_smile" = "Smile!";
+"idv_no_smile" = "No Smile.";
+"idv_blink_eyes" = "Blink both your eyes";
+
+// Errors
+"error" = "Error";
+"idv_cannotInitFaceDetector" = "Failed to initialize face detection. Please restart the app to try again.";
+"idv_invalidObjectInResult" = "Found unknown object in the frame. Please restart the process to try again.";
+"idv_noFaceFound" = "No Face Detected";
+"idv_differentFaceFound" = "Different face in the frame";
+"idv_multipleFacesFound" = "Multiple faces in the frame";
+"idv_faceMovedOutOfFrame" = "Face moved out of frame";
+"idv_.cannotGetCIImage" = "Failed to process the camera frames. Please restart the process to try again.";
+"idv_invalidSampleBuffer" = "Failed to process the camera frames. Please restart the process to try again.";
+"idv_cannotCaptureImage" = "Failed to capture the selfie. Please try again.";
+"idv_faceMovingTooOften_message" = "Center your face within the guidelines and try again.";
+
+"idv_cannotSetFocusMode" = "Failed to set focus mode. Camera may have abnormally.";
+"idv_cannotInitializeInputForCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
+"idv_cannotAddOutputsToCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
+"idv_cannotGetCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
+"idv_capture_timed_out_title" = "Timeout";
+"idv_capture_timed_out_message" = "Selfie capture timed out. Please try again.";
+
+"idv_post_capture_error" = "An error occurred while capturing the selfie.";
+"idv_post_capture_open_eyes" = "Please make sure your eyes are open when taking the picture.";
+"idv_post_capture_close_mouth" = "Please make sure your mouth is not open when taking the picture.";
+"idv_post_capture_face_moved_out" = "Please make sure your face doesn't move out of the frame when taking the picture.";
+"idv_post_capture_face_not_straight" = "Please make sure you're looking straight at the camera when taking the picture.";
+
+//Buttons
+"idv_next" = "Next";
+"idv_retake" = "Re-take";
+"idv_cancel" = "Cancel";
+"idv_okay" = "Okay";
+"idv_skip" = "Skip";
+"idv_get_started" = "Get Started";
+
+
+// ImageQA instructions
+"idv_center_face" = "Center your face in the frame";
+"idv_straight_face" = "Make sure your face is straight";
+"idv_face_looking_at_phone" = "Make sure you're looking straight into camera";
+"idv_hold_camera_further" = "Hold the camera further away from your face";
+"idv_hold_camera_near" = "Hold the camera closer to your face";
+"idv_close_mouth" = "Make sure your mouth is not open";
+"idv_open_eyes" = "Make sure that both your eyes are open";
+
+// Permissions
+"idv_camera_permission_rationale" = "Access to the camera is required for scanning your IDs and taking pictures.";
+"idv_microphone_permission" = "Access to the microphone is required for recording your voice.\n\nPlease update the permissions for your app in device settings to be able to use this feature.";
+
+/**
+ Common
+ */
+
+"idv_cancel" = "Cancel";
+"idv_timer_label" = "Session expires in %@";
+
+//OTP
+"idv_otp_title" = "Verification Code";
+"idv_otp_description" = "Please type the verification code sent to %@";
+"idv_otp_button" = "Submit Passcode";
+"idv_otp_time" = "Code expires in %@";
+"idv_otp_resend" = "Resend Verification Code";
+"idv_otp_default_email" = "your Email Address";
+"idv_otp_default_phone" = "your Phone Number";
+
+//BlinkID
+"blinkid_generic_message" = "Scan the front side of the document";
+"mb_blinkid_back_instructions_barcode" = "Scan the barcode";
+"mb_blinkid_camera_flip_document" = "Flip to the back side";
+"mb_blinkid_camera_high" = "Move closer";
+"mb_blinkid_camera_near" = "Move farther";
+"mb_blinkid_document_too_close_to_edge" = "Move the document from the edge";
+"mb_blinkid_introduction_dialog_title" = "Keep all the details visible";
+"mb_close" = "Close";
+"mb_data_not_match_msg" = "Please start the scanning process over.";
+"mb_data_not_match_retry_button" = "Retry";
+"mb_data_not_match_title" = "Sides don’t match";
+"mb_error_mandatory_field_missing" = "Keep the document fully visible";
+"mb_flashlight_glare_tooltip" = "Watch out for flashlight glare.\nGently move your ID around to avoid it.";
+"mb_recognition_timeout_dialog_message" = "Unable to read the document. Please try again.";
+"mb_recognition_timeout_dialog_title" = "Scan unsuccessful";
+"mb_scanning_not_available" = "Scanning not available";
+"mb_something_went_wrong" = "Something went wrong";
+"mb_tooltip_glare" = "Slightly move ID to eliminate glare.";
+"mb_try_scanning_again" = "It appears the information on the document is inconsistent. Please try scanning again.";
+"mb_unsupported_document_message" = "Scan the front side of a supported document.";
+"mb_unsupported_document_title" = "Document not recognized";
+
+

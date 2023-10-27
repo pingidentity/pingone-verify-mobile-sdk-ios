@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "verify.png",
+      "filename" : "Document Verification.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "verify@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "verify@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

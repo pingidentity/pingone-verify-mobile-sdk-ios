@@ -1,0 +1,11 @@
+framework module PingOneVerify {
+  umbrella header "PingOneVerify.h"
+  export *
+
+  module * { export * }
+}
+
+module PingOneVerify.Swift {
+  header "PingOneVerify-Swift.h"
+  requires objc
+}

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PingOneVerify_iOS
+import PingOneVerify
 
 class ViewController: UIViewController {
     
@@ -19,9 +19,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func beginVerification() {
-        PingOneVerifyClient.Builder()
+        PingOneVerifyClient.Builder(isOverridingAssets: false)
             .setListener(self)
             .setRootViewController(self)
+//            .setUIAppearance(self.getUiAppearanceSettings())
             .startVerification { pingOneVerifyClient, clientBuilderError in
                 
                 if let clientBuilderError = clientBuilderError {
@@ -42,6 +43,14 @@ class ViewController: UIViewController {
             }
     }
     
+    private func getUiAppearanceSettings() -> UIAppearanceSettings {
+        let solidButtonAppearance = ButtonAppearance(backgroundColor: .blue, textColor: .white, borderColor: .blue)
+        let borderedButtonAppearance = ButtonAppearance(backgroundColor: .white, textColor: .blue, borderColor: .green)
+        
+        return UIAppearanceSettings()
+            .setSolidButtonAppearance(solidButtonAppearance)
+            .setBorderedButtonAppearance(borderedButtonAppearance)
+    }
 }
 
 extension ViewController: DocumentSubmissionListener {

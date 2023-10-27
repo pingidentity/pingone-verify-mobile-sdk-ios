@@ -1,3 +1,10 @@
+## v2.1.0 - October 27th, 2023
+- Added support for collecting voice samples for enrollment and verification
+- Branding and themes for SDK UI can be customized via admin console and also locally 
+- New UI screens
+- Updated vendor SDKs
+- Bug fixes and several enhancements
+
 ## v2.0.1 - March 17th, 2023
 - SDK will compile for simulator now, still requires real device to run the verification flow
 - Minor bug fixes

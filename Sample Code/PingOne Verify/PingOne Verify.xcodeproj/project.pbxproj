@@ -7,26 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0E14872AEC70CF00B4B02B /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0E14842AEC70CF00B4B02B /* BlinkID.xcframework */; };
+		1C0E14882AEC70CF00B4B02B /* BlinkID.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0E14842AEC70CF00B4B02B /* BlinkID.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C0E14892AEC70CF00B4B02B /* VoiceSdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0E14852AEC70CF00B4B02B /* VoiceSdk.xcframework */; };
+		1C0E148A2AEC70CF00B4B02B /* VoiceSdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0E14852AEC70CF00B4B02B /* VoiceSdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C0E148B2AEC70CF00B4B02B /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0E14862AEC70CF00B4B02B /* PingOneVerify.xcframework */; };
+		1C0E148C2AEC70CF00B4B02B /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0E14862AEC70CF00B4B02B /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C4253712909C178008E871B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4253702909C178008E871B /* AppDelegate.swift */; };
 		1C4253752909C178008E871B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4253742909C178008E871B /* ViewController.swift */; };
 		1C42537A2909C179008E871B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253792909C179008E871B /* Assets.xcassets */; };
 		1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C42537B2909C179008E871B /* LaunchScreen.storyboard */; };
 		1C4253862909C286008E871B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253842909C286008E871B /* Main.storyboard */; };
-		1C4DAB9629C39D200043F160 /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253892909C2A3008E871B /* Microblink.xcframework */; };
-		1C4DAB9729C39D200043F160 /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253892909C2A3008E871B /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1C4DAB9B29C39EAD0043F160 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253882909C2A2008E871B /* PingOneVerify.xcframework */; };
-		1C4DAB9C29C39EAD0043F160 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4253882909C2A2008E871B /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		884BAEF22AEC48D9002C6827 /* PingOneVerifyLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */; };
+		8969947D2A8AB47C0088041C /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969947C2A8AB47C0088041C /* CompletedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1C4DAB9A29C39D200043F160 /* Embed Frameworks */ = {
+		1C0E148D2AEC70CF00B4B02B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C4DAB9729C39D200043F160 /* Microblink.xcframework in Embed Frameworks */,
-				1C4DAB9C29C39EAD0043F160 /* PingOneVerify.xcframework in Embed Frameworks */,
+				1C0E148C2AEC70CF00B4B02B /* PingOneVerify.xcframework in Embed Frameworks */,
+				1C0E14882AEC70CF00B4B02B /* BlinkID.xcframework in Embed Frameworks */,
+				1C0E148A2AEC70CF00B4B02B /* VoiceSdk.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +39,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C0E14842AEC70CF00B4B02B /* BlinkID.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BlinkID.xcframework; path = ../../SDK/BlinkID.xcframework; sourceTree = "<group>"; };
+		1C0E14852AEC70CF00B4B02B /* VoiceSdk.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VoiceSdk.xcframework; path = ../../SDK/VoiceSdk.xcframework; sourceTree = "<group>"; };
+		1C0E14862AEC70CF00B4B02B /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PingOneVerify.xcframework; path = ../../SDK/PingOneVerify.xcframework; sourceTree = "<group>"; };
 		1C42536D2909C178008E871B /* PingOne Verify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PingOne Verify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4253702909C178008E871B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C4253742909C178008E871B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,8 +49,8 @@
 		1C42537C2909C179008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C42537E2909C179008E871B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4253852909C286008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1C4253882909C2A2008E871B /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PingOneVerify.xcframework; path = ../../SDK/PingOneVerify.xcframework; sourceTree = "<group>"; };
-		1C4253892909C2A3008E871B /* Microblink.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Microblink.xcframework; path = ../../SDK/Microblink.xcframework; sourceTree = "<group>"; };
+		884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = PingOneVerifyLocalizable.strings; sourceTree = "<group>"; };
+		8969947C2A8AB47C0088041C /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompletedViewController.swift; path = Assets.xcassets/CompletedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4DAB9629C39D200043F160 /* Microblink.xcframework in Frameworks */,
-				1C4DAB9B29C39EAD0043F160 /* PingOneVerify.xcframework in Frameworks */,
+				1C0E148B2AEC70CF00B4B02B /* PingOneVerify.xcframework in Frameworks */,
+				1C0E14872AEC70CF00B4B02B /* BlinkID.xcframework in Frameworks */,
+				1C0E14892AEC70CF00B4B02B /* VoiceSdk.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,11 +87,13 @@
 		1C42536F2909C178008E871B /* PingOne Verify */ = {
 			isa = PBXGroup;
 			children = (
-				1C4253842909C286008E871B /* Main.storyboard */,
 				1C4253702909C178008E871B /* AppDelegate.swift */,
 				1C4253742909C178008E871B /* ViewController.swift */,
-				1C4253792909C179008E871B /* Assets.xcassets */,
+				8969947C2A8AB47C0088041C /* CompletedViewController.swift */,
+				1C4253842909C286008E871B /* Main.storyboard */,
 				1C42537B2909C179008E871B /* LaunchScreen.storyboard */,
+				1C4253792909C179008E871B /* Assets.xcassets */,
+				884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */,
 				1C42537E2909C179008E871B /* Info.plist */,
 			);
 			path = "PingOne Verify";
@@ -91,8 +102,9 @@
 		1C4253872909C2A2008E871B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C4253892909C2A3008E871B /* Microblink.xcframework */,
-				1C4253882909C2A2008E871B /* PingOneVerify.xcframework */,
+				1C0E14842AEC70CF00B4B02B /* BlinkID.xcframework */,
+				1C0E14862AEC70CF00B4B02B /* PingOneVerify.xcframework */,
+				1C0E14852AEC70CF00B4B02B /* VoiceSdk.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,7 +119,7 @@
 				1C4253692909C178008E871B /* Sources */,
 				1C42536A2909C178008E871B /* Frameworks */,
 				1C42536B2909C178008E871B /* Resources */,
-				1C4DAB9A29C39D200043F160 /* Embed Frameworks */,
+				1C0E148D2AEC70CF00B4B02B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +170,7 @@
 			files = (
 				1C4253862909C286008E871B /* Main.storyboard in Resources */,
 				1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */,
+				884BAEF22AEC48D9002C6827 /* PingOneVerifyLocalizable.strings in Resources */,
 				1C42537A2909C179008E871B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8969947D2A8AB47C0088041C /* CompletedViewController.swift in Sources */,
 				1C4253752909C178008E871B /* ViewController.swift in Sources */,
 				1C4253712909C178008E871B /* AppDelegate.swift in Sources */,
 			);
@@ -316,12 +330,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PingOne Verify/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required for scanning your IDs and taking pictures.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access to microphone is required for verifying your voice";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -350,12 +365,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PingOne Verify/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required for scanning your IDs and taking pictures.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access to microphone is required for verifying your voice";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -366,7 +382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
