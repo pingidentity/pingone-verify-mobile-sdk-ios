@@ -107,3 +107,5 @@
 #import "MBRecognitionMode.h"
 #import "MBRecognitionModeFilter.h"
 #import "MBFieldType.h"
+#import "MBImageExtractionType.h"
+#import "MBDependentInfo.h"
