@@ -48,77 +48,6 @@ __attribute__((visibility("default")))
 
 @end
 
-/**
- * @brief Enumeration representing short quality description
- */
-typedef NS_ENUM(NSInteger, QualityShortDescription) {
-    /**
-     * @brief Too noisy audio.
-     */
-    TOO_NOISY = 0,
-
-    /**
-     * @brief Too long reverberation.
-     * @deprecated Won't appear as reverberation is no more checked.
-     */
-    TOO_LONG_REVERBERATION = 1,
-
-    /**
-     * @brief Too small total speech length in the audio.
-     */
-    TOO_SMALL_SPEECH_TOTAL_LENGTH = 2,
-
-    /**
-     * @brief Audio successfully passed quality check and can be used for voice template creation.
-     */
-    OK = 3
-};
-
-__attribute__((visibility("default")))
-/*!
- @interface QualityCheckThresholds
- @brief Represents custom quality checking thresholds
- */
-@interface QualityCheckThresholds : NSObject
-
-/*!
- @brief Minimum signal-to-noise ratio required to pass quality check in dB.
- */
-@property(assign, nonatomic) float minimumSnrDb;
-
-/*!
- @brief Minimum speech length required to pass quality check in milliseconds.
- */
-@property(assign, nonatomic) float minimumSpeechLengthMs;
-
-@end
-
-__attribute__((visibility("default")))
-/*!
- @interface QualityCheckResult
- @brief Represents audio quality check result.
- */
-@interface QualityCheckResult : NSObject
-
-/**
- * @brief Map with keys representing names of the metrics used in quality check and values representing threshold values
- * for each metric
- */
-@property(strong, nonatomic, nonnull) NSDictionary* thresholdValues;
-
-/**
- * @brief Map with keys representing names of the metrics used in quality check and values representing actually
- * obtained values for each metric
- */
-@property(strong, nonatomic, nonnull) NSDictionary* obtainedValues;
-
-/**
- * @brief Short description of the quality check results
- */
-@property(assign, nonatomic) QualityShortDescription qualityShortDescription;
-
-@end
-
 __attribute__((visibility("default")))
 /*!
  @interface VoiceTemplateFactory
@@ -209,59 +138,6 @@ __attribute__((visibility("default")))
  */
 - (NSNumber* _Nullable)getMinimumAudioSampleRate:(NSError* _Nullable* _Nullable)error;
 
-/*!
- @brief Checks whether audio buffer is suitable to use as voice enrollment entry from the quality perspective.
- @param PCM16Samples PCM16 audio data
- @param sampleRate audio sample rate
- @param error pointer to NSError for error reporting
- @note Audio sampling frequency should be equal to or greater than the value returned by
-       @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
- @return Quality check result.
- */
-- (QualityCheckResult* _Nullable)checkQuality:(NSData* _Nonnull)PCM16Samples
-                                   sampleRate:(size_t)sampleRate
-                                        error:(NSError* _Nullable* _Nullable)error;
-
-/*!
- @brief  Checks whether WAV file is suitable to use as voice enrollment entry from the quality perspective.
- @param wavPath path to WAV file
- @param error pointer to NSError for error reporting
- @note WAV sampling frequency should be equal to or greater than the value returned by
-       @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
- @return Quality check result.
- */
-- (QualityCheckResult* _Nullable)checkQuality:(NSString* _Nonnull)wavPath error:(NSError* _Nullable* _Nullable)error;
-
-/*!
- @brief Checks whether audio buffer is suitable to use as voice enrollment entry from the quality perspective.
- @param PCM16Samples PCM16 audio data
- @param sampleRate audio sample rate
- @param thresholds Optional quality checking thresholds. If specified will be used instead of default thresholds
- defined by VoiceTemplateFactory initialization data
- @param error pointer to NSError for error reporting
- @note Audio sampling frequency should be equal to or greater than the value returned by
-       @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
- @return Quality check result.
- */
-- (QualityCheckResult* _Nullable)checkQuality:(NSData* _Nonnull)PCM16Samples
-                                   sampleRate:(size_t)sampleRate
-                                   thresholds:(QualityCheckThresholds* _Nullable)thresholds
-                                        error:(NSError* _Nullable* _Nullable)error;
-
-/*!
- @brief  Checks whether WAV file is suitable to use as voice enrollment entry from the quality perspective.
- @param wavPath path to WAV file
- @param thresholds Optional quality checking thresholds. If specified will be used instead of default thresholds
- defined by VoiceTemplateFactory initialization data
- @param error pointer to NSError for error reporting
- @note WAV sampling frequency should be equal to or greater than the value returned by
-       @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
- @return Quality check result.
- */
-- (QualityCheckResult* _Nullable)checkQuality:(NSString* _Nonnull)wavPath
-                                   thresholds:(QualityCheckThresholds* _Nullable)thresholds
-                                        error:(NSError* _Nullable* _Nullable)error;
-
 @end
 
 
@@ -314,38 +190,61 @@ __attribute__((visibility("default")))
 
 /*!
  @brief Voice verify stream constructor.
- @param voiceTemplateFactory Voice template factory instance
- @param voiceTemplateMatcher Voice template matcher instance
- @param voiceTemplate        Reference voice template to match with
- @param sampleRate           Input audio stream sampling frequency in Hz
- @param windowLengthSeconds Length of audio context for voice verification in seconds,
- should be greater than 3 seconds
+ @param voiceTemplateFactory      Voice template factory instance
+ @param voiceTemplateMatcher      Voice template matcher instance
+ @param voiceTemplates            Reference voice templates to match with
+ @param sampleRate                Input audio stream sampling frequency in Hz
+ @param audioContextLengthSeconds Length of audio context for voice verification in seconds,
+                                  must be at least windowLengthSeconds
+ @param windowLengthSeconds       Length of audio window passed to the template creation during
+                                  stream processing, must be at least 0.5 seconds
  @param error pointer to NSError for error reporting
  @note Sampling frequency should be equal to or greater than the value returned by
-       @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
+ @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
  @note Voice template matcher, voice template factory and voice template should have the same init data ID.
  */
 - (instancetype _Nullable)initWithVoiceTemplateFactory:(VoiceTemplateFactory* _Nonnull)voiceTemplateFactory
                                   voiceTemplateMatcher:(VoiceTemplateMatcher* _Nonnull)voiceTemplateMatcher
-                                         voiceTemplate:(VoiceTemplate* _Nonnull)voiceTemplate
+                                         voiceTemplates:(NSArray* _Nonnull)voiceTemplates
                                             sampleRate:(size_t)sampleRate
-                                   windowLengthSeconds:(size_t)windowLengthSeconds
+                             audioContextLengthSeconds:(size_t)audioContextLengthSeconds
+                                   windowLengthSeconds:(float)windowLengthSeconds
+                                                 error:(NSError* _Nullable* _Nullable)error;
+
+/*!
+ @brief Voice verify stream constructor.
+ @param voiceTemplateFactory      Voice template factory instance
+ @param voiceTemplateMatcher      Voice template matcher instance
+ @param voiceTemplates            Reference voice templates to match with
+ @param sampleRate                Input audio stream sampling frequency in Hz
+ @param audioContextLengthSeconds Length of audio context for voice verification in seconds,
+                                  must be at least 3 seconds
+ @param error pointer to NSError for error reporting
+ @note Sampling frequency should be equal to or greater than the value returned by
+ @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
+ @note Voice template matcher, voice template factory and voice template should have the same init data ID.
+ */
+- (instancetype _Nullable)initWithVoiceTemplateFactory:(VoiceTemplateFactory* _Nonnull)voiceTemplateFactory
+                                  voiceTemplateMatcher:(VoiceTemplateMatcher* _Nonnull)voiceTemplateMatcher
+                                         voiceTemplates:(NSArray* _Nonnull)voiceTemplates
+                                            sampleRate:(size_t)sampleRate
+                             audioContextLengthSeconds:(size_t)audioContextLengthSeconds
                                                  error:(NSError* _Nullable* _Nullable)error;
 
 /*!
  @brief Voice verify stream constructor.
  @param voiceTemplateFactory Voice template factory instance
  @param voiceTemplateMatcher Voice template matcher instance
- @param voiceTemplate        Reference voice template to match with
+ @param voiceTemplates       Reference voice templates to match with
  @param sampleRate           Input audio stream sampling frequency in Hz
  @param error pointer to NSError for error reporting
  @note Sampling frequency should be equal to or greater than the value returned by
-       @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
+ @ref VoiceTemplateFactory::getMinimumAudioSampleRate.
  @note Voice template matcher, voice template factory and voice template should have the same init data ID.
  */
 - (instancetype _Nullable)initWithVoiceTemplateFactory:(VoiceTemplateFactory* _Nonnull)voiceTemplateFactory
                                   voiceTemplateMatcher:(VoiceTemplateMatcher* _Nonnull)voiceTemplateMatcher
-                                         voiceTemplate:(VoiceTemplate* _Nonnull)voiceTemplate
+                                        voiceTemplates:(NSArray* _Nonnull)voiceTemplates
                                             sampleRate:(size_t)sampleRate
                                                  error:(NSError* _Nullable* _Nullable)error;
 
@@ -359,12 +258,26 @@ __attribute__((visibility("default")))
 - (BOOL)addSamples:(NSData* _Nonnull)PCM16Samples error:(NSError* _Nullable* _Nullable)error;
 
 /*!
- @brief Retrieves verification result from output queue. Use hasVerifyResult() to know if there are available results.
+ @brief Retrieves verification result from output queue containing one
+        verify stream result for each reference template.
+        Use hasVerifyResult() to know if there are available results
  @param error pointer to NSError for error reporting
  @return One verification result.
  @note This method will produce an error if the output results queue is empty.
  */
-- (VerifyStreamResult* _Nullable)getVerifyResult:(NSError* _Nullable* _Nullable)error;
+- (NSArray* _Nullable)getVerifyResult:(NSError* _Nullable* _Nullable)error;
+
+/*!
+ @brief Retrieves verification result from output queue consisting of single verify
+        stream result corresponding to the zeroth reference template.
+        Suitable for the case when the only one reference template was specified.
+        Use hasVerifyResult() to know if there are available results
+ @param error pointer to NSError for error reporting
+ @return One verification result for the zeroth reference template.
+ @note This method will produce an error if the output results queue is empty.
+       Behaves the same as getVerifyResult in IDVoice < 3.13, if only one reference template was set
+ */
+- (VerifyStreamResult* _Nullable)getVerifyResultForOneTemplate:(NSError* _Nullable* _Nullable)error;
 
 /*!
  @brief Checks if there are available verification results in output queue.

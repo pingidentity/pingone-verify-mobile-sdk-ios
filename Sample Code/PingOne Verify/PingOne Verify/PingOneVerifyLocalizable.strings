@@ -21,6 +21,7 @@
 //GovernmentID (Including both License and Passport)
 "idv_documentCapture_header_governmentId" = "Scan your ID";
 "idv_documentCapture_description_governmentId" = "Grab your photo ID. This can be a passport, driver’s license or any other government issued ID. Ensure the edges of your ID are in the frame and clearly visible. Hold it in your hand to avoid any glare. Pay attention to the live feedback. For some ID’s you may need to scan the back as well.";
+"idv_documetCapture_processing" = "Processing ID...";
 
 // License
 "idv_documentCapture_header_driverLicense" = "Capture Driver License";
@@ -35,6 +36,7 @@
 "idv_documentCapture_description_selfie" = "Center your face in the oval. Tap the button or anywhere on the screen to capture your selfie.";
 "idv_selfie_preview_submit_button" = "Submit";
 "idv_selfie_preview_retake_button" = "Re-take";
+"idv_selfie_tap_to_capture" = "Tap Anywhere on the screen to capture image";
 
 // Email
 "idv_emailCapture_title" = "Email Verification";
@@ -73,6 +75,10 @@
 "idv_voice_one_recording_text" = "\n\nYou will record 1 time";
 "idv_voice_multi_recording_text" = "\n\nYou will record %@ times";
 "idv_voiceCapture_instruction" = "Speak the following phrase into your device microphone:";
+"idv_voice_speech_length_error"= "Recorded speech was too short to process.\nPlease try again";
+"idv_voice_speech_noisy_error" = "Too much noise in the background.\nPlease try again in a more quiet setting";
+"idv_voice_speech_reverberation_error" = "The audio recording has strong echo.\nPlease record in an another location";
+"idv_voice_speech_unknown_error" = "Undetermined Error.\nPlease try again";
 
 //OTP
 "idv_otp_placeholder" = "Verification Code";
@@ -137,6 +143,8 @@
 
 "idv_cancel" = "Cancel";
 "idv_timer_label" = "Session expires in %@";
+"idv_time_min" = "%@ min";
+"idv_time_sec" = "%@ sec";
 
 //OTP
 "idv_otp_title" = "Verification Code";
@@ -169,5 +177,3 @@
 "mb_try_scanning_again" = "It appears the information on the document is inconsistent. Please try scanning again.";
 "mb_unsupported_document_message" = "Scan the front side of a supported document.";
 "mb_unsupported_document_title" = "Document not recognized";
-
-
