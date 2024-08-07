@@ -4,25 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/antispoof.h</key>
-		<data>
-		p8A2CbPTWXw5s/0PP0+jxnJmUzY=
-		</data>
-		<key>Headers/antispoof_result.h</key>
-		<data>
-		EsLWonZcn09AjNdVbFpG3gy7Apk=
-		</data>
 		<key>Headers/common.h</key>
 		<data>
 		0MrE9yzXiJPgjMbqdUm+KLIIXHo=
 		</data>
 		<key>Headers/core.h</key>
 		<data>
-		emvOfbN1dPf+SjWQAFCdVW/OTXY=
+		P4rCu9vPhm2nu832GX8FaLm3n5Y=
 		</data>
 		<key>Headers/liveness.h</key>
 		<data>
 		ReK+aj5y5kmdHKUjOU21RnDtZXs=
+		</data>
+		<key>Headers/quality_check.h</key>
+		<data>
+		3Y37Z2jth6/kItgW2HY4xcOGRVo=
 		</data>
 		<key>Headers/signal.h</key>
 		<data>
@@ -30,7 +26,7 @@
 		</data>
 		<key>Headers/speech.h</key>
 		<data>
-		0F8G0ycx1IiBBHR9ZBkRuy/HuiA=
+		oDgFsbpP6+/pkgBgt5a6rX4erbI=
 		</data>
 		<key>Headers/speech_summary.h</key>
 		<data>
@@ -38,29 +34,15 @@
 		</data>
 		<key>Headers/verify.h</key>
 		<data>
-		EN0Y7B+esmmLBQOb9pjDc23FrN0=
+		s/NHRH+dPShIVysKkIoSBA5xE20=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		o8eJw1Bwy/mo5qjlOdVdP8mntWg=
+		yWVtPxTZObEcrcmhvp9UtjrtRmo=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/antispoof.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			9KPFY6Sls7XYpZctvIlZ527ZsXg08j0hgXUy/iVWctM=
-			</data>
-		</dict>
-		<key>Headers/antispoof_result.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RDVt3UCsgoHHyD+8PMobyioEHGrWpGF3SJy9+ZD9DFE=
-			</data>
-		</dict>
 		<key>Headers/common.h</key>
 		<dict>
 			<key>hash2</key>
@@ -72,7 +54,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jw5qGNi4XMO4cPHJouZZKt6s9+XHEM25+i/iOOCj3H0=
+			lphcb7vGX99NL2GG/zukTPt8fQjioa0kpPdogYYGP5k=
 			</data>
 		</dict>
 		<key>Headers/liveness.h</key>
@@ -80,6 +62,13 @@
 			<key>hash2</key>
 			<data>
 			mCek4CxiZQ9MY60CGA+ivAWd2jKgNzyRwpFSzLYE7Pg=
+			</data>
+		</dict>
+		<key>Headers/quality_check.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rEKr2urueoKJnWGGtahN5qjCJ1n9eA+x4xr6WTMASbI=
 			</data>
 		</dict>
 		<key>Headers/signal.h</key>
@@ -93,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zeKzzrv+QZQths8ACJ8J+tolGY9Uqo23FA56itaPdHk=
+			3EVXbaPZ1CNET+O1DtzL2LyHfQXOzkQV3xsbIZGojHc=
 			</data>
 		</dict>
 		<key>Headers/speech_summary.h</key>
@@ -107,7 +96,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vFF578xXcbZ/al4sPT9B67PWlssvcdc3uAH07QazXMI=
+			3+JC9swCS1NONI8pltH3Eoq477rHN0isiSz3DqtHMR4=
 			</data>
 		</dict>
 	</dict>

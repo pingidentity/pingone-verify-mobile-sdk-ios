@@ -1,8 +1,8 @@
 /* Copyright 2018 ID R&D Inc. All Rights Reserved. */
 
 /*!
- @header media.h
- @brief Media utils (speech analysis) header file.
+ @header speech.h
+ @brief Speech endpoint detector header file.
  */
 
 #import <Foundation/Foundation.h>

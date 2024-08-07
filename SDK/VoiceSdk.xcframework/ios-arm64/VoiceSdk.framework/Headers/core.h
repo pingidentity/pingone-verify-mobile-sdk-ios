@@ -33,8 +33,68 @@ __attribute__((visibility("default")))
 /*!
  @brief Information (e.g. expiration date) about the installed license if available or
  an empty string if no license is in use.
+ @deprecated Use @Settings::getLicenseInfo instead.
  */
 @property(strong, nonatomic, nonnull) NSString* licenseInfo;
+
+/*!
+ @brief License expiration date in YYYY-MM-DD format. The returned date corresponds to the SDK feature that expires first.
+ @deprecated Use @Settings::getLicenseInfo instead.
+ */
+@property(strong, nonatomic, nonnull) NSString* licenseExpirationDate;
+
+- (NSString* _Nonnull)description;
+
+@end
+
+/**
+ * @brief VoiceSDK licensed features
+ */
+typedef NS_ENUM(NSInteger, LicenseFeature) {
+    /**
+     * @brief Core functionality.
+     */
+    CORE = 7,
+
+    /**
+     * @brief Voice verification.
+     */
+    VERIFICATION = 2,
+
+    /**
+     * @brief Voice liveness (presentation/replay attack detection).
+     */
+    LIVENESS_PRESENTATION_ATTACK_DETECTION = 4,
+
+    /**
+     * @brief Voice liveness (voice clones detection).
+     */
+    LIVENESS_VOICE_CLONES_DETECTION = 31,
+
+    /**
+     * @brief Quality checking functionality (SNR, speech length etc.).
+     */
+    QUALITY_CHECKING = 6
+};
+
+__attribute__((visibility("default")))
+/*!
+ @interface LicenseFeatureInfo
+
+ @brief The LicenseFeatureInfo interface.
+ An interface for VoiceSDK feature information.
+ */
+@interface LicenseFeatureInfo : NSObject
+
+/*!
+ @brief License feature
+ */
+@property(assign, nonatomic) LicenseFeature feature;
+
+/*!
+ @brief Feature expiration date in YYYY-MM-DD format
+ */
+@property(strong, nonatomic, nonnull) NSString* expirationDate;
 
 - (NSString* _Nonnull)description;
 
@@ -63,6 +123,13 @@ __attribute__((visibility("default")))
  * @param useVoiceTemplateCompression whether to compress voice templates serialization.
  */
 + (void)setUseVoiceTemplateCompression:(bool)useVoiceTemplateCompression;
+
+/*!
+ * @brief Returns information (enabled features and expiration dates) about the installed license if available.
+ *
+ * @return Array of VoiceSDK features available with the installed license.
+ */
++ (NSArray* _Nullable)getLicenseInfo:(NSError* _Nullable* _Nullable)error;
 
 @end
 
