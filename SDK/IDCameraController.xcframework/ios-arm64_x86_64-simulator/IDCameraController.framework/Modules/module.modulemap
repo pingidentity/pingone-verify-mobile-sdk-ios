@@ -1,0 +1,11 @@
+framework module IDCameraController {
+  umbrella header "IDCameraController.h"
+  export *
+
+  module * { export * }
+}
+
+module IDCameraController.Swift {
+  header "IDCameraController-Swift.h"
+  requires objc
+}

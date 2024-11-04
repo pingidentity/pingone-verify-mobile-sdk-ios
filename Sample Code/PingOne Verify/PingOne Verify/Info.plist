@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Enable location permission to proceed with your identity verification.</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+</dict>
 </plist>

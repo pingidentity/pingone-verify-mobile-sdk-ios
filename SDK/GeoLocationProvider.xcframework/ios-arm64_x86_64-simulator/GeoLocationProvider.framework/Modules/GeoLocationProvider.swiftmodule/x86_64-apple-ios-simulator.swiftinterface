@@ -1,0 +1,23 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name GeoLocationProvider
+import CoreLocation
+@_exported import GeoLocationProvider
+import NeoInterfaces
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public class GeoLocationProviders : ObjectiveC.NSObject {
+  public init(listener: any NeoInterfaces.GeoLocationProviderListener)
+  @objc deinit
+}
+extension GeoLocationProvider.GeoLocationProviders : CoreLocation.CLLocationManagerDelegate {
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
+}
+extension GeoLocationProvider.GeoLocationProviders : NeoInterfaces.GeoLocationProviderContract {
+  public func setLocation(listener: any NeoInterfaces.GeoLocationProviderListener)
+  public func requestCurrentLocation()
+}

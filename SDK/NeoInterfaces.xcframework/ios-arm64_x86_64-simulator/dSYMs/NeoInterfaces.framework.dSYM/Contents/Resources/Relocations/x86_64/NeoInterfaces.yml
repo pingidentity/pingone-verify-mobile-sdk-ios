@@ -1,0 +1,7 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/amahuri/Library/Developer/Xcode/DerivedData/PingOneVerify-gwxmbknntgdhhmayrzydvjoxvcvv/Build/Intermediates.noindex/ArchiveIntermediates/NeoInterfaces/InstallationBuildProductsLocation/Library/Frameworks/NeoInterfaces.framework/NeoInterfaces'
+relocations:
+  - { offsetInCU: 0x33, offset: 0x33, size: 0x8, addend: 0x0, symName: _NeoInterfacesVersionString, symObjAddr: 0x0, symBinAddr: 0x2BD0, symSize: 0x0 }
+  - { offsetInCU: 0x67, offset: 0x67, size: 0x8, addend: 0x0, symName: _NeoInterfacesVersionNumber, symObjAddr: 0x38, symBinAddr: 0x2C08, symSize: 0x0 }
+...

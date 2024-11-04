@@ -177,3 +177,17 @@
 "mb_try_scanning_again" = "It appears the information on the document is inconsistent. Please try scanning again.";
 "mb_unsupported_document_message" = "Scan the front side of a supported document.";
 "mb_unsupported_document_title" = "Document not recognized";
+
+//IDRND
+"idrnd_fire" = "fire";
+"idrnd_ok" = "ok";
+"idrnd_too_many_faces" = "Too many faces found";
+"idrnd_position_face" = "Please position your face into frame";
+"idrnd_close_camera" = "Please move closer to the camera";
+"idrnd_move_farther_camera" = "Please move a little farther away from the camera";
+"idrnd_position_face_center" = "Please position your face in the center of the frame";
+"idrnd_turn_frontal_position" = "Please turn your face for frontal facing position";
+"idrnd_hold_device_still" = "Please hold your device still";
+"idrnd_good_lighting_hold_still" = "Please ensure good lighting and hold your device still";
+"idrnd_good_lighting" = "Please ensure good lighting";
+"idrnd_unknown_error" = "unknown error";
