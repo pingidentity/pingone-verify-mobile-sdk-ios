@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xhvo3trd8kePwbbajf5BkqtSURA=
+		XU8hto2+7JWsj4dGi51xi9YmlRw=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -18,19 +18,19 @@
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1waHHzOAfeQtx0fPTASqIZOnpdk=
+		6cUTLZL+94NHouqLnb7dXJiq3k4=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		6lfsusQ+ruzGFwsshz/yXAEQiEM=
+		OZrBMbhnQuIef/wdLLUP9YPBqv0=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1waHHzOAfeQtx0fPTASqIZOnpdk=
+		6cUTLZL+94NHouqLnb7dXJiq3k4=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ITuQ7sWXo0QH+i2r1cb9dZHxJUA=
+		Pq9GVPqhjP4JEYtQjgyefWCsh+w=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -38,19 +38,19 @@
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		I6qkrplFm//P88l6PvRf/yhvesM=
+		HTl30gKrT7ebpTF0H4bJBFr8HRQ=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MFhfczFAmX2Z+MW+WUwmJp4H83I=
+		G7HAT2Bw+Er52uA0ORInshHt/D0=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		I6qkrplFm//P88l6PvRf/yhvesM=
+		HTl30gKrT7ebpTF0H4bJBFr8HRQ=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+Kjq+9fYJ/OInYAGFT0wCXlEW3g=
+		pcOJ98I2zJPCAxZgwZh6OMZYv0g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -77,28 +77,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			27qZ8e0PeyiOy6nAS/Vm1qCo+dokyJz6Rqbi1BNPCcA=
+			yPOaQq7VwvwlOmU8fIJmyGHVqQolANmGSYAu/qA2y7M=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yv7KYJgSPaWUeUFzew3QVMSSk7j3uP+9gcG//Qsz8DI=
+			P5eXTRhMelPNyhJ+4UZc88cyV6NiSknqV81zJfW9sQ4=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			27qZ8e0PeyiOy6nAS/Vm1qCo+dokyJz6Rqbi1BNPCcA=
+			yPOaQq7VwvwlOmU8fIJmyGHVqQolANmGSYAu/qA2y7M=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wUp6g2QcgL4YoFQxRbxIwZcREro6Q7rVSqNeM2b6B2I=
+			lMLrgSLsemGfsKJxJgF88vYIKwG7WAXU/ZliaKuPIm8=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -112,28 +112,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jruh77gOWzl4cw2elqabtEcnvfkFFAXbPr1f4lfyK74=
+			Eg0eh/8jZrBusg0+GAQ4FZWV6K2hGShvosOgfUPtaDA=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KZ6aLFm1LiLHKQ4FzP27lqr/aoAYjfvDOCxF5+z1huI=
+			Noefp08IrEk8xO3Lfx2eurMNKHuck0xJGJccp+JmLzM=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jruh77gOWzl4cw2elqabtEcnvfkFFAXbPr1f4lfyK74=
+			Eg0eh/8jZrBusg0+GAQ4FZWV6K2hGShvosOgfUPtaDA=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yGLjGVQhgUjsoABAjKm1WwGfXhpMDCODdqUWqMYYq+s=
+			1kH75CfC+dYXbCBDNya8sCSEn37l16fM/7GaPU4b8lU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

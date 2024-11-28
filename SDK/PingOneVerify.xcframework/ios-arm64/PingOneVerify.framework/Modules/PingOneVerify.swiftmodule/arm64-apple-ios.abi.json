@@ -29205,6 +29205,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -44805,63 +44815,63 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8443,
+      "offset": 8292,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12866,
+      "offset": 12717,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 13190,
+      "offset": 13041,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 13527,
+      "offset": 13378,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17310,
+      "offset": 17161,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17822,
+      "offset": 17673,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 21398,
+      "offset": 21249,
       "length": 3,
       "value": "4.0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 21442,
+      "offset": 21293,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IDCameraController\/IDCameraViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 21483,
+      "offset": 21334,
       "length": 5,
       "value": "false"
     },
@@ -45346,7 +45356,7 @@
       "kind": "StringLiteral",
       "offset": 1821,
       "length": 9,
-      "value": "\"#207343\""
+      "value": "\"#ededed\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppTheme\/Types\/AppTheme.swift",
