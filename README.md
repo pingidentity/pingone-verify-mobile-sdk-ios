@@ -77,13 +77,29 @@ You can customize these images:
 | idv_selfie  | Image that is shown when selfie is requested                           |
 | idv_phone   | Image that is shown when phone number verification is requestede       |
 | idv_email   | Image that is shown when email verification is requested               |
-| idv_cancel  | mage that is used for cancel button at top left of the navigation bar  |
+| idv_cancel  | Image that is used for cancel button at top left of the navigation bar  |
 
 To customize an image resource:
 
 1. Include your custom image with the same name in the app asset folder
 
 ### Customizing color resource
+You can customize these colors:
+
+| Asset Name  | Description                                                            | 
+|-------------|------------------------------------------------------------------------|
+| idv_selfie_guideline_default    | Default border for oval face detector for selfie verification            |
+|idv_selfie_guideline_error   | Error border for oval face detector for selfie verification                    |                      
+| idv_selfie_guideline_success  | Success border for oval face detector for selfie verification                           |
+| idv_selfie_close   | Icon tint for close/cancel button for selfie verification       |
+| idv_selfie_error   | Set the color for the error text shown in selfie screen                |
+| idv_selfie_background  | Set the foreground for selfie verification screen  |
+| idv_icon_tint  | Set the color for the icon tint color  |
+
+To customize an color resource:
+
+1. Include your custom colorset with the same name in the app asset folder
+
 You can customize the following color resources:
 
 - navigation color
