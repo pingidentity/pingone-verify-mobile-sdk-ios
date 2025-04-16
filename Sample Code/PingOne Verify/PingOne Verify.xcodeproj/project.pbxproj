@@ -26,8 +26,8 @@
 		634C96902CA5758E00E8D732 /* IDLiveFaceIAD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 634C968D2CA5758E00E8D732 /* IDLiveFaceIAD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		635AAB082C7C9BBA0072CEE6 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 635AAB072C7C9BBA0072CEE6 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		635AAB0A2C7C9BCC0072CEE6 /* NeoInterfaces.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 635AAB092C7C9BCC0072CEE6 /* NeoInterfaces.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */; };
 		884BAEF22AEC48D9002C6827 /* PingOneVerifyLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */; };
-		8969947D2A8AB47C0088041C /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8969947C2A8AB47C0088041C /* CompletedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,8 +67,8 @@
 		634C968D2CA5758E00E8D732 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IDLiveFaceIAD.xcframework; path = ../../SDK/IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
 		635AAB072C7C9BBA0072CEE6 /* GeoLocationProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeoLocationProvider.xcframework; path = ../../SDK/GeoLocationProvider.xcframework; sourceTree = "<group>"; };
 		635AAB092C7C9BCC0072CEE6 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NeoInterfaces.xcframework; path = ../../SDK/NeoInterfaces.xcframework; sourceTree = "<group>"; };
+		63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = PingOneVerifyLocalizable.strings; sourceTree = "<group>"; };
-		8969947C2A8AB47C0088041C /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompletedViewController.swift; path = Assets.xcassets/CompletedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +108,9 @@
 		1C42536F2909C178008E871B /* PingOne Verify */ = {
 			isa = PBXGroup;
 			children = (
+				63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */,
 				1C4253702909C178008E871B /* AppDelegate.swift */,
 				1C4253742909C178008E871B /* ViewController.swift */,
-				8969947C2A8AB47C0088041C /* CompletedViewController.swift */,
 				1C4253842909C286008E871B /* Main.storyboard */,
 				1C42537B2909C179008E871B /* LaunchScreen.storyboard */,
 				1C4253792909C179008E871B /* Assets.xcassets */,
@@ -208,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8969947D2A8AB47C0088041C /* CompletedViewController.swift in Sources */,
+				63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */,
 				1C4253752909C178008E871B /* ViewController.swift in Sources */,
 				1C4253712909C178008E871B /* AppDelegate.swift in Sources */,
 			);
