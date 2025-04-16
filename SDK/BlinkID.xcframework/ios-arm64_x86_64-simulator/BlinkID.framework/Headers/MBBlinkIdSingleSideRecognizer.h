@@ -23,6 +23,8 @@
 #import "MBEncodeSignatureImage.h"
 #import "MBCameraFrames.h"
 #import "MBClassAnonymization.h"
+#import "MBStrictnessLevel.h"
+#import "MBClassRules.h"
 
 @protocol MBBlinkIdSingleSideRecognizerDelegate;
 
@@ -32,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 * The Blink ID Recognizer is used for scanning Blink ID.
 */
 MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
-@interface MBBlinkIdSingleSideRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors,  MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage, MBCameraFrames, MBClassAnonymization>
+@interface MBBlinkIdSingleSideRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors,  MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage, MBCameraFrames, MBClassAnonymization, MBClassRules>
 
 MB_INIT
 
@@ -47,11 +49,33 @@ MB_INIT
 @property (nonatomic, nullable, weak) id<MBBlinkIdSingleSideRecognizerDelegate> delegate;
 
 /**
- * Defines whether blured frames filtering is allowed
+ * Skip processing of the blurred frames.
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL allowBlurFilter;
+@property (nonatomic, assign) BOOL enableBlurFilter;
+
+
+/**
+ * Strictness level for blur detection.
+ *
+ * Default: MBStrictnessLevelNormal
+ */
+@property (nonatomic, assign) MBStrictnessLevel blurStrictnessLevel;
+
+/**
+ * Skip processing of the glared frames.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL enableGlareFilter;
+
+/**
+ * Strictness level for glare detection.
+ *
+ * Default: MBStrictnessLevelNormal
+ */
+@property (nonatomic, assign) MBStrictnessLevel glareStrictnessLevel;
 
 /**
  * Defines whether returning of unparsed MRZ (Machine Readable Zone) results is allowed
@@ -107,6 +131,25 @@ MB_INIT
  * Default: NO
  */
 @property (nonatomic, assign) BOOL scanCroppedDocumentImage;
+
+/**
+ * Allows barcode recognition to proceed even if the initial extraction fails.
+ * This only works for still images - video feeds will ignore this setting.
+ * If the barcode recognition is successful, the recognizer will still end in a valid state.
+ * This setting is applicable only to photo frames. For multi-side recognizers, it is permitted only for the back side.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowBarcodeScanOnly;
+
+/**
+ * Enables the aggregation of data from multiple frames.
+ * Disabling this setting will yield higher-quality captured images, but it may slow down the scanning process due to the additional effort required to find the optimal frame.
+ * Enabling this setting will simplify the extraction process, but the extracted data will be aggregated from multiple frames instead of being sourced from a single frame.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL combineFrameResults;
 
 @end
 

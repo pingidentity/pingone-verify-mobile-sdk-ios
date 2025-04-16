@@ -1,34 +1,29 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PingOneVerify
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
-import ARKit
 import AVFAudio
 import AVFoundation
 import Accelerate
 import BlinkID
-import CoreGraphics
 import CoreImage
 import CoreLocation
 import CoreMedia
-import CoreMotion
 import DeveloperToolsSupport
 import Foundation
 import GeoLocationProvider
-import MobileCoreServices
+import IDLiveFaceCamera
 import NeoInterfaces
 @_exported import PingOneVerify
 import Swift
 import SwiftUI
 import SystemConfiguration
 import UIKit
-import VideoToolbox
 import Vision
 import VoiceSdk
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-import os
 @_hasMissingDesignatedInitializers @objc public class ClientBuilderError : ObjectiveC.NSObject {
   @objc public var localizedDescription: Swift.String!
   public enum BuilderError : Swift.Error {
@@ -61,13 +56,6 @@ public class CompletionHandler<T> {
   @discardableResult
   public func onError(_ errorHandler: @escaping (any Swift.Error) -> Swift.Void) -> PingOneVerify.CompletionHandler<T>
   @objc deinit
-}
-extension PingOneVerify.IDCameraControllerBase {
-  @_Concurrency.MainActor @preconcurrency public static var iadAvailable: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency public func prepareForIAD()
-  @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, payloadSize: PingOneVerify.IDCameraControllerBase.PayloadSize? = .normal) throws -> Foundation.Data
 }
 @objc public class PhoneCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
   @objc public var documentType: PingOneVerify.DocumentClass
@@ -159,51 +147,6 @@ public class NoRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodabl
 extension BlinkID.MBBarcodeDriverLicenseDetailedInfo : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@objc @_inheritsConvenienceInitializers public class IDImage : ObjectiveC.NSObject {
-  public var timestamp: Foundation.Date
-  public var timestampFromSessionStart: Foundation.TimeInterval?
-  public var photoIndex: Swift.Int
-  public var mirrored: Swift.Bool
-  public var size: CoreFoundation.CGSize? {
-    get
-  }
-  public var pixelBufferFormat: Darwin.OSType? {
-    get
-  }
-  @objc override dynamic public init()
-  public init(withUIImage image: UIKit.UIImage)
-  public var hasData: Swift.Bool {
-    get
-  }
-  public var sampleBuffer: CoreMedia.CMSampleBuffer? {
-    get
-    set
-  }
-  public func releaseSampleBuffer()
-  public var cvPixelBuffer: CoreVideo.CVPixelBuffer? {
-    get
-    set
-  }
-  public var uiImage: UIKit.UIImage? {
-    get
-    set
-  }
-  public var jpegData: Foundation.Data? {
-    get
-    set
-  }
-  public var pngData: Foundation.Data? {
-    get
-    set
-  }
-  public func clearCache()
-  @objc deinit
-}
-extension PingOneVerify.IDImage {
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-}
 @objc public enum DocumentSubmissionStatus : Swift.Int, Swift.Codable, Swift.RawRepresentable {
   case not_started = 0
   case started = 1
@@ -269,6 +212,27 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
 extension BlinkID.MBStringResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VerifyButton : UIKit.UIButton {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public var titleFont: UIKit.UIFont? {
+    @objc get
+    @objc set(font)
+  }
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public var cornerRadius: Foundation.NSNumber? {
+    @objc get
+    @objc set(radius)
+  }
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public var fontColor: UIKit.UIColor? {
+    @objc get
+    @objc set(color)
+  }
+  @_Concurrency.MainActor @preconcurrency public func setTitle(_ title: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setTitle(_ title: Swift.String?, for state: UIKit.UIControl.State)
+  @_Concurrency.MainActor @preconcurrency public func setTextColor(_ color: UIKit.UIColor?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 public struct LabelCellContent {
 }
 @_hasMissingDesignatedInitializers public class SCFace {
@@ -295,213 +259,10 @@ extension UIKit.UIColor {
   }
   convenience public init(hexString: Swift.String)
 }
-extension PingOneVerify.IDCameraControllerBase {
-  public enum ViewMode : Swift.Equatable {
-    case idle
-    case capture
-    case busy
-    case readyToSend
-    case result
-    case resultSuccess
-    case resultFailure
-    case custom(_: PingOneVerify.IDCameraControllerBase.ViewMode.CustomViewMode)
-    public var isResultState: Swift.Bool {
-      get
-    }
-    public struct CustomViewMode : Swift.Equatable {
-      public static func new() -> PingOneVerify.IDCameraControllerBase.ViewMode.CustomViewMode
-      public var name: Swift.String?
-      public var color: UIKit.UIColor
-      public var image: UIKit.UIImage?
-      public var interactive: Swift.Bool
-      public var flashingDot: Swift.Bool
-      public static func == (a: PingOneVerify.IDCameraControllerBase.ViewMode.CustomViewMode, b: PingOneVerify.IDCameraControllerBase.ViewMode.CustomViewMode) -> Swift.Bool
-    }
-    public static func == (a: PingOneVerify.IDCameraControllerBase.ViewMode, b: PingOneVerify.IDCameraControllerBase.ViewMode) -> Swift.Bool
-  }
-  public enum PayloadSize {
-    case normal
-    case small
-    public static func == (a: PingOneVerify.IDCameraControllerBase.PayloadSize, b: PingOneVerify.IDCameraControllerBase.PayloadSize) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public enum PhotoCaptureMode : Swift.String {
-    case auto, manual, auto_and_manual
-    public var canCaptureManually: Swift.Bool {
-      get
-    }
-    public var canCaptureAuto: Swift.Bool {
-      get
-    }
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum Error : Swift.Error, Foundation.LocalizedError {
-    case cameraPermissionDenied
-    case initializationError(_: Swift.String? = nil)
-    case photoCaptureError
-    case faceDetectorError(_: Swift.String? = nil)
-    case platformNotAllowed(_: Swift.String? = nil)
-    case error(_: Swift.String? = nil)
-    public var errorDescription: Swift.String? {
-      get
-    }
-  }
-}
-public protocol IDCameraControllerDelegate : AnyObject {
-  func cameraController(_ controller: PingOneVerify.IDCameraControllerBase, didCaptureImage image: PingOneVerify.IDImage)
-  func cameraController(_ controller: PingOneVerify.IDCameraControllerBase, didEncounterError error: PingOneVerify.IDCameraControllerBase.Error)
-  func cameraControllerDidUpdateLiveImage(_ controller: PingOneVerify.IDCameraControllerBase, image: PingOneVerify.IDImage)
-  func cameraControllerDidUpdateFaceResult(_ controller: PingOneVerify.IDCameraControllerBase, result: PingOneVerify.FaceDetectorResult, image: PingOneVerify.IDImage?, momentary: Swift.Bool)
-  func cameraControllerDidUpdateViewMode(_ controller: PingOneVerify.IDCameraControllerBase)
-  func cameraControllerUserDidPressResultButton(_ controller: PingOneVerify.IDCameraControllerBase)
-  func cameraControllerUserDidPressRetakeButton(_ controller: PingOneVerify.IDCameraControllerBase)
-}
-extension PingOneVerify.IDCameraControllerDelegate {
-  public func cameraControllerDidUpdateViewMode(_ controller: PingOneVerify.IDCameraControllerBase)
-  public func cameraControllerUserDidPressRetakeButton(_ controller: PingOneVerify.IDCameraControllerBase)
-  public func cameraControllerDidUpdateLiveImage(_ controller: PingOneVerify.IDCameraControllerBase, image: PingOneVerify.IDImage)
-  public func cameraControllerDidUpdateFaceResult(_ controller: PingOneVerify.IDCameraControllerBase, result: PingOneVerify.FaceDetectorResult, image: PingOneVerify.IDImage?, momentary: Swift.Bool)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class IDCameraControllerBase : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any PingOneVerify.IDCameraControllerDelegate)?
-  @_Concurrency.MainActor @preconcurrency public var cameraPosition: AVFoundation.AVCaptureDevice.Position
-  @available(*, deprecated)
-  @_Concurrency.MainActor @preconcurrency public var cameraResolution: AVFoundation.AVCaptureSession.Preset {
-    get
-    set(newValue)
-  }
-  @_Concurrency.MainActor @preconcurrency public var captureMode: PingOneVerify.IDCameraControllerBase.PhotoCaptureMode {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency public var faceDetectorSettings: PingOneVerify.FaceDetectorSettings {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency public var allowToPreviewBeforeSending: Swift.Bool
-  @_Concurrency.MainActor @preconcurrency public var showFaceDetectionErrors: Swift.Bool
-  @_Concurrency.MainActor @preconcurrency public var stopAfterCapture: Swift.Bool
-  @_Concurrency.MainActor @preconcurrency public var debugMode: Swift.Bool
-  @_Concurrency.MainActor @preconcurrency public var runInBackground: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency public var currentViewMode: PingOneVerify.IDCameraControllerBase.ViewMode {
-    get
-    set
-  }
-  @available(*, deprecated)
-  @_Concurrency.MainActor @preconcurrency open var image: UIKit.UIImage? {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency open var capturedImage: PingOneVerify.IDImage?
-  @_Concurrency.MainActor @preconcurrency public var lastLiveImage: PingOneVerify.IDImage? {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency public var lastPhotoCapturedAutomatically: Swift.Bool
-  @_Concurrency.MainActor @preconcurrency public var canTakePhotoNow: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var faceCaptureBoundaries: CoreFoundation.CGRect {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var videoPreviewContainer: UIKit.UIView? {
-    get
-  }
-  @objc deinit
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency public static func instantiate() -> PingOneVerify.IDCameraViewController?
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
-  @_Concurrency.MainActor @preconcurrency public static var authorizationStatus: AVFoundation.AVAuthorizationStatus {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency public static func requestAccess(completionHandler handler: ((Swift.Bool) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor @preconcurrency open func reset()
-  @_Concurrency.MainActor @preconcurrency public func prepareForCapture()
-  @_Concurrency.MainActor @preconcurrency public func startRunning()
-  @_Concurrency.MainActor @preconcurrency public var isRunning: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency public func stopRunning()
-  @_Concurrency.MainActor @preconcurrency open func addPreviewLayer(_ previewLayer: AVFoundation.AVCaptureVideoPreviewLayer)
-  @objc @IBAction @_Concurrency.MainActor @preconcurrency public func captureButtonPressed()
-  @objc @IBAction @_Concurrency.MainActor @preconcurrency public func retakeButtonPressed(_ sender: UIKit.UIButton)
-  @objc @IBAction @_Concurrency.MainActor @preconcurrency public func cancelButtonPressed(_ sender: UIKit.UIButton)
-  @_Concurrency.MainActor @preconcurrency public func setCurrentViewMode(_ mode: PingOneVerify.IDCameraControllerBase.ViewMode, message: Swift.String? = nil, allowRetake: Swift.Bool? = nil)
-  @discardableResult
-  @_Concurrency.MainActor @preconcurrency public func takePhoto() -> Swift.Bool
-  @_Concurrency.MainActor @preconcurrency open func UIModeDidChange(animated: Swift.Bool = true)
-  @_Concurrency.MainActor @preconcurrency open func setFaceResult(_ result: PingOneVerify.FaceDetectorResult, momentary: Swift.Bool = false)
-  @_Concurrency.MainActor @preconcurrency open func setMessage(_ message: Swift.String?, isError: Swift.Bool = false)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-}
 extension BlinkID.MBBarcodeResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct RequirementsFactory {
-}
-public enum FaceDetectorResult : Swift.Equatable {
-  case fire
-  case ok
-  case tooManyFaces
-  case faceNotFound
-  case faceTooSmall
-  case faceTooBig
-  case faceCropped
-  case faceOffCenter
-  case faceAngled
-  case movementDetected
-  case photoLowQuality
-  case photoBlurred
-  case photoBadLighting
-  case customUserError(Swift.String)
-  case faceDetectionError(Swift.String)
-  case faceDetectionIgnorableError(Swift.String)
-  case faceDetectionFatalError(Swift.String)
-  case unknownError
-  public var message: Swift.String {
-    get
-  }
-  public var isError: Swift.Bool {
-    get
-  }
-  public static func == (a: PingOneVerify.FaceDetectorResult, b: PingOneVerify.FaceDetectorResult) -> Swift.Bool
-}
-public struct FaceDetectorSettings {
-  public init(enabled: Swift.Bool = true)
-  public var enabled: Swift.Bool
-  public var showsLandmarks: Swift.Bool
-  public var errorFirstTimeDelay: Swift.Double
-  public var errorDelay: Swift.Double
-  public var errorHideDelay: Swift.Double
-  public var errorChangeDelay: Swift.Double
-  public var fireDelay: Swift.Double
-  public var nativeFaceDetectorSettings: PingOneVerify.FaceDetectorNativeFacePositionParameters
-  public mutating func useEngines(_ detectors: PingOneVerify.FaceDetectorEngines)
-  public mutating func useDefaultEngines()
-  public mutating func addCustomFaceDetectorClosure(_ closure: @escaping PingOneVerify.FaceDetectorClosure)
-}
-public struct FaceDetectorEngines : Swift.OptionSet {
-  public var rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let nativeVision: PingOneVerify.FaceDetectorEngines
-  public static let motionDetector: PingOneVerify.FaceDetectorEngines
-  public static let defaultEngines: PingOneVerify.FaceDetectorEngines
-  public typealias ArrayLiteralElement = PingOneVerify.FaceDetectorEngines
-  public typealias Element = PingOneVerify.FaceDetectorEngines
-  public typealias RawValue = Swift.Int
 }
 extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -525,93 +286,22 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
 }
 @objc public class SelfieCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
   @objc public var documentType: PingOneVerify.DocumentClass
+  @available(*, deprecated, message: "Will be removed in upcoming versions")
   final public let captureTime: Foundation.TimeInterval
+  @available(*, deprecated, message: "Will be removed in upcoming versions")
   final public let shouldCaptureAfterTimeout: Swift.Bool
+  @available(*, deprecated, message: "Will be removed in upcoming versions")
   @objc public var currentStep: Swift.Int
+  @available(*, deprecated, message: "Will be removed in upcoming versions")
   @objc public var totalSteps: Swift.Int
   @objc public var optional: Swift.Bool
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
+  @available(*, deprecated, message: "Will be removed in upcoming versions")
   @objc public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
   @objc deinit
 }
-public struct FaceDetectorNativeFacePositionParameters {
-  public init()
-  public var checkFaceSize: Swift.Bool
-  public var minEyeDistance: CoreFoundation.CGFloat
-  public var maxEyeDistance: CoreFoundation.CGFloat
-  public var minEyePixelDistance: CoreFoundation.CGFloat
-  public var checkFacePosition: Swift.Bool
-  public var minEyeY: CoreFoundation.CGFloat
-  public var maxEyeY: CoreFoundation.CGFloat
-  public var horisontalPadding: CoreFoundation.CGFloat
-  public var verticalPadding: CoreFoundation.CGFloat
-  public var checkFaceAngle: Swift.Bool
-  public var maxEyeRollAngle: CoreFoundation.CGFloat
-  public var maxNoseYaw: CoreFoundation.CGFloat
-  public var maxVisionRotation: Swift.Float
-  public var checkExposition: Swift.Bool
-  public var minLuminosity: Swift.Double
-}
-public struct UtilsCameraInfo {
-  public static var allCameraDeviceTypes: [AVFoundation.AVCaptureDevice.DeviceType] {
-    get
-  }
-  public func cameraSupportResolutionHD4K(forFrontCamera: Swift.Bool = true) -> (fhd: Swift.Bool, res4k: Swift.Bool, cameraType: Swift.String)
-}
 extension BlinkID.MBMrzResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class IDCameraViewController : PingOneVerify.IDCameraControllerBase {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
-    @objc get
-  }
-  @_Concurrency.MainActor @preconcurrency override open var videoPreviewContainer: UIKit.UIView? {
-    get
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var customViewContainer: UIKit.UIView? {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency override open var capturedImage: PingOneVerify.IDImage? {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency override public var faceDetectorSettings: PingOneVerify.FaceDetectorSettings {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency override open var faceCaptureBoundaries: CoreFoundation.CGRect {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency public var bottomBarHeight: CoreFoundation.CGFloat {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
-  @IBAction @_Concurrency.MainActor @preconcurrency @objc override public func captureButtonPressed()
-  @_Concurrency.MainActor @preconcurrency override open func UIModeDidChange(animated: Swift.Bool = true)
-  @_Concurrency.MainActor @preconcurrency open func setButtonState(_ mode: PingOneVerify.IDCameraControllerBase.ViewMode)
-  @_Concurrency.MainActor @preconcurrency override open func reset()
-  @_Concurrency.MainActor @preconcurrency override open func setMessage(_ message: Swift.String?, isError: Swift.Bool = false)
-  @_Concurrency.MainActor @preconcurrency open func setAttributedMessage(_ message: Foundation.NSAttributedString?, isError: Swift.Bool = false)
-  @_Concurrency.MainActor @preconcurrency override open func setFaceResult(_ result: PingOneVerify.FaceDetectorResult, momentary: Swift.Bool = false)
-  @_Concurrency.MainActor @preconcurrency open func messageForFaceResult(_ result: PingOneVerify.FaceDetectorResult) -> Swift.String
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-extension PingOneVerify.IDCameraViewController {
-  @_Concurrency.MainActor @preconcurrency public func setPreviewBlurred(style: UIKit.UIBlurEffect.Style?, animated: Swift.Bool = true)
-  @_Concurrency.MainActor @preconcurrency public var bottomBarHidden: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency public func setBottomBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool = false)
-  @_Concurrency.MainActor @preconcurrency public func useOvalMask(_ useOvalMask: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency public func setBottomBarBackgroundBlurred(_ style: UIKit.UIBlurEffect.Style)
-  @_Concurrency.MainActor @preconcurrency public func setBottomBarBackgroundColor(_ color: UIKit.UIColor)
-  @_Concurrency.MainActor @preconcurrency public func setCustomViewTakesFullScreen(_ fullscreen: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency public func setFaceFrameUnderBottomBar(_ under: Swift.Bool)
 }
 @objc public protocol DocumentCaptureSettingsContract {
   @objc var documentType: PingOneVerify.DocumentClass { get set }
@@ -739,11 +429,12 @@ extension UIKit.UINavigationController {
 extension BlinkID.MBBlinkIdMultiSideRecognizerResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@objc @_Concurrency.MainActor @preconcurrency public class OvalCameraOverlayView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class OvalCameraOverlayView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public var previewRectFrame: CoreFoundation.CGRect?
   @_Concurrency.MainActor @preconcurrency public var overlayBackgroundColor: UIKit.UIColor
   @_Concurrency.MainActor @preconcurrency public var drawOutline: Swift.Bool
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency public func updateOutlineColor(_ newColor: UIKit.UIColor)
   @objc deinit
@@ -761,7 +452,6 @@ public struct DocumentRequirements : Swift.Decodable {
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-public typealias FaceDetectorClosure = (PingOneVerify.IDImage, @escaping (PingOneVerify.FaceDetectorResult) -> Swift.Void) -> Swift.Void
 extension BlinkID.MBDate : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
@@ -843,11 +533,6 @@ extension PingOneVerify.ClientBuilderError.BuilderError : Swift.Equatable {}
 extension PingOneVerify.ClientBuilderError.BuilderError : Swift.Hashable {}
 extension PingOneVerify.DocumentSubmissionStatus : Swift.Equatable {}
 extension PingOneVerify.DocumentSubmissionStatus : Swift.Hashable {}
-extension PingOneVerify.IDCameraControllerBase.PayloadSize : Swift.Equatable {}
-extension PingOneVerify.IDCameraControllerBase.PayloadSize : Swift.Hashable {}
-extension PingOneVerify.IDCameraControllerBase.PhotoCaptureMode : Swift.Equatable {}
-extension PingOneVerify.IDCameraControllerBase.PhotoCaptureMode : Swift.Hashable {}
-extension PingOneVerify.IDCameraControllerBase.PhotoCaptureMode : Swift.RawRepresentable {}
 extension PingOneVerify.DocumentClass : Swift.Hashable {}
 extension PingOneVerify.DocumentStatus : Swift.Equatable {}
 extension PingOneVerify.DocumentStatus : Swift.Hashable {}

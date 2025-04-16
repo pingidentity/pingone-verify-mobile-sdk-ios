@@ -30,6 +30,7 @@
 #import "MBDocumentExpirationCheckResult.h"
 #import "MBDataMatchResult.h"
 #import "MBAdditionalProcessingInfo.h"
+#import "MBDependentInfo.h"
 
 @class MBStringResult;
 
@@ -184,6 +185,21 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBStringResult *issuingAuthority;
 
 /**
+ * The transcription of the document subtype.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *documentSubtype;
+
+/**
+ * The sponsor of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *sponsor;
+
+/**
+ * The blood type of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *bloodType;
+
+/**
  * The data extracted from the machine readable zone
  */
 @property (nonatomic, readonly, nullable) MBMrzResult *mrzResult;
@@ -282,6 +298,61 @@ MB_INIT_UNAVAILABLE
  * side of document that face image is located on if enabled with `MBFaceImage returnFaceImage` property.
  */
 @property (nonatomic, readonly) MBSide faceImageSide;
+
+/**
+ * The remarks on the residence permit.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *remarks;
+
+/**
+ * The residence permit type.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *residencePermitType;
+
+/**
+ * The visa type.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *visaType;
+
+/**
+ * The manufacturing year.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *manufacturingYear;
+
+/**
+ * The eligibility category.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleType;
+
+/**
+ * The manufacturing year..
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *eligibilityCategory;
+
+/**
+ * The specific document validity.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *specificDocumentValidity;
+
+/**
+ * The dependents info.
+ */
+@property (nonatomic, readonly, nullable) NSArray<MBDependentInfo *>* dependentInfos;
+
+/**
+ * The vehicle owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleOwner;
+
+/**
+ * This member indicates whether the barcode scanning step was utilized during the
+ * process.
+ * If the barcode scanning step was executed: a parsable barcode image will be stored in the
+ * `barcodeCameraFrame`.
+ * If the barcode scanning step was not executed: a parsable barcode image will be stored in the
+ * `fullDocumentImage`.
+ */
+@property (nonatomic, readonly) BOOL barcodeStepUsed;
 
 @end
 
