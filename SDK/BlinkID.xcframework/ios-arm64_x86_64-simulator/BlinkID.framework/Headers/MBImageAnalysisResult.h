@@ -32,9 +32,14 @@ MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
 MB_INIT_UNAVAILABLE
 
 /**
- * Whether the image is blurred.
+ * Whether blur is detected on the image.
  */
-@property (nonatomic, readonly, assign) BOOL blurred;
+@property (nonatomic, readonly, assign) BOOL blurDetected;
+
+/**
+ * Whether glare is detected on the image.
+ */
+@property (nonatomic, readonly, assign) BOOL glareDetected;
 
 /**
  * The color status determined from scanned image.
@@ -60,6 +65,11 @@ MB_INIT_UNAVAILABLE
  * Barcode detection status determined from the scanned image.
  */
 @property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus barcodeDetectionStatus;
+
+/**
+ * RealID detection status determined from the scanned image.
+ */
+@property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus realIDDetectionStatus;
 
 /**
  * Orientation determined from the scanned image.

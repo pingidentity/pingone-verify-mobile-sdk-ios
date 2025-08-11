@@ -399,7 +399,15 @@ typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionPara,
     MBRegionParana,
     MBRegionPernambuco,
-    MBRegionSantaCatarina
+    MBRegionSantaCatarina,
+    MBRegionAndhraPradesh,
+    MBRegionCeara,
+    MBRegionGoias,
+    MBRegionGuerreroAcapulcoDeJuarez,
+    MBRegionHaryana,
+    MBRegionSergipe,
+    MBRegionAlagoas,
+    MBRegionBangsamoro
 };
 
 typedef NS_ENUM(NSInteger, MBType) {
@@ -464,7 +472,23 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeUniformedServicesId,
     MBTypeImmigrantVisa,
     MBTypeConsularVoterId,
-    MBTypeTwicCard
+    MBTypeTwicCard,
+    MBTypeExitEntryPermit,
+    MBTypeMainlandTravelPermitTaiwan,
+    MBTypeNbiClearance,
+    MBTypeProofOfRegistration,
+    MBTypeTemporaryProtectionPermit,
+    MBTypeAfghanCitizenCard,
+    MBTypeEId,
+    MBTypePass,
+    MBTypeSisId,
+    MBTypeAsicCard,
+    MBTypeBidoonCard,
+    MBTypeInterimHealthInsuranceCard,
+    MBTypeNonVoterId,
+    MBTypeReciprocalHealthInsuranceCard,
+    MBTypeVehicleRegistration,
+    MBTypeEsaadCard,
 };
 
 #endif /* MBClassInfoTypes_h */
