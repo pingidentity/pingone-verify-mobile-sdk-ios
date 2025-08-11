@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "MBMicroblinkDefines.h"
 #import "MBDriverLicenseDetailedInfo.h"
+#import "MBDependentInfo.h"
 
 @class MBStringResult;
 @class MBDateResult;
@@ -163,6 +164,21 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBStringResult *issuingAuthority;
 
 /**
+ * The transcription of the document subtype.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *documentSubtype;
+
+/**
+ * The sponsor of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *sponsor;
+
+/**
+ * The blood type of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *bloodType;
+
+/**
  * The driver license detailed info.
  */
 @property (nonatomic, readonly, nullable) MBDriverLicenseDetailedInfo *driverLicenseDetailedInfo;
@@ -171,6 +187,51 @@ MB_INIT_UNAVAILABLE
  * Flag that indicates if barcode result is empty
 */
 @property (nonatomic, readonly, assign) BOOL empty;
+
+/**
+ * The remarks on the residence permit.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *remarks;
+
+/**
+ * The residence permit type.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *residencePermitType;
+
+/**
+ * The visa type.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *visaType;
+
+/**
+ * The manufacturing year.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *manufacturingYear;
+
+/**
+ * The eligibility category.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleType;
+
+/**
+ * The manufacturing year..
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *eligibilityCategory;
+
+/**
+ * The specific document validity.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *specificDocumentValidity;
+
+/**
+ * The dependents info.
+ */
+@property (nonatomic, readonly, nullable) NSArray<MBDependentInfo *>* dependentInfos;
+
+/**
+ * The vehicle owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleOwner;
 
 @end
 
