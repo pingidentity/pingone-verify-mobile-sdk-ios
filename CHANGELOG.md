@@ -1,3 +1,10 @@
+## v2.2.0 - May 15th, 2025
+- GeoLocation support implemented
+- Verify Retry support
+- Rate Limiting support
+- New UI screens and various UI imporovements
+- Bug Fixes
+
 ## v2.1.1 - August 7th, 2024
 - Updated vendor SDKs
 - Bug fixes and enhancements
