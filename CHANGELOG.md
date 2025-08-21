@@ -1,4 +1,4 @@
-#Changelog
+# Changelog
 
 ## v2.2.0 - May 15th, 2025
 
