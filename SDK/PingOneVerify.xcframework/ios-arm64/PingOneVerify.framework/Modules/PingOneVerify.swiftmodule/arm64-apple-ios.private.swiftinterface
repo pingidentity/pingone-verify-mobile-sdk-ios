@@ -7,12 +7,14 @@ import AVFoundation
 import Accelerate
 import BlinkID
 import CoreImage
-import CoreLocation
 import CoreMedia
+import CryptoTools
 import DeveloperToolsSupport
 import Foundation
 import GeoLocationProvider
 import IDLiveFaceCamera
+import JoseTools
+import LanguagePackProvider
 import NeoInterfaces
 @_exported import PingOneVerify
 import Swift
@@ -57,6 +59,14 @@ public class CompletionHandler<T> {
   public func onError(_ errorHandler: @escaping (any Swift.Error) -> Swift.Void) -> PingOneVerify.CompletionHandler<T>
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class DocumentModel {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ProviderLicenses : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
 @objc public class PhoneCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
   @objc public var documentType: PingOneVerify.DocumentClass
   @objc public var currentStep: Swift.Int
@@ -69,11 +79,17 @@ public class CompletionHandler<T> {
   public var contentType: UIKit.UITextContentType
   public var regex: Swift.String
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
+  @objc public var isAuthflow: Swift.Bool
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   public func setOtpDestination(otpDestination: Swift.String?)
   public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
   @objc deinit
+}
+public class Authentication : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct IadPayload : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -85,10 +101,15 @@ public struct IadPayload : Swift.Codable {
   public var documentStatus: [Swift.String : PingOneVerify.DocumentStatus]!
   public var documentSubmissionStatus: PingOneVerify.DocumentSubmissionStatus!
   public var geolocation: PingOneVerify.Geolocation?
-  public var retry: PingOneVerify.Retry?
+  public var authentication: PingOneVerify.Authentication?
+  public var osType: Swift.String?
+  public var providerLicenses: PingOneVerify.ProviderLicenses?
+  public var currentStep: PingOneVerify.CurrentStep?
+  public var isAadhaar: Swift.Bool?
   public var createdAt: Swift.String!
   public var updatedAt: Swift.String!
   public var expiresAt: Swift.String!
+  public var s3Upload: PingOneVerify.S3Upload?
   public var iad: PingOneVerify.IadPayload?
   public func encode(to encoder: any Swift.Encoder) throws
   public func getDocument() -> [Swift.String : Swift.String]?
@@ -97,9 +118,18 @@ public struct IadPayload : Swift.Codable {
   public func getCreatedAt() -> Swift.String
   public func getUpdatedAt() -> Swift.String
   public func getExpiresAt() -> Swift.String
+  public func getAuthentication() -> PingOneVerify.Authentication?
+  public func getVerificationSessionId() -> Swift.String
+  public func getProviderLicenses() -> PingOneVerify.ProviderLicenses
+  public func getIsAadhaar() -> Swift.Bool
+  public func getOtpSessions() -> PingOneVerify.OtpSessions?
+  public func getOtpSessionForType(documentType: PingOneVerify.DocumentClass) -> PingOneVerify.OtpSession?
+  public func getCredentialVerificationLinks() -> [Swift.String : Swift.String]
+  public func getCollectionType() -> Swift.String
   public func setDocument(document: [Swift.String : Swift.String])
   public func setDocumentStatus(documentStatus: [Swift.String : PingOneVerify.DocumentStatus])
   public func setDocumentSubmissionStatus(documentSubmissionStatus: PingOneVerify.DocumentSubmissionStatus)
+  public func setIsAadhaar(aadhaar: Swift.Bool)
   @objc override dynamic public init()
   @objc deinit
   required public init(from decoder: any Swift.Decoder) throws
@@ -110,10 +140,6 @@ public struct IadPayload : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 public struct Retry : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct Step : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -175,6 +201,7 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
   public var contentType: UIKit.UITextContentType
   public var regex: Swift.String
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
+  @objc public var isAuthflow: Swift.Bool
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   public func setOtpDestination(otpDestination: Swift.String?)
@@ -193,13 +220,28 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
   @objc func onSubmissionComplete(status: PingOneVerify.DocumentSubmissionStatus)
   @objc func onSubmissionError(error: PingOneVerify.DocumentSubmissionError)
 }
+@_hasMissingDesignatedInitializers public class UserConfirmedField : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
 @objc public class IdCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
   @objc public var documentType: PingOneVerify.DocumentClass
   @objc public var currentStep: Swift.Int
   @objc public var totalSteps: Swift.Int
   @objc public var optional: Swift.Bool
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
+  public var isAadhaar: Swift.Bool
+  public var otpSession: PingOneVerify.OtpSession?
+  public var otpDestination: Swift.String?
+  @objc public var isAuthflow: Swift.Bool
   @objc public init(documentType: PingOneVerify.DocumentClass, optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
+  public func getIsAadhaar() -> Swift.Bool
+  public func setIsAadhaar(isAadhaar: Swift.Bool)
+  public func getOtpSession() -> PingOneVerify.OtpSession?
+  public func setOtpSession(_ otpSession: PingOneVerify.OtpSession?)
+  public func getOtpDestination() -> Swift.String?
+  public func setOtpDestination(_ otpDestination: Swift.String)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class SampleBufferUtils {
@@ -280,11 +322,14 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
     @objc public func setDocumentCaptureSettings(documentCaptureSettings: [any PingOneVerify.DocumentCaptureSettingsContract]) -> PingOneVerify.PingOneVerifyClient.Builder
     @discardableResult
     @objc public func setUIAppearance(_ appearanceSettings: PingOneVerify.UIAppearanceSettings) -> PingOneVerify.PingOneVerifyClient.Builder
+    @discardableResult
+    public func setLanguagePackProvider(languagePackProvider: any NeoInterfaces.LanguagePackProviderContract) -> PingOneVerify.PingOneVerifyClient.Builder
     @objc public func startVerification(onComplete: @escaping (_ pingOneVerifyClient: PingOneVerify.PingOneVerifyClient?, _ error: PingOneVerify.ClientBuilderError?) -> Swift.Void)
     @objc deinit
   }
 }
 @objc public class SelfieCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
+  @objc public var isAuthflow: Swift.Bool
   @objc public var documentType: PingOneVerify.DocumentClass
   @available(*, deprecated, message: "Will be removed in upcoming versions")
   final public let captureTime: Foundation.TimeInterval
@@ -297,8 +342,12 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
   @objc public var optional: Swift.Bool
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
   @available(*, deprecated, message: "Will be removed in upcoming versions")
-  @objc public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
+  @objc public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, isAuthflow: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
   @objc deinit
+}
+public struct S3Upload : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension BlinkID.MBMrzResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -309,6 +358,7 @@ extension BlinkID.MBMrzResult : Swift.Encodable {
   @objc var totalSteps: Swift.Int { get set }
   @objc var optional: Swift.Bool { get set }
   @objc var requirements: (any PingOneVerify.RequirementsProtocol)? { get set }
+  @objc var isAuthflow: Swift.Bool { get set }
 }
 public struct ImageCellContent {
 }
@@ -322,6 +372,8 @@ public struct ImageCellContent {
   case OTP = 6
   case OTHER = 7
   case VOICE = 8
+  case CREDENTIAL = 9
+  case AADHAAR = 10
   public typealias RawValue = Swift.String
   public var iconName: Swift.String {
     get
@@ -357,7 +409,7 @@ extension BlinkID.MBFieldState : Swift.Encodable {
 extension BlinkID.MBVehicleClassInfo : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@_hasMissingDesignatedInitializers @objc public class DocumentSubmissionError : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc public class DocumentSubmissionError : ObjectiveC.NSObject, Swift.Error {
   @objc public var code: Swift.String!
   @objc public var localizedDescription: Swift.String!
   public func getErrorCode() -> Swift.String
@@ -386,7 +438,8 @@ extension BlinkID.MBVehicleClassInfo : Swift.Encodable {
   public var numberOfRecordingsRequired: Swift.Int!
   public var numberOfCompletedRecordings: Swift.Int!
   public var isTextDependent: Swift.Bool
-  public var voicePhrase: PingOneVerify.VoicePhrase?
+  public var voice: PingOneVerify.Voice?
+  @objc public var isAuthflow: Swift.Bool
   @objc public init(optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil, isTextDependent: Swift.Bool = true)
   public func updateFromVerifyTransaction(verifyTransaction: PingOneVerify.VerifyTransaction)
   @objc deinit
@@ -410,6 +463,7 @@ extension UIKit.UINavigationController {
 }
 @_hasMissingDesignatedInitializers @objc public class PingOneVerifyClient : ObjectiveC.NSObject {
   public func pollForVerificationStatus(_ pollingInterval: Foundation.TimeInterval? = nil)
+  public func pollForAadhaarVerification(_ pollingInterval: Foundation.TimeInterval? = nil, otpDestination: Swift.String?)
   public func stopPolling()
   @objc deinit
 }
@@ -420,6 +474,7 @@ extension UIKit.UINavigationController {
   case SUCCESS = 3
   case FAIL = 4
   case OTP_RETRYABLE = 5
+  case OTP_VERIFIED = 6
   public typealias RawValue = Swift.String
   public var rawValue: PingOneVerify.OtpStatus.RawValue {
     get
@@ -446,6 +501,18 @@ extension BlinkID.MBBlinkIdMultiSideRecognizerResult : Swift.Encodable {
 public struct DocumentRequirements : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct CurrentStep : Swift.Codable {
+  public struct OtherData : Swift.Codable {
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct CredentialVerificationLinks : Swift.Codable {
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LabelCell : UIKit.UITableViewCell {
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
@@ -463,6 +530,7 @@ extension Swift.String {
   public func localized(tableName: Swift.String, bundle: Foundation.Bundle?, defaultValue: Swift.String) -> Swift.String
   public func localized(in fileName: Swift.String, with args: any Swift.CVarArg...) -> Swift.String
   public func localized(_ args: any Swift.CVarArg...) -> Swift.String
+  public func extractAndReplaceStrings() -> [Swift.String]
 }
 public struct VerifyTransaction {
 }
@@ -471,6 +539,7 @@ extension UIKit.UIButton {
 }
 extension Foundation.Data {
   public func toString() -> Swift.String
+  public mutating func append(_ string: Swift.String)
 }
 extension Swift.String {
   public func toData() -> Foundation.Data
@@ -481,14 +550,23 @@ public struct OtpSessions : Swift.Decodable {
 public struct OtpSession : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct VoicePhrase : Swift.Decodable {
+public struct Voice : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class VerifyLicenseProvider {
+  convenience public init(response: PingOneVerify.DocumentSubmissionResponse)
+  @objc deinit
 }
 extension PingOneVerify.DocumentCaptureSettingsContract {
   public func updateFromVerifyTransaction(verifyTransaction: PingOneVerify.VerifyTransaction)
 }
 extension BlinkID.MBVizResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
+}
+public class SdkVersions {
+  public init()
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class CameraView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
@@ -515,13 +593,13 @@ public class PollingHelper {
   @objc deinit
 }
 extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.GeoLocationProviderListener {
-  public func onGeoLocationCaptured(locations: [CoreLocation.CLLocation])
-  public func requestFailedWithError(_ error: CoreLocation.CLError?)
+  public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
+  public func requestFailedWithError(_ error: (any Swift.Error)?)
   public func onGeoLocationCaptured(location: [Swift.String : Swift.Double])
 }
 extension PingOneVerify.PingOneVerifyClient.Builder : NeoInterfaces.GeoLocationProviderListener {
-  public func onGeoLocationCaptured(locations: [CoreLocation.CLLocation])
-  public func requestFailedWithError(_ error: CoreLocation.CLError?)
+  public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
+  public func requestFailedWithError(_ error: (any Swift.Error)?)
 }
 public func logLine(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
 public func log(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)

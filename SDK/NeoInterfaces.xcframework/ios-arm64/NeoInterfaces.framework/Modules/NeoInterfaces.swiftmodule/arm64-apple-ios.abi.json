@@ -5,6 +5,85 @@
     "printedName": "NeoInterfaces",
     "children": [
       {
+        "kind": "TypeDecl",
+        "name": "LanguagePackProviderContract",
+        "printedName": "LanguagePackProviderContract",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getStringForkey",
+            "printedName": "getStringForkey(_:bundle:defaultValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces28LanguagePackProviderContractP15getStringForkey_6bundle12defaultValueS2S_So8NSBundleCSgSStF",
+            "mangledName": "$s13NeoInterfaces28LanguagePackProviderContractP15getStringForkey_6bundle12defaultValueS2S_So8NSBundleCSgSStF",
+            "moduleName": "NeoInterfaces",
+            "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.LanguagePackProviderContract>",
+            "sugared_genericSig": "<Self where Self : NeoInterfaces.LanguagePackProviderContract>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13NeoInterfaces28LanguagePackProviderContractP",
+        "mangledName": "$s13NeoInterfaces28LanguagePackProviderContractP",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -13,13 +92,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "NeoInterfaces"
       },
       {
         "kind": "TypeDecl",
@@ -116,22 +188,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[CoreLocation.CLLocation]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CLLocation",
-                    "printedName": "CoreLocation.CLLocation",
-                    "usr": "c:objc(cs)CLLocation"
-                  }
-                ],
-                "usr": "s:Sa"
+                "name": "GeolocationCoordinates",
+                "printedName": "NeoInterfaces.GeolocationCoordinates",
+                "usr": "s:13NeoInterfaces22GeolocationCoordinatesV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13NeoInterfaces27GeoLocationProviderListenerP02oncD8Captured9locationsySaySo10CLLocationCG_tF",
-            "mangledName": "$s13NeoInterfaces27GeoLocationProviderListenerP02oncD8Captured9locationsySaySo10CLLocationCG_tF",
+            "usr": "s:13NeoInterfaces27GeoLocationProviderListenerP02oncD8Captured9locationsyAA22GeolocationCoordinatesV_tF",
+            "mangledName": "$s13NeoInterfaces27GeoLocationProviderListenerP02oncD8Captured9locationsyAA22GeolocationCoordinatesV_tF",
             "moduleName": "NeoInterfaces",
             "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.GeoLocationProviderListener>",
             "sugared_genericSig": "<Self where Self : NeoInterfaces.GeoLocationProviderListener>",
@@ -152,21 +216,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "CoreLocation.CLError?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CLError",
-                    "printedName": "CoreLocation.CLError",
-                    "usr": "s:SC7CLErrorLeV"
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13NeoInterfaces27GeoLocationProviderListenerP22requestFailedWithErroryySC7CLErrorLeVSgF",
-            "mangledName": "$s13NeoInterfaces27GeoLocationProviderListenerP22requestFailedWithErroryySC7CLErrorLeVSgF",
+            "usr": "s:13NeoInterfaces27GeoLocationProviderListenerP22requestFailedWithErroryys0J0_pSgF",
+            "mangledName": "$s13NeoInterfaces27GeoLocationProviderListenerP22requestFailedWithErroryys0J0_pSgF",
             "moduleName": "NeoInterfaces",
             "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.GeoLocationProviderListener>",
             "sugared_genericSig": "<Self where Self : NeoInterfaces.GeoLocationProviderListener>",
@@ -196,6 +260,158 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeolocationCoordinates",
+        "printedName": "GeolocationCoordinates",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "latitude",
+            "printedName": "latitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces22GeolocationCoordinatesV8latitudeSdvp",
+            "mangledName": "$s13NeoInterfaces22GeolocationCoordinatesV8latitudeSdvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces22GeolocationCoordinatesV8latitudeSdvg",
+                "mangledName": "$s13NeoInterfaces22GeolocationCoordinatesV8latitudeSdvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "longitude",
+            "printedName": "longitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces22GeolocationCoordinatesV9longitudeSdvp",
+            "mangledName": "$s13NeoInterfaces22GeolocationCoordinatesV9longitudeSdvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces22GeolocationCoordinatesV9longitudeSdvg",
+                "mangledName": "$s13NeoInterfaces22GeolocationCoordinatesV9longitudeSdvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(latitude:longitude:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationCoordinates",
+                "printedName": "NeoInterfaces.GeolocationCoordinates",
+                "usr": "s:13NeoInterfaces22GeolocationCoordinatesV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces22GeolocationCoordinatesV8latitude9longitudeACSd_Sdtcfc",
+            "mangledName": "$s13NeoInterfaces22GeolocationCoordinatesV8latitude9longitudeACSd_Sdtcfc",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13NeoInterfaces22GeolocationCoordinatesV",
+        "mangledName": "$s13NeoInterfaces22GeolocationCoordinatesV",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       }

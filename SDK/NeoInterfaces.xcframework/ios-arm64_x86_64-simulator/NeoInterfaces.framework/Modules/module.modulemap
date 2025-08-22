@@ -1,6 +1,0 @@
-framework module NeoInterfaces {
-  umbrella header "NeoInterfaces.h"
-  export *
-
-  module * { export * }
-}

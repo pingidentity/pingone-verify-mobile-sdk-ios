@@ -27,6 +27,18 @@
 		635AAB082C7C9BBA0072CEE6 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 635AAB072C7C9BBA0072CEE6 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		635AAB0A2C7C9BCC0072CEE6 /* NeoInterfaces.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 635AAB092C7C9BCC0072CEE6 /* NeoInterfaces.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */; };
+		72E900B32E58C61C0097D323 /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900A82E58C6090097D323 /* CryptoTools.xcframework */; };
+		72E900B42E58C61C0097D323 /* CryptoTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900A82E58C6090097D323 /* CryptoTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72E900B52E58C61E0097D323 /* JOSESwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900A92E58C6090097D323 /* JOSESwift.xcframework */; };
+		72E900B62E58C61E0097D323 /* JOSESwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900A92E58C6090097D323 /* JOSESwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72E900B72E58C61F0097D323 /* JoseTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900AA2E58C6090097D323 /* JoseTools.xcframework */; };
+		72E900B82E58C61F0097D323 /* JoseTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900AA2E58C6090097D323 /* JoseTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72E900B92E58C6200097D323 /* libsecp256k1.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900AB2E58C6090097D323 /* libsecp256k1.xcframework */; };
+		72E900BA2E58C6200097D323 /* libsecp256k1.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900AB2E58C6090097D323 /* libsecp256k1.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72E900BB2E58C6240097D323 /* secp256k1Wrapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900AC2E58C6090097D323 /* secp256k1Wrapper.xcframework */; };
+		72E900BC2E58C6240097D323 /* secp256k1Wrapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900AC2E58C6090097D323 /* secp256k1Wrapper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72E900BF2E58C6C60097D323 /* LanguagePackProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900BD2E58C6A30097D323 /* LanguagePackProvider.xcframework */; };
+		72E900C02E58C6C60097D323 /* LanguagePackProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72E900BD2E58C6A30097D323 /* LanguagePackProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		884BAEF22AEC48D9002C6827 /* PingOneVerifyLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -37,13 +49,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				72E900BC2E58C6240097D323 /* secp256k1Wrapper.xcframework in Embed Frameworks */,
 				63263A6C2D9FFCAC0013803A /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
+				72E900B82E58C61F0097D323 /* JoseTools.xcframework in Embed Frameworks */,
 				63263A6D2D9FFCAC0013803A /* IDLiveFaceDetection.xcframework in Embed Frameworks */,
+				72E900C02E58C6C60097D323 /* LanguagePackProvider.xcframework in Embed Frameworks */,
 				634C96902CA5758E00E8D732 /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
 				635AAB0A2C7C9BCC0072CEE6 /* NeoInterfaces.xcframework in Embed Frameworks */,
+				72E900B42E58C61C0097D323 /* CryptoTools.xcframework in Embed Frameworks */,
 				635AAB082C7C9BBA0072CEE6 /* GeoLocationProvider.xcframework in Embed Frameworks */,
+				72E900B62E58C61E0097D323 /* JOSESwift.xcframework in Embed Frameworks */,
 				1C0E148C2AEC70CF00B4B02B /* PingOneVerify.xcframework in Embed Frameworks */,
 				1C0E14882AEC70CF00B4B02B /* BlinkID.xcframework in Embed Frameworks */,
+				72E900BA2E58C6200097D323 /* libsecp256k1.xcframework in Embed Frameworks */,
 				1C0E148A2AEC70CF00B4B02B /* VoiceSdk.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -62,12 +80,18 @@
 		1C42537C2909C179008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C42537E2909C179008E871B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4253852909C286008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		63263A6A2D9FFCAC0013803A /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IDLiveFaceCamera.xcframework; path = ../../SDK/IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
-		63263A6B2D9FFCAC0013803A /* IDLiveFaceDetection.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IDLiveFaceDetection.xcframework; path = ../../SDK/IDLiveFaceDetection.xcframework; sourceTree = "<group>"; };
-		634C968D2CA5758E00E8D732 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IDLiveFaceIAD.xcframework; path = ../../SDK/IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
+		63263A6A2D9FFCAC0013803A /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; name = IDLiveFaceCamera.xcframework; path = ../../SDK/IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
+		63263A6B2D9FFCAC0013803A /* IDLiveFaceDetection.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; name = IDLiveFaceDetection.xcframework; path = ../../SDK/IDLiveFaceDetection.xcframework; sourceTree = "<group>"; };
+		634C968D2CA5758E00E8D732 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; name = IDLiveFaceIAD.xcframework; path = ../../SDK/IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
 		635AAB072C7C9BBA0072CEE6 /* GeoLocationProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GeoLocationProvider.xcframework; path = ../../SDK/GeoLocationProvider.xcframework; sourceTree = "<group>"; };
 		635AAB092C7C9BCC0072CEE6 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NeoInterfaces.xcframework; path = ../../SDK/NeoInterfaces.xcframework; sourceTree = "<group>"; };
 		63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		72E900A82E58C6090097D323 /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoTools.xcframework; sourceTree = "<group>"; };
+		72E900A92E58C6090097D323 /* JOSESwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JOSESwift.xcframework; sourceTree = "<group>"; };
+		72E900AA2E58C6090097D323 /* JoseTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JoseTools.xcframework; sourceTree = "<group>"; };
+		72E900AB2E58C6090097D323 /* libsecp256k1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libsecp256k1.xcframework; sourceTree = "<group>"; };
+		72E900AC2E58C6090097D323 /* secp256k1Wrapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = secp256k1Wrapper.xcframework; sourceTree = "<group>"; };
+		72E900BD2E58C6A30097D323 /* LanguagePackProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LanguagePackProvider.xcframework; path = "/Users/kdevipriya/dev/TestNew/pingone-verify-mobile-sdk-ios/SDK/LanguagePackProvider.xcframework"; sourceTree = "<absolute>"; };
 		884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = PingOneVerifyLocalizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,11 +100,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E900B52E58C61E0097D323 /* JOSESwift.xcframework in Frameworks */,
+				72E900B72E58C61F0097D323 /* JoseTools.xcframework in Frameworks */,
+				72E900BF2E58C6C60097D323 /* LanguagePackProvider.xcframework in Frameworks */,
+				72E900BB2E58C6240097D323 /* secp256k1Wrapper.xcframework in Frameworks */,
+				72E900B92E58C6200097D323 /* libsecp256k1.xcframework in Frameworks */,
 				634C968F2CA5758E00E8D732 /* IDLiveFaceIAD.xcframework in Frameworks */,
 				630BC4762C87597800291BE8 /* GeoLocationProvider.xcframework in Frameworks */,
 				630BC4772C87597800291BE8 /* NeoInterfaces.xcframework in Frameworks */,
 				1C0E148B2AEC70CF00B4B02B /* PingOneVerify.xcframework in Frameworks */,
 				1C0E14872AEC70CF00B4B02B /* BlinkID.xcframework in Frameworks */,
+				72E900B32E58C61C0097D323 /* CryptoTools.xcframework in Frameworks */,
 				1C0E14892AEC70CF00B4B02B /* VoiceSdk.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +153,8 @@
 		1C4253872909C2A2008E871B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72E900AD2E58C6090097D323 /* Common */,
+				72E900BD2E58C6A30097D323 /* LanguagePackProvider.xcframework */,
 				63263A6A2D9FFCAC0013803A /* IDLiveFaceCamera.xcframework */,
 				63263A6B2D9FFCAC0013803A /* IDLiveFaceDetection.xcframework */,
 				634C968D2CA5758E00E8D732 /* IDLiveFaceIAD.xcframework */,
@@ -134,6 +166,19 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		72E900AD2E58C6090097D323 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				72E900A82E58C6090097D323 /* CryptoTools.xcframework */,
+				72E900A92E58C6090097D323 /* JOSESwift.xcframework */,
+				72E900AA2E58C6090097D323 /* JoseTools.xcframework */,
+				72E900AB2E58C6090097D323 /* libsecp256k1.xcframework */,
+				72E900AC2E58C6090097D323 /* secp256k1Wrapper.xcframework */,
+			);
+			name = Common;
+			path = "/Users/kdevipriya/dev/TestNew/pingone-verify-mobile-sdk-ios/SDK/Common";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 

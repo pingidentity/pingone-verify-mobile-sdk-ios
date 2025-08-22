@@ -1,0 +1,11 @@
+framework module JoseTools {
+  umbrella header "JoseTools.h"
+  export *
+
+  module * { export * }
+}
+
+module JoseTools.Swift {
+  header "JoseTools-Swift.h"
+  requires objc
+}
