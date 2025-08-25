@@ -11,10 +11,8 @@ import UIKit
 class CompletedViewController: UIViewController {
 
     
-    @IBOutlet weak var closeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.closeButton.layer.cornerRadius = 8
     }
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {

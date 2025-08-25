@@ -1,8 +1,9 @@
 //
 //  CompletedViewController.swift
-//  PingOneVerify_iOS_TestHostApp
+//  PingOne Verify
 //
-//  Created by Caleb Cho on 9/7/22.
+//  Created by Ping Identity on 10/26/22.
+//  Copyright © 2025 Ping Identity. All rights reserved.
 //
 
 import UIKit

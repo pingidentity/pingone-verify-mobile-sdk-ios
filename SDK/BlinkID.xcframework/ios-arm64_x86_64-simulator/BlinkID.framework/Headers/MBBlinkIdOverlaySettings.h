@@ -50,6 +50,12 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 @property(nonatomic, strong) NSString *firstSideInstructionsText;
 
 /**
+* Message that is shown while scanning back side of the document.
+* Default: Scan the back side of a document
+*/
+@property(nonatomic, strong) NSString *backSideInstructionsText;
+
+/**
 * Message that is shown after fornt side of the USDL document is scanned.
 * Default: Scan the barcode
 */
@@ -61,6 +67,48 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 * Default: Flip the card
 */
 @property(nonatomic, strong) NSString *flipInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on top
+*/
+@property(nonatomic, strong) NSString *turnTopPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on left
+*/
+@property(nonatomic, strong) NSString *turnLeftPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on right
+*/
+@property(nonatomic, strong) NSString *turnRightPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on top
+*/
+@property(nonatomic, strong) NSString *scanTopPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on left
+*/
+@property(nonatomic, strong) NSString *scanLeftPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on right
+*/
+@property(nonatomic, strong) NSString *scanRightPageInstructions;
 
 /**
 * Instructions for the user to move the document closer.
@@ -145,7 +193,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 /**
 * If YES and number of missing mandatory fields is <= 2, names of missing mandatory fields will be present in the message.
 *
-* Default: YES
+* Default: NO
 */
 @property(nonatomic, assign) BOOL defineSpecificMissingMandatoryFields;
 
@@ -163,9 +211,57 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 
 /**
 * Defines whether tutorial alert will be presented on appear.
-* Default: YES
+* Default: NO
 */
 @property(nonatomic, assign) BOOL showIntroductionDialog;
+
+/**
+* Instructions for the user to avoid glare.
+* Default: Tilt or move document to remove reflection
+*/
+@property(nonatomic, strong) NSString *glareDetectedMessage;
+
+/**
+* Instructions for the user to avoid blur.
+* Default: Keep document and phone still
+*/
+@property(nonatomic, strong) NSString *blurDetectedMessage;
+
+/**
+* Instructions for the user when face image is missing.
+* Default: Keep face photo fully visible
+*/
+@property(nonatomic, strong) NSString *faceImageMissingMessage;
+
+/**
+* Instructions for the user when other side is awaiting scanning.
+* Default: Flip the document
+*/
+@property(nonatomic, strong) NSString *awaitingOtherSideMessage;
+
+/**
+* Instructions for the user when wrong side is being scanned.
+* Default: Flip the document
+*/
+@property(nonatomic, strong) NSString *scanningWrongSideMessage;
+
+/**
+* Instructions for the user when wrong side of passport is being scanned.
+* Default: Move to the top
+*/
+@property(nonatomic, strong) NSString *scanningWrongSidePassportTopMessage;
+
+/**
+* Instructions for the user when wrong side of passport is being scanned.
+* Default: Move to the right
+*/
+@property(nonatomic, strong) NSString *scanningWrongSidePassportRightMessage;
+
+/**
+* Instructions for the user when wrong side of passport is being scanned.
+* Default: Move to the left
+*/
+@property(nonatomic, strong) NSString *scanningWrongSidePassportLeftMessage;
 
 /**
  * Designated initializer. Initializes the object with default settings.
