@@ -3317,6 +3317,46 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9JoseTools12JWEDecrypterV25jweKeyManagementAlgorithm0d17ContentEncryptionG0017decryptionPrivateE0ACSS_SSSo03SecE3RefatKcfc",
+            "mangledName": "$s9JoseTools12JWEDecrypterV25jweKeyManagementAlgorithm0d17ContentEncryptionG0017decryptionPrivateE0ACSS_SSSo03SecE3RefatKcfc",
+            "moduleName": "JoseTools",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(jweKeyManagementAlgorithm:jweContentEncryptionAlgorithm:decryptionPrivateKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JWEDecrypter",
+                "printedName": "JoseTools.JWEDecrypter",
+                "usr": "s:9JoseTools12JWEDecrypterV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "JsonWebKey",
                 "printedName": "JoseTools.JsonWebKey",
                 "usr": "s:9JoseTools10JsonWebKeyV"
@@ -6524,6 +6564,61 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "SecKey",
+                "printedName": "Security.SecKey",
+                "usr": "c:@T@SecKeyRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9JoseTools12JWEEncrypterV25jweKeyManagementAlgorithm0d17ContentEncryptionG0016encryptionPublicE05keyIdACSS_SSSo03SecE3RefaSSSgtKcfc",
+            "mangledName": "$s9JoseTools12JWEEncrypterV25jweKeyManagementAlgorithm0d17ContentEncryptionG0016encryptionPublicE05keyIdACSS_SSSo03SecE3RefaSSSgtKcfc",
+            "moduleName": "JoseTools",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(jweKeyManagementAlgorithm:jweContentEncryptionAlgorithm:encryptionPublicKey:keyId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "JWEEncrypter",
+                "printedName": "JoseTools.JWEEncrypter",
+                "usr": "s:9JoseTools12JWEEncrypterV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "JsonWebKey",
                 "printedName": "JoseTools.JsonWebKey",
                 "usr": "s:9JoseTools10JsonWebKeyV"
@@ -8146,289 +8241,289 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEHelper.swift",
       "kind": "StringLiteral",
       "offset": 225,
       "length": 14,
       "value": "\"RSA-OAEP-256\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEHelper.swift",
       "kind": "StringLiteral",
       "offset": 307,
       "length": 15,
       "value": "\"A128CBC-HS256\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
       "kind": "StringLiteral",
       "offset": 1303,
       "length": 14,
       "value": "\"Content-type\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
       "kind": "StringLiteral",
       "offset": 1367,
       "length": 33,
       "value": "\"application\/json; charset=UTF-8\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
       "kind": "StringLiteral",
       "offset": 1456,
       "length": 35,
       "value": "\"application\/x-www-form-urlencoded\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
       "kind": "StringLiteral",
       "offset": 1541,
       "length": 41,
       "value": "\"application\/jwk-set+json; charset=UTF-8\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
       "kind": "StringLiteral",
       "offset": 1631,
       "length": 32,
       "value": "\"application\/jwt; charset=UTF-8\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/RequestHelper.swift",
       "kind": "StringLiteral",
       "offset": 1719,
       "length": 27,
       "value": "\"text\/plain; charset=UTF-8\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWK\/JsonWebKeySet.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWK\/JsonWebKeySet.swift",
       "kind": "Array",
       "offset": 206,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "Dictionary",
       "offset": 185,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4322,
       "length": 5,
       "value": "\"iss\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4369,
       "length": 5,
       "value": "\"sub\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4417,
       "length": 5,
       "value": "\"aud\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4472,
       "length": 5,
       "value": "\"exp\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4522,
       "length": 5,
       "value": "\"nbf\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4571,
       "length": 5,
       "value": "\"iat\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4617,
       "length": 5,
       "value": "\"jti\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWT\/JWTClaims.swift",
       "kind": "StringLiteral",
       "offset": 4683,
       "length": 5,
       "value": "\"typ\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 174,
       "length": 5,
       "value": "\"use\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 216,
       "length": 5,
       "value": "\"kty\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 258,
       "length": 5,
       "value": "\"kid\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 300,
       "length": 5,
       "value": "\"alg\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 340,
       "length": 3,
       "value": "\"e\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 395,
       "length": 5,
       "value": "\"sig\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 420,
       "length": 5,
       "value": "\"enc\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 449,
       "length": 9,
       "value": "\"sig_enc\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 512,
       "length": 5,
       "value": "\"RSA\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "StringLiteral",
       "offset": 532,
       "length": 4,
       "value": "\"EC\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/Utils.swift",
       "kind": "Dictionary",
       "offset": 3539,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWS\/JWSHelper.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWS\/JWSHelper.swift",
       "kind": "StringLiteral",
       "offset": 193,
       "length": 7,
       "value": "\"RS256\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "StringLiteral",
       "offset": 213,
       "length": 3,
       "value": "\".\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 263,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 307,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 353,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 401,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 450,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 507,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 554,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JsonWebStructure.swift",
       "kind": "IntegerLiteral",
       "offset": 608,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEEncrypter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEEncrypter.swift",
       "kind": "BooleanLiteral",
-      "offset": 2090,
+      "offset": 2715,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Wallet\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEEncrypter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Wallet BackUp\/pingone-wallet-ios\/PingOneWallet\/JoseTools\/JWE\/JWEEncrypter.swift",
       "kind": "BooleanLiteral",
-      "offset": 2342,
+      "offset": 2967,
       "length": 5,
       "value": "false"
     }

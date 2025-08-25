@@ -134,6 +134,7 @@ extension JOSESwift.JWSHeader {
 }
 public struct JWEDecrypter {
   public init(jwk: JoseTools.JsonWebKey) throws
+  public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, decryptionPrivateKey: Security.SecKey) throws
   public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, decryptionPrivateKey: JoseTools.JsonWebKey) throws
   public func decryptJWE(jweString: Swift.String) throws -> Foundation.Data
   public func decryptJWE(jweData: Foundation.Data) throws -> Foundation.Data
@@ -252,6 +253,7 @@ public struct JsonWebStructure {
 }
 public struct JWEEncrypter {
   public init(jwk: JoseTools.JsonWebKey) throws
+  public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, encryptionPublicKey: Security.SecKey, keyId: Swift.String? = nil) throws
   public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, encryptionPublicKey: JoseTools.JsonWebKey, keyId: Swift.String? = nil) throws
   public func encryptJWT(_ message: Foundation.Data, headerParams: [Swift.String : Swift.String]? = nil, isNested: Swift.Bool = false) throws -> Foundation.Data
 }
