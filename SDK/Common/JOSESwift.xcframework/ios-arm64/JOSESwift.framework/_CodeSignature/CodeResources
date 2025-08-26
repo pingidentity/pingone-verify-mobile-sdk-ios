@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/JOSESwift.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		qW9DNwi8UxWYqws2LNR73fZNEDs=
+		XKaGvu8HkWj7PJ6NBAQQW/qkMlw=
 		</data>
 		<key>Modules/JOSESwift.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/JOSESwift.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ce/tPyEGtrWfB2W1YDIs/rx7HcE=
+		cG8ITnAaovHKipUvWUt5/swKSC8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,7 +61,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dmNCywPMyUubG47YUxaAg3djAJE6qWMvO+hQGv6OsEE=
+			wpkGa61x9QpszhMEXUv18uzvrzaiKTjOf22xAxMmHHY=
 			</data>
 		</dict>
 		<key>Modules/JOSESwift.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			prP3UjzjDRxPffeiw+/gkKf+ysI4LAlpOwNpZqgg0gk=
+			Uw65fqdSuwQYI6qUFrYa5eHdoMsCmAB3pagCVpYWNq8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
