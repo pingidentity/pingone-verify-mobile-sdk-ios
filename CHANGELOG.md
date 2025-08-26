@@ -4,13 +4,13 @@
 
 ### Added
 
-- Language Pack Support
-- Selfie Authentication
-- S3 Upload
-- Aadhaar Verification
-- Changes to logic in how verification steps are handled
+- Localization support through PingOne
+- Strengthened security for document uploads
+- Support for Aadhaar Verification
+- Improvements to support backend driven flows
+- Support for selfie authentication mode
 
 ### Fixed
 
-- UI defects
-- Other minor bugs 
+- Minor changes to improve UI/UX
+- Defects related to verification flows
