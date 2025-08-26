@@ -45,7 +45,7 @@ Add the dependencies needed for your application.
 The PingOne Verify iOS SDK relies on XCFramework components. You'll need to add these to Xcode for use by your application.
 
 
-1. Drag and drop the following components from the `SDK` folder to the section `Frameworks`, `Libraries`, and `Embedded Content` in Xcode:
+1. Drag and drop the following components from the `SDK/Verify` folder to the section `Frameworks`, `Libraries`, and `Embedded Content` in Xcode:
 
 
     * PingOneVerify.xcframework
@@ -53,8 +53,38 @@ The PingOne Verify iOS SDK relies on XCFramework components. You'll need to add 
     * BlinkID.xcframework
     
     * VoiceSdk.xcframework
+    
+    * NeoInterfaces.xcframework
+    
+    * LanguagePackProvider.xcframework
+    
+    * IDLiveFaceIAD.xcframework
+    
+    * IDLiveFaceDetection.xcframework
+    
+    * IDLiveFaceCamera.xcframework
+    
+    * GeoLocationProvider.xcframework
+    
 2. Right click from your project folder and select **Add Files to (your project name)**.
 
+## ⚠️ IMPORTANT: Using Wallet and Verify SDKs in the Same Application
+
+When integrating both the Wallet SDK and Verify SDK into a single application, note that they share common dependencies located in the SDK/Common directory. These shared modules contain utilities and components required by both SDKs.
+
+### Dependencies Configuration
+
+- If using **only the Wallet SDK** → include `Wallet/SDK/Common`
+- If using **only the Verify SDK** → include `Verify/SDK/Common`
+- If using **both Wallet and Verify** → include inly once instance of `SDK/Common` (preferably from `Wallet/SDK/Common`)
+
+** ⚠️ DO NOT INCLUDE BOTH `Wallet/SDK/Common` & `Verify/SDK/Common` in your project**
+
+Including multiple copies of SDK/Common can result in:
+
+  - Build time errors (e.g. duplicate symbols)
+  - Runtime crashes due to conflicting modules
+  - Increased binary size due to unnecessary duplication
 
 3. Add `import PingOneVerify` to the top of the Swift file where the SDK is initialized
 
