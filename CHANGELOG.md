@@ -1,17 +1,16 @@
 # Changelog
 
-## v2.2.0 - May 15th, 2025
+## v2.3.0 - August 25th, 2025
 
 ### Added
 
-- GeoLocation support implemented
-- Verify Retry support
-- Rate Limiting support
-- New UI screens and various UI improvements
+- Language Pack Support
+- Selfie Authentication
+- S3 Upload
+- Aadhaar Verification
+- Changes to logic in how verification steps are handled
 
 ### Fixed
 
-- Error handling
 - UI defects
-- AppTheme issues
 - Other minor bugs 
