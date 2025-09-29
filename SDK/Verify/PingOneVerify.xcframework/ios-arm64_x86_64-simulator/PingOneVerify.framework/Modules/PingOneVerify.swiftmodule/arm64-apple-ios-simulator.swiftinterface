@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PingOneVerify
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PingOneVerify
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AVFAudio
 import AVFoundation
 import Accelerate
@@ -45,7 +45,9 @@ import _SwiftConcurrencyShims
   @_Concurrency.MainActor @preconcurrency public var previewRectFrame: CoreFoundation.CGRect?
   @_Concurrency.MainActor @preconcurrency public var overlayBackgroundColor: UIKit.UIColor
   @_Concurrency.MainActor @preconcurrency public var drawOutline: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
   @objc deinit
 }
@@ -80,10 +82,18 @@ public class CompletionHandler<T> {
   public var regex: Swift.String
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
   @objc public var isAuthflow: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setOtpDestination(otpDestination: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
+  #endif
   @objc deinit
 }
 public class Authentication : Swift.Codable {
@@ -112,18 +122,26 @@ public struct IadPayload : Swift.Codable {
   public var s3Upload: PingOneVerify.S3Upload?
   public var iad: PingOneVerify.IadPayload?
   public func encode(to encoder: any Swift.Encoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getDocument() -> [Swift.String : Swift.String]?
+  #endif
   public func getDocumentStatus() -> [Swift.String : PingOneVerify.DocumentStatus]
   public func getDocumentSubmissionStatus() -> PingOneVerify.DocumentSubmissionStatus
   public func getCreatedAt() -> Swift.String
   public func getUpdatedAt() -> Swift.String
   public func getExpiresAt() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getAuthentication() -> PingOneVerify.Authentication?
+  #endif
   public func getVerificationSessionId() -> Swift.String
   public func getProviderLicenses() -> PingOneVerify.ProviderLicenses
   public func getIsAadhaar() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getOtpSessions() -> PingOneVerify.OtpSessions?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getOtpSessionForType(documentType: PingOneVerify.DocumentClass) -> PingOneVerify.OtpSession?
+  #endif
   public func getCredentialVerificationLinks() -> [Swift.String : Swift.String]
   public func getCollectionType() -> Swift.String
   public func setDocument(document: [Swift.String : Swift.String])
@@ -167,6 +185,9 @@ public class NoRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodabl
   @objc public func setNavigationBarTextColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
   @objc public func setSolidButtonAppearance(_ buttonAppearance: PingOneVerify.ButtonAppearance) -> PingOneVerify.UIAppearanceSettings
   @objc public func setBorderedButtonAppearance(_ buttonAppearance: PingOneVerify.ButtonAppearance) -> PingOneVerify.UIAppearanceSettings
+  @objc public func setAttributedStrings(_ attributedStrings: [Swift.String : Foundation.NSAttributedString]) -> PingOneVerify.UIAppearanceSettings
+  @objc public func showSessionExpiresTimer(_ isTimerShown: Swift.Bool) -> PingOneVerify.UIAppearanceSettings
+  @objc public func setNavigationTitle(_ text: Foundation.NSAttributedString) -> PingOneVerify.UIAppearanceSettings
   @objc override dynamic public init()
   @objc deinit
 }
@@ -182,7 +203,9 @@ extension BlinkID.MBBarcodeDriverLicenseDetailedInfo : Swift.Encodable {
   public var rawValue: PingOneVerify.DocumentSubmissionStatus.RawValue {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: PingOneVerify.DocumentSubmissionStatus.RawValue)
+  #endif
 }
 public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodable {
   @objc public var requirementsValue: PingOneVerify.Requirements
@@ -202,17 +225,27 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
   public var regex: Swift.String
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
   @objc public var isAuthflow: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setOtpDestination(otpDestination: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class CenterTextLayer : QuartzCore.CATextLayer {
   @objc override dynamic public func draw(in ctx: CoreGraphics.CGContext)
   @objc override dynamic public init()
   @objc override dynamic public init(layer: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @objc public protocol DocumentSubmissionListener {
@@ -235,44 +268,76 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
   public var otpSession: PingOneVerify.OtpSession?
   public var otpDestination: Swift.String?
   @objc public var isAuthflow: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(documentType: PingOneVerify.DocumentClass, optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
+  #endif
   public func getIsAadhaar() -> Swift.Bool
   public func setIsAadhaar(isAadhaar: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getOtpSession() -> PingOneVerify.OtpSession?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setOtpSession(_ otpSession: PingOneVerify.OtpSession?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getOtpDestination() -> Swift.String?
+  #endif
   public func setOtpDestination(_ otpDestination: Swift.String)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class SampleBufferUtils {
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getCroppedSmapleBuffer(context: CoreImage.CIContext, sampleBuffer: CoreMedia.CMSampleBuffer, for previewLayer: AVFoundation.AVCaptureVideoPreviewLayer?) -> CoreMedia.CMSampleBuffer?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open class func getSampleBufferFromUIImage(image: UIKit.UIImage) -> CoreMedia.CMSampleBuffer?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open class func getUIImageFromSampleBuffer(context: CoreImage.CIContext, sampleBuffer: CoreMedia.CMSampleBuffer, for previewLayer: AVFoundation.AVCaptureVideoPreviewLayer? = nil) -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open class func getImageFromSampleBuffer(context: CoreImage.CIContext, sampleBuffer: CoreMedia.CMSampleBuffer) -> UIKit.UIImage?
+  #endif
   @objc deinit
 }
 extension BlinkID.MBStringResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VerifyButton : UIKit.UIButton {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency dynamic public var titleFont: UIKit.UIFont? {
     @objc get
     @objc set(font)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency dynamic public var cornerRadius: Foundation.NSNumber? {
     @objc get
     @objc set(radius)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency dynamic public var fontColor: UIKit.UIColor? {
     @objc get
     @objc set(color)
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func setTitle(_ title: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setTitle(_ title: Swift.String?, for state: UIKit.UIControl.State)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func setTextColor(_ color: UIKit.UIColor?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public struct LabelCellContent {
@@ -324,7 +389,9 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
     @objc public func setUIAppearance(_ appearanceSettings: PingOneVerify.UIAppearanceSettings) -> PingOneVerify.PingOneVerifyClient.Builder
     @discardableResult
     public func setLanguagePackProvider(languagePackProvider: any NeoInterfaces.LanguagePackProviderContract) -> PingOneVerify.PingOneVerifyClient.Builder
+    #if compiler(>=5.3) && $NonescapableTypes
     @objc public func startVerification(onComplete: @escaping (_ pingOneVerifyClient: PingOneVerify.PingOneVerifyClient?, _ error: PingOneVerify.ClientBuilderError?) -> Swift.Void)
+    #endif
     @objc deinit
   }
 }
@@ -341,8 +408,10 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
   @objc public var totalSteps: Swift.Int
   @objc public var optional: Swift.Bool
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Will be removed in upcoming versions")
   @objc public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, isAuthflow: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
+  #endif
   @objc deinit
 }
 public struct S3Upload : Swift.Codable {
@@ -357,7 +426,9 @@ extension BlinkID.MBMrzResult : Swift.Encodable {
   @objc var currentStep: Swift.Int { get set }
   @objc var totalSteps: Swift.Int { get set }
   @objc var optional: Swift.Bool { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var requirements: (any PingOneVerify.RequirementsProtocol)? { get set }
+  #endif
   @objc var isAuthflow: Swift.Bool { get set }
 }
 public struct ImageCellContent {
@@ -381,7 +452,9 @@ public struct ImageCellContent {
   public var rawValue: PingOneVerify.DocumentClass.RawValue {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: PingOneVerify.DocumentClass.RawValue)
+  #endif
   public typealias AllCases = [PingOneVerify.DocumentClass]
   nonisolated public static var allCases: [PingOneVerify.DocumentClass] {
     get
@@ -426,7 +499,9 @@ extension BlinkID.MBVehicleClassInfo : Swift.Encodable {
   public var rawValue: PingOneVerify.DocumentStatus.RawValue {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: PingOneVerify.DocumentStatus.RawValue)
+  #endif
 }
 @objc public class VoiceCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
   @objc public var documentType: PingOneVerify.DocumentClass
@@ -440,7 +515,9 @@ extension BlinkID.MBVehicleClassInfo : Swift.Encodable {
   public var isTextDependent: Swift.Bool
   public var voice: PingOneVerify.Voice?
   @objc public var isAuthflow: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil, isTextDependent: Swift.Bool = true)
+  #endif
   public func updateFromVerifyTransaction(verifyTransaction: PingOneVerify.VerifyTransaction)
   @objc deinit
 }
@@ -462,8 +539,12 @@ extension UIKit.UINavigationController {
   required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class PingOneVerifyClient : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func pollForVerificationStatus(_ pollingInterval: Foundation.TimeInterval? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func pollForAadhaarVerification(_ pollingInterval: Foundation.TimeInterval? = nil, otpDestination: Swift.String?)
+  #endif
   public func stopPolling()
   @objc deinit
 }
@@ -479,7 +560,9 @@ extension UIKit.UINavigationController {
   public var rawValue: PingOneVerify.OtpStatus.RawValue {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: PingOneVerify.OtpStatus.RawValue)
+  #endif
 }
 extension BlinkID.MBBlinkIdMultiSideRecognizerResult : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -488,7 +571,9 @@ extension BlinkID.MBBlinkIdMultiSideRecognizerResult : Swift.Encodable {
   @_Concurrency.MainActor @preconcurrency public var previewRectFrame: CoreFoundation.CGRect?
   @_Concurrency.MainActor @preconcurrency public var overlayBackgroundColor: UIKit.UIColor
   @_Concurrency.MainActor @preconcurrency public var drawOutline: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency public func updateOutlineColor(_ newColor: UIKit.UIColor)
@@ -514,9 +599,13 @@ public struct CurrentStep : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LabelCell : UIKit.UITableViewCell {
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 3.0, *)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension BlinkID.MBDate : Swift.Encodable {
@@ -527,7 +616,9 @@ extension Swift.String {
     get
   }
   public func localized(in fileName: Swift.String) -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public func localized(tableName: Swift.String, bundle: Foundation.Bundle?, defaultValue: Swift.String) -> Swift.String
+  #endif
   public func localized(in fileName: Swift.String, with args: any Swift.CVarArg...) -> Swift.String
   public func localized(_ args: any Swift.CVarArg...) -> Swift.String
   public func extractAndReplaceStrings() -> [Swift.String]
@@ -571,7 +662,9 @@ public class SdkVersions {
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class CameraView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 extension Swift.Double {
@@ -594,12 +687,16 @@ public class PollingHelper {
 }
 extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.GeoLocationProviderListener {
   public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func requestFailedWithError(_ error: (any Swift.Error)?)
+  #endif
   public func onGeoLocationCaptured(location: [Swift.String : Swift.Double])
 }
 extension PingOneVerify.PingOneVerifyClient.Builder : NeoInterfaces.GeoLocationProviderListener {
   public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func requestFailedWithError(_ error: (any Swift.Error)?)
+  #endif
 }
 public func logLine(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
 public func log(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
