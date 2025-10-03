@@ -1,0 +1,11 @@
+framework module CryptoTools {
+  umbrella header "CryptoTools.h"
+  export *
+
+  module * { export * }
+}
+
+module CryptoTools.Swift {
+  header "CryptoTools-Swift.h"
+  requires objc
+}
