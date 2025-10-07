@@ -1,0 +1,6 @@
+framework module LanguagePackProvider {
+  umbrella header "LanguagePackProvider.h"
+  export *
+
+  module * { export * }
+}
