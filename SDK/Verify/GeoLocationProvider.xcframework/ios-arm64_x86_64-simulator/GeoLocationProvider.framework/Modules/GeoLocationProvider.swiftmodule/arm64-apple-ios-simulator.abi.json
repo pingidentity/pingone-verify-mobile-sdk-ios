@@ -1,0 +1,307 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "GeoLocationProvider",
+    "printedName": "GeoLocationProvider",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GeoLocationProvider",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "GeoLocationProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "NeoInterfaces",
+        "printedName": "NeoInterfaces",
+        "declKind": "Import",
+        "moduleName": "GeoLocationProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeoLocationProviders",
+        "printedName": "GeoLocationProviders",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(listener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationProviders",
+                "printedName": "GeoLocationProvider.GeoLocationProviders",
+                "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationProviderListener",
+                "printedName": "any NeoInterfaces.GeoLocationProviderListener",
+                "usr": "s:13NeoInterfaces27GeoLocationProviderListenerP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfc",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfc",
+            "moduleName": "GeoLocationProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationProviders",
+                "printedName": "GeoLocationProvider.GeoLocationProviders",
+                "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders(im)init",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersCACycfc",
+            "moduleName": "GeoLocationProvider",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "locationManager",
+            "printedName": "locationManager(_:didUpdateLocations:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CLLocationManager",
+                "printedName": "CoreLocation.CLLocationManager",
+                "usr": "c:objc(cs)CLLocationManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CoreLocation.CLLocation]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CLLocation",
+                    "printedName": "CoreLocation.CLLocation",
+                    "usr": "c:objc(cs)CLLocation"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GeoLocationProvider@objc(cs)GeoLocationProviders(im)locationManager:didUpdateLocations:",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersC15locationManager_18didUpdateLocationsySo010CLLocationF0C_SaySo0J0CGtF",
+            "moduleName": "GeoLocationProvider",
+            "objc_name": "locationManager:didUpdateLocations:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "locationManager",
+            "printedName": "locationManager(_:didFailWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CLLocationManager",
+                "printedName": "CoreLocation.CLLocationManager",
+                "usr": "c:objc(cs)CLLocationManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GeoLocationProvider@objc(cs)GeoLocationProviders(im)locationManager:didFailWithError:",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersC15locationManager_16didFailWithErrorySo010CLLocationF0C_s0J0_ptF",
+            "moduleName": "GeoLocationProvider",
+            "objc_name": "locationManager:didFailWithError:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLocation",
+            "printedName": "setLocation(listener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationProviderListener",
+                "printedName": "any NeoInterfaces.GeoLocationProviderListener",
+                "usr": "s:13NeoInterfaces27GeoLocationProviderListenerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19GeoLocationProvider0aB9ProvidersC03setB08listenery13NeoInterfaces0abC8Listener_p_tF",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersC03setB08listenery13NeoInterfaces0abC8Listener_p_tF",
+            "moduleName": "GeoLocationProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "requestCurrentLocation",
+            "printedName": "requestCurrentLocation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19GeoLocationProvider0aB9ProvidersC014requestCurrentB0yyF",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersC014requestCurrentB0yyF",
+            "moduleName": "GeoLocationProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders",
+        "mangledName": "$s19GeoLocationProvider0aB9ProvidersC",
+        "moduleName": "GeoLocationProvider",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "GeoLocationProviderContract",
+            "printedName": "GeoLocationProviderContract",
+            "usr": "s:13NeoInterfaces27GeoLocationProviderContractP",
+            "mangledName": "$s13NeoInterfaces27GeoLocationProviderContractP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

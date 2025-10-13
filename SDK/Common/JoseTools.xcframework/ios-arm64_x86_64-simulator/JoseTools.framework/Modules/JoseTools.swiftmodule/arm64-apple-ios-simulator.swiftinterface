@@ -1,0 +1,300 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name JoseTools
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CryptoTools
+import Foundation
+import JOSESwift
+@_exported import JoseTools
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct JsonWebKey {
+  public let jwk: (any JOSESwift.JWK)?
+  public let key: any CryptoTools.Key
+  public let use: JoseTools.JWKUse
+  public let keyId: Swift.String
+  public let pairingKey: (any CryptoTools.Key)?
+  public init(key: any CryptoTools.Key, jwkUse: JoseTools.JWKUse, keyId: Swift.String, pairingKey: (any CryptoTools.Key)? = nil) throws
+  public init(secKey: Security.SecKey, keyClass: CryptoTools.KeyClass, keyType: CryptoTools.KeyType, jwkUse: JoseTools.JWKUse, keyId: Swift.String) throws
+  public init(jwkData: Foundation.Data, keyType: CryptoTools.KeyType) throws
+  public init(jwk: any JOSESwift.JWK) throws
+  public func encode() -> Foundation.Data?
+  public func encode() throws -> [Swift.String : Swift.String]
+  public func encode() -> Swift.String?
+  public static func getPubSecKey(from jwk: any JOSESwift.JWK) throws -> Security.SecKey
+  public func getKeyId() -> Swift.String
+}
+public struct JOSEHelper {
+  public class Builder {
+    public init()
+    public func addJwsHeaders(_ header: [Swift.String : Swift.String]) -> JoseTools.JOSEHelper.Builder
+    public func addJweHeaders(_ header: [Swift.String : Swift.String]) -> JoseTools.JOSEHelper.Builder
+    public func setJWSAlgorithm(_ jwsAlgorithm: Swift.String) -> JoseTools.JOSEHelper.Builder
+    public func setJWEKeyManagementAlgorithm(_ jweKeyManagementAlgorithm: Swift.String) -> JoseTools.JOSEHelper.Builder
+    public func setJWEContentEncryptionAlgorithm(_ jweContentEncryptionAlgorithm: Swift.String) -> JoseTools.JOSEHelper.Builder
+    public func setSenderJwkSet(_ publicJwkSet: JoseTools.JsonWebKeySet, signingKeyId: Swift.String?) -> JoseTools.JOSEHelper.Builder
+    public func setRecipientJwkSet(_ publicJwkSet: JoseTools.JsonWebKeySet, encryptionKeyId: Swift.String?) -> JoseTools.JOSEHelper.Builder
+    public func create() throws -> JoseTools.JOSEHelper
+    @objc deinit
+  }
+  public func encodeMessage(rawMessage: Foundation.Data) throws -> Foundation.Data
+  public func decodeMessage(encodedMessage: Foundation.Data) throws -> Foundation.Data
+}
+public class URLRequestBody {
+  public init(body: [Swift.String : Any])
+  convenience public init()
+  public subscript(bodyField: Swift.String) -> Any? {
+    get
+    set(newValue)
+  }
+  @discardableResult
+  public func setBodyParam(_ bodyField: Swift.String, bodyValue: any Swift.Decodable & Swift.Encodable) -> JoseTools.URLRequestBody
+  public func getParams() -> [Swift.String : Any]
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+extension JoseTools.URLRequestBody : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension JoseTools.URLRequestBody : Swift.Sequence {
+  public typealias Iterator = Swift.DictionaryIterator<Swift.String, Any>
+  public func makeIterator() -> JoseTools.URLRequestBody.Iterator
+  public typealias Element = Swift.Dictionary<Swift.String, Any>.Iterator.Element
+}
+public class URLRequestHeader {
+  public static let header_content_type: Swift.String
+  public static let header_content_type_json: Swift.String
+  public static let header_content_type_urlencoded: Swift.String
+  public static let header_content_type_jwks: Swift.String
+  public static let header_content_type_jwt: Swift.String
+  public static let header_content_type_text_plain: Swift.String
+  public init(headers: [Swift.String : Swift.String])
+  convenience public init()
+  public subscript(headerField: Swift.String) -> Swift.String? {
+    get
+    set(newValue)
+  }
+  @discardableResult
+  public func setHeaderField(_ headerField: Swift.String, headerValue: Swift.String) -> JoseTools.URLRequestHeader
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+extension JoseTools.URLRequestHeader : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension JoseTools.URLRequestHeader : Swift.Sequence {
+  public typealias Iterator = Swift.DictionaryIterator<Swift.String, Swift.String>
+  public func makeIterator() -> JoseTools.URLRequestHeader.Iterator
+  public typealias Element = Swift.Dictionary<Swift.String, Swift.String>.Iterator.Element
+}
+public struct JsonWebKeySet {
+  public var jwks: [JoseTools.JsonWebKey]
+  public init(jwks: [JoseTools.JsonWebKey])
+  public init(jwksDictionary: [Swift.String : Any]) throws
+  public init(jwksData: Foundation.Data) throws
+  public func findKeysFor(jwkHeader: [Swift.String : Any], keyClass: CryptoTools.KeyClass) -> [JoseTools.JsonWebKey]
+  public func encode() throws -> Swift.String
+  public func encode() throws -> Foundation.Data
+  public func encodeToArray() throws -> [[Swift.String : Swift.String]]
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum JsonSerializeError : Swift.Error {
+  case missingRequiredInit
+  case failedToParseJson(description: Swift.String)
+  case invalidJsonString
+  case missingRequiredInformationForKey(_: Swift.String)
+}
+extension JoseTools.JsonSerializeError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension JoseTools.JsonSerializeError : Swift.Equatable {
+  public static func == (lhs: JoseTools.JsonSerializeError, rhs: JoseTools.JsonSerializeError) -> Swift.Bool
+}
+public struct JWSSigner {
+  public init(jwsAlgorithm: JOSESwift.SignatureAlgorithm, jwk: JoseTools.JsonWebKey) throws
+  public func sign(_ message: Foundation.Data, headerParams: [Swift.String : Swift.String]? = nil) throws -> Foundation.Data
+  public func signJWT(_ message: Foundation.Data, headerParams: [Swift.String : Swift.String]? = nil) throws -> Foundation.Data
+}
+extension JOSESwift.JWSHeader {
+  public init(algorithm: JOSESwift.SignatureAlgorithm, additionalHeaderParams: [Swift.String : Swift.String], keyId: Swift.String?) throws
+}
+public struct JWEDecrypter {
+  public init(jwk: JoseTools.JsonWebKey) throws
+  public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, decryptionPrivateKey: Security.SecKey) throws
+  public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, decryptionPrivateKey: JoseTools.JsonWebKey) throws
+  public func decryptJWE(jweString: Swift.String) throws -> Foundation.Data
+  public func decryptJWE(jweData: Foundation.Data) throws -> Foundation.Data
+}
+@_inheritsConvenienceInitializers public class JWTClaims : JoseTools.JsonSerialize {
+  override public init()
+  required public init(dict: [Swift.String : Any]) throws
+  public func setIssuer(_ value: Swift.String)
+  public func getIssuer() throws -> Swift.String
+  public func setSubject(_ value: Swift.String)
+  public func getSubject() throws -> Swift.String
+  public func setAudience(_ value: Swift.String...)
+  public func getAudience() throws -> [Swift.String]
+  public func setExpirationTime(_ value: Foundation.TimeInterval)
+  public func setExpirationTimeSecondsInTheFuture(_ value: Foundation.TimeInterval)
+  public func getExpirationTime() throws -> Foundation.TimeInterval
+  public func setNotBefore(_ value: Foundation.TimeInterval)
+  public func setNotBeforeSecondsInThePast(_ value: Foundation.TimeInterval)
+  public func getNotBefore() throws -> Foundation.TimeInterval
+  public func setIssuedAt(_ value: Foundation.TimeInterval)
+  public func setIssuedAtToNow()
+  public func getIssuedAt() throws -> Foundation.TimeInterval
+  public func setJwtId(_ value: Swift.String)
+  public func setGeneratedJwtId()
+  public func setGeneratedJwtId(count: Swift.Int)
+  public func getJwtId() throws -> Swift.String
+  public func unsetClaim(withName claimName: Swift.String)
+  public func setClaimValue<T>(_ value: T, forName claimName: Swift.String) where T : Swift.Hashable
+  public func getClaimValue<T>(forName claimName: Swift.String) throws -> T
+  public func hasClaim(withName claimName: Swift.String) -> Swift.Bool
+  public func getClaims() -> [Swift.String : Any]
+  override public func toDictionary() throws -> [Swift.String : Any]
+  @objc deinit
+}
+public struct ReservedClaimNames {
+  public static let ISSUER: Swift.String
+  public static let SUBJECT: Swift.String
+  public static let AUDIENCE: Swift.String
+  public static let EXPIRATION_TIME: Swift.String
+  public static let NOT_BEFORE: Swift.String
+  public static let ISSUED_AT: Swift.String
+  public static let JWT_ID: Swift.String
+  public static let TYPE: Swift.String
+}
+public struct JWSVerifier {
+  public init(jwsAlgorithm: JOSESwift.SignatureAlgorithm, jwk: JoseTools.JsonWebKey) throws
+  public func verifyJWS(jwsString: Swift.String) throws -> Foundation.Data
+  public func verifyJWS(jwsData: Foundation.Data) throws -> Foundation.Data
+}
+public struct JWKParameters {
+  public static let jwk_key_use: Swift.String
+  public static let jwk_key_kty: Swift.String
+  public static let jwk_key_kid: Swift.String
+  public static let jwk_key_alg: Swift.String
+  public static let jwk_key_e: Swift.String
+}
+public enum JWKUse : Swift.String {
+  case JWK_SIG
+  case JWK_ENC
+  case JWK_SIG_ENC
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum JWKType : Swift.String {
+  case RSA
+  case EC
+  public func getKeyType() -> CryptoTools.KeyType
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol CoderEncryptProtocol {
+  var contentType: Swift.String { get }
+  func encodeRequestBody(requestBody: JoseTools.URLRequestBody) throws -> Foundation.Data
+  func decodeResponseData(responseData: Foundation.Data) throws -> Any
+}
+@_hasMissingDesignatedInitializers public class JsonCodeHelper {
+  public class func encodeAndConvertToJson(_ data: Any) throws -> Foundation.Data
+  public class func decodeCodeJson(_ jsonData: Foundation.Data) throws -> Any
+  @objc deinit
+}
+public protocol JsonSerializeProtocol {
+  init(jsonString: Swift.String) throws
+  func toDictionary() throws -> [Swift.String : Any]
+  func toJsonString() throws -> Swift.String
+}
+open class JsonSerializeObject {
+  public init()
+  required convenience public init(dict: [Swift.String : Any]) throws
+  open func toDictionary() throws -> [Swift.String : Any]
+  open func toJsonString() throws -> Swift.String
+  @objc deinit
+}
+extension JoseTools.JsonSerializeProtocol where Self : JoseTools.JsonSerializeObject {
+  public init(jsonString: Swift.String) throws
+}
+public typealias JsonSerialize = JoseTools.JsonSerializeObject & JoseTools.JsonSerializeProtocol
+extension Swift.Mirror {
+  public func convertToDictionary() throws -> [Swift.String : Any]
+}
+public struct JsonWebStructure {
+  public var components: [Foundation.Data]
+  public init(components: [Foundation.Data])
+  public init(compactSerialization: Swift.String) throws
+  public func getHeader() -> [Swift.String : Any]?
+  public func getRawPayload() -> Foundation.Data?
+  public func getSignature() -> Foundation.Data?
+  public func getEncryptedKey() -> Foundation.Data?
+  public func getInitializationVector() -> Foundation.Data?
+  public func getAuthenticationTag() -> Foundation.Data?
+}
+public struct JWEEncrypter {
+  public init(jwk: JoseTools.JsonWebKey) throws
+  public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, encryptionPublicKey: Security.SecKey, keyId: Swift.String? = nil) throws
+  public init(jweKeyManagementAlgorithm: Swift.String, jweContentEncryptionAlgorithm: Swift.String, encryptionPublicKey: JoseTools.JsonWebKey, keyId: Swift.String? = nil) throws
+  public func encryptJWT(_ message: Foundation.Data, headerParams: [Swift.String : Swift.String]? = nil, isNested: Swift.Bool = false) throws -> Foundation.Data
+}
+extension JOSESwift.JWEHeader {
+  public init(keyManagementAlgorithm: JOSESwift.KeyManagementAlgorithm, contentEncryptionAlgorithm: JOSESwift.ContentEncryptionAlgorithm, additionalHeaderParams: [Swift.String : Swift.String], keyId: Swift.String?) throws
+}
+extension Security.SecKey {
+  public class func decodeFrom(jwk: Foundation.Data) throws -> Security.SecKey
+  public func encodeToJWK(for use: JoseTools.JWKUse) throws -> Foundation.Data
+}
+public enum JOSEError : Swift.Error {
+  case algorithmNotSupported(_: Swift.String)
+  case invalidKeyFormat(_: Swift.String)
+  case missingKey(_: Swift.String)
+  case JWSSignerError(_: any Swift.Error)
+  case JWSVerificationError(_: any Swift.Error)
+  case JWEEncrypterError(_: any Swift.Error)
+  case JWEDecrypterError(_: any Swift.Error)
+  case cannotEncodeJWK(_: (any Swift.Error)?, description: Swift.String? = nil)
+  case cannotDecodeJWK(_: (any Swift.Error)?, description: Swift.String? = nil)
+  case cannotDecodeResponse(_: any Swift.Error)
+  case claimNotFoundInJWT(_: Swift.String)
+  case malformedClaim(_: Swift.String)
+  case invalidJOSEComponent(_: Swift.String)
+  case curveNotSupported(_: Swift.String)
+  case initializationError(_: Swift.String)
+}
+extension JoseTools.JOSEError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension JoseTools.JOSEError : Swift.Equatable {
+  public static func == (lhs: JoseTools.JOSEError, rhs: JoseTools.JOSEError) -> Swift.Bool
+}
+extension JOSESwift.JWSHeader {
+  public init(algorithm: JOSESwift.SignatureAlgorithm, additionalHeaderParams: [Swift.String : Swift.String]? = nil, keyId: Swift.String?) throws
+}
+extension JoseTools.JWKUse : Swift.Equatable {}
+extension JoseTools.JWKUse : Swift.Hashable {}
+extension JoseTools.JWKUse : Swift.RawRepresentable {}
+extension JoseTools.JWKType : Swift.Equatable {}
+extension JoseTools.JWKType : Swift.Hashable {}
+extension JoseTools.JWKType : Swift.RawRepresentable {}

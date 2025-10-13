@@ -1,0 +1,421 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CryptoTools
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CommonCrypto
+@_exported import CryptoTools
+import Foundation
+import LocalAuthentication
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import libsecp256k1
+extension Security.SecKey {
+  public class func initFromData(keyData: Foundation.Data, keyTag: Swift.String, keyClass: CryptoTools.KeyClass, keyType: CryptoTools.KeyType) throws -> Security.SecKey
+  public func saveToKeychain(keyTag: Swift.String, keyType: CryptoTools.KeyType, keyClass: CryptoTools.KeyClass) throws
+  public class func loadFromKeychain(withTag keyTag: Swift.String, keyClass: CryptoTools.KeyClass, keyType: CryptoTools.KeyType, prompt: Swift.String? = nil, appPassword: Foundation.Data? = nil, isInSecureEnclave: Swift.Bool = false) throws -> Security.SecKey
+  public func toData() throws -> Foundation.Data
+}
+public struct EncryptedData : CryptoTools.CryptoData {
+  public var data: Foundation.Data
+  public init(data: Foundation.Data)
+  public func decrypt(with decrypter: CryptoTools.Decrypter) throws -> CryptoTools.ClearData
+}
+public struct AES128 : CryptoTools.SymmetricCrypter {
+  public static let keySizeBytes: Swift.Int
+  public static let ivSizeBytes: Swift.Int
+  public static let blockSize: Swift.Int
+  public static let paddingOptions: CommonCrypto.CCOptions
+  public let symmKey: Foundation.Data
+  public init(key: Foundation.Data) throws
+}
+extension Swift.String {
+  public func base64urlToBase64() -> Swift.String
+  public func convertToData() -> Foundation.Data
+}
+public struct PublicKey : CryptoTools.Key {
+  public var keyRef: Security.SecKey?
+  public var keyData: Foundation.Data!
+  public var keyType: CryptoTools.KeyType!
+  public init(key: Security.SecKey, keyType: CryptoTools.KeyType)
+  public init(keyData: Foundation.Data, keyType: CryptoTools.KeyType)
+}
+public struct KeyPairGenerator {
+  public static func generateKeyPair(forKeyType keyType: CryptoTools.KeyType, publicKeyTag: Swift.String, privateKeyTag: Swift.String, appPassword: Foundation.Data? = nil) throws -> (CryptoTools.PrivateKey, CryptoTools.PublicKey)
+  public static func generateKeyPairInSecureEnclave(forKeyType keyType: CryptoTools.KeyType, publicKeyTag: Swift.String, privateKeyTag: Swift.String, appPassword: Foundation.Data? = nil) throws -> (CryptoTools.PrivateKey, CryptoTools.PublicKey)
+}
+extension Foundation.Data {
+  public func sha256() -> Foundation.Data
+}
+extension Swift.String {
+  public func sha256() -> Swift.String
+}
+extension Foundation.Data {
+  public func sha224() -> Foundation.Data
+}
+extension Swift.String {
+  public func sha224() -> Swift.String
+}
+public enum DigestType : Swift.String {
+  case MD5, SHA1, SHA224, SHA256, SHA384, SHA512
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct MessageDigest : CryptoTools.CryptoData {
+  public var data: Foundation.Data
+  public init(data: Foundation.Data)
+  public func sign(with signer: CryptoTools.Signer, digestType: CryptoTools.DigestType) throws -> CryptoTools.Signature
+}
+public struct KeychainHelper {
+  public static func saveToKeychain(keyService: Swift.String, keyTag: Swift.String, keyValue: Foundation.Data) throws -> Swift.Bool
+  public static func retrieveFromKeychain(keyService: Swift.String, keyTag: Swift.String) -> Foundation.Data?
+}
+public struct EncryptedKeyStruct {
+  public var encryptedKey: Foundation.Data
+  public var decryptedKey: Foundation.Data
+  public var uniqueId: Swift.String
+}
+public struct Signer {
+  public init(_ privateKey: CryptoTools.PrivateKey) throws
+  public func signData(_ data: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Foundation.Data
+  public func signDigest(_ digest: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Foundation.Data
+}
+public struct BiometryState {
+  @discardableResult
+  public static func checkBiometryState() throws -> Swift.Bool
+  @discardableResult
+  public static func checkDevicePasscodeState() throws -> Swift.Bool
+}
+public enum BiometryStateError : Swift.Error, Foundation.LocalizedError {
+  case cannotUseBiometry
+  case appCanceledAuthentication
+  case passcodeNotSet
+  case tooManyFailedAttempts
+  case noEnrolledBiometry
+  case deviceNotSupported
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public static func == (a: CryptoTools.BiometryStateError, b: CryptoTools.BiometryStateError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CryptoError : Swift.Error {
+  case invalidKeySize(_: Swift.Int)
+  case invalidKeyFormat(_: Swift.String)
+  case invalidInput(_: Swift.String)
+  case failedToImportKey(_: Swift.String)
+  case failedToExportKeyData(_: Swift.String)
+  case encryptionFailed(_: Swift.String)
+  case decryptionFailed(_: Swift.String)
+  case signingFailed(_: Swift.String)
+  case verificationFailed(_: Swift.String)
+  case failedToGenerateIV
+  case failedToGenerateSymmetricKey
+  case failedToGenerateKeyPair(_: Swift.String)
+  case failedToLoadKeyFromKeychain(_: Swift.String)
+  case itemNotFoundInKeychain(_: Swift.String)
+  case mustExecuteOnBGThread(_: Swift.String)
+  case missingKey(_: Swift.String)
+  case missingBundleIdentifier(_: Swift.String)
+  case invalidDigestType(_: Swift.String)
+  case missingKeyData(_: Swift.String)
+}
+extension CryptoTools.CryptoError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension CryptoTools.CryptoError : Swift.Equatable {
+  public static func == (lhs: CryptoTools.CryptoError, rhs: CryptoTools.CryptoError) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class EncryptedFile {
+  public class Builder {
+    public func setBackup(value: Swift.Bool) -> CryptoTools.EncryptedFile.Builder
+    public func setContent(value: Swift.String) -> CryptoTools.EncryptedFile.Builder
+    public func setCrypter(value: any CryptoTools.SymmetricCrypter) -> CryptoTools.EncryptedFile.Builder
+    public func setUrl(value: Foundation.URL) -> CryptoTools.EncryptedFile.Builder
+    public func build() throws -> CryptoTools.EncryptedFile
+    public init()
+    @objc deinit
+  }
+  public func getContent() throws -> Swift.String
+  public func getEncryptedData() throws -> Foundation.Data
+  public func getUrl() -> Foundation.URL
+  public func encrypt() throws
+  public func decrypt() throws
+  public func write() throws
+  @objc deinit
+}
+public enum EncryptedKeyManagerError : Swift.Error {
+  case generateKeysError(_: Swift.String)
+  case missingUniqueId(_: Swift.String)
+  case missingDecryptedKey(_: Swift.String)
+  case missingEncryptedKey(_: Swift.String)
+  case missingKeyPair(_: Swift.String)
+  case saveToKeychainError(_: Swift.String)
+  case generateKeyStructError(_: Swift.String)
+}
+extension CryptoTools.EncryptedKeyManagerError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension CryptoTools.EncryptedKeyManagerError : Swift.Equatable {
+  public static func == (lhs: CryptoTools.EncryptedKeyManagerError, rhs: CryptoTools.EncryptedKeyManagerError) -> Swift.Bool
+}
+public class Secp256k1Utils {
+  public static let SECP256K1CURVE: Swift.String
+  public init()
+  public static func generateSecp256K1KeyPair() throws -> (CryptoTools.PrivateKey, CryptoTools.PublicKey)
+  public static func isSecp256k1Key(key: any CryptoTools.Key) -> Swift.Bool
+  public static func getComponents(from publicKey: CryptoTools.PublicKey) -> (Foundation.Data, Foundation.Data)
+  public static func encodeToJwk(publicKey: CryptoTools.PublicKey, privateKey: CryptoTools.PrivateKey?, keyId: Swift.String) -> Foundation.Data?
+  @objc deinit
+}
+public class EncryptedKeyManager {
+  public init(appPassword: Foundation.Data? = nil)
+  public func decryptKey(uniqueId: Swift.String, encryptedKey: Foundation.Data) throws -> CryptoTools.EncryptedKeyStruct?
+  @objc deinit
+}
+extension Foundation.Data {
+  public func sha512() -> Foundation.Data
+}
+extension Swift.String {
+  public func sha512() -> Swift.String
+}
+public struct Secp256k1Signer {
+  public var privateKey: CryptoTools.PrivateKey
+  public var keyType: CryptoTools.KeyType!
+  public init(_ privateKey: CryptoTools.PrivateKey)
+  public func signDigest(_ digest: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Foundation.Data
+  public func signData(_ data: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Foundation.Data
+}
+public enum EncryptedFileError : Swift.Error {
+  case missingContentError(_: Swift.String)
+  case missingCrypterError(_: Swift.String)
+  case missingUrlError(_: Swift.String)
+  case missingEncryptedContentError(_: Swift.String)
+  case encryptionError(_: Swift.String)
+  case decryptionError(_: Swift.String)
+  case writeToFileError(_: Swift.String)
+  case encryptedContentEmpty(_: Swift.String)
+  case contentEmpty(_: Swift.String)
+  case symmetricCrypterError(_: Swift.String)
+  case fileInitError(_: Swift.String)
+}
+extension CryptoTools.EncryptedFileError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension CryptoTools.EncryptedFileError : Swift.Equatable {
+  public static func == (lhs: CryptoTools.EncryptedFileError, rhs: CryptoTools.EncryptedFileError) -> Swift.Bool
+}
+extension Security.SecKey {
+  public func isInSecureEnclave() -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class EncryptedDefaults {
+  public static var standard: CryptoTools.EncryptedDefaults!
+  public class func initialize(usingPassword appPassword: Foundation.Data? = nil, uniqueId: Swift.String? = nil, encryptedKey: Foundation.Data? = nil, onComplete: @escaping ((_ result: Swift.Result<CryptoTools.EncryptedKeyStruct, any Swift.Error>) -> Swift.Void))
+  @discardableResult
+  public func set(_ object: Swift.AnyObject, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ array: [Any], forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ dictionary: [Swift.String : Any], forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ string: Swift.String, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ bool: Swift.Bool, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ integer: Swift.Int, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ double: Swift.Double, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ float: Swift.Float, forKey key: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func set(_ data: Foundation.Data, forKey key: Swift.String) -> Swift.Bool
+  public func object(forKey key: Swift.String) -> Swift.AnyObject?
+  public func dictionary(forKey key: Swift.String) -> [Swift.String : Any]?
+  public func array(forKey key: Swift.String) -> [Any]?
+  public func string(forKey key: Swift.String) -> Swift.String?
+  public func bool(forKey key: Swift.String) -> Swift.Bool
+  public func integer(forKey key: Swift.String) -> Swift.Int
+  public func double(forKey key: Swift.String) -> Swift.Double
+  public func float(forKey key: Swift.String) -> Swift.Float
+  public func data(forKey key: Swift.String) -> Foundation.Data?
+  public func removeObject(forKey key: Swift.String)
+  @objc deinit
+}
+public class EncryptedDefaultsConfigurator {
+  public init()
+  public init(withSymmKey symmKey: Foundation.Data)
+  @discardableResult
+  public func useSecureEnclave(_ bool: Swift.Bool) -> CryptoTools.EncryptedDefaultsConfigurator
+  @discardableResult
+  public func setAppPasscode(_ appPassword: Foundation.Data) -> CryptoTools.EncryptedDefaultsConfigurator
+  public func initialize(onComplete: @escaping (Swift.Result<CryptoTools.EncryptedKeyStruct, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+extension Security.SecKey {
+  public func isPublicKey() -> Swift.Bool
+  public func isPrivateKey() -> Swift.Bool
+}
+public struct PrivateKey : CryptoTools.Key {
+  public var keyRef: Security.SecKey?
+  public var keyData: Foundation.Data!
+  public var keyType: CryptoTools.KeyType!
+  public init(key: Security.SecKey, keyType: CryptoTools.KeyType)
+  public init(keyData: Foundation.Data, keyType: CryptoTools.KeyType)
+}
+extension Foundation.Data {
+  public init?(hexString: Swift.String)
+  public var hexDescription: Swift.String {
+    get
+  }
+  public func convertToString() -> Swift.String
+}
+public struct Signature : CryptoTools.CryptoData {
+  public var data: Foundation.Data
+  public init(data: Foundation.Data)
+  public func verifyData(with verifier: CryptoTools.Verifier, data: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Swift.Bool
+  public func verifyDigest(with verifier: CryptoTools.Verifier, digest: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Swift.Bool
+}
+public struct ClearData : CryptoTools.CryptoData {
+  public var data: Foundation.Data
+  public init(data: Foundation.Data)
+  public func digest(digestType: CryptoTools.DigestType) -> CryptoTools.MessageDigest
+  public func encrypt(with encrypter: CryptoTools.Encrypter) throws -> CryptoTools.EncryptedData
+}
+public struct AES256 : CryptoTools.SymmetricCrypter {
+  public static let keySizeBytes: Swift.Int
+  public static let ivSizeBytes: Swift.Int
+  public static let blockSize: Swift.Int
+  public static let paddingOptions: CommonCrypto.CCOptions
+  public let symmKey: Foundation.Data
+  public init(key: Foundation.Data) throws
+}
+public struct Secp256k1Verifier {
+  public let publicKey: CryptoTools.PublicKey
+  public var keyType: CryptoTools.KeyType!
+  public init(_ publicKey: CryptoTools.PublicKey)
+  public func verifyDigest(_ digest: Foundation.Data, signature: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Swift.Bool
+  public func verifyData(_ data: Foundation.Data, signature: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Swift.Bool
+}
+public struct Decrypter {
+  public init(_ privateKey: CryptoTools.PrivateKey) throws
+  public func decrypt(_ data: Foundation.Data) throws -> Foundation.Data
+}
+public protocol SymmetricCrypter {
+  static var keySizeBytes: Swift.Int { get }
+  static var ivSizeBytes: Swift.Int { get }
+  static var blockSize: Swift.Int { get }
+  static var paddingOptions: CommonCrypto.CCOptions { get }
+  var symmKey: Foundation.Data { get }
+  init(key: Foundation.Data) throws
+  func encrypt(_ data: Foundation.Data) throws -> Foundation.Data
+  func decrypt(_ data: Foundation.Data) throws -> Foundation.Data
+}
+extension CryptoTools.SymmetricCrypter {
+  public static func createRandomKey() throws -> Foundation.Data
+  public func copyRandomIVBytesTo(buffer: inout Foundation.Data) throws
+  public func encrypt(_ data: Foundation.Data) throws -> Foundation.Data
+  public func decrypt(_ data: Foundation.Data) throws -> Foundation.Data
+}
+extension Security.SecKey {
+  public func getKeyType() -> CryptoTools.KeyType
+}
+public protocol Key {
+  var keyRef: Security.SecKey? { get }
+  var keyData: Foundation.Data! { get set }
+  var keyType: CryptoTools.KeyType! { get }
+  init(key: Security.SecKey, keyType: CryptoTools.KeyType)
+  init(withTag keyTag: Swift.String, keyType: CryptoTools.KeyType, authPrompt: Swift.String?) throws
+  init(withTag keyTag: Swift.String, keyType: CryptoTools.KeyType, authPrompt: Swift.String?, appPassword: Foundation.Data?, isInSecureEnclave: Swift.Bool) throws
+  init(withData keyData: Foundation.Data, keyTag: Swift.String, keyType: CryptoTools.KeyType) throws
+  init(withBase64EncodedString base64String: Swift.String, keyTag: Swift.String, keyType: CryptoTools.KeyType) throws
+  mutating func toData() throws -> Foundation.Data
+  mutating func toBase64String() throws -> Swift.String?
+}
+extension CryptoTools.Key {
+  public init(withTag keyTag: Swift.String, keyType: CryptoTools.KeyType, authPrompt: Swift.String? = nil) throws
+  public init(withTag keyTag: Swift.String, keyType: CryptoTools.KeyType, authPrompt: Swift.String?, appPassword: Foundation.Data?, isInSecureEnclave: Swift.Bool) throws
+  public init(withBase64EncodedString base64String: Swift.String, keyTag: Swift.String, keyType: CryptoTools.KeyType) throws
+  public init(withData keyData: Foundation.Data, keyTag: Swift.String, keyType: CryptoTools.KeyType) throws
+  public mutating func toData() throws -> Foundation.Data
+  public mutating func toBase64String() throws -> Swift.String?
+  @discardableResult
+  public static func removeKeyFromKeychainIfExists(withTag keyTag: Swift.String, keyType: CryptoTools.KeyType) -> Darwin.OSStatus
+  @discardableResult
+  public static func removeKeyFromKeychain(withTag keyTag: Swift.String, keyType: CryptoTools.KeyType) -> Swift.Bool
+}
+public struct KeyClass : Swift.Equatable {
+  public static let privateKey: CryptoTools.KeyClass
+  public static let publicKey: CryptoTools.KeyClass
+  public let keyClass: Swift.String
+  public static func == (a: CryptoTools.KeyClass, b: CryptoTools.KeyClass) -> Swift.Bool
+}
+public struct KeyType : Swift.Equatable {
+  public static let EC256Key: CryptoTools.KeyType
+  public static let RSA2048Key: CryptoTools.KeyType
+  public static let SECP256K1Key: CryptoTools.KeyType
+  public let keyType: Swift.String
+  public let keySizeInBits: Swift.Int
+  public let curve: Swift.String?
+  public init(keyType: Swift.String, keySizeInBits: Swift.Int, curve: Swift.String? = nil)
+  public var debugDescripton: Swift.String {
+    get
+  }
+  public static func == (a: CryptoTools.KeyType, b: CryptoTools.KeyType) -> Swift.Bool
+}
+extension Foundation.Data {
+  public func md5() -> Foundation.Data
+}
+extension Swift.String {
+  public func md5() -> Swift.String
+}
+public struct Verifier {
+  public init(_ publicKey: CryptoTools.PublicKey) throws
+  public func verifyData(_ data: Foundation.Data, signature: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Swift.Bool
+  public func verifyDigest(_ digest: Foundation.Data, signature: Foundation.Data, digestType: CryptoTools.DigestType) throws -> Swift.Bool
+}
+public struct Encrypter {
+  public init(_ publicKey: CryptoTools.PublicKey) throws
+  public func encrypt(_ data: Foundation.Data) throws -> Foundation.Data
+}
+extension Foundation.Data {
+  public func sha1() -> Foundation.Data
+}
+extension Swift.String {
+  public func sha1() -> Swift.String
+}
+public protocol CryptoData {
+  var data: Foundation.Data { get }
+  init(base64EncodedString: Swift.String) throws
+  init(base64EncodedData: Foundation.Data) throws
+  init(string: Swift.String)
+  init(data: Foundation.Data)
+}
+extension CryptoTools.CryptoData {
+  public init(base64EncodedString: Swift.String) throws
+  public init(base64EncodedData: Foundation.Data) throws
+  public init(string: Swift.String)
+}
+extension Foundation.Data {
+  public func sha384() -> Foundation.Data
+}
+extension Swift.String {
+  public func sha384() -> Swift.String
+}
+extension CryptoTools.DigestType : Swift.Equatable {}
+extension CryptoTools.DigestType : Swift.Hashable {}
+extension CryptoTools.DigestType : Swift.RawRepresentable {}
+extension CryptoTools.BiometryStateError : Swift.Equatable {}
+extension CryptoTools.BiometryStateError : Swift.Hashable {}
