@@ -6,11 +6,11 @@
 	<dict>
 		<key>AadhaarOtpVC.nib</key>
 		<data>
-		WRv/R6a8MRnHIvrq0Z3oliLSnxY=
+		nzmmXo3Ng74PLLkiGueozAmlChk=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		b8b4/vFWFd7aVVe26zuoD+Te2ms=
+		+kHgD9/0XlZ6moNfUdwLXQXtzYA=
 		</data>
 		<key>CustomCountryPickerViewController.nib</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>CustomPhoneView.nib</key>
 		<data>
-		CBwRBpQk6pPEmFzTh4pZkO/oOzQ=
+		U8dXAHrgmfw8kVz9PMVqg6ooRVs=
 		</data>
 		<key>CustomToastView.nib</key>
 		<data>
@@ -30,15 +30,15 @@
 		</data>
 		<key>DataCaptureViewController.nib</key>
 		<data>
-		swHnMddpkJaL20hMF4ErDnHTZAY=
+		/2oRi2j64cbwqm+JQIizEGYMQpE=
 		</data>
 		<key>DocumentCaptureViewController.nib</key>
 		<data>
-		F5O5kzF9MFqrNoB+iW65WeP4GHQ=
+		6Mf0f7cgg2Yv6ZrgGZY0CrzAeqs=
 		</data>
 		<key>DocumentSelectionCell.nib</key>
 		<data>
-		/sgmgh6UPvaogDmUZ8sOoXRzw+4=
+		OU5Rwd7noSj6fVTFP5efZ/XT/sI=
 		</data>
 		<key>DocumentSelectionVC.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/PingOneVerify-Swift.h</key>
 		<data>
-		j9wRauZ1KNOa87JM6y/a1VSxrAg=
+		zYmdoWKuS33KLrG5YYDNUXk6epQ=
 		</data>
 		<key>Headers/PingOneVerify.h</key>
 		<data>
@@ -58,55 +58,55 @@
 		</data>
 		<key>ImageCell.nib</key>
 		<data>
-		ZelbIszujFa2YXOyMUGhRPtNz40=
+		43vkiVViyjdPiKZyFHlmFCFo8ho=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Clvrwu1d6HXowDR2vVjc65sdsmA=
+		+4L5DXx+/nLLtoR4y18F03Ycrkw=
 		</data>
 		<key>LabelCell.nib</key>
 		<data>
-		R7k75eSUpva8HmC9GeiPmu+xsCE=
+		spyS8O9fMhGbm4HvNmTBV8e+KxQ=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		pe0JmoNQtwjDVXYKPS13NRMBu2k=
+		IcbG9XCmje3fUGFczAGsX7o2GtU=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		f/OaEngleOOV3p+gO9fJZs6qnKg=
+		YvAJytS6K+qty2ivbt0dJh0/i4c=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		76tVEF2gbwU++UzfcxVofrWF6Ec=
+		79WUQ0Q07o9UB54rkQDOrOQRefo=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		f/OaEngleOOV3p+gO9fJZs6qnKg=
+		YvAJytS6K+qty2ivbt0dJh0/i4c=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FI6todSO5VPe+jouPmx+osBB6yA=
+		TExX31VgJYuoGKLmgwmlQDy3HhY=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		pe0JmoNQtwjDVXYKPS13NRMBu2k=
+		IcbG9XCmje3fUGFczAGsX7o2GtU=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Rt0xrdZ+jTIcP788KP3K7CVaVSA=
+		aIsoXBRaw+69/bdLCMRyq2AdrPw=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		OhcGDb8j1u7Gll1Kmzjjho+j8JA=
+		jk5td8c4S51eSKa7XzJcfOtOKLQ=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Rt0xrdZ+jTIcP788KP3K7CVaVSA=
+		aIsoXBRaw+69/bdLCMRyq2AdrPw=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		h0zKim4mVe5wJYHwHuAzS45QwS4=
+		qonYrEWxkx+z9TZlCvmUskt2csw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -114,11 +114,11 @@
 		</data>
 		<key>OtpViewController.nib</key>
 		<data>
-		yem9XHz1MI/xlnPttdE2sReDP2E=
+		ORM3ktqt35pLgbf0YYqJiQfwDOs=
 		</data>
 		<key>PingOneNavController.nib</key>
 		<data>
-		WwfaGqqwEdP45OrF/xyfAm09bE0=
+		2dk35Hb8eHdiF6RY20ubXb6JYKw=
 		</data>
 		<key>PingOneVerifyLocalizable.strings</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>QrScannerView.nib</key>
 		<data>
-		4hYcpTf6GMfjbVJQq1koIuVf35U=
+		Q7EKOYUIKgspvluag4fFfcHqkRg=
 		</data>
 		<key>RetryViewController.nib</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>SelfiePreviewView.nib</key>
 		<data>
-		GXijJFLi0ba0jGGuxATEF2Z+9ZI=
+		Owp5u7T8Y0PqnTWwFnBtfDiDyME=
 		</data>
 		<key>VoiceCaptureViewController.nib</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>VoiceResultViewController.nib</key>
 		<data>
-		t4BUELCaBeh89feKRLzHugH8IGA=
+		2LLS0hYgfrzmgWsFtUsx7RXj+wY=
 		</data>
 		<key>antispoof2/antispoof_calibration.json</key>
 		<data>
@@ -527,14 +527,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			luOp3rSgCKNhKwoahrtxjwdopK46LaQ7UlYYxQBGsWE=
+			4dRhe4l7RjcvU+jfwb/LfZlSgwOvk/lGabBS9kUcGS4=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qHSTpMBIKg/Iz+CDSTqxx7WXon111lMF/hSXuV7dMGU=
+			zipXbQh+f5hUaK66L99U7BRsu0JYAtLBLOF8d/PR/EU=
 			</data>
 		</dict>
 		<key>CustomCountryPickerViewController.nib</key>
@@ -555,7 +555,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u7wVq/5118ghYZWrJedUVhG0FL49P4HVGtuDh+NTtTI=
+			AaX4KyhMsR8ErvxGX+zgd6xtHubSV6dMjVCqW6z/01A=
 			</data>
 		</dict>
 		<key>CustomToastView.nib</key>
@@ -569,21 +569,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AxUgAZvMWVqwy6z6tZ15prnrUQM+nJN6YPCnqBux1lw=
+			D/L4uFBP5Hb1+UJJ1yR9Ws68mpZrwifvy2xaHlG8QPw=
 			</data>
 		</dict>
 		<key>DocumentCaptureViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o4eBDlFk1IOoEWZjkz60vwPWaOw+ecNdpbZAbujcYQU=
+			L7Ugyfih73WfuCW6lRzTk17ROk4Uxa/PlvciWvu7LY0=
 			</data>
 		</dict>
 		<key>DocumentSelectionCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XsWNdyo08U+dj6Q2+S6m5JRMRsSiuk4BMpmMl8HLRlg=
+			tLU7G/13UD1shXFBdtM/c8mG7aSPbz9IEM+fjCnX4es=
 			</data>
 		</dict>
 		<key>DocumentSelectionVC.nib</key>
@@ -597,7 +597,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bZ5VBHTwXaTH+GqSPVEjAFwRE767gVgCAzL9MA3dYLU=
+			1Wu35vynnG503zsPaXW/RncZgQQ+9iEjjRZO4GQbdiE=
 			</data>
 		</dict>
 		<key>Headers/PingOneVerify.h</key>
@@ -618,84 +618,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6g9fPnECwc71AmdXX6ELQ+gPfiiTYlUxeWd6wd+14/8=
+			9ufBxgtE5Vn7ZLSOZWcRRx2qrGlhxiNJqrBcU4Gzsf4=
 			</data>
 		</dict>
 		<key>LabelCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xQe+uNImgxcFAFaC8OK9h9RUXbmmR/llgr5G7ZTNFIw=
+			RTL5SMAr6cIESDYQic8QGsrgthfFPZ6AQPT8Qe3Sj8Q=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Yt1cm40rMDGCl2sZIqTRgbzKGWsqiKsyZPvXQYMYIk=
+			AqtNd3Xf57EgULvgnz2d0/lKg+csZTSjYVSJrVqCyuo=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iAKhRWXOfLtHJ/U1a2y/KD1BmiJppHerRvWpsRmMvXo=
+			nAHbNarGTYH2j3KF9DWw3YrupnZF+kjZ1pyniYrbwwo=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+J4/33S9QzKD4EGVecEQTfKH3Zf8LXbxvMzBqHzNdDE=
+			Y5G2p9doZSRdLPFMZjjVeTsJ/DIc1csqZVRE7ttKCzE=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iAKhRWXOfLtHJ/U1a2y/KD1BmiJppHerRvWpsRmMvXo=
+			nAHbNarGTYH2j3KF9DWw3YrupnZF+kjZ1pyniYrbwwo=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s6N4XnZk65tFwxNOXYr73HEQqbbUqzGYOjNY9JwA2n0=
+			8PToGYZEfy6wOy1wdnR8sV9HHmGzG0uk3gm8WHzfOHo=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Yt1cm40rMDGCl2sZIqTRgbzKGWsqiKsyZPvXQYMYIk=
+			AqtNd3Xf57EgULvgnz2d0/lKg+csZTSjYVSJrVqCyuo=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i4gFLas/bpySZ31ZCa/3ukdWPew0FUHsoG7paGWysQI=
+			uSjj0Q6GRV+dloUTPh/BbII9473ax5YzRjJ8H4EN+G4=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g59xSiai7TkjK56CIbkj+8YBm37t+4nyyQvqSzvGH9s=
+			DJq165wKBNHgqCcPlDhfFd+L5uo2eeEdUyjss3hd1d4=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i4gFLas/bpySZ31ZCa/3ukdWPew0FUHsoG7paGWysQI=
+			uSjj0Q6GRV+dloUTPh/BbII9473ax5YzRjJ8H4EN+G4=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nFi1si766tELA0TL1z3DjfDaVygkLIup2RMMy2GK5Kw=
+			4Hgzhi/jRp7nyXeD+3RY9GAKTyJTFuyvH38xoos3vf4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -709,14 +709,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dgmiNbL0+ljuRaUKj1crsfYWrZmpl1N+4UqLYNpeJWk=
+			dRRUHy02Natnf/nW6VaabqQxSXR2kjZ4qN2x9GysgbQ=
 			</data>
 		</dict>
 		<key>PingOneNavController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WFBPgDbeX93jG19vNHzyW+H6fGZ0GMzJ6YjOS54P2W4=
+			gq5/PF7XDpUBvm3K7CqtNDa/cT72KLp/eDRH8LsSb90=
 			</data>
 		</dict>
 		<key>PingOneVerifyLocalizable.strings</key>
@@ -744,7 +744,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kVZGvZrpauSggVskPM363/whF8ISpmc60GvQ0fATFCA=
+			Fcaa0WUEZcsICR0sEaREGUojz8dF4mpFvHJ6UDQU+Lo=
 			</data>
 		</dict>
 		<key>RetryViewController.nib</key>
@@ -765,7 +765,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6629gL3FhO1bQBz7YVjxrEQkvS3YhJ/SnPYI54uoy2Q=
+			DixR+WRvTQtCC7jpH2FFsV4PPK9aBMLBegrTIu+W9gg=
 			</data>
 		</dict>
 		<key>VoiceCaptureViewController.nib</key>
@@ -779,7 +779,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ETwCbveBpH39fqRT2eC/Q9d2O0rfjPbrxy8/VsZsm2w=
+			qwqIi5V93wCSVD/aRnpzkKd3RhbC8odTJn+JbxJ6LUQ=
 			</data>
 		</dict>
 		<key>antispoof2/antispoof_calibration.json</key>
