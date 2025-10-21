@@ -1,0 +1,420 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name libsecp256k1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_exported import libsecp256k1
+import secp256k1Wrapper
+extension Foundation.ContiguousBytes {
+  @inlinable public var bytes: [Swift.UInt8] {
+    get {
+        withUnsafeBytes { bytesPtr in Array(bytesPtr) }
+    }
+  }
+}
+extension Foundation.Data {
+  @inlinable public var bytes: [Swift.UInt8] {
+    get {
+        withUnsafeBytes { bytesPtr in Array(bytesPtr) }
+    }
+  }
+  public func copyToUnsafeMutableBytes<T>(of value: inout T)
+}
+extension secp256k1Wrapper.secp256k1_ecdsa_signature {
+  public var dataValue: Foundation.Data {
+    get
+  }
+}
+extension secp256k1Wrapper.secp256k1_ecdsa_recoverable_signature {
+  public var dataValue: Foundation.Data {
+    get
+  }
+}
+extension Swift.String {
+  public init<T>(bytes: T) where T : Foundation.DataProtocol
+  public var bytes: [Swift.UInt8] {
+    get throws
+  }
+}
+extension libsecp256k1.secp256k1.Signing.PrivateKey {
+  public func add(_ tweak: [Swift.UInt8]) throws -> libsecp256k1.secp256k1.Signing.PrivateKey
+  public func add(xonly tweak: [Swift.UInt8]) throws -> libsecp256k1.secp256k1.Signing.PrivateKey
+  public func multiply(_ tweak: [Swift.UInt8]) throws -> libsecp256k1.secp256k1.Signing.PrivateKey
+}
+extension libsecp256k1.secp256k1.Signing.PublicKey {
+  public func add(_ tweak: [Swift.UInt8], format: libsecp256k1.secp256k1.Format = .compressed) throws -> libsecp256k1.secp256k1.Signing.PublicKey
+  public func multiply(_ tweak: [Swift.UInt8], format: libsecp256k1.secp256k1.Format = .compressed) throws -> libsecp256k1.secp256k1.Signing.PublicKey
+}
+extension libsecp256k1.secp256k1.Signing.XonlyKey {
+  public func add(_ tweak: [Swift.UInt8]) throws -> libsecp256k1.secp256k1.Signing.XonlyKey
+}
+public struct SharedSecret : Foundation.ContiguousBytes {
+  public func withUnsafeBytes<R>(_ body: (Swift.UnsafeRawBufferPointer) throws -> R) rethrows -> R
+}
+extension libsecp256k1.SharedSecret : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension libsecp256k1.SharedSecret : Swift.CustomStringConvertible, Swift.Equatable {
+  public static func == (lhs: libsecp256k1.SharedSecret, rhs: libsecp256k1.SharedSecret) -> Swift.Bool
+  public static func == <D>(lhs: libsecp256k1.SharedSecret, rhs: D) -> Swift.Bool where D : Foundation.DataProtocol
+  public var description: Swift.String {
+    get
+  }
+}
+extension libsecp256k1.secp256k1.Signing {
+  public struct ECDSASignature : Foundation.ContiguousBytes {
+    public var rawRepresentation: Foundation.Data
+    public init<D>(rawRepresentation: D) throws where D : Foundation.DataProtocol
+    public init<D>(derRepresentation: D) throws where D : Foundation.DataProtocol
+    public init<D>(compactRepresentation: D) throws where D : Foundation.DataProtocol
+    public func withUnsafeBytes<R>(_ body: (Swift.UnsafeRawBufferPointer) throws -> R) rethrows -> R
+    public var compactRepresentation: Foundation.Data {
+      get throws
+    }
+    public var derRepresentation: Foundation.Data {
+      get throws
+    }
+  }
+}
+extension libsecp256k1.secp256k1.Signing {
+  public struct ECDSASigner {
+  }
+}
+extension libsecp256k1.secp256k1.Signing.ECDSASigner {
+  public func recoverableSignature<D>(for digest: D) throws -> libsecp256k1.secp256k1.Recovery.ECDSASignature where D : libsecp256k1.Digest
+  public func signature<D>(for digest: D) throws -> libsecp256k1.secp256k1.Signing.ECDSASignature where D : libsecp256k1.Digest
+  public func recoverableSignature<D>(for data: D) throws -> libsecp256k1.secp256k1.Recovery.ECDSASignature where D : Foundation.DataProtocol
+  public func signature<D>(for data: D) throws -> libsecp256k1.secp256k1.Signing.ECDSASignature where D : Foundation.DataProtocol
+}
+extension libsecp256k1.secp256k1.Signing {
+  public struct ECDSAValidator {
+  }
+}
+extension libsecp256k1.secp256k1.Signing.ECDSAValidator {
+  public func isValidSignature<D>(_ signature: libsecp256k1.secp256k1.Signing.ECDSASignature, for digest: D) -> Swift.Bool where D : libsecp256k1.Digest
+  public func isValidSignature<D>(_ signature: libsecp256k1.secp256k1.Signing.ECDSASignature, for data: D) -> Swift.Bool where D : Foundation.DataProtocol
+}
+extension libsecp256k1.secp256k1 {
+  public enum KeyAgreement {
+    public struct PublicKey {
+      public init<D>(rawRepresentation data: D, format: libsecp256k1.secp256k1.Format = .compressed) throws where D : Foundation.ContiguousBytes
+      public var xonly: libsecp256k1.secp256k1.KeyAgreement.XonlyKey {
+        get
+      }
+      public var rawRepresentation: Foundation.Data {
+        get
+      }
+    }
+    public struct XonlyKey {
+      public var rawRepresentation: Foundation.Data {
+        get
+      }
+      public var parity: Swift.Bool {
+        get
+      }
+    }
+    public struct PrivateKey {
+      public init(format: libsecp256k1.secp256k1.Format = .compressed) throws
+      public init<D>(rawRepresentation data: D, format: libsecp256k1.secp256k1.Format = .compressed) throws where D : Foundation.ContiguousBytes
+      public var publicKey: libsecp256k1.secp256k1.KeyAgreement.PublicKey {
+        get
+      }
+      public var rawRepresentation: Foundation.Data {
+        get
+      }
+    }
+  }
+}
+extension libsecp256k1.secp256k1.KeyAgreement.PrivateKey {
+  public typealias HashFunctionType = @convention(c) (Swift.UnsafeMutablePointer<Swift.UInt8>?, Swift.UnsafePointer<Swift.UInt8>?, Swift.UnsafePointer<Swift.UInt8>?, Swift.UnsafeMutableRawPointer?) -> Swift.Int32
+  public func sharedSecretFromKeyAgreement(with publicKeyShare: libsecp256k1.secp256k1.KeyAgreement.PublicKey, handler: libsecp256k1.secp256k1.KeyAgreement.PrivateKey.HashFunctionType? = nil, data: Swift.UnsafeMutableRawPointer? = nil) throws -> libsecp256k1.SharedSecret
+}
+public enum secp256k1Error : Swift.Error {
+  case incorrectKeySize
+  case incorrectParameterSize
+  case underlyingCryptoError
+  public static func == (a: libsecp256k1.secp256k1Error, b: libsecp256k1.secp256k1Error) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Digest : Foundation.ContiguousBytes, Swift.CustomStringConvertible, Swift.Hashable, Swift.Sequence where Self.Element == Swift.UInt8 {
+  static var byteCount: Swift.Int { get }
+}
+extension libsecp256k1.Digest {
+  public func makeIterator() -> Swift.Array<Swift.UInt8>.Iterator
+}
+extension libsecp256k1.Digest {
+  public static func == (lhs: Self, rhs: Self) -> Swift.Bool
+  public static func == <D>(lhs: Self, rhs: D) -> Swift.Bool where D : Foundation.DataProtocol
+  public var description: Swift.String {
+    get
+  }
+}
+public enum SHA256 {
+  public static func hash<D>(data: D) -> libsecp256k1.SHA256Digest where D : Foundation.DataProtocol
+  public static func taggedHash<D>(tag: [Swift.UInt8], data: D) throws -> libsecp256k1.SHA256Digest where D : Foundation.DataProtocol
+}
+extension libsecp256k1.secp256k1 {
+  public enum Recovery {
+    public struct PublicKey {
+      public init<D>(_ data: D, signature: libsecp256k1.secp256k1.Recovery.ECDSASignature, format: libsecp256k1.secp256k1.Format = .compressed) throws where D : Foundation.DataProtocol
+      public init<D>(_ digest: D, signature: libsecp256k1.secp256k1.Recovery.ECDSASignature, format: libsecp256k1.secp256k1.Format = .compressed) throws where D : libsecp256k1.Digest
+      public var rawRepresentation: Foundation.Data {
+        get
+      }
+    }
+  }
+}
+extension libsecp256k1.secp256k1.Recovery {
+  public struct ECDSACompactSignature {
+    public let signature: Foundation.Data
+    public let recoveryId: Swift.Int32
+  }
+  public struct ECDSASignature : Foundation.ContiguousBytes {
+    public var rawRepresentation: Foundation.Data
+    public init<D>(rawRepresentation: D) throws where D : Foundation.DataProtocol
+    public init<D>(compactRepresentation: D, recoveryId: Swift.Int32) throws where D : Foundation.DataProtocol
+    public func withUnsafeBytes<R>(_ body: (Swift.UnsafeRawBufferPointer) throws -> R) rethrows -> R
+    public var compactRepresentation: libsecp256k1.secp256k1.Recovery.ECDSACompactSignature {
+      get throws
+    }
+    public var normalize: libsecp256k1.secp256k1.Signing.ECDSASignature {
+      get throws
+    }
+  }
+}
+public enum secp256k1 {
+}
+extension libsecp256k1.secp256k1 {
+  public struct Context : Swift.OptionSet {
+    public let rawValue: Swift.UInt32
+    public init(rawValue: Swift.UInt32)
+    public static let none: libsecp256k1.secp256k1.Context
+    public static let sign: libsecp256k1.secp256k1.Context
+    public static let verify: libsecp256k1.secp256k1.Context
+    public static func create(_ context: libsecp256k1.secp256k1.Context = .none) throws -> Swift.OpaquePointer
+    public static let raw: Swift.OpaquePointer
+    public typealias ArrayLiteralElement = libsecp256k1.secp256k1.Context
+    public typealias Element = libsecp256k1.secp256k1.Context
+    public typealias RawValue = Swift.UInt32
+  }
+}
+extension libsecp256k1.secp256k1 {
+  public enum Format : Swift.UInt32 {
+    case compressed, uncompressed
+    public var length: Swift.Int {
+      get
+    }
+    public var rawValue: Swift.UInt32 {
+      get
+    }
+    public init?(rawValue: Swift.UInt32)
+    public typealias RawValue = Swift.UInt32
+  }
+}
+extension libsecp256k1.secp256k1 {
+  @usableFromInline
+  internal enum CurveDetails {
+    @inlinable internal static var coordinateByteCount: Swift.Int {
+      get {
+            16
+        }
+    }
+  }
+  @usableFromInline
+  internal enum ByteDetails {
+    @inlinable internal static var count: Swift.Int {
+      get {
+            32
+        }
+    }
+  }
+}
+@usableFromInline
+internal struct PrivateKeyImplementation {
+  @usableFromInline
+  internal let _publicBytes: [Swift.UInt8]
+  @usableFromInline
+  internal let _xonlyBytes: [Swift.UInt8]
+  @usableFromInline
+  internal let _format: libsecp256k1.secp256k1.Format
+  @usableFromInline
+  internal var _keyParity: Swift.Int32
+  @usableFromInline
+  internal var publicKey: libsecp256k1.PublicKeyImplementation {
+    get
+  }
+  @usableFromInline
+  internal var rawRepresentation: Foundation.Data {
+    get
+  }
+  @usableFromInline
+  internal init(format: libsecp256k1.secp256k1.Format = .compressed) throws
+}
+@usableFromInline
+internal struct PublicKeyImplementation {
+  @usableFromInline
+  internal let bytes: [Swift.UInt8]
+  @usableFromInline
+  internal let _xonlyBytes: [Swift.UInt8]
+  @usableFromInline
+  internal let _keyParity: Swift.Int32
+  @usableFromInline
+  internal var xonly: libsecp256k1.XonlyKeyImplementation {
+    get
+  }
+  @usableFromInline
+  internal var rawRepresentation: Foundation.Data {
+    get
+  }
+  @usableFromInline
+  internal let format: libsecp256k1.secp256k1.Format
+  @usableFromInline
+  internal init<D>(rawRepresentation data: D, format: libsecp256k1.secp256k1.Format) throws where D : Foundation.ContiguousBytes
+  @usableFromInline
+  internal init(_ bytes: [Swift.UInt8], xonly: [Swift.UInt8], keyParity: Swift.Int32, format: libsecp256k1.secp256k1.Format)
+  @usableFromInline
+  internal init<D>(rawRepresentation data: D, xonly: D, keyParity: Swift.Int32, format: libsecp256k1.secp256k1.Format) where D : Foundation.ContiguousBytes
+  @usableFromInline
+  internal init(xonlyKey: libsecp256k1.XonlyKeyImplementation)
+  @usableFromInline
+  internal init<D>(_ digest: D, signature: libsecp256k1.secp256k1.Recovery.ECDSASignature, format: libsecp256k1.secp256k1.Format) throws where D : libsecp256k1.Digest
+}
+@usableFromInline
+internal struct XonlyKeyImplementation {
+  @usableFromInline
+  internal let bytes: [Swift.UInt8]
+  @usableFromInline
+  internal var rawRepresentation: Foundation.Data {
+    get
+  }
+  @usableFromInline
+  internal let keyParity: Swift.Int32
+  @usableFromInline
+  internal init<D>(rawRepresentation data: D, keyParity: Swift.Int32) where D : Foundation.ContiguousBytes
+  @usableFromInline
+  internal init(_ bytes: [Swift.UInt8], keyParity: Swift.Int32)
+}
+extension libsecp256k1.secp256k1 {
+  public enum Signing {
+    public struct PrivateKey : Swift.Equatable {
+      public var ecdsa: libsecp256k1.secp256k1.Signing.ECDSASigner {
+        get
+      }
+      public var schnorr: libsecp256k1.secp256k1.Signing.SchnorrSigner {
+        get
+      }
+      public var publicKey: libsecp256k1.secp256k1.Signing.PublicKey {
+        get
+      }
+      public var rawRepresentation: Foundation.Data {
+        get
+      }
+      public init(format: libsecp256k1.secp256k1.Format = .compressed) throws
+      public init<D>(rawRepresentation data: D, format: libsecp256k1.secp256k1.Format = .compressed) throws where D : Foundation.ContiguousBytes
+      public static func == (lhs: libsecp256k1.secp256k1.Signing.PrivateKey, rhs: libsecp256k1.secp256k1.Signing.PrivateKey) -> Swift.Bool
+    }
+    public struct PublicKey {
+      public var rawRepresentation: Foundation.Data {
+        get
+      }
+      public var ecdsa: libsecp256k1.secp256k1.Signing.ECDSAValidator {
+        get
+      }
+      public var schnorr: libsecp256k1.secp256k1.Signing.SchnorrValidator {
+        get
+      }
+      public var xonly: libsecp256k1.secp256k1.Signing.XonlyKey {
+        get
+      }
+      public var format: libsecp256k1.secp256k1.Format {
+        get
+      }
+      public init(xonlyKey: libsecp256k1.secp256k1.Signing.XonlyKey)
+      public init<D>(rawRepresentation data: D, format: libsecp256k1.secp256k1.Format) throws where D : Foundation.ContiguousBytes
+      public init(rawRepresentation data: [Swift.UInt8], format: libsecp256k1.secp256k1.Format) throws
+    }
+    public struct XonlyKey {
+      public var bytes: [Swift.UInt8] {
+        get
+      }
+      public var parity: Swift.Bool {
+        get
+      }
+      public init<D>(rawRepresentation data: D, keyParity: Swift.Int32) where D : Foundation.ContiguousBytes
+    }
+  }
+}
+public typealias SHA256Digest = libsecp256k1.HashDigest
+public struct HashDigest : libsecp256k1.Digest {
+  public init(_ output: [Swift.UInt8])
+  public static var byteCount: Swift.Int {
+    get
+    set
+  }
+  public func withUnsafeBytes<R>(_ body: (Swift.UnsafeRawBufferPointer) throws -> R) rethrows -> R
+  public var description: Swift.String {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias Element = Swift.UInt8
+  public typealias Iterator = Swift.Array<Swift.UInt8>.Iterator
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension libsecp256k1.secp256k1 {
+  @usableFromInline
+  internal enum Schnorr {
+    @inlinable internal static var signatureByteCount: Swift.Int {
+      get { 64 }
+    }
+    @inlinable internal static var xonlyByteCount: Swift.Int {
+      get { 32 }
+    }
+    @inlinable internal static var magic: (Swift.UInt8, Swift.UInt8, Swift.UInt8, Swift.UInt8) {
+      get { (218, 111, 179, 140) }
+    }
+  }
+}
+extension libsecp256k1.secp256k1.Signing {
+  public struct SchnorrSignature : Foundation.ContiguousBytes {
+    public var rawRepresentation: Foundation.Data
+    public init<D>(rawRepresentation: D) throws where D : Foundation.DataProtocol
+    public func withUnsafeBytes<R>(_ body: (Swift.UnsafeRawBufferPointer) throws -> R) rethrows -> R
+  }
+}
+extension libsecp256k1.secp256k1.Signing {
+  public struct SchnorrSigner {
+  }
+}
+extension libsecp256k1.secp256k1.Signing.SchnorrSigner {
+  public func signature<D>(for data: D) throws -> libsecp256k1.secp256k1.Signing.SchnorrSignature where D : Foundation.DataProtocol
+  public func signature<D>(for digest: D) throws -> libsecp256k1.secp256k1.Signing.SchnorrSignature where D : libsecp256k1.Digest
+  public func signature<D>(for data: D, auxiliaryRand: [Swift.UInt8]) throws -> libsecp256k1.secp256k1.Signing.SchnorrSignature where D : Foundation.DataProtocol
+  public func signature<D>(for digest: D, auxiliaryRand: [Swift.UInt8]) throws -> libsecp256k1.secp256k1.Signing.SchnorrSignature where D : libsecp256k1.Digest
+  public func signature(message: inout [Swift.UInt8], auxiliaryRand: Swift.UnsafeMutableRawPointer?) throws -> libsecp256k1.secp256k1.Signing.SchnorrSignature
+}
+extension libsecp256k1.secp256k1.Signing {
+  public struct SchnorrValidator {
+  }
+}
+extension libsecp256k1.secp256k1.Signing.SchnorrValidator {
+  public func isValidSignature<D>(_ signature: libsecp256k1.secp256k1.Signing.SchnorrSignature, for data: D) -> Swift.Bool where D : Foundation.DataProtocol
+  public func isValidSignature<D>(_ signature: libsecp256k1.secp256k1.Signing.SchnorrSignature, for digest: D) -> Swift.Bool where D : libsecp256k1.Digest
+  public func isValid(_ signature: libsecp256k1.secp256k1.Signing.SchnorrSignature, for message: inout [Swift.UInt8]) -> Swift.Bool
+}
+extension libsecp256k1.secp256k1Error : Swift.Equatable {}
+extension libsecp256k1.secp256k1Error : Swift.Hashable {}
+extension libsecp256k1.secp256k1.Format : Swift.Equatable {}
+extension libsecp256k1.secp256k1.Format : Swift.Hashable {}
+extension libsecp256k1.secp256k1.Format : Swift.RawRepresentable {}
