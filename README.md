@@ -120,28 +120,47 @@ class YourViewController: UIViewController, DocumentSubmissionListener {
 
 ```
 
-3. Instantiate a `PingOneVerifyClient.Builder` and set its `listener` and `rootViewController` **(Required)**
+3. Extend [BackActionListener](#BackActionListener-callbacks) protocol and its functions
+
+
+```
+class YourViewController: UIViewController, BackActionListener {
+
+   func onBackAction(exitFlow: @escaping (Bool) -> Void) {
+        // Callback when user taps on back button
+        // Show alert if needed to confirm exit
+        // exitFlow(true) to exit the flow
+        // exitFlow(false) to stay in the flow
+    }
+
+}
+
+```
+
+4. Instantiate a `PingOneVerifyClient.Builder` and set its `listener`, `BackActionHandler` and `rootViewController` **(Required)**
 
 
 ```
 PingOneVerifyClient.Builder()
     .setListener(self)
     .setRootViewController(self)
+    .setBackActionHandler(self)
 
 ```
 
-4. Optionally, you can set an explicit **qrString** using the `PingOneVerifyClient.Builder`
+5. Optionally, you can set an explicit **qrString** using the `PingOneVerifyClient.Builder`
 
 
 ```
 PingOneVerifyClient.Builder()
     .setListener(self)
+    .setBackActionHandler(self)
     .setRootViewController(self)
     .setQrString(qrString: "https://api.pingone.com...")
 
 ```
 
-5. Optionally, you can set a [Selfie Capture Settings](#selfiecapturesettings) with your preference using the `PingOneVerifyClient.Builder`.
+6. Optionally, you can set a [Selfie Capture Settings](#selfiecapturesettings) with your preference using the `PingOneVerifyClient.Builder`.
 
 
 ```
@@ -154,12 +173,13 @@ PingOneVerifyClient.Builder()
 
 ```
 
-6. Start Verification Process
+7. Start Verification Process
 
 ```
 PingOneVerifyClient.Builder()
     .setListener(self)
     .setRootViewController(self)
+    .setBackActionHandler(self)
     .startVerification { pingOneVerifyClient, clientBuilderError in
         if let pingOneVerifyClient = pingOneVerifyClient {
             // Handle pingOneVerifyClient
@@ -221,10 +241,35 @@ func onSubmissionError(error: DocumentSubmissionError) {
 
 ```
 
+#### BackActionListener Callbacks
 
-### Class Reference
 
-### DocumentSubmissionResponse
+
+1. `onBackAction(exitFlow: @escaping (Bool) -> Void)`
+
+
+    * Called whenever a user taps back.
+    * Return the exitFlow completion handler with `true` to exit the flow or `false` to stay in the flow.
+```
+    func onBackAction(exitFlow: @escaping (Bool) -> Void) {
+        let alertController = UIAlertController(title: "Cancel Transaction", message: "Do you want to cancel this transaction?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { _ in
+            exitFlow(true)
+        }
+        let noAction = UIAlertAction(title: "No", style: .cancel) { _ in
+            exitFlow(false)
+        }
+        alertController.addAction(noAction)
+        alertController.addAction(yesAction)
+        self.presentedViewController?.present(alertController, animated: true)
+    }
+}
+
+```
+
+#### Class Reference
+
+#### DocumentSubmissionResponse
 
 `DocumentSubmissionResponse` object holds information pertaining to the document that was successfully submitted to the ID Verification service.
 
