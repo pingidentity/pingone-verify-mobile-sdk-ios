@@ -2415,70 +2415,9 @@
         "name": "IDLiveFaceDetection",
         "printedName": "IDLiveFaceDetection",
         "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "IDLiveFaceCamera",
         "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "IDLiveFaceDetection",
-        "printedName": "IDLiveFaceDetection",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "IDLiveFaceDetection",
-        "printedName": "IDLiveFaceDetection",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera",
-        "declAttributes": [
-          "RawDocComment"
+          "AccessControl"
         ]
       },
       {
@@ -2496,7 +2435,80 @@
         "name": "IDLiveFaceDetection",
         "printedName": "IDLiveFaceDetection",
         "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "IDLiveFaceDetection",
+        "printedName": "IDLiveFaceDetection",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "IDLiveFaceDetection",
+        "printedName": "IDLiveFaceDetection",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -2520,7 +2532,10 @@
         "name": "IDLiveFaceDetection",
         "printedName": "IDLiveFaceDetection",
         "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -3196,8 +3211,8 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "IDLiveFaceCamera",
         "declAttributes": [
@@ -3216,7 +3231,10 @@
         "name": "IDLiveFaceDetection",
         "printedName": "IDLiveFaceDetection",
         "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -9264,6 +9282,208 @@
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createIADBundle",
+            "printedName": "createIADBundle(key:keyId:externalMeta:payloadSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayloadSize",
+                    "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize",
+                    "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC11PayloadSizeO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10Foundation4DataVAKSg_SSSgAmC07PayloadN0OSgtYaKF",
+            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10Foundation4DataVAKSg_SSSgAmC07PayloadN0OSgtYaKF",
+            "moduleName": "IDLiveFaceCamera",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createIADBundle",
+            "printedName": "createIADBundle(key:keyId:externalMeta:payloadSize:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PayloadSize",
+                    "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize",
+                    "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC11PayloadSizeO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<Foundation.Data, any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<Foundation.Data, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10completiony10Foundation4DataVSg_SSSgAnC07PayloadN0OSgys6ResultOyALs5Error_pGctF",
+            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10completiony10Foundation4DataVSg_SSSgAnC07PayloadN0OSgys6ResultOyALs5Error_pGctF",
+            "moduleName": "IDLiveFaceCamera",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -11750,6 +11970,26 @@
             "usr": "s:SQ",
             "mangledName": "$sSQ"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "IDLiveFaceDetection",
+        "printedName": "IDLiveFaceDetection",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
@@ -18504,7 +18744,10 @@
         "name": "IDLiveFaceDetection",
         "printedName": "IDLiveFaceDetection",
         "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -19763,36 +20006,43 @@
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
+      "kind": "StringLiteral",
+      "offset": 9117,
+      "length": 32,
+      "value": "\"idrnd.IDLiveFaceCamera.serialQ\""
+    },
+    {
+      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 20660,
+      "offset": 20740,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 20955,
+      "offset": 21035,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 21094,
+      "offset": 21174,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 21347,
+      "offset": 21427,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 22086,
+      "offset": 22166,
       "length": 5,
       "value": "false"
     },

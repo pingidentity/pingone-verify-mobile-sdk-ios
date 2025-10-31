@@ -326,6 +326,8 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
     @discardableResult
     @objc public func setUIAppearance(_ appearanceSettings: PingOneVerify.UIAppearanceSettings) -> PingOneVerify.PingOneVerifyClient.Builder
     @discardableResult
+    @objc public func setBackActionHandler(_ listener: any PingOneVerify.BackActionListener) -> PingOneVerify.PingOneVerifyClient.Builder
+    @discardableResult
     public func setLanguagePackProvider(languagePackProvider: any NeoInterfaces.LanguagePackProviderContract) -> PingOneVerify.PingOneVerifyClient.Builder
     @objc public func startVerification(onComplete: @escaping (_ pingOneVerifyClient: PingOneVerify.PingOneVerifyClient?, _ error: PingOneVerify.ClientBuilderError?) -> Swift.Void)
     @objc deinit
@@ -570,6 +572,9 @@ extension BlinkID.MBVizResult : Swift.Encodable {
 public class SdkVersions {
   public init()
   @objc deinit
+}
+@objc public protocol BackActionListener {
+  @objc func onBackAction(exitFlow: @escaping (Swift.Bool) -> Swift.Void)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class CameraView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)

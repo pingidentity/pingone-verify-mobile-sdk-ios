@@ -309,6 +309,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+SWIFT_PROTOCOL("_TtP13PingOneVerify18BackActionListener_")
+@protocol BackActionListener
+- (void)onBackActionWithExitFlow:(void (^ _Nonnull)(BOOL))exitFlow;
+@end
+
 SWIFT_CLASS("_TtC13PingOneVerify16ButtonAppearance")
 @interface ButtonAppearance : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -493,6 +498,7 @@ SWIFT_CLASS("_TtCC13PingOneVerify19PingOneVerifyClient7Builder")
 - (Builder * _Nonnull)setQrStringWithQrString:(NSString * _Nonnull)qrString;
 - (Builder * _Nonnull)setDocumentCaptureSettingsWithDocumentCaptureSettings:(NSArray<id <DocumentCaptureSettingsContract>> * _Nonnull)documentCaptureSettings;
 - (Builder * _Nonnull)setUIAppearance:(UIAppearanceSettings * _Nonnull)appearanceSettings;
+- (Builder * _Nonnull)setBackActionHandler:(id <BackActionListener> _Nonnull)listener;
 - (void)startVerificationOnComplete:(void (^ _Nonnull)(PingOneVerifyClient * _Nullable, ClientBuilderError * _Nullable))onComplete;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

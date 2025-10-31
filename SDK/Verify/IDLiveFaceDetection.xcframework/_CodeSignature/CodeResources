@@ -10,11 +10,11 @@
 		</data>
 		<key>ios-arm64/IDLiveFaceDetection.framework/IDLiveFaceDetection</key>
 		<data>
-		fkF+GVR1nlkQhlWH9jJ07cEzxOs=
+		klA/HuX4QCKm9osXj8MOgq8zEks=
 		</data>
 		<key>ios-arm64/IDLiveFaceDetection.framework/Info.plist</key>
 		<data>
-		HKdkWws2VN8gx9zB5UhKelot0pk=
+		KAmFS5BlKq6GnuJcOHS36hYaHws=
 		</data>
 		<key>ios-arm64/IDLiveFaceDetection.framework/Modules/module.modulemap</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>ios-arm64/IDLiveFaceDetection.framework/_CodeSignature/CodeResources</key>
 		<data>
-		OK5xh2hysTef0SsbEHFKHcb1JXg=
+		sKaP/nf1xmVoQYXss/enRtHbD3A=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/Headers/idlf_detection.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/IDLiveFaceDetection</key>
 		<data>
-		pzjLQ9XGSoK8HqT7HzQc40buV4E=
+		1CxF43N0AUeotKAVyM6lfnXAhWs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/Info.plist</key>
 		<data>
-		NlZ5oHk5pHT9NmQ1L4uydiiQRVM=
+		+2GLjA/4dGVdjhgbyKEhERT0gmI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/Modules/module.modulemap</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/_CodeSignature/CodeResources</key>
 		<data>
-		l1YdzO8uv9P6VXcgsaILIktoAys=
+		Iz8e8CwIGgRUacPioTb48ImqCSs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -62,22 +62,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fkF+GVR1nlkQhlWH9jJ07cEzxOs=
+			klA/HuX4QCKm9osXj8MOgq8zEks=
 			</data>
 			<key>hash2</key>
 			<data>
-			avn0+9xvn2IvPaPP3qm1jR5D3dzXEgDuy8E04/ul+iI=
+			nbJ+kEtonCfri7TjP0HoG++Geykfc8KD4nC0O93Q/zo=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceDetection.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HKdkWws2VN8gx9zB5UhKelot0pk=
+			KAmFS5BlKq6GnuJcOHS36hYaHws=
 			</data>
 			<key>hash2</key>
 			<data>
-			SU1yNYPvVantdxIlbfBoQh4d7+AV/qVHbclNH9q76so=
+			gRoDZHtuvHe28ujFR+89L07XicrDDTs0uMqoHynIBg0=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceDetection.framework/Modules/module.modulemap</key>
@@ -95,11 +95,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OK5xh2hysTef0SsbEHFKHcb1JXg=
+			sKaP/nf1xmVoQYXss/enRtHbD3A=
 			</data>
 			<key>hash2</key>
 			<data>
-			Tkcy4XnZQ/0w9HcSfZsJA+CDM7AmNRQtcuos6+2n0kY=
+			0HnfYqcfbIZTj3LZr64EGsSpOobLGhqERWoTaFVK4mY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/Headers/idlf_detection.h</key>
@@ -117,22 +117,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pzjLQ9XGSoK8HqT7HzQc40buV4E=
+			1CxF43N0AUeotKAVyM6lfnXAhWs=
 			</data>
 			<key>hash2</key>
 			<data>
-			wOX+WKtBAm7wV5Na5YAqMpeElLXFR38Mt9OMJUlPMuk=
+			E4r41uq9/M57pmyHCHFCMCu1VVrd2cJDAfmdQwRUBsg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NlZ5oHk5pHT9NmQ1L4uydiiQRVM=
+			+2GLjA/4dGVdjhgbyKEhERT0gmI=
 			</data>
 			<key>hash2</key>
 			<data>
-			iC2hYcQ1CsF/x37+/usoNb51fEuLPM/6ZaSdaoAVELU=
+			ETvSLFqOjxstzmdnjEoLYoXyHJtWwv/aM+J+HbMzhHE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/Modules/module.modulemap</key>
@@ -150,11 +150,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l1YdzO8uv9P6VXcgsaILIktoAys=
+			Iz8e8CwIGgRUacPioTb48ImqCSs=
 			</data>
 			<key>hash2</key>
 			<data>
-			IDXgwJlZhd+AZqGiq6fHMQbwXYPhhAv08sg+JECJh+Q=
+			RMa1zQK9jpwz0m/1Z+sFUCOgnYJJy21Lu6smzDnmhXo=
 			</data>
 		</dict>
 	</dict>
