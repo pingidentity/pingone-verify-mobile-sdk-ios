@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		P5gGYDm+W5XPI9r+ZH7zOIQGEo4=
+		g1+6wmmAnBU9mDzWCmaajmLzWQ8=
 		</data>
 		<key>Modules/LanguagePackProvider.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		eyLnQIGvgEeW02FJ21Z74qyCWyo=
+		XTT5aCHkmnt6Zv6M3Ej9T4jAp5c=
 		</data>
 		<key>Modules/LanguagePackProvider.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/LanguagePackProvider.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		3b06IFVdgHMKbn3Fqb7Vqbq7yuE=
+		sUuWm0Ua8TXWxcli64VgTEMF7fA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GuRhfd3LdhlIUq3r5Pjm8ajGafnjmbqvSZGQlsal+4o=
+			2rrMpoawQKIXOCnIQ4Gv8Ip96gGdZxl0YLoZnkW3OBs=
 			</data>
 		</dict>
 		<key>Modules/LanguagePackProvider.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y7cpyovbwGHhsoFyOp0lanPuy7EtOehSKMzdFLV5O8U=
+			th/cfkeX+RfKzGZkIvV7OLEboTFvCdmqyvZaZhvqyY8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

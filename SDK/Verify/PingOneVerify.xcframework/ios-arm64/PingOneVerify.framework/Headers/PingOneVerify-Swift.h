@@ -361,6 +361,7 @@ SWIFT_PROTOCOL("_TtP13PingOneVerify31DocumentCaptureSettingsContract_")
 @property (nonatomic) BOOL optional;
 @property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
 @property (nonatomic) BOOL isAuthflow;
+@property (nonatomic) BOOL isRetry;
 @end
 
 typedef SWIFT_ENUM(NSInteger, DocumentClass, open) {
@@ -423,6 +424,7 @@ SWIFT_CLASS("_TtC13PingOneVerify20EmailCaptureSettings")
 @property (nonatomic) BOOL optional;
 @property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
 @property (nonatomic) BOOL isAuthflow;
+@property (nonatomic) BOOL isRetry;
 - (nonnull instancetype)initWithOptional:(BOOL)optional keyboardHint:(NSString * _Nullable)keyboardHint regex:(NSString * _Nullable)regex requirements:(id <RequirementsProtocol> _Nullable)requirements OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -436,6 +438,7 @@ SWIFT_CLASS("_TtC13PingOneVerify17IdCaptureSettings")
 @property (nonatomic) BOOL optional;
 @property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
 @property (nonatomic) BOOL isAuthflow;
+@property (nonatomic) BOOL isRetry;
 - (nonnull instancetype)initWithDocumentType:(enum DocumentClass)documentType optional:(BOOL)optional requirements:(id <RequirementsProtocol> _Nullable)requirements OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -472,6 +475,7 @@ SWIFT_CLASS("_TtC13PingOneVerify20PhoneCaptureSettings")
 @property (nonatomic) BOOL optional;
 @property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
 @property (nonatomic) BOOL isAuthflow;
+@property (nonatomic) BOOL isRetry;
 - (nonnull instancetype)initWithOptional:(BOOL)optional keyboardHint:(NSString * _Nullable)keyboardHint regex:(NSString * _Nullable)regex requirements:(id <RequirementsProtocol> _Nullable)requirements OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -523,6 +527,7 @@ SWIFT_CLASS("_TtC13PingOneVerify21SelfieCaptureSettings")
 @property (nonatomic) NSInteger totalSteps SWIFT_DEPRECATED_MSG("Will be removed in upcoming versions");
 @property (nonatomic) BOOL optional;
 @property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
+@property (nonatomic) BOOL isRetry;
 - (nonnull instancetype)initWithCaptureTime:(NSTimeInterval)captureTime shouldCaptureAfterTimeout:(BOOL)shouldCaptureAfterTimeout optional:(BOOL)optional isAuthflow:(BOOL)isAuthflow requirements:(id <RequirementsProtocol> _Nullable)requirements OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("Will be removed in upcoming versions");
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -573,6 +578,7 @@ SWIFT_CLASS("_TtC13PingOneVerify20VoiceCaptureSettings")
 @property (nonatomic) BOOL optional;
 @property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
 @property (nonatomic) BOOL isAuthflow;
+@property (nonatomic) BOOL isRetry;
 - (nonnull instancetype)initWithOptional:(BOOL)optional requirements:(id <RequirementsProtocol> _Nullable)requirements isTextDependent:(BOOL)isTextDependent OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

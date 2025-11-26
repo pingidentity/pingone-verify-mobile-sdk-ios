@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BwvnkwILsdXh1VWO3ZrgsVTTqzM=
+		4XgXqof6w3BwI3gGggifBKKDcNc=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		y9JR1ge7Rc0FkekQHqAiOhUySZU=
+		dxCldeKypkvYtUyjk2Knuwh3RxM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cEnm2syP93Fo5zb92rGBEJt3jGA3CXv7LmCqKpdW2Mc=
+			p7em8AqP2L+ILiUjFjJhUcCwnHciR2bc9+dYP7HzY3w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
