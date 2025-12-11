@@ -98,7 +98,7 @@ extension ViewController: DocumentSubmissionListener, BackActionListener {
     
     func onSubmissionError(error: DocumentSubmissionError) {
         logerror(error.localizedDescription ?? "")
-        let alertController = UIAlertController(title: "Document Submission Error", message: "Error Code: \(error.getErrorCode())\n\nError Message: \(error.getErrorMessage())", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Document Submission Error", message: "Error Code: \(error.getErrorCode())\n\nError Message: \(error.localizedDescription ?? error.getErrorMessage())", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: .default))
         DispatchQueue.main.async {
             self.presentedViewController?.dismiss(animated: true, completion: {

@@ -29,10 +29,10 @@
 "idv_aadhaarOtp_errorMsg" = "Incorrect passcode. Try again.";
 "idv_documentCapture_header_type" = "Confirm ID Type";
 "idv_documentCapture_description_type" = "We couldn’t identify your ID.\nSelect the ID type to continue.";
-"idv_documentCapture_option_aadhar" = "Indian Aadhaar Card";
-"idv_documentCapture_option_driverLicense" = "Driver’s License";
+"idv_documentCapture_option_aadhaar" = "Indian Aadhaar Card";
+"idv_documentCapture_option_license" = "Driver’s License";
 "idv_documentCapture_option_passport" = "Passport";
-"idv_documentCapture_option_passportCard" = "Passport Card";
+"idv_documentCapture_option_card" = "Passport Card";
 "idv_documentCapture_option_other" = "Other";
 
 // Selfie
