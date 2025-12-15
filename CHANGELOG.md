@@ -11,6 +11,7 @@
 
 - Retry Screen: Clicking Cancel triggers Document Submission Error
 - UI Improvements
+- Support for the legacy selfieCaptureSettings has been discontinued. 
 
 ## v2.3.6 - November 26th, 2025
 
