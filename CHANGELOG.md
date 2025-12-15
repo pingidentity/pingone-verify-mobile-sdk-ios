@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.3.3 - October 13th, 2025
+
+### Fixed
+
+- Navigation back button color fixes.
+
+
+## v2.3.2 - October 7th, 2025
+
+### Fixed
+
+- Missing label trailing and leading constraint added for attributed string support.
+
+
+## v2.3.1 - October 3rd, 2025
+
+### Added
+
+- Rich text support added for better content formatting.
+
+
 ## v2.3.0 - August 25th, 2025
 
 ### Added
