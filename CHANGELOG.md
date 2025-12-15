@@ -1,6 +1,5 @@
 # Changelog
 
-
 ## v2.3.5 - October 31st, 2025
 
 ### Added

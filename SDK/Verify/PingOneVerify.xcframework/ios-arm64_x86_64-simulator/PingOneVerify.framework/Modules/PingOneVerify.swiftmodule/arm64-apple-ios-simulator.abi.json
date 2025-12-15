@@ -18813,6 +18813,7 @@
               },
               {
                 "kind": "Function",
+<<<<<<< HEAD
                 "name": "setBackActionHandler",
                 "printedName": "setBackActionHandler(_:)",
                 "children": [
@@ -18842,6 +18843,8 @@
               },
               {
                 "kind": "Function",
+=======
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
                 "name": "setLanguagePackProvider",
                 "printedName": "setLanguagePackProvider(languagePackProvider:)",
                 "children": [
@@ -21538,6 +21541,76 @@
       },
       {
         "kind": "Import",
+<<<<<<< HEAD
+=======
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -22196,6 +22269,7 @@
         ]
       },
       {
+<<<<<<< HEAD
         "kind": "TypeDecl",
         "name": "BackActionListener",
         "printedName": "BackActionListener",
@@ -22281,6 +22355,8 @@
         ]
       },
       {
+=======
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -27951,28 +28027,44 @@
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/DocumentSelectionViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/DocumentSelectionViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Array",
       "offset": 332,
       "length": 2,
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/Utils\/AppEventUtil.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/Utils\/AppEventUtil.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Array",
       "offset": 191,
       "length": 56,
       "value": "[\"iPhone14,7\", \"iPhone14,8\", \"iPhone15,2\", \"iPhone15,3\"]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/ProviderLicenses.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/ProviderLicenses.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Array",
       "offset": 241,
       "length": 2,
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/Request.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/Request.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 142,
       "length": 6,
@@ -28105,21 +28197,33 @@
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/PhoneCaptureSettings.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/PhoneCaptureSettings.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 702,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/AadhaarKeyMapping.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/AadhaarKeyMapping.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Dictionary",
       "offset": 222,
       "length": 136,
       "value": "[(\"v1\", [(\"frontImage\", \"Document Front\"), (\"backImage\", \"Document Back\"), (\"userConfirmedField\", \"UserConfirmedField\"), (\"ocrData\", \"ocrData\")])]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 176,
       "length": 14,
@@ -28196,28 +28300,44 @@
       "value": "\"api\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1053,
       "length": 14,
       "value": "\"internal-api\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1095,
       "length": 5,
       "value": "\"\/v1\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1133,
       "length": 2,
       "value": "\"\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1172,
       "length": 118,
@@ -28308,35 +28428,55 @@
       "value": "\"webVerificationCookie\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1976,
       "length": 5,
       "value": "\"IOS\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 2030,
       "length": 9,
       "value": "\"blinkId\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 2090,
       "length": 9,
       "value": "\"idVoice\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 2373,
       "length": 3,
       "value": "\"1\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Requirements\/OptionsRequirements.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Requirements\/OptionsRequirements.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 536,
       "length": 9,
@@ -28350,14 +28490,22 @@
       "value": "\"documentCollectionStatus\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentSubmissionResponse.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentSubmissionResponse.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 4793,
       "length": 9,
       "value": "\"aadhaar\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 176,
       "length": 14,
@@ -28413,28 +28561,44 @@
       "value": "\"application\/vnd.pingidentity.validations.resendOtp+json\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 913,
       "length": 60,
       "value": "\"application\/vnd.pingidentity.validations.skipDocument+json\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1029,
       "length": 56,
       "value": "\"multipart\/form-data; boundary=\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1084,
       "length": 1,
       "value": "\"\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewControllerWithTextField.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewControllerWithTextField.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 262,
       "length": 1,
@@ -28609,14 +28773,22 @@
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 671,
       "length": 4,
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentPayload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentPayload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 4613,
       "length": 26,
@@ -28651,14 +28823,22 @@
       "value": "[(\"v1\", [(\"phone\", \"Phone\")])]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Appearance\/UIAppearanceSettings.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Appearance\/UIAppearanceSettings.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 738,
       "length": 4,
       "value": "true"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Notification\/PingOneVerifyNotfication.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Notification\/PingOneVerifyNotfication.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 219,
       "length": 12,
@@ -28861,14 +29041,22 @@
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/EmailCaptureSettings.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/EmailCaptureSettings.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 701,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/SelfieCapture\/Generated\/DefaultColorsGenerated.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/SelfieCapture\/Generated\/DefaultColorsGenerated.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 234,
       "length": 19,
@@ -29239,21 +29427,33 @@
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 435,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 553,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/UnclassifiedDocumentKeyMapping.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/UnclassifiedDocumentKeyMapping.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Dictionary",
       "offset": 243,
       "length": 70,
@@ -29603,20 +29803,29 @@
       "value": "\"is_retry\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1157,
       "length": 22,
       "value": "\"device_language_code\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1216,
       "length": 27,
       "value": "\"s3_upload_duration_for_%@\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
       "offset": 1276,
@@ -29648,627 +29857,994 @@
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
       "offset": 1549,
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1303,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 23,
       "value": "\"is_location_collected\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
       "offset": 1625,
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1379,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 36,
       "value": "\"is_location_permission_popup_shown\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
       "offset": 1728,
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 1482,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 7,
       "value": "\"start\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 1769,
+=======
+      "offset": 1523,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 6,
       "value": "\"stop\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 1814,
+=======
+      "offset": 1568,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 11,
       "value": "\"cancelled\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 1861,
+=======
+      "offset": 1615,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 8,
       "value": "\"result\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 1937,
+=======
+      "offset": 1691,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 20,
       "value": "\"permission_granted\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2000,
+=======
+      "offset": 1754,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 19,
       "value": "\"config_resolution\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2062,
+=======
+      "offset": 1816,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 19,
       "value": "\"config_focus_mode\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2127,
+=======
+      "offset": 1881,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 22,
       "value": "\"config_flash_enabled\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2229,
+=======
+      "offset": 1983,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 20,
       "value": "\"permission_granted\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2342,
+=======
+      "offset": 2096,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 26,
       "value": "\"liveness_check_requested\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2408,
+=======
+      "offset": 2162,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 8,
       "value": "\"vendor\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2472,
+=======
+      "offset": 2226,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 24,
       "value": "\"face_detection_service\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2535,
+=======
+      "offset": 2289,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 7,
       "value": "\"start\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2580,
+=======
+      "offset": 2334,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 6,
       "value": "\"stop\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2629,
+=======
+      "offset": 2383,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 11,
       "value": "\"cancelled\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2681,
+=======
+      "offset": 2435,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 9,
       "value": "\"timeout\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2744,
+=======
+      "offset": 2498,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 22,
       "value": "\"original_selfie_size\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2812,
+=======
+      "offset": 2566,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 14,
       "value": "\"selfie_score\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2878,
+=======
+      "offset": 2632,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 20,
       "value": "\"selfie_pitch_angle\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 2949,
+=======
+      "offset": 2703,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 19,
       "value": "\"selfie_roll_angle\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3018,
+=======
+      "offset": 2772,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 18,
       "value": "\"selfie_yaw_angle\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3086,
+=======
+      "offset": 2840,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 18,
       "value": "\"selfie_face_size\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3163,
+=======
+      "offset": 2917,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 27,
       "value": "\"number_of_selfie_captured\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3231,
+=======
+      "offset": 2985,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 9,
       "value": "\"skipped\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3304,
+=======
+      "offset": 3058,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 8,
       "value": "\"vendor\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3353,
+=======
+      "offset": 3107,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 22,
       "value": "\"blink_id_sdk_version\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3418,
+=======
+      "offset": 3172,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 15,
       "value": "\"camera_params\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3477,
+=======
+      "offset": 3231,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 16,
       "value": "\"classification\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3536,
+=======
+      "offset": 3290,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 19,
       "value": "\"page_#%@_captured\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3601,
+=======
+      "offset": 3355,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 18,
       "value": "\"barcode_captured\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3661,
+=======
+      "offset": 3415,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 14,
       "value": "\"mrz_captured\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3717,
+=======
+      "offset": 3471,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 14,
       "value": "\"ocr_captured\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3766,
+=======
+      "offset": 3520,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 7,
       "value": "\"start\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3807,
+=======
+      "offset": 3561,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 6,
       "value": "\"stop\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3852,
+=======
+      "offset": 3606,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 11,
       "value": "\"cancelled\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3900,
+=======
+      "offset": 3654,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 9,
       "value": "\"timeout\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 3951,
+=======
+      "offset": 3705,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 14,
       "value": "\"total_images\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4005,
+=======
+      "offset": 3759,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 16,
       "value": "\"image_#%@_size\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4062,
+=======
+      "offset": 3816,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 17,
       "value": "\"image_#%@_score\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4123,
+=======
+      "offset": 3877,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 20,
       "value": "\"image_#%@_has_face\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4184,
+=======
+      "offset": 3938,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 13,
       "value": "\"glare_found\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4234,
+=======
+      "offset": 3988,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 9,
       "value": "\"skipped\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4314,
+=======
+      "offset": 4068,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 7,
       "value": "\"start\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4357,
+=======
+      "offset": 4111,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 6,
       "value": "\"stop\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4407,
+=======
+      "offset": 4161,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 14,
       "value": "\"requirements\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4463,
+=======
+      "offset": 4217,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 12,
       "value": "\"otp_result\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4521,
+=======
+      "offset": 4275,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 16,
       "value": "\"number_of_otps\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4578,
+=======
+      "offset": 4332,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 11,
       "value": "\"otp_start\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4629,
+=======
+      "offset": 4383,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 10,
       "value": "\"otp_stop\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4682,
+=======
+      "offset": 4436,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 13,
       "value": "\"otp_timeout\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4740,
+=======
+      "offset": 4494,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 15,
       "value": "\"otp_cancelled\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4796,
+=======
+      "offset": 4550,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 11,
       "value": "\"otp_tries\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4846,
+=======
+      "offset": 4600,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 9,
       "value": "\"skipped\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4896,
+=======
+      "offset": 4650,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 11,
       "value": "\"cancelled\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 4980,
+=======
+      "offset": 4734,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 7,
       "value": "\"start\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5024,
+=======
+      "offset": 4778,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 6,
       "value": "\"stop\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5076,
+=======
+      "offset": 4830,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 15,
       "value": "\"is_enrollment\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5144,
+=======
+      "offset": 4898,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 22,
       "value": "\"number_of_recordings\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5212,
+=======
+      "offset": 4966,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 29,
       "value": "\"recording_#%@_speech_length\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5290,
+=======
+      "offset": 5044,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 28,
       "value": "\"recording_#%@_audio_length\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5369,
+=======
+      "offset": 5123,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 24,
       "value": "\"recording_#%@_captured\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5439,
+=======
+      "offset": 5193,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 19,
       "value": "\"recording_#%@_snr\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5507,
+=======
+      "offset": 5261,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 22,
       "value": "\"recording_#%@_failed\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5578,
+=======
+      "offset": 5332,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 18,
       "value": "\"recording_phrase\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5652,
+=======
+      "offset": 5406,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 25,
       "value": "\"recording_phrase_locale\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5762,
+=======
+      "offset": 5516,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 38,
       "value": "\"data_mismatch_between_front_and_back\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5835,
+=======
+      "offset": 5589,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 12,
       "value": "\"id_too_far\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5896,
+=======
+      "offset": 5650,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 26,
       "value": "\"id_full_side_not_visible\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 5966,
+=======
+      "offset": 5720,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 21,
       "value": "\"id_flashlight_glare\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6031,
+=======
+      "offset": 5785,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 21,
       "value": "\"id_type_unsupported\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6105,
+=======
+      "offset": 5859,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 30,
       "value": "\"id_type_categorization_error\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6179,
+=======
+      "offset": 5933,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 21,
       "value": "\"selfie_face_too_far\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6246,
+=======
+      "offset": 6000,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 23,
       "value": "\"selfie_face_too_close\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6315,
+=======
+      "offset": 6069,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 23,
       "value": "\"selfie_multiple_faces\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6385,
+=======
+      "offset": 6139,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 24,
       "value": "\"selfie_no_face_present\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6457,
+=======
+      "offset": 6211,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 32,
       "value": "\"selfie_face_not_aligned_x_axis\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6537,
+=======
+      "offset": 6291,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 32,
       "value": "\"selfie_face_not_aligned_y_axis\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6617,
+=======
+      "offset": 6371,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 32,
       "value": "\"selfie_face_not_aligned_z_axis\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6692,
+=======
+      "offset": 6446,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 20,
       "value": "\"camera_start_error\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6766,
+=======
+      "offset": 6520,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 31,
       "value": "\"camera_permission_not_granted\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6855,
+=======
+      "offset": 6609,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 35,
       "value": "\"microphone_permission_not_granted\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6927,
+=======
+      "offset": 6681,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 14,
       "value": "\"network_lost\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 6975,
+=======
+      "offset": 6729,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 11,
       "value": "\"sdk_error\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 7020,
+=======
+      "offset": 6774,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 17,
       "value": "\"app_event_error\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
+<<<<<<< HEAD
       "offset": 7084,
+=======
+      "offset": 6838,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 24,
       "value": "\"blinkID_not_compatible\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
       "kind": "StringLiteral",
       "offset": 7148,
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/ServiceApi\/AppEventConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6902,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 17,
       "value": "\"s3_upload_error\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/AuthTokenProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/AuthTokenProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 224,
       "length": 8,
       "value": "\"Basic \""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/ProcessingViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/ProcessingViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Array",
       "offset": 445,
       "length": 2,
@@ -30317,14 +30893,24 @@
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Builder\/PingOneVerifyClient+Builder.swift",
       "kind": "BooleanLiteral",
       "offset": 1537,
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Builder\/PingOneVerifyClient+Builder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1485,
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Appearance\/CustomCountryPicker\/CustomCountryPickerViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Appearance\/CustomCountryPicker\/CustomCountryPickerViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 405,
       "length": 35,
@@ -30422,42 +31008,66 @@
       "value": "\"\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 685,
       "length": 12,
       "value": "\"x-amz-date\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 727,
       "length": 17,
       "value": "\"x-amz-signature\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 778,
       "length": 22,
       "value": "\"x-amz-security-token\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 847,
       "length": 17,
       "value": "\"x-amz-algorithm\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/S3Upload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 915,
       "length": 18,
       "value": "\"x-amz-credential\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentKeys.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentKeys.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 164,
       "length": 6,
@@ -30744,14 +31354,22 @@
       "value": "\"ocrDataFront\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentKeys.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentKeys.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1880,
       "length": 13,
       "value": "\"ocrDataBack\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentKeys.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentKeys.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 1917,
       "length": 12,
@@ -30765,14 +31383,22 @@
       "value": "[(\"v1\", [(\"frontImage\", \"Driver License Front\"), (\"backImage\", \"Driver License Back\"), (\"barcode\", \"Driver License Code\")])]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/DocumentCaptureSettingsFactory.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/DocumentCaptureSettingsFactory.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 396,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 210,
       "length": 1,
@@ -30835,28 +31461,44 @@
       "value": "8"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 404,
       "length": 1,
       "value": "9"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 425,
       "length": 2,
       "value": "10"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 550,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 771,
       "length": 43,
@@ -30874,7 +31516,18 @@
       "kind": "StringLiteral",
       "offset": 920,
       "length": 7,
+<<<<<<< HEAD
       "value": "\"2.4.3\""
+=======
+      "value": "\"2.4.0\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 8307,
+      "length": 7,
+      "value": "\"error\""
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
@@ -31024,7 +31677,11 @@
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/VoiceCaptureSettings.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/VoiceCaptureSettings.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 1015,
       "length": 4,
@@ -31052,28 +31709,44 @@
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/VoiceKeyMapping.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/VoiceKeyMapping.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Dictionary",
       "offset": 213,
       "length": 292,
       "value": "[(\"v1\", [(\"voiceEnrollment1\", \"Voice Sample #1\"), (\"voiceEnrollment2\", \"Voice Sample #2\"), (\"voiceEnrollment3\", \"Voice Sample #3\"), (\"voiceEnrollment4\", \"Voice Sample #4\"), (\"voiceEnrollment5\", \"Voice Sample #5\"), (\"voiceVerification\", \"Voice Input\")])]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Utils\/IdCapturePreviewVM.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/IdCapturePreviewVM.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 320,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Utils\/IdCapturePreviewVM.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/IdCapturePreviewVM.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 409,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Otp\/OtpStatus.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Otp\/OtpStatus.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 191,
       "length": 1,
@@ -31115,14 +31788,22 @@
       "value": "5"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Otp\/OtpStatus.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Otp\/OtpStatus.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 330,
       "length": 1,
       "value": "6"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/EndpointsServiceApi.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/EndpointsServiceApi.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 264,
       "length": 4,
@@ -31171,14 +31852,22 @@
       "value": "5"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/VoiceCapture\/VoiceCaptureViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/VoiceCapture\/VoiceCaptureViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 754,
       "length": 7,
       "value": "\"4.0.2\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/VoiceCapture\/VoiceCaptureViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/VoiceCapture\/VoiceCaptureViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Array",
       "offset": 1139,
       "length": 2,
@@ -31290,77 +31979,121 @@
       "value": "\"#4462ED\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 407,
       "length": 10,
       "value": "\"optional\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 864,
       "length": 7,
       "value": "\"qrUrl\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 902,
       "length": 12,
       "value": "\"appOpenUrl\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/CurrentStep.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 945,
       "length": 12,
       "value": "\"sessionUrl\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 287,
       "length": 2,
       "value": "\"\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 538,
       "length": 12,
       "value": "\"x-amz-date\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 580,
       "length": 17,
       "value": "\"x-amz-signature\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 631,
       "length": 22,
       "value": "\"x-amz-security-token\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 700,
       "length": 17,
       "value": "\"x-amz-algorithm\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentUploadPayload.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 768,
       "length": 18,
       "value": "\"x-amz-credential\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 588,
       "length": 1,
@@ -31444,49 +32177,77 @@
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/VerifyTransaction.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/VerifyTransaction.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 398,
       "length": 5,
       "value": "false"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Types\/Client.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Types\/Client.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 199,
       "length": 2,
       "value": "\"\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 370,
       "length": 22,
       "value": "\"VerificationSession \""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 441,
       "length": 16,
       "value": "\"SESSION_TOKEN_\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 513,
       "length": 23,
       "value": "\"VERIFICATION_SESSION_\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/SessionTokenProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 569,
       "length": 15,
       "value": "\"TransactionId\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/QrScanner\/Utils\/QrScannerUtils.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/QrScanner\/Utils\/QrScannerUtils.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 182,
       "length": 7,
@@ -31528,7 +32289,67 @@
       "value": "\"app_event_url\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIAction\/UIAction+handler.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 792,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 823,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 866,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1077,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1115,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1532,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1567,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 1630,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIAction\/UIAction+handler.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 320,
       "length": 9,
@@ -31766,14 +32587,22 @@
       "value": "\"\/appEvents\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Utils\/UrlUtils.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/UrlUtils.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 613,
       "length": 2,
       "value": "\"\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIButton\/UIButton+preventRepeatedClicks.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIButton\/UIButton+preventRepeatedClicks.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "IntegerLiteral",
       "offset": 238,
       "length": 1,
@@ -31787,28 +32616,44 @@
       "value": "\"status\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 231,
       "length": 294,
       "value": "\"sRwAAAEpY29tLnBpbmdpZGVudGl0eS5zZGsucGluZ29uZXZlcmlmeS5zYW1wbGWlREziJiexDgkarhsdiOceEWXgtuEULRhiN5tm\/QmnRVQIl46WpC2KPjdU+v1j531wQ2UaYQqkDpCIn3VtFmTN109L6C2JptCHSl3mJO1CjzDRbioX6d2Nz5MwnMDLlgXi327M2w9yicXkLz7sg3fQTIvR5Ugu4y+3R6CSJlH7STLkb\/QEgn8JvPnXzevgSnEaBDwQ+amrUcof9\/hzHU\/N7ErKbX3XQUbZA28=\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 579,
       "length": 394,
       "value": "\"AgAAAAAAAAAyMDI1LTEyLTA4BgAAADIwMjUtMTItMDgHAAAAGN4joscgaTLVaS\/OuN+IEM4ElQ3T3w7BgLx\/IsfcHC9jhOlz49gDImZdV1ksXEEPFBiSStcfsevAMfHB87WmTW1vD6TOCWzmNHFeYhHsczkTXu8TOIX5WVcIzPOrLPtAOuand6Lq3O\/fMxg5MfGZgrBuximR52TEKLJ5cGlhuJ9++6W4UY32ktJLFu+igOquU6tUZ88K+ON3HUYqdpJ6mWmsUDf34i3RA+DJrJPKjzdLcxJQO7SLfZKmYAQ0jj\/uykZ80bH49rcrPxqX4iOmOBgt07ioshVzxvhmazNxZc56N+GorjaOgo5cbW3bOeK0bD\/oU0EP3dOSHyqaO7ugJg==\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "Dictionary",
       "offset": 1460,
       "length": 3,
       "value": "[]"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/SelfieCapture\/Types\/FaceLandmark.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/SelfieCapture\/Types\/FaceLandmark.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 443,
       "length": 4,
@@ -32116,35 +32961,55 @@
       "value": "8.0"
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 154,
       "length": 16,
       "value": "\"ECDH-ES+A256KW\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 210,
       "length": 15,
       "value": "\"A256CBC-HS512\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 258,
       "length": 6,
       "value": "\"TRUE\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 311,
       "length": 4,
       "value": "\"IN\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Appearance\/CustomTextField.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Appearance\/CustomTextField.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 242,
       "length": 21,
@@ -32207,7 +33072,11 @@
       "value": "\"IDRND_voice_license_key\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/SCAVCapture\/Wrappers\/SCAVCaptureWrapper.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/SCAVCapture\/Wrappers\/SCAVCaptureWrapper.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "BooleanLiteral",
       "offset": 3862,
       "length": 5,
@@ -32550,14 +33419,22 @@
       "value": "\"idv_aadhaar\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-gwxmbknntgdhhmayrzydvjoxvcvv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-aflznfjqbkbhgycpvcokvfslwouz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 4984,
       "length": 10,
       "value": "\"idv_back\""
     },
     {
+<<<<<<< HEAD
       "filePath": "\/Users\/amahuri\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-gwxmbknntgdhhmayrzydvjoxvcvv\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+=======
+      "filePath": "\/Users\/amahuri\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-aflznfjqbkbhgycpvcokvfslwouz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+>>>>>>> 034c413e07592f347871e6ca1ab3b3f929b28a39
       "kind": "StringLiteral",
       "offset": 5138,
       "length": 20,
