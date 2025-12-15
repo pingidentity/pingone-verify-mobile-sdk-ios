@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.3.1 - October 3rd, 2025
+
+### Added
+
+- Rich text support added for better content formatting.
+
+
 ## v2.3.0 - August 25th, 2025
 
 ### Added
