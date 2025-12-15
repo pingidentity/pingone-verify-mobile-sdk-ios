@@ -427,6 +427,9 @@ A configurable object to customize selfie capture experience
 | `setIconTintColor(_ color: UIColor) -> UIAppearanceSetting`                                | Set icon tint color                 |
 | `setSolidButtonAppearance(_ buttonAppearance: ButtonAppearance) -> UIAppearanceSettings`   | Set solid button appearance         |
 | `setBorderedButtonAppearance(_ buttonAppearance: ButtonAppearance) -> UIAppearanceSettings`| Set bordered button appearance      |
+| `setAttributedStrings(_ attributedStrings: [String: NSAttributedString]) -> UIAppearanceSettings`| Set attributed text for the app texts and customize it as per need.
+| `showSessionExpiresTimer(_ isTimerShown: Bool) -> UIAppearanceSettings`                    | Set visibility for session expiration timer      |
+| `setNavigationTitle(_ text: NSAttributedString) -> UIAppearanceSettings`                   | Set navigation bar title text      |
 
 Example usage:
 
@@ -435,9 +438,32 @@ Example usage:
         let solidButtonAppearance = ButtonAppearance(backgroundColor: .red, textColor: .white, borderColor: .red)
         let borderedButtonAppearance = ButtonAppearance(backgroundColor: .clear, textColor: .red, borderColor: .red)
         
+        let text = "Identity Verification"
+        let identityString = NSMutableAttributedString(
+            string: text,
+            attributes: [.font: UIFont.systemFont(ofSize: 18),
+                         .foregroundColor: UIColor.purple]
+        )
+        
+        var attributedStringDict: [String : NSAttributedString] = [:]
+
+        let clearText = "Is It Readable?"
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        let clearAttributedString = NSMutableAttributedString(
+            string: clearText,
+            attributes: [.paragraphStyle: paragraphStyle,
+                         .font: UIFont.systemFont(ofSize: 25),
+                         .backgroundColor: UIColor.lightGray]
+        )
+        attributedStringDict["idv_data_check_clear"] = clearAttributedString
+        
         return UIAppearanceSettings()
             .setSolidButtonAppearance(solidButtonAppearance)
             .setBorderedButtonAppearance(borderedButtonAppearance)
+            .setAttributedStrings(attributedStringDict)
+            .showSessionExpiresTimer(false)
+            .setNavigationTitle(identityString)
     }
     
     override func viewDidLoad() {

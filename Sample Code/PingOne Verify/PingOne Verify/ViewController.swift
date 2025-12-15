@@ -44,12 +44,35 @@ class ViewController: UIViewController {
     }
     
     private func getUiAppearanceSettings() -> UIAppearanceSettings {
-        let solidButtonAppearance = ButtonAppearance(backgroundColor: .blue, textColor: .white, borderColor: .blue)
-        let borderedButtonAppearance = ButtonAppearance(backgroundColor: .white, textColor: .blue, borderColor: .green)
+        let solidButtonAppearance = ButtonAppearance(backgroundColor: .red, textColor: .white, borderColor: .red)
+        let borderedButtonAppearance = ButtonAppearance(backgroundColor: .clear, textColor: .red, borderColor: .red)
+        
+        let text = "Identity Verification"
+        let identityString = NSMutableAttributedString(
+            string: text,
+            attributes: [.font: UIFont.systemFont(ofSize: 18),
+                         .foregroundColor: UIColor.purple]
+        )
+        
+        var attributedStringDict: [String : NSAttributedString] = [:]
+
+        let clearText = "Is It Readable?"
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        let clearAttributedString = NSMutableAttributedString(
+            string: clearText,
+            attributes: [.paragraphStyle: paragraphStyle,
+                         .font: UIFont.systemFont(ofSize: 25),
+                         .backgroundColor: UIColor.lightGray]
+        )
+        attributedStringDict["idv_data_check_clear"] = clearAttributedString
         
         return UIAppearanceSettings()
             .setSolidButtonAppearance(solidButtonAppearance)
             .setBorderedButtonAppearance(borderedButtonAppearance)
+            .setAttributedStrings(attributedStringDict)
+            .showSessionExpiresTimer(false)
+            .setNavigationTitle(identityString)
     }
 }
 
