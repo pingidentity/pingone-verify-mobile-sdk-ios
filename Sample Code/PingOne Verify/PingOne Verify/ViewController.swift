@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         PingOneVerifyClient.Builder(isOverridingAssets: false)
             .setListener(self)
             .setRootViewController(self)
+            .setBackActionHandler(self)
 //            .setUIAppearance(self.getUiAppearanceSettings())
             .startVerification { pingOneVerifyClient, clientBuilderError in
                 
@@ -76,9 +77,12 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: DocumentSubmissionListener {
+extension ViewController: DocumentSubmissionListener, BackActionListener {
     
     func onDocumentSubmitted(response: DocumentSubmissionResponse) {
+        // NOTE: Check for Credential type before fetching cred verification links
+//        let collectionType = response.getCollectionType()
+//        let links = response.getCredentialVerificationLinks()
         log("Document status: \(response.documentStatus.description)")
         log("Document submission status: \(response.documentSubmissionStatus.debugDescription)")
         log("Submitted documents: \(response.document?.keys.description ?? "Not available")")
@@ -94,7 +98,7 @@ extension ViewController: DocumentSubmissionListener {
     
     func onSubmissionError(error: DocumentSubmissionError) {
         logerror(error.localizedDescription ?? "")
-        let alertController = UIAlertController(title: "Document Submission Error", message: error.localizedDescription, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Document Submission Error", message: "Error Code: \(error.getErrorCode())\n\nError Message: \(error.getErrorMessage())", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: .default))
         DispatchQueue.main.async {
             self.presentedViewController?.dismiss(animated: true, completion: {
@@ -102,4 +106,18 @@ extension ViewController: DocumentSubmissionListener {
             })
         }
     }
+    
+    func onBackAction(exitFlow: @escaping (Bool) -> Void) {
+        let alertController = UIAlertController(title: "Cancel Transaction", message: "Do you want to cancel this transaction?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { _ in
+            exitFlow(true)
+        }
+        let noAction = UIAlertAction(title: "No", style: .cancel) { _ in
+            exitFlow(false)
+        }
+        alertController.addAction(noAction)
+        alertController.addAction(yesAction)
+        self.presentedViewController?.present(alertController, animated: true)
+    }
+    
 }

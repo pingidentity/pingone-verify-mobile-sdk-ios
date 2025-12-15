@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.3.5 - October 31st, 2025
+
+### Added
+
+- IDRND Version updated to v2.4.3
+- Expose callback for user-initiated exit from Verify flow.
+
+### Fixed
+
+- Updated S3 Upload app events
+- Defects related to verification flows
+
 
 ## v2.3.4 - October 24th, 2025
 

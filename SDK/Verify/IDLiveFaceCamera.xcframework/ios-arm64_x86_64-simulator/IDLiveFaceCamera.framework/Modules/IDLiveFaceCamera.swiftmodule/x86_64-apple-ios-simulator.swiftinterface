@@ -11,7 +11,6 @@ import CoreVideo
 import DeveloperToolsSupport
 import Foundation
 @_exported import IDLiveFaceCamera
-import IDLiveFaceDetection
 import MobileCoreServices
 import Swift
 import SwiftUI
@@ -334,6 +333,8 @@ extension IDLiveFaceCamera.IDCameraControllerBase {
   }
   @_Concurrency.MainActor @preconcurrency public func prepareForIAD(payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize = .normal)
   @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil, payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize? = .normal) throws -> Foundation.Data
+  @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil, payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize? = .normal) async throws -> Foundation.Data
+  @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil, payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize? = .normal, completion: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
 }
 extension IDLiveFaceCamera.IDLiveFaceDetectionSettings {
   public struct FacePositionCheck {
