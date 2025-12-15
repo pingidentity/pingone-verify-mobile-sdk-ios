@@ -190,3 +190,15 @@
 "idv_datacapture_description" = "Do you want to cancel this transaction?";
 "idv_datacapture_yes" = "Yes";
 "idv_datacapture_no" = "No";
+
+//Retry
+"idv_retry_generic_title" = "Make sure your camera lens is clean and all four corners of the ID are visible.";
+"idv_retry_glare" = "Make sure the ID is not reflecting direct light and is in focus.";
+"idv_retry_too_dark" = "Go to a well-lit environment. Make sure the ID is in focus, without glare, and then retry.";
+"idv_retry_document_mismatch" = "Document images don't match.";
+"idv_retry_image_small" = "Move the camera closer, making sure all four corners of the ID are visible.";
+"idv_retry_face_close"= "Move the camera farther away from your face and try again.";
+"idv_retry_many_face" = "Make sure only your face appears in the camera and then retry.";
+"idv_retry_face_far" = "Move the camera closer to your face and try again.";
+"idv_retry_face_large" = "Position the camera directly in front of your face and try again.";
+"idv_retry_eyes_closed" = "Make sure your eyes are not closed and try again.";

@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.3.6 - November 26th, 2025
+
+### Fixed
+
+- Minor changes to improve UI/UX
+- Defects related to verification flows
+
+
 ## v2.3.5 - October 31st, 2025
 
 ### Added
