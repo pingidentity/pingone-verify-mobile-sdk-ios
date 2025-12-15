@@ -6,7 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
+<<<<<<<< HEAD:SDK/Verify/IDLiveFaceDetection.xcframework/ios-arm64_x86_64-simulator/IDLiveFaceDetection.framework/_CodeSignature/CodeResources
 		+2GLjA/4dGVdjhgbyKEhERT0gmI=
+========
+		KAmFS5BlKq6GnuJcOHS36hYaHws=
+>>>>>>>> 3faabe79a14dae6bfb291fea8b7b257279e90d01:SDK/Verify/IDLiveFaceDetection.xcframework/ios-arm64/IDLiveFaceDetection.framework/_CodeSignature/CodeResources
 		</data>
 	</dict>
 	<key>files2</key>
