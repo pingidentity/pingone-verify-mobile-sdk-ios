@@ -1,128 +1,104 @@
 /*
-  PingOneVerifyLocalizable.strings
-  PingOne Verify
+ PingOneVerifyLocalizable.strings
+ PingOneVerify_iOS
  
-  Created by Ping Identity on 10/26/23.
-  Copyright © 2023 Ping Identity. All rights reserved.
+ Created by Caleb Cho on 6/2/22.
+ 
  */
 /**
  QrScanner
  */
 
-"idv_qr_scan" = "Scan a PingOne QR Code";
-
-/**
- DocumentCapture
- */
-
-"idv_documentCapture_start" = "Next";
-"idv_documentCapture_step" = "Step %@/%@";
+"idv_qr_scan" = "Please scan the above QR code";
 
 //GovernmentID (Including both License and Passport)
 "idv_documentCapture_header_governmentId" = "Scan your ID";
-"idv_documentCapture_description_governmentId" = "Grab your photo ID. This can be a passport, driver’s license or any other government issued ID. Ensure the edges of your ID are in the frame and clearly visible. Hold it in your hand to avoid any glare. Pay attention to the live feedback. For some ID’s you may need to scan the back as well.";
+"idv_documentCapture_description_governmentId" = "Scan your government-issued ID. Make sure your camera is clean and the ID is clearly visible.";
 "idv_documetCapture_processing" = "Processing ID...";
+"idv_data_check_clear" = "Is it clear?";
+"idv_data_check_readable" = "Is it readable?";
+"idv_data_processing" = "Processing";
 
-// License
-"idv_documentCapture_header_driverLicense" = "Capture Driver License";
-"idv_documentCapture_description_driverLicense" = "Verification requires a photo of the front and back of your government issued drivers license/ID.";
-
-// Passport
-"idv_documentCapture_header_passport" = "Capture Passport";
-"idv_documentCapture_description_passport" = "Verification requires a photo page of your passport.";
+//Indian Aadhaar//Check
+"idv_aadhaarCapture_title" = "Verify Aadhaar ID";
+"idv_aadhaarCapture_description" = "Confirm or edit your Aadhaar ID.";
+"idv_aadhaarCapture_placeholder" = "Aadhaar ID";
+"idv_documentCapture_header_aadhaarOtp" = "Enter OTP";
+"idv_documentCapture_description_aadhaarOtp" = "Enter the one-time password that was sent to the phone number associated with the Aadhaar ID.";
+"idv_documentCapture_info_aadhaarOtp" = "One-time Passcode:";
+"idv_aadhaarOtp_errorMsg" = "Incorrect passcode. Try again.";
+"idv_documentCapture_header_type" = "Confirm ID Type";
+"idv_documentCapture_description_type" = "We couldn’t identify your ID.\nSelect the ID type to continue.";
+"idv_documentCapture_option_aadhar" = "Indian Aadhaar Card";
+"idv_documentCapture_option_driverLicense" = "Driver’s License";
+"idv_documentCapture_option_passport" = "Passport";
+"idv_documentCapture_option_passportCard" = "Passport Card";
+"idv_documentCapture_option_other" = "Other";
 
 // Selfie
-"idv_documentCapture_header_selfie" = "Capture Selfie";
-"idv_documentCapture_description_selfie" = "Center your face in the oval. Tap the button or anywhere on the screen to capture your selfie.";
-"idv_selfie_preview_submit_button" = "Submit";
-"idv_selfie_preview_retake_button" = "Re-take";
-"idv_selfie_tap_to_capture" = "Tap Anywhere on the screen to capture image";
+"idv_documentCapture_header_selfie" = "Take a Selfie";//check
+"idv_documentCapture_description_selfie" = "Make sure you can see your face in the oval.";//check
+"idv_selfie_tap_to_capture" = "Tap Anywhere on the screen to capture image";//check
 
 // Email
-"idv_emailCapture_title" = "Email Verification";
-"idv_emailCapture_button" = "Submit";
+"idv_emailCapture_title" = "Verify Your Email";
 "idv_emailCapture_description" = "Please enter your email address";
-"idv_emailCapture_description_option" = "Please choose your email address";
-"idv_emailCapture_description_value" = "Email to be verified:";
+"idv_emailCapture_description_option" = "Please choose your email address";//Not Used
+"idv_emailCapture_description_value" = "Email to be verified:";//Not Used
 "idv_emailCapture_placeholder" = "Email Address";
-"idv_emailCapture_menu_option" = "Select an option";
 
 // Phone
-"idv_phoneCapture_title" = "Phone Verification";
-"idv_phoneCapture_button" = "Submit";
-"idv_phoneCapture_description" = "Please enter your phone number";
-"idv_phoneCapture_description_option" = "Please choose your phone number";
-"idv_phoneCapture_description_value" = "Phone number to be verified:";
-"idv_phoneCapture_placeholder" = "Phone Number";
-"idv_phoneCapture_menu_option" = "Select an option";
-"idv_countryCode_description_option" = "Select an option";
-"idv_countryCode_search_bar_placeholder" = "Search";
-"idv_countryCode_nav_title" = "Select a Country";
+"idv_phoneCapture_title" = "Verify Your Phone";
+"idv_phoneCapture_description" = "Enter your phone number.";
+"idv_phoneCapture_description_option" = "Please choose your phone number";//Not Used
+"idv_phoneCapture_description_value" = "Phone number to be verified:";//Not Used
+"idv_phoneCapture_placeholder" = "Enter phone number";
+"idv_countryCode_search_bar_placeholder" = "Search";//keys different
+"idv_countryCode_nav_title" = "Select a Country";//keys different
 
 //Voice
-"idv_voiceCapture_title" = "Voice Verification";
 "idv_voiceCapture_button" = "Tap to Record";
-"idv_voiceCapture_recording" = "Recording in progress";
-"idv_voiceCapture_textDependent_placeholder" = "Use PingOne Verify for Voice Verification";
-"idv_documentCapture_header_voice" = "Record Your Voice";
-"idv_documentCapture_description_voice" = "Make sure to sit in a quiet environment and bring your device closer to your mouth for recording your voice.";
-"idv_voice_sample" = "Voice Sample #%@";
-"idv_voice_error_alert_title" = "Recording Error";
-"idv_voice_result" = "%@ of %@ Voice Sample Recording is Complete";
-"idv_voice_try_again" = "Try Again";
+"idv_voiceCapture_textDependent_placeholder" = "Use your voice to verify your identity.";
+"idv_documentCapture_description_voice" = "Use your voice to verify your identity.";
+"idv_documentCapture_header_voice" = "Verify By Voice";
+"idv_voiceCapture_header_voice" = "Record Your Voice";
+"idv_get_started" = "Continue";
+
+
+"idv_voice_error_alert_title" = "Recording Error";//check
+"idv_voice_result" = "%@ of %@";
+"idv_voice_step_complete" = "Complete";
+"idv_voice_try_again" = "Retry";
 "idv_voice_complete" = "Voice Recording is Now Complete";
-"idv_voice_next_record" = "Next Recording";
-"idv_voice_one_recording_text" = "\n\nYou will record 1 time";
-"idv_voice_multi_recording_text" = "\n\nYou will record %@ times";
-"idv_voiceCapture_instruction" = "Speak the following phrase into your device microphone:";
+"idv_voice_next_record" = "Next Record";
+"idv_voice_one_recording_text" = "\n\nYou'll need to record 1 voice sample";
+"idv_voice_multi_recording_text" = "\n\nYou'll need to record %@ voice samples";
+"idv_voiceCapture_instruction" = "Tap record and say the following text:";
 "idv_voice_speech_length_error"= "Recorded speech was too short to process.\nPlease try again";
 "idv_voice_speech_noisy_error" = "Too much noise in the background.\nPlease try again in a more quiet setting";
 "idv_voice_speech_reverberation_error" = "The audio recording has strong echo.\nPlease record in an another location";
 "idv_voice_speech_unknown_error" = "Undetermined Error.\nPlease try again";
 
 //OTP
-"idv_otp_placeholder" = "Verification Code";
-"idv_otp_invalid_code_error_description" = "One Time Passcode is incorrect";
+"idv_otp_invalid_code_error_description" = "One Time Passcode is incorrect";//check
 
 // Expressions
 "idv_smile" = "Smile!";
 "idv_no_smile" = "No Smile.";
 "idv_blink_eyes" = "Blink both your eyes";
 
-// Errors
-"error" = "Error";
-"idv_cannotInitFaceDetector" = "Failed to initialize face detection. Please restart the app to try again.";
-"idv_invalidObjectInResult" = "Found unknown object in the frame. Please restart the process to try again.";
-"idv_noFaceFound" = "No Face Detected";
-"idv_differentFaceFound" = "Different face in the frame";
-"idv_multipleFacesFound" = "Multiple faces in the frame";
-"idv_faceMovedOutOfFrame" = "Face moved out of frame";
-"idv_.cannotGetCIImage" = "Failed to process the camera frames. Please restart the process to try again.";
-"idv_invalidSampleBuffer" = "Failed to process the camera frames. Please restart the process to try again.";
-"idv_cannotCaptureImage" = "Failed to capture the selfie. Please try again.";
-"idv_faceMovingTooOften_message" = "Center your face within the guidelines and try again.";
-
-"idv_cannotSetFocusMode" = "Failed to set focus mode. Camera may have abnormally.";
-"idv_cannotInitializeInputForCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
-"idv_cannotAddOutputsToCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
-"idv_cannotGetCamera" = "Failed to start device camera. Please restart the app and try again. If the problem persists, restart your device.";
-"idv_capture_timed_out_title" = "Timeout";
-"idv_capture_timed_out_message" = "Selfie capture timed out. Please try again.";
-
-"idv_post_capture_error" = "An error occurred while capturing the selfie.";
-"idv_post_capture_open_eyes" = "Please make sure your eyes are open when taking the picture.";
-"idv_post_capture_close_mouth" = "Please make sure your mouth is not open when taking the picture.";
-"idv_post_capture_face_moved_out" = "Please make sure your face doesn't move out of the frame when taking the picture.";
-"idv_post_capture_face_not_straight" = "Please make sure you're looking straight at the camera when taking the picture.";
-
 //Buttons
 "idv_next" = "Next";
 "idv_retake" = "Re-take";
-"idv_cancel" = "Cancel";
+"idv_cancel" = "Cancel";//check
 "idv_okay" = "Okay";
 "idv_skip" = "Skip";
-"idv_get_started" = "Get Started";
-
+"idv_retry" = "Retry";//check
+"idv_dataCapture_button" = "Continue";
+"idv_infoCapture_button" = "Submit";
+"idv_data_check_retake" = "No, Retake";
+"idv_otp_resend" = "Resend";
+"idv_data_check_confirm" = "Yes, Continue";//check refactor
 
 // ImageQA instructions
 "idv_center_face" = "Center your face in the frame";
@@ -130,28 +106,24 @@
 "idv_face_looking_at_phone" = "Make sure you're looking straight into camera";
 "idv_hold_camera_further" = "Hold the camera further away from your face";
 "idv_hold_camera_near" = "Hold the camera closer to your face";
-"idv_close_mouth" = "Make sure your mouth is not open";
 "idv_open_eyes" = "Make sure that both your eyes are open";
 
 // Permissions
-"idv_camera_permission_rationale" = "Access to the camera is required for scanning your IDs and taking pictures.";
-"idv_microphone_permission" = "Access to the microphone is required for recording your voice.\n\nPlease update the permissions for your app in device settings to be able to use this feature.";
+"idv_camera_permission_rationale" = "Access to your camera is needed to scan your ID and take your selfie.";
+"idv_microphone_permission" = "Access to the microphone is required for recording your voice.\n\nPlease update the permissions for your app in device settings to be able to use this feature.";//check
 
 /**
  Common
  */
 
-"idv_cancel" = "Cancel";
 "idv_timer_label" = "Session expires in %@";
 "idv_time_min" = "%@ min";
 "idv_time_sec" = "%@ sec";
 
 //OTP
 "idv_otp_title" = "Verification Code";
-"idv_otp_description" = "Please type the verification code sent to %@";
-"idv_otp_button" = "Submit Passcode";
-"idv_otp_time" = "Code expires in %@";
-"idv_otp_resend" = "Resend Verification Code";
+"idv_otp_description" = "Enter the code sent to %@";
+"idv_otp_time" = "Verification Code expires in %@";
 "idv_otp_default_email" = "your Email Address";
 "idv_otp_default_phone" = "your Phone Number";
 
@@ -179,19 +151,42 @@
 "mb_unsupported_document_title" = "Document not recognized";
 
 //IDRND
-"idrnd_fire" = "fire";
-"idrnd_ok" = "ok";
-"idrnd_too_many_faces" = "Too many faces found";
-"idrnd_position_face" = "Please position your face into frame";
-"idrnd_close_camera" = "Please move closer to the camera";
-"idrnd_move_farther_camera" = "Please move a little farther away from the camera";
-"idrnd_position_face_center" = "Please position your face in the center of the frame";
-"idrnd_turn_frontal_position" = "Please turn your face for frontal facing position";
-"idrnd_hold_device_still" = "Please hold your device still";
-"idrnd_good_lighting_hold_still" = "Please ensure good lighting and hold your device still";
-"idrnd_good_lighting" = "Please ensure good lighting";
-"idrnd_unknown_error" = "unknown error";
+"idv_selfie_fire" = "fire";
+"idv_selfie_ok" = "ok";
+"idv_selfie_too_many_faces" = "Multiple faces detected";
+"idv_selfie_position_face" = "Make sure your face is clearly visible in the camera.";
+"idv_selfie_close_camera" = "Move camera closer";
+"idv_selfie_move_farther_camera" = "Please move a little farther away from the camera";
+"idv_selfie_turn_frontal_position" = "Position in front of face";
+"idv_selfie_hold_device_still" = "Please hold your device still";
+"idv_selfie_good_lighting_hold_still" = "Please ensure good lighting and hold your device still";
+"idv_selfie_good_lighting" = "Please ensure good lighting";
+"idv_selfie_face_cropped" = "Center your face in the green oval and try again.";
+"idv_selfie_position_face_center" = "Center face in frame";
+"idv_selfie_face_occluded" = "Remove any masks, hats, or anything covering your face from the camera.";
 
-//Retry
-"idv_retry_header" = "Retry";
-"idv_retry" = "Retry";
+// Errors
+"error" = "Error";
+"idv_cannotInitFaceDetector" = "Failed to initialize face detection. Please restart the app to try again.";
+"idv_invalidObjectInResult" = "Found unknown object in the frame. Please restart the process to try again.";
+"idv_noFaceFound" = "No Face Detected";
+"idv_differentFaceFound" = "Different face in the frame";
+"idv_multipleFacesFound" = "Multiple faces in the frame";
+"idv_faceMovedOutOfFrame" = "Face moved out of frame";
+"idv_invalidSampleBuffer" = "Failed to process the camera frames. Please restart the process to try again.";
+"idv_cannotCaptureImage" = "Failed to capture the selfie. Please try again.";
+
+"idv_faceMovingTooOften_message" = "Center your face within the guidelines and try again.";
+"idv_capture_timed_out_title" = "Timeout";
+"idv_capture_timed_out_message" = "Selfie capture timed out. Please try again.";
+"idv_post_capture_error" = "An error occurred while capturing the selfie.";
+"idv_post_capture_open_eyes" = "Please make sure your eyes are open when taking the picture.";
+"idv_post_capture_close_mouth" = "Please make sure your mouth is not open when taking the picture.";
+"idv_post_capture_face_moved_out" = "Please make sure your face doesn't move out of the frame when taking the picture.";
+"idv_post_capture_face_not_straight" = "Please make sure you're looking straight at the camera when taking the picture.";
+
+//Session End//check
+"idv_datacapture_title" = "Cancel Transaction";
+"idv_datacapture_description" = "Do you want to cancel this transaction?";
+"idv_datacapture_yes" = "Yes";
+"idv_datacapture_no" = "No";

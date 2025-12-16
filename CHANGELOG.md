@@ -1,17 +1,16 @@
 # Changelog
 
-## v2.2.0 - May 15th, 2025
+## v2.3.0 - August 25th, 2025
 
 ### Added
 
-- GeoLocation support implemented
-- Verify Retry support
-- Rate Limiting support
-- New UI screens and various UI improvements
+- Localization support through PingOne
+- Strengthened security for document uploads
+- Support for Aadhaar Verification
+- Improvements to support backend driven flows
+- Support for selfie authentication mode
 
 ### Fixed
 
-- Error handling
-- UI defects
-- AppTheme issues
-- Other minor bugs 
+- Minor changes to improve UI/UX
+- Defects related to verification flows

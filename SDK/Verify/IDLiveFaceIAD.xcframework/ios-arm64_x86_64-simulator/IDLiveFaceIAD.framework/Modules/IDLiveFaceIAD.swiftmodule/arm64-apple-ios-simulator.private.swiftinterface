@@ -1,0 +1,41 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name IDLiveFaceIAD
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+import CommonCrypto
+import CoreGraphics
+import CoreImage
+import CryptoKit
+import Darwin
+import Dispatch
+import Foundation
+@_exported import IDLiveFaceIAD
+import MachO
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+@_spi(Private) @_hasMissingDesignatedInitializers public class IADUtils {
+  @_spi(Private) public static func iadDeviceInfo() -> [Swift.String : Any]
+  @_spi(Private) @objc deinit
+}
+@_spi(Private) @_inheritsConvenienceInitializers @objc public class IADCallReceiverHelper : ObjectiveC.NSObject {
+  @_spi(Private) @objc public static func call(_ params: [Swift.String : Any]) -> Any
+  @_spi(Private) @objc override dynamic public init()
+  @_spi(Private) @objc deinit
+}
+@_spi(PrivateClient) public enum IADImageFormat : Swift.Equatable {
+  @_spi(PrivateClient) case png
+  @_spi(PrivateClient) case jpeg(CoreFoundation.CGFloat)
+  @_spi(PrivateClient) case heic(CoreFoundation.CGFloat)
+  @_spi(PrivateClient) case jpeg2000(CoreFoundation.CGFloat)
+  @_spi(PrivateClient) case video
+  @_spi(PrivateClient) public var ext: Swift.String {
+    @_spi(PrivateClient) get
+  }
+  @_spi(PrivateClient) public func sameJpegQuality(otherFormat: IDLiveFaceIAD.IADImageFormat) -> Swift.Bool
+  @_spi(PrivateClient) public static func == (a: IDLiveFaceIAD.IADImageFormat, b: IDLiveFaceIAD.IADImageFormat) -> Swift.Bool
+}
