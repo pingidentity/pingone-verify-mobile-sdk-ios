@@ -2,9 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PingOneVerify
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
-import AVFAudio
 import AVFoundation
-import Accelerate
 import BlinkID
 import CoreImage
 import CoreMedia
@@ -22,7 +20,6 @@ import SwiftUI
 import SystemConfiguration
 import UIKit
 import Vision
-import VoiceSdk
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -81,6 +78,7 @@ public class CompletionHandler<T> {
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
   @objc public var isAuthflow: Swift.Bool
   @objc public var isRetry: Swift.Bool
+  @objc public var payloadSize: PingOneVerify.PayloadSize
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   public func setOtpDestination(otpDestination: Swift.String?)
@@ -207,6 +205,7 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
   @objc public var isAuthflow: Swift.Bool
   @objc public var isRetry: Swift.Bool
+  @objc public var payloadSize: PingOneVerify.PayloadSize
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
   public func setOtpDestination(otpDestination: Swift.String?)
@@ -241,6 +240,7 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
   public var otpDestination: Swift.String?
   @objc public var isAuthflow: Swift.Bool
   @objc public var isRetry: Swift.Bool
+  @objc public var payloadSize: PingOneVerify.PayloadSize
   @objc public init(documentType: PingOneVerify.DocumentClass, optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
   public func getIsAadhaar() -> Swift.Bool
   public func setIsAadhaar(isAadhaar: Swift.Bool)
@@ -337,6 +337,7 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
   }
 }
 @objc public class SelfieCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
+  @objc public var payloadSize: PingOneVerify.PayloadSize
   @objc public var isAuthflow: Swift.Bool
   @objc public var documentType: PingOneVerify.DocumentClass
   @available(*, deprecated, message: "Will be removed in upcoming versions")
@@ -351,7 +352,7 @@ extension BlinkID.MBBarcodeVehicleClassInfo : Swift.Encodable {
   @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
   @objc public var isRetry: Swift.Bool
   @available(*, deprecated, message: "Will be removed in upcoming versions")
-  @objc public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, isAuthflow: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
+  @objc public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, isAuthflow: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil, payloadSize: PingOneVerify.PayloadSize = .small)
   @objc deinit
 }
 public struct S3Upload : Swift.Codable {
@@ -369,6 +370,7 @@ extension BlinkID.MBMrzResult : Swift.Encodable {
   @objc var requirements: (any PingOneVerify.RequirementsProtocol)? { get set }
   @objc var isAuthflow: Swift.Bool { get set }
   @objc var isRetry: Swift.Bool { get set }
+  @objc var payloadSize: PingOneVerify.PayloadSize { get set }
 }
 public struct ImageCellContent {
 }
@@ -437,23 +439,6 @@ extension BlinkID.MBVehicleClassInfo : Swift.Encodable {
     get
   }
   public init?(rawValue: PingOneVerify.DocumentStatus.RawValue)
-}
-@objc public class VoiceCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
-  @objc public var documentType: PingOneVerify.DocumentClass
-  @objc public var currentStep: Swift.Int
-  @objc public var totalSteps: Swift.Int
-  @objc public var optional: Swift.Bool
-  @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
-  public var enrollment: Swift.Bool!
-  public var numberOfRecordingsRequired: Swift.Int!
-  public var numberOfCompletedRecordings: Swift.Int!
-  public var isTextDependent: Swift.Bool
-  public var voice: PingOneVerify.Voice?
-  @objc public var isAuthflow: Swift.Bool
-  @objc public var isRetry: Swift.Bool
-  @objc public init(optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil, isTextDependent: Swift.Bool = true)
-  public func updateFromVerifyTransaction(verifyTransaction: PingOneVerify.VerifyTransaction)
-  @objc deinit
 }
 extension UIKit.UINavigationController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var shouldAutorotate: Swift.Bool {
@@ -561,10 +546,6 @@ public struct OtpSessions : Swift.Decodable {
 public struct OtpSession : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct Voice : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 @_hasMissingDesignatedInitializers public class VerifyLicenseProvider {
   convenience public init(response: PingOneVerify.DocumentSubmissionResponse)
   @objc deinit
@@ -578,6 +559,16 @@ extension BlinkID.MBVizResult : Swift.Encodable {
 public class SdkVersions {
   public init()
   @objc deinit
+}
+@objc public enum PayloadSize : Swift.Int {
+  case small = 0
+  case normal = 1
+  public init(value: Swift.String?)
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 @objc public protocol BackActionListener {
   @objc func onBackAction(exitFlow: @escaping (Swift.Bool) -> Swift.Void)
@@ -630,3 +621,6 @@ extension PingOneVerify.DocumentStatus : Swift.Equatable {}
 extension PingOneVerify.DocumentStatus : Swift.Hashable {}
 extension PingOneVerify.OtpStatus : Swift.Equatable {}
 extension PingOneVerify.OtpStatus : Swift.Hashable {}
+extension PingOneVerify.PayloadSize : Swift.Equatable {}
+extension PingOneVerify.PayloadSize : Swift.Hashable {}
+extension PingOneVerify.PayloadSize : Swift.RawRepresentable {}

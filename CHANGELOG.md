@@ -1,5 +1,18 @@
 # Changelog
 
+## v3.0.0 - December 15th, 2025
+
+### Added
+
+- Selfie Payload Size made configurable.
+- Voice verification support has been removed. This feature is no longer supported and has been discontinued in this release.
+
+### Fixed
+
+- Retry Screen: Clicking Cancel triggers Document Submission Error
+- UI Improvements
+- Support for the legacy selfieCaptureSettings has been discontinued. 
+
 ## v2.3.6 - November 26th, 2025
 
 ### Fixed

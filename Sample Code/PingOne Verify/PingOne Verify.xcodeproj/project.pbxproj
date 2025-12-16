@@ -39,8 +39,6 @@
 		72F04C8D2E5E336500238971 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C6D2E5E334700238971 /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72F04C8E2E5E336500238971 /* secp256k1Wrapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C742E5E334700238971 /* secp256k1Wrapper.xcframework */; };
 		72F04C8F2E5E336500238971 /* secp256k1Wrapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C742E5E334700238971 /* secp256k1Wrapper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72F04C902E5E336500238971 /* VoiceSdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C6E2E5E334700238971 /* VoiceSdk.xcframework */; };
-		72F04C912E5E336500238971 /* VoiceSdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C6E2E5E334700238971 /* VoiceSdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		884BAEF22AEC48D9002C6827 /* PingOneVerifyLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +54,6 @@
 				72F04C7D2E5E336500238971 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
 				72F04C892E5E336500238971 /* libsecp256k1.xcframework in Embed Frameworks */,
 				72F04C872E5E336500238971 /* LanguagePackProvider.xcframework in Embed Frameworks */,
-				72F04C912E5E336500238971 /* VoiceSdk.xcframework in Embed Frameworks */,
 				72F04C7B2E5E336500238971 /* GeoLocationProvider.xcframework in Embed Frameworks */,
 				72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */,
 				72F04C832E5E336500238971 /* JOSESwift.xcframework in Embed Frameworks */,
@@ -88,7 +85,6 @@
 		72F04C6B2E5E334700238971 /* LanguagePackProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = LanguagePackProvider.xcframework; sourceTree = "<group>"; };
 		72F04C6C2E5E334700238971 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeoInterfaces.xcframework; sourceTree = "<group>"; };
 		72F04C6D2E5E334700238971 /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PingOneVerify.xcframework; sourceTree = "<group>"; };
-		72F04C6E2E5E334700238971 /* VoiceSdk.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = VoiceSdk.xcframework; sourceTree = "<group>"; };
 		72F04C702E5E334700238971 /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoTools.xcframework; sourceTree = "<group>"; };
 		72F04C712E5E334700238971 /* JOSESwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JOSESwift.xcframework; sourceTree = "<group>"; };
 		72F04C722E5E334700238971 /* JoseTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JoseTools.xcframework; sourceTree = "<group>"; };
@@ -107,7 +103,6 @@
 				72F04C7C2E5E336500238971 /* IDLiveFaceCamera.xcframework in Frameworks */,
 				72F04C882E5E336500238971 /* libsecp256k1.xcframework in Frameworks */,
 				72F04C862E5E336500238971 /* LanguagePackProvider.xcframework in Frameworks */,
-				72F04C902E5E336500238971 /* VoiceSdk.xcframework in Frameworks */,
 				72F04C7A2E5E336500238971 /* GeoLocationProvider.xcframework in Frameworks */,
 				72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */,
 				72F04C822E5E336500238971 /* JOSESwift.xcframework in Frameworks */,
@@ -174,7 +169,6 @@
 				72F04C6B2E5E334700238971 /* LanguagePackProvider.xcframework */,
 				72F04C6C2E5E334700238971 /* NeoInterfaces.xcframework */,
 				72F04C6D2E5E334700238971 /* PingOneVerify.xcframework */,
-				72F04C6E2E5E334700238971 /* VoiceSdk.xcframework */,
 			);
 			name = Verify;
 			path = ../../SDK/Verify;
@@ -415,7 +409,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -432,7 +426,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -451,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -468,7 +462,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

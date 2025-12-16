@@ -51,9 +51,7 @@ The PingOne Verify iOS SDK relies on XCFramework components. You'll need to add 
     * PingOneVerify.xcframework
     
     * BlinkID.xcframework
-    
-    * VoiceSdk.xcframework
-    
+        
     * NeoInterfaces.xcframework
     
     * LanguagePackProvider.xcframework
@@ -160,20 +158,7 @@ PingOneVerifyClient.Builder()
 
 ```
 
-6. Optionally, you can set a [Selfie Capture Settings](#selfiecapturesettings) with your preference using the `PingOneVerifyClient.Builder`.
-
-
-```
-// Default is 45 seconds for captureTime and true for shouldCaptureAfterTimeout
-let selfieCaptureSettings = SelfieCaptureSettings(captureTime: 15, shouldCaptureAfterTimeout: false)
-PingOneVerifyClient.Builder()
-    .setListener(self)
-    .setRootViewController(self)
-    .setDocumentCaptureSettings(documentCaptureSettings: [selfieCaptureSettings])
-
-```
-
-7. Start Verification Process
+6. Start Verification Process
 
 ```
 PingOneVerifyClient.Builder()
