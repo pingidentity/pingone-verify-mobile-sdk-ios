@@ -28186,7 +28186,7 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7345,
+      "offset": 7508,
       "length": 7,
       "value": "\"error\""
     },
@@ -28290,8 +28290,15 @@
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Client\/PingOneVerifyClient.swift",
+      "kind": "StringLiteral",
+      "offset": 1707,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Client\/PingOneVerifyClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 29360,
+      "offset": 29463,
       "length": 5,
       "value": "false"
     },
@@ -28999,13 +29006,13 @@
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
       "kind": "StringLiteral",
       "offset": 231,
-      "length": 294,
-      "value": "\"sRwAAAEpY29tLnBpbmdpZGVudGl0eS5zZGsucGluZ29uZXZlcmlmeS5zYW1wbGWlREziJiexDgkarhsdiOceEWXgtuEULRhiN5tm\/QmnRVQIl46WpC2KPjdU+v1j531wQ2UaYQqkDpCIn3VtFmTN109L6C2JptCHSl3mJO1CjzDRbioX6d2Nz5MwnMDLlgXi327M2w9yicXkLz7sg3fQTIvR5Ugu4y+3R6CSJlH7STLkb\/QEgn8JvPnXzevgSnEaBDwQ+amrUcof9\/hzHU\/N7ErKbX3XQUbZA28=\""
+      "length": 338,
+      "value": "\"sRwCACljb20ucGluZ2lkZW50aXR5LnNkay5waW5nb25ldmVyaWZ5LnNhbXBsZQFsZXlKRGNtVmhkR1ZrVDI0aU9qRTNOamd5TkRrNE1Ua3hOelFzSWtOeVpXRjBaV1JHYjNJaU9pSmlZMkZoWm1abU15MDNaVEZrTFRReE5HTXRZbUppWXkwM05UQTVNR1UxTmpsaE1EY2lmUT09fNs\/ODOixxwXhkeZB9elmw2qE3f5sBxQucYKFyTb760nV3LgPojOGmy6LZOIDM9gaRqPrhrsH3fG+svqpmNvHmVx4JaIbqmmCtJPoEfTCBKQHu4HDdvRq\/VvWya9dg==\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Extension\/PingOneVerifyLicenseKeyProvider.swift",
       "kind": "Dictionary",
-      "offset": 796,
+      "offset": 840,
       "length": 3,
       "value": "[]"
     },
