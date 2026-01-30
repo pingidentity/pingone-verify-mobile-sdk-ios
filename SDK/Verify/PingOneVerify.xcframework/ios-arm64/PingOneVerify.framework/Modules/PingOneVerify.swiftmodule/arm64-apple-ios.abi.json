@@ -1441,6 +1441,16 @@
       },
       {
         "kind": "Import",
+        "name": "BlinkID",
+        "printedName": "BlinkID",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -7156,6 +7166,34 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "setIconTintColor",
+            "printedName": "setIconTintColor(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIAppearanceSettings",
+                "printedName": "PingOneVerify.UIAppearanceSettings",
+                "usr": "c:@M@PingOneVerify@objc(cs)UIAppearanceSettings"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PingOneVerify@objc(cs)UIAppearanceSettings(im)setIconTintColor:",
+            "mangledName": "$s13PingOneVerify20UIAppearanceSettingsC16setIconTintColoryACSo7UIColorCF",
+            "moduleName": "PingOneVerify",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -10268,73 +10306,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "IdCaptureSettings",
         "printedName": "IdCaptureSettings",
@@ -12014,6 +11985,73 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -25433,6 +25471,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/ResultSanitizer.swift",
+      "kind": "Array",
+      "offset": 2148,
+      "length": 116,
+      "value": "[\"documentImage\", \"faceImage\", \"inputImage\", \"signatureImage\", \"barcodeInputImage\", \"barcodeInputImageScanningSide\"]"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Utils\/ResultSanitizer.swift",
+      "kind": "StringLiteral",
+      "offset": 2438,
+      "length": 5,
+      "value": "\"cxx\""
+    },
+    {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/AppEvents\/Utils\/AppEventUtil.swift",
       "kind": "Array",
       "offset": 191,
@@ -26525,6 +26577,48 @@
       "value": "1.0"
     },
     {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+      "kind": "IntegerLiteral",
+      "offset": 276,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+      "kind": "IntegerLiteral",
+      "offset": 311,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 345,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 435,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 553,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 590,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 792,
@@ -26579,48 +26673,6 @@
       "offset": 1630,
       "length": 3,
       "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
-      "kind": "IntegerLiteral",
-      "offset": 276,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
-      "kind": "IntegerLiteral",
-      "offset": 311,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
-      "kind": "BooleanLiteral",
-      "offset": 345,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
-      "kind": "BooleanLiteral",
-      "offset": 435,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
-      "kind": "BooleanLiteral",
-      "offset": 553,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
-      "kind": "BooleanLiteral",
-      "offset": 590,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/UnclassifiedDocumentKeyMapping.swift",
@@ -28186,7 +28238,7 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7508,
+      "offset": 7647,
       "length": 7,
       "value": "\"error\""
     },
@@ -28578,70 +28630,77 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 588,
+      "offset": 603,
+      "length": 2,
+      "value": "38"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 639,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 619,
+      "offset": 670,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 662,
+      "offset": 713,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 898,
+      "offset": 949,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1109,
+      "offset": 1160,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1177,
+      "offset": 1228,
       "length": 14,
       "value": "\"idv_otp_time\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1307,
+      "offset": 1358,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1790,
+      "offset": 1841,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1825,
+      "offset": 1876,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/OTP Capture\/OtpViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1888,
+      "offset": 1939,
       "length": 3,
       "value": "1.0"
     },

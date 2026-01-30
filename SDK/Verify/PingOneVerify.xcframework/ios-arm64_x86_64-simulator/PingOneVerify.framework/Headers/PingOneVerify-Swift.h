@@ -560,6 +560,7 @@ SWIFT_CLASS("_TtC13PingOneVerify20UIAppearanceSettings")
 - (UIAppearanceSettings * _Nonnull)setAttributedStrings:(NSDictionary<NSString *, NSAttributedString *> * _Nonnull)attributedStrings SWIFT_WARN_UNUSED_RESULT;
 - (UIAppearanceSettings * _Nonnull)showSessionExpiresTimer:(BOOL)isTimerShown SWIFT_WARN_UNUSED_RESULT;
 - (UIAppearanceSettings * _Nonnull)setNavigationTitle:(NSAttributedString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
+- (UIAppearanceSettings * _Nonnull)setIconTintColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1151,6 +1152,7 @@ SWIFT_CLASS("_TtC13PingOneVerify20UIAppearanceSettings")
 - (UIAppearanceSettings * _Nonnull)setAttributedStrings:(NSDictionary<NSString *, NSAttributedString *> * _Nonnull)attributedStrings SWIFT_WARN_UNUSED_RESULT;
 - (UIAppearanceSettings * _Nonnull)showSessionExpiresTimer:(BOOL)isTimerShown SWIFT_WARN_UNUSED_RESULT;
 - (UIAppearanceSettings * _Nonnull)setNavigationTitle:(NSAttributedString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
+- (UIAppearanceSettings * _Nonnull)setIconTintColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
