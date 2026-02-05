@@ -11552,7 +11552,6 @@
         "moduleName": "IDLiveFaceCamera"
       },
       {
-<<<<<<<< HEAD:SDK/Verify/IDLiveFaceCamera.xcframework/ios-arm64_x86_64-simulator/IDLiveFaceCamera.framework/Modules/IDLiveFaceCamera.swiftmodule/arm64-apple-ios-simulator.abi.json
         "kind": "TypeDecl",
         "name": "SimulatedPhotoCaptureService",
         "printedName": "SimulatedPhotoCaptureService",
@@ -11719,8 +11718,6 @@
         ]
       },
       {
-========
->>>>>>>> 3faabe79a14dae6bfb291fea8b7b257279e90d01:SDK/Verify/IDLiveFaceCamera.xcframework/ios-arm64/IDLiveFaceCamera.framework/Modules/IDLiveFaceCamera.swiftmodule/arm64-apple-ios.abi.json
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -20377,7 +20374,6 @@
       "value": "false"
     },
     {
-<<<<<<<< HEAD:SDK/Verify/IDLiveFaceCamera.xcframework/ios-arm64_x86_64-simulator/IDLiveFaceCamera.framework/Modules/IDLiveFaceCamera.swiftmodule/arm64-apple-ios-simulator.abi.json
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/SimulatedPhotoCaptureService.swift",
       "kind": "StringLiteral",
       "offset": 400,
@@ -20385,8 +20381,6 @@
       "value": "\"test_image_live\""
     },
     {
-========
->>>>>>>> 3faabe79a14dae6bfb291fea8b7b257279e90d01:SDK/Verify/IDLiveFaceCamera.xcframework/ios-arm64/IDLiveFaceCamera.framework/Modules/IDLiveFaceCamera.swiftmodule/arm64-apple-ios.abi.json
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraController+IAD.swift",
       "kind": "FloatLiteral",
       "offset": 2272,
@@ -20912,67 +20906,63 @@
       "value": "false"
     },
     {
-<<<<<<<< HEAD:SDK/Verify/IDLiveFaceCamera.xcframework/ios-arm64_x86_64-simulator/IDLiveFaceCamera.framework/Modules/IDLiveFaceCamera.swiftmodule/arm64-apple-ios-simulator.abi.json
       "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-========
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
->>>>>>>> 3faabe79a14dae6bfb291fea8b7b257279e90d01:SDK/Verify/IDLiveFaceCamera.xcframework/ios-arm64/IDLiveFaceCamera.framework/Modules/IDLiveFaceCamera.swiftmodule/arm64-apple-ios.abi.json
       "kind": "StringLiteral",
       "offset": 618,
       "length": 7,
       "value": "\"Color\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 756,
       "length": 13,
       "value": "\"Global Tint\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 899,
       "length": 12,
       "value": "\"background\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1037,
       "length": 10,
       "value": "\"disabled\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1177,
       "length": 12,
       "value": "\"foreground\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1419,
       "length": 10,
       "value": "\"arrow_up\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1558,
       "length": 12,
       "value": "\"check_mark\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1699,
       "length": 12,
       "value": "\"cross_mark\""
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphoneos\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/mitekes10554_user\/Library\/Developer\/Xcode\/DerivedData\/IDFaceFrameworks-gifxglzihythoefzgpvigxqkbvyr\/Build\/Intermediates.noindex\/IDLiveFaceCamera.build\/Release-iphonesimulator\/IDLiveFaceCamera.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1849,
       "length": 17,
