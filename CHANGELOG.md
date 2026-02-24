@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.1.3 - February 24th, 2026
+
+### Fixed
+
+- PingOne Verify Live Feedback is not consistent between Web and SDK experience
+
 ## v3.1.2 - January 30th, 2026
 
 ### Added

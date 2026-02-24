@@ -28210,35 +28210,35 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 568,
+      "offset": 530,
       "length": 7,
       "value": "\"7.6.2\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 621,
+      "offset": 583,
       "length": 43,
       "value": "\"com.pingidentity.sdk.pingoneverify.sample\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 718,
+      "offset": 680,
       "length": 16,
       "value": "\"MB_license_key\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 770,
+      "offset": 732,
       "length": 7,
       "value": "\"2.4.3\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7647,
+      "offset": 7714,
       "length": 7,
       "value": "\"error\""
     },
@@ -28350,7 +28350,7 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Client\/PingOneVerifyClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 29463,
+      "offset": 29371,
       "length": 5,
       "value": "false"
     },
