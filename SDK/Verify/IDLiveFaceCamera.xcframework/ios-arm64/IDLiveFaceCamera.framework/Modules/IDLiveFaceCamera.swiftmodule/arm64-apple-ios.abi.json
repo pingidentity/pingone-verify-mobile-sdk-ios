@@ -2482,6 +2482,26 @@
       },
       {
         "kind": "Import",
+        "name": "IDLiveFaceIAD",
+        "printedName": "IDLiveFaceIAD",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3307,6 +3327,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "LicenseType",
         "printedName": "LicenseType",
@@ -3494,6 +3524,26 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "IDLiveFaceIAD",
+        "printedName": "IDLiveFaceIAD",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "License",
         "printedName": "License",
@@ -3572,38 +3622,18 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "IDLiveFaceIAD",
+        "printedName": "IDLiveFaceIAD",
         "declKind": "Import",
         "moduleName": "IDLiveFaceCamera",
         "declAttributes": [
-          "RawDocComment"
+          "AccessControl"
         ]
       },
       {
         "kind": "Import",
         "name": "CoreImage",
         "printedName": "CoreImage",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "IDLiveFaceCamera",
         "declAttributes": [
@@ -3797,6 +3827,13 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3804,13 +3841,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "IDLiveFaceCamera"
       },
       {
         "kind": "Import",
@@ -5660,173 +5690,6 @@
           },
           {
             "kind": "Var",
-            "name": "takeMultiplePhotos",
-            "printedName": "takeMultiplePhotos",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvp",
-            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvp",
-            "moduleName": "IDLiveFaceCamera",
-            "declAttributes": [
-              "HasInitialValue",
-              "Preconcurrency",
-              "Custom",
-              "HasStorage",
-              "AccessControl",
-              "SPIAccessControl",
-              "RawDocComment"
-            ],
-            "spi_group_names": [
-              "Private"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvg",
-                "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvg",
-                "moduleName": "IDLiveFaceCamera",
-                "implicit": true,
-                "spi_group_names": [
-                  "Private"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvs",
-                "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvs",
-                "moduleName": "IDLiveFaceCamera",
-                "implicit": true,
-                "spi_group_names": [
-                  "Private"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvM",
-                "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC18takeMultiplePhotosSbvM",
-                "moduleName": "IDLiveFaceCamera",
-                "implicit": true,
-                "spi_group_names": [
-                  "Private"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "multiplePhotoTimeDifference",
-            "printedName": "multiplePhotoTimeDifference",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Double?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC27multiplePhotoTimeDifferenceSdSgvp",
-            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC27multiplePhotoTimeDifferenceSdSgvp",
-            "moduleName": "IDLiveFaceCamera",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "SPIAccessControl"
-            ],
-            "spi_group_names": [
-              "Private"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Double?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Double",
-                        "printedName": "Swift.Double",
-                        "usr": "s:Sd"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC27multiplePhotoTimeDifferenceSdSgvg",
-                "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC27multiplePhotoTimeDifferenceSdSgvg",
-                "moduleName": "IDLiveFaceCamera",
-                "spi_group_names": [
-                  "Private"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "faceCaptureBoundaries",
             "printedName": "faceCaptureBoundaries",
             "children": [
@@ -6562,20 +6425,18 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Void",
+                "printedName": "()"
               }
             ],
             "declKind": "Func",
-            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC9takePhotoSbyF",
-            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC9takePhotoSbyF",
+            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC9takePhotoyyF",
+            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC9takePhotoyyF",
             "moduleName": "IDLiveFaceCamera",
             "declAttributes": [
               "Preconcurrency",
               "Custom",
               "AccessControl",
-              "DiscardableResult",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -9134,23 +8995,15 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PayloadSize",
-                    "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize",
-                    "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC11PayloadSizeO"
-                  }
-                ],
+                "name": "PayloadSize",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize",
                 "hasDefaultArg": true,
-                "usr": "s:Sq"
+                "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC11PayloadSizeO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10Foundation4DataVAKSg_SSSgAmC07PayloadN0OSgtKF",
-            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10Foundation4DataVAKSg_SSSgAmC07PayloadN0OSgtKF",
+            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10Foundation4DataVAKSg_SSSgAmC07PayloadN0OtKF",
+            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle3key0I2Id12externalMeta11payloadSize10Foundation4DataVAKSg_SSSgAmC07PayloadN0OtKF",
             "moduleName": "IDLiveFaceCamera",
             "declAttributes": [
               "Preconcurrency",
@@ -9159,127 +9012,6 @@
               "RawDocComment"
             ],
             "isFromExtension": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "prepareForIAD",
-            "printedName": "prepareForIAD(format:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "IADImageFormat",
-                "printedName": "IDLiveFaceCamera.IADImageFormat",
-                "usr": "s:16IDLiveFaceCamera14IADImageFormatO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC13prepareForIAD6formatyAA14IADImageFormatO_tF",
-            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC13prepareForIAD6formatyAA14IADImageFormatO_tF",
-            "moduleName": "IDLiveFaceCamera",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "SPIAccessControl"
-            ],
-            "isFromExtension": true,
-            "spi_group_names": [
-              "PrivateClient"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "createIADBundle",
-            "printedName": "createIADBundle(format:payloadSize:key:keyId:externalMeta:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Data",
-                "printedName": "Foundation.Data",
-                "usr": "s:10Foundation4DataV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "IADImageFormat",
-                "printedName": "IDLiveFaceCamera.IADImageFormat",
-                "hasDefaultArg": true,
-                "usr": "s:16IDLiveFaceCamera14IADImageFormatO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "PayloadSize",
-                "printedName": "IDLiveFaceCamera.IDCameraControllerBase.PayloadSize",
-                "hasDefaultArg": true,
-                "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC11PayloadSizeO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.Data?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Data",
-                    "printedName": "Foundation.Data",
-                    "usr": "s:10Foundation4DataV"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle6format11payloadSize3key0L2Id12externalMeta10Foundation4DataVAA14IADImageFormatO_AC07PayloadK0OALSgSSSgARtKF",
-            "mangledName": "$s16IDLiveFaceCamera22IDCameraControllerBaseC15createIADBundle6format11payloadSize3key0L2Id12externalMeta10Foundation4DataVAA14IADImageFormatO_AC07PayloadK0OALSgSSSgARtKF",
-            "moduleName": "IDLiveFaceCamera",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "SPIAccessControl"
-            ],
-            "isFromExtension": true,
-            "spi_group_names": [
-              "PrivateClient"
-            ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
           },
@@ -9596,6 +9328,16 @@
             "usr": "s:16IDLiveFaceCamera0B16DetectorDelegateP",
             "mangledName": "$s16IDLiveFaceCamera0B16DetectorDelegateP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -10889,9 +10631,45 @@
             ]
           },
           {
-            "kind": "Var",
+            "kind": "Function",
+            "name": "jpegData",
+            "printedName": "jpegData(compressionQuality:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16IDLiveFaceCamera7IDImageC8jpegData18compressionQuality10Foundation0F0VSgSf_tF",
+            "mangledName": "$s16IDLiveFaceCamera7IDImageC8jpegData18compressionQuality10Foundation0F0VSgSf_tF",
+            "moduleName": "IDLiveFaceCamera",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "pngData",
-            "printedName": "pngData",
+            "printedName": "pngData()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10908,43 +10686,15 @@
                 "usr": "s:Sq"
               }
             ],
-            "declKind": "Var",
-            "usr": "s:16IDLiveFaceCamera7IDImageC7pngData10Foundation0F0VSgvp",
-            "mangledName": "$s16IDLiveFaceCamera7IDImageC7pngData10Foundation0F0VSgvp",
+            "declKind": "Func",
+            "usr": "s:16IDLiveFaceCamera7IDImageC7pngData10Foundation0F0VSgyF",
+            "mangledName": "$s16IDLiveFaceCamera7IDImageC7pngData10Foundation0F0VSgyF",
             "moduleName": "IDLiveFaceCamera",
             "declAttributes": [
-              "SetterAccess",
               "AccessControl",
               "RawDocComment"
             ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Foundation.Data?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Data",
-                        "printedName": "Foundation.Data",
-                        "usr": "s:10Foundation4DataV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:16IDLiveFaceCamera7IDImageC7pngData10Foundation0F0VSgvg",
-                "mangledName": "$s16IDLiveFaceCamera7IDImageC7pngData10Foundation0F0VSgvg",
-                "moduleName": "IDLiveFaceCamera",
-                "accessorKind": "get"
-              }
-            ]
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -11565,6 +11315,16 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "IDLiveFaceCamera",
         "declAttributes": [
@@ -17768,6 +17528,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IDLiveFaceCamera",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CoreVideo",
         "printedName": "CoreVideo",
         "declKind": "Import",
@@ -19219,6 +18989,36 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "FaceIADController",
+        "printedName": "FaceIADController",
+        "declKind": "Class",
+        "usr": "s:13IDLiveFaceIAD0B13IADControllerC",
+        "mangledName": "$s13IDLiveFaceIAD0B13IADControllerC",
+        "moduleName": "IDLiveFaceIAD",
+        "declAttributes": [
+          "Final"
+        ],
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "UIImage",
         "printedName": "UIImage",
         "children": [
@@ -19781,27 +19581,6 @@
       "value": "15"
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/RingBuffer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 217,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/RingBuffer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 240,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/RingBuffer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 870,
-      "length": 1,
-      "value": "1"
-    },
-    {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/FPSCounter.swift",
       "kind": "Array",
       "offset": 203,
@@ -19816,60 +19595,11 @@
       "value": "10"
     },
     {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/TimeRelativeContainer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 378,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/TimeRelativeContainer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 478,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/TimeRelativeContainer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 480,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/TimeRelativeContainer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 545,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/TimeRelativeContainer.swift",
-      "kind": "FloatLiteral",
-      "offset": 549,
-      "length": 3,
-      "value": "1.3"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/Queue.swift",
-      "kind": "IntegerLiteral",
-      "offset": 729,
-      "length": 1,
-      "value": "1"
-    },
-    {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/Utils+Camera+Info.swift",
       "kind": "BooleanLiteral",
       "offset": 861,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/ImageBundleController.swift",
-      "kind": "FloatLiteral",
-      "offset": 856,
-      "length": 3,
-      "value": "1.0"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
@@ -19972,77 +19702,63 @@
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 7428,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8575,
+      "offset": 8157,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "StringLiteral",
-      "offset": 8790,
+      "offset": 8372,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "Dictionary",
-      "offset": 8833,
+      "offset": 8415,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "Array",
-      "offset": 9001,
+      "offset": 8583,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
-      "kind": "StringLiteral",
-      "offset": 9117,
-      "length": 32,
-      "value": "\"idrnd.IDLiveFaceCamera.serialQ\""
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 20740,
+      "offset": 20020,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 21035,
+      "offset": 20315,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 21174,
+      "offset": 20454,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 21427,
+      "offset": 20707,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraControllerBase.swift",
       "kind": "BooleanLiteral",
-      "offset": 22166,
+      "offset": 21446,
       "length": 5,
       "value": "false"
     },
@@ -20063,133 +19779,133 @@
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "FloatLiteral",
-      "offset": 7496,
+      "offset": 7503,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 10808,
+      "offset": 10687,
       "length": 375,
       "value": "\"IDImage: #\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 10843,
+      "offset": 10722,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "IntegerLiteral",
-      "offset": 10875,
+      "offset": 10754,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 10878,
+      "offset": 10757,
       "length": 9,
       "value": "\"\ntimestamp: \""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 10910,
+      "offset": 10789,
       "length": 1,
       "value": "\" (sb: \""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 10960,
+      "offset": 10839,
       "length": 1,
       "value": "\")\nsampleBuffer: \""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11008,
+      "offset": 10887,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11014,
+      "offset": 10893,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11018,
+      "offset": 10897,
       "length": 1,
       "value": "\", cvPixelBuffer: \""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11061,
+      "offset": 10940,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11067,
+      "offset": 10946,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11071,
+      "offset": 10950,
       "length": 1,
       "value": "\", uiImage: \""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11102,
+      "offset": 10981,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11108,
+      "offset": 10987,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11112,
+      "offset": 10991,
       "length": 1,
       "value": "\", jpeg\/png\/...: \""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11161,
+      "offset": 11040,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11167,
+      "offset": 11046,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDImage.swift",
       "kind": "StringLiteral",
-      "offset": 11171,
+      "offset": 11050,
       "length": 12,
       "value": "\"\""
     },
@@ -20206,13 +19922,6 @@
       "offset": 2392,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/IDCameraController+IAD.swift",
-      "kind": "FloatLiteral",
-      "offset": 2272,
-      "length": 3,
-      "value": "1.0"
     },
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/Extensions.swift",
@@ -20343,7 +20052,7 @@
     {
       "filePath": "\/Users\/mitekes10554_user\/builds\/BkyH8mpz\/0\/FaceProject\/demo\/fas-camera-module\/IDFaceFrameworks\/IDLiveFaceCamera\/IDLiveFaceCamera\/PhotoCaptureService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8773,
+      "offset": 8954,
       "length": 5,
       "value": "false"
     },
