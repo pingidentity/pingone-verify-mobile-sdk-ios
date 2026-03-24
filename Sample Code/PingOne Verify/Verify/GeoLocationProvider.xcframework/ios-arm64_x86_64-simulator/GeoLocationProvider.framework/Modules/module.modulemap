@@ -1,6 +1,0 @@
-framework module GeoLocationProvider {
-  umbrella header "GeoLocationProvider.h"
-  export *
-
-  module * { export * }
-}
