@@ -12,25 +12,25 @@
 		1C42537A2909C179008E871B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253792909C179008E871B /* Assets.xcassets */; };
 		1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C42537B2909C179008E871B /* LaunchScreen.storyboard */; };
 		1C4253862909C286008E871B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253842909C286008E871B /* Main.storyboard */; };
+		631512D02F725E3C00705062 /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512BD2F725E3400705062 /* BlinkID.xcframework */; };
+		631512D12F725E3C00705062 /* BlinkID.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512BD2F725E3400705062 /* BlinkID.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512D22F725E3E00705062 /* BlinkIDUX.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512BE2F725E3400705062 /* BlinkIDUX.xcframework */; };
+		631512D32F725E3E00705062 /* BlinkIDUX.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512BE2F725E3400705062 /* BlinkIDUX.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512D42F725E3F00705062 /* GeoLocationProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512BF2F725E3400705062 /* GeoLocationProvider.xcframework */; };
+		631512D52F725E3F00705062 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512BF2F725E3400705062 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512D62F725E4100705062 /* IDLiveFaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C02F725E3400705062 /* IDLiveFaceCamera.xcframework */; };
+		631512D72F725E4100705062 /* IDLiveFaceCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C02F725E3400705062 /* IDLiveFaceCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512D82F725E4300705062 /* IDLiveFaceDetection.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C12F725E3400705062 /* IDLiveFaceDetection.xcframework */; };
+		631512D92F725E4300705062 /* IDLiveFaceDetection.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C12F725E3400705062 /* IDLiveFaceDetection.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512DA2F725E4400705062 /* IDLiveFaceIAD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C22F725E3400705062 /* IDLiveFaceIAD.xcframework */; };
+		631512DB2F725E4400705062 /* IDLiveFaceIAD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C22F725E3400705062 /* IDLiveFaceIAD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512DC2F725E4600705062 /* LanguagePackProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C32F725E3400705062 /* LanguagePackProvider.xcframework */; };
+		631512DD2F725E4600705062 /* LanguagePackProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C32F725E3400705062 /* LanguagePackProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512DE2F725E4700705062 /* NeoInterfaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C42F725E3400705062 /* NeoInterfaces.xcframework */; };
+		631512DF2F725E4700705062 /* NeoInterfaces.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C42F725E3400705062 /* NeoInterfaces.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		631512E02F725E4900705062 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C52F725E3400705062 /* PingOneVerify.xcframework */; };
+		631512E12F725E4900705062 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 631512C52F725E3400705062 /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */; };
-		72ACD7AD2F71580B00EA3DD7 /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79A2F71525000EA3DD7 /* BlinkID.xcframework */; };
-		72ACD7AE2F71580B00EA3DD7 /* BlinkID.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79A2F71525000EA3DD7 /* BlinkID.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7AF2F71580D00EA3DD7 /* BlinkIDUX.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79B2F71525000EA3DD7 /* BlinkIDUX.xcframework */; };
-		72ACD7B02F71580D00EA3DD7 /* BlinkIDUX.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79B2F71525000EA3DD7 /* BlinkIDUX.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7B12F71580F00EA3DD7 /* GeoLocationProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79C2F71525000EA3DD7 /* GeoLocationProvider.xcframework */; };
-		72ACD7B22F71580F00EA3DD7 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79C2F71525000EA3DD7 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7B32F71581100EA3DD7 /* IDLiveFaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79D2F71525000EA3DD7 /* IDLiveFaceCamera.xcframework */; };
-		72ACD7B42F71581100EA3DD7 /* IDLiveFaceCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79D2F71525000EA3DD7 /* IDLiveFaceCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7B52F71581300EA3DD7 /* IDLiveFaceDetection.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79E2F71525000EA3DD7 /* IDLiveFaceDetection.xcframework */; };
-		72ACD7B62F71581300EA3DD7 /* IDLiveFaceDetection.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79E2F71525000EA3DD7 /* IDLiveFaceDetection.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7B72F71581700EA3DD7 /* IDLiveFaceIAD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79F2F71525000EA3DD7 /* IDLiveFaceIAD.xcframework */; };
-		72ACD7B82F71581700EA3DD7 /* IDLiveFaceIAD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD79F2F71525000EA3DD7 /* IDLiveFaceIAD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7B92F71581A00EA3DD7 /* LanguagePackProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD7A02F71525000EA3DD7 /* LanguagePackProvider.xcframework */; };
-		72ACD7BA2F71581A00EA3DD7 /* LanguagePackProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD7A02F71525000EA3DD7 /* LanguagePackProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7BB2F71581C00EA3DD7 /* NeoInterfaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD7A12F71525000EA3DD7 /* NeoInterfaces.xcframework */; };
-		72ACD7BC2F71581D00EA3DD7 /* NeoInterfaces.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD7A12F71525000EA3DD7 /* NeoInterfaces.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		72ACD7BD2F71581E00EA3DD7 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD7A22F71525000EA3DD7 /* PingOneVerify.xcframework */; };
-		72ACD7BE2F71581E00EA3DD7 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72ACD7A22F71525000EA3DD7 /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; };
 		72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72F04C822E5E336500238971 /* JOSESwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C712E5E334700238971 /* JOSESwift.xcframework */; };
@@ -53,18 +53,18 @@
 			files = (
 				72F04C8F2E5E336500238971 /* secp256k1Wrapper.xcframework in Embed Frameworks */,
 				72F04C892E5E336500238971 /* libsecp256k1.xcframework in Embed Frameworks */,
-				72ACD7BA2F71581A00EA3DD7 /* LanguagePackProvider.xcframework in Embed Frameworks */,
-				72ACD7B42F71581100EA3DD7 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
-				72ACD7B82F71581700EA3DD7 /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
+				631512DD2F725E4600705062 /* LanguagePackProvider.xcframework in Embed Frameworks */,
+				631512D72F725E4100705062 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
+				631512DB2F725E4400705062 /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
 				72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */,
-				72ACD7AE2F71580B00EA3DD7 /* BlinkID.xcframework in Embed Frameworks */,
+				631512D12F725E3C00705062 /* BlinkID.xcframework in Embed Frameworks */,
 				72F04C832E5E336500238971 /* JOSESwift.xcframework in Embed Frameworks */,
-				72ACD7B22F71580F00EA3DD7 /* GeoLocationProvider.xcframework in Embed Frameworks */,
-				72ACD7B02F71580D00EA3DD7 /* BlinkIDUX.xcframework in Embed Frameworks */,
+				631512D52F725E3F00705062 /* GeoLocationProvider.xcframework in Embed Frameworks */,
+				631512D32F725E3E00705062 /* BlinkIDUX.xcframework in Embed Frameworks */,
 				72F04C852E5E336500238971 /* JoseTools.xcframework in Embed Frameworks */,
-				72ACD7BE2F71581E00EA3DD7 /* PingOneVerify.xcframework in Embed Frameworks */,
-				72ACD7B62F71581300EA3DD7 /* IDLiveFaceDetection.xcframework in Embed Frameworks */,
-				72ACD7BC2F71581D00EA3DD7 /* NeoInterfaces.xcframework in Embed Frameworks */,
+				631512E12F725E4900705062 /* PingOneVerify.xcframework in Embed Frameworks */,
+				631512D92F725E4300705062 /* IDLiveFaceDetection.xcframework in Embed Frameworks */,
+				631512DF2F725E4700705062 /* NeoInterfaces.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,16 +79,16 @@
 		1C42537C2909C179008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C42537E2909C179008E871B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4253852909C286008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		631512BD2F725E3400705062 /* BlinkID.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BlinkID.xcframework; sourceTree = "<group>"; };
+		631512BE2F725E3400705062 /* BlinkIDUX.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQTJWP89J7:Microblink Ltd"; lastKnownFileType = wrapper.xcframework; path = BlinkIDUX.xcframework; sourceTree = "<group>"; };
+		631512BF2F725E3400705062 /* GeoLocationProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GeoLocationProvider.xcframework; sourceTree = "<group>"; };
+		631512C02F725E3400705062 /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
+		631512C12F725E3400705062 /* IDLiveFaceDetection.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceDetection.xcframework; sourceTree = "<group>"; };
+		631512C22F725E3400705062 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
+		631512C32F725E3400705062 /* LanguagePackProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = LanguagePackProvider.xcframework; sourceTree = "<group>"; };
+		631512C42F725E3400705062 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeoInterfaces.xcframework; sourceTree = "<group>"; };
+		631512C52F725E3400705062 /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PingOneVerify.xcframework; sourceTree = "<group>"; };
 		63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
-		72ACD79A2F71525000EA3DD7 /* BlinkID.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BlinkID.xcframework; sourceTree = "<group>"; };
-		72ACD79B2F71525000EA3DD7 /* BlinkIDUX.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQTJWP89J7:Microblink Ltd"; lastKnownFileType = wrapper.xcframework; path = BlinkIDUX.xcframework; sourceTree = "<group>"; };
-		72ACD79C2F71525000EA3DD7 /* GeoLocationProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GeoLocationProvider.xcframework; sourceTree = "<group>"; };
-		72ACD79D2F71525000EA3DD7 /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
-		72ACD79E2F71525000EA3DD7 /* IDLiveFaceDetection.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceDetection.xcframework; sourceTree = "<group>"; };
-		72ACD79F2F71525000EA3DD7 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
-		72ACD7A02F71525000EA3DD7 /* LanguagePackProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = LanguagePackProvider.xcframework; sourceTree = "<group>"; };
-		72ACD7A12F71525000EA3DD7 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeoInterfaces.xcframework; sourceTree = "<group>"; };
-		72ACD7A22F71525000EA3DD7 /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PingOneVerify.xcframework; sourceTree = "<group>"; };
 		72F04C702E5E334700238971 /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoTools.xcframework; sourceTree = "<group>"; };
 		72F04C712E5E334700238971 /* JOSESwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JOSESwift.xcframework; sourceTree = "<group>"; };
 		72F04C722E5E334700238971 /* JoseTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JoseTools.xcframework; sourceTree = "<group>"; };
@@ -102,20 +102,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72ACD7B32F71581100EA3DD7 /* IDLiveFaceCamera.xcframework in Frameworks */,
-				72ACD7B12F71580F00EA3DD7 /* GeoLocationProvider.xcframework in Frameworks */,
-				72ACD7BB2F71581C00EA3DD7 /* NeoInterfaces.xcframework in Frameworks */,
-				72ACD7B92F71581A00EA3DD7 /* LanguagePackProvider.xcframework in Frameworks */,
+				631512D62F725E4100705062 /* IDLiveFaceCamera.xcframework in Frameworks */,
 				72F04C8E2E5E336500238971 /* secp256k1Wrapper.xcframework in Frameworks */,
+				631512DE2F725E4700705062 /* NeoInterfaces.xcframework in Frameworks */,
+				631512D42F725E3F00705062 /* GeoLocationProvider.xcframework in Frameworks */,
 				72F04C882E5E336500238971 /* libsecp256k1.xcframework in Frameworks */,
+				631512DC2F725E4600705062 /* LanguagePackProvider.xcframework in Frameworks */,
 				72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */,
-				72ACD7B52F71581300EA3DD7 /* IDLiveFaceDetection.xcframework in Frameworks */,
+				631512D82F725E4300705062 /* IDLiveFaceDetection.xcframework in Frameworks */,
 				72F04C822E5E336500238971 /* JOSESwift.xcframework in Frameworks */,
 				72F04C842E5E336500238971 /* JoseTools.xcframework in Frameworks */,
-				72ACD7AF2F71580D00EA3DD7 /* BlinkIDUX.xcframework in Frameworks */,
-				72ACD7BD2F71581E00EA3DD7 /* PingOneVerify.xcframework in Frameworks */,
-				72ACD7B72F71581700EA3DD7 /* IDLiveFaceIAD.xcframework in Frameworks */,
-				72ACD7AD2F71580B00EA3DD7 /* BlinkID.xcframework in Frameworks */,
+				631512D22F725E3E00705062 /* BlinkIDUX.xcframework in Frameworks */,
+				631512E02F725E4900705062 /* PingOneVerify.xcframework in Frameworks */,
+				631512DA2F725E4400705062 /* IDLiveFaceIAD.xcframework in Frameworks */,
+				631512D02F725E3C00705062 /* BlinkID.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,24 +157,24 @@
 		1C4253872909C2A2008E871B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				72ACD7A32F71525000EA3DD7 /* Verify */,
+				631512C62F725E3400705062 /* Verify */,
 				72F04C752E5E334700238971 /* Common */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		72ACD7A32F71525000EA3DD7 /* Verify */ = {
+		631512C62F725E3400705062 /* Verify */ = {
 			isa = PBXGroup;
 			children = (
-				72ACD79A2F71525000EA3DD7 /* BlinkID.xcframework */,
-				72ACD79B2F71525000EA3DD7 /* BlinkIDUX.xcframework */,
-				72ACD79C2F71525000EA3DD7 /* GeoLocationProvider.xcframework */,
-				72ACD79D2F71525000EA3DD7 /* IDLiveFaceCamera.xcframework */,
-				72ACD79E2F71525000EA3DD7 /* IDLiveFaceDetection.xcframework */,
-				72ACD79F2F71525000EA3DD7 /* IDLiveFaceIAD.xcframework */,
-				72ACD7A02F71525000EA3DD7 /* LanguagePackProvider.xcframework */,
-				72ACD7A12F71525000EA3DD7 /* NeoInterfaces.xcframework */,
-				72ACD7A22F71525000EA3DD7 /* PingOneVerify.xcframework */,
+				631512BD2F725E3400705062 /* BlinkID.xcframework */,
+				631512BE2F725E3400705062 /* BlinkIDUX.xcframework */,
+				631512BF2F725E3400705062 /* GeoLocationProvider.xcframework */,
+				631512C02F725E3400705062 /* IDLiveFaceCamera.xcframework */,
+				631512C12F725E3400705062 /* IDLiveFaceDetection.xcframework */,
+				631512C22F725E3400705062 /* IDLiveFaceIAD.xcframework */,
+				631512C32F725E3400705062 /* LanguagePackProvider.xcframework */,
+				631512C42F725E3400705062 /* NeoInterfaces.xcframework */,
+				631512C52F725E3400705062 /* PingOneVerify.xcframework */,
 			);
 			path = Verify;
 			sourceTree = "<group>";
