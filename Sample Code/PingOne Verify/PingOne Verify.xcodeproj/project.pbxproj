@@ -12,15 +12,24 @@
 		1C42537A2909C179008E871B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253792909C179008E871B /* Assets.xcassets */; };
 		1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C42537B2909C179008E871B /* LaunchScreen.storyboard */; };
 		1C4253862909C286008E871B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253842909C286008E871B /* Main.storyboard */; };
-		638AA5792F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5742F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework */; };
-		638AA57A2F72B9F500DA6D81 /* NeoInterfaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */; };
-		638AA57B2F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5722F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework */; };
-		638AA57C2F72B9F500DA6D81 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */; };
-		638AA57D2F72B9F500DA6D81 /* BlinkIDUX.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5702F72B9F500DA6D81 /* BlinkIDUX.xcframework */; };
-		638AA57E2F72B9F500DA6D81 /* LanguagePackProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5752F72B9F500DA6D81 /* LanguagePackProvider.xcframework */; };
-		638AA57F2F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5732F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework */; };
-		638AA5802F72B9F500DA6D81 /* GeoLocationProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; };
-		638AA5812F72B9F500DA6D81 /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA56F2F72B9F500DA6D81 /* BlinkID.xcframework */; };
+		638AA5A62F72C2E900DA6D81 /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA56F2F72B9F500DA6D81 /* BlinkID.xcframework */; };
+		638AA5A72F72C2E900DA6D81 /* BlinkID.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA56F2F72B9F500DA6D81 /* BlinkID.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5A82F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5702F72B9F500DA6D81 /* BlinkIDUX.xcframework */; };
+		638AA5A92F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5702F72B9F500DA6D81 /* BlinkIDUX.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5AA2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; };
+		638AA5AB2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5AC2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5722F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework */; };
+		638AA5AD2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5722F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5AE2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5732F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework */; };
+		638AA5AF2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5732F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5B02F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5742F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework */; };
+		638AA5B12F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5742F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5B22F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5752F72B9F500DA6D81 /* LanguagePackProvider.xcframework */; };
+		638AA5B32F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5752F72B9F500DA6D81 /* LanguagePackProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5B42F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */; };
+		638AA5B52F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		638AA5B62F72C2FC00DA6D81 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */; };
+		638AA5B72F72C2FC00DA6D81 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */; };
 		72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; };
 		72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -44,9 +53,18 @@
 			files = (
 				72F04C8F2E5E336500238971 /* secp256k1Wrapper.xcframework in Embed Frameworks */,
 				72F04C892E5E336500238971 /* libsecp256k1.xcframework in Embed Frameworks */,
+				638AA5B32F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Embed Frameworks */,
+				638AA5AD2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
+				638AA5B12F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
 				72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */,
+				638AA5A72F72C2E900DA6D81 /* BlinkID.xcframework in Embed Frameworks */,
 				72F04C832E5E336500238971 /* JOSESwift.xcframework in Embed Frameworks */,
+				638AA5AB2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Embed Frameworks */,
+				638AA5A92F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Embed Frameworks */,
 				72F04C852E5E336500238971 /* JoseTools.xcframework in Embed Frameworks */,
+				638AA5B72F72C2FC00DA6D81 /* PingOneVerify.xcframework in Embed Frameworks */,
+				638AA5AF2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Embed Frameworks */,
+				638AA5B52F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,20 +102,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638AA5AC2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Frameworks */,
 				72F04C8E2E5E336500238971 /* secp256k1Wrapper.xcframework in Frameworks */,
+				638AA5B42F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Frameworks */,
+				638AA5AA2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Frameworks */,
 				72F04C882E5E336500238971 /* libsecp256k1.xcframework in Frameworks */,
-				638AA5792F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework in Frameworks */,
-				638AA57A2F72B9F500DA6D81 /* NeoInterfaces.xcframework in Frameworks */,
-				638AA57B2F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework in Frameworks */,
-				638AA57C2F72B9F500DA6D81 /* PingOneVerify.xcframework in Frameworks */,
-				638AA57D2F72B9F500DA6D81 /* BlinkIDUX.xcframework in Frameworks */,
-				638AA57E2F72B9F500DA6D81 /* LanguagePackProvider.xcframework in Frameworks */,
-				638AA57F2F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework in Frameworks */,
-				638AA5802F72B9F500DA6D81 /* GeoLocationProvider.xcframework in Frameworks */,
-				638AA5812F72B9F500DA6D81 /* BlinkID.xcframework in Frameworks */,
+				638AA5B22F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Frameworks */,
 				72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */,
+				638AA5AE2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Frameworks */,
 				72F04C822E5E336500238971 /* JOSESwift.xcframework in Frameworks */,
 				72F04C842E5E336500238971 /* JoseTools.xcframework in Frameworks */,
+				638AA5A82F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Frameworks */,
+				638AA5B62F72C2FC00DA6D81 /* PingOneVerify.xcframework in Frameworks */,
+				638AA5B02F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Frameworks */,
+				638AA5A62F72C2E900DA6D81 /* BlinkID.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
