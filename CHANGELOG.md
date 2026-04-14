@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.2.1 - April 14th, 2026,
+
+### Hotfix
+
+- License updated to restore selfie capture functionality.
+
 ## v3.2.0 - March 23rd, 2026
 
 ### Added
