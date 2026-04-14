@@ -1,0 +1,34 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/bhavyachauhan/Library/Developer/Xcode/DerivedData/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo/Build/Intermediates.noindex/ArchiveIntermediates/GeoLocationProvider/InstallationBuildProductsLocation/Library/Frameworks/GeoLocationProvider.framework/GeoLocationProvider'
+relocations:
+  - { offset: 0x561F9, size: 0x8, addend: 0x0, symName: _GeoLocationProviderVersionString, symObjAddr: 0x0, symBinAddr: 0x1F90, symSize: 0x0 }
+  - { offset: 0x56230, size: 0x8, addend: 0x0, symName: _GeoLocationProviderVersionNumber, symObjAddr: 0x40, symBinAddr: 0x1FD0, symSize: 0x0 }
+  - { offset: 0x56445, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCMa', symObjAddr: 0x11C, symBinAddr: 0x114C, symSize: 0x20 }
+  - { offset: 0x56459, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces27GeoLocationProviderListener_pWOc', symObjAddr: 0x13C, symBinAddr: 0x116C, symSize: 0x44 }
+  - { offset: 0x5646D, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces27GeoLocationProviderListener_pSgWOd', symObjAddr: 0x180, symBinAddr: 0x11B0, symSize: 0x50 }
+  - { offset: 0x56481, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x1D0, symBinAddr: 0x1200, symSize: 0x44 }
+  - { offset: 0x56495, size: 0x8, addend: 0x0, symName: ___swift_destroy_boxed_opaque_existential_1, symObjAddr: 0x214, symBinAddr: 0x1244, symSize: 0x20 }
+  - { offset: 0x564BF, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCfETo', symObjAddr: 0x2DC, symBinAddr: 0x130C, symSize: 0x38 }
+  - { offset: 0x564EE, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_18didUpdateLocationsySo010CLLocationF0C_SaySo0J0CGtF', symObjAddr: 0x314, symBinAddr: 0x1344, symSize: 0x8 }
+  - { offset: 0x56511, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_18didUpdateLocationsySo010CLLocationF0C_SaySo0J0CGtFTo', symObjAddr: 0x31C, symBinAddr: 0x134C, symSize: 0x68 }
+  - { offset: 0x56543, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_16didFailWithErrorySo010CLLocationF0C_s0J0_ptF', symObjAddr: 0x384, symBinAddr: 0x13B4, symSize: 0x8 }
+  - { offset: 0x56566, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_16didFailWithErrorySo010CLLocationF0C_s0J0_ptFTo', symObjAddr: 0x38C, symBinAddr: 0x13BC, symSize: 0x5C }
+  - { offset: 0x56598, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC03setB08listenery13NeoInterfaces0abC8Listener_p_tF', symObjAddr: 0x3E8, symBinAddr: 0x1418, symSize: 0x58 }
+  - { offset: 0x565E9, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC014requestCurrentB0yyF', symObjAddr: 0x440, symBinAddr: 0x1470, symSize: 0x70 }
+  - { offset: 0x56658, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC13NeoInterfaces0abC8ContractAadEP014requestCurrentB0yyFTW', symObjAddr: 0x4B0, symBinAddr: 0x14E0, symSize: 0x80 }
+  - { offset: 0x566E9, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC13NeoInterfaces0abC8ContractAadEP03setB08listeneryAD0abC8Listener_p_tFTW', symObjAddr: 0x530, symBinAddr: 0x1560, symSize: 0x5C }
+  - { offset: 0x56777, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo10CLLocationC_Tg5', symObjAddr: 0x58C, symBinAddr: 0x15BC, symSize: 0x1B4 }
+  - { offset: 0x568B3, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_18didUpdateLocationsySo010CLLocationF0C_SaySo0J0CGtFTf4dnn_n', symObjAddr: 0x740, symBinAddr: 0x1770, symSize: 0x1B0 }
+  - { offset: 0x56ABC, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_16didFailWithErrorySo010CLLocationF0C_s0J0_ptFTf4dnn_n', symObjAddr: 0x8F0, symBinAddr: 0x1920, symSize: 0xA8 }
+  - { offset: 0x56B19, size: 0x8, addend: 0x0, symName: '_$sSo10CLLocationCMa', symObjAddr: 0x9AC, symBinAddr: 0x19DC, symSize: 0x44 }
+  - { offset: 0x56B2D, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces27GeoLocationProviderListener_pSgWOh', symObjAddr: 0x9F0, symBinAddr: 0x1A20, symSize: 0x48 }
+  - { offset: 0x56B41, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces27GeoLocationProviderListener_pSgWOc', symObjAddr: 0xA38, symBinAddr: 0x1A68, symSize: 0x50 }
+  - { offset: 0x56B55, size: 0x8, addend: 0x0, symName: ___swift_project_boxed_opaque_existential_1, symObjAddr: 0xA88, symBinAddr: 0x1AB8, symSize: 0x24 }
+  - { offset: 0x56B8F, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfC', symObjAddr: 0x0, symBinAddr: 0x1030, symSize: 0x30 }
+  - { offset: 0x56BFD, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfc', symObjAddr: 0x30, symBinAddr: 0x1060, symSize: 0xEC }
+  - { offset: 0x56C5D, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCACycfC', symObjAddr: 0x234, symBinAddr: 0x1264, symSize: 0x20 }
+  - { offset: 0x56C78, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCACycfc', symObjAddr: 0x254, symBinAddr: 0x1284, symSize: 0x2C }
+  - { offset: 0x56CD6, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCACycfcTo', symObjAddr: 0x280, symBinAddr: 0x12B0, symSize: 0x2C }
+  - { offset: 0x56D2B, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCfD', symObjAddr: 0x2AC, symBinAddr: 0x12DC, symSize: 0x30 }
+...

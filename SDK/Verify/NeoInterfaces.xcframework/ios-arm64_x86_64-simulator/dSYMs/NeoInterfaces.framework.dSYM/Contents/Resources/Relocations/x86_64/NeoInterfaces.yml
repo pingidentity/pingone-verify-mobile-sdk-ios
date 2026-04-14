@@ -1,0 +1,16 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/bhavyachauhan/Library/Developer/Xcode/DerivedData/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo/Build/Intermediates.noindex/ArchiveIntermediates/NeoInterfaces/InstallationBuildProductsLocation/Library/Frameworks/NeoInterfaces.framework/NeoInterfaces'
+relocations:
+  - { offset: 0x33, size: 0x8, addend: 0x0, symName: _NeoInterfacesVersionString, symObjAddr: 0x0, symBinAddr: 0x980, symSize: 0x0 }
+  - { offset: 0x67, size: 0x8, addend: 0x0, symName: _NeoInterfacesVersionNumber, symObjAddr: 0x38, symBinAddr: 0x9B8, symSize: 0x0 }
+  - { offset: 0xA3, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces22GeolocationCoordinatesV8latitudeSdvg', symObjAddr: 0x0, symBinAddr: 0x8D0, symSize: 0x10 }
+  - { offset: 0x10E, size: 0x8, addend: 0x0, symName: ___swift_memcpy16_8, symObjAddr: 0x30, symBinAddr: 0x900, symSize: 0x10 }
+  - { offset: 0x121, size: 0x8, addend: 0x0, symName: ___swift_noop_void_return, symObjAddr: 0x40, symBinAddr: 0x910, symSize: 0x10 }
+  - { offset: 0x134, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces22GeolocationCoordinatesVwet', symObjAddr: 0x50, symBinAddr: 0x920, symSize: 0x20 }
+  - { offset: 0x147, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces22GeolocationCoordinatesVwst', symObjAddr: 0x70, symBinAddr: 0x940, symSize: 0x30 }
+  - { offset: 0x15A, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces22GeolocationCoordinatesVMa', symObjAddr: 0xA0, symBinAddr: 0x970, symSize: 0xA }
+  - { offset: 0x183, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces22GeolocationCoordinatesV8latitudeSdvg', symObjAddr: 0x0, symBinAddr: 0x8D0, symSize: 0x10 }
+  - { offset: 0x196, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces22GeolocationCoordinatesV9longitudeSdvg', symObjAddr: 0x10, symBinAddr: 0x8E0, symSize: 0x10 }
+  - { offset: 0x1AF, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces22GeolocationCoordinatesV8latitude9longitudeACSd_SdtcfC', symObjAddr: 0x20, symBinAddr: 0x8F0, symSize: 0x10 }
+...

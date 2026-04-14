@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target x86_64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PingOneVerify
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AVFoundation
 import BlinkID
 import BlinkIDUX
@@ -497,7 +497,6 @@ extension UIKit.UINavigationController {
   required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class PingOneVerifyClient : ObjectiveC.NSObject {
-  @objc deinit
   #if compiler(>=5.3) && $NonescapableTypes
   public func pollForVerificationStatus(_ pollingInterval: Foundation.TimeInterval? = nil)
   #endif
@@ -505,6 +504,7 @@ extension UIKit.UINavigationController {
   public func pollForAadhaarVerification(_ pollingInterval: Foundation.TimeInterval? = nil, otpDestination: Swift.String?)
   #endif
   public func stopPolling()
+  @objc deinit
 }
 @objc public enum OtpStatus : Swift.Int, Swift.Codable, Swift.RawRepresentable {
   case REQUESTED = 0
@@ -643,9 +643,9 @@ extension Swift.Double {
 public class PollingHelper {
   public static let DEFAULT_POLLING_INTERVAL_SEC: Swift.Double
   public init(withInterval pollingInterval: Foundation.TimeInterval, action: @escaping (PingOneVerify.PollingHelper) -> Swift.Void)
-  @objc deinit
   public func startPolling()
   public func stopPolling()
+  @objc deinit
 }
 extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.GeoLocationProviderListener {
   public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
