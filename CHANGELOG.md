@@ -1,10 +1,14 @@
 # Changelog
 
-## v2.3.7 - April 14th, 2026,
+## v2.3.7 - April 14th, 2026
 
 ### Hotfix
 
 - License updated to restore selfie capture functionality.
+
+### Fixed
+
+- Voice verification support has been removed. This feature is no longer supported and has been discontinued in this release.
 
 ## v2.3.6 - November 26th, 2025
 
