@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.2.2 - April 17th, 2026
+
+### Fixed
+
+- Fix to remove nested bundles from PingOneVerify.xcframework
+
 ## v3.2.1 - April 14th, 2026,
 
 ### Hotfix
