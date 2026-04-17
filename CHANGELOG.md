@@ -1,5 +1,15 @@
 # Changelog
 
+## v3.1.1 - January 15th, 2026
+
+### Added
+
+- BlinkID License Issue Fix
+
+### Fixed
+
+- Defects related to verification flows
+
 ## v3.1.0 - December 19th, 2025
 
 ### Added
