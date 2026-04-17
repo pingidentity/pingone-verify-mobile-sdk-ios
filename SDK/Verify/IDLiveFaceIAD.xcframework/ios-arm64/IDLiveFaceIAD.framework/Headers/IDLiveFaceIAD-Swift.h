@@ -308,7 +308,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSString;
 SWIFT_CLASS("_TtC13IDLiveFaceIAD21IADCallReceiverHelper")
 @interface IADCallReceiverHelper : NSObject
-+ (id _Nonnull)call:(NSDictionary<NSString *, id> * _Nonnull)params SWIFT_WARN_UNUSED_RESULT;
++ (id _Nonnull)call:(NSDictionary<NSString *, id> * _Nonnull)params SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_MSG("Use IADController.createIADBundle(...) instead");
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

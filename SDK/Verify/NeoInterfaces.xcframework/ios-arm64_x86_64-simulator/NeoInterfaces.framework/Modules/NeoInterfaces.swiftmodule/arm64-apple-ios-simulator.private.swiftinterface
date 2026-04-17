@@ -13,11 +13,11 @@ public protocol LanguagePackProviderContract {
   func getStringForkey(_ key: Swift.String, bundle: Foundation.Bundle?, defaultValue: Swift.String) -> Swift.String
   #endif
 }
-public protocol GeoLocationProviderContract {
+public protocol GeoLocationProviderContract : AnyObject {
   func requestCurrentLocation()
   func setLocation(listener: any NeoInterfaces.GeoLocationProviderListener)
 }
-public protocol GeoLocationProviderListener {
+public protocol GeoLocationProviderListener : AnyObject {
   func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
   #if compiler(>=5.3) && $NonescapableTypes
   func requestFailedWithError(_ error: (any Swift.Error)?)

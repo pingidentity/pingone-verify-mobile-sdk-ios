@@ -1,5 +1,18 @@
 # Changelog
 
+## v3.2.0 - March 23rd, 2026
+
+### Added
+
+- BlinkID Version Updated to v7.7.0
+- IDRND Version updated to v2.5.0
+
+### Fixed
+
+- SDK Resource leak fixes
+- Dynamic Retry code fixes
+
+
 ## v3.1.3 - February 24th, 2026
 
 ### Fixed

@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Headers/IDLiveFaceIAD-Swift.h</key>
 		<data>
-		HU++FFaVgezvJRMoAPBRuwg3kvI=
+		rrhnZsmUBfn0o/biZoW+g56bb4U=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Headers/IDLiveFaceIAD.h</key>
 		<data>
@@ -14,31 +14,35 @@
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/IDLiveFaceIAD</key>
 		<data>
-		I3k4Hz9uIlqdTRmTMjaVPnA7N4s=
+		ymxwYE/2nD28HdUwYxBBQ5KJils=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Info.plist</key>
 		<data>
-		nHyHcQ9oiHmVLblUx4wiovMfLNo=
+		3sLTEE39c67CFWBtsg+eS6iYOLE=
+		</data>
+		<key>ios-arm64/IDLiveFaceIAD.framework/LICENSE</key>
+		<data>
+		V6nBYaEWyyOP+zQbtpGbhrGNvdU=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		mpe3ik/5Tdj9bIMg+9XqYhXT88c=
+		axHf2mQVG0eQIMOA6Pn3bzHg7x0=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		z68HUtTnrEyvuXh+CkvIPPZSFK4=
+		vd8asc+jt0bIkV0V9eFjZt6tViw=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		NWs95P8SlTDV9u26rLKuxuzrbng=
+		DP3KNgeq2H9WV+SSoDdkI2zFFVU=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		9vES2oDkuQSdoBsbsKn0jFD61Uc=
+		vofDeJx3k/VVh16mrwRgMGQAbtc=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		LOI89rhCe0/IQtaMH4I+j7J28+8=
+		DP3KNgeq2H9WV+SSoDdkI2zFFVU=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/module.modulemap</key>
 		<data>
@@ -46,15 +50,19 @@
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		9slhmTZYKDmos4efk+3YOXYOQXo=
+		LOgy+A1cM0xw9DcAqWQfwR2rC60=
+		</data>
+		<key>ios-arm64/IDLiveFaceIAD.framework/README.md</key>
+		<data>
+		/HVrHGqNwzqvd/OTta5cVUn1Xek=
 		</data>
 		<key>ios-arm64/IDLiveFaceIAD.framework/_CodeSignature/CodeResources</key>
 		<data>
-		RVq5Pb48Vbtvs9gmxLo4PlczBCk=
+		3CruHWKGkxUFZ814/Y+xhQrwqoQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Headers/IDLiveFaceIAD-Swift.h</key>
 		<data>
-		pJitFFIpddbpGpaVSbDGk+b4jwM=
+		QC9IAjZdhkLUadpdf4cNpGXNfvA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Headers/IDLiveFaceIAD.h</key>
 		<data>
@@ -62,51 +70,55 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/IDLiveFaceIAD</key>
 		<data>
-		SJ+hJVAUvrNT1Y7PJA/F+/qiKGU=
+		JqKYhk8KTXfx5Onv3H3iW5ZlZfw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Info.plist</key>
 		<data>
-		xiII1xUE+pDE3pY5LsDIjpuN5cE=
+		pmPn9NLieDR4S8idvKGWdaetx0o=
+		</data>
+		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/LICENSE</key>
+		<data>
+		V6nBYaEWyyOP+zQbtpGbhrGNvdU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		OHonJ+1NGlTfo2d9V34HYNDuet8=
+		UKeXDc4XLIdqNfld6pmQnz7pZZg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		mxbRkPbavwo5EqMMJX6m7imXThk=
+		joSUmv6SA/SPvuf5FsKiONwY+ao=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		z68HUtTnrEyvuXh+CkvIPPZSFK4=
+		vd8asc+jt0bIkV0V9eFjZt6tViw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		IqzMkoviCiFeYnopoc8kbdjsa1w=
+		SBpZMuDbKpeGsky/b8sEvgiaUKM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		GWYFEBzaRMx7qSJm3Ll4FParu7Q=
+		4Oj+kHA+lYtOLC6CE8Vt9GdARFY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		eUz3R5JRK7lFqoIjSPnerUgswHw=
+		SBpZMuDbKpeGsky/b8sEvgiaUKM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		45cx/wNWdwWzWsYeUCoKusPwDS0=
+		5OVjSyv+1tajiZLhnvB7UEX1rHo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		+QOCUvKDah+o//0kxJkR3n/39mE=
+		HYEjilEGpVJnNWqFqJrTtDkW/Eo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		bMTRXP2GfXkSodANYa/QHkSTov4=
+		0vcU5SUijIWbIObwym7+bf+c7cs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jPN5HDlGattt/vzxqurJmpOpHzk=
+		HYEjilEGpVJnNWqFqJrTtDkW/Eo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/module.modulemap</key>
 		<data>
@@ -114,11 +126,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		9slhmTZYKDmos4efk+3YOXYOQXo=
+		LOgy+A1cM0xw9DcAqWQfwR2rC60=
+		</data>
+		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/README.md</key>
+		<data>
+		/HVrHGqNwzqvd/OTta5cVUn1Xek=
 		</data>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Ql4XsgbbqDJM/xR7OHZqZvo0bmc=
+		SCTHYS2kYqp022CsUuOo0DUwQoU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -127,11 +143,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HU++FFaVgezvJRMoAPBRuwg3kvI=
+			rrhnZsmUBfn0o/biZoW+g56bb4U=
 			</data>
 			<key>hash2</key>
 			<data>
-			57k0lH68BttpqrCaHifhT8pXfpDFa27PJ8VU6gVFKYo=
+			k77HdanzLsr5GhVcOW8UbJgPM7uU7s/nsuJOG+EQFfA=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Headers/IDLiveFaceIAD.h</key>
@@ -149,77 +165,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I3k4Hz9uIlqdTRmTMjaVPnA7N4s=
+			ymxwYE/2nD28HdUwYxBBQ5KJils=
 			</data>
 			<key>hash2</key>
 			<data>
-			Evdx4Dl8zT3ZxodI90DGVcHcsuvxHfUIyI/v09Xq5f8=
+			jkXF/69DEdL6HCUYuHSJjn2aC7NpZDXXLPIXTDnIkYw=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nHyHcQ9oiHmVLblUx4wiovMfLNo=
+			3sLTEE39c67CFWBtsg+eS6iYOLE=
 			</data>
 			<key>hash2</key>
 			<data>
-			mkiz659WSR5Is90Bs178vTd4apgaGveyc6UCtt/X9z0=
+			O6GQETrl3XO7MpUyVBEDbDWikXFSVPG8BhZ3K2+P5fw=
+			</data>
+		</dict>
+		<key>ios-arm64/IDLiveFaceIAD.framework/LICENSE</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			V6nBYaEWyyOP+zQbtpGbhrGNvdU=
+			</data>
+			<key>hash2</key>
+			<data>
+			RMxtpx5rlJmMicL9CU0+Z4akxxHN1rv1RLVOBGien1A=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mpe3ik/5Tdj9bIMg+9XqYhXT88c=
+			axHf2mQVG0eQIMOA6Pn3bzHg7x0=
 			</data>
 			<key>hash2</key>
 			<data>
-			aK75WHvbafQahk5sby64WBUgPuKKzwzi9W9yCsP8uqw=
+			Du3r41RCiKPpLtLBKkabi4cRNg481wvsRtslFujjuFI=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z68HUtTnrEyvuXh+CkvIPPZSFK4=
+			vd8asc+jt0bIkV0V9eFjZt6tViw=
 			</data>
 			<key>hash2</key>
 			<data>
-			iH2wQbxXybO5CYLM/UUuTmOS61ca7hc93/rSiRWccP8=
+			7MFehVk8hYgV/GUhcAAXdrqwcG4ynHmciKAzpH+LFBo=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NWs95P8SlTDV9u26rLKuxuzrbng=
+			DP3KNgeq2H9WV+SSoDdkI2zFFVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			yX/TWpQkPw7jTnA4wQgClSyGBLJiS11X5g4CnKrxBdU=
+			DpXGtzf6vxSvlFwRVBz1mJacpe9OoA1b1qGjpbASVlU=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9vES2oDkuQSdoBsbsKn0jFD61Uc=
+			vofDeJx3k/VVh16mrwRgMGQAbtc=
 			</data>
 			<key>hash2</key>
 			<data>
-			t/v4Pt/OVGfX9zjz7SE6yf/4X0LzHskpDiRKVB9Eexs=
+			FD1dc+yGzP8NcQ8SbXMzvayLBTICZCrMequZzPd/NzI=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LOI89rhCe0/IQtaMH4I+j7J28+8=
+			DP3KNgeq2H9WV+SSoDdkI2zFFVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			FB0LNeVI8Ir2blw51mO8gE5mDeClf/2pPsbRWI0hc+8=
+			DpXGtzf6vxSvlFwRVBz1mJacpe9OoA1b1qGjpbASVlU=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/Modules/module.modulemap</key>
@@ -237,33 +264,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9slhmTZYKDmos4efk+3YOXYOQXo=
+			LOgy+A1cM0xw9DcAqWQfwR2rC60=
 			</data>
 			<key>hash2</key>
 			<data>
-			ENpn8heCTwGSiOwyirq8KQqwOZxS6b53ok1JQzkTfaI=
+			GhfACjiKOUIO0l754DCzR3piQGyGFJz4Zi12H8RDWGw=
+			</data>
+		</dict>
+		<key>ios-arm64/IDLiveFaceIAD.framework/README.md</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/HVrHGqNwzqvd/OTta5cVUn1Xek=
+			</data>
+			<key>hash2</key>
+			<data>
+			OisCqBOJUNuVT2FjwTsqb60JH1KJpYUDOx+b0Ls9f4k=
 			</data>
 		</dict>
 		<key>ios-arm64/IDLiveFaceIAD.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RVq5Pb48Vbtvs9gmxLo4PlczBCk=
+			3CruHWKGkxUFZ814/Y+xhQrwqoQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			S1z0uY2bK7zmm1+HbSaW/G8qFCSf7qQxWFeoFLLNroM=
+			VAnsCTNvgVNXFE0ouvsLINLeNYd2gAVkbTrSm6amXiU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Headers/IDLiveFaceIAD-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pJitFFIpddbpGpaVSbDGk+b4jwM=
+			QC9IAjZdhkLUadpdf4cNpGXNfvA=
 			</data>
 			<key>hash2</key>
 			<data>
-			leL3qmvJo5L84xD7xD9H2iej66Xys6n6a3S0SdEiDlI=
+			nyq3bsZUUOlsLAJQSd6tIz9I1/sQGKpHpGZtf+M5+94=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Headers/IDLiveFaceIAD.h</key>
@@ -281,132 +319,143 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SJ+hJVAUvrNT1Y7PJA/F+/qiKGU=
+			JqKYhk8KTXfx5Onv3H3iW5ZlZfw=
 			</data>
 			<key>hash2</key>
 			<data>
-			vp59f32DHVvptz5gnUsINCcyiiuMIDk+xZCOUiHJyCM=
+			gAiTRKgIEGni8NyCHEdIHgUObLRrP06r28L3nlVUtHA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xiII1xUE+pDE3pY5LsDIjpuN5cE=
+			pmPn9NLieDR4S8idvKGWdaetx0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			/yZjJPTKiiOjqSxMjauSWVfK62BfNv48aYdv9yJoKCA=
+			so7Zbg0aM4UMahHrEquLdIxYHSy1TxG4ALVyw9Tvvj4=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/LICENSE</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			V6nBYaEWyyOP+zQbtpGbhrGNvdU=
+			</data>
+			<key>hash2</key>
+			<data>
+			RMxtpx5rlJmMicL9CU0+Z4akxxHN1rv1RLVOBGien1A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OHonJ+1NGlTfo2d9V34HYNDuet8=
+			UKeXDc4XLIdqNfld6pmQnz7pZZg=
 			</data>
 			<key>hash2</key>
 			<data>
-			r5f9mSXeZ7wFhkkBttP2JRodIkpTo+5Hdter4ZTFbXY=
+			Wm1eD4KfMUt/pzcaq9kbcEuBjGcAhRF8RHNRRlV2rsY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mxbRkPbavwo5EqMMJX6m7imXThk=
+			joSUmv6SA/SPvuf5FsKiONwY+ao=
 			</data>
 			<key>hash2</key>
 			<data>
-			ouTOZLY+aN2dkW6/JmCfQhzLkwgYwrfcqUTlGfOZD24=
+			wNgA1gc43SnNgfPolN0cXZI49dI9DYo3nUx1o3khE8E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z68HUtTnrEyvuXh+CkvIPPZSFK4=
+			vd8asc+jt0bIkV0V9eFjZt6tViw=
 			</data>
 			<key>hash2</key>
 			<data>
-			iH2wQbxXybO5CYLM/UUuTmOS61ca7hc93/rSiRWccP8=
+			7MFehVk8hYgV/GUhcAAXdrqwcG4ynHmciKAzpH+LFBo=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IqzMkoviCiFeYnopoc8kbdjsa1w=
+			SBpZMuDbKpeGsky/b8sEvgiaUKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			60ghUofNc4X6UdKhIBoPf4Z+jUK+IhBaHU/BwhRzfoE=
+			a7Jg2G12dmEezAGxwwzxvaFoSRmZpPFN6EcNidZPZik=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GWYFEBzaRMx7qSJm3Ll4FParu7Q=
+			4Oj+kHA+lYtOLC6CE8Vt9GdARFY=
 			</data>
 			<key>hash2</key>
 			<data>
-			lxL+1lJu8lf9yQpEITvgks+a3ynmYXuRH7fEF+OFj2A=
+			MB5tsQpuNCKjRCSAnbKSlOv1/4nyeM99lm8DXe9UPH8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eUz3R5JRK7lFqoIjSPnerUgswHw=
+			SBpZMuDbKpeGsky/b8sEvgiaUKM=
 			</data>
 			<key>hash2</key>
 			<data>
-			IY6pu7gRbkVJVVLZgkCPI8io68dOcwV0WBoPSIVNzVo=
+			a7Jg2G12dmEezAGxwwzxvaFoSRmZpPFN6EcNidZPZik=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			45cx/wNWdwWzWsYeUCoKusPwDS0=
+			5OVjSyv+1tajiZLhnvB7UEX1rHo=
 			</data>
 			<key>hash2</key>
 			<data>
-			UqYZWwcDH68c53sIv0W4OL0Z3g3B7oFws+qPeQxNmCU=
+			h0i+i4PZyuIO8DQbSxqmEizJ9dey+qXM7/sLs3UYxxc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+QOCUvKDah+o//0kxJkR3n/39mE=
+			HYEjilEGpVJnNWqFqJrTtDkW/Eo=
 			</data>
 			<key>hash2</key>
 			<data>
-			4Bdgb7PLV2ThHh52ojODFrHgCOnHaiHU1qau2Ysuwn8=
+			DA3edsH60lnW0UckCmQ/eIB26L9zDVBe1LkUjTaVwNs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bMTRXP2GfXkSodANYa/QHkSTov4=
+			0vcU5SUijIWbIObwym7+bf+c7cs=
 			</data>
 			<key>hash2</key>
 			<data>
-			V11cNj9iLYOJK+10imLPyDKcuIyHIbnRfgEXAbgnXNA=
+			mSjJjWafHmVjVHpq7Y7jZRSRKQ/aFtU59fPZxaK/Vds=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/IDLiveFaceIAD.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jPN5HDlGattt/vzxqurJmpOpHzk=
+			HYEjilEGpVJnNWqFqJrTtDkW/Eo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ijh5wdGILe4YsOWHc1UvPcfl0b0XLdFDv/bpZSvVyV8=
+			DA3edsH60lnW0UckCmQ/eIB26L9zDVBe1LkUjTaVwNs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/Modules/module.modulemap</key>
@@ -424,22 +473,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9slhmTZYKDmos4efk+3YOXYOQXo=
+			LOgy+A1cM0xw9DcAqWQfwR2rC60=
 			</data>
 			<key>hash2</key>
 			<data>
-			ENpn8heCTwGSiOwyirq8KQqwOZxS6b53ok1JQzkTfaI=
+			GhfACjiKOUIO0l754DCzR3piQGyGFJz4Zi12H8RDWGw=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/README.md</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/HVrHGqNwzqvd/OTta5cVUn1Xek=
+			</data>
+			<key>hash2</key>
+			<data>
+			OisCqBOJUNuVT2FjwTsqb60JH1KJpYUDOx+b0Ls9f4k=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/IDLiveFaceIAD.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ql4XsgbbqDJM/xR7OHZqZvo0bmc=
+			SCTHYS2kYqp022CsUuOo0DUwQoU=
 			</data>
 			<key>hash2</key>
 			<data>
-			ESMz/hgjAOVgFZU8fSSgr80O3BeiuxXyq5xqysvp2tQ=
+			z4pa5iP1xFwWw9VsKIKfbQvia27rvblAm5OV+xlgimY=
 			</data>
 		</dict>
 	</dict>

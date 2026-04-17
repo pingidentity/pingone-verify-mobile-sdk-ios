@@ -193,10 +193,6 @@ extension IDLiveFaceCamera.IDLiveFaceDetectionSettings {
   @_Concurrency.MainActor @preconcurrency public var canTakePhotoNow: Swift.Bool {
     get
   }
-  @_spi(Private) @_Concurrency.MainActor @preconcurrency public var takeMultiplePhotos: Swift.Bool
-  @_spi(Private) @_Concurrency.MainActor @preconcurrency public var multiplePhotoTimeDifference: Foundation.TimeInterval? {
-    @_spi(Private) get
-  }
   @_Concurrency.MainActor @preconcurrency open var faceCaptureBoundaries: CoreFoundation.CGRect {
     get
   }
@@ -227,8 +223,7 @@ extension IDLiveFaceCamera.IDLiveFaceDetectionSettings {
   @objc @IBAction @_Concurrency.MainActor @preconcurrency public func retakeButtonPressed(_ sender: UIKit.UIButton)
   @objc @IBAction @_Concurrency.MainActor @preconcurrency public func cancelButtonPressed(_ sender: UIKit.UIButton)
   @_Concurrency.MainActor @preconcurrency public func setCurrentViewMode(_ mode: IDLiveFaceCamera.IDCameraControllerBase.ViewMode, message: Swift.String? = nil, allowRetake: Swift.Bool? = nil)
-  @discardableResult
-  @_Concurrency.MainActor @preconcurrency public func takePhoto() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func takePhoto()
   @_Concurrency.MainActor @preconcurrency open func UIModeDidChange(animated: Swift.Bool = true)
   @_Concurrency.MainActor @preconcurrency open func setFaceResult(_ result: IDLiveFaceCamera.FaceDetectorResult, momentary: Swift.Bool = false)
   @_Concurrency.MainActor @preconcurrency open func setMessage(_ message: Swift.String?, isError: Swift.Bool = false)
@@ -283,9 +278,8 @@ extension IDLiveFaceCamera.IDLiveFaceDetectionSettings {
   public var jpegData: Foundation.Data? {
     get
   }
-  public var pngData: Foundation.Data? {
-    get
-  }
+  public func jpegData(compressionQuality: Swift.Float = 1.0) -> Foundation.Data?
+  public func pngData() -> Foundation.Data?
   public func clearCache()
   @objc deinit
 }
@@ -379,17 +373,15 @@ extension IDLiveFaceCamera.IDCameraControllerBase {
     get
   }
   @_Concurrency.MainActor @preconcurrency public func prepareForIAD(payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize = .normal)
-  @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil, payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize? = .normal) throws -> Foundation.Data
-  @_spi(PrivateClient) @_Concurrency.MainActor @preconcurrency public func prepareForIAD(format: IDLiveFaceCamera.IADImageFormat)
-  @_spi(PrivateClient) @_Concurrency.MainActor @preconcurrency public func createIADBundle(format: IDLiveFaceCamera.IADImageFormat = .jpeg(1.0), payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize = .normal, key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil) throws -> Foundation.Data
+  @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil, payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize = .normal) throws -> Foundation.Data
   @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil, payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize? = .normal) async throws -> Foundation.Data
   @_Concurrency.MainActor @preconcurrency public func createIADBundle(key: Foundation.Data? = nil, keyId: Swift.String? = nil, externalMeta: Swift.String? = nil, payloadSize: IDLiveFaceCamera.IDCameraControllerBase.PayloadSize? = .normal, completion: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
 }
-extension UIKit.UIImage {
-  @_spi(PrivateClient) public func encode(format: IDLiveFaceCamera.IADImageFormat) -> Foundation.Data?
-}
 @_spi(PrivateClient) extension IDLiveFaceCamera.IADImageFormat : Swift.Equatable {
   @_spi(PrivateClient) public static func == (lhs: IDLiveFaceCamera.IADImageFormat, rhs: IDLiveFaceCamera.IADImageFormat) -> Swift.Bool
+}
+extension UIKit.UIImage {
+  @_spi(PrivateClient) public func encode(format: IDLiveFaceCamera.IADImageFormat) -> Foundation.Data?
 }
 @_spi(Private) @_hasMissingDesignatedInitializers public class DeviceChecker {
   @_spi(Private) public static func isRunningOnMac(ignoreSimulator: Swift.Bool = false) -> Swift.Bool

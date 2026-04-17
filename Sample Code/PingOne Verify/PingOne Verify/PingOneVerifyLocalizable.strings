@@ -56,29 +56,6 @@
 "idv_countryCode_search_bar_placeholder" = "Search";//keys different
 "idv_countryCode_nav_title" = "Select a Country";//keys different
 
-//Voice
-"idv_voiceCapture_button" = "Tap to Record";
-"idv_voiceCapture_textDependent_placeholder" = "Use your voice to verify your identity.";
-"idv_documentCapture_description_voice" = "Use your voice to verify your identity.";
-"idv_documentCapture_header_voice" = "Verify By Voice";
-"idv_voiceCapture_header_voice" = "Record Your Voice";
-"idv_get_started" = "Continue";
-
-
-"idv_voice_error_alert_title" = "Recording Error";//check
-"idv_voice_result" = "%@ of %@";
-"idv_voice_step_complete" = "Complete";
-"idv_voice_try_again" = "Retry";
-"idv_voice_complete" = "Voice Recording is Now Complete";
-"idv_voice_next_record" = "Next Record";
-"idv_voice_one_recording_text" = "\n\nYou'll need to record 1 voice sample";
-"idv_voice_multi_recording_text" = "\n\nYou'll need to record %@ voice samples";
-"idv_voiceCapture_instruction" = "Tap record and say the following text:";
-"idv_voice_speech_length_error"= "Recorded speech was too short to process.\nPlease try again";
-"idv_voice_speech_noisy_error" = "Too much noise in the background.\nPlease try again in a more quiet setting";
-"idv_voice_speech_reverberation_error" = "The audio recording has strong echo.\nPlease record in an another location";
-"idv_voice_speech_unknown_error" = "Undetermined Error.\nPlease try again";
-
 //OTP
 "idv_otp_invalid_code_error_description" = "One Time Passcode is incorrect";//check
 
@@ -110,7 +87,6 @@
 
 // Permissions
 "idv_camera_permission_rationale" = "Access to your camera is needed to scan your ID and take your selfie.";
-"idv_microphone_permission" = "Access to the microphone is required for recording your voice.\n\nPlease update the permissions for your app in device settings to be able to use this feature.";//check
 
 /**
  Common
@@ -164,6 +140,7 @@
 "idv_selfie_face_cropped" = "Center your face in the green oval and try again.";
 "idv_selfie_position_face_center" = "Center face in frame";
 "idv_selfie_face_occluded" = "Remove any masks, hats, or anything covering your face from the camera.";
+"idv_selfie_remove_sunglasses" = "Remove glasses";
 
 // Errors
 "error" = "Error";
