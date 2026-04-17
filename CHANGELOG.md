@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.1.0 - December 19th, 2025
+
+### Added
+
+- BlinkID Version Updated to 7.6.2
+
 ## v3.0.0 - December 15th, 2025
 
 ### Added
