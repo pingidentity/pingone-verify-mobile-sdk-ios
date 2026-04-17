@@ -51,6 +51,8 @@ The PingOne Verify iOS SDK relies on XCFramework components. You'll need to add 
     * PingOneVerify.xcframework
     
     * BlinkID.xcframework
+    
+    * BlinkIDUX.xcframework
         
     * NeoInterfaces.xcframework
     
