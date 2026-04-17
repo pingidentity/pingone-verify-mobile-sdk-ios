@@ -1,5 +1,16 @@
 # Changelog
 
+## v3.1.2 - January 30th, 2026
+
+### Added
+
+- BlinkId Inconsistent data fixes
+
+### Fixed
+
+- UI Defects
+
+
 ## v3.1.1 - January 15th, 2026
 
 ### Added
