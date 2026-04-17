@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9hvBusPmMV9TvQLEZg9EhscEFAE=
+		CqItKLo7HSm875hM16U1+4k7wJs=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UKYpmIWxkqxxU/yYLnpgYv8dE1k=
+		lILo08teNYc0wV6sYUZczr/05is=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+J12k2NwST0+q2KEw37txKScgmE=
+		8KRTEpRH7qTIRregHS0PebnIVlw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -98,7 +98,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OrN25T8fW2sSMJQ4CtBYc35AiRczreaw/vMLlop33U0=
+			zSssAaCu4Dgxl4o73uWZ7+b1IwV5CcPzBEiEFVFJJB0=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LjPu5srmdktzG2h+PXCD9MWO3OU4htlrjE2efhV5AGE=
+			G1Dm4lpbxcmsuWJ4UiPU1ZghPCVlDKpkQN6NXT8OjqY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

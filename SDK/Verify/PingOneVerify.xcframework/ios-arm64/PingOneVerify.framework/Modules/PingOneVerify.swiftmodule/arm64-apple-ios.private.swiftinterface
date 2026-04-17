@@ -183,6 +183,7 @@ public class NoRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodabl
   @objc public func setAttributedStrings(_ attributedStrings: [Swift.String : Foundation.NSAttributedString]) -> PingOneVerify.UIAppearanceSettings
   @objc public func showSessionExpiresTimer(_ isTimerShown: Swift.Bool) -> PingOneVerify.UIAppearanceSettings
   @objc public func setNavigationTitle(_ text: Foundation.NSAttributedString) -> PingOneVerify.UIAppearanceSettings
+  @objc public func setIconTintColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
   @objc override dynamic public init()
   @objc deinit
 }
