@@ -151,6 +151,8 @@
         "usr": "s:13NeoInterfaces27GeoLocationProviderContractP",
         "mangledName": "$s13NeoInterfaces27GeoLocationProviderContractP",
         "moduleName": "NeoInterfaces",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
         ],
@@ -243,6 +245,8 @@
         "usr": "s:13NeoInterfaces27GeoLocationProviderListenerP",
         "mangledName": "$s13NeoInterfaces27GeoLocationProviderListenerP",
         "moduleName": "NeoInterfaces",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
         ],

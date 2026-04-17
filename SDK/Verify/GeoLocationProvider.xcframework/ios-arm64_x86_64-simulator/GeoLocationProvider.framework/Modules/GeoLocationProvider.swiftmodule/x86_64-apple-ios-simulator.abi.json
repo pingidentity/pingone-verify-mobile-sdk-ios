@@ -9,10 +9,7 @@
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
-        "moduleName": "GeoLocationProvider",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "GeoLocationProvider"
       },
       {
         "kind": "Import",
