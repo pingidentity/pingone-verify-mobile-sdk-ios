@@ -73,7 +73,6 @@ class ViewController: UIViewController {
             .setBorderedButtonAppearance(borderedButtonAppearance)
             .setAttributedStrings(attributedStringDict)
             .showSessionExpiresTimer(false)
-            .setIconTintColor(.red)
             .setNavigationTitle(identityString)
     }
 }
