@@ -7,6 +7,7 @@ import BlinkID
 import BlinkIDUX
 import Combine
 import CoreImage
+import CoreLocation
 import CoreMedia
 import CryptoTools
 import DeveloperToolsSupport
@@ -430,6 +431,7 @@ public struct ImageCellContent {
   case VOICE = 8
   case CREDENTIAL = 9
   case AADHAAR = 10
+  case GEOLOCATION = 11
   public typealias RawValue = Swift.String
   public var iconName: Swift.String {
     get
@@ -497,6 +499,7 @@ extension UIKit.UINavigationController {
   required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class PingOneVerifyClient : ObjectiveC.NSObject {
+  @objc deinit
   #if compiler(>=5.3) && $NonescapableTypes
   public func pollForVerificationStatus(_ pollingInterval: Foundation.TimeInterval? = nil)
   #endif
@@ -504,7 +507,6 @@ extension UIKit.UINavigationController {
   public func pollForAadhaarVerification(_ pollingInterval: Foundation.TimeInterval? = nil, otpDestination: Swift.String?)
   #endif
   public func stopPolling()
-  @objc deinit
 }
 @objc public enum OtpStatus : Swift.Int, Swift.Codable, Swift.RawRepresentable {
   case REQUESTED = 0
@@ -643,12 +645,13 @@ extension Swift.Double {
 public class PollingHelper {
   public static let DEFAULT_POLLING_INTERVAL_SEC: Swift.Double
   public init(withInterval pollingInterval: Foundation.TimeInterval, action: @escaping (PingOneVerify.PollingHelper) -> Swift.Void)
+  @objc deinit
   public func startPolling()
   public func stopPolling()
-  @objc deinit
 }
 extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.GeoLocationProviderListener {
   public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
+  public func onLocationRequestStarted()
   #if compiler(>=5.3) && $NonescapableTypes
   public func requestFailedWithError(_ error: (any Swift.Error)?)
   #endif
@@ -659,6 +662,7 @@ extension PingOneVerify.PingOneVerifyClient.Builder : NeoInterfaces.GeoLocationP
   #if compiler(>=5.3) && $NonescapableTypes
   public func requestFailedWithError(_ error: (any Swift.Error)?)
   #endif
+  public func onLocationRequestStarted()
 }
 public func logLine(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
 public func log(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)

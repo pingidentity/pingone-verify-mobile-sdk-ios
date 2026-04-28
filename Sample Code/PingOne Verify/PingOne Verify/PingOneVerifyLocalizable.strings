@@ -179,3 +179,10 @@
 "idv_retry_face_far" = "Move the camera closer to your face and try again.";
 "idv_retry_face_large" = "Position the camera directly in front of your face and try again.";
 "idv_retry_eyes_closed" = "Keep eyes open";
+
+//Geolocation
+"idv_geolocation_title" = "Share your Location";
+"idv_geolocation_description" = "Your location is needed to complete identity verification.";
+"idv_geolocation_retry_title" = "Location Access is Required";
+"idv_geolocation_retry_description" = "Go to Settings > Privacy & Security > Location Services to allow location for app.";
+"idv_geolocation_retry" = "Try Again";
