@@ -378,6 +378,7 @@ typedef SWIFT_ENUM(NSInteger, DocumentClass, open) {
   DocumentClassVOICE = 8,
   DocumentClassCREDENTIAL = 9,
   DocumentClassAADHAAR = 10,
+  DocumentClassGEOLOCATION = 11,
 };
 
 typedef SWIFT_ENUM(NSInteger, DocumentStatus, open) {

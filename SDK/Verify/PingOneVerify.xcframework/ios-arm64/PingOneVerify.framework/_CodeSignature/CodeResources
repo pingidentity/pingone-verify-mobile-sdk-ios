@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		P5cBipMesWiPEWZNHTpYlaG2r08=
+		W49rM5EZPKWjFetP0WpTmex9FT0=
 		</data>
 		<key>CustomCountryPickerViewController.nib</key>
 		<data>
@@ -44,9 +44,17 @@
 		<data>
 		kje8mALsMTitGe+C1op4FYx6nmo=
 		</data>
+		<key>GeolocationPermissionRetryViewController.nib</key>
+		<data>
+		Xbz4K6s/scLnDvpkzVdTNAz8jTE=
+		</data>
+		<key>GeolocationPermissionViewController.nib</key>
+		<data>
+		cYEIAp1ftC4Q7Qba8QhlixMsxiY=
+		</data>
 		<key>Headers/PingOneVerify-Swift.h</key>
 		<data>
-		QHLlfs7/nxrRnR51prwc4J36L/U=
+		4adpcqE8Esqrs67YzWmkEiF87JY=
 		</data>
 		<key>Headers/PingOneVerify.h</key>
 		<data>
@@ -62,7 +70,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		g5O4hn3oyCRgHSIPRzbIQkq5GPk=
+		WGsafr8tB35hPeHu+lHe5GNYflU=
 		</data>
 		<key>LabelCell.nib</key>
 		<data>
@@ -142,23 +150,23 @@
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		MykOoKWfeKNU4A+eXWNylO9dmCc=
+		aWGKr5Zk2rHcpjEF//Y6T8jk9Yg=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		SDmCx5xE2Fg93pijwihNpLVDCVo=
+		Nm+ujVStoGfitCFwN2RTsZ1L6QA=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		PaHvLJS4GLhtBvSkrro8ptG1Kfs=
+		FOUicMFKtWbUepTlndIyufcE32E=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		SDmCx5xE2Fg93pijwihNpLVDCVo=
+		Nm+ujVStoGfitCFwN2RTsZ1L6QA=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NBKGv/YupUFC1jUaoW+9PW+qF3c=
+		xGd0mSXTVCzAwx6/Jy6Os4YCwwc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -174,7 +182,7 @@
 		</data>
 		<key>PingOneVerifyLocalizable.strings</key>
 		<data>
-		SxZx5QLDAjbtkE3fhJwVc3Fhj2U=
+		KGRqyucTpqaChc0M0CeIMj4vZOo=
 		</data>
 		<key>PreviewViewController.nib</key>
 		<data>
@@ -230,7 +238,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bwZnjtZ/rw/G517L+3qsnzgjSq4QdkQMyJTH5o3N5EU=
+			2/BdaWKPYEaaLzeDh5X6pq6JAVKc6Apf84ZwLGLwMX0=
 			</data>
 		</dict>
 		<key>CustomCountryPickerViewController.nib</key>
@@ -289,11 +297,25 @@
 			2ErP1cQ2kYKwDNoRWr8FQTNOZz6X7EinCA+vCQBrYj4=
 			</data>
 		</dict>
+		<key>GeolocationPermissionRetryViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8m7pAtQJivkJVdrbOrJ7PeE2RgbguCfqaoVI4vjYoxc=
+			</data>
+		</dict>
+		<key>GeolocationPermissionViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			K6zUVXWLOn+ahnIM1byShdpmDn54MmykAtXZmAgErHo=
+			</data>
+		</dict>
 		<key>Headers/PingOneVerify-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F1awGWfr67KPjOmUrNwQoORxQ9GxXzvbDL8W6a46YtM=
+			NdTDrEwFyZ68hUrcAkqj0MRXatFobF1fDXCxajwpWek=
 			</data>
 		</dict>
 		<key>Headers/PingOneVerify.h</key>
@@ -454,35 +476,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y/7ye5xC4HfjFl8E61iAjtNUnyLRFex74MpvZh+U1Wg=
+			U00zwr1fDK5B2o3upkcKRAWhsBXZ8gpAJBYcS1q2xJA=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TTlOXqhBmvD7MzYXLv+t1Ss8cCdQL1y4QgIwj4ccY+4=
+			VUieoCLpXJ1i0ZA+TwCRwZUNxQASRfPv3u5RkaYqsU0=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SfyVfj4UNTGHH8ZXk7YpL27F77XstptJKGf3MR78AKA=
+			TaDA7z/9LzrORLkCM3SRr73hzN/iEB7QySvZLAfsJyE=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TTlOXqhBmvD7MzYXLv+t1Ss8cCdQL1y4QgIwj4ccY+4=
+			VUieoCLpXJ1i0ZA+TwCRwZUNxQASRfPv3u5RkaYqsU0=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3QynxeWgcPn27ATRTfXnteYU9pmQeZyUX31iIfLtL9Q=
+			3JsUOVn5fbK+A6SiayVr1qJ5dONV7pGQdZmcZTBCqQw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -510,7 +532,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EYjH4pLHha48imTq2vJZBtoEjMXUSoASn9JSu0viVA8=
+			xKCfT+8TOh8q+dIcJp0LitKXqupGYP07PO2eME/dywI=
 			</data>
 		</dict>
 		<key>PreviewViewController.nib</key>
