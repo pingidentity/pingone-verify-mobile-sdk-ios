@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.2.4 - June 24th, 2026
+
+### Fixed
+
+- SDK not submitting barcode for IDs
+- Removed the GlassUI effect from the back button 
+- Fix for overriding localization from app 
+
 ## v3.2.3 - June 5th, 2026
 
 ### Fixed
