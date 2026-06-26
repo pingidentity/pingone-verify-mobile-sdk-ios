@@ -281,12 +281,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import CoreFoundation;
-@import CoreGraphics;
-@import Foundation;
 @import ObjectiveC;
-@import QuartzCore;
-@import UIKit;
 #endif
 
 #endif
@@ -309,277 +304,121 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
-SWIFT_PROTOCOL("_TtP13PingOneVerify18BackActionListener_")
-@protocol BackActionListener
-- (void)onBackActionWithExitFlow:(void (^ _Nonnull)(BOOL))exitFlow;
-@end
-
 SWIFT_CLASS("_TtC13PingOneVerify16ButtonAppearance")
 @interface ButtonAppearance : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSCoder;
-SWIFT_CLASS("_TtC13PingOneVerify17CameraOverlayView")
-@interface CameraOverlayView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)drawRect:(CGRect)rect;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-SWIFT_CLASS("_TtC13PingOneVerify10CameraView")
-@interface CameraView : UIView
-- (void)drawRect:(CGRect)rect;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-SWIFT_CLASS("_TtC13PingOneVerify15CenterTextLayer")
-@interface CenterTextLayer : CATextLayer
-- (void)drawInContext:(CGContextRef _Nonnull)ctx;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithLayer:(id _Nonnull)layer OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class NSString;
+/// An error returned when <code>PingOneVerifyClient/Builder/build(onComplete:)</code> cannot
+/// create a valid session.
+/// Inspect <code>localizedDescription</code> for the reason.
 SWIFT_CLASS("_TtC13PingOneVerify18ClientBuilderError")
 @interface ClientBuilderError : NSObject
+/// A human-readable description of the configuration error.
 @property (nonatomic, copy) NSString * _Null_unspecified localizedDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-enum DocumentClass : NSInteger;
-@protocol RequirementsProtocol;
-enum PayloadSize : NSInteger;
-SWIFT_PROTOCOL("_TtP13PingOneVerify31DocumentCaptureSettingsContract_")
-@protocol DocumentCaptureSettingsContract
-@property (nonatomic) enum DocumentClass documentType;
-@property (nonatomic) NSInteger currentStep;
-@property (nonatomic) NSInteger totalSteps;
-@property (nonatomic) BOOL optional;
-@property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
-@property (nonatomic) BOOL isAuthflow;
-@property (nonatomic) BOOL isRetry;
-@property (nonatomic) enum PayloadSize payloadSize;
-@end
-
-typedef SWIFT_ENUM(NSInteger, DocumentClass, open) {
-  DocumentClassSELFIE = 0,
-  DocumentClassDRIVER_LICENSE = 1,
-  DocumentClassPASSPORT = 2,
-  DocumentClassGOVERNMENT_ID = 3,
-  DocumentClassEMAIL = 4,
-  DocumentClassPHONE = 5,
-  DocumentClassOTP = 6,
-  DocumentClassOTHER = 7,
-  DocumentClassVOICE = 8,
-  DocumentClassCREDENTIAL = 9,
-  DocumentClassAADHAAR = 10,
-};
-
+/// Server-reported collection status for a single document within a PingOne Verify transaction.
 typedef SWIFT_ENUM(NSInteger, DocumentStatus, open) {
+/// The document must be collected before the transaction can complete.
   DocumentStatusREQUIRED = 0,
+/// The document may be collected but can be skipped.
   DocumentStatusOPTIONAL = 1,
+/// The document has been received by the server.
   DocumentStatusCOLLECTED = 2,
+/// The document has been verified by the server.
   DocumentStatusPROCESSED = 3,
+/// The document was skipped by the user or SDK.
   DocumentStatusSKIPPED = 4,
 };
 
+/// An error delivered to <code>VerifyTransactionCoordinatorDelegate/coordinator(_:didFailWith:)</code>
+/// when the verification flow encounters an unrecoverable problem.
+/// Use <code>getErrorCode()</code> to branch on the error class and <code>getErrorMessage()</code> for logging.
 SWIFT_CLASS("_TtC13PingOneVerify23DocumentSubmissionError")
 @interface DocumentSubmissionError : NSObject
+/// A machine-readable error code string (e.g. <code>"tx_failed"</code>, <code>"doc_timeout"</code>).
 @property (nonatomic, copy) NSString * _Null_unspecified code;
+/// A human-readable description of the error.
 @property (nonatomic, copy) NSString * _Null_unspecified localizedDescription;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class DocumentSubmissionResponse;
-enum DocumentSubmissionStatus : NSInteger;
-SWIFT_PROTOCOL("_TtP13PingOneVerify26DocumentSubmissionListener_")
-@protocol DocumentSubmissionListener
-- (void)onDocumentSubmittedWithResponse:(DocumentSubmissionResponse * _Nonnull)response;
-- (void)onSubmissionCompleteWithStatus:(enum DocumentSubmissionStatus)status;
-- (void)onSubmissionErrorWithError:(DocumentSubmissionError * _Nonnull)error;
-@end
-
-SWIFT_CLASS("_TtC13PingOneVerify26DocumentSubmissionResponse")
-@interface DocumentSubmissionResponse : NSObject
-@property (nonatomic, copy) NSDictionary<NSString *, NSString *> * _Nullable document;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
+/// Overall status of the document collection session within a PingOne Verify transaction.
 typedef SWIFT_ENUM(NSInteger, DocumentSubmissionStatus, open) {
-  DocumentSubmissionStatusNot_started = 0,
-  DocumentSubmissionStatusStarted = 1,
-  DocumentSubmissionStatusCompleted = 2,
-  DocumentSubmissionStatusProcess = 3,
+/// The document collection session has not yet begun.
+  DocumentSubmissionStatusNOT_STARTED = 0,
+/// Document collection is in progress.
+  DocumentSubmissionStatusSTARTED = 1,
+/// All required documents have been collected and the session has ended.
+  DocumentSubmissionStatusCOMPLETED = 2,
+/// Documents are being processed by the server.
+  DocumentSubmissionStatusPROCESS = 3,
 };
 
+/// Configuration for an email-address collection step.
+/// Delivered to your <code>VerifyTransactionCoordinatorDelegate.coordinator(_:shouldCaptureDocument:)</code>
+/// method when <code>documentType == .EMAIL</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
+/// own email-entry UI, then call <code>coordinator.submitEmail(_:)</code> with the entered address.
+/// Once the OTP session is active, <code>otpSession</code> is populated and you can read
+/// <code>otpExpiryTicker</code> / <code>resendCooldownTicker</code> to drive the OTP screen countdowns.
 SWIFT_CLASS("_TtC13PingOneVerify20EmailCaptureSettings")
-@interface EmailCaptureSettings : NSObject <DocumentCaptureSettingsContract>
-@property (nonatomic) enum DocumentClass documentType;
-@property (nonatomic) NSInteger currentStep;
-@property (nonatomic) NSInteger totalSteps;
-@property (nonatomic) BOOL optional;
-@property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
-@property (nonatomic) BOOL isAuthflow;
-@property (nonatomic) BOOL isRetry;
-@property (nonatomic) enum PayloadSize payloadSize;
-- (nonnull instancetype)initWithOptional:(BOOL)optional keyboardHint:(NSString * _Nullable)keyboardHint regex:(NSString * _Nullable)regex requirements:(id <RequirementsProtocol> _Nullable)requirements OBJC_DESIGNATED_INITIALIZER;
+@interface EmailCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+/// Configuration for a government-ID capture step.
+/// Create an instance and pass it to <code>PingOneVerifyClient.captureGovernmentId(from:settings:onResult:)</code>
+/// to control how the SDK captures and submits identity document images.
 SWIFT_CLASS("_TtC13PingOneVerify17IdCaptureSettings")
-@interface IdCaptureSettings : NSObject <DocumentCaptureSettingsContract>
-@property (nonatomic) enum DocumentClass documentType;
-@property (nonatomic) NSInteger currentStep;
-@property (nonatomic) NSInteger totalSteps;
-@property (nonatomic) BOOL optional;
-@property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
-@property (nonatomic) BOOL isAuthflow;
-@property (nonatomic) BOOL isRetry;
-@property (nonatomic) enum PayloadSize payloadSize;
-- (nonnull instancetype)initWithDocumentType:(enum DocumentClass)documentType optional:(BOOL)optional requirements:(id <RequirementsProtocol> _Nullable)requirements OBJC_DESIGNATED_INITIALIZER;
+@interface IdCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC13PingOneVerify9LabelCell")
-@interface LabelCell : UITableViewCell
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
+/// Server-reported status of an OTP (one-time passcode) delivery within a PingOne Verify transaction.
 typedef SWIFT_ENUM(NSInteger, OtpStatus, open) {
+/// An OTP has been requested but delivery has not yet started.
   OtpStatusREQUESTED = 0,
+/// OTP delivery is in progress.
   OtpStatusIN_PROGRESS = 1,
+/// The OTP has been sent to the user’s device.
   OtpStatusOTP_SENT = 2,
+/// OTP delivery and verification completed successfully.
   OtpStatusSUCCESS = 3,
+/// OTP delivery or verification failed and cannot be retried.
   OtpStatusFAIL = 4,
+/// OTP delivery failed but the user may request a new code.
   OtpStatusOTP_RETRYABLE = 5,
+/// The user successfully verified the OTP code.
   OtpStatusOTP_VERIFIED = 6,
 };
 
-SWIFT_CLASS("_TtC13PingOneVerify21OvalCameraOverlayView")
-@interface OvalCameraOverlayView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (void)drawRect:(CGRect)rect;
-@end
-
-typedef SWIFT_ENUM(NSInteger, PayloadSize, open) {
-  PayloadSizeSmall = 0,
-  PayloadSizeNormal = 1,
-};
-
+/// Configuration for a phone-number collection step.
+/// Delivered to your <code>VerifyTransactionCoordinatorDelegate.coordinator(_:shouldCaptureDocument:)</code>
+/// method when <code>documentType == .PHONE</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
+/// own phone-entry UI, then call <code>coordinator.submitPhone(_:)</code> with the entered number.
+/// Once the OTP session is active, <code>otpSession</code> is populated and you can read
+/// <code>otpExpiryTicker</code> / <code>resendCooldownTicker</code> to drive the OTP screen countdowns.
 SWIFT_CLASS("_TtC13PingOneVerify20PhoneCaptureSettings")
-@interface PhoneCaptureSettings : NSObject <DocumentCaptureSettingsContract>
-@property (nonatomic) enum DocumentClass documentType;
-@property (nonatomic) NSInteger currentStep;
-@property (nonatomic) NSInteger totalSteps;
-@property (nonatomic) BOOL optional;
-@property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
-@property (nonatomic) BOOL isAuthflow;
-@property (nonatomic) BOOL isRetry;
-@property (nonatomic) enum PayloadSize payloadSize;
-- (nonnull instancetype)initWithOptional:(BOOL)optional keyboardHint:(NSString * _Nullable)keyboardHint regex:(NSString * _Nullable)regex requirements:(id <RequirementsProtocol> _Nullable)requirements OBJC_DESIGNATED_INITIALIZER;
+@interface PhoneCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC13PingOneVerify19PingOneVerifyClient")
-@interface PingOneVerifyClient : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@interface PingOneVerifyClient (SWIFT_EXTENSION(PingOneVerify))
-@end
-
-@class UIViewController;
-@class UIAppearanceSettings;
-SWIFT_CLASS("_TtCC13PingOneVerify19PingOneVerifyClient7Builder")
-@interface Builder : NSObject
-/// /////////////////////
-/// Public setters///////
-/// /////////////////////
-- (Builder * _Nonnull)setRootViewController:(UIViewController * _Nonnull)rootViewController;
-- (Builder * _Nonnull)setListener:(id <DocumentSubmissionListener> _Nonnull)listener;
-- (Builder * _Nonnull)setQrStringWithQrString:(NSString * _Nonnull)qrString;
-- (Builder * _Nonnull)setDocumentCaptureSettingsWithDocumentCaptureSettings:(NSArray<id <DocumentCaptureSettingsContract>> * _Nonnull)documentCaptureSettings;
-- (Builder * _Nonnull)setUIAppearance:(UIAppearanceSettings * _Nonnull)appearanceSettings;
-- (Builder * _Nonnull)setBackActionHandler:(id <BackActionListener> _Nonnull)listener;
-- (void)startVerificationOnComplete:(void (^ _Nonnull)(PingOneVerifyClient * _Nullable, ClientBuilderError * _Nullable))onComplete;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-SWIFT_CLASS("_TtC13PingOneVerify12Requirements")
-@interface Requirements : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-SWIFT_PROTOCOL("_TtP13PingOneVerify20RequirementsProtocol_")
-@protocol RequirementsProtocol
-@property (nonatomic, strong) Requirements * _Nonnull requirementsValue;
-@end
-
+/// Configuration for a selfie capture step.
+/// Create an instance and pass it to <code>PingOneVerifyClient.captureSelfie(from:settings:onResult:)</code>
+/// to control liveness-capture behaviour and upload quality.
 SWIFT_CLASS("_TtC13PingOneVerify21SelfieCaptureSettings")
-@interface SelfieCaptureSettings : NSObject <DocumentCaptureSettingsContract>
-@property (nonatomic) enum PayloadSize payloadSize;
-@property (nonatomic) BOOL isAuthflow;
-@property (nonatomic) enum DocumentClass documentType;
-@property (nonatomic) NSInteger currentStep SWIFT_DEPRECATED_MSG("Will be removed in upcoming versions");
-@property (nonatomic) NSInteger totalSteps SWIFT_DEPRECATED_MSG("Will be removed in upcoming versions");
-@property (nonatomic) BOOL optional;
-@property (nonatomic, strong) id <RequirementsProtocol> _Nullable requirements;
-@property (nonatomic) BOOL isRetry;
-- (nonnull instancetype)initWithCaptureTime:(NSTimeInterval)captureTime shouldCaptureAfterTimeout:(BOOL)shouldCaptureAfterTimeout optional:(BOOL)optional isAuthflow:(BOOL)isAuthflow requirements:(id <RequirementsProtocol> _Nullable)requirements payloadSize:(enum PayloadSize)payloadSize OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_MSG("Will be removed in upcoming versions");
+@interface SelfieCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class UIImage;
-@class UIColor;
-@class NSAttributedString;
-SWIFT_CLASS("_TtC13PingOneVerify20UIAppearanceSettings")
-@interface UIAppearanceSettings : NSObject
-- (UIAppearanceSettings * _Nonnull)setLogoImage:(UIImage * _Nonnull)image SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setBodyTextColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setHeadingTextColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setBackgroundColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setNavigationBarColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setNavigationBarTextColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setSolidButtonAppearance:(ButtonAppearance * _Nonnull)buttonAppearance SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setBorderedButtonAppearance:(ButtonAppearance * _Nonnull)buttonAppearance SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setAttributedStrings:(NSDictionary<NSString *, NSAttributedString *> * _Nonnull)attributedStrings SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)showSessionExpiresTimer:(BOOL)isTimerShown SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setNavigationTitle:(NSAttributedString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
-- (UIAppearanceSettings * _Nonnull)setIconTintColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface UINavigationController (SWIFT_EXTENSION(PingOneVerify))
-@property (nonatomic, readonly) BOOL shouldAutorotate;
-@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
-@end
-
-@class UIFont;
-@class NSNumber;
-SWIFT_CLASS("_TtC13PingOneVerify12VerifyButton")
-@interface VerifyButton : UIButton
-@property (nonatomic, strong) UIFont * _Nullable titleFont;
-@property (nonatomic, strong) NSNumber * _Nullable cornerRadius;
-@property (nonatomic, strong) UIColor * _Nullable fontColor;
-- (void)setTitle:(NSString * _Nullable)title forState:(UIControlState)state;
-- (void)setTitleColor:(UIColor * _Nullable)color forState:(UIControlState)state;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #endif

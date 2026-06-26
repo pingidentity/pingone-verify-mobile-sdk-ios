@@ -1,0 +1,6 @@
+framework module IdCaptureProvider {
+  umbrella header "IdCaptureProvider.h"
+  export *
+
+  module * { export * }
+}

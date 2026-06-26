@@ -1,0 +1,923 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "IdCaptureProvider",
+    "printedName": "IdCaptureProvider",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "BlinkID",
+        "printedName": "BlinkID",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "BlinkIDUX",
+        "printedName": "BlinkIDUX",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "NeoInterfaces",
+        "printedName": "NeoInterfaces",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IdCaptureProviders",
+        "printedName": "IdCaptureProviders",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IdCaptureProviders",
+                "printedName": "IdCaptureProvider.IdCaptureProviders",
+                "usr": "c:@M@IdCaptureProvider@objc(cs)IdCaptureProviders"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@IdCaptureProvider@objc(cs)IdCaptureProviders(im)init",
+            "mangledName": "$s17IdCaptureProvider0aB9ProvidersCACycfc",
+            "moduleName": "IdCaptureProvider",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "startCapture",
+            "printedName": "startCapture(from:settings:listener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IdCaptureProviderListener",
+                "printedName": "any NeoInterfaces.IdCaptureProviderListener",
+                "usr": "s:13NeoInterfaces25IdCaptureProviderListenerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17IdCaptureProvider0aB9ProvidersC05startB04from8settings8listenerySo16UIViewControllerC_yXlSg13NeoInterfaces0abC8Listener_ptF",
+            "mangledName": "$s17IdCaptureProvider0aB9ProvidersC05startB04from8settings8listenerySo16UIViewControllerC_yXlSg13NeoInterfaces0abC8Listener_ptF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@IdCaptureProvider@objc(cs)IdCaptureProviders",
+        "mangledName": "$s17IdCaptureProvider0aB9ProvidersC",
+        "moduleName": "IdCaptureProvider",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "IdCaptureProviderContract",
+            "printedName": "IdCaptureProviderContract",
+            "usr": "s:13NeoInterfaces25IdCaptureProviderContractP",
+            "mangledName": "$s13NeoInterfaces25IdCaptureProviderContractP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "BlinkID",
+        "printedName": "BlinkID",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "NeoInterfaces",
+        "printedName": "NeoInterfaces",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IdCapturePreviewVM",
+        "printedName": "IdCapturePreviewVM",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id_document",
+            "printedName": "id_document",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BlinkID.BlinkIDScanningResult?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BlinkIDScanningResult",
+                    "printedName": "BlinkID.BlinkIDScanningResult",
+                    "usr": "s:7BlinkID0A16IDScanningResultV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvp",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvp",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "BlinkID.BlinkIDScanningResult?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BlinkIDScanningResult",
+                        "printedName": "BlinkID.BlinkIDScanningResult",
+                        "usr": "s:7BlinkID0A16IDScanningResultV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvg",
+                "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvg",
+                "moduleName": "IdCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "BlinkID.BlinkIDScanningResult?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BlinkIDScanningResult",
+                        "printedName": "BlinkID.BlinkIDScanningResult",
+                        "usr": "s:7BlinkID0A16IDScanningResultV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvs",
+                "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvs",
+                "moduleName": "IdCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvM",
+                "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC11id_document7BlinkID0H16IDScanningResultVSgvM",
+                "moduleName": "IdCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "documentCaptureSettings",
+            "printedName": "documentCaptureSettings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any NeoInterfaces.DocumentCaptureSettings)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "any NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvp",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvp",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any NeoInterfaces.DocumentCaptureSettings)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentCaptureSettings",
+                        "printedName": "any NeoInterfaces.DocumentCaptureSettings",
+                        "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvg",
+                "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvg",
+                "moduleName": "IdCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any NeoInterfaces.DocumentCaptureSettings)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentCaptureSettings",
+                        "printedName": "any NeoInterfaces.DocumentCaptureSettings",
+                        "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvs",
+                "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvs",
+                "moduleName": "IdCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvM",
+                "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC08documentB8Settings13NeoInterfaces08DocumentbG0_pSgvM",
+                "moduleName": "IdCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(result:documentCaptureSettings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IdCapturePreviewVM",
+                "printedName": "IdCaptureProvider.IdCapturePreviewVM",
+                "usr": "s:17IdCaptureProvider0aB9PreviewVMC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BlinkID.BlinkIDScanningResult?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BlinkIDScanningResult",
+                    "printedName": "BlinkID.BlinkIDScanningResult",
+                    "usr": "s:7BlinkID0A16IDScanningResultV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any NeoInterfaces.DocumentCaptureSettings)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "any NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC6result08documentB8SettingsAC7BlinkID0I16IDScanningResultVSg_13NeoInterfaces08DocumentbH0_pSgtcfc",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC6result08documentB8SettingsAC7BlinkID0I16IDScanningResultVSg_13NeoInterfaces08DocumentbH0_pSgtcfc",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getDocumentTypeRawValue",
+            "printedName": "getDocumentTypeRawValue()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC23getDocumentTypeRawValueSSyF",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC23getDocumentTypeRawValueSSyF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDocumentType",
+            "printedName": "getDocumentType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentClass",
+                "printedName": "NeoInterfaces.DocumentClass",
+                "usr": "s:13NeoInterfaces13DocumentClassO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC15getDocumentType13NeoInterfaces0G5ClassOyF",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC15getDocumentType13NeoInterfaces0G5ClassOyF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getIdDocumentDict",
+            "printedName": "getIdDocumentDict()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC03getA12DocumentDictSDyS2SGyF",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC03getA12DocumentDictSDyS2SGyF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getIdDocumentForDocType",
+            "printedName": "getIdDocumentForDocType(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentClass",
+                "printedName": "NeoInterfaces.DocumentClass",
+                "usr": "s:13NeoInterfaces13DocumentClassO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC03getA18DocumentForDocTypeySDyS2SG13NeoInterfaces0G5ClassOF",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC03getA18DocumentForDocTypeySDyS2SG13NeoInterfaces0G5ClassOF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDocumentNumber",
+            "printedName": "getDocumentNumber()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC17getDocumentNumberSSSgyF",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC17getDocumentNumberSSSgyF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDocumentCaptureSettings",
+            "printedName": "getDocumentCaptureSettings()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any NeoInterfaces.DocumentCaptureSettings)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "any NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17IdCaptureProvider0aB9PreviewVMC011getDocumentB8Settings13NeoInterfaces0gbH0_pSgyF",
+            "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC011getDocumentB8Settings13NeoInterfaces0gbH0_pSgyF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17IdCaptureProvider0aB9PreviewVMC",
+        "mangledName": "$s17IdCaptureProvider0aB9PreviewVMC",
+        "moduleName": "IdCaptureProvider",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "IdCaptureViewModelContract",
+            "printedName": "IdCaptureViewModelContract",
+            "usr": "s:13NeoInterfaces26IdCaptureViewModelContractP",
+            "mangledName": "$s13NeoInterfaces26IdCaptureViewModelContractP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "BlinkID",
+        "printedName": "BlinkID",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "NeoInterfaces",
+        "printedName": "NeoInterfaces",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "BlinkID",
+        "printedName": "BlinkID",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IdCaptureProvider",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BlinkIDScanningResult",
+        "printedName": "BlinkIDScanningResult",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "dictionaryForId",
+            "printedName": "dictionaryForId(docType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentClass?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentClass",
+                    "printedName": "NeoInterfaces.DocumentClass",
+                    "usr": "s:13NeoInterfaces13DocumentClassO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7BlinkID0A16IDScanningResultV17IdCaptureProviderE013dictionaryForE07docTypeSDyS2SG13NeoInterfaces13DocumentClassOSg_tF",
+            "mangledName": "$s7BlinkID0A16IDScanningResultV17IdCaptureProviderE013dictionaryForE07docTypeSDyS2SG13NeoInterfaces13DocumentClassOSg_tF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDocumentType",
+            "printedName": "getDocumentType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentClass",
+                "printedName": "NeoInterfaces.DocumentClass",
+                "usr": "s:13NeoInterfaces13DocumentClassO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7BlinkID0A16IDScanningResultV17IdCaptureProviderE15getDocumentType13NeoInterfaces0I5ClassOyF",
+            "mangledName": "$s7BlinkID0A16IDScanningResultV17IdCaptureProviderE15getDocumentType13NeoInterfaces0I5ClassOyF",
+            "moduleName": "IdCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7BlinkID0A16IDScanningResultV",
+        "mangledName": "$s7BlinkID0A16IDScanningResultV",
+        "moduleName": "BlinkID",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "kind": "StringLiteral",
+      "offset": 1403,
+      "length": 16,
+      "value": "\"MB_license_key\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "kind": "StringLiteral",
+      "offset": 1454,
+      "length": 43,
+      "value": "\"com.pingidentity.sdk.pingoneverify.sample\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "kind": "StringLiteral",
+      "offset": 1534,
+      "length": 7,
+      "value": "\"7.6.2\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
+      "kind": "Array",
+      "offset": 2148,
+      "length": 116,
+      "value": "[\"documentImage\", \"faceImage\", \"inputImage\", \"signatureImage\", \"barcodeInputImage\", \"barcodeInputImageScanningSide\"]"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
+      "kind": "StringLiteral",
+      "offset": 2438,
+      "length": 5,
+      "value": "\"cxx\""
+    }
+  ]
+}

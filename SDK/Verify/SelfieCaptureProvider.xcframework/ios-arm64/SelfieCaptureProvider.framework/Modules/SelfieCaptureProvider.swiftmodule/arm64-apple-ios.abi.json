@@ -1,0 +1,3295 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SelfieCaptureProvider",
+    "printedName": "SelfieCaptureProvider",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "IDLiveFaceCamera",
+        "printedName": "IDLiveFaceCamera",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "NeoInterfaces",
+        "printedName": "NeoInterfaces",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SelfieCaptureProviders",
+        "printedName": "SelfieCaptureProviders",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCaptureProviders",
+                "printedName": "SelfieCaptureProvider.SelfieCaptureProviders",
+                "usr": "c:@M@SelfieCaptureProvider@objc(cs)SelfieCaptureProviders"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)SelfieCaptureProviders(im)init",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersCACycfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "startCapture",
+            "printedName": "startCapture(from:settings:licenseKey:listener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UINavigationController",
+                "printedName": "UIKit.UINavigationController",
+                "usr": "c:objc(cs)UINavigationController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AnyObject?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCaptureProviderListener",
+                "printedName": "any NeoInterfaces.SelfieCaptureProviderListener",
+                "usr": "s:13NeoInterfaces29SelfieCaptureProviderListenerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC05startB04from8settings10licenseKey8listenerySo22UINavigationControllerC_yXlSgSS13NeoInterfaces0abC8Listener_ptF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC05startB04from8settings10licenseKey8listenerySo22UINavigationControllerC_yXlSgSS13NeoInterfaces0abC8Listener_ptF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reassignListener",
+            "printedName": "reassignListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCaptureProviderListener",
+                "printedName": "any NeoInterfaces.SelfieCaptureProviderListener",
+                "usr": "s:13NeoInterfaces29SelfieCaptureProviderListenerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC16reassignListeneryy13NeoInterfaces0abcF0_pF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC16reassignListeneryy13NeoInterfaces0abcF0_pF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "restartCapture",
+            "printedName": "restartCapture()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC07restartB0yyF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC07restartB0yyF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepareSelfiePayload",
+            "printedName": "prepareSelfiePayload(jpegData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC07prepareA7Payload8jpegDataSDyS2SG10Foundation0H0V_tKF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC07prepareA7Payload8jpegDataSDyS2SG10Foundation0H0V_tKF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cleanupCaptureSession",
+            "printedName": "cleanupCaptureSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC07cleanupB7SessionyyF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC07cleanupB7SessionyyF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onSelfieCaptured",
+            "printedName": "onSelfieCaptured(_:jpegData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC02onA8Captured_8jpegDataySo7UIImageC_10Foundation0H0VtF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC02onA8Captured_8jpegDataySo7UIImageC_10Foundation0H0VtF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentCaptureError",
+                "printedName": "NeoInterfaces.DocumentCaptureError",
+                "usr": "s:13NeoInterfaces20DocumentCaptureErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC7onErroryy13NeoInterfaces08DocumentbF0OF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC7onErroryy13NeoInterfaces08DocumentbF0OF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "closeButtonTapped",
+            "printedName": "closeButtonTapped()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC17closeButtonTappedyyF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC17closeButtonTappedyyF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SelfieCaptureProvider@objc(cs)SelfieCaptureProviders",
+        "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "SelfieCaptureProviderContract",
+            "printedName": "SelfieCaptureProviderContract",
+            "usr": "s:13NeoInterfaces29SelfieCaptureProviderContractP",
+            "mangledName": "$s13NeoInterfaces29SelfieCaptureProviderContractP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SelfieCaptureListener",
+            "printedName": "SelfieCaptureListener",
+            "usr": "s:21SelfieCaptureProvider0aB8ListenerP",
+            "mangledName": "$s21SelfieCaptureProvider0aB8ListenerP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SelfieCaptureProviderError",
+        "printedName": "SelfieCaptureProviderError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "presenterNotAvailable",
+            "printedName": "presenterNotAvailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SelfieCaptureProvider.SelfieCaptureProviderError.Type) -> SelfieCaptureProvider.SelfieCaptureProviderError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SelfieCaptureProviderError",
+                    "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError",
+                    "usr": "s:21SelfieCaptureProvider0abC5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SelfieCaptureProviderError",
+                        "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError",
+                        "usr": "s:21SelfieCaptureProvider0abC5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SelfieCaptureProvider0abC5ErrorO21presenterNotAvailableyA2CmF",
+            "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO21presenterNotAvailableyA2CmF",
+            "moduleName": "SelfieCaptureProvider"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCaptureProviderError",
+                "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError",
+                "usr": "s:21SelfieCaptureProvider0abC5ErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCaptureProviderError",
+                "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError",
+                "usr": "s:21SelfieCaptureProvider0abC5ErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0abC5ErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "SelfieCaptureProvider",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider0abC5ErrorO9hashValueSivp",
+            "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO9hashValueSivp",
+            "moduleName": "SelfieCaptureProvider",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0abC5ErrorO9hashValueSivg",
+                "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO9hashValueSivg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0abC5ErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "SelfieCaptureProvider",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:21SelfieCaptureProvider0abC5ErrorO",
+        "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "IDLiveFaceCamera",
+        "printedName": "IDLiveFaceCamera",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "NeoInterfaces",
+        "printedName": "NeoInterfaces",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SelfieCapturePresenter",
+        "printedName": "SelfieCapturePresenter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "idCameraControllerDelegate",
+            "printedName": "idCameraControllerDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any IDLiveFaceCamera.IDCameraControllerDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IDCameraControllerDelegate",
+                    "printedName": "any IDLiveFaceCamera.IDCameraControllerDelegate",
+                    "usr": "s:16IDLiveFaceCamera26IDCameraControllerDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvp",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any IDLiveFaceCamera.IDCameraControllerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IDCameraControllerDelegate",
+                        "printedName": "any IDLiveFaceCamera.IDCameraControllerDelegate",
+                        "usr": "s:16IDLiveFaceCamera26IDCameraControllerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvg",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any IDLiveFaceCamera.IDCameraControllerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IDCameraControllerDelegate",
+                        "printedName": "any IDLiveFaceCamera.IDCameraControllerDelegate",
+                        "usr": "s:16IDLiveFaceCamera26IDCameraControllerDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvs",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvM",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC26idCameraControllerDelegate010IDLiveFaceF008IDCameragH0_pSgvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "licenseProvider",
+            "printedName": "licenseProvider",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "(any NeoInterfaces.LicenseProviderContract)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LicenseProviderContract",
+                    "printedName": "any NeoInterfaces.LicenseProviderContract",
+                    "usr": "s:13NeoInterfaces23LicenseProviderContractP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvp",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "(any NeoInterfaces.LicenseProviderContract)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LicenseProviderContract",
+                        "printedName": "any NeoInterfaces.LicenseProviderContract",
+                        "usr": "s:13NeoInterfaces23LicenseProviderContractP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvg",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "(any NeoInterfaces.LicenseProviderContract)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LicenseProviderContract",
+                        "printedName": "any NeoInterfaces.LicenseProviderContract",
+                        "usr": "s:13NeoInterfaces23LicenseProviderContractP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvs",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvM",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC07licenseC013NeoInterfaces07LicenseC8Contract_pSgvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkIdentifier",
+            "printedName": "sdkIdentifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvp",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvg",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvs",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvM",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC13sdkIdentifierSSvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkVersion",
+            "printedName": "sdkVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvp",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvg",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvs",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvM",
+                "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC10sdkVersionSSvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(selfieCaptureListener:selfieCaptureSettings:idCameraControllerDelegate:licenseProvider:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCapturePresenter",
+                "printedName": "SelfieCaptureProvider.SelfieCapturePresenter",
+                "usr": "s:21SelfieCaptureProvider0aB9PresenterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCaptureListener",
+                "printedName": "any SelfieCaptureProvider.SelfieCaptureListener",
+                "usr": "s:21SelfieCaptureProvider0aB8ListenerP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any NeoInterfaces.DocumentCaptureSettings)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "any NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any IDLiveFaceCamera.IDCameraControllerDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IDCameraControllerDelegate",
+                    "printedName": "any IDLiveFaceCamera.IDCameraControllerDelegate",
+                    "usr": "s:16IDLiveFaceCamera26IDCameraControllerDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LicenseProviderContract",
+                "printedName": "any NeoInterfaces.LicenseProviderContract",
+                "usr": "s:13NeoInterfaces23LicenseProviderContractP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC06selfieB8Listener0eB8Settings26idCameraControllerDelegate07licenseC0AcA0abF0_p_13NeoInterfaces08DocumentbG0_pSg010IDLiveFaceI008IDCamerajK0_pSgAI07LicenseC8Contract_ptKcfc",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC06selfieB8Listener0eB8Settings26idCameraControllerDelegate07licenseC0AcA0abF0_p_13NeoInterfaces08DocumentbG0_pSg010IDLiveFaceI008IDCamerajK0_pSgAI07LicenseC8Contract_ptKcfc",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "updateLicense",
+            "printedName": "updateLicense()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC13updateLicenseyyKF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC13updateLicenseyyKF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startCapture",
+            "printedName": "startCapture(navigationController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UINavigationController",
+                "printedName": "UIKit.UINavigationController",
+                "usr": "c:objc(cs)UINavigationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC05startB020navigationControllerySo012UINavigationG0C_tF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC05startB020navigationControllerySo012UINavigationG0C_tF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "restartCapture",
+            "printedName": "restartCapture()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC07restartB0yyF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC07restartB0yyF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reassignListener",
+            "printedName": "reassignListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieCaptureListener",
+                "printedName": "any SelfieCaptureProvider.SelfieCaptureListener",
+                "usr": "s:21SelfieCaptureProvider0aB8ListenerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC16reassignListeneryyAA0abF0_pF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC16reassignListeneryyAA0abF0_pF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cleanupCaptureSession",
+            "printedName": "cleanupCaptureSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC07cleanupB7SessionyyF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC07cleanupB7SessionyyF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepareSelfiePayload",
+            "printedName": "prepareSelfiePayload(jpegData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC07prepareA7Payload8jpegDataSDyS2SG10Foundation0H0V_tKF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC07prepareA7Payload8jpegDataSDyS2SG10Foundation0H0V_tKF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cameraController",
+            "printedName": "cameraController(_:didCaptureImage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IDCameraControllerBase",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase",
+                "usr": "c:@M@IDLiveFaceCamera@objc(cs)IDCameraControllerBase"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IDImage",
+                "printedName": "IDLiveFaceCamera.IDImage",
+                "usr": "c:@M@IDLiveFaceCamera@objc(cs)IDImage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC16cameraController_03didB5Imagey16IDLiveFaceCamera08IDCameraF4BaseC_AF7IDImageCtF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC16cameraController_03didB5Imagey16IDLiveFaceCamera08IDCameraF4BaseC_AF7IDImageCtF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cameraController",
+            "printedName": "cameraController(_:didEncounterError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IDCameraControllerBase",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase",
+                "usr": "c:@M@IDLiveFaceCamera@objc(cs)IDCameraControllerBase"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase.Error",
+                "usr": "s:16IDLiveFaceCamera22IDCameraControllerBaseC5ErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC16cameraController_17didEncounterErrory16IDLiveFaceCamera08IDCameraF4BaseC_AH0I0OtF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC16cameraController_17didEncounterErrory16IDLiveFaceCamera08IDCameraF4BaseC_AH0I0OtF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cameraControllerUserDidPressResultButton",
+            "printedName": "cameraControllerUserDidPressResultButton(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IDCameraControllerBase",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase",
+                "usr": "c:@M@IDLiveFaceCamera@objc(cs)IDCameraControllerBase"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC40cameraControllerUserDidPressResultButtonyy16IDLiveFaceCamera08IDCameraF4BaseCF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC40cameraControllerUserDidPressResultButtonyy16IDLiveFaceCamera08IDCameraF4BaseCF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cameraControllerDidUpdateFaceResult",
+            "printedName": "cameraControllerDidUpdateFaceResult(_:result:image:momentary:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IDCameraControllerBase",
+                "printedName": "IDLiveFaceCamera.IDCameraControllerBase",
+                "usr": "c:@M@IDLiveFaceCamera@objc(cs)IDCameraControllerBase"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FaceDetectorResult",
+                "printedName": "IDLiveFaceCamera.FaceDetectorResult",
+                "usr": "s:16IDLiveFaceCamera0B14DetectorResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "IDLiveFaceCamera.IDImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IDImage",
+                    "printedName": "IDLiveFaceCamera.IDImage",
+                    "usr": "c:@M@IDLiveFaceCamera@objc(cs)IDImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC35cameraControllerDidUpdateFaceResult_6result5image9momentaryy06IDLiveI6Camera08IDCameraF4BaseC_AH0i8DetectorJ0OAH7IDImageCSgSbtF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC35cameraControllerDidUpdateFaceResult_6result5image9momentaryy06IDLiveI6Camera08IDCameraF4BaseC_AH0i8DetectorJ0OAH7IDImageCSgSbtF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:21SelfieCaptureProvider0aB9PresenterC",
+        "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "IDCameraControllerDelegate",
+            "printedName": "IDCameraControllerDelegate",
+            "usr": "s:16IDLiveFaceCamera26IDCameraControllerDelegateP",
+            "mangledName": "$s16IDLiveFaceCamera26IDCameraControllerDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SelfieCaptureListener",
+        "printedName": "SelfieCaptureListener",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onSelfieCaptured",
+            "printedName": "onSelfieCaptured(_:jpegData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB8ListenerP02onA8Captured_8jpegDataySo7UIImageC_10Foundation0H0VtF",
+            "mangledName": "$s21SelfieCaptureProvider0aB8ListenerP02onA8Captured_8jpegDataySo7UIImageC_10Foundation0H0VtF",
+            "moduleName": "SelfieCaptureProvider",
+            "genericSig": "<τ_0_0 where τ_0_0 : SelfieCaptureProvider.SelfieCaptureListener>",
+            "sugared_genericSig": "<Self where Self : SelfieCaptureProvider.SelfieCaptureListener>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentCaptureError",
+                "printedName": "NeoInterfaces.DocumentCaptureError",
+                "usr": "s:13NeoInterfaces20DocumentCaptureErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB8ListenerP7onErroryy13NeoInterfaces08DocumentbF0OF",
+            "mangledName": "$s21SelfieCaptureProvider0aB8ListenerP7onErroryy13NeoInterfaces08DocumentbF0OF",
+            "moduleName": "SelfieCaptureProvider",
+            "genericSig": "<τ_0_0 where τ_0_0 : SelfieCaptureProvider.SelfieCaptureListener>",
+            "sugared_genericSig": "<Self where Self : SelfieCaptureProvider.SelfieCaptureListener>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "closeButtonTapped",
+            "printedName": "closeButtonTapped()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider0aB8ListenerP17closeButtonTappedyyF",
+            "mangledName": "$s21SelfieCaptureProvider0aB8ListenerP17closeButtonTappedyyF",
+            "moduleName": "SelfieCaptureProvider",
+            "genericSig": "<τ_0_0 where τ_0_0 : SelfieCaptureProvider.SelfieCaptureListener>",
+            "sugared_genericSig": "<Self where Self : SelfieCaptureProvider.SelfieCaptureListener>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:21SelfieCaptureProvider0aB8ListenerP",
+        "mangledName": "$s21SelfieCaptureProvider0aB8ListenerP",
+        "moduleName": "SelfieCaptureProvider",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CameraOverlayView",
+        "printedName": "CameraOverlayView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "previewRectFrame",
+            "printedName": "previewRectFrame",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreFoundation.CGRect?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGRect",
+                    "printedName": "CoreFoundation.CGRect",
+                    "usr": "c:@S@CGRect"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvp",
+            "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGRect?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvg",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGRect?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvs",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvM",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC16previewRectFrameSo6CGRectVSgvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "overlayBackgroundColor",
+            "printedName": "overlayBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvp",
+            "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvg",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvs",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvM",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC22overlayBackgroundColorSo7UIColorCvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "drawOutline",
+            "printedName": "drawOutline",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvp",
+            "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvg",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvs",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvM",
+                "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC11drawOutlineSbvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SelfieCaptureProvider.CameraOverlayView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CameraOverlayView",
+                    "printedName": "SelfieCaptureProvider.CameraOverlayView",
+                    "usr": "c:@M@SelfieCaptureProvider@objc(cs)CameraOverlayView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)CameraOverlayView(im)initWithCoder:",
+            "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "draw",
+            "printedName": "draw(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)CameraOverlayView(im)drawRect:",
+            "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC4drawyySo6CGRectVF",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "objc_name": "drawRect:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CameraOverlayView",
+                "printedName": "SelfieCaptureProvider.CameraOverlayView",
+                "usr": "c:@M@SelfieCaptureProvider@objc(cs)CameraOverlayView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)CameraOverlayView(im)initWithFrame:",
+            "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SelfieCaptureProvider@objc(cs)CameraOverlayView",
+        "mangledName": "$s21SelfieCaptureProvider17CameraOverlayViewC",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OvalCameraOverlayView",
+        "printedName": "OvalCameraOverlayView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "previewRectFrame",
+            "printedName": "previewRectFrame",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreFoundation.CGRect?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGRect",
+                    "printedName": "CoreFoundation.CGRect",
+                    "usr": "c:@S@CGRect"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvp",
+            "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGRect?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvg",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGRect?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvs",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvM",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC16previewRectFrameSo6CGRectVSgvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "overlayBackgroundColor",
+            "printedName": "overlayBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvp",
+            "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvg",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvs",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvM",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC22overlayBackgroundColorSo7UIColorCvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "drawOutline",
+            "printedName": "drawOutline",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvp",
+            "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvp",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvg",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvg",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvs",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvs",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvM",
+                "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC11drawOutlineSbvM",
+                "moduleName": "SelfieCaptureProvider",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SelfieCaptureProvider.OvalCameraOverlayView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OvalCameraOverlayView",
+                    "printedName": "SelfieCaptureProvider.OvalCameraOverlayView",
+                    "usr": "c:@M@SelfieCaptureProvider@objc(cs)OvalCameraOverlayView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)OvalCameraOverlayView(im)initWithCoder:",
+            "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OvalCameraOverlayView",
+                "printedName": "SelfieCaptureProvider.OvalCameraOverlayView",
+                "usr": "c:@M@SelfieCaptureProvider@objc(cs)OvalCameraOverlayView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)OvalCameraOverlayView(im)initWithFrame:",
+            "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "draw",
+            "printedName": "draw(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)OvalCameraOverlayView(im)drawRect:",
+            "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC4drawyySo6CGRectVF",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "objc_name": "drawRect:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateOutlineColor",
+            "printedName": "updateOutlineColor(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21SelfieCaptureProvider21OvalCameraOverlayViewC18updateOutlineColoryySo7UIColorCF",
+            "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC18updateOutlineColoryySo7UIColorCF",
+            "moduleName": "SelfieCaptureProvider",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SelfieCaptureProvider@objc(cs)OvalCameraOverlayView",
+        "mangledName": "$s21SelfieCaptureProvider21OvalCameraOverlayViewC",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CenterTextLayer",
+        "printedName": "CenterTextLayer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "draw",
+            "printedName": "draw(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGContext",
+                "printedName": "CoreGraphics.CGContext",
+                "usr": "c:@T@CGContextRef"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer(im)drawInContext:",
+            "mangledName": "$s21SelfieCaptureProvider15CenterTextLayerC4draw2inySo12CGContextRefa_tF",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "objc_name": "drawInContext:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CenterTextLayer",
+                "printedName": "SelfieCaptureProvider.CenterTextLayer",
+                "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer(im)init",
+            "mangledName": "$s21SelfieCaptureProvider15CenterTextLayerCACycfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(layer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CenterTextLayer",
+                "printedName": "SelfieCaptureProvider.CenterTextLayer",
+                "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer(im)initWithLayer:",
+            "mangledName": "$s21SelfieCaptureProvider15CenterTextLayerC5layerACyp_tcfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithLayer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SelfieCaptureProvider.CenterTextLayer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CenterTextLayer",
+                    "printedName": "SelfieCaptureProvider.CenterTextLayer",
+                    "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer(im)initWithCoder:",
+            "mangledName": "$s21SelfieCaptureProvider15CenterTextLayerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "SelfieCaptureProvider",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SelfieCaptureProvider@objc(cs)CenterTextLayer",
+        "mangledName": "$s21SelfieCaptureProvider15CenterTextLayerC",
+        "moduleName": "SelfieCaptureProvider",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)CATextLayer",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "QuartzCore.CATextLayer",
+          "QuartzCore.CALayer",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SelfieCaptureProvider"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIColor",
+        "printedName": "UIColor",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "loadColor",
+            "printedName": "loadColor(named:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So7UIColorC21SelfieCaptureProviderE9loadColor5namedABSgSS_tFZ",
+            "mangledName": "$sSo7UIColorC21SelfieCaptureProviderE9loadColor5namedABSgSS_tFZ",
+            "moduleName": "SelfieCaptureProvider",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIColor",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIColor",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByColorLiteral",
+            "printedName": "_ExpressibleByColorLiteral",
+            "usr": "s:s26_ExpressibleByColorLiteralP",
+            "mangledName": "$ss26_ExpressibleByColorLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIImage",
+        "printedName": "UIImage",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "loadImage",
+            "printedName": "loadImage(named:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So7UIImageC21SelfieCaptureProviderE9loadImage5namedABSgSS_tFZ",
+            "mangledName": "$sSo7UIImageC21SelfieCaptureProviderE9loadImage5namedABSgSS_tFZ",
+            "moduleName": "SelfieCaptureProvider",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIImage",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIImage",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByImageLiteral",
+            "printedName": "_ExpressibleByImageLiteral",
+            "usr": "s:s26_ExpressibleByImageLiteralP",
+            "mangledName": "$ss26_ExpressibleByImageLiteralP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "StringLiteral",
+      "offset": 447,
+      "length": 15,
+      "value": "\"idFaceCapture\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "StringLiteral",
+      "offset": 573,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 879,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 935,
+      "length": 2,
+      "value": "19"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 983,
+      "length": 2,
+      "value": "19"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "StringLiteral",
+      "offset": 1047,
+      "length": 18,
+      "value": "\"idv_selfie_error\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1106,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "kind": "StringLiteral",
+      "offset": 1179,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 334,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 344,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 353,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "kind": "FloatLiteral",
+      "offset": 363,
+      "length": 3,
+      "value": "0.6"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 403,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 356,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 366,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 375,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "kind": "FloatLiteral",
+      "offset": 385,
+      "length": 4,
+      "value": "0.75"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 426,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 666,
+      "length": 1,
+      "value": "5"
+    }
+  ]
+}

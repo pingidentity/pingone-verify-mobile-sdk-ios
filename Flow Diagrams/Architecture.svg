@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+  <defs>
+    <filter id="shadow-sm" x="-15%" y="-20%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadow-xs" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#52606D"/>
+    </marker>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M10 18.5h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="12" cy="6" r=".8" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-app" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M17 13.5v7M13.5 17h7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-ui" viewBox="0 0 24 24">
+      <rect x="5" y="3" width="14" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8.5 7.5h7M8.5 11h7M8.5 14.5h4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <circle cx="16" cy="16" r="1.8" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    </symbol>
+    <symbol id="icon-flow" viewBox="0 0 24 24">
+      <circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="12" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8.7 7.4l6.6 7.2M15.3 7.4l-6.6 7.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-cpu" viewBox="0 0 24 24">
+      <rect x="7" y="7" width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="10" y="10" width="4" height="4" rx=".8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M4 9h3M4 15h3M17 9h3M17 15h3M9 4v3M15 4v3M9 17v3M15 17v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-id" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="8" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M5.8 16c.7-1.5 3.7-1.5 4.4 0M13 10h5M13 14h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-selfie" viewBox="0 0 24 24">
+      <path d="M7 7.5l1.6-2h6.8l1.6 2H20a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5a2 2 0 0 1 2-2h3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M10.6 13.8c.8.7 2 .7 2.8 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5 5v10c0 1.7 3.1 3 7 3s7-1.3 7-3V5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-server" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="4" y="14" width="16" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="8" cy="7" r="1" fill="currentColor"/>
+      <circle cx="8" cy="17" r="1" fill="currentColor"/>
+      <path d="M11 7h5M11 17h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-package" viewBox="0 0 24 24">
+      <path d="M4 8.2 12 4l8 4.2v8.9L12 21l-8-3.9V8.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="m4.3 8.4 7.7 3.9 7.7-3.9M12 12.3V21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-function" viewBox="0 0 24 24">
+      <path d="M5 19V5M19 19V5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="5" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="19" cy="15" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M9 9h5M10 15h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+  <style>
+    .label { font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    text { font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .connector { stroke:#52606D; stroke-width:2.6; fill:none; stroke-linecap:round; stroke-linejoin:round; marker-end:url(#arrow); }
+    .connector-both { stroke:#52606D; stroke-width:2.6; fill:none; stroke-linecap:round; stroke-linejoin:round; marker-start:url(#arrow); marker-end:url(#arrow); }
+  </style>
+
+  <rect width="1600" height="1050" fill="#FFFFFF"/>
+
+  <!-- External services grouping sits behind the app to clarify the boundary. -->
+  <rect x="70" y="850" width="1460" height="185" rx="22" fill="#F7FBFF" stroke="#D7E7F7" stroke-width="2"/>
+  <circle cx="625" cy="883" r="22" fill="#E2F0FF" opacity="0.75"/>
+  <g color="#315C7D"><use href="#icon-server" x="611" y="869" width="28" height="28"/></g>
+  <text x="800" y="893" text-anchor="middle" font-size="30" font-weight="760" fill="#111827">External Services</text>
+
+  <!-- Native mobile application boundary -->
+  <rect x="50" y="40" width="1500" height="800" rx="22" fill="#FFF9D8" stroke="#1F2937" stroke-width="3" stroke-dasharray="18 12"/>
+  <circle cx="582" cy="74" r="22" fill="#F2C94C" opacity="0.22"/>
+  <g color="#8A6200"><use href="#icon-phone" x="568" y="60" width="28" height="28"/></g>
+  <text x="800" y="83" text-anchor="middle" font-size="30" font-weight="760" fill="#111827">Native Mobile Application</text>
+
+  <!-- App functionality -->
+  <g filter="url(#shadow-sm)"><rect x="110" y="150" width="360" height="170" rx="14" fill="#FFFFFF" stroke="#1F2937" stroke-width="2.5"/><circle cx="154" cy="235.0" r="28" fill="#FFF0B6"/><g color="#8A6200"><use href="#icon-function" x="139" y="220.0" width="30" height="30"/></g><text x="198" y="235" dominant-baseline="middle" text-anchor="start" font-size="25" font-weight="650" fill="#111827">AppFunctionality</text></g>
+
+  <!-- Native app components group -->
+  <rect x="500" y="125" width="1000" height="230" rx="18" fill="#EAF8ED" stroke="#1F8F3D" stroke-width="2.6"/>
+  <g filter="url(#shadow-xs)"><rect x="836.0" y="103.0" width="328" height="44" rx="22" fill="#FFFFFF" stroke="#1F8F3D" stroke-width="1.8"/><circle cx="866.0" cy="125" r="15" fill="#1F8F3D" opacity="0.12"/><g color="#1F8F3D"><use href="#icon-app" x="856.0" y="115" width="20" height="20"/></g><text x="892.0" y="132" font-size="20" font-weight="750" fill="#111827">Native App Components</text></g>
+  <g filter="url(#shadow-sm)"><rect x="590" y="205" width="270" height="100" rx="14" fill="#FFFFFF" stroke="#1F8F3D" stroke-width="2.5"/><circle cx="634" cy="255.0" r="28" fill="#D9F4DF"/><g color="#1F8F3D"><use href="#icon-ui" x="619" y="240.0" width="30" height="30"/></g><text x="678" y="263.0" text-anchor="start" font-size="24" font-weight="650" fill="#111827"><tspan x="678" dy="0">verify-ui</tspan></text></g>
+  <g filter="url(#shadow-sm)"><rect x="920" y="205" width="570" height="100" rx="14" fill="#FFFFFF" stroke="#1F8F3D" stroke-width="2.5"/><circle cx="964" cy="255.0" r="28" fill="#D9F4DF"/><g color="#1F8F3D"><use href="#icon-flow" x="949" y="240.0" width="30" height="30"/></g><text x="1008" y="255" dominant-baseline="middle" text-anchor="start" font-size="21" font-weight="650" fill="#111827">verify-transaction-coordinator-delegate</text></g>
+
+  <!-- SDK group -->
+  <rect x="110" y="400" width="1390" height="390" rx="20" fill="#FFF2F2" stroke="#E11D2E" stroke-width="2.6" stroke-dasharray="14 12"/>
+  <g filter="url(#shadow-xs)"><rect x="665.0" y="378.0" width="280" height="44" rx="22" fill="#FFFFFF" stroke="#E11D2E" stroke-width="1.8"/><circle cx="695.0" cy="400" r="15" fill="#E11D2E" opacity="0.12"/><g color="#E11D2E"><use href="#icon-package" x="685.0" y="390" width="20" height="20"/></g><text x="721.0" y="407" font-size="20" font-weight="750" fill="#111827">Verify Native SDK</text></g>
+
+  <!-- verify-core module -->
+  <g filter="url(#shadow-sm)">
+    <rect x="800" y="475" width="620" height="235" rx="18" fill="#FFFFFF" stroke="#E11D2E" stroke-width="2.5"/>
+    <circle cx="947" cy="514" r="23" fill="#FFE5E8"/>
+    <g color="#E11D2E"><use href="#icon-cpu" x="933" y="500" width="28" height="28"/></g>
+    <text x="1110" y="522" text-anchor="middle" font-size="25" font-weight="750" fill="#111827">verify-core</text>
+  </g>
+  <g filter="url(#shadow-sm)"><rect x="845" y="560" width="250" height="110" rx="14" fill="#FFFFFF" stroke="#E11D2E" stroke-width="2.3"/><circle cx="889" cy="615.0" r="28" fill="#FFE5E8"/><g color="#E11D2E"><use href="#icon-id" x="874" y="600.0" width="30" height="30"/></g><text x="933" y="615" dominant-baseline="middle" font-size="22" font-weight="650" fill="#111827">ID Capture</text></g>
+  <g filter="url(#shadow-sm)"><rect x="1125" y="560" width="250" height="110" rx="14" fill="#FFFFFF" stroke="#E11D2E" stroke-width="2.3"/><circle cx="1169" cy="615.0" r="28" fill="#FFE5E8"/><g color="#E11D2E"><use href="#icon-selfie" x="1154" y="600.0" width="30" height="30"/></g><text x="1213" y="615" dominant-baseline="middle" font-size="22" font-weight="650" fill="#111827">Selfie Capture</text></g>
+
+  <!-- coordinator module -->
+  <g filter="url(#shadow-sm)"><rect x="160" y="525" width="570" height="130" rx="14" fill="#FFFFFF" stroke="#E11D2E" stroke-width="2.5"/><circle cx="204" cy="590.0" r="28" fill="#FFE5E8"/><g color="#E11D2E"><use href="#icon-flow" x="189" y="575.0" width="30" height="30"/></g><text x="248" y="590" dominant-baseline="middle" text-anchor="start" font-size="25" font-weight="650" fill="#111827">verify-transaction-coordinator</text></g>
+
+  <!-- External service cards -->
+  <g filter="url(#shadow-sm)"><rect x="135" y="905" width="480" height="110" rx="16" fill="#FFFFFF" stroke="#315C7D" stroke-width="2.5"/><circle cx="187" cy="960.0" r="31" fill="#E2F0FF"/><g color="#315C7D"><use href="#icon-database" x="170" y="943.0" width="34" height="34"/></g><text x="235" y="968.0" font-size="26" font-weight="700" fill="#111827">User Data Store</text></g>
+  <g filter="url(#shadow-sm)"><rect x="925" y="905" width="520" height="110" rx="16" fill="#FFFFFF" stroke="#315C7D" stroke-width="2.5"/><circle cx="977" cy="960.0" r="31" fill="#E2F0FF"/><g color="#315C7D"><use href="#icon-server" x="960" y="943.0" width="34" height="34"/></g><text x="1025" y="968.0" font-size="26" font-weight="700" fill="#111827">Backend Service</text></g>
+
+  <!-- Connectors -->
+  <!-- verify-transaction-coordinator-delegate -> verify-ui -->
+  <path class="connector" d="M920 255 H860"/>
+  <!-- verify-ui -> verify-transaction-coordinator -->
+  <path class="connector" d="M725 305 V363 Q725 375 713 375 H445 Q425 375 425 397 V525"/>
+  <!-- verify-transaction-coordinator -> verify-core -->
+  <path class="connector" d="M730 590 H800"/>
+  <!-- verify-core -> verify-transaction-coordinator-delegate -->
+  <path class="connector" d="M1205 475 V305"/>
+  <!-- verify-core -> User Data Store -->
+  <path class="connector" d="M1020 710 V805 Q1020 825 1000 825 H375 Q355 825 355 845 V905"/>
+  <!-- verify-core <-> Backend Service -->
+  <path class="connector" d="M1185 710 V905"/>
+  <path class="connector" d="M1185 905 V710"/>
+  <!-- User Data Store <-> Backend Service -->
+  <path class="connector-both" d="M615 960 H925"/>
+
+</svg>

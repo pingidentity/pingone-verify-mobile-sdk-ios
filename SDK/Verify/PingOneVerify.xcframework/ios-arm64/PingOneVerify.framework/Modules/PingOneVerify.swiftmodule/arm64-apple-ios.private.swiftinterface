@@ -2,52 +2,58 @@
 // swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PingOneVerify
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
-import AVFoundation
-import BlinkID
-import BlinkIDUX
-import Combine
-import CoreImage
-import CoreMedia
+import CoreLocation
 import CryptoTools
-import DeveloperToolsSupport
 import Foundation
-import GeoLocationProvider
-import IDLiveFaceCamera
 import JoseTools
-import LanguagePackProvider
 import NeoInterfaces
 @_exported import PingOneVerify
+import Security
 import Swift
-import SwiftUI
 import SystemConfiguration
 import UIKit
-import Vision
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_hasMissingDesignatedInitializers @objc public class ClientBuilderError : ObjectiveC.NSObject {
+public struct GeolocationPayload : Swift.Codable {
+  public let geolocation: PingOneVerify.Coordinates?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(geolocation: PingOneVerify.Coordinates?)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Coordinates : Swift.Codable {
+  public let latitude: Swift.Double?
+  public let longitude: Swift.Double?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(latitude: Swift.Double?, longitude: Swift.Double?)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GeolocationPermissionDeniedPayload : Swift.Codable {
+  public let verificationType: Swift.String
+  public let error: Swift.String
+  public init(verificationType: Swift.String, error: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class ClientBuilderError : ObjectiveC.NSObject {
   @objc public var localizedDescription: Swift.String!
+  public init(builderError: PingOneVerify.ClientBuilderError.BuilderError)
+  public init(qrError: PingOneVerify.QRError)
   public enum BuilderError : Swift.Error {
     case missingRootViewController
-    case missingDocumentSubmissionListener
     case missingNetworkConnection
     case invalidUrl
+    case unknownError
     public static func == (a: PingOneVerify.ClientBuilderError.BuilderError, b: PingOneVerify.ClientBuilderError.BuilderError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
   }
-  @objc deinit
-}
-@objc @_Concurrency.MainActor @preconcurrency public class CameraOverlayView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var previewRectFrame: CoreFoundation.CGRect?
-  @_Concurrency.MainActor @preconcurrency public var overlayBackgroundColor: UIKit.UIColor
-  @_Concurrency.MainActor @preconcurrency public var drawOutline: Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  #endif
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
   @objc deinit
 }
 public class CompletionHandler<T> {
@@ -60,69 +66,178 @@ public class CompletionHandler<T> {
   public func onError(_ errorHandler: @escaping (any Swift.Error) -> Swift.Void) -> PingOneVerify.CompletionHandler<T>
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class DocumentModel {
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class ProviderLicenses : Swift.Codable {
+public class PingOneEndpoints : Swift.Codable {
+  final public let uploadUrl: Swift.String
+  final public let apiUrl: Swift.String
+  final public let authUrl: Swift.String
+  final public let assetsUrl: Swift.String
+  public func getVerifyApiUrl() throws -> Swift.String
+  public func getAppThemeUrl() -> Swift.String
+  public func getBaseUrl() throws -> Swift.String
+  public func getApiUrl() throws -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getEnvironmentId() -> Swift.String?
+  #endif
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-@objc public class PhoneCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
-  @objc public var documentType: PingOneVerify.DocumentClass
-  @objc public var currentStep: Swift.Int
-  @objc public var totalSteps: Swift.Int
-  @objc public var optional: Swift.Bool
-  public var otpDestination: Swift.String?
+public struct DocumentCollectionPayload : Swift.Codable {
+  public let client: PingOneVerify.Client
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class AppEventUtil {
+  public static func addDeviceMetadataAppEvents()
+  public static func getBuildVersion() -> Swift.String
+  public static func getOSInfo() -> Swift.String
+  public static func modelIdentifier() -> Swift.String
+  public static func submitDocumentSubmissionCompletedAppEvent()
+  public static func isIphone14Variant() -> Swift.Bool
+  public static func getAppEventsUrl(from verifyApiUrl: Swift.String, transactionId: Swift.String) -> Swift.String
+  @objc deinit
+}
+public class ProviderLicenses : Swift.Codable {
+  public var licenses: [NeoInterfaces.ProviderLicense]
+  public init(licenses: [NeoInterfaces.ProviderLicense] = [])
+  public func getLicenses() -> [NeoInterfaces.ProviderLicense]
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum HttpMethod : Swift.String {
+  case POST
+  case GET
+  case PUT
+  case DELETE
+  case PATCH
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class Request {
+  public static let successRange: Swift.Range<Swift.Int>
+  public var requestHeader: PingOneVerify.RequestHeader
+  public var requestBodyData: Foundation.Data?
+  public var url: Foundation.URL!
+  public init(url: Swift.String) throws
+  @discardableResult
+  public func setHeader(_ header: PingOneVerify.RequestHeader) -> PingOneVerify.Request
+  @discardableResult
+  public func setBodyData<T>(with body: T) -> PingOneVerify.Request where T : Swift.Decodable, T : Swift.Encodable
+  @discardableResult
+  public func setBodyData(with body: Foundation.Data) -> PingOneVerify.Request
+  @discardableResult
+  public func setHeaderField(_ headerField: Swift.String, headerValue: Swift.String) -> PingOneVerify.Request
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func get(completionHandler: @escaping (_ response: Any?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func post(completionHandler: @escaping (_ response: Any?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func put(completionHandler: @escaping (_ response: Any?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func patch(completionHandler: @escaping (_ response: Any?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func delete(completionHandler: @escaping (_ response: Any?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func response(httpMethod: PingOneVerify.HttpMethod, completionHandler: @escaping (_ response: Any?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func sendRequest(httpMethod: PingOneVerify.HttpMethod, onComplete: @escaping (_ responseData: Foundation.Data?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  public func getURLRequestWithHeaders() -> Foundation.URLRequest
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func sendURLRequest(_ urlRequest: Foundation.URLRequest, onComplete: @escaping (_ responseData: Foundation.Data?, _ error: PingOneVerify.RequestError?) -> Swift.Void) -> PingOneVerify.Request
+  #endif
+  public func isSuccessfulResponse(_ responseCode: Swift.Int) -> Swift.Bool
+  @objc deinit
+}
+@objc public class PhoneCaptureSettings : ObjectiveC.NSObject, PingOneVerify.OtpCaptureSettings {
+  public var documentType: NeoInterfaces.DocumentClass
+  public var optional: Swift.Bool
+  public var destination: Swift.String
   public var otpSession: PingOneVerify.OtpSession?
+  final public let otpExpiryTicker: PingOneVerify.OtpTicker
+  final public let resendCooldownTicker: PingOneVerify.OtpTicker
   public var keyboardHint: Swift.String
   public var keyboardType: UIKit.UIKeyboardType
   public var contentType: UIKit.UITextContentType
   public var regex: Swift.String
-  @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
-  @objc public var isAuthflow: Swift.Bool
-  @objc public var isRetry: Swift.Bool
-  @objc public var payloadSize: PingOneVerify.PayloadSize
+  public var requirements: (any NeoInterfaces.RequirementsProtocol)?
+  public var isAuthflow: Swift.Bool
+  public var isRetry: Swift.Bool
+  public var payloadSize: NeoInterfaces.PayloadSize
+  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
+  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
+  public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func setOtpDestination(otpDestination: Swift.String?)
+  public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
   #endif
   @objc deinit
 }
+public struct PingOneVerifyClientUtils {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getKeyMap(for type: NeoInterfaces.DocumentClass, version: Swift.String) -> [Swift.String : Swift.String]?
+  #endif
+  public static func getFilteredDocuments(keyVersion: Swift.String, documents: [Swift.String : PingOneVerify.DocumentStatus]) -> [NeoInterfaces.DocumentClass]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getNextDocumentSubmission(for transaction: PingOneVerify.VerifyTransaction) -> NeoInterfaces.DocumentClass?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getRemainingDocumentSubmissionTime(expiresAt: Swift.String, safetyTime: Foundation.TimeInterval) -> Foundation.TimeInterval?
+  #endif
+  public static func updateDocumentCaptureSettings(documentCaptureSettings: inout [any NeoInterfaces.DocumentCaptureSettings], with verifyTransaction: PingOneVerify.VerifyTransaction)
+  public static func isDesiredOtp(for documentType: Swift.String, verifyTransaction: PingOneVerify.VerifyTransaction, desiredOtpStatus: PingOneVerify.OtpStatus) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getOtpDocumentType(for documentType: Swift.String, keyVersion: Swift.String) -> NeoInterfaces.DocumentClass?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getOtpSessionForType(_ otpSessions: PingOneVerify.OtpSessions?, _ documentType: NeoInterfaces.DocumentClass) -> PingOneVerify.OtpSession?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getRequiredDocuments(for verifyTransaction: PingOneVerify.VerifyTransaction) -> NeoInterfaces.DocumentClass?
+  #endif
+}
 public class Authentication : Swift.Codable {
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-public struct IadPayload : Swift.Codable {
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+public struct ApiConstants {
+  public static let BLINK_ID_LICENSE_NAME: Swift.String
+  public static let ID_FACE_CAPTURE_NAME: Swift.String
+  public static let ID_FACE_PLUS_VERSION: Swift.String
+  public static let BLINK_ID_SDK_VERSION: Swift.String
 }
-@_inheritsConvenienceInitializers @objc public class DocumentSubmissionResponse : ObjectiveC.NSObject, Swift.Codable {
-  public var id: Swift.String!
-  @objc public var document: [Swift.String : Swift.String]?
-  public var documentStatus: [Swift.String : PingOneVerify.DocumentStatus]!
-  public var documentSubmissionStatus: PingOneVerify.DocumentSubmissionStatus!
-  public var geolocation: PingOneVerify.Geolocation?
-  public var authentication: PingOneVerify.Authentication?
-  public var osType: Swift.String?
-  public var providerLicenses: PingOneVerify.ProviderLicenses?
-  public var currentStep: PingOneVerify.CurrentStep?
-  public var isAadhaar: Swift.Bool?
-  public var createdAt: Swift.String!
-  public var updatedAt: Swift.String!
-  public var expiresAt: Swift.String!
-  public var s3Upload: PingOneVerify.S3Upload?
-  public var iad: PingOneVerify.IadPayload?
-  public func encode(to encoder: any Swift.Encoder) throws
+@_hasMissingDesignatedInitializers public class DocumentSubmissionResponse {
+  public var document: [Swift.String : Swift.String]?
+  public var documentStatus: [Swift.String : PingOneVerify.DocumentStatus]?
+  public var documentSubmissionStatus: PingOneVerify.DocumentSubmissionStatus?
+  public var createdAt: Swift.String?
+  public var updatedAt: Swift.String?
+  public var expiresAt: Swift.String?
+  public init()
   #if compiler(>=5.3) && $NonescapableTypes
   public func getDocument() -> [Swift.String : Swift.String]?
   #endif
@@ -131,32 +246,12 @@ public struct IadPayload : Swift.Codable {
   public func getCreatedAt() -> Swift.String
   public func getUpdatedAt() -> Swift.String
   public func getExpiresAt() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getAuthentication() -> PingOneVerify.Authentication?
-  #endif
-  public func getVerificationSessionId() -> Swift.String
-  public func getProviderLicenses() -> PingOneVerify.ProviderLicenses
-  public func getIsAadhaar() -> Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getOtpSessions() -> PingOneVerify.OtpSessions?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func getOtpSessionForType(documentType: PingOneVerify.DocumentClass) -> PingOneVerify.OtpSession?
-  #endif
-  public func getCredentialVerificationLinks() -> [Swift.String : Swift.String]
-  public func getCollectionType() -> Swift.String
-  public func setDocument(document: [Swift.String : Swift.String])
-  public func setDocumentStatus(documentStatus: [Swift.String : PingOneVerify.DocumentStatus])
-  public func setDocumentSubmissionStatus(documentSubmissionStatus: PingOneVerify.DocumentSubmissionStatus)
-  public func setIsAadhaar(aadhaar: Swift.Bool)
-  @objc override dynamic public init()
   @objc deinit
-  required public init(from decoder: any Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers public class Geolocation : Swift.Codable {
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
+public struct RetryFeedback {
+  public let code: Swift.String
+  public let message: Swift.String
+  public let languagePackKey: Swift.String?
 }
 public struct Retry : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -166,32 +261,140 @@ public struct Feedback : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public class NoRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodable {
-  @objc public var requirementsValue: PingOneVerify.Requirements
+public class RequestHeader {
+  public static let header_content_type: Swift.String
+  public static let header_content_type_json: Swift.String
+  public static let header_content_type_urlencoded: Swift.String
+  public static let header_content_type_jwks: Swift.String
+  public static let header_content_type_jwt: Swift.String
+  public static let header_content_type_text_plain: Swift.String
+  public static let header_content_type_otp: Swift.String
+  public static let header_content_type_otp_resend: Swift.String
+  public static let header_content_type_skip_document: Swift.String
+  public static var header_accept_type_multiform: Swift.String {
+    get
+  }
+  public static let header_content_type_step_error: Swift.String
+  public static let header_content_type_generate_session: Swift.String
+  public var headersDictionary: [Swift.String : Swift.String]
+  public init(headers: [Swift.String : Swift.String])
+  convenience public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public subscript(headerField: Swift.String) -> Swift.String? {
+    get
+    set(newValue)
+  }
+  #endif
+  @discardableResult
+  public func setHeaderField(_ headerField: Swift.String, headerValue: Swift.String) -> PingOneVerify.RequestHeader
+  public var isEmpty: Swift.Bool {
+    get
+  }
   @objc deinit
+}
+extension PingOneVerify.RequestHeader : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension PingOneVerify.RequestHeader : Swift.Sequence {
+  public typealias Iterator = Swift.DictionaryIterator<Swift.String, Swift.String>
+  public func makeIterator() -> PingOneVerify.RequestHeader.Iterator
+  public typealias Element = Swift.Dictionary<Swift.String, Swift.String>.Iterator.Element
+}
+public class VerificationDocument : Swift.Codable, Swift.Equatable {
+  public var documentType: Swift.String
+  public var document: Swift.String?
+  public var additionalParams: [Swift.String : Swift.String]?
+  public var ocrData: Swift.String?
+  public var iadPayload: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(documentType: Swift.String, document: Swift.String, additionalParams: [Swift.String : Swift.String]? = nil, ocrData: Swift.String? = nil, iadPayload: Swift.String? = nil)
+  #endif
+  required public init(from decoder: any Swift.Decoder) throws
+  public func getDocumentType() -> Swift.String
+  public static func == (lhs: PingOneVerify.VerificationDocument, rhs: PingOneVerify.VerificationDocument) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class DocumentPayload : Swift.Codable {
+  public var documents: [PingOneVerify.VerificationDocument]?
+  public var documentSubmissionStatus: PingOneVerify.DocumentSubmissionStatus?
+  public var s3Upload: PingOneVerify.S3UploadClass?
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(documents: [PingOneVerify.VerificationDocument]?, documentSubmissionStatus: PingOneVerify.DocumentSubmissionStatus? = nil, s3Upload: PingOneVerify.S3UploadClass? = nil)
+  #endif
+  @objc deinit
+}
+public class DocumentPayloadFileSchema : Swift.Codable {
+  public var documents: [PingOneVerify.VerificationDocument]
+  public init(documents: [PingOneVerify.VerificationDocument])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-@_inheritsConvenienceInitializers @objc public class UIAppearanceSettings : ObjectiveC.NSObject {
-  @objc public func setLogoImage(_ image: UIKit.UIImage) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setBodyTextColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setHeadingTextColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setBackgroundColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setNavigationBarColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setNavigationBarTextColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setSolidButtonAppearance(_ buttonAppearance: PingOneVerify.ButtonAppearance) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setBorderedButtonAppearance(_ buttonAppearance: PingOneVerify.ButtonAppearance) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setAttributedStrings(_ attributedStrings: [Swift.String : Foundation.NSAttributedString]) -> PingOneVerify.UIAppearanceSettings
-  @objc public func showSessionExpiresTimer(_ isTimerShown: Swift.Bool) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setNavigationTitle(_ text: Foundation.NSAttributedString) -> PingOneVerify.UIAppearanceSettings
-  @objc public func setIconTintColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
-  @objc override dynamic public init()
+public class NoRequirements : NeoInterfaces.RequirementsProtocol, Swift.Decodable {
+  public var requirementsValue: NeoInterfaces.Requirements
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
+public struct PingOneVerifyNotification {
+  public static let QR_SCANNED_NOTIFICATION_CENTER_KEY: Swift.String
+  public static let QR_NOTIFICATION_KEY: Swift.String
+  public static let CANCELED_NOTIFICATION_CENTER_KEY: Swift.String
+  public static let BACK_BUTTON_PRESSED_NOTIFICATION_CENTER_KEY: Swift.String
+}
+extension Foundation.Date {
+  public static var currentTimeStamp: Swift.String {
+    get
+  }
+}
+public class NetworkReachability {
+  public static let NETWORK_REACHABILITY_UPDATED: Swift.String
+  public static let NETWORK_REACHABILITY_STATUS: Swift.String
+  public var currentNetworkStatus: PingOneVerify.NetworkReachability.NetworkReachabilityStatus {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(host: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?()
+  #endif
+  @discardableResult
+  public func startNotifier() -> Swift.Bool
+  @discardableResult
+  public func stopNotifier() -> Swift.Bool
+  @objc deinit
+  public enum NetworkReachabilityStatus : Swift.Equatable {
+    case available(type: PingOneVerify.NetworkReachability.NetworkReachabilityType)
+    case unavailable
+    case unknown
+    public init(_ flags: SystemConfiguration.SCNetworkReachabilityFlags)
+    public static func == (lhs: PingOneVerify.NetworkReachability.NetworkReachabilityStatus, rhs: PingOneVerify.NetworkReachability.NetworkReachabilityStatus) -> Swift.Bool
+  }
+  public enum NetworkReachabilityType : Swift.Equatable {
+    case wifi(connectionType: PingOneVerify.NetworkReachability.ConnectionType)
+    case cellular(connectionType: PingOneVerify.NetworkReachability.ConnectionType)
+    public static func == (a: PingOneVerify.NetworkReachability.NetworkReachabilityType, b: PingOneVerify.NetworkReachability.NetworkReachabilityType) -> Swift.Bool
+  }
+  public enum ConnectionType : Swift.Equatable {
+    case automatic, manual
+    public init(_ flags: SystemConfiguration.SCNetworkReachabilityFlags)
+    public static func == (a: PingOneVerify.NetworkReachability.ConnectionType, b: PingOneVerify.NetworkReachability.ConnectionType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
 @objc public enum DocumentSubmissionStatus : Swift.Int, Swift.Codable, Swift.RawRepresentable {
-  case not_started = 0
-  case started = 1
-  case completed = 2
-  case process = 3
+  case NOT_STARTED = 0
+  case STARTED = 1
+  case COMPLETED = 2
+  case PROCESS = 3
   public typealias RawValue = Swift.String
   public var rawValue: PingOneVerify.DocumentSubmissionStatus.RawValue {
     get
@@ -200,76 +403,59 @@ public class NoRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodabl
   public init?(rawValue: PingOneVerify.DocumentSubmissionStatus.RawValue)
   #endif
 }
-public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodable {
-  @objc public var requirementsValue: PingOneVerify.Requirements
+public class ValueRequirements : NeoInterfaces.RequirementsProtocol, Swift.Decodable {
+  public var requirementsValue: NeoInterfaces.Requirements
   required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
-@objc public class EmailCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
-  @objc public var documentType: PingOneVerify.DocumentClass
-  @objc public var currentStep: Swift.Int
-  @objc public var totalSteps: Swift.Int
-  @objc public var optional: Swift.Bool
-  public var otpDestination: Swift.String?
+@objc public class EmailCaptureSettings : ObjectiveC.NSObject, PingOneVerify.OtpCaptureSettings {
+  public var documentType: NeoInterfaces.DocumentClass
+  public var optional: Swift.Bool
+  public var destination: Swift.String
   public var otpSession: PingOneVerify.OtpSession?
+  final public let otpExpiryTicker: PingOneVerify.OtpTicker
+  final public let resendCooldownTicker: PingOneVerify.OtpTicker
   public var keyboardHint: Swift.String
   public var keyboardType: UIKit.UIKeyboardType
   public var contentType: UIKit.UITextContentType
   public var regex: Swift.String
-  @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
-  @objc public var isAuthflow: Swift.Bool
-  @objc public var isRetry: Swift.Bool
-  @objc public var payloadSize: PingOneVerify.PayloadSize
+  public var requirements: (any NeoInterfaces.RequirementsProtocol)?
+  public var isAuthflow: Swift.Bool
+  public var isRetry: Swift.Bool
+  public var payloadSize: NeoInterfaces.PayloadSize
+  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
+  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
+  public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any PingOneVerify.RequirementsProtocol)?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func setOtpDestination(otpDestination: Swift.String?)
+  public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
   #endif
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class CenterTextLayer : QuartzCore.CATextLayer {
-  @objc override dynamic public func draw(in ctx: CoreGraphics.CGContext)
-  @objc override dynamic public init()
-  @objc override dynamic public init(layer: Any)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
-  @objc deinit
+extension Foundation.Locale {
+  public static func normalizedLanguageCode(_ identifier: Swift.String, in bundle: Foundation.Bundle = .main) -> Swift.String
 }
-@objc public protocol DocumentSubmissionListener {
-  @objc func onDocumentSubmitted(response: PingOneVerify.DocumentSubmissionResponse)
-  @objc func onSubmissionComplete(status: PingOneVerify.DocumentSubmissionStatus)
-  @objc func onSubmissionError(error: PingOneVerify.DocumentSubmissionError)
-}
-@_hasMissingDesignatedInitializers public class UserConfirmedField : Swift.Codable {
-  @objc deinit
+public struct SkipDocumentPayload : Swift.Codable {
+  public let documentType: Swift.String
+  public func getDocumentType() -> Swift.String
   public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-@objc public class IdCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
-  @objc public var documentType: PingOneVerify.DocumentClass
-  @objc public var currentStep: Swift.Int
-  @objc public var totalSteps: Swift.Int
-  @objc public var optional: Swift.Bool
-  @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
-  public var isAadhaar: Swift.Bool
+@objc public class IdCaptureSettings : ObjectiveC.NSObject, NeoInterfaces.DocumentCaptureSettings {
+  public var documentType: NeoInterfaces.DocumentClass
+  public var optional: Swift.Bool
   public var otpSession: PingOneVerify.OtpSession?
   public var otpDestination: Swift.String?
-  @objc public var isAuthflow: Swift.Bool
-  @objc public var isRetry: Swift.Bool
-  @objc public var payloadSize: PingOneVerify.PayloadSize
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public init(documentType: PingOneVerify.DocumentClass, optional: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil)
-  #endif
-  public func getIsAadhaar() -> Swift.Bool
-  public func setIsAadhaar(isAadhaar: Swift.Bool)
+  public var isAuthflow: Swift.Bool
+  public var isRetry: Swift.Bool
+  public var payloadSize: NeoInterfaces.PayloadSize
+  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
+  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
+  public init(documentType: NeoInterfaces.DocumentClass, optional: Swift.Bool)
   #if compiler(>=5.3) && $NonescapableTypes
   public func getOtpSession() -> PingOneVerify.OtpSession?
   #endif
@@ -282,187 +468,272 @@ public class ValueRequirements : PingOneVerify.RequirementsProtocol, Swift.Decod
   public func setOtpDestination(_ otpDestination: Swift.String)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers open class SampleBufferUtils {
+@_hasMissingDesignatedInitializers public class DocumentSubmissionTimer {
+  public var timer: Foundation.Timer?
+  public var timeRemaining: Foundation.TimeInterval?
+  public var expirationTime: Swift.String?
+  public var safetyTime: Foundation.TimeInterval?
+  public static let TIME_EXPIRED_NOTIFICATION_CENTER_KEY: Swift.String
+  public static let TIMER_FRAME_HEIGHT: CoreFoundation.CGFloat
+  public static let TIMER_Y_PADDING: Swift.Int
+  public static let TIMER_WIDTH: Swift.Int
+  public static let TIMER_HEIGHT: Swift.Int
+  public static let HORIZONTAL_CONSTANT: CoreFoundation.CGFloat
+  public static var VERTICAL_CONSTANT: CoreFoundation.CGFloat
+  public static let RECORD_VERTICAL_CONSTANT: CoreFoundation.CGFloat
+  public static let TIMER_INTERVAL_SECONDS: Swift.Double
+  public static let shared: PingOneVerify.DocumentSubmissionTimer
+  public func reset()
   #if compiler(>=5.3) && $NonescapableTypes
-  public class func getCroppedSmapleBuffer(context: CoreImage.CIContext, sampleBuffer: CoreMedia.CMSampleBuffer, for previewLayer: AVFoundation.AVCaptureVideoPreviewLayer?) -> CoreMedia.CMSampleBuffer?
+  @discardableResult
+  public func setExpirationTime(expirationTime: Swift.String, safetyTime: Foundation.TimeInterval) -> Foundation.TimeInterval?
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  open class func getSampleBufferFromUIImage(image: UIKit.UIImage) -> CoreMedia.CMSampleBuffer?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  open class func getUIImageFromSampleBuffer(context: CoreImage.CIContext, sampleBuffer: CoreMedia.CMSampleBuffer, for previewLayer: AVFoundation.AVCaptureVideoPreviewLayer? = nil) -> UIKit.UIImage?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  open class func getImageFromSampleBuffer(context: CoreImage.CIContext, sampleBuffer: CoreMedia.CMSampleBuffer) -> UIKit.UIImage?
-  #endif
+  @objc public func initializeTimer()
+  @objc public func startTimer()
+  public func updateTime()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VerifyButton : UIKit.UIButton {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc @_Concurrency.MainActor @preconcurrency dynamic public var titleFont: UIKit.UIFont? {
-    @objc get
-    @objc set(font)
-  }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc @_Concurrency.MainActor @preconcurrency dynamic public var cornerRadius: Foundation.NSNumber? {
-    @objc get
-    @objc set(radius)
-  }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc @_Concurrency.MainActor @preconcurrency dynamic public var fontColor: UIKit.UIColor? {
-    @objc get
-    @objc set(color)
-  }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public func setTitle(_ title: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setTitle(_ title: Swift.String?, for state: UIKit.UIControl.State)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public func setTextColor(_ color: UIKit.UIColor?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  #endif
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
+public struct ResendOtpPayload : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct AppEventConstants {
+  public static let DEVICE_METADATA_APP_PACKAGE: Swift.String
+  public static let DEVICE_METADATA_SDK_VERSION: Swift.String
+  public static let DEVICE_METADATA_DEVICE_TYPE: Swift.String
+  public static let DEVICE_METADATA_DEVICE_MANUFACTURER: Swift.String
+  public static let DEVICE_METADATA_DEVICE_MODEL: Swift.String
+  public static let DEVICE_METADATA_OS_VERSION: Swift.String
+  public static let ADDITIONAL_INFORMATION_SDK_INITIALIZATION: Swift.String
+  public static let ADDITIONAL_INFORMATION_SDK_INITIALIZATION_TYPE: Swift.String
+  public static let ADDITIONAL_INFORMATION_RESUMING_FLOW: Swift.String
+  public static let ADDITIONAL_INFORMATION_DOCUMENT_SUBMISSION_COMPLETED: Swift.String
+  public static let IS_RETRY: Swift.String
+  public static let DEVICE_LANGUAGE_CODE: Swift.String
+  public static let S3_UPLOAD_DURATION: Swift.String
+  public static let S3_UPLOAD_SIZE: Swift.String
+  public static let S3_UPLOAD_DOCUMENT_TYPE: Swift.String
+  public static let S3_UPLOAD_DOCUMENT_START_TIME: Swift.String
+  public static let S3_UPLOAD_DOCUMENT_END_TIME: Swift.String
+  public static let IS_LOCATION_COLLECTED: Swift.String
+  public static let IS_LOCATION_PERMISSION_POPUP_SHOWN: Swift.String
+  public static let QR_SCANNER_START: Swift.String
+  public static let QR_SCANNER_STOP: Swift.String
+  public static let QR_SCANNER_CANCELLED: Swift.String
+  public static let QR_SCANNER_RESULT: Swift.String
+  public static let CAMERA_PERMISSION_GRANTED: Swift.String
+  public static let CAMERA_CONFIG_RESOLUTION: Swift.String
+  public static let CAMERA_CONFIG_FOCUS_MODE: Swift.String
+  public static let CAMERA_CONFIG_FLASH_ENABLED: Swift.String
+  public static let MICROPHONE_PERMISSION_GRANTED: Swift.String
+  public static let SELFIE_CAPTURE_LIVENESS_CHECK_REQUSTED: Swift.String
+  public static let SELFIE_CAPTURE_VENDOR: Swift.String
+  public static let SELFIE_CAPTURE_FACE_DETECTION_SERVICE: Swift.String
+  public static let SELFIE_CAPTURE_START: Swift.String
+  public static let SELFIE_CAPTURE_STOP: Swift.String
+  public static let SELFIE_CAPTURE_CANCELLED: Swift.String
+  public static let SELFIE_CAPTURE_TIMEOUT: Swift.String
+  public static let SELFIE_CAPTURE_ORIGINAL_SELFIE_SIZE: Swift.String
+  public static let SELFIE_CAPTURE_SELFIE_SCORE: Swift.String
+  public static let SELFIE_CAPTURE_SELFIE_PITCH_ANGLE: Swift.String
+  public static let SELFIE_CAPTURE_SELFIE_ROLL_ANGLE: Swift.String
+  public static let SELFIE_CAPTURE_SELFIE_YAW_ANGLE: Swift.String
+  public static let SELFIE_CAPTURE_SELFIE_FACE_SIZE: Swift.String
+  public static let SELFIE_CAPTURE_NUMBER_OF_SELFIE_CAPTURED: Swift.String
+  public static let SELFIE_CAPTURE_SKIPPED: Swift.String
+  public static let ID_CAPTURE_VENDOR: Swift.String
+  public static let ID_CAPTURE_SDK_VERSION: Swift.String
+  public static let ID_CAPTURE_CAMERA_PARAMS: Swift.String
+  public static let ID_CAPTURE_CLASSIFICATION: Swift.String
+  public static let ID_CAPTURE_PAGE_CAPTURED: Swift.String
+  public static let ID_CAPTURE_BARCODE_CAPTURED: Swift.String
+  public static let ID_CAPTURE_MRZ_CAPTURED: Swift.String
+  public static let ID_CAPTURE_OCR_CAPTURED: Swift.String
+  public static let ID_CAPTURE_START: Swift.String
+  public static let ID_CAPTURE_STOP: Swift.String
+  public static let ID_CAPTURE_CANCELLED: Swift.String
+  public static let ID_CAPTURE_TIMEOUT: Swift.String
+  public static let ID_CAPTURE_TOTAL_IMAGES: Swift.String
+  public static let ID_CAPTURE_IMAGE_SIZE: Swift.String
+  public static let ID_CAPTURE_IMAGE_SCORE: Swift.String
+  public static let ID_CAPTURE_IMAGE_HAS_FACE: Swift.String
+  public static let ID_CAPTURE_GLARE_FOUND: Swift.String
+  public static let ID_CAPTURE_SKIPPED: Swift.String
+  public static let DATA_CAPTURE_START: Swift.String
+  public static let DATA_CAPTURE_STOP: Swift.String
+  public static let DATA_CAPTURE_REQUIREMENTS: Swift.String
+  public static let DATA_CAPTURE_OTP_RESULT: Swift.String
+  public static let DATA_CAPTURE_NUMBER_OF_OTPS: Swift.String
+  public static let DATA_CAPTURE_OTP_START: Swift.String
+  public static let DATA_CAPTURE_OTP_STOP: Swift.String
+  public static let DATA_CAPTURE_OTP_TIMEOUT: Swift.String
+  public static let DATA_CAPTURE_OTP_CANCELLED: Swift.String
+  public static let DATA_CAPTURE_OTP_TRIES: Swift.String
+  public static let DATA_CAPTURE_SKIPPED: Swift.String
+  public static let DATA_CAPTURE_CANCELLED: Swift.String
+  public static let ERROR_DATA_MISMATCH_BETWEEN_FRONT_AND_BACK: Swift.String
+  public static let ERROR_ID_TOO_FAR: Swift.String
+  public static let ERROR_ID_FULL_SIDE_NOT_VISIBLE: Swift.String
+  public static let ERROR_ID_FLASHLIGHT_GLARE: Swift.String
+  public static let ERROR_ID_TYPE_UNSUPPORTED: Swift.String
+  public static let ERROR_ID_TYPE_CATEGORIZATION_ERROR: Swift.String
+  public static let ERROR_SELFIE_FACE_TOO_FAR: Swift.String
+  public static let ERROR_SELIFE_FACE_TOO_CLOSE: Swift.String
+  public static let ERROR_SELFIE_MULTIPLE_FACES: Swift.String
+  public static let ERROR_SELFIE_NO_FACE_PRESENT: Swift.String
+  public static let ERROR_FACE_NOT_ALIGNED_X_AXIS: Swift.String
+  public static let ERROR_FACE_NOT_ALIGNED_Y_AXIS: Swift.String
+  public static let ERROR_FACE_NOT_ALIGNED_Z_AXIS: Swift.String
+  public static let ERROR_CAMERA_START_ERROR: Swift.String
+  public static let ERROR_CAMERA_PERMISSION_NOT_GRANTED: Swift.String
+  public static let ERROR_MICROPHONE_PERMISSION_NOT_GRANTED: Swift.String
+  public static let ERROR_NETWORK_LOST: Swift.String
+  public static let ERROR_SDK_ERROR: Swift.String
+  public static let ERROR_APP_EVENT: Swift.String
+  public static let ERROR_BLINKID_NOT_COMPATIBLE: Swift.String
+  public static let ERROR_S3_UPLOAD_ERROR: Swift.String
+}
+public class VerifyAuthTokenProvider : PingOneVerify.AuthTokenProviderContract {
+  public static let BASIC_HEADER: Swift.String
+  public var verifyTransaction: PingOneVerify.VerifyTransaction
+  public init(verifyTransaction: PingOneVerify.VerifyTransaction)
+  public func getToken() -> Swift.String
   @objc deinit
 }
-public struct LabelCellContent {
+public struct DocumentUploadResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers public class SCFace {
-  @objc deinit
+extension Swift.String {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func utcToLocal() -> Foundation.Date?
+  #endif
 }
-extension UIKit.UIColor {
-  public var redValue: CoreFoundation.CGFloat {
-    get
-  }
-  public var greenValue: CoreFoundation.CGFloat {
-    get
-  }
-  public var blueValue: CoreFoundation.CGFloat {
-    get
-  }
-  public var alphaValue: CoreFoundation.CGFloat {
-    get
-  }
-  convenience public init(hexString: Swift.String)
+public struct OtpPayload : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct RequirementsFactory {
 }
-@objc extension PingOneVerify.PingOneVerifyClient {
-  @objc public class Builder : ObjectiveC.NSObject {
-    public init(isOverridingAssets: Swift.Bool)
-    @discardableResult
-    @objc public func setRootViewController(_ rootViewController: UIKit.UIViewController) -> PingOneVerify.PingOneVerifyClient.Builder
-    @discardableResult
-    @objc public func setListener(_ listener: any PingOneVerify.DocumentSubmissionListener) -> PingOneVerify.PingOneVerifyClient.Builder
-    @discardableResult
-    @objc public func setQrString(qrString: Swift.String) -> PingOneVerify.PingOneVerifyClient.Builder
-    @discardableResult
-    @objc public func setDocumentCaptureSettings(documentCaptureSettings: [any PingOneVerify.DocumentCaptureSettingsContract]) -> PingOneVerify.PingOneVerifyClient.Builder
-    @discardableResult
-    @objc public func setUIAppearance(_ appearanceSettings: PingOneVerify.UIAppearanceSettings) -> PingOneVerify.PingOneVerifyClient.Builder
-    @discardableResult
-    @objc public func setBackActionHandler(_ listener: any PingOneVerify.BackActionListener) -> PingOneVerify.PingOneVerifyClient.Builder
-    @discardableResult
-    public func setLanguagePackProvider(languagePackProvider: any NeoInterfaces.LanguagePackProviderContract) -> PingOneVerify.PingOneVerifyClient.Builder
-    #if compiler(>=5.3) && $NonescapableTypes
-    @objc public func startVerification(onComplete: @escaping (_ pingOneVerifyClient: PingOneVerify.PingOneVerifyClient?, _ error: PingOneVerify.ClientBuilderError?) -> Swift.Void)
-    #endif
-    @objc deinit
-  }
+public struct AppEvent {
+  public var key: Swift.String
+  public var value: Swift.String
+  public init(key: Swift.String, value: Swift.String)
 }
-@objc public class SelfieCaptureSettings : ObjectiveC.NSObject, PingOneVerify.DocumentCaptureSettingsContract {
-  @objc public var payloadSize: PingOneVerify.PayloadSize
-  @objc public var isAuthflow: Swift.Bool
-  @objc public var documentType: PingOneVerify.DocumentClass
-  @available(*, deprecated, message: "Will be removed in upcoming versions")
-  final public let captureTime: Foundation.TimeInterval
-  @available(*, deprecated, message: "Will be removed in upcoming versions")
-  final public let shouldCaptureAfterTimeout: Swift.Bool
-  @available(*, deprecated, message: "Will be removed in upcoming versions")
-  @objc public var currentStep: Swift.Int
-  @available(*, deprecated, message: "Will be removed in upcoming versions")
-  @objc public var totalSteps: Swift.Int
-  @objc public var optional: Swift.Bool
-  @objc public var requirements: (any PingOneVerify.RequirementsProtocol)?
-  @objc public var isRetry: Swift.Bool
+public enum RequestError : Swift.Error {
+  case cannotCreateURL(_: Swift.String)
+  case failedToParseJson(_: (any Swift.Error)? = nil, description: Swift.String)
+  case cannotSerializeRequestBody(_: (any Swift.Error)? = nil, description: Swift.String)
+  case cannotParseResponse(_: (any Swift.Error)? = nil, description: Swift.String)
+  case requestFailedWithError(_: Swift.String, _: Swift.Int?)
+  case requestTimedOut
+  case errorResponse(_: PingOneVerify.ErrorResponse)
+}
+extension PingOneVerify.RequestError : Foundation.LocalizedError {
   #if compiler(>=5.3) && $NonescapableTypes
-  @available(*, deprecated, message: "Will be removed in upcoming versions")
-  @objc public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, isAuthflow: Swift.Bool, requirements: (any PingOneVerify.RequirementsProtocol)? = nil, payloadSize: PingOneVerify.PayloadSize = .small)
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+}
+extension PingOneVerify.RequestError : Swift.Equatable {
+  public static func == (lhs: PingOneVerify.RequestError, rhs: PingOneVerify.RequestError) -> Swift.Bool
+}
+@objc public class SelfieCaptureSettings : ObjectiveC.NSObject, NeoInterfaces.DocumentCaptureSettings {
+  public var payloadSize: NeoInterfaces.PayloadSize
+  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
+  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
+  public var isAuthflow: Swift.Bool
+  public var documentType: NeoInterfaces.DocumentClass
+  final public let captureTime: Foundation.TimeInterval
+  final public let shouldCaptureAfterTimeout: Swift.Bool
+  public var optional: Swift.Bool
+  public var isRetry: Swift.Bool
+  public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, isAuthflow: Swift.Bool, payloadSize: NeoInterfaces.PayloadSize = .small)
+  @objc deinit
+}
+open class BaseServiceApi {
+  final public let networkReachability: PingOneVerify.NetworkReachability?
+  public var verifyTransaction: PingOneVerify.VerifyTransaction
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(verifyTransaction: PingOneVerify.VerifyTransaction, networkReachability: PingOneVerify.NetworkReachability? = nil)
   #endif
   @objc deinit
+}
+extension PingOneVerify.BaseServiceApi {
+  public func getEndpointFor(urlPath: Swift.String, httpMethod: PingOneVerify.HttpMethod) -> PingOneVerify.Endpoint
 }
 public struct S3Upload : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc public protocol DocumentCaptureSettingsContract {
-  @objc var documentType: PingOneVerify.DocumentClass { get set }
-  @objc var currentStep: Swift.Int { get set }
-  @objc var totalSteps: Swift.Int { get set }
-  @objc var optional: Swift.Bool { get set }
+public class AppEventServiceApi : PingOneVerify.BaseServiceApi, PingOneVerify.AppEventServiceApiContract {
+  public var sessionTokenProvider: any PingOneVerify.SessionTokenProviderContract
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc var requirements: (any PingOneVerify.RequirementsProtocol)? { get set }
+  public init(sessionTokenProvider: any PingOneVerify.SessionTokenProviderContract, verifyTransaction: PingOneVerify.VerifyTransaction, networkReachability: PingOneVerify.NetworkReachability? = nil)
   #endif
-  @objc var isAuthflow: Swift.Bool { get set }
-  @objc var isRetry: Swift.Bool { get set }
-  @objc var payloadSize: PingOneVerify.PayloadSize { get set }
-}
-public struct ImageCellContent {
-}
-@objc public enum DocumentClass : Swift.Int, Swift.CaseIterable, Swift.Codable, Swift.RawRepresentable {
-  case SELFIE = 0
-  case DRIVER_LICENSE = 1
-  case PASSPORT = 2
-  case GOVERNMENT_ID = 3
-  case EMAIL = 4
-  case PHONE = 5
-  case OTP = 6
-  case OTHER = 7
-  case VOICE = 8
-  case CREDENTIAL = 9
-  case AADHAAR = 10
-  public typealias RawValue = Swift.String
-  public var iconName: Swift.String {
-    get
-  }
-  public var rawValue: PingOneVerify.DocumentClass.RawValue {
-    get
-  }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: PingOneVerify.DocumentClass.RawValue)
-  #endif
-  public typealias AllCases = [PingOneVerify.DocumentClass]
-  nonisolated public static var allCases: [PingOneVerify.DocumentClass] {
-    get
-  }
-}
-extension PingOneVerify.DocumentClass : Swift.Equatable {
-  public static func == (lhs: PingOneVerify.DocumentClass, rhs: PingOneVerify.DocumentClass) -> Swift.Bool
-}
-@propertyWrapper public struct Atomic<Value> {
-  public init(wrappedValue value: Value)
-  public var wrappedValue: Value {
+  public var submitAppEventRequest: (PingOneVerify.AppEventRequest) -> PingOneVerify.CompletionHandler<PingOneVerify.EmptyResponse> {
     get
     set
   }
+  @objc deinit
 }
-@objc public protocol RequirementsProtocol {
-  @objc var requirementsValue: PingOneVerify.Requirements { get set }
+public struct S3UploadEtag : Swift.Codable {
+  public let s3Upload: PingOneVerify.S3UploadClass?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers @objc public class DocumentSubmissionError : ObjectiveC.NSObject, Swift.Error {
+public struct S3UploadClass : Swift.Codable {
+  public let etag: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(etag: Swift.String?)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum AppEventType : Swift.String {
+  case DEVICE_METADATA, ADDITIONAL_INFORMATION, QR_SCANNER, CAMERA, MICROPHONE, SELFIE_CAPTURE, ID_CAPTURE, DATA_CAPTURE, ERRORS, LOCATION_CAPTURE
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol AuthTokenProviderContract {
+  func getToken() -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class AppEventStorage {
+  public static let shared: PingOneVerify.AppEventStorage
+  public var appEventList: [PingOneVerify.AppEventType : [PingOneVerify.AppEvent]] {
+    get
+  }
+  public func addAppEvents(events: PingOneVerify.AppEvent..., eventType: PingOneVerify.AppEventType)
+  public func flushAppEvents()
+  @objc deinit
+}
+@objc public class DocumentSubmissionError : ObjectiveC.NSObject, Swift.Error {
   @objc public var code: Swift.String!
   @objc public var localizedDescription: Swift.String!
+  public init(code: Swift.String, submissionError: PingOneVerify.DocumentSubmissionError.SubmissionError)
   public func getErrorCode() -> Swift.String
   public func getErrorMessage() -> Swift.String
+  public enum SubmissionError : Swift.Error {
+    case initiateDocumentTransactionError(_: Swift.String)
+    case submissionError(_: Swift.String)
+    case noDocumentToSubmitError
+    case missingDocumentType
+    case invalidKeyMap(documentType: Swift.String, keyVersion: Swift.String)
+    case documentCaptureError(_: Swift.String)
+    case documentSubmissionTimoutError
+    case missingOtpDestination(documentType: Swift.String)
+    case missingOtp
+    case failedOtp(documentType: Swift.String)
+    case transactionError(_: Swift.String)
+    case userCanceledError
+    case encryptionError
+  }
   @objc deinit
 }
 @objc public enum DocumentStatus : Swift.Int, Swift.Codable, Swift.RawRepresentable {
@@ -479,32 +750,153 @@ extension PingOneVerify.DocumentClass : Swift.Equatable {
   public init?(rawValue: PingOneVerify.DocumentStatus.RawValue)
   #endif
 }
-extension UIKit.UINavigationController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var shouldAutorotate: Swift.Bool {
-    @objc get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @objc get
-  }
-}
-@objc public class ButtonAppearance : ObjectiveC.NSObject, Swift.Codable {
-  public init(backgroundColor: UIKit.UIColor, textColor: UIKit.UIColor, borderColor: UIKit.UIColor)
-  public func getBackgroundColor() -> UIKit.UIColor
-  public func getTextColor() -> UIKit.UIColor
-  public func getBorderColor() -> UIKit.UIColor
-  @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-@_hasMissingDesignatedInitializers @objc public class PingOneVerifyClient : ObjectiveC.NSObject {
+public protocol VerifyTransactionCoordinator : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func pollForVerificationStatus(_ pollingInterval: Foundation.TimeInterval? = nil)
+  var delegate: (any PingOneVerify.VerifyTransactionCoordinatorDelegate)? { get set }
+  #endif
+  var currentTransaction: PingOneVerify.VerifyTransaction { get }
+  func submitEmail(_ email: Swift.String)
+  func submitPhone(_ phone: Swift.String)
+  func submitOtp(passcode: Swift.String, otpType: NeoInterfaces.DocumentClass)
+  func resendOtp(for documentType: NeoInterfaces.DocumentClass)
+  func submitGeolocation(latitude: Swift.Double, longitude: Swift.Double)
+  func skipDocument(type: NeoInterfaces.DocumentClass)
+  func endVerification()
+  func isLocationPermissionGranted() -> NeoInterfaces.LocationPermissionStatus
+  func captureGeolocation()
+  func captureSelfie(from navigationController: UIKit.UINavigationController)
+  func submitSelfie(_ result: PingOneVerify.SelfieCaptureResult)
+  func captureGovernmentId(from navigationController: UIKit.UINavigationController)
+  func submitGovernmentId(_ result: PingOneVerify.IdCaptureResult)
+}
+public protocol VerifyTransactionCoordinatorDelegate : AnyObject {
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, shouldCaptureDocument settings: any NeoInterfaces.DocumentCaptureSettings)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didCaptureGeolocation latitude: Swift.Double, longitude: Swift.Double)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didSubmitDocument response: PingOneVerify.DocumentSubmissionResponse)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, shouldRetryCapture feedback: PingOneVerify.RetryFeedback, settings: any NeoInterfaces.DocumentCaptureSettings)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didSubmitOtp success: Swift.Bool)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didUpdateOtpSession settings: any PingOneVerify.OtpCaptureSettings)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didReceiveLanguagePack languagePackProvider: (any NeoInterfaces.LanguagePackProviderContract)?, error: (any Swift.Error)?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func pollForAadhaarVerification(_ pollingInterval: Foundation.TimeInterval? = nil, otpDestination: Swift.String?)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didReceiveAppTheme appTheme: PingOneVerify.AppThemeResponse?, error: (any Swift.Error)?)
   #endif
-  public func stopPolling()
+  func coordinator(didCompleteSubmission coordinator: any PingOneVerify.VerifyTransactionCoordinator)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didFailWith error: PingOneVerify.DocumentSubmissionError)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didCaptureSelfie result: PingOneVerify.SelfieCaptureResult)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didCaptureGovernmentId result: PingOneVerify.IdCaptureResult)
+}
+public class PingOneVerifyClient : PingOneVerify.VerifyTransactionCoordinator {
+  weak public var delegate: (any PingOneVerify.VerifyTransactionCoordinatorDelegate)?
+  public var currentTransaction: PingOneVerify.VerifyTransaction {
+    get
+  }
+  public var authTokenProvider: (any PingOneVerify.AuthTokenProviderContract)!
+  public var sessionTokenProvider: (any PingOneVerify.SessionTokenProviderContract)!
+  public var licenseProvider: (any NeoInterfaces.LicenseProviderContract)!
+  public var idCaptureHandler: ((UIKit.UIViewController, (any NeoInterfaces.DocumentCaptureSettings)?, @escaping (PingOneVerify.IdCaptureResult?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void)?
+  public var selfieCaptureHandler: ((UIKit.UIViewController, (any NeoInterfaces.DocumentCaptureSettings)?, @escaping (PingOneVerify.SelfieCaptureResult?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void)?
+  public var documentCaptureSettings: [any NeoInterfaces.DocumentCaptureSettings]
+  public var isAuthEnabled: Swift.Bool
+  public var geoLocationPayload: PingOneVerify.GeolocationPayload?
+  public var otpDestinationValue: Swift.String
+  public var geolocationProvider: (any NeoInterfaces.GeoLocationProviderContract)?
+  public var selfieCaptureProvider: (any NeoInterfaces.SelfieCaptureProviderContract)?
+  public var idCaptureProvider: (any NeoInterfaces.IdCaptureProviderContract)?
+  public init(transaction: PingOneVerify.VerifyTransaction, documentCaptureSettings: [any NeoInterfaces.DocumentCaptureSettings], isAuthEnabled: Swift.Bool)
   @objc deinit
+  public func startVerification()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func submitGovernmentId(frontImage: Swift.String, backImage: Swift.String?, ocrData: Swift.String?, type: NeoInterfaces.DocumentClass)
+  #endif
+  public func submitSelfie(_ result: PingOneVerify.SelfieCaptureResult)
+  public func submitGovernmentId(_ result: PingOneVerify.IdCaptureResult)
+  public func submitEmail(_ email: Swift.String)
+  public func submitPhone(_ phone: Swift.String)
+  public func submitOtp(passcode: Swift.String, otpType: NeoInterfaces.DocumentClass)
+  public func resendOtp(for documentType: NeoInterfaces.DocumentClass)
+  public func submitGeolocation(latitude: Swift.Double, longitude: Swift.Double)
+  public func isLocationPermissionGranted() -> NeoInterfaces.LocationPermissionStatus
+  public func captureGeolocation()
+  public func skipDocument(type: NeoInterfaces.DocumentClass)
+  public func endVerification()
+  public func submitDocument(_ document: PingOneVerify.DocumentPayload)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func submitGeolocation(payload: PingOneVerify.GeolocationPayload?)
+  #endif
+  public func submitOtp(result: [Swift.String : Swift.String])
+  public func fetchAppThemeAndLanguagePack()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getVerifyTransaction(fromQrString qrString: Swift.String, onComplete: @escaping (_ transaction: PingOneVerify.VerifyTransaction?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  public func checkForSessionToken() -> Swift.Bool
+  public func initializeAppEvents()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func submitGeolocationForVerification(payload: PingOneVerify.GeolocationPayload?)
+  #endif
+  public func submitGeolocationPermissionDenied(payload: PingOneVerify.GeolocationPermissionDeniedPayload)
+  public func notifyNextStep(isRetry: Swift.Bool = false)
+  public func fail(code: Swift.String, error: PingOneVerify.DocumentSubmissionError.SubmissionError)
+  public func addObservers()
+  public func removeObservers()
+  public func addCancelledAppEvent(documentType: NeoInterfaces.DocumentClass)
+}
+extension PingOneVerify.PingOneVerifyClient {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func captureGovernmentId(from viewController: UIKit.UIViewController, settings: (any NeoInterfaces.DocumentCaptureSettings)?, onResult: @escaping (_ result: PingOneVerify.IdCaptureResult?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  public func registerIdCaptureHandler()
+}
+extension PingOneVerify.PingOneVerifyClient {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func captureSelfie(from viewController: UIKit.UIViewController, settings: (any NeoInterfaces.DocumentCaptureSettings)?, onResult: @escaping (_ result: PingOneVerify.SelfieCaptureResult?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  public func registerSelfieCaptureHandler()
+}
+public struct IdCaptureResult {
+  public let documentData: [Swift.String : Swift.String]
+  public let idType: Swift.String
+  public init(documentData: [Swift.String : Swift.String], idType: Swift.String)
+}
+public enum GovernmentIdCaptureError : Foundation.LocalizedError {
+  case captureHandlerNotSet
+  case missingFrontImage
+  case cancelled
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  public static func == (a: PingOneVerify.GovernmentIdCaptureError, b: PingOneVerify.GovernmentIdCaptureError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SelfieCaptureResult {
+  public let selfie: Swift.String
+  public let iadPayload: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(selfie: Swift.String, iadPayload: Swift.String?)
+  #endif
+}
+public enum SelfieCaptureError : Foundation.LocalizedError {
+  case captureHandlerNotSet
+  case cancelled
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+  public static func == (a: PingOneVerify.SelfieCaptureError, b: PingOneVerify.SelfieCaptureError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol AppEventServiceApiContract {
+  var submitAppEventRequest: (PingOneVerify.AppEventRequest) -> PingOneVerify.CompletionHandler<PingOneVerify.EmptyResponse> { get set }
 }
 @objc public enum OtpStatus : Swift.Int, Swift.Codable, Swift.RawRepresentable {
   case REQUESTED = 0
@@ -521,28 +913,66 @@ extension UIKit.UINavigationController {
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: PingOneVerify.OtpStatus.RawValue)
   #endif
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class OvalCameraOverlayView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var previewRectFrame: CoreFoundation.CGRect?
-  @_Concurrency.MainActor @preconcurrency public var overlayBackgroundColor: UIKit.UIColor
-  @_Concurrency.MainActor @preconcurrency public var drawOutline: Swift.Bool
+@_hasMissingDesignatedInitializers final public class OtpTicker {
+  final public var onTick: ((Foundation.TimeInterval) -> Swift.Void)?
+  final public var onExpire: (() -> Swift.Void)?
+  final public var remaining: Swift.Double {
+    get
+  }
+  final public func start(expiresAt: Swift.String)
+  final public func stop()
+  @objc deinit
+}
+public class EndpointsServiceApi {
+  public init()
+  public var getEndpointsFrom: (Swift.String...) -> PingOneVerify.CompletionHandler<PingOneVerify.PingOneEndpoints> {
+    get
+    set
+  }
+  @objc deinit
+}
+public enum QRError : Swift.Error {
+  case missingTransactionId(qrString: Swift.String)
+  case missingVerificationCode(qrString: Swift.String)
+  case missingQueryItems(qrString: Swift.String)
+  case unableToParse(qrString: Swift.String)
+  case invalidQR(qrString: Swift.String?)
+}
+extension PingOneVerify.QRError : Foundation.LocalizedError {
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public var errorDescription: Swift.String? {
+    get
+  }
   #endif
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency public func updateOutlineColor(_ newColor: UIKit.UIColor)
-  @objc deinit
 }
-@objc public class Requirements : ObjectiveC.NSObject, Swift.Decodable {
-  required public init(from decoder: any Swift.Decoder) throws
-  @objc deinit
+extension PingOneVerify.QRError : Swift.Equatable {
+  public static func == (lhs: PingOneVerify.QRError, rhs: PingOneVerify.QRError) -> Swift.Bool
+}
+public struct ErrorResponse : Swift.Codable {
+  public let id: Swift.String
+  public let code: Swift.String
+  public let message: Swift.String
+  public let details: [PingOneVerify.Details]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Details : Swift.Codable {
+  public let code: Swift.String
+  public let target: Swift.String
+  public let message: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DocumentRequirements : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct CurrentStep : Swift.Codable {
   public struct OtherData : Swift.Codable {
+    public let collectionOptions: [PingOneVerify.CurrentStep.CollectionOption]?
+    public let collectionSessions: [PingOneVerify.CurrentStep.CollectionSession]?
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
@@ -550,35 +980,86 @@ public struct CurrentStep : Swift.Codable {
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
+  public struct CollectionOption : Swift.Codable {
+    public let text: PingOneVerify.CurrentStep.CollectionOptionText?
+    public let image: Swift.String?
+    public let type: Swift.String?
+    public let identifier: Swift.String?
+    public let requiresSession: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct CollectionOptionText : Swift.Codable {
+    public let languagePackKey: Swift.String?
+    public let defaultText: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct CollectionSession : Swift.Codable {
+    public let type: Swift.String?
+    public let identifier: Swift.String?
+    public let dcApiRequest: PingOneVerify.DcApiRequest?
+    public let redirectUrl: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LabelCell : UIKit.UITableViewCell {
-  #if compiler(>=5.3) && $NonescapableTypes
-  @available(iOS 3.0, *)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
-  @objc deinit
+public struct DcApiRequest : Swift.Codable {
+  public let request: [Swift.String : Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-extension Swift.String {
-  public var localized: Swift.String {
-    get
-  }
-  public func localized(in fileName: Swift.String) -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func localized(tableName: Swift.String, bundle: Foundation.Bundle?, defaultValue: Swift.String) -> Swift.String
-  #endif
-  public func localized(in fileName: Swift.String, with args: any Swift.CVarArg...) -> Swift.String
-  public func localized(_ args: any Swift.CVarArg...) -> Swift.String
-  public func extractAndReplaceStrings() -> [Swift.String]
+@_hasMissingDesignatedInitializers public class DocumentUploadPayload : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct VerifyTransaction {
+  public var keyVersion: Swift.String
+  public var transactionId: Swift.String
+  public var environmentId: Swift.String?
+  public var verificationCode: Swift.String
+  public var requiredDocuments: [Swift.String : PingOneVerify.DocumentStatus]
+  public var url: PingOneVerify.VerifyApiLinks
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(transactionId: Swift.String, environmentId: Swift.String? = nil, verificationCode: Swift.String, url: PingOneVerify.VerifyApiLinks)
+  #endif
 }
-extension UIKit.UIButton {
-  @_Concurrency.MainActor @preconcurrency public func preventRepeatedClicks(inNext seconds: Foundation.TimeInterval = 2)
+public struct Client : Swift.Codable {
+  public var appIdentifier: Swift.String
+  public var osType: Swift.String
+  public var sdkVersions: PingOneVerify.SDKVersions
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class AppEventManager {
+  public static let shared: PingOneVerify.AppEventManager
+  public var appEventServiceApi: PingOneVerify.AppEventServiceApi?
+  public func initializeAppEventServiceApi(with verifyTransaction: PingOneVerify.VerifyTransaction, sessionTokenProvider: any PingOneVerify.SessionTokenProviderContract)
+  public func flushAppEvents()
+  @objc deinit
+}
+public protocol SessionTokenProviderContract {
+  func getSessionToken() throws -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getVerificationSessionId() -> Swift.String?
+  #endif
+}
+@_hasMissingDesignatedInitializers public class UrlUtils {
+  public static let endpointsReplacementString: Swift.String
+  public static let endpointsSuffix: Swift.String
+  public static let apiEndpointReplacementString: Swift.String
+  public static let apiEndpointSuffix: Swift.String
+  public static let appThemeEndpointSuffix: Swift.String
+  public static let appEventsEndpointSuffix: Swift.String
+  public static var uuidBoundary: Swift.String
+  public static func replaceSubString(_ string: Swift.String, original: Swift.String, replacement: Swift.String) throws -> Swift.String
+  public static func getEndpointUrlFrom(qrString: Swift.String) throws -> Swift.String
+  public static func getBaseurlEndpointSuffix(_ string: Swift.String, suffix: Swift.String) throws -> Swift.String
+  public static func isVerifyTrustEnabled(from urlString: Swift.String) -> Swift.Bool
+  @objc deinit
 }
 extension Foundation.Data {
   public func toString() -> Swift.String
@@ -591,43 +1072,70 @@ public struct OtpSessions : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct OtpSession : Swift.Decodable {
+  public var otpStatus: PingOneVerify.OtpStatus
+  public var expiresAt: Swift.String?
+  public var canResend: Swift.Bool?
+  public var resendCooldown: Swift.String?
+  public var remainingDeliveries: Swift.Int?
+  public var otpLength: Swift.Int?
   public init(from decoder: any Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers public class VerifyLicenseProvider {
-  convenience public init(response: PingOneVerify.DocumentSubmissionResponse)
-  @objc deinit
-}
-extension PingOneVerify.DocumentCaptureSettingsContract {
+extension NeoInterfaces.DocumentCaptureSettings {
   public func updateFromVerifyTransaction(verifyTransaction: PingOneVerify.VerifyTransaction)
 }
-public class SdkVersions {
-  public init()
+public struct SDKVersions : Swift.Codable {
+  public var p1Verify: Swift.String
+  public var idFaceCapture: Swift.String
+  public var blinkId: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public class Endpoint {
+  public func create<T, R>() -> (_ requestBody: T) -> PingOneVerify.CompletionHandler<R> where T : Swift.Decodable, T : Swift.Encodable, R : Swift.Decodable, R : Swift.Encodable
+  public func createWithEmptyBody<R>() -> () -> PingOneVerify.CompletionHandler<R> where R : Swift.Decodable, R : Swift.Encodable
+  public func createWithEmptyBodyAndPathVariables<R>() -> (_ pathVariables: Swift.String...) -> PingOneVerify.CompletionHandler<R> where R : Swift.Decodable, R : Swift.Encodable
+  public func createWithPathVariables<T, R>() -> (_ requestBody: T, _ pathVariables: Swift.String...) -> PingOneVerify.CompletionHandler<R> where T : Swift.Decodable, T : Swift.Encodable, R : Swift.Decodable, R : Swift.Encodable
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(endpoint: Swift.String, httpMethod: PingOneVerify.HttpMethod, networkReachability: PingOneVerify.NetworkReachability?)
+  #endif
+  public func setPathVariables(_ args: Swift.String...) -> PingOneVerify.Endpoint
+  public func setPathVariables(_ args: [Swift.String]) -> PingOneVerify.Endpoint
+  public func setRequestHeader(_ header: PingOneVerify.RequestHeader) -> PingOneVerify.Endpoint
+  public func sendRequest<R>() -> PingOneVerify.CompletionHandler<R> where R : Swift.Decodable, R : Swift.Encodable
+  public func sendRequest<T, R>(requestBody: T) -> PingOneVerify.CompletionHandler<R> where T : Swift.Decodable, T : Swift.Encodable, R : Swift.Decodable, R : Swift.Encodable
   @objc deinit
 }
-@objc public enum PayloadSize : Swift.Int {
-  case small = 0
-  case normal = 1
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(value: Swift.String?)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public protocol BackActionListener {
-  @objc func onBackAction(exitFlow: @escaping (Swift.Bool) -> Swift.Void)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class CameraView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  #endif
+public class EmptyBody : Swift.Codable {
+  required public init()
+  required public init(dict: [Swift.String : Any])
   @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public class EmptyResponse : Swift.Codable {
+  required public init()
+  required public init(dict: [Swift.String : Any])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class AppConstants {
+  public static let s3SupportedAlgorithm: Swift.String
+  public static let s3SupportedEncryption: Swift.String
+  public static let eventValueTrue: Swift.String
+  @objc deinit
+}
+public class AppEventRequest : Swift.Codable {
+  public var transactionId: Swift.String
+  public var collectionDate: Swift.String
+  public var data: [Swift.String : [Swift.String : Swift.String]]
+  public init(transactionId: Swift.String, collectionDate: Swift.String, data: [Swift.String : [Swift.String : Swift.String]])
+  public func setTransactionId(transactionId: Swift.String)
+  public func setCollectionDate(collectionDate: Swift.String)
+  public func setData(data: [Swift.String : [Swift.String : Swift.String]])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 extension Swift.Double {
   public var seconds: Swift.Int {
@@ -636,45 +1144,284 @@ extension Swift.Double {
   public var minutes: Swift.Int {
     get
   }
-  public var stringDescription: Swift.String {
-    get
-  }
 }
 public class PollingHelper {
   public static let DEFAULT_POLLING_INTERVAL_SEC: Swift.Double
   public init(withInterval pollingInterval: Foundation.TimeInterval, action: @escaping (PingOneVerify.PollingHelper) -> Swift.Void)
+  @objc deinit
   public func startPolling()
   public func stopPolling()
+}
+@_hasMissingDesignatedInitializers public class DateUtil {
+  public static func getCurrentDate() -> Swift.String
   @objc deinit
-}
-extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.GeoLocationProviderListener {
-  public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func requestFailedWithError(_ error: (any Swift.Error)?)
-  #endif
-  public func onGeoLocationCaptured(location: [Swift.String : Swift.Double])
-}
-extension PingOneVerify.PingOneVerifyClient.Builder : NeoInterfaces.GeoLocationProviderListener {
-  public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func requestFailedWithError(_ error: (any Swift.Error)?)
-  #endif
 }
 public func logLine(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
 public func log(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
 public func logerror(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
 public func logattention(_ message: Any, fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line)
 public struct VerifyApiLinks {
+  public var qrUrl: Swift.String
+  public var appThemeUrl: Swift.String?
+  public var appEventUrl: Swift.String?
+  public var baseUrl: Swift.String
+  public var transactionId: Swift.String
+  public var uploadUrl: Swift.String?
+  public var envId: Swift.String?
+  public init(endpointResponse: PingOneVerify.PingOneEndpoints, transactionId: Swift.String) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(qrUrl: Swift.String?, appThemeUrl: Swift.String?, appEventUrl: Swift.String?, transactionId: Swift.String)
+  #endif
+}
+@_hasMissingDesignatedInitializers public class ServerResponseLicenseProvider : NeoInterfaces.LicenseProviderContract {
+  public init(response: PingOneVerify.DocumentSubmissionResponse)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getLicenseFor(sdkIdentifier: Swift.String, sdkVersion: Swift.String) -> NeoInterfaces.ProviderLicense?
+  #endif
+  @objc deinit
+}
+public struct GenerateSessionPayload : Swift.Codable {
+  public let identifier: Swift.String
+  public init(identifier: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension PingOneVerify.PingOneVerifyClient {
+  public class Builder {
+    public init(verificationUrl: Swift.String, coordinatorDelegate: any PingOneVerify.VerifyTransactionCoordinatorDelegate)
+    @discardableResult
+    public func setLanguageCode(_ code: Swift.String) -> PingOneVerify.PingOneVerifyClient.Builder
+    #if compiler(>=5.3) && $NonescapableTypes
+    public func build(onComplete: @escaping (_ client: PingOneVerify.PingOneVerifyClient?, _ error: PingOneVerify.ClientBuilderError?) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+public protocol OtpCaptureSettings : NeoInterfaces.DocumentCaptureSettings {
+  var destination: Swift.String { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var otpSession: PingOneVerify.OtpSession? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var requirements: (any NeoInterfaces.RequirementsProtocol)? { get set }
+  #endif
+  var otpExpiryTicker: PingOneVerify.OtpTicker { get }
+  var resendCooldownTicker: PingOneVerify.OtpTicker { get }
+}
+public struct ThemeConfig : Swift.Codable {
+  public static let DEFAULT_LOGO_TYPE: PingOneVerify.ResourceType
+  public static let DEFAULT_BACKGROUND_TYPE: PingOneVerify.ResourceType
+  public static let DEFAULT_APPLICATION_BACKGROUND_COLOR: Swift.String
+  public static let DEFAULT_BACKGROUND_COLOR: Swift.String
+  public static let DEFAULT_BODY_TEXT_COLOR: Swift.String
+  public static let DEFAULT_CARD_COLOR: Swift.String
+  public static let DEFAULT_HEADING_TEXT_COLOR: Swift.String
+  public static let DEFAULT_LINK_TEXT_COLOR: Swift.String
+  public static let DEFAULT_BUTTON_COLOR: Swift.String
+  public static let DEFAULT_BUTTON_TEXT_COLOR: Swift.String
+  public static let DEFAULT_NAME: Swift.String
+  public static let DEFAULT_PROCESSING_COLOR: Swift.String
+  public var logoType: PingOneVerify.ResourceType
+  public var logo: PingOneVerify.ImageLink
+  public var backgroundType: PingOneVerify.ResourceType
+  @PingOneVerify.CodableColor public var processingColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var backgroundColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var bodyTextColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var cardColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var headingTextColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var linkTextColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var navigationBarColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var navigationBarTextColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var iconTintColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var selfieOvalDefaultColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var selfieOvalSuccessColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var selfieOvalErrorColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var backgroundOutlineColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var foregroundMainColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  @PingOneVerify.CodableColor public var foregroundHighlightColor: UIKit.UIColor {
+    get
+    set
+    _modify
+  }
+  public var solidButtonAppearance: PingOneVerify.ButtonAppearance
+  public var borderedButtonAppearance: PingOneVerify.ButtonAppearance
+  public var name: Swift.String
+  public init()
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct AppThemeResponse {
+  public var companyName: Swift.String?
+  public var template: Swift.String
+  public var defaultTheme: Swift.Bool
+  public var configuration: PingOneVerify.ThemeConfig
+  public init()
+}
+public struct ImageLink : Swift.Codable {
+  public var href: Swift.String
+  public var id: Swift.String
+  public var image: Foundation.Data?
+  public init()
+  public init(image: UIKit.UIImage)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getImage() -> UIKit.UIImage?
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ResourceType : Swift.String, Swift.Codable {
+  case IMAGE, COLOR, DEFAULT, OTHER
+  public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.GeoLocationProviderListener {
+  public func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
+  public func onLocationRequestStarted()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func requestFailedWithError(_ error: (any Swift.Error)?)
+  #endif
+}
+extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.SelfieCaptureProviderListener {
+  public func captureSelfie(from navigationController: UIKit.UINavigationController)
+  public func onSelfieCaptured(selfie: UIKit.UIImage, jpegData: Foundation.Data)
+  public func onSelfieError(error: any Swift.Error)
+  public func onSelfieCancelled()
+}
+extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.IdCaptureProviderListener {
+  public func captureGovernmentId(from navigationController: UIKit.UINavigationController)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func onIdCaptured(result: [Swift.String : Swift.String], viewModel: Swift.AnyObject?)
+  #endif
+  public func onIdCaptureError(error: any Swift.Error)
+  public func onIdCaptureCancelled()
+}
+@objc public class ButtonAppearance : ObjectiveC.NSObject, Swift.Codable {
+  public init(backgroundColor: UIKit.UIColor, textColor: UIKit.UIColor, borderColor: UIKit.UIColor)
+  public func getBackgroundColor() -> UIKit.UIColor
+  public func getTextColor() -> UIKit.UIColor
+  public func getBorderColor() -> UIKit.UIColor
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@propertyWrapper public struct CodableColor {
+  public var wrappedValue: UIKit.UIColor
+  public init(wrappedValue: UIKit.UIColor)
+}
+extension PingOneVerify.CodableColor : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension UIKit.UIColor {
+  convenience public init(hexString: Swift.String)
+  public func hexStringFromColor() -> Swift.String
+  public var redValue: CoreFoundation.CGFloat {
+    get
+  }
+  public var greenValue: CoreFoundation.CGFloat {
+    get
+  }
+  public var blueValue: CoreFoundation.CGFloat {
+    get
+  }
+  public var alphaValue: CoreFoundation.CGFloat {
+    get
+  }
+}
+public class VerifyLicenseProvider : NeoInterfaces.LicenseProviderContract {
+  public static let MB_LICENSE_KEY: Swift.String
+  public static let IDRND_SELFIE_SDK_LICENSE_KEY: Swift.String
+  public var licenseMap: [Swift.String : NeoInterfaces.ProviderLicense] {
+    get
+  }
+  public init()
+  convenience public init(response: PingOneVerify.DocumentSubmissionResponse)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getLicenseFor(sdkIdentifier: Swift.String, sdkVersion: Swift.String) -> NeoInterfaces.ProviderLicense?
+  #endif
+  @objc deinit
 }
 extension PingOneVerify.ClientBuilderError.BuilderError : Swift.Equatable {}
 extension PingOneVerify.ClientBuilderError.BuilderError : Swift.Hashable {}
+extension PingOneVerify.HttpMethod : Swift.Equatable {}
+extension PingOneVerify.HttpMethod : Swift.Hashable {}
+extension PingOneVerify.HttpMethod : Swift.RawRepresentable {}
+extension PingOneVerify.NetworkReachability.ConnectionType : Swift.Hashable {}
 extension PingOneVerify.DocumentSubmissionStatus : Swift.Equatable {}
 extension PingOneVerify.DocumentSubmissionStatus : Swift.Hashable {}
-extension PingOneVerify.DocumentClass : Swift.Hashable {}
+extension PingOneVerify.AppEventType : Swift.Equatable {}
+extension PingOneVerify.AppEventType : Swift.Hashable {}
+extension PingOneVerify.AppEventType : Swift.RawRepresentable {}
 extension PingOneVerify.DocumentStatus : Swift.Equatable {}
 extension PingOneVerify.DocumentStatus : Swift.Hashable {}
+extension PingOneVerify.GovernmentIdCaptureError : Swift.Equatable {}
+extension PingOneVerify.GovernmentIdCaptureError : Swift.Hashable {}
+extension PingOneVerify.SelfieCaptureError : Swift.Equatable {}
+extension PingOneVerify.SelfieCaptureError : Swift.Hashable {}
 extension PingOneVerify.OtpStatus : Swift.Equatable {}
 extension PingOneVerify.OtpStatus : Swift.Hashable {}
-extension PingOneVerify.PayloadSize : Swift.Equatable {}
-extension PingOneVerify.PayloadSize : Swift.Hashable {}
-extension PingOneVerify.PayloadSize : Swift.RawRepresentable {}
+extension PingOneVerify.ResourceType : Swift.Equatable {}
+extension PingOneVerify.ResourceType : Swift.Hashable {}
+extension PingOneVerify.ResourceType : Swift.RawRepresentable {}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "checkbox-blank-circle-outline.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -4,296 +4,54 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>AadhaarOtpVC.nib</key>
-		<data>
-		WRv/R6a8MRnHIvrq0Z3oliLSnxY=
-		</data>
-		<key>Assets.car</key>
-		<data>
-		P5cBipMesWiPEWZNHTpYlaG2r08=
-		</data>
-		<key>CustomCountryPickerViewController.nib</key>
-		<data>
-		yC8dtCntQVZb+zQmH3yEwZlRmwo=
-		</data>
-		<key>CustomMenu.nib</key>
-		<data>
-		yl8siSSIRCqUAE3dbqvhJasA0us=
-		</data>
-		<key>CustomPhoneView.nib</key>
-		<data>
-		hjhZK0XhX+hrZMIE78dEoH0Aeiw=
-		</data>
-		<key>CustomToastView.nib</key>
-		<data>
-		OLBggedw/u47tgFjgH3itvTXbqA=
-		</data>
-		<key>DataCaptureViewController.nib</key>
-		<data>
-		boot36w6iuxwnnAFjAIYDHgBn6w=
-		</data>
-		<key>DocumentCaptureViewController.nib</key>
-		<data>
-		LN9p1PUD7ZWfWeC76z4klvi/nd8=
-		</data>
-		<key>DocumentSelectionCell.nib</key>
-		<data>
-		TRRco3GnB+jhA22ryFswQiciZ+o=
-		</data>
-		<key>DocumentSelectionVC.nib</key>
-		<data>
-		kje8mALsMTitGe+C1op4FYx6nmo=
-		</data>
 		<key>Headers/PingOneVerify-Swift.h</key>
 		<data>
-		QHLlfs7/nxrRnR51prwc4J36L/U=
+		+42dY8r5CqmSdNEvNFDrdYz00w0=
 		</data>
 		<key>Headers/PingOneVerify.h</key>
 		<data>
 		xOI5+jIoiGAK6iY4LRt1B9+qqk4=
 		</data>
-		<key>IdCaptureViewController.nib</key>
-		<data>
-		bGUwknVjiVQ30RBpMjKwIwi4SOo=
-		</data>
-		<key>ImageCell.nib</key>
-		<data>
-		ZelbIszujFa2YXOyMUGhRPtNz40=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		g5O4hn3oyCRgHSIPRzbIQkq5GPk=
-		</data>
-		<key>LabelCell.nib</key>
-		<data>
-		R7k75eSUpva8HmC9GeiPmu+xsCE=
-		</data>
-		<key>Model_07c7ab860e77ec2e92bb822f6d62424b8595a5beb4340f6b2f7f6a4cffa5d050.strop</key>
-		<data>
-		geo+S9IgyS84CMbl5CmaftkTQWU=
-		</data>
-		<key>Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
-		<data>
-		pkGQbFW1vcep/WQPgQC0atOI2kc=
-		</data>
-		<key>Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop</key>
-		<data>
-		m3GF4fZESlU8peabiyQn4flRN4s=
-		</data>
-		<key>Model_36fe2b262231378031366de1c6b94db590b4415d21d4b42b7dab50968a26519c.strop</key>
-		<data>
-		/8SxDn5DMHZ2ybW8BR9C4J4uBSg=
-		</data>
-		<key>Model_38a69625879a5def5ed58d768f00e49df43fce8fc74c2e37099b680b526b96df.strop</key>
-		<data>
-		733C5fTrV1G7aMtgTedhKRfcCUU=
-		</data>
-		<key>Model_3b11c3ffacbbf390b932fb9a7024f1a0016f66281ea8c790f8b5903374ad89c2.strop</key>
-		<data>
-		rUijr6GICtAkxu/hwD8PW/O4g6g=
-		</data>
-		<key>Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop</key>
-		<data>
-		vIKcmsfUjieHB5U2AL/wAw59cGY=
-		</data>
-		<key>Model_8326c5065a6d8451d6d004db73babf4a4a9f502c68643a14934cc098d04bf44f.strop</key>
-		<data>
-		0vm/CCeRVwkDK3WvTDSjfekpPE8=
-		</data>
-		<key>Model_8c7727da554fd257fa758787ca3d0f517b47f6c5ba791792f516da7dd210fde8.strop</key>
-		<data>
-		YKo8nx30KOYlMM9tXCGa4CZsSDU=
-		</data>
-		<key>Model_93607315418f2c5d3abec06d0b2a81e69abeb1b8d0506ed6373d7d74bd5e4b05.strop</key>
-		<data>
-		5hiGmFCpugahP+0Z58HIwjro/OU=
-		</data>
-		<key>Model_a1516add883f909ebecf9b565238086f8f31bbb3e7fb2113258e3ae7c659555e.strop</key>
-		<data>
-		xwi3CFM7uvMFD1ycVW+bHbDjgaI=
-		</data>
-		<key>Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop</key>
-		<data>
-		glsBwy/zMzzKbn1UpnB0HyEOTjc=
-		</data>
-		<key>Model_bafe286f878a41ed7fb28c49fee65824638a53f5c05bb6540096a0bd15f55415.strop</key>
-		<data>
-		aGp1j3JDINCnCv9WDEdQcTvbtlY=
-		</data>
-		<key>Model_e7cd6730eb024801e7309b9c7b5654e684d9c4563935cf64617e16d6c750790a.strop</key>
-		<data>
-		iouYhFzT+dJfsmfB+/R4rlXywCA=
-		</data>
-		<key>Model_e89a89677e2469c66d02864bd83e04ceb72f0c95cd943b883875f8796b370495.strop</key>
-		<data>
-		CyaMhfXtOMDiJ3E7HQ2RPoo0m/k=
-		</data>
-		<key>Model_f2874f5766b779c063dbe30467979163497dc4b29c43bab23d70c798ee32993a.strop</key>
-		<data>
-		bmzoadSM3j5zRA6fLUMax2rGFmg=
-		</data>
-		<key>Model_f531088a1f65a31d6ba039e09446fe24c18360080fec3792308ac01514803620.strop</key>
-		<data>
-		IWUA28EDuRc6svdaufwecu6TIAU=
-		</data>
-		<key>Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop</key>
-		<data>
-		W9uildPJ5FMm2GK6PZjUNas8Kw8=
+		kim+I/7JkvRTwKNvxFoF9BPewZI=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		MykOoKWfeKNU4A+eXWNylO9dmCc=
+		uhOLeSk3vfisaMKreX+2QJGx/Io=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		SDmCx5xE2Fg93pijwihNpLVDCVo=
+		wYmSk4H2qVjjmIAw9HcOGDArKrk=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		PaHvLJS4GLhtBvSkrro8ptG1Kfs=
+		J7uUqD359gxYu2sCdDahJc/qsZs=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		SDmCx5xE2Fg93pijwihNpLVDCVo=
+		wYmSk4H2qVjjmIAw9HcOGDArKrk=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NBKGv/YupUFC1jUaoW+9PW+qF3c=
+		WLCIg2sljfjkSNy3Ub1j2LAnbfU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		3SBcegosNeEcUU/kBDYOrYH+x4I=
 		</data>
-		<key>OtpViewController.nib</key>
-		<data>
-		yem9XHz1MI/xlnPttdE2sReDP2E=
-		</data>
-		<key>PingOneNavController.nib</key>
-		<data>
-		WwfaGqqwEdP45OrF/xyfAm09bE0=
-		</data>
-		<key>PingOneVerifyLocalizable.strings</key>
-		<data>
-		SxZx5QLDAjbtkE3fhJwVc3Fhj2U=
-		</data>
-		<key>PreviewViewController.nib</key>
-		<data>
-		ccZGYDu6wp9w3JJrmmjS/osmsS4=
-		</data>
-		<key>ProcessingViewController.nib</key>
-		<data>
-		vY757tk34LJHs99sXgA2P4np29U=
-		</data>
-		<key>QrScannerView.nib</key>
-		<data>
-		xar8C8e3td2LGdi8eeNlo1hSD+I=
-		</data>
-		<key>RetryViewController.nib</key>
-		<data>
-		fu4AuWeTwruqcfpjaQ5hRmdryb4=
-		</data>
-		<key>SelfieCaptureView.nib</key>
-		<data>
-		ijWK2sNYvjGEtTVgbpcN9rmXzfY=
-		</data>
-		<key>SelfiePreviewView.nib</key>
-		<data>
-		+k9GkhL2xCheB+Z3Dnhc+vN/s5w=
-		</data>
-		<key>ccc_lookup_table.zzip</key>
-		<data>
-		Tf5sZLcLePSK4SAOuYz410mjMfc=
-		</data>
-		<key>countries.json</key>
-		<data>
-		R5OkvJlvr+e0KEcdGXjUqEiT4uw=
-		</data>
 		<key>license.key</key>
 		<data>
 		FdpaZku7qrC5Kc/nEmVuLIc87w0=
 		</data>
-		<key>serialized_embedder_db_1.10.bin</key>
-		<data>
-		HWHbUU/hevJQFOKd5zTzZW7saEE=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>AadhaarOtpVC.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			luOp3rSgCKNhKwoahrtxjwdopK46LaQ7UlYYxQBGsWE=
-			</data>
-		</dict>
-		<key>Assets.car</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bwZnjtZ/rw/G517L+3qsnzgjSq4QdkQMyJTH5o3N5EU=
-			</data>
-		</dict>
-		<key>CustomCountryPickerViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UmlrGCAGwnLb2Zsx6qgMqEkDdp9lh5S5fLglmp0Uz6o=
-			</data>
-		</dict>
-		<key>CustomMenu.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YtXs7zKTjh8dezf7bmt49CHhymhspBAeDRwQlCIctwY=
-			</data>
-		</dict>
-		<key>CustomPhoneView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ml9tM8956qdlh9XolV/2U1gPRloK3kuzj0ly2vgjK28=
-			</data>
-		</dict>
-		<key>CustomToastView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			bwaXwdgD+X71wd0Dax7gW6yqH5f5m2HWoRyYYtiJdW8=
-			</data>
-		</dict>
-		<key>DataCaptureViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yzkOskpB0wVhnFl9gWArKWt4w4fIKdvxmzkItvT5aiU=
-			</data>
-		</dict>
-		<key>DocumentCaptureViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BaoohLawxZiDu4zxPbBlBdTDHZdg8+MdUnYKXoYCUhI=
-			</data>
-		</dict>
-		<key>DocumentSelectionCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			S35L7bSAKSoSVZ416GGXOtpLzUSzpGNktyAIcHd5tdI=
-			</data>
-		</dict>
-		<key>DocumentSelectionVC.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2ErP1cQ2kYKwDNoRWr8FQTNOZz6X7EinCA+vCQBrYj4=
-			</data>
-		</dict>
 		<key>Headers/PingOneVerify-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F1awGWfr67KPjOmUrNwQoORxQ9GxXzvbDL8W6a46YtM=
+			03/OVwItJhU0emrnPnhz4xR4hBzsh8Wkr6qvVCVhUhw=
 			</data>
 		</dict>
 		<key>Headers/PingOneVerify.h</key>
@@ -303,186 +61,39 @@
 			zYx7K1C36APGN+3Ax2U2l42Qp9Q0C4kzn2FXh9yUNcQ=
 			</data>
 		</dict>
-		<key>IdCaptureViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			n3efbSRbbEkrcZj6cP0WzXanFJga3/i/v6HTEhn9+zw=
-			</data>
-		</dict>
-		<key>ImageCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6g9fPnECwc71AmdXX6ELQ+gPfiiTYlUxeWd6wd+14/8=
-			</data>
-		</dict>
-		<key>LabelCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xQe+uNImgxcFAFaC8OK9h9RUXbmmR/llgr5G7ZTNFIw=
-			</data>
-		</dict>
-		<key>Model_07c7ab860e77ec2e92bb822f6d62424b8595a5beb4340f6b2f7f6a4cffa5d050.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/7ZeFN5XVkRg1cwr1oeF0xXmyLeoyuK1Z5KwgAdaVWE=
-			</data>
-		</dict>
-		<key>Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qVAd0mL/0adM9zME0abCWO9Cx5MFz2vCIivXu51CNk8=
-			</data>
-		</dict>
-		<key>Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Q+sH8K0H5KDdK12Jc/rhsMZuWGg42ktuuFZVrqS3W2k=
-			</data>
-		</dict>
-		<key>Model_36fe2b262231378031366de1c6b94db590b4415d21d4b42b7dab50968a26519c.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CbjW6Ee+Jk8kXJWCH0Yl0A9PrydlOMxGCf/cBurG8O0=
-			</data>
-		</dict>
-		<key>Model_38a69625879a5def5ed58d768f00e49df43fce8fc74c2e37099b680b526b96df.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z7ub/LXbDLuVa2fUDlpvwQHX6S3QMHhwPJ1Mk70hzug=
-			</data>
-		</dict>
-		<key>Model_3b11c3ffacbbf390b932fb9a7024f1a0016f66281ea8c790f8b5903374ad89c2.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tNWYoPNowazL8tC1NCUXA1wl/kGXVw9pmQukj4wCpnw=
-			</data>
-		</dict>
-		<key>Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			i+zk2S9ppl42Edmg2ofRvzNwAxlfYs4Mrw0Coyd9QQs=
-			</data>
-		</dict>
-		<key>Model_8326c5065a6d8451d6d004db73babf4a4a9f502c68643a14934cc098d04bf44f.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qSoYZ0BdyQGSMbLqoaHkVyl10grumXsjG4vdyeTxGFw=
-			</data>
-		</dict>
-		<key>Model_8c7727da554fd257fa758787ca3d0f517b47f6c5ba791792f516da7dd210fde8.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Y3w0jA9ZQMTt61Cx2/XlV0uXBgqzc/7ZZn5HYjdeMkg=
-			</data>
-		</dict>
-		<key>Model_93607315418f2c5d3abec06d0b2a81e69abeb1b8d0506ed6373d7d74bd5e4b05.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ebtBtWSikE6DL9bWYQsgMIIQKTqJpH5gbpYZe8fYTNo=
-			</data>
-		</dict>
-		<key>Model_a1516add883f909ebecf9b565238086f8f31bbb3e7fb2113258e3ae7c659555e.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4yfzydouTV4r6YGVskqrrlV+w8+5m5HlYw1++rjvk9g=
-			</data>
-		</dict>
-		<key>Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GAEZwZF5NbTApEeT0b86f0r9+uKyS6lZMuZ4HUikMSc=
-			</data>
-		</dict>
-		<key>Model_bafe286f878a41ed7fb28c49fee65824638a53f5c05bb6540096a0bd15f55415.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			n+kxLLDBlUNj7sKO8sGBN4umrv+gF3YG3nu2AIuocpg=
-			</data>
-		</dict>
-		<key>Model_e7cd6730eb024801e7309b9c7b5654e684d9c4563935cf64617e16d6c750790a.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0KjQGq8Uk1Q12FcyRDDrBjiyZQc+V+pcD42sBT0bZAw=
-			</data>
-		</dict>
-		<key>Model_e89a89677e2469c66d02864bd83e04ceb72f0c95cd943b883875f8796b370495.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aA0UgvRPsXLRTvJl6kIH48ZeKATLdDn6e4bjhA1PSIM=
-			</data>
-		</dict>
-		<key>Model_f2874f5766b779c063dbe30467979163497dc4b29c43bab23d70c798ee32993a.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4HFBzm42Oix3GO6NyL3uJ1wJR8CBLOVgROwD2AZKfDo=
-			</data>
-		</dict>
-		<key>Model_f531088a1f65a31d6ba039e09446fe24c18360080fec3792308ac01514803620.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QDKQ7E5LWYfNNuXJMNZWO7NelP+LGIQTJQPLMkxYmdI=
-			</data>
-		</dict>
-		<key>Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fmCKUJwUE/M98CDHnWJ2/sLm2MTUtydmpsAg77QrQ88=
-			</data>
-		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y/7ye5xC4HfjFl8E61iAjtNUnyLRFex74MpvZh+U1Wg=
+			TaJN4nkTQ7BGILrbvewN0JFqfMVExJAQmdj84iSFR20=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TTlOXqhBmvD7MzYXLv+t1Ss8cCdQL1y4QgIwj4ccY+4=
+			RqoDd4PgYLSgJWbp5cRb9PvNE+YWxWjJv7uBJseDBCw=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SfyVfj4UNTGHH8ZXk7YpL27F77XstptJKGf3MR78AKA=
+			2VitQ/gYecRLPq0TdXmW/9ePqlyjPKqhgHIey0qnhVw=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TTlOXqhBmvD7MzYXLv+t1Ss8cCdQL1y4QgIwj4ccY+4=
+			RqoDd4PgYLSgJWbp5cRb9PvNE+YWxWjJv7uBJseDBCw=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3QynxeWgcPn27ATRTfXnteYU9pmQeZyUX31iIfLtL9Q=
+			YXTQxN2QNRXrtseLrQuPeVvwXmLAJH5B03hj3A/zvsA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -492,95 +103,11 @@
 			LuSB9rRWrZb8TO1wf3Mb7WiKowNa9fMkQ5ohuTyEMvw=
 			</data>
 		</dict>
-		<key>OtpViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			dgmiNbL0+ljuRaUKj1crsfYWrZmpl1N+4UqLYNpeJWk=
-			</data>
-		</dict>
-		<key>PingOneNavController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WFBPgDbeX93jG19vNHzyW+H6fGZ0GMzJ6YjOS54P2W4=
-			</data>
-		</dict>
-		<key>PingOneVerifyLocalizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			EYjH4pLHha48imTq2vJZBtoEjMXUSoASn9JSu0viVA8=
-			</data>
-		</dict>
-		<key>PreviewViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FS0BpK8MHNYQThRR+3lIbWdLSBYmb61zuGjuISdxvdk=
-			</data>
-		</dict>
-		<key>ProcessingViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Y2sD8fy/CoGQSgs8RW7tN8xywkMKt86hnUUABoiKwfI=
-			</data>
-		</dict>
-		<key>QrScannerView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Eiljo1k/ANK0uVwlBDXtefhmofA/bN/zsy+sVgFJYuw=
-			</data>
-		</dict>
-		<key>RetryViewController.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rD/ZQrnoV/Mc3+VXwC5x9H8KAZ7cGho8SiZ+v+LCFmY=
-			</data>
-		</dict>
-		<key>SelfieCaptureView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			EEB4wd5or+PJnKTfYFpqYVevq/Qn6VXqv6CYkgA3j+Y=
-			</data>
-		</dict>
-		<key>SelfiePreviewView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			TB6lj5B5u8TKllRoqcCEI43gDD1qmarzax/AsUVAE8A=
-			</data>
-		</dict>
-		<key>ccc_lookup_table.zzip</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Jfy+N3B9a9H04NvHAycAsQmdS4Kl+sIHcBM4NKVDHWA=
-			</data>
-		</dict>
-		<key>countries.json</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			O3gPj6W/5rd98gYD/rfrODs7ye0v5q/SOrAJe6E2Bd4=
-			</data>
-		</dict>
 		<key>license.key</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			MNiAz2eJ+wGb0l0fSM4elollSl6SG9M6os05CPPuMm0=
-			</data>
-		</dict>
-		<key>serialized_embedder_db_1.10.bin</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HWma46Yq0juuY12UUBZ3X541LujbXQy02ItYrrvGCcc=
 			</data>
 		</dict>
 	</dict>

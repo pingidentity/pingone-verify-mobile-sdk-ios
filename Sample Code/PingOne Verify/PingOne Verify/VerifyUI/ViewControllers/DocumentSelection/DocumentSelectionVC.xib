@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocumentSelectionViewController" customModule="VerifyUI" customModuleProvider="target">
+            <connections>
+                <outlet property="descLbl" destination="MeM-VD-Z5J" id="Iia-pb-B6x"/>
+                <outlet property="documentsTableView" destination="Ral-II-RE9" id="rqz-Za-pjd"/>
+                <outlet property="titleLbl" destination="KK3-Ns-2xd" id="AkI-CR-GPb"/>
+                <outlet property="view" destination="gI4-2g-uhi" id="gcb-DH-WOl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gI4-2g-uhi" customClass="BaseView" customModule="VerifyUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SA-DA-SQR" userLabel="selectionView">
+                    <rect key="frame" x="24" y="142" width="345" height="118"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm ID Type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KK3-Ns-2xd" customClass="HeaderLabel" customModule="VerifyUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="24" width="345" height="36"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeM-VD-Z5J">
+                            <rect key="frame" x="0.0" y="76" width="345" height="42"/>
+                            <string key="text">We couldn’t identify your ID. 
+Select the ID type to continue.</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MeM-VD-Z5J" firstAttribute="top" secondItem="KK3-Ns-2xd" secondAttribute="bottom" constant="16" id="3cC-Qf-zUC"/>
+                        <constraint firstItem="KK3-Ns-2xd" firstAttribute="top" secondItem="0SA-DA-SQR" secondAttribute="top" constant="24" id="8KL-qd-Wpy"/>
+                        <constraint firstItem="MeM-VD-Z5J" firstAttribute="leading" secondItem="0SA-DA-SQR" secondAttribute="leading" id="Evl-nV-jfH"/>
+                        <constraint firstItem="KK3-Ns-2xd" firstAttribute="leading" secondItem="0SA-DA-SQR" secondAttribute="leading" id="IC9-GV-zAf"/>
+                        <constraint firstAttribute="trailing" secondItem="MeM-VD-Z5J" secondAttribute="trailing" id="Ycf-sw-J61"/>
+                        <constraint firstAttribute="trailing" secondItem="KK3-Ns-2xd" secondAttribute="trailing" id="d1d-y9-WEA"/>
+                        <constraint firstAttribute="bottom" secondItem="MeM-VD-Z5J" secondAttribute="bottom" id="k7t-Kf-Uln"/>
+                    </constraints>
+                </view>
+                <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="72" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ral-II-RE9">
+                    <rect key="frame" x="24" y="324" width="345" height="460"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="sho-fd-2rX"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0SA-DA-SQR" firstAttribute="leading" secondItem="sho-fd-2rX" secondAttribute="leading" constant="24" id="1kd-Vr-Q46"/>
+                <constraint firstItem="Ral-II-RE9" firstAttribute="leading" secondItem="sho-fd-2rX" secondAttribute="leading" constant="24" id="8yj-kl-zTz"/>
+                <constraint firstItem="0SA-DA-SQR" firstAttribute="top" secondItem="sho-fd-2rX" secondAttribute="top" constant="24" id="OcV-Ke-veG"/>
+                <constraint firstItem="sho-fd-2rX" firstAttribute="trailing" secondItem="0SA-DA-SQR" secondAttribute="trailing" constant="24" id="Z41-0f-wJa"/>
+                <constraint firstItem="Ral-II-RE9" firstAttribute="top" secondItem="0SA-DA-SQR" secondAttribute="bottom" constant="64" id="ZaE-OX-aq6"/>
+                <constraint firstItem="sho-fd-2rX" firstAttribute="trailing" secondItem="Ral-II-RE9" secondAttribute="trailing" constant="24" id="gJj-bO-Prs"/>
+                <constraint firstItem="sho-fd-2rX" firstAttribute="bottom" secondItem="Ral-II-RE9" secondAttribute="bottom" id="hcr-Xh-JlQ"/>
+            </constraints>
+            <point key="canvasLocation" x="635.87786259541986" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

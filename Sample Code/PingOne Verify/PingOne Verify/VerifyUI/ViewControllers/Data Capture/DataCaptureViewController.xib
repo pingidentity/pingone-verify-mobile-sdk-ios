@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataCaptureViewController" customModule="VerifyUI" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonsStackView" destination="vbP-Lp-hER" id="q0Y-Ex-GYm"/>
+                <outlet property="descriptionTextView" destination="Qyk-0R-8c2" id="rJB-WZ-5rR"/>
+                <outlet property="imageView" destination="y9m-bg-K3T" id="j93-eu-zIR"/>
+                <outlet property="imageViewHeightConstraint" destination="GE2-uf-e96" id="vem-fK-ovs"/>
+                <outlet property="imageViewTopConstraint" destination="GmM-q2-cOQ" id="9Up-Gw-T4Y"/>
+                <outlet property="imageViewWidthConstraint" destination="rBc-hB-JMH" id="Y54-gq-ENO"/>
+                <outlet property="sendOtpButton" destination="syB-3o-jSk" id="cTO-Kf-T6p"/>
+                <outlet property="skipButton" destination="fht-2r-5F1" id="KhJ-AI-c1l"/>
+                <outlet property="titleLabel" destination="BHq-Br-jqW" id="nUJ-7F-xit"/>
+                <outlet property="view" destination="LrK-c5-hjL" id="ne4-uq-3wO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LrK-c5-hjL" customClass="BaseView" customModule="VerifyUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPd-5k-YKt">
+                    <rect key="frame" x="0.0" y="60" width="375" height="267"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9m-bg-K3T" customClass="IconImageView" customModule="VerifyUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="y9m-bg-K3T" firstAttribute="centerY" secondItem="TPd-5k-YKt" secondAttribute="centerY" id="b0M-C7-6co"/>
+                        <constraint firstItem="y9m-bg-K3T" firstAttribute="centerX" secondItem="TPd-5k-YKt" secondAttribute="centerX" id="ifK-tx-cDq"/>
+                        <constraint firstItem="y9m-bg-K3T" firstAttribute="height" secondItem="TPd-5k-YKt" secondAttribute="height" id="pTe-OQ-QIY"/>
+                        <constraint firstItem="y9m-bg-K3T" firstAttribute="width" secondItem="TPd-5k-YKt" secondAttribute="width" id="tZ8-3n-bju"/>
+                    </constraints>
+                </view>
+
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="501" text="Phone Verification" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHq-Br-jqW" customClass="HeaderLabel" customModule="VerifyUI" customModuleProvider="target">
+                    <rect key="frame" x="25" y="347" width="325" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" red="0.1450980392" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-0R-8c2">
+                    <rect key="frame" x="21" y="383" width="329" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="vZi-h2-A74"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                    <color key="textColor" red="0.1450980392" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vbP-Lp-hER">
+                    <rect key="frame" x="25" y="531" width="325" height="110"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syB-3o-jSk" customClass="VerifyButton" customModule="VerifyUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="coD-9h-zKI"/>
+                            </constraints>
+                            <state key="normal" title="Send Verification Code"/>
+                            <connections>
+                                <action selector="sendOtpButtonPressed:" destination="-1" eventType="touchUpInside" id="hDt-jT-22x"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fht-2r-5F1" customClass="BorderedButton" customModule="VerifyUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="325" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="XAj-Ut-Lft"/>
+                            </constraints>
+                            <state key="normal" title="Skip"/>
+                            <connections>
+                                <action selector="skipButtonPressed:" destination="-1" eventType="touchUpInside" id="0FS-2U-utW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="syB-3o-jSk" secondAttribute="trailing" id="1o1-mH-xk0"/>
+                        <constraint firstItem="fht-2r-5F1" firstAttribute="leading" secondItem="vbP-Lp-hER" secondAttribute="leading" id="8W1-Yw-wlH"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="SbF-Kq-KHj"/>
+                        <constraint firstAttribute="trailing" secondItem="fht-2r-5F1" secondAttribute="trailing" id="VU3-5U-R0Q"/>
+                        <constraint firstItem="syB-3o-jSk" firstAttribute="leading" secondItem="vbP-Lp-hER" secondAttribute="leading" id="wQW-9J-guY"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="EpL-sw-hLL"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="BHq-Br-jqW" firstAttribute="top" secondItem="TPd-5k-YKt" secondAttribute="bottom" constant="20" id="New-Constraint-LabelTop"/>
+                
+                <constraint firstItem="Qyk-0R-8c2" firstAttribute="top" secondItem="BHq-Br-jqW" secondAttribute="bottom" id="Doc-9Y-VIf"/>
+                
+                <constraint firstItem="TPd-5k-YKt" firstAttribute="height" secondItem="EpL-sw-hLL" secondAttribute="height" multiplier="0.4" id="GE2-uf-e96"/>
+                
+                <constraint firstItem="TPd-5k-YKt" firstAttribute="top" secondItem="EpL-sw-hLL" secondAttribute="top" constant="40" id="GmM-q2-cOQ"/>
+                <constraint firstItem="EpL-sw-hLL" firstAttribute="trailing" secondItem="BHq-Br-jqW" secondAttribute="trailing" constant="25" id="L2R-Ad-mC8"/>
+                <constraint firstItem="EpL-sw-hLL" firstAttribute="trailing" secondItem="Qyk-0R-8c2" secondAttribute="trailing" constant="25" id="MkY-if-Xvk"/>
+                <constraint firstItem="vbP-Lp-hER" firstAttribute="bottom" secondItem="EpL-sw-hLL" secondAttribute="bottom" constant="-26" id="XkH-cj-7cp"/>
+                <constraint firstItem="Qyk-0R-8c2" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="vbP-Lp-hER" secondAttribute="top" constant="-8" id="bMl-TQ-PVD"/>
+                <constraint firstItem="Qyk-0R-8c2" firstAttribute="leading" secondItem="EpL-sw-hLL" secondAttribute="leading" constant="21" id="e49-AO-3Fe"/>
+                <constraint firstItem="vbP-Lp-hER" firstAttribute="leading" secondItem="EpL-sw-hLL" secondAttribute="leading" constant="25" id="hGN-GR-UJ0"/>
+                <constraint firstItem="TPd-5k-YKt" firstAttribute="centerX" secondItem="EpL-sw-hLL" secondAttribute="centerX" id="hTo-aw-KgJ"/>
+                <constraint firstItem="TPd-5k-YKt" firstAttribute="width" secondItem="EpL-sw-hLL" secondAttribute="width" id="rBc-hB-JMH"/>
+                <constraint firstItem="BHq-Br-jqW" firstAttribute="leading" secondItem="EpL-sw-hLL" secondAttribute="leading" constant="25" id="y61-3B-cIf"/>
+                <constraint firstItem="EpL-sw-hLL" firstAttribute="trailing" secondItem="vbP-Lp-hER" secondAttribute="trailing" constant="25" id="zTj-FP-pdE"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

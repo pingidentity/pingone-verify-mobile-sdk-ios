@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wE6-HY-aUJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wE6-HY-aUJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Start QR Scanner" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJb-mJ-nu7">
-                                <rect key="frame" x="24" y="762" width="366" height="60"/>
+                                <rect key="frame" x="24" y="768" width="366" height="60"/>
                                 <color key="backgroundColor" red="0.26653650400000001" green="0.3838143349" blue="0.92788749930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="cZS-cI-kbm"/>
@@ -38,14 +38,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verify" translatesAutoresizingMaskIntoConstraints="NO" id="9g2-cs-P08">
-                                <rect key="frame" x="40" y="78" width="334" height="334"/>
+                                <rect key="frame" x="40" y="126" width="334" height="334"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9g2-cs-P08" secondAttribute="height" multiplier="5:5" id="RKM-Qh-LNo"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document Verification Requested" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg8-SK-mBL">
-                                <rect key="frame" x="24" y="518.5" width="366" height="100"/>
+                                <rect key="frame" x="24" y="476.5" width="366" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="dBF-oB-Mjc"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTd-ds-sEA">
-                                <rect key="frame" x="24" y="622.5" width="366" height="107.5"/>
+                                <rect key="frame" x="24" y="580.5" width="366" height="107.5"/>
                                 <string key="text">We need to confirm your identity. This will require scanning your government issued ID such as a Driver License or Passport. Please have your ID ready before proceeding and in a well lit environment for best results.</string>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,14 +70,14 @@
                             <constraint firstItem="tJb-mJ-nu7" firstAttribute="centerX" secondItem="1iY-4s-lqY" secondAttribute="centerX" id="NtG-W9-YyU"/>
                             <constraint firstItem="tTd-ds-sEA" firstAttribute="top" secondItem="Bg8-SK-mBL" secondAttribute="bottom" constant="4" id="O2F-az-fIf"/>
                             <constraint firstItem="tTd-ds-sEA" firstAttribute="leading" secondItem="1iY-4s-lqY" secondAttribute="leading" constant="24" id="XXI-g6-4gp"/>
-                            <constraint firstItem="1iY-4s-lqY" firstAttribute="bottom" secondItem="tJb-mJ-nu7" secondAttribute="bottom" constant="40" id="a92-Va-4nq"/>
+                            <constraint firstItem="1iY-4s-lqY" firstAttribute="bottom" secondItem="tJb-mJ-nu7" secondAttribute="bottom" id="a92-Va-4nq"/>
                             <constraint firstItem="9g2-cs-P08" firstAttribute="leading" secondItem="1iY-4s-lqY" secondAttribute="leading" constant="40" id="crQ-a4-MBq"/>
                             <constraint firstItem="1iY-4s-lqY" firstAttribute="trailing" secondItem="tJb-mJ-nu7" secondAttribute="trailing" constant="24" id="huA-xp-TeK"/>
                             <constraint firstItem="9g2-cs-P08" firstAttribute="centerX" secondItem="1iY-4s-lqY" secondAttribute="centerX" id="lsS-q6-uEw"/>
                             <constraint firstItem="9g2-cs-P08" firstAttribute="top" secondItem="1iY-4s-lqY" secondAttribute="top" constant="30" id="obo-Qz-bmm"/>
                             <constraint firstItem="1iY-4s-lqY" firstAttribute="trailing" secondItem="tTd-ds-sEA" secondAttribute="trailing" constant="24" id="p9e-9N-DjR"/>
                             <constraint firstItem="1iY-4s-lqY" firstAttribute="trailing" secondItem="Bg8-SK-mBL" secondAttribute="trailing" constant="24" id="pgH-dS-BNb"/>
-                            <constraint firstItem="tJb-mJ-nu7" firstAttribute="top" secondItem="tTd-ds-sEA" secondAttribute="bottom" constant="32" id="qbF-9u-hWF"/>
+                            <constraint firstItem="tJb-mJ-nu7" firstAttribute="top" secondItem="tTd-ds-sEA" secondAttribute="bottom" constant="80" id="qbF-9u-hWF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oOE-Hk-xL1"/>
@@ -93,21 +93,20 @@
         <!--Completed View Controller-->
         <scene sceneID="oNF-OE-FbE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="98A-8D-vVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="k4E-hq-NHN" customClass="CompletedViewController" customModule="PingOne_Verify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCp-TQ-lb7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="848"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="u7F-9E-O8M">
-                                <rect key="frame" x="126" y="190" width="162" height="167"/>
+                                <rect key="frame" x="126" y="238" width="162" height="167"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="167" id="Dlw-Ed-j4Q"/>
                                     <constraint firstAttribute="width" constant="162" id="vPl-GA-97d"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-HK-qPe">
-                                <rect key="frame" x="139" y="377" width="136.5" height="40"/>
+                                <rect key="frame" x="139" y="425" width="136.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2AD-oh-ubo"/>
                                 </constraints>
@@ -116,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have gathered all the information required to continue the verification process." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLI-J8-96g">
-                                <rect key="frame" x="24" y="427" width="366" height="43"/>
+                                <rect key="frame" x="24" y="475" width="366" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -136,6 +135,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mkh-83-eWu"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98A-8D-vVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1773.913043478261" y="97.767857142857139"/>
         </scene>

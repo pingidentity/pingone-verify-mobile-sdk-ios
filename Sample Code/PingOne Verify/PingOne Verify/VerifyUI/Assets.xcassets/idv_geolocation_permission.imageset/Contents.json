@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Isolation_Mode.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

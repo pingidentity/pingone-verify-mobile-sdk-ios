@@ -1,0 +1,6 @@
+framework module SelfieCaptureProvider {
+  umbrella header "SelfieCaptureProvider.h"
+  export *
+
+  module * { export * }
+}

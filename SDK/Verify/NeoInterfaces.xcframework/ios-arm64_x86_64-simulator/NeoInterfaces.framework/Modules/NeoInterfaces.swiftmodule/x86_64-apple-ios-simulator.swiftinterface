@@ -1,30 +1,312 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target x86_64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name NeoInterfaces
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 @_exported import NeoInterfaces
 import Swift
+import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public protocol LanguagePackProviderContract {
+public protocol LanguagePackProviderContract : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  init(url: Swift.String, code: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)?)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   func getStringForkey(_ key: Swift.String, bundle: Foundation.Bundle?, defaultValue: Swift.String) -> Swift.String
   #endif
 }
-public protocol GeoLocationProviderContract {
+public protocol GeoLocationProviderContract : AnyObject {
   func requestCurrentLocation()
   func setLocation(listener: any NeoInterfaces.GeoLocationProviderListener)
+  func isLocationPermissionGranted() -> NeoInterfaces.LocationPermissionStatus
 }
-public protocol GeoLocationProviderListener {
+public protocol GeoLocationProviderListener : AnyObject {
   func onGeoLocationCaptured(locations: NeoInterfaces.GeolocationCoordinates)
   #if compiler(>=5.3) && $NonescapableTypes
   func requestFailedWithError(_ error: (any Swift.Error)?)
   #endif
+  func onLocationRequestStarted()
+}
+public protocol IdCaptureProviderContract : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func startCapture(from viewController: UIKit.UIViewController, settings: Swift.AnyObject?, listener: any NeoInterfaces.IdCaptureProviderListener)
+  #endif
+}
+public protocol IdCaptureProviderListener : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func onIdCaptured(result: [Swift.String : Swift.String], viewModel: Swift.AnyObject?)
+  #endif
+  func onIdCaptureError(error: any Swift.Error)
+  func onIdCaptureCancelled()
+}
+public protocol IdCaptureViewModelContract : AnyObject {
+  func getDocumentTypeRawValue() -> Swift.String
+  func getIdDocumentDict() -> [Swift.String : Swift.String]
+}
+public protocol SelfieCaptureProviderContract : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func startCapture(from navigationController: UIKit.UINavigationController, settings: Swift.AnyObject?, licenseKey: Swift.String, listener: any NeoInterfaces.SelfieCaptureProviderListener)
+  #endif
+  func reassignListener(_ listener: any NeoInterfaces.SelfieCaptureProviderListener)
+  func restartCapture()
+  func prepareSelfiePayload(jpegData: Foundation.Data) throws -> [Swift.String : Swift.String]
+  func cleanupCaptureSession()
+}
+public protocol SelfieCaptureProviderListener : AnyObject {
+  func onSelfieCaptured(selfie: UIKit.UIImage, jpegData: Foundation.Data)
+  func onSelfieError(error: any Swift.Error)
+  func onSelfieCancelled()
 }
 public struct GeolocationCoordinates {
   public let latitude: Swift.Double
   public let longitude: Swift.Double
   public init(latitude: Swift.Double, longitude: Swift.Double)
 }
+public enum LocationPermissionStatus {
+  case authorizedWhenInUse
+  case authorizedAlways
+  case denied
+  case restricted
+  case notDetermined
+  public static func == (a: NeoInterfaces.LocationPermissionStatus, b: NeoInterfaces.LocationPermissionStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum DocumentClass : Swift.String, Swift.CaseIterable, Swift.Codable {
+  case SELFIE
+  case DRIVER_LICENSE
+  case PASSPORT
+  case GOVERNMENT_ID
+  case EMAIL
+  case PHONE
+  case OTP
+  case OTHER
+  case CREDENTIAL
+  case GEOLOCATION
+  public var iconName: Swift.String {
+    get
+  }
+  public static func getDocumentClassFrom(codingKey: NeoInterfaces.DocumentClass.CodingKeys) -> NeoInterfaces.DocumentClass
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case selfie, driverLicense, passport, governmentId, phone, email, otp, other, geoLocation
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(stringValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(intValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
+    public var intValue: Swift.Int? {
+      get
+    }
+    #endif
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias AllCases = [NeoInterfaces.DocumentClass]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [NeoInterfaces.DocumentClass] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension NeoInterfaces.DocumentClass {
+  public var isGovernmentIdClass: Swift.Bool {
+    get
+  }
+}
+public enum DocumentKeys : Swift.String {
+  case TYPE
+  case OTP_TYPE
+  case FRONT_IMAGE
+  case BACK_IMAGE
+  case BARCODE
+  case MRZDATA
+  case FIRST_NAME
+  case MIDDLE_NAME
+  case LAST_NAME
+  case FULL_NAME
+  case ADDITIONAL_NAME_INFO
+  case LOCALIZED_NAME
+  case FATHERS_NAME
+  case MOTHERS_NAME
+  case ADDRESS
+  case ADDRESS_STREET
+  case ADDRESS_CITY
+  case ADDRESS_STATE
+  case ADDRESS_ZIP
+  case COUNTRY
+  case ADDITIONAL_ADDRESS_INFORMATION
+  case ADDITIONAL_OPTIONAL_ADDRESS_INFORMATION
+  case SEX
+  case DATE_OF_BIRTH
+  case PLACE_OF_BIRTH
+  case NATIONALITY
+  case MARITAL_STATUS
+  case RACE
+  case RELIGION
+  case RESIDENTIAL_STATUS
+  case DOCUMENT_NUMBER
+  case DOCUMENT_ADDITIONAL_NUMBER
+  case DOCUMENT_OPTIONAL_ADDITIONAL_NUMBER
+  case PERSONAL_ID_NUMBER
+  case DATE_OF_ISSUE
+  case DATE_OF_EXPIRY
+  case ISSUING_AUTHORITY
+  case EMPLOYER
+  case PROFESSION
+  case OCR_DATA
+  case OCR_DATA_FRONT
+  case OCR_DATA_BACK
+  case IAD_PAYLOAD
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.String)
+  #endif
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PayloadSize : Swift.Int {
+  case small
+  case normal
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(value: Swift.String?)
+  #endif
+  public static var `default`: NeoInterfaces.PayloadSize {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum DocumentCaptureError : Swift.Error {
+  case selfieMemoryError
+  case submissionError(_: Swift.String)
+  case missingDocumentCaptureListener
+  case captureTimedOut
+  case otpTimedOut
+  case otpInformationMissing
+  case incompatibleOS
+  case initError(_: Swift.String)
+  case error(underlyingError: any Swift.Error)
+  case cannotProcessImage(_: Swift.String)
+}
+extension NeoInterfaces.DocumentCaptureError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+}
+extension NeoInterfaces.DocumentCaptureError : Swift.Equatable {
+  public static func == (lhs: NeoInterfaces.DocumentCaptureError, rhs: NeoInterfaces.DocumentCaptureError) -> Swift.Bool
+}
+public class ProviderLicense : Swift.Codable {
+  final public let name: Swift.String?
+  final public let version: Swift.String?
+  final public let key: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(name: Swift.String? = nil, version: Swift.String? = nil, key: Swift.String)
+  #endif
+  required public init(from decoder: any Swift.Decoder) throws
+  public func getName() -> Swift.String
+  public func getVersion() -> Swift.String
+  public func getKey() -> Swift.String
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class Requirements : Swift.Decodable {
+  public init()
+  required public init(from decoder: any Swift.Decoder) throws
+  public func hasRequirements() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getValue() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func getOptions() -> [Swift.String]?
+  #endif
+  @objc deinit
+}
+public protocol LicenseProviderContract {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func getLicenseFor(sdkIdentifier: Swift.String, sdkVersion: Swift.String) -> NeoInterfaces.ProviderLicense?
+  #endif
+}
+public protocol RequirementsProtocol : AnyObject {
+  var requirementsValue: NeoInterfaces.Requirements { get set }
+}
+public protocol DocumentCaptureSettings : AnyObject {
+  var documentType: NeoInterfaces.DocumentClass { get set }
+  var optional: Swift.Bool { get set }
+  var isAuthflow: Swift.Bool { get set }
+  var isRetry: Swift.Bool { get set }
+  var payloadSize: NeoInterfaces.PayloadSize { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var collectionOptions: [NeoInterfaces.CaptureCollectionOption]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var collectionSessions: [NeoInterfaces.CaptureCollectionSession]? { get set }
+  #endif
+}
+public struct CaptureCollectionOption {
+  public let text: NeoInterfaces.CaptureCollectionOptionText?
+  public let image: Swift.String?
+  public let type: Swift.String?
+  public let identifier: Swift.String?
+  public let requiresSession: Swift.Bool?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(text: NeoInterfaces.CaptureCollectionOptionText?, image: Swift.String?, type: Swift.String?, identifier: Swift.String?, requiresSession: Swift.Bool?)
+  #endif
+}
+public struct CaptureCollectionOptionText {
+  public let languagePackKey: Swift.String?
+  public let defaultText: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(languagePackKey: Swift.String?, defaultText: Swift.String?)
+  #endif
+}
+public struct CaptureCollectionSession {
+  public let type: Swift.String?
+  public let identifier: Swift.String?
+  public let dcApiRequest: [Swift.String : Swift.String]?
+  public let redirectUrl: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(type: Swift.String?, identifier: Swift.String?, dcApiRequest: [Swift.String : Swift.String]?, redirectUrl: Swift.String?)
+  #endif
+}
+extension NeoInterfaces.LocationPermissionStatus : Swift.Equatable {}
+extension NeoInterfaces.LocationPermissionStatus : Swift.Hashable {}
+extension NeoInterfaces.DocumentClass : Swift.Equatable {}
+extension NeoInterfaces.DocumentClass : Swift.Hashable {}
+extension NeoInterfaces.DocumentClass : Swift.RawRepresentable {}
+extension NeoInterfaces.DocumentClass.CodingKeys : Swift.Equatable {}
+extension NeoInterfaces.DocumentClass.CodingKeys : Swift.Hashable {}
+extension NeoInterfaces.DocumentClass.CodingKeys : Swift.RawRepresentable {}
+extension NeoInterfaces.DocumentKeys : Swift.Equatable {}
+extension NeoInterfaces.DocumentKeys : Swift.Hashable {}
+extension NeoInterfaces.DocumentKeys : Swift.RawRepresentable {}
+extension NeoInterfaces.PayloadSize : Swift.Equatable {}
+extension NeoInterfaces.PayloadSize : Swift.Hashable {}
+extension NeoInterfaces.PayloadSize : Swift.RawRepresentable {}
