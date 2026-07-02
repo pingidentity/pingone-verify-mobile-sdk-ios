@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oSw3KeZEUhNrZ3cQkjhhaT7l/4g=
+		EzoHya4WKJkos52DLQwGXWl8AVE=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		eoGWtI5TI9BCrMqF1ddp1QJqjV0=
+		nRqV24qWiWjh5WqvkhF5oyD3k7s=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Ly9aQSLaV6p+JS+Nf4SC2t+SYWk=
+		ydaa9atluiOc/zQcLm8x25JwFUA=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		R9rOIHb/8c2Ah/9E9YKW4L9cR64=
+		9WIb1o8DAWOLWL/IavlJsqFq51c=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Ly9aQSLaV6p+JS+Nf4SC2t+SYWk=
+		ydaa9atluiOc/zQcLm8x25JwFUA=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YQTPIm4aYwQDU3PXgovX7CUCP88=
+		EZ/PwC8Rz9Co8SqyiI+4m90frCA=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		eoGWtI5TI9BCrMqF1ddp1QJqjV0=
+		nRqV24qWiWjh5WqvkhF5oyD3k7s=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		UtrsE+si8di/XLRP/gyhBq4vLyE=
+		wNP666VmNq8f20dBpWk2TOUfIkA=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RA/DqznXSnt8Ou9Ei0zIvlmhQLM=
+		0tv+XmamfMHDECGKlJSIqIXRyy4=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UtrsE+si8di/XLRP/gyhBq4vLyE=
+		wNP666VmNq8f20dBpWk2TOUfIkA=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XIqzotJMc1bU9Lk4kIpguKvJMQw=
+		VYf/SHRjbHw7sV/EeUaNFwyWhIg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,70 +70,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RtKKxPT5xWWixI6HRlWq80R4e/ZHaC4K0LdW11no0Bg=
+			eGutKIRSMewM0kJglvTMAr0M5O6hmNGBGUZ9EL5Hnng=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zt/QCtcty87Ywgil6OnhQIgfs6YmZnFD/4wcOID0oSo=
+			N1KMEaux3QYqYkBBt8eIAiTEb8r0LN6UbR9hvSh2ogI=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cX+w4BNfNhefPhp45tKj0uE8AjAgJ7fL/v1P+4kRB1Q=
+			0CJL9EvrlHsx+HJ6Md6NGZmXKgblLqhhxWV2aphMtSE=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zt/QCtcty87Ywgil6OnhQIgfs6YmZnFD/4wcOID0oSo=
+			N1KMEaux3QYqYkBBt8eIAiTEb8r0LN6UbR9hvSh2ogI=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			isOo5Z5NGwy8QtE5yUYCEPxY1DZ4g6a6XVJBtoEuUIo=
+			ieAUaiJzTlEgLiM7QvrpDxptyWPnOfgpR+iargnQtCs=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RtKKxPT5xWWixI6HRlWq80R4e/ZHaC4K0LdW11no0Bg=
+			eGutKIRSMewM0kJglvTMAr0M5O6hmNGBGUZ9EL5Hnng=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q+WozO+syusM88zY0vrRJTpyI0dI5rwReyqIHyy/fGs=
+			+GPKpAxYvr29lJ2OOnZt7tFgsWDRIwak8h/du7IjNrY=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZKZfCWHFtG2fNyzXyA8YVCsMTKbIEptpV4RHeex5e1M=
+			exbI8Sf4rVo7q3x/UXbtZ3rlkC8yT+aVwJyaUgmE7NQ=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q+WozO+syusM88zY0vrRJTpyI0dI5rwReyqIHyy/fGs=
+			+GPKpAxYvr29lJ2OOnZt7tFgsWDRIwak8h/du7IjNrY=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W4BWUk1LMUMFHbVnzpExtlG4Grog5BsdFOAh9Wg83as=
+			JboAznG3wkvzvYJtkNLk1ymLW6A0Zm5MhWIYwAaAMbc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

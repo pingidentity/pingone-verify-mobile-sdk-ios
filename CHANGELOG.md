@@ -1,5 +1,12 @@
 # Changelog
 
+
+## v3.2.5 - July 2nd, 2026
+
+### Fixed
+
+- Handling dismissal of the navigation controller presented by the SDK
+
 ## v3.2.4 - June 24th, 2026
 
 ### Fixed
