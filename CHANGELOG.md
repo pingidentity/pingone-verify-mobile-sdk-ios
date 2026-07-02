@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.2.5 - July 2nd, 2026
+
+### Fixed
+
+- Fixed proper dismissal of navigation controller
+
+
 ## v3.2.4 - June 24th, 2026
 
 ### Fixed
