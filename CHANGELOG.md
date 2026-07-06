@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.3.0 - April 28th, 2026
+
+### Added
+
+- Enforced a hard stop in the collection flow when users deny required location permissions.
+
 ## v3.2.3 - June 5th, 2026
 
 ### Fixed
