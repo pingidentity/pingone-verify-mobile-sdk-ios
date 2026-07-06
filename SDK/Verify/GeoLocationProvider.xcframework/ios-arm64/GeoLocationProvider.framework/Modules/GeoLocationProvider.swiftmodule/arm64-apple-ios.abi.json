@@ -85,6 +85,36 @@
           },
           {
             "kind": "Function",
+            "name": "locationManagerDidChangeAuthorization",
+            "printedName": "locationManagerDidChangeAuthorization(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CLLocationManager",
+                "printedName": "CoreLocation.CLLocationManager",
+                "usr": "c:objc(cs)CLLocationManager"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GeoLocationProvider@objc(cs)GeoLocationProviders(im)locationManagerDidChangeAuthorization:",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersC37locationManagerDidChangeAuthorizationyySo010CLLocationF0CF",
+            "moduleName": "GeoLocationProvider",
+            "objc_name": "locationManagerDidChangeAuthorization:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "locationManager",
             "printedName": "locationManager(_:didUpdateLocations:)",
             "children": [
@@ -158,6 +188,28 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isLocationPermissionGranted",
+            "printedName": "isLocationPermissionGranted()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LocationPermissionStatus",
+                "printedName": "NeoInterfaces.LocationPermissionStatus",
+                "usr": "s:13NeoInterfaces24LocationPermissionStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19GeoLocationProvider0aB9ProvidersC02isB17PermissionGranted13NeoInterfaces0bF6StatusOyF",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersC02isB17PermissionGranted13NeoInterfaces0bF6StatusOyF",
+            "moduleName": "GeoLocationProvider",
+            "declAttributes": [
               "AccessControl"
             ],
             "isFromExtension": true,
@@ -300,5 +352,20 @@
     ],
     "json_format_version": 8
   },
-  "ConstValues": []
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 251,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 300,
+      "length": 5,
+      "value": "false"
+    }
+  ]
 }
