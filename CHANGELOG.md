@@ -6,6 +6,12 @@
 
 - Enforced a hard stop in the collection flow when users deny required location permissions.
 
+## v3.2.3 - June 5th, 2026
+
+### Fixed
+
+- SDK not submitting barcode for DLs
+
 ## v3.2.2 - April 17th, 2026
 
 ### Fixed
