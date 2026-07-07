@@ -160,6 +160,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "LanguagePackProviderContract",
+            "printedName": "LanguagePackProviderContract",
+            "usr": "s:13NeoInterfaces28LanguagePackProviderContractP",
+            "mangledName": "$s13NeoInterfaces28LanguagePackProviderContractP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -171,13 +178,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LanguagePackProviderContract",
-            "printedName": "LanguagePackProviderContract",
-            "usr": "s:13NeoInterfaces28LanguagePackProviderContractP",
-            "mangledName": "$s13NeoInterfaces28LanguagePackProviderContractP"
           }
         ]
       },

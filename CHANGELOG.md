@@ -1,10 +1,19 @@
 # Changelog
 
-## v3.3.0 - April 28th, 2026
+## v3.2.5 - July 2nd, 2026
 
-### Added
+### Fixed
 
-- Enforced a hard stop in the collection flow when users deny required location permissions.
+- Fixed proper dismissal of navigation controller
+
+
+## v3.2.4 - June 24th, 2026
+
+### Fixed
+
+- SDK not submitting barcode for IDs
+- Removed the GlassUI effect from the back button 
+- Fix for overriding localization from app 
 
 ## v3.2.3 - June 5th, 2026
 
