@@ -7,5 +7,4 @@ framework module PingOneVerify {
 
 module PingOneVerify.Swift {
   header "PingOneVerify-Swift.h"
-  requires objc
 }
