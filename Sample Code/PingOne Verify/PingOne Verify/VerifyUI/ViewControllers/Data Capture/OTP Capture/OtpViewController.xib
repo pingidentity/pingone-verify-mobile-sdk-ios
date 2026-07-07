@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpViewController" customModule="PingOneVerifySample" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTextView" destination="Rdx-7N-LTN" id="8Dg-ZZ-8fH"/>
+                <outlet property="otpTextField" destination="8jS-FF-dGe" id="doy-3h-NOH"/>
+                <outlet property="otpTimerLabel" destination="ccp-bj-now" id="B6n-ch-dj9"/>
+                <outlet property="resendButton" destination="GVs-00-vfD" id="Zc1-7I-Ib8"/>
+                <outlet property="submitPasscodeButton" destination="lzw-BS-0oC" id="hi1-KM-4FU"/>
+                <outlet property="submitPasscodeButtonBottomConstraint" destination="J6X-FX-0do" id="TC8-Ta-2MU"/>
+                <outlet property="titleLabel" destination="Z3L-KU-rfW" id="nU4-1d-kP2"/>
+                <outlet property="view" destination="3gY-Xf-h3l" id="6iv-ak-tcw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3gY-Xf-h3l" customClass="BaseView" customModule="PingOneVerifySample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lib_bg" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-EZ-l7H">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-BS-0oC" customClass="VerifyButton" customModule="PingOneVerifySample" customModuleProvider="target">
+                    <rect key="frame" x="25" y="696" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gCL-Af-syH"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Submit Passcode"/>
+                    <connections>
+                        <action selector="onSubmitButtonPressed:" destination="-1" eventType="touchUpInside" id="w7O-o3-j36"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Please type the verification code sent to 0000000000" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdx-7N-LTN">
+                    <rect key="frame" x="25" y="212" width="328" height="59"/>
+                    <color key="textColor" red="0.14509803921568626" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3L-KU-rfW" customClass="HeaderLabel" customModule="PingOneVerifySample" customModuleProvider="target">
+                    <rect key="frame" x="25" y="151" width="328" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" red="0.14509803921568626" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccp-bj-now">
+                    <rect key="frame" x="25" y="356" width="343" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.40784313725490196" green="0.45490196078431372" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVs-00-vfD">
+                    <rect key="frame" x="40" y="376" width="313" height="34"/>
+                    <state key="normal" title="Resend Verification Code"/>
+                    <connections>
+                        <action selector="resendOtpButtonPressed:" destination="-1" eventType="touchUpInside" id="Mje-LJ-c46"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jS-FF-dGe" customClass="CustomTextField" customModule="PingOneVerifySample" customModuleProvider="target">
+                    <rect key="frame" x="25" y="296" width="343" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="xV6-nY-tYw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Kpt-Ha-wX8"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ccp-bj-now" firstAttribute="top" secondItem="8jS-FF-dGe" secondAttribute="bottom" constant="10" id="0ED-7K-g0B"/>
+                <constraint firstItem="EbH-EZ-l7H" firstAttribute="trailing" secondItem="3gY-Xf-h3l" secondAttribute="trailing" id="1Wq-Ue-3wy"/>
+                <constraint firstItem="GVs-00-vfD" firstAttribute="top" secondItem="ccp-bj-now" secondAttribute="bottom" constant="20" id="4Fd-hV-PNX"/>
+                <constraint firstItem="Kpt-Ha-wX8" firstAttribute="trailing" secondItem="Z3L-KU-rfW" secondAttribute="trailing" constant="40" id="A0h-2r-KaJ"/>
+                <constraint firstItem="EbH-EZ-l7H" firstAttribute="bottom" secondItem="3gY-Xf-h3l" secondAttribute="bottom" id="C6g-bi-NEk"/>
+                <constraint firstItem="GVs-00-vfD" firstAttribute="leading" secondItem="Kpt-Ha-wX8" secondAttribute="leading" constant="40" id="J1f-Ud-Gqs"/>
+                <constraint firstItem="Kpt-Ha-wX8" firstAttribute="bottom" secondItem="lzw-BS-0oC" secondAttribute="bottom" constant="38" id="J6X-FX-0do"/>
+                <constraint firstItem="Kpt-Ha-wX8" firstAttribute="trailing" secondItem="ccp-bj-now" secondAttribute="trailing" constant="25" id="JJ9-GN-rcP"/>
+                <constraint firstItem="lzw-BS-0oC" firstAttribute="centerX" secondItem="Kpt-Ha-wX8" secondAttribute="centerX" id="LQd-Js-YA7"/>
+                <constraint firstItem="Kpt-Ha-wX8" firstAttribute="trailing" secondItem="GVs-00-vfD" secondAttribute="trailing" constant="40" id="LXj-CS-JBU"/>
+                <constraint firstAttribute="top" secondItem="EbH-EZ-l7H" secondAttribute="top" id="MrC-Ey-BKS"/>
+                <constraint firstItem="Kpt-Ha-wX8" firstAttribute="trailing" secondItem="8jS-FF-dGe" secondAttribute="trailing" constant="25" id="YHN-PX-LtP"/>
+                <constraint firstItem="GVs-00-vfD" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="lzw-BS-0oC" secondAttribute="top" constant="20" id="YeX-Hr-e4E"/>
+                <constraint firstItem="Rdx-7N-LTN" firstAttribute="leading" secondItem="Kpt-Ha-wX8" secondAttribute="leading" constant="25" id="Zed-Zz-dbO"/>
+                <constraint firstItem="8jS-FF-dGe" firstAttribute="top" secondItem="Rdx-7N-LTN" secondAttribute="bottom" constant="25" id="axp-sm-Ago"/>
+                <constraint firstItem="Kpt-Ha-wX8" firstAttribute="trailing" secondItem="lzw-BS-0oC" secondAttribute="trailing" constant="25" id="dKE-fV-X2D"/>
+                <constraint firstItem="Z3L-KU-rfW" firstAttribute="leading" secondItem="Kpt-Ha-wX8" secondAttribute="leading" constant="25" id="dcJ-Fc-IsW"/>
+                <constraint firstItem="8jS-FF-dGe" firstAttribute="leading" secondItem="Kpt-Ha-wX8" secondAttribute="leading" constant="25" id="e1E-aZ-4l6"/>
+                <constraint firstAttribute="leading" secondItem="EbH-EZ-l7H" secondAttribute="leading" id="eyj-tH-wzl"/>
+                <constraint firstItem="ccp-bj-now" firstAttribute="leading" secondItem="Kpt-Ha-wX8" secondAttribute="leading" constant="25" id="g9E-N2-rIh"/>
+                <constraint firstItem="Kpt-Ha-wX8" firstAttribute="trailing" secondItem="Rdx-7N-LTN" secondAttribute="trailing" constant="40" id="iiQ-oC-uyo"/>
+                <constraint firstItem="Rdx-7N-LTN" firstAttribute="top" secondItem="Z3L-KU-rfW" secondAttribute="bottom" constant="25" id="l3u-tz-4M5"/>
+                <constraint firstItem="Z3L-KU-rfW" firstAttribute="top" secondItem="Kpt-Ha-wX8" secondAttribute="top" constant="33" id="nn5-SJ-Axz"/>
+                <constraint firstItem="ccp-bj-now" firstAttribute="centerX" secondItem="Kpt-Ha-wX8" secondAttribute="centerX" id="q00-Zi-EJs"/>
+                <constraint firstItem="lzw-BS-0oC" firstAttribute="leading" secondItem="Kpt-Ha-wX8" secondAttribute="leading" constant="25" id="zgE-tm-1bF"/>
+            </constraints>
+            <point key="canvasLocation" x="1377.8625954198474" y="74.647887323943664"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lib_bg" width="1" height="1"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

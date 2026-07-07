@@ -1,0 +1,110 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SelfieCaptureProvider
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+import AVFoundation
+import Foundation
+import IDLiveFaceCamera
+import NeoInterfaces
+@_exported import SelfieCaptureProvider
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers public class SelfieCaptureProviders : ObjectiveC.NSObject, NeoInterfaces.SelfieCaptureProviderContract {
+  @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func startCapture(from navigationController: UIKit.UINavigationController, settings: Swift.AnyObject?, licenseKey: Swift.String, listener: any NeoInterfaces.SelfieCaptureProviderListener)
+  #endif
+  public func reassignListener(_ listener: any NeoInterfaces.SelfieCaptureProviderListener)
+  public func restartCapture()
+  public func prepareSelfiePayload(jpegData: Foundation.Data) throws -> [Swift.String : Swift.String]
+  public func cleanupCaptureSession()
+  @objc deinit
+}
+extension SelfieCaptureProvider.SelfieCaptureProviders : SelfieCaptureProvider.SelfieCaptureListener {
+  public func onSelfieCaptured(_ selfie: UIKit.UIImage, jpegData: Foundation.Data)
+  public func onError(_ error: NeoInterfaces.DocumentCaptureError)
+  public func closeButtonTapped()
+}
+public enum SelfieCaptureProviderError : Swift.Error {
+  case presenterNotAvailable
+  public static func == (a: SelfieCaptureProvider.SelfieCaptureProviderError, b: SelfieCaptureProvider.SelfieCaptureProviderError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class SelfieCapturePresenter {
+  public var idCameraControllerDelegate: (any IDLiveFaceCamera.IDCameraControllerDelegate)?
+  public var licenseProvider: (any NeoInterfaces.LicenseProviderContract)!
+  public var sdkIdentifier: Swift.String
+  public var sdkVersion: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(selfieCaptureListener: any SelfieCaptureProvider.SelfieCaptureListener, selfieCaptureSettings: (any NeoInterfaces.DocumentCaptureSettings)?, idCameraControllerDelegate: (any IDLiveFaceCamera.IDCameraControllerDelegate)?, licenseProvider: any NeoInterfaces.LicenseProviderContract) throws
+  #endif
+  public func updateLicense() throws
+  @objc deinit
+  public func startCapture(navigationController: UIKit.UINavigationController)
+  public func restartCapture()
+  public func reassignListener(_ listener: any SelfieCaptureProvider.SelfieCaptureListener)
+  public func cleanupCaptureSession()
+  public func prepareSelfiePayload(jpegData: Foundation.Data) throws -> [Swift.String : Swift.String]
+}
+extension SelfieCaptureProvider.SelfieCapturePresenter : IDLiveFaceCamera.IDCameraControllerDelegate {
+  public func cameraController(_ controller: IDLiveFaceCamera.IDCameraControllerBase, didCaptureImage image: IDLiveFaceCamera.IDImage)
+  public func cameraController(_ controller: IDLiveFaceCamera.IDCameraControllerBase, didEncounterError error: IDLiveFaceCamera.IDCameraControllerBase.Error)
+  public func cameraControllerUserDidPressResultButton(_ controller: IDLiveFaceCamera.IDCameraControllerBase)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func cameraControllerDidUpdateFaceResult(_ controller: IDLiveFaceCamera.IDCameraControllerBase, result: IDLiveFaceCamera.FaceDetectorResult, image: IDLiveFaceCamera.IDImage?, momentary: Swift.Bool)
+  #endif
+}
+public protocol SelfieCaptureListener : AnyObject {
+  func onSelfieCaptured(_ selfie: UIKit.UIImage, jpegData: Foundation.Data)
+  func onError(_ error: NeoInterfaces.DocumentCaptureError)
+  func closeButtonTapped()
+}
+@objc @_Concurrency.MainActor @preconcurrency public class CameraOverlayView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var previewRectFrame: CoreFoundation.CGRect?
+  @_Concurrency.MainActor @preconcurrency public var overlayBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var drawOutline: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class OvalCameraOverlayView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var previewRectFrame: CoreFoundation.CGRect?
+  @_Concurrency.MainActor @preconcurrency public var overlayBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var drawOutline: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency public func updateOutlineColor(_ newColor: UIKit.UIColor)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CenterTextLayer : QuartzCore.CATextLayer {
+  @objc override dynamic public func draw(in ctx: CoreGraphics.CGContext)
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
+  @objc deinit
+}
+extension UIKit.UIColor {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func loadColor(named: Swift.String) -> UIKit.UIColor?
+  #endif
+}
+extension UIKit.UIImage {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func loadImage(named: Swift.String) -> UIKit.UIImage?
+  #endif
+}
+extension SelfieCaptureProvider.SelfieCaptureProviderError : Swift.Equatable {}
+extension SelfieCaptureProvider.SelfieCaptureProviderError : Swift.Hashable {}

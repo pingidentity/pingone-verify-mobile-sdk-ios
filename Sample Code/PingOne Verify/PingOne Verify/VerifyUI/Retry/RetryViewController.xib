@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RetryViewController" customModule="VerifyUI" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="rWt-da-s8x" id="r6f-dH-aFi"/>
+                <outlet property="headerLabel" destination="48q-D0-z95" id="FtX-Wq-d5C"/>
+                <outlet property="reasonLabel" destination="XrV-Rt-4Rm" id="fF1-mS-hjN"/>
+                <outlet property="closeButton" destination="MQs-k3-Vjv" id="Retry-close-outlet"/>
+                <outlet property="iconImageView" destination="2C7-gd-1SK" id="Retry-icon-outlet"/>
+                <outlet property="retryButton" destination="x8h-lI-lmE" id="5ro-3o-G0k"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="BaseView" customModule="VerifyUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O3d-kc-YHA">
+                    <rect key="frame" x="25" y="638" width="343" height="106"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8h-lI-lmE" customClass="VerifyButton" customModule="VerifyUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="qUH-n3-PM4"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Retry"/>
+                            <connections>
+                                <action selector="retryButtonTapped:" destination="-1" eventType="touchUpInside" id="vxw-H7-Pot"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWt-da-s8x" customClass="BorderedButton" customModule="VerifyUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="58" width="343" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="2UE-bB-jyu"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="RYG-tG-hV0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2C7-gd-1SK" customClass="IconImageView" customModule="VerifyUI" customModuleProvider="target">
+                    <rect key="frame" x="111" y="259" width="171" height="167"/>
+                    <accessibility key="accessibilityConfiguration" label="Retry Image">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="167" id="9y9-b9-sPP"/>
+                        <constraint firstAttribute="width" constant="171" id="Lj8-zy-4Oo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retry" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48q-D0-z95" customClass="HeaderLabel" customModule="VerifyUI" customModuleProvider="target">
+                    <rect key="frame" x="25" y="446" width="343" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.1450980392" green="0.2156862745" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The selfie was not clear enough. Please take another selfie." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrV-Rt-4Rm">
+                    <rect key="frame" x="25" y="471.33333333333331" width="343" height="40.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.14509803921568626" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQs-k3-Vjv">
+                    <rect key="frame" x="15" y="40" width="50" height="40"/>
+                    <accessibility key="accessibilityConfiguration" label="Cancel"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="RIU-lD-0om"/>
+                        <constraint firstAttribute="width" constant="50" id="zEE-CR-tid"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="idv_cancel" title=" "/>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="GSx-0x-lDd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="48q-D0-z95" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Od-CD-xJp"/>
+                <constraint firstItem="MQs-k3-Vjv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="6yn-8L-xdf"/>
+                <constraint firstItem="O3d-kc-YHA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="9uT-2a-SjN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O3d-kc-YHA" secondAttribute="bottom" constant="40" id="DPU-3r-4gL"/>
+                <constraint firstItem="48q-D0-z95" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="GOX-bH-cC4"/>
+                <constraint firstItem="2C7-gd-1SK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="141" id="Hwp-tv-zKO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XrV-Rt-4Rm" secondAttribute="trailing" constant="25" id="I47-gq-iy6"/>
+                <constraint firstItem="MQs-k3-Vjv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="M9L-kh-vy8"/>
+                <constraint firstItem="2C7-gd-1SK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Mwg-1W-fio"/>
+                <constraint firstItem="XrV-Rt-4Rm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S4Z-C8-VuX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="48q-D0-z95" secondAttribute="trailing" constant="25" id="T3i-da-RrG"/>
+                <constraint firstItem="48q-D0-z95" firstAttribute="top" secondItem="2C7-gd-1SK" secondAttribute="bottom" constant="20" id="TlC-hO-hgm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O3d-kc-YHA" secondAttribute="trailing" constant="25" id="gnF-g3-09B"/>
+                <constraint firstItem="XrV-Rt-4Rm" firstAttribute="top" secondItem="48q-D0-z95" secondAttribute="bottom" constant="5" id="khV-SS-bha"/>
+                <constraint firstItem="XrV-Rt-4Rm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="wZY-3B-9OI"/>
+            </constraints>
+            <point key="canvasLocation" x="6.8702290076335872" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="idv_cancel" width="16.333333969116211" height="16.333333969116211"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

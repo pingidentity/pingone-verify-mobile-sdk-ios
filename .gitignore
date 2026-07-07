@@ -23,3 +23,18 @@ DerivedData
 .DS_Store
 /APNS_Certs
 **/*.xcconfig
+
+# Claude Code
+.claude/
+
+# dSYMs
+**/dSYMs/
+
+# Swift documentation metadata (not needed for compilation or distribution)
+**/*.swiftdoc
+
+# Simulator ABI JSON (only device slices are needed)
+**/*simulator*.abi.json
+
+# Override global gitignore — CodeResources must be tracked for xcframework code signing
+!**/_CodeSignature/CodeResources

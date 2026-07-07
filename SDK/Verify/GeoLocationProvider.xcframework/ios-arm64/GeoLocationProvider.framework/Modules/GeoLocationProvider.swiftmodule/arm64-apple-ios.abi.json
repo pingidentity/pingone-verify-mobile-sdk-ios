@@ -6,8 +6,8 @@
     "children": [
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "GeoLocationProvider"
       },
@@ -33,6 +33,33 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationProviders",
+                "printedName": "GeoLocationProvider.GeoLocationProviders",
+                "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders(im)init",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersCACycfc",
+            "moduleName": "GeoLocationProvider",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(listener:)",
             "children": [
               {
@@ -53,33 +80,8 @@
             "mangledName": "$s19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfc",
             "moduleName": "GeoLocationProvider",
             "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "GeoLocationProviders",
-                "printedName": "GeoLocationProvider.GeoLocationProviders",
-                "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders(im)init",
-            "mangledName": "$s19GeoLocationProvider0aB9ProvidersCACycfc",
-            "moduleName": "GeoLocationProvider",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -270,68 +272,21 @@
         "moduleName": "GeoLocationProvider",
         "declAttributes": [
           "AccessControl",
+          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "GeoLocationProviderContract",
-            "printedName": "GeoLocationProviderContract",
-            "usr": "s:13NeoInterfaces27GeoLocationProviderContractP",
-            "mangledName": "$s13NeoInterfaces27GeoLocationProviderContractP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -342,10 +297,59 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "GeoLocationProviderContract",
+            "printedName": "GeoLocationProviderContract",
+            "usr": "s:13NeoInterfaces27GeoLocationProviderContractP",
+            "mangledName": "$s13NeoInterfaces27GeoLocationProviderContractP"
           }
         ]
       }
@@ -354,16 +358,16 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 251,
+      "offset": 673,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 300,
+      "offset": 722,
       "length": 5,
       "value": "false"
     }

@@ -3,34 +3,150 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1C4253712909C178008E871B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4253702909C178008E871B /* AppDelegate.swift */; };
 		1C4253752909C178008E871B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4253742909C178008E871B /* ViewController.swift */; };
-		1C42537A2909C179008E871B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253792909C179008E871B /* Assets.xcassets */; };
 		1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C42537B2909C179008E871B /* LaunchScreen.storyboard */; };
 		1C4253862909C286008E871B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253842909C286008E871B /* Main.storyboard */; };
-		638AA5A62F72C2E900DA6D81 /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA56F2F72B9F500DA6D81 /* BlinkID.xcframework */; };
-		638AA5A72F72C2E900DA6D81 /* BlinkID.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA56F2F72B9F500DA6D81 /* BlinkID.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		638AA5A82F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5702F72B9F500DA6D81 /* BlinkIDUX.xcframework */; };
-		638AA5A92F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5702F72B9F500DA6D81 /* BlinkIDUX.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		638AA5AA2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; };
-		638AA5AB2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		638AA5AC2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5722F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework */; };
-		638AA5AD2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5722F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		638AA5AE2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5732F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework */; };
-		638AA5AF2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5732F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		638AA5B02F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5742F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework */; };
-		638AA5B12F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5742F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		638AA5B22F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5752F72B9F500DA6D81 /* LanguagePackProvider.xcframework */; };
-		638AA5B32F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5752F72B9F500DA6D81 /* LanguagePackProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63817A9A2FCD514B00F3EE21 /* GeoLocationProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; };
+		63817A9B2FCD514B00F3EE21 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		638AA5B42F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */; };
 		638AA5B52F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		638AA5B62F72C2FC00DA6D81 /* PingOneVerify.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */; };
 		638AA5B72F72C2FC00DA6D81 /* PingOneVerify.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */; };
+		63CBDDF62FEE8A0400E6C75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDDF52FEE8A0400E6C75E /* Assets.xcassets */; };
+		63CBDEB92FEF0F0400E6C75E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE0D2FEF0F0400E6C75E /* ImageCell.swift */; };
+		63CBDEBA2FEF0F0400E6C75E /* CustomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE182FEF0F0400E6C75E /* CustomMenu.swift */; };
+		63CBDEBB2FEF0F0400E6C75E /* ImageTransformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE902FEF0F0400E6C75E /* ImageTransformations.swift */; };
+		63CBDEBC2FEF0F0400E6C75E /* QrScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE6D2FEF0F0400E6C75E /* QrScannerPresenter.swift */; };
+		63CBDEBD2FEF0F0400E6C75E /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE9B2FEF0F0400E6C75E /* OtpViewController.swift */; };
+		63CBDEBE2FEF0F0400E6C75E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE242FEF0F0400E6C75E /* BaseView.swift */; };
+		63CBDEBF2FEF0F0400E6C75E /* UIImage+addGrandient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE3E2FEF0F0400E6C75E /* UIImage+addGrandient.swift */; };
+		63CBDEC02FEF0F0400E6C75E /* DocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE5A2FEF0F0400E6C75E /* DocumentModel.swift */; };
+		63CBDEC12FEF0F0400E6C75E /* CustomPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE1E2FEF0F0400E6C75E /* CustomPhoneView.swift */; };
+		63CBDEC22FEF0F0400E6C75E /* CustomMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE152FEF0F0400E6C75E /* CustomMenuItemCell.swift */; };
+		63CBDEC32FEF0F0400E6C75E /* CustomToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE212FEF0F0400E6C75E /* CustomToastView.swift */; };
+		63CBDEC42FEF0F0400E6C75E /* CGRect+CenteredRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE7D2FEF0F0400E6C75E /* CGRect+CenteredRect.swift */; };
+		63CBDEC52FEF0F0400E6C75E /* LabelCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE132FEF0F0400E6C75E /* LabelCellContent.swift */; };
+		63CBDEC62FEF0F0400E6C75E /* CenterTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE892FEF0F0400E6C75E /* CenterTextLayer.swift */; };
+		63CBDEC72FEF0F0400E6C75E /* UIViewController+requestCameraPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE4F2FEF0F0400E6C75E /* UIViewController+requestCameraPermission.swift */; };
+		63CBDEC82FEF0F0400E6C75E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE952FEF0F0400E6C75E /* BaseViewController.swift */; };
+		63CBDEC92FEF0F0400E6C75E /* ProcessingColorHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE2C2FEF0F0400E6C75E /* ProcessingColorHolderView.swift */; };
+		63CBDECA2FEF0F0400E6C75E /* BaseViewControllerWithTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE962FEF0F0400E6C75E /* BaseViewControllerWithTextField.swift */; };
+		63CBDECB2FEF0F0400E6C75E /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE252FEF0F0400E6C75E /* BlurLoader.swift */; };
+		63CBDECC2FEF0F0400E6C75E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE2A2FEF0F0400E6C75E /* OTPTextField.swift */; };
+		63CBDECD2FEF0F0400E6C75E /* CustomCountryPickerViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE0A2FEF0F0400E6C75E /* CustomCountryPickerViewController+UISearchResultsUpdating.swift */; };
+		63CBDECE2FEF0F0400E6C75E /* UITextField+setPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE4A2FEF0F0400E6C75E /* UITextField+setPadding.swift */; };
+		63CBDECF2FEF0F0400E6C75E /* DataCaptureConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEA42FEF0F0400E6C75E /* DataCaptureConstants.swift */; };
+		63CBDED02FEF0F0400E6C75E /* UIColor+loadColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE3C2FEF0F0400E6C75E /* UIColor+loadColor.swift */; };
+		63CBDED12FEF0F0400E6C75E /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE812FEF0F0400E6C75E /* Expression.swift */; };
+		63CBDED22FEF0F0400E6C75E /* UIAction+handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE382FEF0F0400E6C75E /* UIAction+handler.swift */; };
+		63CBDED32FEF0F0400E6C75E /* LandmarkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE842FEF0F0400E6C75E /* LandmarkType.swift */; };
+		63CBDED42FEF0F0400E6C75E /* QrScannerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE6C2FEF0F0400E6C75E /* QrScannerListener.swift */; };
+		63CBDED52FEF0F0400E6C75E /* TintColorHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE2D2FEF0F0400E6C75E /* TintColorHolderView.swift */; };
+		63CBDED62FEF0F0400E6C75E /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE822FEF0F0400E6C75E /* Face.swift */; };
+		63CBDED72FEF0F0400E6C75E /* DocumentCaptureContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE652FEF0F0400E6C75E /* DocumentCaptureContract.swift */; };
+		63CBDED82FEF0F0400E6C75E /* ProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEB02FEF0F0400E6C75E /* ProcessingViewController.swift */; };
+		63CBDED92FEF0F0400E6C75E /* ImageCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE0F2FEF0F0400E6C75E /* ImageCellContent.swift */; };
+		63CBDEDA2FEF0F0400E6C75E /* MedianLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE852FEF0F0400E6C75E /* MedianLine.swift */; };
+		63CBDEDB2FEF0F0400E6C75E /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE332FEF0F0400E6C75E /* String+localized.swift */; };
+		63CBDEDC2FEF0F0400E6C75E /* FaceLandmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE832FEF0F0400E6C75E /* FaceLandmark.swift */; };
+		63CBDEDD2FEF0F0400E6C75E /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE6F2FEF0F0400E6C75E /* QRScannerViewController.swift */; };
+		63CBDEDE2FEF0F0400E6C75E /* CustomMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE1C2FEF0F0400E6C75E /* CustomMenuButton.swift */; };
+		63CBDEDF2FEF0F0400E6C75E /* VerifyLanguagePackProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE612FEF0F0400E6C75E /* VerifyLanguagePackProvider.swift */; };
+		63CBDEE02FEF0F0400E6C75E /* UILabel+textWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE442FEF0F0400E6C75E /* UILabel+textWidth.swift */; };
+		63CBDEE12FEF0F0400E6C75E /* UIImage+tintWithGradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE422FEF0F0400E6C75E /* UIImage+tintWithGradientColor.swift */; };
+		63CBDEE22FEF0F0400E6C75E /* PhoneCaptureUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE9F2FEF0F0400E6C75E /* PhoneCaptureUtils.swift */; };
+		63CBDEE32FEF0F0400E6C75E /* AttributedStringProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE042FEF0F0400E6C75E /* AttributedStringProvider.swift */; };
+		63CBDEE42FEF0F0400E6C75E /* UIView+BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE4C2FEF0F0400E6C75E /* UIView+BlurLoader.swift */; };
+		63CBDEE52FEF0F0400E6C75E /* PhoneCaptureViewController+CustomCountryCodePickerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEA12FEF0F0400E6C75E /* PhoneCaptureViewController+CustomCountryCodePickerListener.swift */; };
+		63CBDEE62FEF0F0400E6C75E /* DataCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEA52FEF0F0400E6C75E /* DataCaptureViewController.swift */; };
+		63CBDEE72FEF0F0400E6C75E /* UIImage+addImagePadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE3F2FEF0F0400E6C75E /* UIImage+addImagePadding.swift */; };
+		63CBDEE82FEF0F0400E6C75E /* CameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE882FEF0F0400E6C75E /* CameraOverlayView.swift */; };
+		63CBDEE92FEF0F0400E6C75E /* EmailCaptureViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE992FEF0F0400E6C75E /* EmailCaptureViewController+UITextFieldDelegate.swift */; };
+		63CBDEEA2FEF0F0400E6C75E /* CustomCountryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE082FEF0F0400E6C75E /* CustomCountryPickerViewController.swift */; };
+		63CBDEEB2FEF0F0400E6C75E /* SelfiePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE8D2FEF0F0400E6C75E /* SelfiePreviewViewController.swift */; };
+		63CBDEEC2FEF0F0400E6C75E /* LivenessCheckError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE792FEF0F0400E6C75E /* LivenessCheckError.swift */; };
+		63CBDEED2FEF0F0400E6C75E /* DocumentSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEAE2FEF0F0400E6C75E /* DocumentSelectionViewController.swift */; };
+		63CBDEEE2FEF0F0400E6C75E /* VNFaceLandmarks2D+GetAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE7E2FEF0F0400E6C75E /* VNFaceLandmarks2D+GetAll.swift */; };
+		63CBDEEF2FEF0F0400E6C75E /* SCFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE742FEF0F0400E6C75E /* SCFace.swift */; };
+		63CBDEF02FEF0F0400E6C75E /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE682FEF0F0400E6C75E /* PreviewViewController.swift */; };
+		63CBDEF12FEF0F0400E6C75E /* VerifyUIExports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEB72FEF0F0400E6C75E /* VerifyUIExports.swift */; };
+		63CBDEF22FEF0F0400E6C75E /* UIButton+preventRepeatedClicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE3A2FEF0F0400E6C75E /* UIButton+preventRepeatedClicks.swift */; };
+		63CBDEF32FEF0F0400E6C75E /* String+getHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE322FEF0F0400E6C75E /* String+getHeight.swift */; };
+		63CBDEF42FEF0F0400E6C75E /* CustomCountryPickerViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE0B2FEF0F0400E6C75E /* CustomCountryPickerViewController+UITableViewDelegate.swift */; };
+		63CBDEF52FEF0F0400E6C75E /* VerifyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE2E2FEF0F0400E6C75E /* VerifyButton.swift */; };
+		63CBDEF62FEF0F0400E6C75E /* SCAVCaptureWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE762FEF0F0400E6C75E /* SCAVCaptureWrapper.swift */; };
+		63CBDEF72FEF0F0400E6C75E /* AppthemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE032FEF0F0400E6C75E /* AppthemeHandler.swift */; };
+		63CBDEF82FEF0F0400E6C75E /* UIImage+resizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE412FEF0F0400E6C75E /* UIImage+resizeImage.swift */; };
+		63CBDEF92FEF0F0400E6C75E /* EmailCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE982FEF0F0400E6C75E /* EmailCaptureViewController.swift */; };
+		63CBDEFA2FEF0F0400E6C75E /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE262FEF0F0400E6C75E /* BorderedButton.swift */; };
+		63CBDEFB2FEF0F0400E6C75E /* CountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE932FEF0F0400E6C75E /* CountryCodes.swift */; };
+		63CBDEFC2FEF0F0400E6C75E /* String+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE342FEF0F0400E6C75E /* String+UIImage.swift */; };
+		63CBDEFD2FEF0F0400E6C75E /* DocumentCapturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE662FEF0F0400E6C75E /* DocumentCapturePresenter.swift */; };
+		63CBDEFE2FEF0F0400E6C75E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE282FEF0F0400E6C75E /* CustomTextField.swift */; };
+		63CBDEFF2FEF0F0400E6C75E /* UITextField+addLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE482FEF0F0400E6C75E /* UITextField+addLeftView.swift */; };
+		63CBDF002FEF0F0400E6C75E /* PhoneCaptureViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEA22FEF0F0400E6C75E /* PhoneCaptureViewController+UITextFieldDelegate.swift */; };
+		63CBDF012FEF0F0400E6C75E /* TimeInterval+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE362FEF0F0400E6C75E /* TimeInterval+format.swift */; };
+		63CBDF022FEF0F0400E6C75E /* CustomMenuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE1A2FEF0F0400E6C75E /* CustomMenuConstants.swift */; };
+		63CBDF032FEF0F0400E6C75E /* AtomicWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE802FEF0F0400E6C75E /* AtomicWrapper.swift */; };
+		63CBDF042FEF0F0400E6C75E /* UIView+fixInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE4D2FEF0F0400E6C75E /* UIView+fixInView.swift */; };
+		63CBDF052FEF0F0400E6C75E /* PingOneVerifyHelper+VerifyTransactionCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE5F2FEF0F0400E6C75E /* PingOneVerifyHelper+VerifyTransactionCoordinatorDelegate.swift */; };
+		63CBDF062FEF0F0400E6C75E /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE272FEF0F0400E6C75E /* CustomImageView.swift */; };
+		63CBDF072FEF0F0400E6C75E /* HeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE292FEF0F0400E6C75E /* HeaderLabel.swift */; };
+		63CBDF082FEF0F0400E6C75E /* SelfieQAResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE862FEF0F0400E6C75E /* SelfieQAResult.swift */; };
+		63CBDF092FEF0F0400E6C75E /* SelfieQAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE7A2FEF0F0400E6C75E /* SelfieQAError.swift */; };
+		63CBDF0A2FEF0F0400E6C75E /* GeolocationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE542FEF0F0400E6C75E /* GeolocationPermissionViewController.swift */; };
+		63CBDF0B2FEF0F0400E6C75E /* PhoneCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEA02FEF0F0400E6C75E /* PhoneCaptureViewController.swift */; };
+		63CBDF0C2FEF0F0400E6C75E /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE112FEF0F0400E6C75E /* LabelCell.swift */; };
+		63CBDF0D2FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE522FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.swift */; };
+		63CBDF0E2FEF0F0400E6C75E /* SampleBufferUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE912FEF0F0400E6C75E /* SampleBufferUtils.swift */; };
+		63CBDF0F2FEF0F0400E6C75E /* VerifyUI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEB62FEF0F0400E6C75E /* VerifyUI.docc */; };
+		63CBDF102FEF0F0400E6C75E /* CGPoint+DistanceFromPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE7C2FEF0F0400E6C75E /* CGPoint+DistanceFromPoint.swift */; };
+		63CBDF112FEF0F0400E6C75E /* CustomCountryCodePickerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE072FEF0F0400E6C75E /* CustomCountryCodePickerListener.swift */; };
+		63CBDF122FEF0F0400E6C75E /* RetryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE712FEF0F0400E6C75E /* RetryViewController.swift */; };
+		63CBDF132FEF0F0400E6C75E /* QrScannerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE6B2FEF0F0400E6C75E /* QrScannerContract.swift */; };
+		63CBDF142FEF0F0400E6C75E /* DocumentSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEAB2FEF0F0400E6C75E /* DocumentSelectionCell.swift */; };
+		63CBDF152FEF0F0400E6C75E /* UITextField+changeErrorBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE492FEF0F0400E6C75E /* UITextField+changeErrorBorder.swift */; };
+		63CBDF162FEF0F0400E6C75E /* UIImage+loadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE402FEF0F0400E6C75E /* UIImage+loadImage.swift */; };
+		63CBDF172FEF0F0400E6C75E /* OtpViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE9D2FEF0F0400E6C75E /* OtpViewController+UITextFieldDelegate.swift */; };
+		63CBDF182FEF0F0400E6C75E /* UINavigationController+interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE462FEF0F0400E6C75E /* UINavigationController+interface.swift */; };
+		63CBDF192FEF0F0400E6C75E /* PingOneVerifyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE5E2FEF0F0400E6C75E /* PingOneVerifyHelper.swift */; };
+		63CBDF1A2FEF0F0400E6C75E /* BaseViewController+navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE302FEF0F0400E6C75E /* BaseViewController+navigation.swift */; };
+		63CBDF1B2FEF0F0400E6C75E /* DocumentCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDEA82FEF0F0400E6C75E /* DocumentCaptureViewController.swift */; };
+		63CBDF1C2FEF0F0400E6C75E /* OvalCameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE8A2FEF0F0400E6C75E /* OvalCameraOverlayView.swift */; };
+		63CBDF1D2FEF0F0400E6C75E /* PingOneNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBDE2B2FEF0F0400E6C75E /* PingOneNavController.swift */; };
+		63CBDF1E2FEF0F0400E6C75E /* SelfieCaptureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE8B2FEF0F0400E6C75E /* SelfieCaptureView.xib */; };
+		63CBDF1F2FEF0F0400E6C75E /* CustomPhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE1F2FEF0F0400E6C75E /* CustomPhoneView.xib */; };
+		63CBDF202FEF0F0400E6C75E /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE572FEF0F0400E6C75E /* countries.json */; };
+		63CBDF212FEF0F0400E6C75E /* DocumentSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDEAC2FEF0F0400E6C75E /* DocumentSelectionCell.xib */; };
+		63CBDF222FEF0F0400E6C75E /* QrScannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE6E2FEF0F0400E6C75E /* QrScannerView.xib */; };
+		63CBDF232FEF0F0400E6C75E /* RetryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE722FEF0F0400E6C75E /* RetryViewController.xib */; };
+		63CBDF242FEF0F0400E6C75E /* ProcessingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDEB12FEF0F0400E6C75E /* ProcessingViewController.xib */; };
+		63CBDF252FEF0F0400E6C75E /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE0E2FEF0F0400E6C75E /* ImageCell.xib */; };
+		63CBDF262FEF0F0400E6C75E /* LabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE122FEF0F0400E6C75E /* LabelCell.xib */; };
+		63CBDF272FEF0F0400E6C75E /* DocumentSelectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDEAD2FEF0F0400E6C75E /* DocumentSelectionVC.xib */; };
+		63CBDF282FEF0F0400E6C75E /* CustomMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE192FEF0F0400E6C75E /* CustomMenu.xib */; };
+		63CBDF292FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE532FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.xib */; };
+		63CBDF2A2FEF0F0400E6C75E /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE692FEF0F0400E6C75E /* PreviewViewController.xib */; };
+		63CBDF2B2FEF0F0400E6C75E /* OtpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE9C2FEF0F0400E6C75E /* OtpViewController.xib */; };
+		63CBDF2C2FEF0F0400E6C75E /* CustomCountryPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE092FEF0F0400E6C75E /* CustomCountryPickerViewController.xib */; };
+		63CBDF2D2FEF0F0400E6C75E /* CustomToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE222FEF0F0400E6C75E /* CustomToastView.xib */; };
+		63CBDF2E2FEF0F0400E6C75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDEB42FEF0F0400E6C75E /* Assets.xcassets */; };
+		63CBDF2F2FEF0F0400E6C75E /* DataCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDEA62FEF0F0400E6C75E /* DataCaptureViewController.xib */; };
+		63CBDF302FEF0F0400E6C75E /* SelfiePreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE8C2FEF0F0400E6C75E /* SelfiePreviewView.xib */; };
+		63CBDF312FEF0F0400E6C75E /* PingOneVerifyLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE582FEF0F0400E6C75E /* PingOneVerifyLocalizable.strings */; };
+		63CBDF322FEF0F0400E6C75E /* DocumentCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDEA92FEF0F0400E6C75E /* DocumentCaptureViewController.xib */; };
+		63CBDF332FEF0F0400E6C75E /* PingOneNavController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE5C2FEF0F0400E6C75E /* PingOneNavController.xib */; };
+		63CBDF342FEF0F0400E6C75E /* GeolocationPermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CBDE552FEF0F0400E6C75E /* GeolocationPermissionViewController.xib */; };
+		63D512252FD80CD400E60C60 /* IdCaptureProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */; };
+		63D512262FD80CD400E60C60 /* IdCaptureProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63D512272FD80CDA00E60C60 /* SelfieCaptureProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */; };
+		63D512282FD80CDA00E60C60 /* SelfieCaptureProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; };
 		72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72F04C822E5E336500238971 /* JOSESwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C712E5E334700238971 /* JOSESwift.xcframework */; };
@@ -41,7 +157,16 @@
 		72F04C892E5E336500238971 /* libsecp256k1.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C732E5E334700238971 /* libsecp256k1.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72F04C8E2E5E336500238971 /* secp256k1Wrapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C742E5E334700238971 /* secp256k1Wrapper.xcframework */; };
 		72F04C8F2E5E336500238971 /* secp256k1Wrapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C742E5E334700238971 /* secp256k1Wrapper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		884BAEF22AEC48D9002C6827 /* PingOneVerifyLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */; };
+		AA000002000000000000AAA1 /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA1 /* BlinkID.xcframework */; };
+		AA000002000000000000AAA2 /* BlinkID.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA1 /* BlinkID.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA000002000000000000AAA3 /* BlinkIDUX.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA2 /* BlinkIDUX.xcframework */; };
+		AA000002000000000000AAA4 /* BlinkIDUX.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA2 /* BlinkIDUX.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA000002000000000000AAA5 /* IDLiveFaceCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA3 /* IDLiveFaceCamera.xcframework */; };
+		AA000002000000000000AAA6 /* IDLiveFaceCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA3 /* IDLiveFaceCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA000002000000000000AAA7 /* IDLiveFaceDetection.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA4 /* IDLiveFaceDetection.xcframework */; };
+		AA000002000000000000AAA8 /* IDLiveFaceDetection.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA4 /* IDLiveFaceDetection.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA000002000000000000AAA9 /* IDLiveFaceIAD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA5 /* IDLiveFaceIAD.xcframework */; };
+		AA000002000000000000AAAA /* IDLiveFaceIAD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA000001000000000000AAA5 /* IDLiveFaceIAD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,18 +178,19 @@
 			files = (
 				72F04C8F2E5E336500238971 /* secp256k1Wrapper.xcframework in Embed Frameworks */,
 				72F04C892E5E336500238971 /* libsecp256k1.xcframework in Embed Frameworks */,
-				638AA5B32F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Embed Frameworks */,
-				638AA5AD2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
-				638AA5B12F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
+				63817A9B2FCD514B00F3EE21 /* GeoLocationProvider.xcframework in Embed Frameworks */,
 				72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */,
-				638AA5A72F72C2E900DA6D81 /* BlinkID.xcframework in Embed Frameworks */,
 				72F04C832E5E336500238971 /* JOSESwift.xcframework in Embed Frameworks */,
-				638AA5AB2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Embed Frameworks */,
-				638AA5A92F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Embed Frameworks */,
+				63D512282FD80CDA00E60C60 /* SelfieCaptureProvider.xcframework in Embed Frameworks */,
+				63D512262FD80CD400E60C60 /* IdCaptureProvider.xcframework in Embed Frameworks */,
 				72F04C852E5E336500238971 /* JoseTools.xcframework in Embed Frameworks */,
 				638AA5B72F72C2FC00DA6D81 /* PingOneVerify.xcframework in Embed Frameworks */,
-				638AA5AF2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Embed Frameworks */,
 				638AA5B52F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Embed Frameworks */,
+				AA000002000000000000AAA2 /* BlinkID.xcframework in Embed Frameworks */,
+				AA000002000000000000AAA4 /* BlinkIDUX.xcframework in Embed Frameworks */,
+				AA000002000000000000AAA6 /* IDLiveFaceCamera.xcframework in Embed Frameworks */,
+				AA000002000000000000AAA8 /* IDLiveFaceDetection.xcframework in Embed Frameworks */,
+				AA000002000000000000AAAA /* IDLiveFaceIAD.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,26 +201,151 @@
 		1C42536D2909C178008E871B /* PingOne Verify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PingOne Verify.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4253702909C178008E871B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C4253742909C178008E871B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1C4253792909C179008E871B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C42537C2909C179008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C42537E2909C179008E871B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4253852909C286008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		638AA56F2F72B9F500DA6D81 /* BlinkID.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BlinkID.xcframework; sourceTree = "<group>"; };
-		638AA5702F72B9F500DA6D81 /* BlinkIDUX.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQTJWP89J7:Microblink Ltd"; lastKnownFileType = wrapper.xcframework; path = BlinkIDUX.xcframework; sourceTree = "<group>"; };
 		638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GeoLocationProvider.xcframework; sourceTree = "<group>"; };
-		638AA5722F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
-		638AA5732F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceDetection.xcframework; sourceTree = "<group>"; };
-		638AA5742F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQQF4ZK23A:ID R&D Inc."; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
-		638AA5752F72B9F500DA6D81 /* LanguagePackProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = LanguagePackProvider.xcframework; sourceTree = "<group>"; };
 		638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeoInterfaces.xcframework; sourceTree = "<group>"; };
 		638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PingOneVerify.xcframework; sourceTree = "<group>"; };
 		63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		63CBDDF52FEE8A0400E6C75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63CBDE032FEF0F0400E6C75E /* AppthemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppthemeHandler.swift; sourceTree = "<group>"; };
+		63CBDE042FEF0F0400E6C75E /* AttributedStringProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringProvider.swift; sourceTree = "<group>"; };
+		63CBDE072FEF0F0400E6C75E /* CustomCountryCodePickerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCountryCodePickerListener.swift; sourceTree = "<group>"; };
+		63CBDE082FEF0F0400E6C75E /* CustomCountryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCountryPickerViewController.swift; sourceTree = "<group>"; };
+		63CBDE092FEF0F0400E6C75E /* CustomCountryPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCountryPickerViewController.xib; sourceTree = "<group>"; };
+		63CBDE0A2FEF0F0400E6C75E /* CustomCountryPickerViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomCountryPickerViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
+		63CBDE0B2FEF0F0400E6C75E /* CustomCountryPickerViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomCountryPickerViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		63CBDE0D2FEF0F0400E6C75E /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		63CBDE0E2FEF0F0400E6C75E /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		63CBDE0F2FEF0F0400E6C75E /* ImageCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellContent.swift; sourceTree = "<group>"; };
+		63CBDE112FEF0F0400E6C75E /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		63CBDE122FEF0F0400E6C75E /* LabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCell.xib; sourceTree = "<group>"; };
+		63CBDE132FEF0F0400E6C75E /* LabelCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCellContent.swift; sourceTree = "<group>"; };
+		63CBDE152FEF0F0400E6C75E /* CustomMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItemCell.swift; sourceTree = "<group>"; };
+		63CBDE182FEF0F0400E6C75E /* CustomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenu.swift; sourceTree = "<group>"; };
+		63CBDE192FEF0F0400E6C75E /* CustomMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMenu.xib; sourceTree = "<group>"; };
+		63CBDE1A2FEF0F0400E6C75E /* CustomMenuConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuConstants.swift; sourceTree = "<group>"; };
+		63CBDE1C2FEF0F0400E6C75E /* CustomMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuButton.swift; sourceTree = "<group>"; };
+		63CBDE1E2FEF0F0400E6C75E /* CustomPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhoneView.swift; sourceTree = "<group>"; };
+		63CBDE1F2FEF0F0400E6C75E /* CustomPhoneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPhoneView.xib; sourceTree = "<group>"; };
+		63CBDE212FEF0F0400E6C75E /* CustomToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastView.swift; sourceTree = "<group>"; };
+		63CBDE222FEF0F0400E6C75E /* CustomToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomToastView.xib; sourceTree = "<group>"; };
+		63CBDE242FEF0F0400E6C75E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		63CBDE252FEF0F0400E6C75E /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
+		63CBDE262FEF0F0400E6C75E /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		63CBDE272FEF0F0400E6C75E /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		63CBDE282FEF0F0400E6C75E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		63CBDE292FEF0F0400E6C75E /* HeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLabel.swift; sourceTree = "<group>"; };
+		63CBDE2A2FEF0F0400E6C75E /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		63CBDE2B2FEF0F0400E6C75E /* PingOneNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingOneNavController.swift; sourceTree = "<group>"; };
+		63CBDE2C2FEF0F0400E6C75E /* ProcessingColorHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingColorHolderView.swift; sourceTree = "<group>"; };
+		63CBDE2D2FEF0F0400E6C75E /* TintColorHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintColorHolderView.swift; sourceTree = "<group>"; };
+		63CBDE2E2FEF0F0400E6C75E /* VerifyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyButton.swift; sourceTree = "<group>"; };
+		63CBDE302FEF0F0400E6C75E /* BaseViewController+navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+navigation.swift"; sourceTree = "<group>"; };
+		63CBDE322FEF0F0400E6C75E /* String+getHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+getHeight.swift"; sourceTree = "<group>"; };
+		63CBDE332FEF0F0400E6C75E /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		63CBDE342FEF0F0400E6C75E /* String+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UIImage.swift"; sourceTree = "<group>"; };
+		63CBDE362FEF0F0400E6C75E /* TimeInterval+format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+format.swift"; sourceTree = "<group>"; };
+		63CBDE382FEF0F0400E6C75E /* UIAction+handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAction+handler.swift"; sourceTree = "<group>"; };
+		63CBDE3A2FEF0F0400E6C75E /* UIButton+preventRepeatedClicks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+preventRepeatedClicks.swift"; sourceTree = "<group>"; };
+		63CBDE3C2FEF0F0400E6C75E /* UIColor+loadColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+loadColor.swift"; sourceTree = "<group>"; };
+		63CBDE3E2FEF0F0400E6C75E /* UIImage+addGrandient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+addGrandient.swift"; sourceTree = "<group>"; };
+		63CBDE3F2FEF0F0400E6C75E /* UIImage+addImagePadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+addImagePadding.swift"; sourceTree = "<group>"; };
+		63CBDE402FEF0F0400E6C75E /* UIImage+loadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+loadImage.swift"; sourceTree = "<group>"; };
+		63CBDE412FEF0F0400E6C75E /* UIImage+resizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resizeImage.swift"; sourceTree = "<group>"; };
+		63CBDE422FEF0F0400E6C75E /* UIImage+tintWithGradientColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+tintWithGradientColor.swift"; sourceTree = "<group>"; };
+		63CBDE442FEF0F0400E6C75E /* UILabel+textWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+textWidth.swift"; sourceTree = "<group>"; };
+		63CBDE462FEF0F0400E6C75E /* UINavigationController+interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+interface.swift"; sourceTree = "<group>"; };
+		63CBDE482FEF0F0400E6C75E /* UITextField+addLeftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+addLeftView.swift"; sourceTree = "<group>"; };
+		63CBDE492FEF0F0400E6C75E /* UITextField+changeErrorBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+changeErrorBorder.swift"; sourceTree = "<group>"; };
+		63CBDE4A2FEF0F0400E6C75E /* UITextField+setPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+setPadding.swift"; sourceTree = "<group>"; };
+		63CBDE4C2FEF0F0400E6C75E /* UIView+BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BlurLoader.swift"; sourceTree = "<group>"; };
+		63CBDE4D2FEF0F0400E6C75E /* UIView+fixInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fixInView.swift"; sourceTree = "<group>"; };
+		63CBDE4F2FEF0F0400E6C75E /* UIViewController+requestCameraPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+requestCameraPermission.swift"; sourceTree = "<group>"; };
+		63CBDE522FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationPermissionRetryViewController.swift; sourceTree = "<group>"; };
+		63CBDE532FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeolocationPermissionRetryViewController.xib; sourceTree = "<group>"; };
+		63CBDE542FEF0F0400E6C75E /* GeolocationPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationPermissionViewController.swift; sourceTree = "<group>"; };
+		63CBDE552FEF0F0400E6C75E /* GeolocationPermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeolocationPermissionViewController.xib; sourceTree = "<group>"; };
+		63CBDE572FEF0F0400E6C75E /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		63CBDE582FEF0F0400E6C75E /* PingOneVerifyLocalizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = PingOneVerifyLocalizable.strings; sourceTree = "<group>"; };
+		63CBDE5A2FEF0F0400E6C75E /* DocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModel.swift; sourceTree = "<group>"; };
+		63CBDE5C2FEF0F0400E6C75E /* PingOneNavController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PingOneNavController.xib; sourceTree = "<group>"; };
+		63CBDE5E2FEF0F0400E6C75E /* PingOneVerifyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingOneVerifyHelper.swift; sourceTree = "<group>"; };
+		63CBDE5F2FEF0F0400E6C75E /* PingOneVerifyHelper+VerifyTransactionCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PingOneVerifyHelper+VerifyTransactionCoordinatorDelegate.swift"; sourceTree = "<group>"; };
+		63CBDE612FEF0F0400E6C75E /* VerifyLanguagePackProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyLanguagePackProvider.swift; sourceTree = "<group>"; };
+		63CBDE652FEF0F0400E6C75E /* DocumentCaptureContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCaptureContract.swift; sourceTree = "<group>"; };
+		63CBDE662FEF0F0400E6C75E /* DocumentCapturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCapturePresenter.swift; sourceTree = "<group>"; };
+		63CBDE682FEF0F0400E6C75E /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		63CBDE692FEF0F0400E6C75E /* PreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewViewController.xib; sourceTree = "<group>"; };
+		63CBDE6B2FEF0F0400E6C75E /* QrScannerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerContract.swift; sourceTree = "<group>"; };
+		63CBDE6C2FEF0F0400E6C75E /* QrScannerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerListener.swift; sourceTree = "<group>"; };
+		63CBDE6D2FEF0F0400E6C75E /* QrScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerPresenter.swift; sourceTree = "<group>"; };
+		63CBDE6E2FEF0F0400E6C75E /* QrScannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrScannerView.xib; sourceTree = "<group>"; };
+		63CBDE6F2FEF0F0400E6C75E /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		63CBDE712FEF0F0400E6C75E /* RetryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryViewController.swift; sourceTree = "<group>"; };
+		63CBDE722FEF0F0400E6C75E /* RetryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RetryViewController.xib; sourceTree = "<group>"; };
+		63CBDE742FEF0F0400E6C75E /* SCFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCFace.swift; sourceTree = "<group>"; };
+		63CBDE762FEF0F0400E6C75E /* SCAVCaptureWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAVCaptureWrapper.swift; sourceTree = "<group>"; };
+		63CBDE792FEF0F0400E6C75E /* LivenessCheckError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessCheckError.swift; sourceTree = "<group>"; };
+		63CBDE7A2FEF0F0400E6C75E /* SelfieQAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieQAError.swift; sourceTree = "<group>"; };
+		63CBDE7C2FEF0F0400E6C75E /* CGPoint+DistanceFromPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+DistanceFromPoint.swift"; sourceTree = "<group>"; };
+		63CBDE7D2FEF0F0400E6C75E /* CGRect+CenteredRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+CenteredRect.swift"; sourceTree = "<group>"; };
+		63CBDE7E2FEF0F0400E6C75E /* VNFaceLandmarks2D+GetAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VNFaceLandmarks2D+GetAll.swift"; sourceTree = "<group>"; };
+		63CBDE802FEF0F0400E6C75E /* AtomicWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicWrapper.swift; sourceTree = "<group>"; };
+		63CBDE812FEF0F0400E6C75E /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		63CBDE822FEF0F0400E6C75E /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		63CBDE832FEF0F0400E6C75E /* FaceLandmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmark.swift; sourceTree = "<group>"; };
+		63CBDE842FEF0F0400E6C75E /* LandmarkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkType.swift; sourceTree = "<group>"; };
+		63CBDE852FEF0F0400E6C75E /* MedianLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedianLine.swift; sourceTree = "<group>"; };
+		63CBDE862FEF0F0400E6C75E /* SelfieQAResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieQAResult.swift; sourceTree = "<group>"; };
+		63CBDE882FEF0F0400E6C75E /* CameraOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOverlayView.swift; sourceTree = "<group>"; };
+		63CBDE892FEF0F0400E6C75E /* CenterTextLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTextLayer.swift; sourceTree = "<group>"; };
+		63CBDE8A2FEF0F0400E6C75E /* OvalCameraOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalCameraOverlayView.swift; sourceTree = "<group>"; };
+		63CBDE8B2FEF0F0400E6C75E /* SelfieCaptureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfieCaptureView.xib; sourceTree = "<group>"; };
+		63CBDE8C2FEF0F0400E6C75E /* SelfiePreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfiePreviewView.xib; sourceTree = "<group>"; };
+		63CBDE8D2FEF0F0400E6C75E /* SelfiePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfiePreviewViewController.swift; sourceTree = "<group>"; };
+		63CBDE902FEF0F0400E6C75E /* ImageTransformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransformations.swift; sourceTree = "<group>"; };
+		63CBDE912FEF0F0400E6C75E /* SampleBufferUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBufferUtils.swift; sourceTree = "<group>"; };
+		63CBDE932FEF0F0400E6C75E /* CountryCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodes.swift; sourceTree = "<group>"; };
+		63CBDE952FEF0F0400E6C75E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		63CBDE962FEF0F0400E6C75E /* BaseViewControllerWithTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerWithTextField.swift; sourceTree = "<group>"; };
+		63CBDE982FEF0F0400E6C75E /* EmailCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCaptureViewController.swift; sourceTree = "<group>"; };
+		63CBDE992FEF0F0400E6C75E /* EmailCaptureViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmailCaptureViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		63CBDE9B2FEF0F0400E6C75E /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		63CBDE9C2FEF0F0400E6C75E /* OtpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
+		63CBDE9D2FEF0F0400E6C75E /* OtpViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OtpViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		63CBDE9F2FEF0F0400E6C75E /* PhoneCaptureUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCaptureUtils.swift; sourceTree = "<group>"; };
+		63CBDEA02FEF0F0400E6C75E /* PhoneCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCaptureViewController.swift; sourceTree = "<group>"; };
+		63CBDEA12FEF0F0400E6C75E /* PhoneCaptureViewController+CustomCountryCodePickerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneCaptureViewController+CustomCountryCodePickerListener.swift"; sourceTree = "<group>"; };
+		63CBDEA22FEF0F0400E6C75E /* PhoneCaptureViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneCaptureViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		63CBDEA42FEF0F0400E6C75E /* DataCaptureConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCaptureConstants.swift; sourceTree = "<group>"; };
+		63CBDEA52FEF0F0400E6C75E /* DataCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCaptureViewController.swift; sourceTree = "<group>"; };
+		63CBDEA62FEF0F0400E6C75E /* DataCaptureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCaptureViewController.xib; sourceTree = "<group>"; };
+		63CBDEA82FEF0F0400E6C75E /* DocumentCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCaptureViewController.swift; sourceTree = "<group>"; };
+		63CBDEA92FEF0F0400E6C75E /* DocumentCaptureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentCaptureViewController.xib; sourceTree = "<group>"; };
+		63CBDEAB2FEF0F0400E6C75E /* DocumentSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSelectionCell.swift; sourceTree = "<group>"; };
+		63CBDEAC2FEF0F0400E6C75E /* DocumentSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentSelectionCell.xib; sourceTree = "<group>"; };
+		63CBDEAD2FEF0F0400E6C75E /* DocumentSelectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentSelectionVC.xib; sourceTree = "<group>"; };
+		63CBDEAE2FEF0F0400E6C75E /* DocumentSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSelectionViewController.swift; sourceTree = "<group>"; };
+		63CBDEB02FEF0F0400E6C75E /* ProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingViewController.swift; sourceTree = "<group>"; };
+		63CBDEB12FEF0F0400E6C75E /* ProcessingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessingViewController.xib; sourceTree = "<group>"; };
+		63CBDEB42FEF0F0400E6C75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63CBDEB52FEF0F0400E6C75E /* VerifyUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifyUI.h; sourceTree = "<group>"; };
+		63CBDEB62FEF0F0400E6C75E /* VerifyUI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = VerifyUI.docc; sourceTree = "<group>"; };
+		63CBDEB72FEF0F0400E6C75E /* VerifyUIExports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyUIExports.swift; sourceTree = "<group>"; };
+		63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IdCaptureProvider.xcframework; sourceTree = "<group>"; };
+		63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SelfieCaptureProvider.xcframework; sourceTree = "<group>"; };
 		72F04C702E5E334700238971 /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoTools.xcframework; sourceTree = "<group>"; };
 		72F04C712E5E334700238971 /* JOSESwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JOSESwift.xcframework; sourceTree = "<group>"; };
 		72F04C722E5E334700238971 /* JoseTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JoseTools.xcframework; sourceTree = "<group>"; };
 		72F04C732E5E334700238971 /* libsecp256k1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libsecp256k1.xcframework; sourceTree = "<group>"; };
 		72F04C742E5E334700238971 /* secp256k1Wrapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = secp256k1Wrapper.xcframework; sourceTree = "<group>"; };
-		884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = PingOneVerifyLocalizable.strings; sourceTree = "<group>"; };
+		AA000001000000000000AAA1 /* BlinkID.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BlinkID.xcframework; sourceTree = "<group>"; };
+		AA000001000000000000AAA2 /* BlinkIDUX.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BlinkIDUX.xcframework; sourceTree = "<group>"; };
+		AA000001000000000000AAA3 /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
+		AA000001000000000000AAA4 /* IDLiveFaceDetection.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceDetection.xcframework; sourceTree = "<group>"; };
+		AA000001000000000000AAA5 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,20 +353,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				638AA5AC2F72C2EF00DA6D81 /* IDLiveFaceCamera.xcframework in Frameworks */,
 				72F04C8E2E5E336500238971 /* secp256k1Wrapper.xcframework in Frameworks */,
 				638AA5B42F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Frameworks */,
-				638AA5AA2F72C2ED00DA6D81 /* GeoLocationProvider.xcframework in Frameworks */,
 				72F04C882E5E336500238971 /* libsecp256k1.xcframework in Frameworks */,
-				638AA5B22F72C2F700DA6D81 /* LanguagePackProvider.xcframework in Frameworks */,
+				63D512252FD80CD400E60C60 /* IdCaptureProvider.xcframework in Frameworks */,
+				63817A9A2FCD514B00F3EE21 /* GeoLocationProvider.xcframework in Frameworks */,
+				63D512272FD80CDA00E60C60 /* SelfieCaptureProvider.xcframework in Frameworks */,
 				72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */,
-				638AA5AE2F72C2F200DA6D81 /* IDLiveFaceDetection.xcframework in Frameworks */,
 				72F04C822E5E336500238971 /* JOSESwift.xcframework in Frameworks */,
 				72F04C842E5E336500238971 /* JoseTools.xcframework in Frameworks */,
-				638AA5A82F72C2EB00DA6D81 /* BlinkIDUX.xcframework in Frameworks */,
 				638AA5B62F72C2FC00DA6D81 /* PingOneVerify.xcframework in Frameworks */,
-				638AA5B02F72C2F400DA6D81 /* IDLiveFaceIAD.xcframework in Frameworks */,
-				638AA5A62F72C2E900DA6D81 /* BlinkID.xcframework in Frameworks */,
+				AA000002000000000000AAA1 /* BlinkID.xcframework in Frameworks */,
+				AA000002000000000000AAA3 /* BlinkIDUX.xcframework in Frameworks */,
+				AA000002000000000000AAA5 /* IDLiveFaceCamera.xcframework in Frameworks */,
+				AA000002000000000000AAA7 /* IDLiveFaceDetection.xcframework in Frameworks */,
+				AA000002000000000000AAA9 /* IDLiveFaceIAD.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,13 +394,13 @@
 		1C42536F2909C178008E871B /* PingOne Verify */ = {
 			isa = PBXGroup;
 			children = (
+				63CBDEB82FEF0F0400E6C75E /* VerifyUI */,
 				63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */,
 				1C4253702909C178008E871B /* AppDelegate.swift */,
 				1C4253742909C178008E871B /* ViewController.swift */,
 				1C4253842909C286008E871B /* Main.storyboard */,
 				1C42537B2909C179008E871B /* LaunchScreen.storyboard */,
-				1C4253792909C179008E871B /* Assets.xcassets */,
-				884BAEF12AEC48D9002C6827 /* PingOneVerifyLocalizable.strings */,
+				63CBDDF52FEE8A0400E6C75E /* Assets.xcassets */,
 				1C42537E2909C179008E871B /* Info.plist */,
 			);
 			path = "PingOne Verify";
@@ -166,19 +418,600 @@
 		638AA5782F72B9F500DA6D81 /* Verify */ = {
 			isa = PBXGroup;
 			children = (
-				638AA56F2F72B9F500DA6D81 /* BlinkID.xcframework */,
-				638AA5702F72B9F500DA6D81 /* BlinkIDUX.xcframework */,
+				63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */,
+				63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */,
 				638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */,
-				638AA5722F72B9F500DA6D81 /* IDLiveFaceCamera.xcframework */,
-				638AA5732F72B9F500DA6D81 /* IDLiveFaceDetection.xcframework */,
-				638AA5742F72B9F500DA6D81 /* IDLiveFaceIAD.xcframework */,
-				638AA5752F72B9F500DA6D81 /* LanguagePackProvider.xcframework */,
 				638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */,
 				638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */,
+				AA000001000000000000AAA1 /* BlinkID.xcframework */,
+				AA000001000000000000AAA2 /* BlinkIDUX.xcframework */,
+				AA000001000000000000AAA3 /* IDLiveFaceCamera.xcframework */,
+				AA000001000000000000AAA4 /* IDLiveFaceDetection.xcframework */,
+				AA000001000000000000AAA5 /* IDLiveFaceIAD.xcframework */,
 			);
 			name = Verify;
 			path = ../../SDK/Verify;
 			sourceTree = SOURCE_ROOT;
+		};
+		63CBDE052FEF0F0400E6C75E /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE032FEF0F0400E6C75E /* AppthemeHandler.swift */,
+				63CBDE042FEF0F0400E6C75E /* AttributedStringProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		63CBDE062FEF0F0400E6C75E /* AppTheme */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE052FEF0F0400E6C75E /* Providers */,
+			);
+			path = AppTheme;
+			sourceTree = "<group>";
+		};
+		63CBDE0C2FEF0F0400E6C75E /* CustomCountryPicker */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE072FEF0F0400E6C75E /* CustomCountryCodePickerListener.swift */,
+				63CBDE082FEF0F0400E6C75E /* CustomCountryPickerViewController.swift */,
+				63CBDE092FEF0F0400E6C75E /* CustomCountryPickerViewController.xib */,
+				63CBDE0A2FEF0F0400E6C75E /* CustomCountryPickerViewController+UISearchResultsUpdating.swift */,
+				63CBDE0B2FEF0F0400E6C75E /* CustomCountryPickerViewController+UITableViewDelegate.swift */,
+			);
+			path = CustomCountryPicker;
+			sourceTree = "<group>";
+		};
+		63CBDE102FEF0F0400E6C75E /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE0D2FEF0F0400E6C75E /* ImageCell.swift */,
+				63CBDE0E2FEF0F0400E6C75E /* ImageCell.xib */,
+				63CBDE0F2FEF0F0400E6C75E /* ImageCellContent.swift */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		63CBDE142FEF0F0400E6C75E /* LabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE112FEF0F0400E6C75E /* LabelCell.swift */,
+				63CBDE122FEF0F0400E6C75E /* LabelCell.xib */,
+				63CBDE132FEF0F0400E6C75E /* LabelCellContent.swift */,
+			);
+			path = LabelCell;
+			sourceTree = "<group>";
+		};
+		63CBDE162FEF0F0400E6C75E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE152FEF0F0400E6C75E /* CustomMenuItemCell.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		63CBDE172FEF0F0400E6C75E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE102FEF0F0400E6C75E /* ImageCell */,
+				63CBDE142FEF0F0400E6C75E /* LabelCell */,
+				63CBDE162FEF0F0400E6C75E /* Protocol */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		63CBDE1B2FEF0F0400E6C75E /* CustomMenu */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE182FEF0F0400E6C75E /* CustomMenu.swift */,
+				63CBDE192FEF0F0400E6C75E /* CustomMenu.xib */,
+				63CBDE1A2FEF0F0400E6C75E /* CustomMenuConstants.swift */,
+			);
+			path = CustomMenu;
+			sourceTree = "<group>";
+		};
+		63CBDE1D2FEF0F0400E6C75E /* CustomMenu */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE172FEF0F0400E6C75E /* Cells */,
+				63CBDE1B2FEF0F0400E6C75E /* CustomMenu */,
+				63CBDE1C2FEF0F0400E6C75E /* CustomMenuButton.swift */,
+			);
+			path = CustomMenu;
+			sourceTree = "<group>";
+		};
+		63CBDE202FEF0F0400E6C75E /* CustomPhoneView */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE1E2FEF0F0400E6C75E /* CustomPhoneView.swift */,
+				63CBDE1F2FEF0F0400E6C75E /* CustomPhoneView.xib */,
+			);
+			path = CustomPhoneView;
+			sourceTree = "<group>";
+		};
+		63CBDE232FEF0F0400E6C75E /* CustomToastView */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE212FEF0F0400E6C75E /* CustomToastView.swift */,
+				63CBDE222FEF0F0400E6C75E /* CustomToastView.xib */,
+			);
+			path = CustomToastView;
+			sourceTree = "<group>";
+		};
+		63CBDE2F2FEF0F0400E6C75E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE0C2FEF0F0400E6C75E /* CustomCountryPicker */,
+				63CBDE1D2FEF0F0400E6C75E /* CustomMenu */,
+				63CBDE202FEF0F0400E6C75E /* CustomPhoneView */,
+				63CBDE232FEF0F0400E6C75E /* CustomToastView */,
+				63CBDE242FEF0F0400E6C75E /* BaseView.swift */,
+				63CBDE252FEF0F0400E6C75E /* BlurLoader.swift */,
+				63CBDE262FEF0F0400E6C75E /* BorderedButton.swift */,
+				63CBDE272FEF0F0400E6C75E /* CustomImageView.swift */,
+				63CBDE282FEF0F0400E6C75E /* CustomTextField.swift */,
+				63CBDE292FEF0F0400E6C75E /* HeaderLabel.swift */,
+				63CBDE2A2FEF0F0400E6C75E /* OTPTextField.swift */,
+				63CBDE2B2FEF0F0400E6C75E /* PingOneNavController.swift */,
+				63CBDE2C2FEF0F0400E6C75E /* ProcessingColorHolderView.swift */,
+				63CBDE2D2FEF0F0400E6C75E /* TintColorHolderView.swift */,
+				63CBDE2E2FEF0F0400E6C75E /* VerifyButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		63CBDE312FEF0F0400E6C75E /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE302FEF0F0400E6C75E /* BaseViewController+navigation.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		63CBDE352FEF0F0400E6C75E /* String */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE322FEF0F0400E6C75E /* String+getHeight.swift */,
+				63CBDE332FEF0F0400E6C75E /* String+localized.swift */,
+				63CBDE342FEF0F0400E6C75E /* String+UIImage.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		63CBDE372FEF0F0400E6C75E /* TimeInterval */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE362FEF0F0400E6C75E /* TimeInterval+format.swift */,
+			);
+			path = TimeInterval;
+			sourceTree = "<group>";
+		};
+		63CBDE392FEF0F0400E6C75E /* UIAction */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE382FEF0F0400E6C75E /* UIAction+handler.swift */,
+			);
+			path = UIAction;
+			sourceTree = "<group>";
+		};
+		63CBDE3B2FEF0F0400E6C75E /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE3A2FEF0F0400E6C75E /* UIButton+preventRepeatedClicks.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		63CBDE3D2FEF0F0400E6C75E /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE3C2FEF0F0400E6C75E /* UIColor+loadColor.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		63CBDE432FEF0F0400E6C75E /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE3E2FEF0F0400E6C75E /* UIImage+addGrandient.swift */,
+				63CBDE3F2FEF0F0400E6C75E /* UIImage+addImagePadding.swift */,
+				63CBDE402FEF0F0400E6C75E /* UIImage+loadImage.swift */,
+				63CBDE412FEF0F0400E6C75E /* UIImage+resizeImage.swift */,
+				63CBDE422FEF0F0400E6C75E /* UIImage+tintWithGradientColor.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		63CBDE452FEF0F0400E6C75E /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE442FEF0F0400E6C75E /* UILabel+textWidth.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		63CBDE472FEF0F0400E6C75E /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE462FEF0F0400E6C75E /* UINavigationController+interface.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		63CBDE4B2FEF0F0400E6C75E /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE482FEF0F0400E6C75E /* UITextField+addLeftView.swift */,
+				63CBDE492FEF0F0400E6C75E /* UITextField+changeErrorBorder.swift */,
+				63CBDE4A2FEF0F0400E6C75E /* UITextField+setPadding.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		63CBDE4E2FEF0F0400E6C75E /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE4C2FEF0F0400E6C75E /* UIView+BlurLoader.swift */,
+				63CBDE4D2FEF0F0400E6C75E /* UIView+fixInView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		63CBDE502FEF0F0400E6C75E /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE4F2FEF0F0400E6C75E /* UIViewController+requestCameraPermission.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		63CBDE512FEF0F0400E6C75E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE312FEF0F0400E6C75E /* BaseViewController */,
+				63CBDE352FEF0F0400E6C75E /* String */,
+				63CBDE372FEF0F0400E6C75E /* TimeInterval */,
+				63CBDE392FEF0F0400E6C75E /* UIAction */,
+				63CBDE3B2FEF0F0400E6C75E /* UIButton */,
+				63CBDE3D2FEF0F0400E6C75E /* UIColor */,
+				63CBDE432FEF0F0400E6C75E /* UIImage */,
+				63CBDE452FEF0F0400E6C75E /* UILabel */,
+				63CBDE472FEF0F0400E6C75E /* UINavigationController */,
+				63CBDE4B2FEF0F0400E6C75E /* UITextField */,
+				63CBDE4E2FEF0F0400E6C75E /* UIView */,
+				63CBDE502FEF0F0400E6C75E /* UIViewController */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		63CBDE562FEF0F0400E6C75E /* Geolocation */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE522FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.swift */,
+				63CBDE532FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.xib */,
+				63CBDE542FEF0F0400E6C75E /* GeolocationPermissionViewController.swift */,
+				63CBDE552FEF0F0400E6C75E /* GeolocationPermissionViewController.xib */,
+			);
+			path = Geolocation;
+			sourceTree = "<group>";
+		};
+		63CBDE592FEF0F0400E6C75E /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE572FEF0F0400E6C75E /* countries.json */,
+				63CBDE582FEF0F0400E6C75E /* PingOneVerifyLocalizable.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		63CBDE5B2FEF0F0400E6C75E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE5A2FEF0F0400E6C75E /* DocumentModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63CBDE5D2FEF0F0400E6C75E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE5C2FEF0F0400E6C75E /* PingOneNavController.xib */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		63CBDE602FEF0F0400E6C75E /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE5E2FEF0F0400E6C75E /* PingOneVerifyHelper.swift */,
+				63CBDE5F2FEF0F0400E6C75E /* PingOneVerifyHelper+VerifyTransactionCoordinatorDelegate.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		63CBDE622FEF0F0400E6C75E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE612FEF0F0400E6C75E /* VerifyLanguagePackProvider.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		63CBDE632FEF0F0400E6C75E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		63CBDE642FEF0F0400E6C75E /* PingOneVerifyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE602FEF0F0400E6C75E /* Client */,
+				63CBDE622FEF0F0400E6C75E /* Extension */,
+				63CBDE632FEF0F0400E6C75E /* Utils */,
+			);
+			path = PingOneVerifyHelper;
+			sourceTree = "<group>";
+		};
+		63CBDE672FEF0F0400E6C75E /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE652FEF0F0400E6C75E /* DocumentCaptureContract.swift */,
+				63CBDE662FEF0F0400E6C75E /* DocumentCapturePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		63CBDE6A2FEF0F0400E6C75E /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE682FEF0F0400E6C75E /* PreviewViewController.swift */,
+				63CBDE692FEF0F0400E6C75E /* PreviewViewController.xib */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		63CBDE702FEF0F0400E6C75E /* QrScanner */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE6B2FEF0F0400E6C75E /* QrScannerContract.swift */,
+				63CBDE6C2FEF0F0400E6C75E /* QrScannerListener.swift */,
+				63CBDE6D2FEF0F0400E6C75E /* QrScannerPresenter.swift */,
+				63CBDE6E2FEF0F0400E6C75E /* QrScannerView.xib */,
+				63CBDE6F2FEF0F0400E6C75E /* QRScannerViewController.swift */,
+			);
+			path = QrScanner;
+			sourceTree = "<group>";
+		};
+		63CBDE732FEF0F0400E6C75E /* Retry */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE712FEF0F0400E6C75E /* RetryViewController.swift */,
+				63CBDE722FEF0F0400E6C75E /* RetryViewController.xib */,
+			);
+			path = Retry;
+			sourceTree = "<group>";
+		};
+		63CBDE752FEF0F0400E6C75E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE742FEF0F0400E6C75E /* SCFace.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		63CBDE772FEF0F0400E6C75E /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE762FEF0F0400E6C75E /* SCAVCaptureWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		63CBDE782FEF0F0400E6C75E /* SCAVCapture */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE752FEF0F0400E6C75E /* Types */,
+				63CBDE772FEF0F0400E6C75E /* Wrappers */,
+			);
+			path = SCAVCapture;
+			sourceTree = "<group>";
+		};
+		63CBDE7B2FEF0F0400E6C75E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE792FEF0F0400E6C75E /* LivenessCheckError.swift */,
+				63CBDE7A2FEF0F0400E6C75E /* SelfieQAError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		63CBDE7F2FEF0F0400E6C75E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE7C2FEF0F0400E6C75E /* CGPoint+DistanceFromPoint.swift */,
+				63CBDE7D2FEF0F0400E6C75E /* CGRect+CenteredRect.swift */,
+				63CBDE7E2FEF0F0400E6C75E /* VNFaceLandmarks2D+GetAll.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		63CBDE872FEF0F0400E6C75E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE802FEF0F0400E6C75E /* AtomicWrapper.swift */,
+				63CBDE812FEF0F0400E6C75E /* Expression.swift */,
+				63CBDE822FEF0F0400E6C75E /* Face.swift */,
+				63CBDE832FEF0F0400E6C75E /* FaceLandmark.swift */,
+				63CBDE842FEF0F0400E6C75E /* LandmarkType.swift */,
+				63CBDE852FEF0F0400E6C75E /* MedianLine.swift */,
+				63CBDE862FEF0F0400E6C75E /* SelfieQAResult.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		63CBDE8E2FEF0F0400E6C75E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE882FEF0F0400E6C75E /* CameraOverlayView.swift */,
+				63CBDE892FEF0F0400E6C75E /* CenterTextLayer.swift */,
+				63CBDE8A2FEF0F0400E6C75E /* OvalCameraOverlayView.swift */,
+				63CBDE8B2FEF0F0400E6C75E /* SelfieCaptureView.xib */,
+				63CBDE8C2FEF0F0400E6C75E /* SelfiePreviewView.xib */,
+				63CBDE8D2FEF0F0400E6C75E /* SelfiePreviewViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		63CBDE8F2FEF0F0400E6C75E /* SelfieCapture */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE7B2FEF0F0400E6C75E /* Errors */,
+				63CBDE7F2FEF0F0400E6C75E /* Extensions */,
+				63CBDE872FEF0F0400E6C75E /* Types */,
+				63CBDE8E2FEF0F0400E6C75E /* ViewControllers */,
+			);
+			path = SelfieCapture;
+			sourceTree = "<group>";
+		};
+		63CBDE922FEF0F0400E6C75E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE902FEF0F0400E6C75E /* ImageTransformations.swift */,
+				63CBDE912FEF0F0400E6C75E /* SampleBufferUtils.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		63CBDE942FEF0F0400E6C75E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE922FEF0F0400E6C75E /* Image */,
+				63CBDE932FEF0F0400E6C75E /* CountryCodes.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		63CBDE972FEF0F0400E6C75E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE952FEF0F0400E6C75E /* BaseViewController.swift */,
+				63CBDE962FEF0F0400E6C75E /* BaseViewControllerWithTextField.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		63CBDE9A2FEF0F0400E6C75E /* Email Capture */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE982FEF0F0400E6C75E /* EmailCaptureViewController.swift */,
+				63CBDE992FEF0F0400E6C75E /* EmailCaptureViewController+UITextFieldDelegate.swift */,
+			);
+			path = "Email Capture";
+			sourceTree = "<group>";
+		};
+		63CBDE9E2FEF0F0400E6C75E /* OTP Capture */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE9B2FEF0F0400E6C75E /* OtpViewController.swift */,
+				63CBDE9C2FEF0F0400E6C75E /* OtpViewController.xib */,
+				63CBDE9D2FEF0F0400E6C75E /* OtpViewController+UITextFieldDelegate.swift */,
+			);
+			path = "OTP Capture";
+			sourceTree = "<group>";
+		};
+		63CBDEA32FEF0F0400E6C75E /* Phone Capture */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE9F2FEF0F0400E6C75E /* PhoneCaptureUtils.swift */,
+				63CBDEA02FEF0F0400E6C75E /* PhoneCaptureViewController.swift */,
+				63CBDEA12FEF0F0400E6C75E /* PhoneCaptureViewController+CustomCountryCodePickerListener.swift */,
+				63CBDEA22FEF0F0400E6C75E /* PhoneCaptureViewController+UITextFieldDelegate.swift */,
+			);
+			path = "Phone Capture";
+			sourceTree = "<group>";
+		};
+		63CBDEA72FEF0F0400E6C75E /* Data Capture */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE9A2FEF0F0400E6C75E /* Email Capture */,
+				63CBDE9E2FEF0F0400E6C75E /* OTP Capture */,
+				63CBDEA32FEF0F0400E6C75E /* Phone Capture */,
+				63CBDEA42FEF0F0400E6C75E /* DataCaptureConstants.swift */,
+				63CBDEA52FEF0F0400E6C75E /* DataCaptureViewController.swift */,
+				63CBDEA62FEF0F0400E6C75E /* DataCaptureViewController.xib */,
+			);
+			path = "Data Capture";
+			sourceTree = "<group>";
+		};
+		63CBDEAA2FEF0F0400E6C75E /* DocumentCapture */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDEA82FEF0F0400E6C75E /* DocumentCaptureViewController.swift */,
+				63CBDEA92FEF0F0400E6C75E /* DocumentCaptureViewController.xib */,
+			);
+			path = DocumentCapture;
+			sourceTree = "<group>";
+		};
+		63CBDEAF2FEF0F0400E6C75E /* DocumentSelection */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDEAB2FEF0F0400E6C75E /* DocumentSelectionCell.swift */,
+				63CBDEAC2FEF0F0400E6C75E /* DocumentSelectionCell.xib */,
+				63CBDEAD2FEF0F0400E6C75E /* DocumentSelectionVC.xib */,
+				63CBDEAE2FEF0F0400E6C75E /* DocumentSelectionViewController.swift */,
+			);
+			path = DocumentSelection;
+			sourceTree = "<group>";
+		};
+		63CBDEB22FEF0F0400E6C75E /* Processing */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDEB02FEF0F0400E6C75E /* ProcessingViewController.swift */,
+				63CBDEB12FEF0F0400E6C75E /* ProcessingViewController.xib */,
+			);
+			path = Processing;
+			sourceTree = "<group>";
+		};
+		63CBDEB32FEF0F0400E6C75E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE972FEF0F0400E6C75E /* Base */,
+				63CBDEA72FEF0F0400E6C75E /* Data Capture */,
+				63CBDEAA2FEF0F0400E6C75E /* DocumentCapture */,
+				63CBDEAF2FEF0F0400E6C75E /* DocumentSelection */,
+				63CBDEB22FEF0F0400E6C75E /* Processing */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		63CBDEB82FEF0F0400E6C75E /* VerifyUI */ = {
+			isa = PBXGroup;
+			children = (
+				63CBDE062FEF0F0400E6C75E /* AppTheme */,
+				63CBDE2F2FEF0F0400E6C75E /* CustomViews */,
+				63CBDE512FEF0F0400E6C75E /* Extensions */,
+				63CBDE562FEF0F0400E6C75E /* Geolocation */,
+				63CBDE592FEF0F0400E6C75E /* Localizations */,
+				63CBDE5B2FEF0F0400E6C75E /* Model */,
+				63CBDE5D2FEF0F0400E6C75E /* Navigation */,
+				63CBDE642FEF0F0400E6C75E /* PingOneVerifyHelper */,
+				63CBDE672FEF0F0400E6C75E /* Presenters */,
+				63CBDE6A2FEF0F0400E6C75E /* Preview */,
+				63CBDE702FEF0F0400E6C75E /* QrScanner */,
+				63CBDE732FEF0F0400E6C75E /* Retry */,
+				63CBDE782FEF0F0400E6C75E /* SCAVCapture */,
+				63CBDE8F2FEF0F0400E6C75E /* SelfieCapture */,
+				63CBDE942FEF0F0400E6C75E /* Utils */,
+				63CBDEB32FEF0F0400E6C75E /* ViewControllers */,
+				63CBDEB42FEF0F0400E6C75E /* Assets.xcassets */,
+				63CBDEB52FEF0F0400E6C75E /* VerifyUI.h */,
+				63CBDEB62FEF0F0400E6C75E /* VerifyUI.docc */,
+				63CBDEB72FEF0F0400E6C75E /* VerifyUIExports.swift */,
+			);
+			path = VerifyUI;
+			sourceTree = "<group>";
 		};
 		72F04C752E5E334700238971 /* Common */ = {
 			isa = PBXGroup;
@@ -252,10 +1085,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CBDDF62FEE8A0400E6C75E /* Assets.xcassets in Resources */,
 				1C4253862909C286008E871B /* Main.storyboard in Resources */,
 				1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */,
-				884BAEF22AEC48D9002C6827 /* PingOneVerifyLocalizable.strings in Resources */,
-				1C42537A2909C179008E871B /* Assets.xcassets in Resources */,
+				63CBDF1E2FEF0F0400E6C75E /* SelfieCaptureView.xib in Resources */,
+				63CBDF1F2FEF0F0400E6C75E /* CustomPhoneView.xib in Resources */,
+				63CBDF202FEF0F0400E6C75E /* countries.json in Resources */,
+				63CBDF212FEF0F0400E6C75E /* DocumentSelectionCell.xib in Resources */,
+				63CBDF222FEF0F0400E6C75E /* QrScannerView.xib in Resources */,
+				63CBDF232FEF0F0400E6C75E /* RetryViewController.xib in Resources */,
+				63CBDF242FEF0F0400E6C75E /* ProcessingViewController.xib in Resources */,
+				63CBDF252FEF0F0400E6C75E /* ImageCell.xib in Resources */,
+				63CBDF262FEF0F0400E6C75E /* LabelCell.xib in Resources */,
+				63CBDF272FEF0F0400E6C75E /* DocumentSelectionVC.xib in Resources */,
+				63CBDF282FEF0F0400E6C75E /* CustomMenu.xib in Resources */,
+				63CBDF292FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.xib in Resources */,
+				63CBDF2A2FEF0F0400E6C75E /* PreviewViewController.xib in Resources */,
+				63CBDF2B2FEF0F0400E6C75E /* OtpViewController.xib in Resources */,
+				63CBDF2C2FEF0F0400E6C75E /* CustomCountryPickerViewController.xib in Resources */,
+				63CBDF2D2FEF0F0400E6C75E /* CustomToastView.xib in Resources */,
+				63CBDF2E2FEF0F0400E6C75E /* Assets.xcassets in Resources */,
+				63CBDF2F2FEF0F0400E6C75E /* DataCaptureViewController.xib in Resources */,
+				63CBDF302FEF0F0400E6C75E /* SelfiePreviewView.xib in Resources */,
+				63CBDF312FEF0F0400E6C75E /* PingOneVerifyLocalizable.strings in Resources */,
+				63CBDF322FEF0F0400E6C75E /* DocumentCaptureViewController.xib in Resources */,
+				63CBDF332FEF0F0400E6C75E /* PingOneNavController.xib in Resources */,
+				63CBDF342FEF0F0400E6C75E /* GeolocationPermissionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +1121,107 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CBDEB92FEF0F0400E6C75E /* ImageCell.swift in Sources */,
+				63CBDEBA2FEF0F0400E6C75E /* CustomMenu.swift in Sources */,
+				63CBDEBB2FEF0F0400E6C75E /* ImageTransformations.swift in Sources */,
+				63CBDEBC2FEF0F0400E6C75E /* QrScannerPresenter.swift in Sources */,
+				63CBDEBD2FEF0F0400E6C75E /* OtpViewController.swift in Sources */,
+				63CBDEBE2FEF0F0400E6C75E /* BaseView.swift in Sources */,
+				63CBDEBF2FEF0F0400E6C75E /* UIImage+addGrandient.swift in Sources */,
+				63CBDEC02FEF0F0400E6C75E /* DocumentModel.swift in Sources */,
+				63CBDEC12FEF0F0400E6C75E /* CustomPhoneView.swift in Sources */,
+				63CBDEC22FEF0F0400E6C75E /* CustomMenuItemCell.swift in Sources */,
+				63CBDEC32FEF0F0400E6C75E /* CustomToastView.swift in Sources */,
+				63CBDEC42FEF0F0400E6C75E /* CGRect+CenteredRect.swift in Sources */,
+				63CBDEC52FEF0F0400E6C75E /* LabelCellContent.swift in Sources */,
+				63CBDEC62FEF0F0400E6C75E /* CenterTextLayer.swift in Sources */,
+				63CBDEC72FEF0F0400E6C75E /* UIViewController+requestCameraPermission.swift in Sources */,
+				63CBDEC82FEF0F0400E6C75E /* BaseViewController.swift in Sources */,
+				63CBDEC92FEF0F0400E6C75E /* ProcessingColorHolderView.swift in Sources */,
+				63CBDECA2FEF0F0400E6C75E /* BaseViewControllerWithTextField.swift in Sources */,
+				63CBDECB2FEF0F0400E6C75E /* BlurLoader.swift in Sources */,
+				63CBDECC2FEF0F0400E6C75E /* OTPTextField.swift in Sources */,
+				63CBDECD2FEF0F0400E6C75E /* CustomCountryPickerViewController+UISearchResultsUpdating.swift in Sources */,
+				63CBDECE2FEF0F0400E6C75E /* UITextField+setPadding.swift in Sources */,
+				63CBDECF2FEF0F0400E6C75E /* DataCaptureConstants.swift in Sources */,
+				63CBDED02FEF0F0400E6C75E /* UIColor+loadColor.swift in Sources */,
+				63CBDED12FEF0F0400E6C75E /* Expression.swift in Sources */,
+				63CBDED22FEF0F0400E6C75E /* UIAction+handler.swift in Sources */,
+				63CBDED32FEF0F0400E6C75E /* LandmarkType.swift in Sources */,
+				63CBDED42FEF0F0400E6C75E /* QrScannerListener.swift in Sources */,
+				63CBDED52FEF0F0400E6C75E /* TintColorHolderView.swift in Sources */,
+				63CBDED62FEF0F0400E6C75E /* Face.swift in Sources */,
+				63CBDED72FEF0F0400E6C75E /* DocumentCaptureContract.swift in Sources */,
+				63CBDED82FEF0F0400E6C75E /* ProcessingViewController.swift in Sources */,
+				63CBDED92FEF0F0400E6C75E /* ImageCellContent.swift in Sources */,
+				63CBDEDA2FEF0F0400E6C75E /* MedianLine.swift in Sources */,
+				63CBDEDB2FEF0F0400E6C75E /* String+localized.swift in Sources */,
+				63CBDEDC2FEF0F0400E6C75E /* FaceLandmark.swift in Sources */,
+				63CBDEDD2FEF0F0400E6C75E /* QRScannerViewController.swift in Sources */,
+				63CBDEDE2FEF0F0400E6C75E /* CustomMenuButton.swift in Sources */,
+				63CBDEDF2FEF0F0400E6C75E /* VerifyLanguagePackProvider.swift in Sources */,
+				63CBDEE02FEF0F0400E6C75E /* UILabel+textWidth.swift in Sources */,
+				63CBDEE12FEF0F0400E6C75E /* UIImage+tintWithGradientColor.swift in Sources */,
+				63CBDEE22FEF0F0400E6C75E /* PhoneCaptureUtils.swift in Sources */,
+				63CBDEE32FEF0F0400E6C75E /* AttributedStringProvider.swift in Sources */,
+				63CBDEE42FEF0F0400E6C75E /* UIView+BlurLoader.swift in Sources */,
+				63CBDEE52FEF0F0400E6C75E /* PhoneCaptureViewController+CustomCountryCodePickerListener.swift in Sources */,
+				63CBDEE62FEF0F0400E6C75E /* DataCaptureViewController.swift in Sources */,
+				63CBDEE72FEF0F0400E6C75E /* UIImage+addImagePadding.swift in Sources */,
+				63CBDEE82FEF0F0400E6C75E /* CameraOverlayView.swift in Sources */,
+				63CBDEE92FEF0F0400E6C75E /* EmailCaptureViewController+UITextFieldDelegate.swift in Sources */,
+				63CBDEEA2FEF0F0400E6C75E /* CustomCountryPickerViewController.swift in Sources */,
+				63CBDEEB2FEF0F0400E6C75E /* SelfiePreviewViewController.swift in Sources */,
+				63CBDEEC2FEF0F0400E6C75E /* LivenessCheckError.swift in Sources */,
+				63CBDEED2FEF0F0400E6C75E /* DocumentSelectionViewController.swift in Sources */,
+				63CBDEEE2FEF0F0400E6C75E /* VNFaceLandmarks2D+GetAll.swift in Sources */,
+				63CBDEEF2FEF0F0400E6C75E /* SCFace.swift in Sources */,
+				63CBDEF02FEF0F0400E6C75E /* PreviewViewController.swift in Sources */,
+				63CBDEF12FEF0F0400E6C75E /* VerifyUIExports.swift in Sources */,
+				63CBDEF22FEF0F0400E6C75E /* UIButton+preventRepeatedClicks.swift in Sources */,
+				63CBDEF32FEF0F0400E6C75E /* String+getHeight.swift in Sources */,
+				63CBDEF42FEF0F0400E6C75E /* CustomCountryPickerViewController+UITableViewDelegate.swift in Sources */,
+				63CBDEF52FEF0F0400E6C75E /* VerifyButton.swift in Sources */,
+				63CBDEF62FEF0F0400E6C75E /* SCAVCaptureWrapper.swift in Sources */,
+				63CBDEF72FEF0F0400E6C75E /* AppthemeHandler.swift in Sources */,
+				63CBDEF82FEF0F0400E6C75E /* UIImage+resizeImage.swift in Sources */,
+				63CBDEF92FEF0F0400E6C75E /* EmailCaptureViewController.swift in Sources */,
+				63CBDEFA2FEF0F0400E6C75E /* BorderedButton.swift in Sources */,
+				63CBDEFB2FEF0F0400E6C75E /* CountryCodes.swift in Sources */,
+				63CBDEFC2FEF0F0400E6C75E /* String+UIImage.swift in Sources */,
+				63CBDEFD2FEF0F0400E6C75E /* DocumentCapturePresenter.swift in Sources */,
+				63CBDEFE2FEF0F0400E6C75E /* CustomTextField.swift in Sources */,
+				63CBDEFF2FEF0F0400E6C75E /* UITextField+addLeftView.swift in Sources */,
+				63CBDF002FEF0F0400E6C75E /* PhoneCaptureViewController+UITextFieldDelegate.swift in Sources */,
+				63CBDF012FEF0F0400E6C75E /* TimeInterval+format.swift in Sources */,
+				63CBDF022FEF0F0400E6C75E /* CustomMenuConstants.swift in Sources */,
+				63CBDF032FEF0F0400E6C75E /* AtomicWrapper.swift in Sources */,
+				63CBDF042FEF0F0400E6C75E /* UIView+fixInView.swift in Sources */,
+				63CBDF052FEF0F0400E6C75E /* PingOneVerifyHelper+VerifyTransactionCoordinatorDelegate.swift in Sources */,
+				63CBDF062FEF0F0400E6C75E /* CustomImageView.swift in Sources */,
+				63CBDF072FEF0F0400E6C75E /* HeaderLabel.swift in Sources */,
+				63CBDF082FEF0F0400E6C75E /* SelfieQAResult.swift in Sources */,
+				63CBDF092FEF0F0400E6C75E /* SelfieQAError.swift in Sources */,
+				63CBDF0A2FEF0F0400E6C75E /* GeolocationPermissionViewController.swift in Sources */,
+				63CBDF0B2FEF0F0400E6C75E /* PhoneCaptureViewController.swift in Sources */,
+				63CBDF0C2FEF0F0400E6C75E /* LabelCell.swift in Sources */,
+				63CBDF0D2FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.swift in Sources */,
+				63CBDF0E2FEF0F0400E6C75E /* SampleBufferUtils.swift in Sources */,
+				63CBDF0F2FEF0F0400E6C75E /* VerifyUI.docc in Sources */,
+				63CBDF102FEF0F0400E6C75E /* CGPoint+DistanceFromPoint.swift in Sources */,
+				63CBDF112FEF0F0400E6C75E /* CustomCountryCodePickerListener.swift in Sources */,
+				63CBDF122FEF0F0400E6C75E /* RetryViewController.swift in Sources */,
+				63CBDF132FEF0F0400E6C75E /* QrScannerContract.swift in Sources */,
+				63CBDF142FEF0F0400E6C75E /* DocumentSelectionCell.swift in Sources */,
+				63CBDF152FEF0F0400E6C75E /* UITextField+changeErrorBorder.swift in Sources */,
+				63CBDF162FEF0F0400E6C75E /* UIImage+loadImage.swift in Sources */,
+				63CBDF172FEF0F0400E6C75E /* OtpViewController+UITextFieldDelegate.swift in Sources */,
+				63CBDF182FEF0F0400E6C75E /* UINavigationController+interface.swift in Sources */,
+				63CBDF192FEF0F0400E6C75E /* PingOneVerifyHelper.swift in Sources */,
+				63CBDF1A2FEF0F0400E6C75E /* BaseViewController+navigation.swift in Sources */,
+				63CBDF1B2FEF0F0400E6C75E /* DocumentCaptureViewController.swift in Sources */,
+				63CBDF1C2FEF0F0400E6C75E /* OvalCameraOverlayView.swift in Sources */,
+				63CBDF1D2FEF0F0400E6C75E /* PingOneNavController.swift in Sources */,
 				63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */,
 				1C4253752909C178008E871B /* ViewController.swift in Sources */,
 				1C4253712909C178008E871B /* AppDelegate.swift in Sources */,
@@ -418,6 +1374,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
+				DISABLE_XCFRAMEWORKS_SIGNATURE_CHECKING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PingOne Verify/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required for scanning your IDs and taking pictures.";
@@ -432,7 +1389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.2;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -454,6 +1411,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
+				DISABLE_XCFRAMEWORKS_SIGNATURE_CHECKING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PingOne Verify/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required for scanning your IDs and taking pictures.";
@@ -468,7 +1426,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.2;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

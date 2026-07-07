@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeolocationPermissionViewController" customModule="VerifyUI" customModuleProvider="target">
+            <connections>
+                <outlet property="continueButton" destination="4nW-tI-TaD" id="X4B-ss-N3W"/>
+                <outlet property="descriptionLabel" destination="bWz-Up-mjl" id="MTt-XQ-6da"/>
+                <outlet property="headerLabel" destination="WeA-Qf-hmC" id="99k-MY-Osg"/>
+                <outlet property="permissionImageView" destination="Ecc-b6-27c" id="PV-geo-img1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idv_geolocation_permission" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-b6-27c">
+                    <rect key="frame" x="25" y="155" width="343" height="340"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="340" id="Fvt-Hp-N91"/>
+                        <constraint firstAttribute="width" constant="340" id="jyI-Rh-uQx"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vod-fg-GYw">
+                    <rect key="frame" x="25" y="764" width="343" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nW-tI-TaD" customClass="VerifyButton" customModule="VerifyUI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="GkA-Mq-meu"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Yes, Continue"/>
+                            <connections>
+                                <action selector="requestLocationPermission:" destination="-1" eventType="touchUpInside" id="Tr2-nc-b5F"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share your Location" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeA-Qf-hmC">
+                    <rect key="frame" x="25" y="655" width="343" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" red="0.14509803921568626" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your location is needed to complete identity verification." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWz-Up-mjl">
+                    <rect key="frame" x="25" y="696" width="343" height="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                    <color key="textColor" red="0.14509803921568626" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WeA-Qf-hmC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="AZA-gn-r9N"/>
+                <constraint firstItem="bWz-Up-mjl" firstAttribute="top" secondItem="WeA-Qf-hmC" secondAttribute="bottom" constant="5" id="BaC-kc-LQU"/>
+                <constraint firstItem="Ecc-b6-27c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="155" id="GzG-lR-Xlc"/>
+                <constraint firstItem="Vod-fg-GYw" firstAttribute="top" secondItem="bWz-Up-mjl" secondAttribute="bottom" constant="25" id="IjN-Ka-gqg"/>
+                <constraint firstItem="Ecc-b6-27c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Kfu-Ar-eh9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bWz-Up-mjl" secondAttribute="trailing" constant="25" id="KoF-iO-m5M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ecc-b6-27c" secondAttribute="trailing" constant="25" id="QMb-AW-IfO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WeA-Qf-hmC" secondAttribute="trailing" constant="25" id="QQ4-YP-tSu"/>
+                <constraint firstItem="bWz-Up-mjl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="RoK-my-cGl"/>
+                <constraint firstItem="Vod-fg-GYw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Vuz-nb-V74"/>
+                <constraint firstAttribute="bottom" secondItem="Vod-fg-GYw" secondAttribute="bottom" constant="40" id="WMr-35-Z4E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vod-fg-GYw" secondAttribute="trailing" constant="25" id="cHD-uB-F6n"/>
+                <constraint firstItem="Ecc-b6-27c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u7B-Be-1qE"/>
+            </constraints>
+            <point key="canvasLocation" x="-153" y="72"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="idv_geolocation_permission" width="1020" height="1020"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

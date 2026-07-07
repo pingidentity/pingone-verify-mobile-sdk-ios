@@ -1,25 +1,19 @@
 # Changelog
 
-## v3.2.5 - July 2nd, 2026
 
-### Fixed
+## v4.0.0 - June 27th, 2026
 
-- Fixed proper dismissal of navigation controller
+Major release with a redesigned public API and open-source VerifyUI. Contains breaking changes.
 
+- For integration guides and quick starts, see [`README.md`](./README.md).
+- For a full list of API changes and upgrade steps, see [`MIGRATION.md`](./MIGRATION.md).
+- For a complete public API reference, see [`Class Reference.md`](./Class%20Reference.md).
 
-## v3.2.4 - June 24th, 2026
+## v3.3.0 - April 28th, 2026
 
-### Fixed
+### Added
 
-- SDK not submitting barcode for IDs
-- Removed the GlassUI effect from the back button 
-- Fix for overriding localization from app 
-
-## v3.2.3 - June 5th, 2026
-
-### Fixed
-
-- SDK not submitting barcode for DLs
+- Enforced a hard stop in the collection flow when users deny required location permissions.
 
 ## v3.2.2 - April 17th, 2026
 
