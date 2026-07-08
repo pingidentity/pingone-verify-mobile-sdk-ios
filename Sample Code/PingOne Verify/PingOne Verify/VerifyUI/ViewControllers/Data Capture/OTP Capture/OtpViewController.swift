@@ -27,7 +27,8 @@ class OtpViewController: BaseViewController {
     var otpSession: OtpSession!
     var otpDestination: String!
     var otpSettings: OtpCaptureSettings!
-    
+    private var resendCooldownTimer: Timer?
+
     var topbarHeight: CGFloat {
         return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
         (self.navigationController?.navigationBar.frame.height ?? 0.0)
@@ -44,7 +45,9 @@ class OtpViewController: BaseViewController {
         let otpCaptureViewController = OtpViewController(nibName: "OtpViewController", bundle: bundle)
         otpCaptureViewController.coordinator = coordinator
         otpCaptureViewController.documentType = otpSettings.documentType
-        otpCaptureViewController.otpDestination = otpSettings.destination
+        otpCaptureViewController.otpDestination = otpSettings.destination.isEmpty
+            ? DataCaptureViewController.lastEnteredDestination
+            : otpSettings.destination
         otpCaptureViewController.otpSession = otpSettings.otpSession
         otpCaptureViewController.otpSettings = otpSettings
         return otpCaptureViewController
@@ -128,7 +131,7 @@ class OtpViewController: BaseViewController {
         guard isMovingFromParent || isBeingDismissed else { return }
         NotificationCenter.default.removeObserver(self)
         self.otpSettings?.otpExpiryTicker.onTick = nil
-        self.otpSettings?.resendCooldownTicker.onTick = nil
+        self.resendCooldownTimer?.invalidate()
     }
 
     private func subscribeToTickers() {
@@ -140,16 +143,6 @@ class OtpViewController: BaseViewController {
             if remaining <= 0 {
                 let otpTimeoutAppEvent = AppEvent(key: AppEventConstants.DATA_CAPTURE_OTP_TIMEOUT, value: self.documentType.rawValue + "_" + AppConstants.eventValueTrue)
                 AppEventStorage.shared.addAppEvents(events: otpTimeoutAppEvent, eventType: .DATA_CAPTURE)
-            }
-        }
-        otpSettings.resendCooldownTicker.onTick = { [weak self] remaining in
-            guard let self else { return }
-            if remaining < 1 {
-                self.resendButton.setTitle("idv_otp_resend".localized, for: .normal)
-                self.resendButton.isEnabled = (self.otpSession.canResend ?? false)
-                self.resendButton.alpha = 1.0
-            } else {
-                self.resendButton.isEnabled = false
             }
         }
     }
@@ -165,10 +158,38 @@ class OtpViewController: BaseViewController {
             self.resendButton.backgroundColor = UIColor.clear
             self.resendButton.setTitleColor(UIColor.systemBlue, for: .normal)
             self.resendButton.setTitleColor(UIColor.gray, for: .disabled)
-            self.resendButton.isEnabled = false
+            self.startResendCooldownTimer()
         } else {
             self.resendButton.isHidden = true
         }
+    }
+
+    /// Core sends only the raw `resendCooldown` timestamp on `otpSession`;
+    /// the UI computes remaining time and schedules its own one-shot re-enable.
+    private func startResendCooldownTimer() {
+        resendCooldownTimer?.invalidate()
+        resendCooldownTimer = nil
+
+        guard let resendCooldown = self.otpSession.resendCooldown,
+              let remaining = PingOneVerifyClientUtils.getRemainingDocumentSubmissionTime(expiresAt: resendCooldown, safetyTime: 0),
+              remaining > 0 else {
+            setResendButtonAvailable()
+            return
+        }
+
+        self.resendButton.isEnabled = false
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.resendCooldownTimer = Timer.scheduledTimer(withTimeInterval: remaining, repeats: false) { [weak self] _ in
+                self?.setResendButtonAvailable()
+            }
+        }
+    }
+
+    private func setResendButtonAvailable() {
+        self.resendButton.setTitle("idv_otp_resend".localized, for: .normal)
+        self.resendButton.isEnabled = (self.otpSession.canResend ?? false)
+        self.resendButton.alpha = 1.0
     }
     
 internal func showError() {

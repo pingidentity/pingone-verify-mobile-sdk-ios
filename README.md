@@ -53,7 +53,7 @@ Captures a live selfie for liveness detection and face-match verification. If th
 
 ### Email OTP Verification
 
-Collects the user's email address, sends a one-time passcode to that address, and validates it. The user can request a resend at any time; the SDK refreshes the OTP session and restarts the countdown timers automatically.
+Collects the user's email address, sends a one-time passcode to that address, and validates it. The user can request a resend at any time; the SDK refreshes the OTP session and restarts the expiry countdown automatically.
 
 ![Email OTP Verification](Flow%20Diagrams/Email.png)
 
@@ -132,7 +132,7 @@ func start(url: String) {
 
 ### Localization
 
-Override any string by replacing its value in `PingOneVerifyLocalizable.strings` inside your app bundle.
+Override any string by replacing its value in `PingOneVerifyLocalizable.strings` inside your app bundle. Local overrides always take precedence over the remote language pack.
 
 ---
 

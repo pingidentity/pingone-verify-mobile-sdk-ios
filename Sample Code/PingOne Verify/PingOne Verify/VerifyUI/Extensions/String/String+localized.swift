@@ -10,12 +10,19 @@ import Foundation
 
 public extension String {
 
+    /// Local `.strings` entries take precedence over the remote language pack so the bundled
+    /// copy (guaranteed to match the SDK's expected format specifiers) wins over a remote value
+    /// that may be missing them; falls back to remote, then to the raw key itself.
     var localized: String {
+        let bundle = Bundle.forResource("PingOneVerifyLocalizable", ofType: "strings")
+        let localValue = self.localized(tableName: "PingOneVerifyLocalizable", bundle: bundle, defaultValue: self)
+        if localValue != self {
+            return localValue
+        }
         if let provider = VerifyLanguagePackProvider.shared {
             return provider.getStringForKey(self)
         }
-        let bundle = Bundle.forResource("PingOneVerifyLocalizable", ofType: "strings")
-        return self.localized(tableName: "PingOneVerifyLocalizable", bundle: bundle, defaultValue: self)
+        return self
     }
     
     func localized(in fileName: String) -> String {

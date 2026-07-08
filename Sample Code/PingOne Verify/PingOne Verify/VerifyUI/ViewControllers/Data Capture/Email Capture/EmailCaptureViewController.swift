@@ -35,7 +35,8 @@ class EmailCaptureViewController: DataCaptureViewController {
             
             self.data = text
         }
-        
+
+        DataCaptureViewController.lastEnteredDestination = self.data
         showProcessing?()
         coordinator?.submitEmail(self.data)
     }

@@ -118,7 +118,7 @@ That's it for the built-in UI. The helper:
 - `coordinator(_:didCaptureGeolocation:longitude:)` — location coordinates available. Call `coordinator.submitGeolocation(latitude:longitude:)` from here.
 - `coordinator(_:didSubmitDocument:)` — document was submitted; update progress.
 - `coordinator(_:didSubmitOtp:)` — OTP result. `true` on success; on `false`, show the user the error and let them re-enter (the SDK handles the `OTP_RETRYABLE` / `FAIL` distinction internally — `FAIL` will additionally advance the flow).
-- `coordinator(_:didUpdateOtpSession:)` — OTP session updated (e.g. after a resend). Read `settings.otpSession`, `settings.destination`, and the ticker instances directly off `settings`.
+- `coordinator(_:didUpdateOtpSession:)` — OTP session updated (e.g. after a resend). Read `settings.otpSession`, `settings.destination`, and `settings.otpExpiryTicker` directly off `settings`; compute resend cooldown yourself from `settings.otpSession?.resendCooldown`.
 - `coordinator(didCompleteSubmission:)` — flow finished successfully.
 - `coordinator(_:didFailWith:)` — flow failed.
 

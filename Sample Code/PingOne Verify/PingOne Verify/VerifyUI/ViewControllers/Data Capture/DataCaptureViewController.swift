@@ -8,6 +8,11 @@
 import UIKit
 
 class DataCaptureViewController: BaseViewController {
+    /// The value the user actually typed/selected on the email or phone entry screen,
+    /// captured locally so the OTP screen can show it even if the core's echoed-back
+    /// `destination` doesn't reach the settings object.
+    static var lastEnteredDestination: String = ""
+
     weak var coordinator: VerifyTransactionCoordinator?
     var showProcessing: (() -> Void)?
     var canSendVerificationCode: Bool = false {
