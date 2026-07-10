@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.0.1 - July 8th, 2026
+
+### Fixed
+- Removed OtpCaptureSettings.resendCooldownTicker; UI now computes and drives the resend cooldown itself from the raw timestamp.
+- Local .strings values now take precedence over the remote language pack (falling back to remote, then the raw key).
 
 ## v4.0.0 - June 27th, 2026
 

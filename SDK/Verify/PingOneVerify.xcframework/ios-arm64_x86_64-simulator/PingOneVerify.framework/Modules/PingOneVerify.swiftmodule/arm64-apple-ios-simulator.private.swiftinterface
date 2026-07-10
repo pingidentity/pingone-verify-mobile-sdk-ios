@@ -174,7 +174,6 @@ public class Request {
   public var destination: Swift.String
   public var otpSession: PingOneVerify.OtpSession?
   final public let otpExpiryTicker: PingOneVerify.OtpTicker
-  final public let resendCooldownTicker: PingOneVerify.OtpTicker
   public var keyboardHint: Swift.String
   public var keyboardType: UIKit.UIKeyboardType
   public var contentType: UIKit.UITextContentType
@@ -414,7 +413,6 @@ public class ValueRequirements : NeoInterfaces.RequirementsProtocol, Swift.Decod
   public var destination: Swift.String
   public var otpSession: PingOneVerify.OtpSession?
   final public let otpExpiryTicker: PingOneVerify.OtpTicker
-  final public let resendCooldownTicker: PingOneVerify.OtpTicker
   public var keyboardHint: Swift.String
   public var keyboardType: UIKit.UIKeyboardType
   public var contentType: UIKit.UITextContentType
@@ -1206,7 +1204,6 @@ public protocol OtpCaptureSettings : NeoInterfaces.DocumentCaptureSettings {
   var requirements: (any NeoInterfaces.RequirementsProtocol)? { get set }
   #endif
   var otpExpiryTicker: PingOneVerify.OtpTicker { get }
-  var resendCooldownTicker: PingOneVerify.OtpTicker { get }
 }
 public struct ThemeConfig : Swift.Codable {
   public static let DEFAULT_LOGO_TYPE: PingOneVerify.ResourceType

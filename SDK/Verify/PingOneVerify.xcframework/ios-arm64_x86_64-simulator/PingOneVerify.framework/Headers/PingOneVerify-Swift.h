@@ -366,7 +366,7 @@ typedef SWIFT_ENUM(NSInteger, DocumentSubmissionStatus, open) {
 /// method when <code>documentType == .EMAIL</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
 /// own email-entry UI, then call <code>coordinator.submitEmail(_:)</code> with the entered address.
 /// Once the OTP session is active, <code>otpSession</code> is populated and you can read
-/// <code>otpExpiryTicker</code> / <code>resendCooldownTicker</code> to drive the OTP screen countdowns.
+/// <code>otpExpiryTicker</code> to drive the OTP screen countdown.
 SWIFT_CLASS("_TtC13PingOneVerify20EmailCaptureSettings")
 @interface EmailCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -405,7 +405,7 @@ typedef SWIFT_ENUM(NSInteger, OtpStatus, open) {
 /// method when <code>documentType == .PHONE</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
 /// own phone-entry UI, then call <code>coordinator.submitPhone(_:)</code> with the entered number.
 /// Once the OTP session is active, <code>otpSession</code> is populated and you can read
-/// <code>otpExpiryTicker</code> / <code>resendCooldownTicker</code> to drive the OTP screen countdowns.
+/// <code>otpExpiryTicker</code> to drive the OTP screen countdown.
 SWIFT_CLASS("_TtC13PingOneVerify20PhoneCaptureSettings")
 @interface PhoneCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -797,7 +797,7 @@ typedef SWIFT_ENUM(NSInteger, DocumentSubmissionStatus, open) {
 /// method when <code>documentType == .EMAIL</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
 /// own email-entry UI, then call <code>coordinator.submitEmail(_:)</code> with the entered address.
 /// Once the OTP session is active, <code>otpSession</code> is populated and you can read
-/// <code>otpExpiryTicker</code> / <code>resendCooldownTicker</code> to drive the OTP screen countdowns.
+/// <code>otpExpiryTicker</code> to drive the OTP screen countdown.
 SWIFT_CLASS("_TtC13PingOneVerify20EmailCaptureSettings")
 @interface EmailCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -836,7 +836,7 @@ typedef SWIFT_ENUM(NSInteger, OtpStatus, open) {
 /// method when <code>documentType == .PHONE</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
 /// own phone-entry UI, then call <code>coordinator.submitPhone(_:)</code> with the entered number.
 /// Once the OTP session is active, <code>otpSession</code> is populated and you can read
-/// <code>otpExpiryTicker</code> / <code>resendCooldownTicker</code> to drive the OTP screen countdowns.
+/// <code>otpExpiryTicker</code> to drive the OTP screen countdown.
 SWIFT_CLASS("_TtC13PingOneVerify20PhoneCaptureSettings")
 @interface PhoneCaptureSettings : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

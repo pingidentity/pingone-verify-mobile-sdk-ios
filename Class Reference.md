@@ -177,7 +177,6 @@ Subtype delivered to `shouldCaptureDocument` and `didUpdateOtpSession` for OTP s
 | `destination` | `var destination: String` | Email address or phone number to which the OTP was sent. |
 | `otpSession` | `var otpSession: OtpSession?` | Typed OTP session state — contains expiry, resend availability, and ticker instances. |
 | `otpExpiryTicker` | `var otpExpiryTicker: OtpTicker { get }` | Countdown to OTP expiry. Subscribe to `onTick` / `onExpire`. |
-| `resendCooldownTicker` | `var resendCooldownTicker: OtpTicker { get }` | Countdown to when a new OTP delivery may be requested. |
 | `requirements` | `var requirements: RequirementsProtocol?` | Server-defined constraints on the destination field. |
 
 ### `OtpSession` (embedded in `OtpCaptureSettings.otpSession`)

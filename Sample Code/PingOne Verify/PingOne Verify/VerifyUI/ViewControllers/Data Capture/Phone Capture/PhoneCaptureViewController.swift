@@ -45,6 +45,7 @@ class PhoneCaptureViewController: DataCaptureViewController, UIGestureRecognizer
             self.data = "(\(countryCode))-\(phoneNumber)"
         }
         
+        DataCaptureViewController.lastEnteredDestination = self.data
         showProcessing?()
         coordinator?.submitPhone(self.data)
     }

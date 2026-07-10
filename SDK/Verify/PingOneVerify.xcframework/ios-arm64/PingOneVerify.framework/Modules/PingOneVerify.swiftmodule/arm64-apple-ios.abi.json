@@ -4588,56 +4588,6 @@
           },
           {
             "kind": "Var",
-            "name": "resendCooldownTicker",
-            "printedName": "resendCooldownTicker",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OtpTicker",
-                "printedName": "PingOneVerify.OtpTicker",
-                "usr": "s:13PingOneVerify9OtpTickerC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13PingOneVerify20PhoneCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvp",
-            "mangledName": "$s13PingOneVerify20PhoneCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvp",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OtpTicker",
-                    "printedName": "PingOneVerify.OtpTicker",
-                    "usr": "s:13PingOneVerify9OtpTickerC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify20PhoneCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvg",
-                "mangledName": "$s13PingOneVerify20PhoneCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvg",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "keyboardHint",
             "printedName": "keyboardHint",
             "children": [
@@ -13287,56 +13237,6 @@
                 "declKind": "Accessor",
                 "usr": "s:13PingOneVerify20EmailCaptureSettingsC15otpExpiryTickerAA03OtpI0Cvg",
                 "mangledName": "$s13PingOneVerify20EmailCaptureSettingsC15otpExpiryTickerAA03OtpI0Cvg",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "resendCooldownTicker",
-            "printedName": "resendCooldownTicker",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OtpTicker",
-                "printedName": "PingOneVerify.OtpTicker",
-                "usr": "s:13PingOneVerify9OtpTickerC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13PingOneVerify20EmailCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvp",
-            "mangledName": "$s13PingOneVerify20EmailCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvp",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OtpTicker",
-                    "printedName": "PingOneVerify.OtpTicker",
-                    "usr": "s:13PingOneVerify9OtpTickerC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify20EmailCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvg",
-                "mangledName": "$s13PingOneVerify20EmailCaptureSettingsC20resendCooldownTickerAA03OtpI0Cvg",
                 "moduleName": "PingOneVerify",
                 "implicit": true,
                 "declAttributes": [
@@ -44348,51 +44248,6 @@
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Var",
-            "name": "resendCooldownTicker",
-            "printedName": "resendCooldownTicker",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OtpTicker",
-                "printedName": "PingOneVerify.OtpTicker",
-                "usr": "s:13PingOneVerify9OtpTickerC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13PingOneVerify18OtpCaptureSettingsP20resendCooldownTickerAA0dI0Cvp",
-            "mangledName": "$s13PingOneVerify18OtpCaptureSettingsP20resendCooldownTickerAA0dI0Cvp",
-            "moduleName": "PingOneVerify",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OtpTicker",
-                    "printedName": "PingOneVerify.OtpTicker",
-                    "usr": "s:13PingOneVerify9OtpTickerC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify18OtpCaptureSettingsP20resendCooldownTickerAA0dI0Cvg",
-                "mangledName": "$s13PingOneVerify18OtpCaptureSettingsP20resendCooldownTickerAA0dI0Cvg",
-                "moduleName": "PingOneVerify",
-                "genericSig": "<τ_0_0 where τ_0_0 : PingOneVerify.OtpCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : PingOneVerify.OtpCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
           }
         ],
         "declKind": "Protocol",
@@ -51818,28 +51673,28 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/PhoneCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 946,
+      "offset": 920,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/PhoneCaptureSettings.swift",
       "kind": "StringLiteral",
-      "offset": 1042,
+      "offset": 1016,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/PhoneCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 2164,
+      "offset": 2012,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/PhoneCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 2274,
+      "offset": 2122,
       "length": 5,
       "value": "false"
     },
@@ -52252,28 +52107,28 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/EmailCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 951,
+      "offset": 925,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/EmailCaptureSettings.swift",
       "kind": "StringLiteral",
-      "offset": 1048,
+      "offset": 1022,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/EmailCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 2145,
+      "offset": 1993,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/EmailCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 2255,
+      "offset": 2103,
       "length": 5,
       "value": "false"
     },
@@ -53183,21 +53038,21 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Core\/PingOneVerifyClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 31646,
+      "offset": 31598,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Core\/PingOneVerifyClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 39736,
+      "offset": 39688,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/PingOneVerify\/Core\/PingOneVerifyClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 43259,
+      "offset": 43069,
       "length": 5,
       "value": "false"
     },
