@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+XSq7Oa11P040Wx6niu7GFSHmRo=
+		a2FL73U2u2c0ukdDE/CZ4rlX/rA=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -18,19 +18,19 @@
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		hZMBYR2Y8gd1/4C/hr2hrbAlA44=
+		XURK4nbm/7He1a87tPIDC8br3H0=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		1E/4ZpZoq1jmR1L8rj+Ga4ExJ2o=
+		ArV+dOngpKYovh/UZ2/8DW322rQ=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		hZMBYR2Y8gd1/4C/hr2hrbAlA44=
+		XURK4nbm/7He1a87tPIDC8br3H0=
 		</data>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ksQA6mcRT/25oOlubY3K6herNes=
+		/BwLq6fj7XPEBdO6RUTy+NO8ld8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -57,28 +57,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FGiEEteBaLkWJmnz8+V2gI9qWZ+k4AuzjG7uaU2mSdY=
+			HpM4uAfxou7amx3kgxCKxh2gjYBB+7o64TA8R4Pxd+w=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dNbt7M5qsFPqd4VEbz0PJ8tGLnIjUToyVrlynZ1mzKk=
+			n+tR25frgz9e+aLoui8Cjn/Fupaf9fM/EcKlbiNKlBE=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FGiEEteBaLkWJmnz8+V2gI9qWZ+k4AuzjG7uaU2mSdY=
+			HpM4uAfxou7amx3kgxCKxh2gjYBB+7o64TA8R4Pxd+w=
 			</data>
 		</dict>
 		<key>Modules/NeoInterfaces.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			35MHdowlvnIK82o95ostP7ak1HrKehdJ4VOYDWf1pEE=
+			SgineDutHqu8vceScQ8LTiYI0OP6BrowVxRQzDt6o2A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

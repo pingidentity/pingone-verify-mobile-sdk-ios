@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.2.6 - July 15th, 2026
+
+### Fixed
+
+- Fixed a potential crash
+
 ## v3.2.5 - July 2nd, 2026
 
 ### Fixed

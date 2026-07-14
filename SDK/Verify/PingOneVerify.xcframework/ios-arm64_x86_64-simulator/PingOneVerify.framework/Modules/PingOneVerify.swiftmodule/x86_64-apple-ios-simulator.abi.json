@@ -3445,16 +3445,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "Authentication",
         "printedName": "Authentication",
@@ -4792,116 +4782,6 @@
           },
           {
             "kind": "Var",
-            "name": "isAadhaar",
-            "printedName": "isAadhaar",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Bool?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvp",
-            "mangledName": "$s13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvp",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Bool?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvg",
-                "mangledName": "$s13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvg",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.Bool?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvs",
-                "mangledName": "$s13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvs",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvM",
-                "mangledName": "$s13PingOneVerify26DocumentSubmissionResponseC9isAadhaarSbSgvM",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "createdAt",
             "printedName": "createdAt",
             "children": [
@@ -5712,27 +5592,6 @@
           },
           {
             "kind": "Function",
-            "name": "getIsAadhaar",
-            "printedName": "getIsAadhaar()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13PingOneVerify26DocumentSubmissionResponseC12getIsAadhaarSbyF",
-            "mangledName": "$s13PingOneVerify26DocumentSubmissionResponseC12getIsAadhaarSbyF",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "getOtpSessions",
             "printedName": "getOtpSessions()",
             "children": [
@@ -5951,32 +5810,6 @@
             "declKind": "Func",
             "usr": "s:13PingOneVerify26DocumentSubmissionResponseC03setdE6Status08documenteH0yAA0deH0O_tF",
             "mangledName": "$s13PingOneVerify26DocumentSubmissionResponseC03setdE6Status08documenteH0yAA0deH0O_tF",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setIsAadhaar",
-            "printedName": "setIsAadhaar(aadhaar:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13PingOneVerify26DocumentSubmissionResponseC12setIsAadhaar7aadhaarySb_tF",
-            "mangledName": "$s13PingOneVerify26DocumentSubmissionResponseC12setIsAadhaar7aadhaarySb_tF",
             "moduleName": "PingOneVerify",
             "declAttributes": [
               "AccessControl"
@@ -6463,141 +6296,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -6625,8 +6323,86 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "PingOneVerify",
         "declAttributes": [
@@ -10239,115 +10015,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "UserConfirmedField",
-        "printedName": "UserConfirmedField",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UserConfirmedField",
-                "printedName": "PingOneVerify.UserConfirmedField",
-                "usr": "s:13PingOneVerify18UserConfirmedFieldC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:13PingOneVerify18UserConfirmedFieldC4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s13PingOneVerify18UserConfirmedFieldC4fromACs7Decoder_p_tKcfc",
-            "moduleName": "PingOneVerify",
-            "implicit": true,
-            "declAttributes": [
-              "Required"
-            ],
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13PingOneVerify18UserConfirmedFieldC6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s13PingOneVerify18UserConfirmedFieldC6encode2toys7Encoder_p_tKF",
-            "moduleName": "PingOneVerify",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:13PingOneVerify18UserConfirmedFieldC",
-        "mangledName": "$s13PingOneVerify18UserConfirmedFieldC",
-        "moduleName": "PingOneVerify",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -10868,92 +10535,6 @@
                 "declKind": "Accessor",
                 "usr": "s:13PingOneVerify17IdCaptureSettingsC12requirementsAA20RequirementsProtocol_pSgvM",
                 "mangledName": "$s13PingOneVerify17IdCaptureSettingsC12requirementsAA20RequirementsProtocol_pSgvM",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "isAadhaar",
-            "printedName": "isAadhaar",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvp",
-            "mangledName": "$s13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvp",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvg",
-                "mangledName": "$s13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvg",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvs",
-                "mangledName": "$s13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvs",
-                "moduleName": "PingOneVerify",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvM",
-                "mangledName": "$s13PingOneVerify17IdCaptureSettingsC9isAadhaarSbvM",
                 "moduleName": "PingOneVerify",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -11517,53 +11098,6 @@
               "ObjC"
             ],
             "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "getIsAadhaar",
-            "printedName": "getIsAadhaar()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13PingOneVerify17IdCaptureSettingsC12getIsAadhaarSbyF",
-            "mangledName": "$s13PingOneVerify17IdCaptureSettingsC12getIsAadhaarSbyF",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setIsAadhaar",
-            "printedName": "setIsAadhaar(isAadhaar:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13PingOneVerify17IdCaptureSettingsC12setIsAadhaar02isI0ySb_tF",
-            "mangledName": "$s13PingOneVerify17IdCaptureSettingsC12setIsAadhaar02isI0ySb_tF",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -15933,47 +15467,6 @@
           },
           {
             "kind": "Var",
-            "name": "AADHAAR",
-            "printedName": "AADHAAR",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PingOneVerify.DocumentClass.Type) -> PingOneVerify.DocumentClass",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DocumentClass",
-                    "printedName": "PingOneVerify.DocumentClass",
-                    "usr": "c:@M@PingOneVerify@E@DocumentClass"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PingOneVerify.DocumentClass.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "DocumentClass",
-                        "printedName": "PingOneVerify.DocumentClass",
-                        "usr": "c:@M@PingOneVerify@E@DocumentClass"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@PingOneVerify@E@DocumentClass@DocumentClassAADHAAR",
-            "mangledName": "$s13PingOneVerify13DocumentClassO7AADHAARyA2CmF",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 10
-          },
-          {
-            "kind": "Var",
             "name": "GEOLOCATION",
             "printedName": "GEOLOCATION",
             "children": [
@@ -16011,7 +15504,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 11
+            "fixedbinaryorder": 10
           },
           {
             "kind": "Var",
@@ -17959,55 +17452,6 @@
             "declKind": "Func",
             "usr": "s:13PingOneVerify0abC6ClientC25pollForVerificationStatusyySdSgF",
             "mangledName": "$s13PingOneVerify0abC6ClientC25pollForVerificationStatusyySdSgF",
-            "moduleName": "PingOneVerify",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "pollForAadhaarVerification",
-            "printedName": "pollForAadhaarVerification(_:otpDestination:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Double?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:13PingOneVerify0abC6ClientC26pollForAadhaarVerification_14otpDestinationySdSg_SSSgtF",
-            "mangledName": "$s13PingOneVerify0abC6ClientC26pollForAadhaarVerification_14otpDestinationySdSg_SSSgtF",
             "moduleName": "PingOneVerify",
             "declAttributes": [
               "AccessControl"
@@ -25774,13 +25218,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/KeyMappings\/AadhaarKeyMapping.swift",
-      "kind": "Dictionary",
-      "offset": 222,
-      "length": 136,
-      "value": "[(\"v1\", [(\"frontImage\", \"Document Front\"), (\"backImage\", \"Document Back\"), (\"userConfirmedField\", \"UserConfirmedField\"), (\"ocrData\", \"ocrData\")])]"
-    },
-    {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ServiceApi\/ApiConstants.swift",
       "kind": "StringLiteral",
       "offset": 176,
@@ -26000,16 +25437,9 @@
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentSubmissionResponse.swift",
       "kind": "StringLiteral",
-      "offset": 4582,
+      "offset": 4309,
       "length": 26,
       "value": "\"documentCollectionStatus\""
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentSubmissionResponse.swift",
-      "kind": "StringLiteral",
-      "offset": 4793,
-      "length": 9,
-      "value": "\"aadhaar\""
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/CommunicationManager\/RequestHeader.swift",
@@ -26136,62 +25566,6 @@
       "offset": 4727,
       "length": 26,
       "value": "\"documentCollectionStatus\""
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 792,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 823,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 866,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1077,
-      "length": 2,
-      "value": "60"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1115,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1532,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1567,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/Data Capture\/Aadhaar Capture\/AadhaarOtpViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 1630,
-      "length": 3,
-      "value": "1.0"
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Appearance\/CustomMenu\/CustomMenu\/CustomMenu.swift",
@@ -26798,21 +26172,14 @@
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 435,
+      "offset": 514,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 553,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/DocumentCaptureSettings\/IdCaptureSettings.swift",
-      "kind": "BooleanLiteral",
-      "offset": 590,
+      "offset": 551,
       "length": 5,
       "value": "false"
     },
@@ -28331,56 +27698,42 @@
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
       "kind": "IntegerLiteral",
-      "offset": 425,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Types\/Documents\/DocumentClass.swift",
-      "kind": "IntegerLiteral",
-      "offset": 451,
+      "offset": 429,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 318,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 440,
+      "offset": 408,
       "length": 7,
       "value": "\"7.6.2\""
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 493,
+      "offset": 461,
       "length": 43,
       "value": "\"com.pingidentity.sdk.pingoneverify.sample\""
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 590,
+      "offset": 558,
       "length": 16,
       "value": "\"MB_license_key\""
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 642,
+      "offset": 610,
       "length": 7,
       "value": "\"2.4.3\""
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7707,
+      "offset": 7546,
       "length": 7,
       "value": "\"error\""
     },
@@ -28499,21 +27852,7 @@
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Client\/PingOneVerifyClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 29195,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Utils\/IdCapturePreviewVM.swift",
-      "kind": "BooleanLiteral",
-      "offset": 307,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Utils\/IdCapturePreviewVM.swift",
-      "kind": "BooleanLiteral",
-      "offset": 383,
+      "offset": 28127,
       "length": 5,
       "value": "false"
     },
@@ -28866,13 +28205,6 @@
       "offset": 332,
       "length": 3,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Types\/VerifyTransaction.swift",
-      "kind": "BooleanLiteral",
-      "offset": 398,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Types\/Client.swift",
@@ -29575,13 +28907,6 @@
       "value": "\"TRUE\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Utils\/AppConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 311,
-      "length": 4,
-      "value": "\"IN\""
-    },
-    {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/PingOneVerify\/Appearance\/CustomTextField.swift",
       "kind": "StringLiteral",
       "offset": 242,
@@ -29792,310 +29117,303 @@
       "value": "3.0"
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 618,
       "length": 7,
       "value": "\"Color\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 756,
       "length": 13,
       "value": "\"Global Tint\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 895,
       "length": 10,
       "value": "\"disabled\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1050,
       "length": 23,
       "value": "\"error_textfield_color\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1231,
       "length": 30,
       "value": "\"error_toast_background_color\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1407,
       "length": 24,
       "value": "\"error_toast_text_color\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1561,
       "length": 12,
       "value": "\"foreground\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1707,
       "length": 15,
       "value": "\"idv_icon_tint\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1872,
       "length": 23,
       "value": "\"idv_selfie_background\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2035,
       "length": 18,
       "value": "\"idv_selfie_close\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2193,
       "length": 18,
       "value": "\"idv_selfie_error\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2374,
       "length": 30,
       "value": "\"idv_selfie_guideline_default\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2563,
       "length": 28,
       "value": "\"idv_selfie_guideline_error\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2754,
       "length": 30,
       "value": "\"idv_selfie_guideline_success\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2946,
       "length": 32,
       "value": "\"success_toast_background_color\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3128,
       "length": 26,
       "value": "\"success_toast_text_color\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3397,
       "length": 17,
       "value": "\"arrow_drop_down\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3548,
       "length": 15,
       "value": "\"arrow_drop_up\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3688,
       "length": 10,
       "value": "\"arrow_up\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3838,
       "length": 18,
       "value": "\"btn_close_border\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3980,
       "length": 9,
       "value": "\"caution\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4118,
       "length": 12,
       "value": "\"check_mark\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4259,
       "length": 12,
       "value": "\"cross_mark\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4400,
       "length": 12,
       "value": "\"icon_error\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 4554,
       "length": 19,
       "value": "\"icon_error_border\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4704,
-      "length": 13,
-      "value": "\"idv_aadhaar\""
-    },
-    {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 4842,
+      "offset": 4698,
       "length": 10,
       "value": "\"idv_back\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 4996,
+      "offset": 4852,
       "length": 20,
       "value": "\"idv_button_capture\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5145,
+      "offset": 5001,
       "length": 12,
       "value": "\"idv_cancel\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5284,
+      "offset": 5140,
       "length": 11,
       "value": "\"idv_check\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5437,
+      "offset": 5293,
       "length": 19,
       "value": "\"idv_check_outline\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5606,
+      "offset": 5462,
       "length": 23,
       "value": "\"idv_check_placeholder\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5794,
+      "offset": 5650,
       "length": 31,
       "value": "\"idv_check_placeholder_outline\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 5952,
+      "offset": 5808,
       "length": 11,
       "value": "\"idv_email\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6090,
+      "offset": 5946,
       "length": 11,
       "value": "\"idv_error\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6261,
+      "offset": 6117,
       "length": 28,
       "value": "\"idv_geolocation_permission\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6439,
+      "offset": 6295,
       "length": 23,
       "value": "\"idv_geolocation_retry\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6590,
+      "offset": 6446,
       "length": 12,
       "value": "\"idv_gov_id\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6727,
+      "offset": 6583,
       "length": 10,
       "value": "\"idv_logo\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6860,
+      "offset": 6716,
       "length": 9,
       "value": "\"idv_mic\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 6996,
+      "offset": 6852,
       "length": 11,
       "value": "\"idv_phone\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7136,
+      "offset": 6992,
       "length": 12,
       "value": "\"idv_selfie\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7269,
+      "offset": 7125,
       "length": 8,
       "value": "\"lib_bg\""
     },
     {
-      "filePath": "\/Users\/bhavyachauhan\/Library\/Developer\/Xcode\/DerivedData\/PingOneVerify-grqudptgfrivkjdxsehohhucmqvo\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/derived_data\/PingOneVerify_simulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/PingOneVerify\/IntermediateBuildFilesPath\/PingOneVerify.build\/Release-iphonesimulator\/PingOneVerify.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 7397,
+      "offset": 7253,
       "length": 7,
       "value": "\"retry\""
     }
