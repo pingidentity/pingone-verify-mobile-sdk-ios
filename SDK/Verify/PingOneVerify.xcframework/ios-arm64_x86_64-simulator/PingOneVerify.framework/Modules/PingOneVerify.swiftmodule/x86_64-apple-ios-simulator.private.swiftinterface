@@ -806,7 +806,7 @@ public class PingOneVerifyClient : PingOneVerify.VerifyTransactionCoordinator {
   @objc deinit
   public func startVerification()
   #if compiler(>=5.3) && $NonescapableTypes
-  public func submitGovernmentId(frontImage: Swift.String, backImage: Swift.String?, ocrData: Swift.String?, type: NeoInterfaces.DocumentClass)
+  public func submitGovernmentId(frontImage: Swift.String, backImage: Swift.String?, barcode: Swift.String?, ocrData: Swift.String?, type: NeoInterfaces.DocumentClass)
   #endif
   public func submitSelfie(_ result: PingOneVerify.SelfieCaptureResult)
   public func submitGovernmentId(_ result: PingOneVerify.IdCaptureResult)

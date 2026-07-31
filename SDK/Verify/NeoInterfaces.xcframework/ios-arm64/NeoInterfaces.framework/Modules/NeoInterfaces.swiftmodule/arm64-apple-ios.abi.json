@@ -8473,385 +8473,385 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 8,
       "value": "\"selfie\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 515,
       "length": 15,
       "value": "\"driverLicense\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 576,
       "length": 10,
       "value": "\"passport\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 661,
       "length": 14,
       "value": "\"governmentId\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 745,
       "length": 7,
       "value": "\"email\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 821,
       "length": 7,
       "value": "\"phone\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 884,
       "length": 5,
       "value": "\"otp\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 963,
       "length": 7,
       "value": "\"other\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 1037,
       "length": 12,
       "value": "\"credential\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 1106,
       "length": 13,
       "value": "\"geolocation\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 513,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 633,
       "length": 9,
       "value": "\"otpType\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 779,
       "length": 12,
       "value": "\"frontImage\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 894,
       "length": 11,
       "value": "\"backImage\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 990,
       "length": 9,
       "value": "\"barcode\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1089,
       "length": 9,
       "value": "\"mrzData\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1200,
       "length": 11,
       "value": "\"firstName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1279,
       "length": 12,
       "value": "\"middleName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1364,
       "length": 10,
       "value": "\"lastName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1465,
       "length": 10,
       "value": "\"fullName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1590,
       "length": 20,
       "value": "\"additionalNameInfo\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1717,
       "length": 15,
       "value": "\"localizedName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1834,
       "length": 13,
       "value": "\"fathersName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1949,
       "length": 13,
       "value": "\"mothersName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2077,
       "length": 9,
       "value": "\"address\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2173,
       "length": 15,
       "value": "\"addressStreet\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2271,
       "length": 13,
       "value": "\"addressCity\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2381,
       "length": 14,
       "value": "\"addressState\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2488,
       "length": 12,
       "value": "\"addressZip\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2609,
       "length": 9,
       "value": "\"country\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2740,
       "length": 32,
       "value": "\"additional_address_information\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2906,
       "length": 41,
       "value": "\"additional_optional_address_information\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3068,
       "length": 5,
       "value": "\"sex\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3186,
       "length": 13,
       "value": "\"dateOfBirth\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3300,
       "length": 14,
       "value": "\"placeOfBirth\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3409,
       "length": 13,
       "value": "\"nationality\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3511,
       "length": 15,
       "value": "\"maritalStatus\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3620,
       "length": 6,
       "value": "\"race\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3719,
       "length": 10,
       "value": "\"religion\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3847,
       "length": 19,
       "value": "\"residentialStatus\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4019,
       "length": 16,
       "value": "\"documentNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4165,
       "length": 26,
       "value": "\"documentAdditionalNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4320,
       "length": 34,
       "value": "\"documentOptionalAdditionalNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4454,
       "length": 18,
       "value": "\"personalIdNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4541,
       "length": 13,
       "value": "\"dateOfIssue\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4621,
       "length": 14,
       "value": "\"dateOfExpiry\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4755,
       "length": 18,
       "value": "\"issuingAuthority\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4889,
       "length": 10,
       "value": "\"employer\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4994,
       "length": 12,
       "value": "\"profession\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5154,
       "length": 9,
       "value": "\"ocrData\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5271,
       "length": 14,
       "value": "\"ocrDataFront\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5391,
       "length": 13,
       "value": "\"ocrDataBack\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5527,
       "length": 12,
       "value": "\"iadPayload\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
       "kind": "IntegerLiteral",
       "offset": 468,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
       "kind": "IntegerLiteral",
       "offset": 555,
       "length": 1,
