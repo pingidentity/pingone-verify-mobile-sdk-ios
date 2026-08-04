@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.0.2 - August 4th, 2026
+- Added AppEvents for debugging
+
+
 ## v4.0.1 - July 8th, 2026
 
 ### Fixed

@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OuAA+kCdJ9yHVVHfrPkENGHiSes=
+		aRdnCEdNFiVWgTMScb4xUR5R1K4=
 		</data>
 		<key>Model_07c7ab860e77ec2e92bb822f6d62424b8595a5beb4340f6b2f7f6a4cffa5d050.strop</key>
 		<data>
@@ -86,23 +86,23 @@
 		</data>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		m94gOmu6j2EVGuDTAMYaAj5ClKU=
+		d8QW4H5RFkS7X6AM2C4vcBvYwXw=
 		</data>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		xGcHWQBE2IES0nZs6U2K3RMmpWk=
+		srSLE9io3Cime63cxzPHAslNkqk=
 		</data>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		AnvcfJBb75yfB5SG8a2YzEeTjww=
+		UuDgobWLqPOfBdKhLtG3OkIuJPQ=
 		</data>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xGcHWQBE2IES0nZs6U2K3RMmpWk=
+		srSLE9io3Cime63cxzPHAslNkqk=
 		</data>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		naVFfF54l5e0kpgwR1hhKLnzSWI=
+		nmd7O7HMGVpC5RSpDaRVU+lAuL4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -256,35 +256,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sb5eWa5B1sgDtppIglQI+4ekxVFqf5HFhaTSDTsa5w0=
+			9EeXROqyrTsm4SiLAO/edvJT3mwgq8fBZgP+haQonps=
 			</data>
 		</dict>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jmcqjli7C0sgbrQVN7dOSWpejKx+lE8mUntzTLkf014=
+			ZPDMYjIf7G6VDxHgMOKlQnfbbOR1sNUdqRTKypTl+4s=
 			</data>
 		</dict>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yig7yOFYX47Sb1zgibzjY4Tz8Xk8PLfuw7HidPFKPI8=
+			KUsVTL5xhEKbq8zfpokUHwxh7bSTL68ijRHxI8zlbtw=
 			</data>
 		</dict>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jmcqjli7C0sgbrQVN7dOSWpejKx+lE8mUntzTLkf014=
+			ZPDMYjIf7G6VDxHgMOKlQnfbbOR1sNUdqRTKypTl+4s=
 			</data>
 		</dict>
 		<key>Modules/IdCaptureProvider.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yQ5JfDF36lGIMsdcxGnuUsdM2ZJ5hU/5kAaINE5xU6g=
+			Qut7U/LD+b3NZ07lUYBRCugrBaQsVk50dB4Fv9QVFiM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

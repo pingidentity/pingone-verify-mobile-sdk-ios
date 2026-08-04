@@ -6,8 +6,8 @@
     "children": [
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "GeoLocationProvider"
       },
@@ -33,6 +33,33 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeoLocationProviders",
+                "printedName": "GeoLocationProvider.GeoLocationProviders",
+                "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders(im)init",
+            "mangledName": "$s19GeoLocationProvider0aB9ProvidersCACycfc",
+            "moduleName": "GeoLocationProvider",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(listener:)",
             "children": [
               {
@@ -53,33 +80,8 @@
             "mangledName": "$s19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfc",
             "moduleName": "GeoLocationProvider",
             "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "GeoLocationProviders",
-                "printedName": "GeoLocationProvider.GeoLocationProviders",
-                "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@GeoLocationProvider@objc(cs)GeoLocationProviders(im)init",
-            "mangledName": "$s19GeoLocationProvider0aB9ProvidersCACycfc",
-            "moduleName": "GeoLocationProvider",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -270,9 +272,11 @@
         "moduleName": "GeoLocationProvider",
         "declAttributes": [
           "AccessControl",
+          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -356,14 +360,14 @@
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 251,
+      "offset": 673,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/bhavyachauhan\/Documents\/Ping_iOS\/idv_sdk_ios\/GeoLocationProvider\/GeoLocation\/GeoLocationProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 300,
+      "offset": 722,
       "length": 5,
       "value": "false"
     }
