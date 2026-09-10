@@ -1,0 +1,65 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/amahuri/Library/Developer/Xcode/DerivedData/PingOneVerify-aflznfjqbkbhgycpvcokvfslwouz/Build/Intermediates.noindex/ArchiveIntermediates/GeoLocationProvider/InstallationBuildProductsLocation/Library/Frameworks/GeoLocationProvider.framework/GeoLocationProvider'
+relocations:
+  - { offset: 0x573CA, size: 0x8, addend: 0x0, symName: _GeoLocationProviderVersionString, symObjAddr: 0x0, symBinAddr: 0x2CA0, symSize: 0x0 }
+  - { offset: 0x57401, size: 0x8, addend: 0x0, symName: _GeoLocationProviderVersionNumber, symObjAddr: 0x40, symBinAddr: 0x2CE0, symSize: 0x0 }
+  - { offset: 0x574FE, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVs5ErrorSCsACP9_userInfoyXlSgvgTW', symObjAddr: 0xC50, symBinAddr: 0x1D00, symSize: 0x10 }
+  - { offset: 0x57535, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVSHSCSH13_rawHashValue4seedS2i_tFTW', symObjAddr: 0xE20, symBinAddr: 0x1ED0, symSize: 0x50 }
+  - { offset: 0x5757C, size: 0x8, addend: 0x0, symName: '_$sSo7CLErrorVSQSCSQ2eeoiySbx_xtFZTW', symObjAddr: 0xEE0, symBinAddr: 0x1F90, symSize: 0x10 }
+  - { offset: 0x5778C, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCMa', symObjAddr: 0x150, symBinAddr: 0x1240, symSize: 0x20 }
+  - { offset: 0x577A0, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCfETo', symObjAddr: 0x230, symBinAddr: 0x1320, symSize: 0x30 }
+  - { offset: 0x577F0, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC37locationManagerDidChangeAuthorizationyySo010CLLocationF0CF', symObjAddr: 0x410, symBinAddr: 0x1500, symSize: 0x160 }
+  - { offset: 0x57911, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC37locationManagerDidChangeAuthorizationyySo010CLLocationF0CFTo', symObjAddr: 0x590, symBinAddr: 0x1680, symSize: 0x50 }
+  - { offset: 0x5792D, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_18didUpdateLocationsySo010CLLocationF0C_SaySo0J0CGtF', symObjAddr: 0x5E0, symBinAddr: 0x16D0, symSize: 0x10 }
+  - { offset: 0x57950, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_18didUpdateLocationsySo010CLLocationF0C_SaySo0J0CGtFTo', symObjAddr: 0x5F0, symBinAddr: 0x16E0, symSize: 0x80 }
+  - { offset: 0x57982, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_16didFailWithErrorySo010CLLocationF0C_s0J0_ptF', symObjAddr: 0x670, symBinAddr: 0x1760, symSize: 0x70 }
+  - { offset: 0x57A24, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_16didFailWithErrorySo010CLLocationF0C_s0J0_ptFTo', symObjAddr: 0x6E0, symBinAddr: 0x17D0, symSize: 0xC0 }
+  - { offset: 0x57ABD, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC02isB17PermissionGranted13NeoInterfaces0bF6StatusOyF', symObjAddr: 0x7A0, symBinAddr: 0x1890, symSize: 0x3A0 }
+  - { offset: 0x57D1F, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC03setB08listenery13NeoInterfaces0abC8Listener_p_tF', symObjAddr: 0xB40, symBinAddr: 0x1C30, symSize: 0x30 }
+  - { offset: 0x57D6E, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC014requestCurrentB0yyF', symObjAddr: 0xB70, symBinAddr: 0x1C60, symSize: 0x10 }
+  - { offset: 0x57DD3, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC13NeoInterfaces0abC8ContractAadEP02isB17PermissionGrantedAD0bI6StatusOyFTW', symObjAddr: 0xBC0, symBinAddr: 0x1C70, symSize: 0x10 }
+  - { offset: 0x57DFA, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tgq5', symObjAddr: 0xEF0, symBinAddr: 0x1FA0, symSize: 0x60 }
+  - { offset: 0x57E28, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tgq5', symObjAddr: 0xF50, symBinAddr: 0x2000, symSize: 0xC0 }
+  - { offset: 0x57E8B, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo10CLLocationC_Tg5', symObjAddr: 0x1010, symBinAddr: 0x20C0, symSize: 0x1E0 }
+  - { offset: 0x57F49, size: 0x8, addend: 0x0, symName: '_$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_ypTt0gq5Tf4g_n', symObjAddr: 0x11F0, symBinAddr: 0x22A0, symSize: 0xF0 }
+  - { offset: 0x5807A, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC15locationManager_18didUpdateLocationsySo010CLLocationF0C_SaySo0J0CGtFTf4dnn_n', symObjAddr: 0x12E0, symBinAddr: 0x2390, symSize: 0x1A0 }
+  - { offset: 0x582D2, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledName, symObjAddr: 0x1480, symBinAddr: 0x2530, symSize: 0x40 }
+  - { offset: 0x582E6, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVSHSCSQWb', symObjAddr: 0x14F0, symBinAddr: 0x25A0, symSize: 0x20 }
+  - { offset: 0x582FA, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation13CustomNSErrorSCs5ErrorPWb', symObjAddr: 0x1540, symBinAddr: 0x25F0, symSize: 0x20 }
+  - { offset: 0x5830E, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSCAC06CustomE0PWb', symObjAddr: 0x1560, symBinAddr: 0x2610, symSize: 0x20 }
+  - { offset: 0x58322, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSCAC26_ObjectiveCBridgeableErrorPWb', symObjAddr: 0x1580, symBinAddr: 0x2630, symSize: 0x20 }
+  - { offset: 0x58336, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSCSHWb', symObjAddr: 0x15A0, symBinAddr: 0x2650, symSize: 0x20 }
+  - { offset: 0x5834A, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_AC06_ErrorF8ProtocolPWT', symObjAddr: 0x15C0, symBinAddr: 0x2670, symSize: 0x20 }
+  - { offset: 0x5835E, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_SYWT', symObjAddr: 0x1630, symBinAddr: 0x26E0, symSize: 0x20 }
+  - { offset: 0x58372, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_8RawValueSYs17FixedWidthIntegerPWT', symObjAddr: 0x1650, symBinAddr: 0x2700, symSize: 0x10 }
+  - { offset: 0x58386, size: 0x8, addend: 0x0, symName: '_$sS2is17FixedWidthIntegersWl', symObjAddr: 0x1660, symBinAddr: 0x2710, symSize: 0x30 }
+  - { offset: 0x5839A, size: 0x8, addend: 0x0, symName: '_$sSo7CLErrorV10Foundation18_ErrorCodeProtocolSCSQWb', symObjAddr: 0x1690, symBinAddr: 0x2740, symSize: 0x20 }
+  - { offset: 0x583AE, size: 0x8, addend: 0x0, symName: '_$sSo7CLErrorV10Foundation18_ErrorCodeProtocolSC01_C4TypeAcDP_AC21_BridgedStoredNSErrorPWT', symObjAddr: 0x16B0, symBinAddr: 0x2760, symSize: 0x20 }
+  - { offset: 0x583C2, size: 0x8, addend: 0x0, symName: '_$sSo10CLLocationCMa', symObjAddr: 0x16D0, symBinAddr: 0x2780, symSize: 0x40 }
+  - { offset: 0x583D6, size: 0x8, addend: 0x0, symName: '_$s13NeoInterfaces27GeoLocationProviderListener_pSgXwWOh', symObjAddr: 0x1710, symBinAddr: 0x27C0, symSize: 0x20 }
+  - { offset: 0x583EA, size: 0x8, addend: 0x0, symName: '_$sSS_yptWOc', symObjAddr: 0x1730, symBinAddr: 0x27E0, symSize: 0x40 }
+  - { offset: 0x583FE, size: 0x8, addend: 0x0, symName: '_$sypWOb', symObjAddr: 0x1770, symBinAddr: 0x2820, symSize: 0x20 }
+  - { offset: 0x5843F, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfC', symObjAddr: 0x0, symBinAddr: 0x10F0, symSize: 0x40 }
+  - { offset: 0x5856B, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC8listenerAC13NeoInterfaces0abC8Listener_p_tcfc', symObjAddr: 0x40, symBinAddr: 0x1130, symSize: 0x110 }
+  - { offset: 0x585D2, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCfD', symObjAddr: 0x170, symBinAddr: 0x1260, symSize: 0x50 }
+  - { offset: 0x58608, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCfDTo', symObjAddr: 0x1C0, symBinAddr: 0x12B0, symSize: 0x70 }
+  - { offset: 0x58680, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersC014requestOneTimeB0yyF', symObjAddr: 0x260, symBinAddr: 0x1350, symSize: 0x130 }
+  - { offset: 0x58799, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCACycfC', symObjAddr: 0x390, symBinAddr: 0x1480, symSize: 0x20 }
+  - { offset: 0x587AD, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCACycfc', symObjAddr: 0x3B0, symBinAddr: 0x14A0, symSize: 0x30 }
+  - { offset: 0x58806, size: 0x8, addend: 0x0, symName: '_$s19GeoLocationProvider0aB9ProvidersCACycfcTo', symObjAddr: 0x3E0, symBinAddr: 0x14D0, symSize: 0x30 }
+  - { offset: 0x588A8, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVs5ErrorSCsACP7_domainSSvgTW', symObjAddr: 0xBD0, symBinAddr: 0x1C80, symSize: 0x40 }
+  - { offset: 0x588C4, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVs5ErrorSCsACP5_codeSivgTW', symObjAddr: 0xC10, symBinAddr: 0x1CC0, symSize: 0x40 }
+  - { offset: 0x588E0, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVs5ErrorSCsACP19_getEmbeddedNSErroryXlSgyFTW', symObjAddr: 0xC60, symBinAddr: 0x1D10, symSize: 0x40 }
+  - { offset: 0x588FC, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation13CustomNSErrorSCAcDP9errorCodeSivgTW', symObjAddr: 0xCE0, symBinAddr: 0x1D90, symSize: 0x40 }
+  - { offset: 0x58918, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation13CustomNSErrorSCAcDP13errorUserInfoSDySSypGvgTW', symObjAddr: 0xD20, symBinAddr: 0x1DD0, symSize: 0x40 }
+  - { offset: 0x58934, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation26_ObjectiveCBridgeableErrorSCAcDP15_bridgedNSErrorxSgSo0G0Ch_tcfCTW', symObjAddr: 0xD60, symBinAddr: 0x1E10, symSize: 0x60 }
+  - { offset: 0x5895F, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVSHSCSH9hashValueSivgTW', symObjAddr: 0xDC0, symBinAddr: 0x1E70, symSize: 0x20 }
+  - { offset: 0x58990, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVSHSCSH4hash4intoys6HasherVz_tFTW', symObjAddr: 0xDE0, symBinAddr: 0x1E90, symSize: 0x40 }
+  - { offset: 0x589AC, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeVSQSCSQ2eeoiySbx_xtFZTW', symObjAddr: 0xE90, symBinAddr: 0x1F40, symSize: 0x50 }
+  - { offset: 0x58A3B, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSCAcDP8_nsErrorSo0E0CvgTW', symObjAddr: 0xCA0, symBinAddr: 0x1D50, symSize: 0x10 }
+  - { offset: 0x58A6C, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation21_BridgedStoredNSErrorSCAcDP8_nsErrorxSo0E0C_tcfCTW', symObjAddr: 0xCB0, symBinAddr: 0x1D60, symSize: 0x10 }
+  - { offset: 0x58A8E, size: 0x8, addend: 0x0, symName: '_$sSC7CLErrorLeV10Foundation13CustomNSErrorSCAcDP11errorDomainSSvgZTW', symObjAddr: 0xCC0, symBinAddr: 0x1D70, symSize: 0x20 }
+  - { offset: 0x58ABE, size: 0x8, addend: 0x0, symName: '_$sSo7CLErrorVSYSCSY8rawValuexSg03RawC0Qz_tcfCTW', symObjAddr: 0xE70, symBinAddr: 0x1F20, symSize: 0x10 }
+  - { offset: 0x58AD2, size: 0x8, addend: 0x0, symName: '_$sSo7CLErrorVSYSCSY8rawValue03RawC0QzvgTW', symObjAddr: 0xE80, symBinAddr: 0x1F30, symSize: 0x10 }
+...
