@@ -1,5 +1,15 @@
 # Changelog
 
+## v3.3.0 - Sept 11th, 2026
+
+### Fixed
+
+- Updated the default document capture time. 
+
+### Added
+
+- BlinkID Version Updated to v8001.0.1
+
 ## v3.2.6 - July 15th, 2026
 
 ### Fixed
