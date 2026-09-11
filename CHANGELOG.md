@@ -1,6 +1,6 @@
 # Changelog
 
-## v3.3.0 - Sept 11th, 2026
+## v3.4.0 - Sept 11th, 2026
 
 ### Fixed
 
