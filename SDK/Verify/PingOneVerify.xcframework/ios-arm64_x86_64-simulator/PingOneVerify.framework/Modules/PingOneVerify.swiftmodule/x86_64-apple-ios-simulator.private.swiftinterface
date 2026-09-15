@@ -89,7 +89,6 @@ public struct DocumentCollectionPayload : Swift.Codable {
 }
 @_hasMissingDesignatedInitializers public class AppEventUtil {
   public static func addDeviceMetadataAppEvents()
-  public static func getBuildVersion() -> Swift.String
   public static func getOSInfo() -> Swift.String
   public static func modelIdentifier() -> Swift.String
   public static func submitDocumentSubmissionCompletedAppEvent()
@@ -168,22 +167,11 @@ public class Request {
   public func isSuccessfulResponse(_ responseCode: Swift.Int) -> Swift.Bool
   @objc deinit
 }
-@objc public class PhoneCaptureSettings : ObjectiveC.NSObject, PingOneVerify.OtpCaptureSettings {
-  public var documentType: NeoInterfaces.DocumentClass
-  public var optional: Swift.Bool
-  public var destination: Swift.String
-  public var otpSession: PingOneVerify.OtpSession?
-  final public let otpExpiryTicker: PingOneVerify.OtpTicker
-  public var keyboardHint: Swift.String
-  public var keyboardType: UIKit.UIKeyboardType
-  public var contentType: UIKit.UITextContentType
-  public var regex: Swift.String
-  public var requirements: (any NeoInterfaces.RequirementsProtocol)?
-  public var isAuthflow: Swift.Bool
-  public var isRetry: Swift.Bool
-  public var payloadSize: NeoInterfaces.PayloadSize
-  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
-  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
+final public class PhoneCaptureSettings : PingOneVerify.OtpCaptureSettings {
+  final public var keyboardHint: Swift.String
+  final public var keyboardType: UIKit.UIKeyboardType
+  final public var contentType: UIKit.UITextContentType
+  final public var regex: Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
@@ -191,7 +179,7 @@ public class Request {
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
+  override final public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
   #endif
   @objc deinit
 }
@@ -206,7 +194,7 @@ public struct PingOneVerifyClientUtils {
   #if compiler(>=5.3) && $NonescapableTypes
   public static func getRemainingDocumentSubmissionTime(expiresAt: Swift.String, safetyTime: Foundation.TimeInterval) -> Foundation.TimeInterval?
   #endif
-  public static func updateDocumentCaptureSettings(documentCaptureSettings: inout [any NeoInterfaces.DocumentCaptureSettings], with verifyTransaction: PingOneVerify.VerifyTransaction)
+  public static func updateDocumentCaptureSettings(documentCaptureSettings: inout [NeoInterfaces.DocumentCaptureSettings], with verifyTransaction: PingOneVerify.VerifyTransaction)
   public static func isDesiredOtp(for documentType: Swift.String, verifyTransaction: PingOneVerify.VerifyTransaction, desiredOtpStatus: PingOneVerify.OtpStatus) -> Swift.Bool
   #if compiler(>=5.3) && $NonescapableTypes
   public static func getOtpDocumentType(for documentType: Swift.String, keyVersion: Swift.String) -> NeoInterfaces.DocumentClass?
@@ -228,6 +216,7 @@ public struct ApiConstants {
   public static let ID_FACE_CAPTURE_NAME: Swift.String
   public static let ID_FACE_PLUS_VERSION: Swift.String
   public static let BLINK_ID_SDK_VERSION: Swift.String
+  public static let READ_ID_SDK_VERSION: Swift.String
 }
 @_hasMissingDesignatedInitializers public class DocumentSubmissionResponse {
   public var document: [Swift.String : Swift.String]?
@@ -275,6 +264,7 @@ public class RequestHeader {
   }
   public static let header_content_type_step_error: Swift.String
   public static let header_content_type_generate_session: Swift.String
+  public static let header_content_type_read_id_session_results: Swift.String
   public var headersDictionary: [Swift.String : Swift.String]
   public init(headers: [Swift.String : Swift.String])
   convenience public init()
@@ -333,6 +323,10 @@ public class DocumentPayloadFileSchema : Swift.Codable {
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
+}
+public class NfcCaptureSettings : NeoInterfaces.DocumentCaptureSettings {
+  public init(documentType: NeoInterfaces.DocumentClass, optional: Swift.Bool)
+  @objc deinit
 }
 public class NoRequirements : NeoInterfaces.RequirementsProtocol, Swift.Decodable {
   public var requirementsValue: NeoInterfaces.Requirements
@@ -407,22 +401,11 @@ public class ValueRequirements : NeoInterfaces.RequirementsProtocol, Swift.Decod
   required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
-@objc public class EmailCaptureSettings : ObjectiveC.NSObject, PingOneVerify.OtpCaptureSettings {
-  public var documentType: NeoInterfaces.DocumentClass
-  public var optional: Swift.Bool
-  public var destination: Swift.String
-  public var otpSession: PingOneVerify.OtpSession?
-  final public let otpExpiryTicker: PingOneVerify.OtpTicker
-  public var keyboardHint: Swift.String
-  public var keyboardType: UIKit.UIKeyboardType
-  public var contentType: UIKit.UITextContentType
-  public var regex: Swift.String
-  public var requirements: (any NeoInterfaces.RequirementsProtocol)?
-  public var isAuthflow: Swift.Bool
-  public var isRetry: Swift.Bool
-  public var payloadSize: NeoInterfaces.PayloadSize
-  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
-  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
+final public class EmailCaptureSettings : PingOneVerify.OtpCaptureSettings {
+  final public var keyboardHint: Swift.String
+  final public var keyboardType: UIKit.UIKeyboardType
+  final public var contentType: UIKit.UITextContentType
+  final public var regex: Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType? = nil, contentType: UIKit.UITextContentType? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
@@ -430,7 +413,7 @@ public class ValueRequirements : NeoInterfaces.RequirementsProtocol, Swift.Decod
   public init(optional: Swift.Bool, keyboardHint: Swift.String? = nil, regex: Swift.String? = nil, requirements: (any NeoInterfaces.RequirementsProtocol)?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
+  override final public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
   #endif
   @objc deinit
 }
@@ -443,16 +426,9 @@ public struct SkipDocumentPayload : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc public class IdCaptureSettings : ObjectiveC.NSObject, NeoInterfaces.DocumentCaptureSettings {
-  public var documentType: NeoInterfaces.DocumentClass
-  public var optional: Swift.Bool
+public class IdCaptureSettings : NeoInterfaces.DocumentCaptureSettings {
   public var otpSession: PingOneVerify.OtpSession?
   public var otpDestination: Swift.String?
-  public var isAuthflow: Swift.Bool
-  public var isRetry: Swift.Bool
-  public var payloadSize: NeoInterfaces.PayloadSize
-  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
-  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
   public init(documentType: NeoInterfaces.DocumentClass, optional: Swift.Bool)
   #if compiler(>=5.3) && $NonescapableTypes
   public func getOtpSession() -> PingOneVerify.OtpSession?
@@ -637,16 +613,9 @@ extension PingOneVerify.RequestError : Foundation.LocalizedError {
 extension PingOneVerify.RequestError : Swift.Equatable {
   public static func == (lhs: PingOneVerify.RequestError, rhs: PingOneVerify.RequestError) -> Swift.Bool
 }
-@objc public class SelfieCaptureSettings : ObjectiveC.NSObject, NeoInterfaces.DocumentCaptureSettings {
-  public var payloadSize: NeoInterfaces.PayloadSize
-  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
-  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
-  public var isAuthflow: Swift.Bool
-  public var documentType: NeoInterfaces.DocumentClass
+public class SelfieCaptureSettings : NeoInterfaces.DocumentCaptureSettings {
   final public let captureTime: Foundation.TimeInterval
   final public let shouldCaptureAfterTimeout: Swift.Bool
-  public var optional: Swift.Bool
-  public var isRetry: Swift.Bool
   public init(captureTime: Foundation.TimeInterval = 45, shouldCaptureAfterTimeout: Swift.Bool = true, optional: Swift.Bool, isAuthflow: Swift.Bool, payloadSize: NeoInterfaces.PayloadSize = .small)
   @objc deinit
 }
@@ -763,17 +732,24 @@ public protocol VerifyTransactionCoordinator : AnyObject {
   func isLocationPermissionGranted() -> NeoInterfaces.LocationPermissionStatus
   func captureGeolocation()
   func captureSelfie(from navigationController: UIKit.UINavigationController)
+  func captureSelfie(from navigationController: UIKit.UINavigationController, settings: NeoInterfaces.DocumentCaptureSettings)
   func submitSelfie(_ result: PingOneVerify.SelfieCaptureResult)
   func captureGovernmentId(from navigationController: UIKit.UINavigationController)
+  func captureGovernmentId(from navigationController: UIKit.UINavigationController, settings: NeoInterfaces.DocumentCaptureSettings)
   func submitGovernmentId(_ result: PingOneVerify.IdCaptureResult)
+  func captureNfc(from viewController: UIKit.UIViewController, settings: NeoInterfaces.DocumentCaptureSettings)
+  func submitNfc(_ result: PingOneVerify.NfcCaptureResult)
+  func onNfcCaptured(payload: [Swift.String : Swift.String])
 }
 public protocol VerifyTransactionCoordinatorDelegate : AnyObject {
-  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, shouldCaptureDocument settings: any NeoInterfaces.DocumentCaptureSettings)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, shouldCaptureDocument settings: NeoInterfaces.DocumentCaptureSettings)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, shouldCaptureNfc settings: PingOneVerify.NfcCaptureSettings)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didCaptureNfc result: PingOneVerify.NfcCaptureResult)
   func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didCaptureGeolocation latitude: Swift.Double, longitude: Swift.Double)
   func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didSubmitDocument response: PingOneVerify.DocumentSubmissionResponse)
-  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, shouldRetryCapture feedback: PingOneVerify.RetryFeedback, settings: any NeoInterfaces.DocumentCaptureSettings)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, shouldRetryCapture feedback: PingOneVerify.RetryFeedback, settings: NeoInterfaces.DocumentCaptureSettings)
   func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didSubmitOtp success: Swift.Bool)
-  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didUpdateOtpSession settings: any PingOneVerify.OtpCaptureSettings)
+  func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didUpdateOtpSession settings: PingOneVerify.OtpCaptureSettings)
   #if compiler(>=5.3) && $NonescapableTypes
   func coordinator(_ coordinator: any PingOneVerify.VerifyTransactionCoordinator, didReceiveLanguagePack languagePackProvider: (any NeoInterfaces.LanguagePackProviderContract)?, error: (any Swift.Error)?)
   #endif
@@ -793,17 +769,19 @@ public class PingOneVerifyClient : PingOneVerify.VerifyTransactionCoordinator {
   public var authTokenProvider: (any PingOneVerify.AuthTokenProviderContract)!
   public var sessionTokenProvider: (any PingOneVerify.SessionTokenProviderContract)!
   public var licenseProvider: (any NeoInterfaces.LicenseProviderContract)!
-  public var idCaptureHandler: ((UIKit.UIViewController, (any NeoInterfaces.DocumentCaptureSettings)?, @escaping (PingOneVerify.IdCaptureResult?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void)?
-  public var selfieCaptureHandler: ((UIKit.UIViewController, (any NeoInterfaces.DocumentCaptureSettings)?, @escaping (PingOneVerify.SelfieCaptureResult?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void)?
-  public var documentCaptureSettings: [any NeoInterfaces.DocumentCaptureSettings]
+  public var idCaptureHandler: ((UIKit.UIViewController, NeoInterfaces.DocumentCaptureSettings?, @escaping (PingOneVerify.IdCaptureResult?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void)?
+  public var selfieCaptureHandler: ((UIKit.UIViewController, NeoInterfaces.DocumentCaptureSettings?, @escaping (PingOneVerify.SelfieCaptureResult?, (any Swift.Error)?) -> Swift.Void) -> Swift.Void)?
+  public var documentCaptureSettings: [NeoInterfaces.DocumentCaptureSettings]
   public var isAuthEnabled: Swift.Bool
   public var geoLocationPayload: PingOneVerify.GeolocationPayload?
   public var otpDestinationValue: Swift.String
   public var geolocationProvider: (any NeoInterfaces.GeoLocationProviderContract)?
   public var selfieCaptureProvider: (any NeoInterfaces.SelfieCaptureProviderContract)?
   public var idCaptureProvider: (any NeoInterfaces.IdCaptureProviderContract)?
-  public init(transaction: PingOneVerify.VerifyTransaction, documentCaptureSettings: [any NeoInterfaces.DocumentCaptureSettings], isAuthEnabled: Swift.Bool)
+  public var nfcCaptureProvider: (any NeoInterfaces.NfcCaptureProviderContract)?
+  public init(transaction: PingOneVerify.VerifyTransaction, documentCaptureSettings: [NeoInterfaces.DocumentCaptureSettings], isAuthEnabled: Swift.Bool)
   @objc deinit
+  @objc public static func getSdkVersion() -> Swift.String
   public func startVerification()
   #if compiler(>=5.3) && $NonescapableTypes
   public func submitGovernmentId(frontImage: Swift.String, backImage: Swift.String?, barcode: Swift.String?, ocrData: Swift.String?, type: NeoInterfaces.DocumentClass)
@@ -833,6 +811,7 @@ public class PingOneVerifyClient : PingOneVerify.VerifyTransactionCoordinator {
   #if compiler(>=5.3) && $NonescapableTypes
   public func submitGeolocationForVerification(payload: PingOneVerify.GeolocationPayload?)
   #endif
+  public func submitNfc(_ result: PingOneVerify.NfcCaptureResult)
   public func submitGeolocationPermissionDenied(payload: PingOneVerify.GeolocationPermissionDeniedPayload)
   public func notifyNextStep(isRetry: Swift.Bool = false)
   public func fail(code: Swift.String, error: PingOneVerify.DocumentSubmissionError.SubmissionError)
@@ -842,13 +821,13 @@ public class PingOneVerifyClient : PingOneVerify.VerifyTransactionCoordinator {
 }
 extension PingOneVerify.PingOneVerifyClient {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func captureGovernmentId(from viewController: UIKit.UIViewController, settings: (any NeoInterfaces.DocumentCaptureSettings)?, onResult: @escaping (_ result: PingOneVerify.IdCaptureResult?, _ error: (any Swift.Error)?) -> Swift.Void)
+  public func captureGovernmentId(from viewController: UIKit.UIViewController, settings: NeoInterfaces.DocumentCaptureSettings?, onResult: @escaping (_ result: PingOneVerify.IdCaptureResult?, _ error: (any Swift.Error)?) -> Swift.Void)
   #endif
   public func registerIdCaptureHandler()
 }
 extension PingOneVerify.PingOneVerifyClient {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func captureSelfie(from viewController: UIKit.UIViewController, settings: (any NeoInterfaces.DocumentCaptureSettings)?, onResult: @escaping (_ result: PingOneVerify.SelfieCaptureResult?, _ error: (any Swift.Error)?) -> Swift.Void)
+  public func captureSelfie(from viewController: UIKit.UIViewController, settings: NeoInterfaces.DocumentCaptureSettings?, onResult: @escaping (_ result: PingOneVerify.SelfieCaptureResult?, _ error: (any Swift.Error)?) -> Swift.Void)
   #endif
   public func registerSelfieCaptureHandler()
 }
@@ -871,6 +850,14 @@ public enum GovernmentIdCaptureError : Foundation.LocalizedError {
   public var hashValue: Swift.Int {
     get
   }
+}
+public struct NfcCaptureResult {
+  public let readIdSessionId: Swift.String
+  public let failed: Swift.Bool
+  public let failureReason: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(readIdSessionId: Swift.String, failed: Swift.Bool, failureReason: Swift.String?)
+  #endif
 }
 public struct SelfieCaptureResult {
   public let selfie: Swift.String
@@ -971,6 +958,7 @@ public struct CurrentStep : Swift.Codable {
   public struct OtherData : Swift.Codable {
     public let collectionOptions: [PingOneVerify.CurrentStep.CollectionOption]?
     public let collectionSessions: [PingOneVerify.CurrentStep.CollectionSession]?
+    public let nfcSessionData: PingOneVerify.NFCSessionData?
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
@@ -1001,6 +989,10 @@ public struct CurrentStep : Swift.Codable {
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct NFCSessionData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1083,8 +1075,10 @@ extension NeoInterfaces.DocumentCaptureSettings {
 }
 public struct SDKVersions : Swift.Codable {
   public var p1Verify: Swift.String
-  public var idFaceCapture: Swift.String
-  public var blinkId: Swift.String
+  public var idFaceCapture: Swift.String?
+  public var blinkId: Swift.String?
+  public var readId: Swift.String?
+  public init()
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -1195,15 +1189,18 @@ extension PingOneVerify.PingOneVerifyClient {
     @objc deinit
   }
 }
-public protocol OtpCaptureSettings : NeoInterfaces.DocumentCaptureSettings {
-  var destination: Swift.String { get set }
+open class OtpCaptureSettings : NeoInterfaces.DocumentCaptureSettings {
+  public var destination: Swift.String
+  public var otpSession: PingOneVerify.OtpSession?
+  public var requirements: (any NeoInterfaces.RequirementsProtocol)?
+  final public let otpExpiryTicker: PingOneVerify.OtpTicker
   #if compiler(>=5.3) && $NonescapableTypes
-  var otpSession: PingOneVerify.OtpSession? { get set }
+  public init(documentType: NeoInterfaces.DocumentClass, optional: Swift.Bool, requirements: (any NeoInterfaces.RequirementsProtocol)? = nil)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  var requirements: (any NeoInterfaces.RequirementsProtocol)? { get set }
+  public func setOtpSession(otpSession: PingOneVerify.OtpSession?)
   #endif
-  var otpExpiryTicker: PingOneVerify.OtpTicker { get }
+  @objc deinit
 }
 public struct ThemeConfig : Swift.Codable {
   public static let DEFAULT_LOGO_TYPE: PingOneVerify.ResourceType
@@ -1342,12 +1339,14 @@ extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.GeoLocationProviderL
 }
 extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.SelfieCaptureProviderListener {
   public func captureSelfie(from navigationController: UIKit.UINavigationController)
+  public func captureSelfie(from navigationController: UIKit.UINavigationController, settings: NeoInterfaces.DocumentCaptureSettings)
   public func onSelfieCaptured(selfie: UIKit.UIImage, jpegData: Foundation.Data)
   public func onSelfieError(error: any Swift.Error)
   public func onSelfieCancelled()
 }
 extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.IdCaptureProviderListener {
   public func captureGovernmentId(from navigationController: UIKit.UINavigationController)
+  public func captureGovernmentId(from navigationController: UIKit.UINavigationController, settings: NeoInterfaces.DocumentCaptureSettings)
   #if compiler(>=5.3) && $NonescapableTypes
   public func onIdCaptured(result: [Swift.String : Swift.String], viewModel: Swift.AnyObject?)
   #endif
@@ -1399,6 +1398,22 @@ public class VerifyLicenseProvider : NeoInterfaces.LicenseProviderContract {
   public func getLicenseFor(sdkIdentifier: Swift.String, sdkVersion: Swift.String) -> NeoInterfaces.ProviderLicense?
   #endif
   @objc deinit
+}
+public struct NfcResultPayload : Swift.Codable {
+  public let readIdSessionId: Swift.String
+  public let status: Swift.String?
+  public let failureReason: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(readIdSessionId: Swift.String, status: Swift.String? = nil, failureReason: Swift.String? = nil)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension PingOneVerify.PingOneVerifyClient : NeoInterfaces.NfcCaptureProviderListener {
+  public func captureNfc(from viewController: UIKit.UIViewController, settings: NeoInterfaces.DocumentCaptureSettings)
+  public func onNfcCaptured(payload: [Swift.String : Swift.String])
+  public func onNfcError(error: any Swift.Error)
+  public func onNfcCancelled()
 }
 extension PingOneVerify.ClientBuilderError.BuilderError : Swift.Equatable {}
 extension PingOneVerify.ClientBuilderError.BuilderError : Swift.Hashable {}

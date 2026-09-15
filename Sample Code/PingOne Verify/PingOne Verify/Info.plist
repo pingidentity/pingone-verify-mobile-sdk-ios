@@ -2,9 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Enable location permission to proceed with your identity verification.</string>
-	<key>CFBundleIdentifier</key>
-	<string></string>
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>A0000002471001</string>
+		<string>A00000045645444C2D3031</string>
+	</array>
+	<key>NFCReaderUsageDescription</key>
+	<string>Read an electronic passport or identity card chip to complete your identity verification.</string>
 </dict>
 </plist>

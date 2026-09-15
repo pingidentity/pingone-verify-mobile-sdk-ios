@@ -11,6 +11,8 @@
 		1C4253752909C178008E871B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4253742909C178008E871B /* ViewController.swift */; };
 		1C42537D2909C179008E871B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C42537B2909C179008E871B /* LaunchScreen.storyboard */; };
 		1C4253862909C286008E871B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4253842909C286008E871B /* Main.storyboard */; };
+		6322CA9B30370A440017B289 /* NfcCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6322CA9930370A440017B289 /* NfcCaptureViewController.xib */; };
+		6322CA9C30370A440017B289 /* NfcCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6322CA9830370A440017B289 /* NfcCaptureViewController.swift */; };
 		63817A9A2FCD514B00F3EE21 /* GeoLocationProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; };
 		63817A9B2FCD514B00F3EE21 /* GeoLocationProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		638AA5B42F72C2FA00DA6D81 /* NeoInterfaces.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */; };
@@ -204,9 +206,14 @@
 		1C42537C2909C179008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C42537E2909C179008E871B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4253852909C286008E871B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6322CA97303709D10017B289 /* PingOne Verify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PingOne Verify.entitlements"; sourceTree = "<group>"; };
+		6322CA9830370A440017B289 /* NfcCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcCaptureViewController.swift; sourceTree = "<group>"; };
+		6322CA9930370A440017B289 /* NfcCaptureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NfcCaptureViewController.xib; sourceTree = "<group>"; };
 		638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GeoLocationProvider.xcframework; sourceTree = "<group>"; };
 		638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeoInterfaces.xcframework; sourceTree = "<group>"; };
 		638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PingOneVerify.xcframework; sourceTree = "<group>"; };
+		63BDA3973052D25200FB447F /* NfcCaptureProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NfcCaptureProvider.xcframework; sourceTree = "<group>"; };
+		63BDA3983052D25200FB447F /* ReadID_UI.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:PD597TY265:Inverid B.V."; lastKnownFileType = wrapper.xcframework; path = ReadID_UI.xcframework; sourceTree = "<group>"; };
 		63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		63CBDDF52FEE8A0400E6C75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63CBDE032FEF0F0400E6C75E /* AppthemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppthemeHandler.swift; sourceTree = "<group>"; };
@@ -394,6 +401,7 @@
 		1C42536F2909C178008E871B /* PingOne Verify */ = {
 			isa = PBXGroup;
 			children = (
+				6322CA97303709D10017B289 /* PingOne Verify.entitlements */,
 				63CBDEB82FEF0F0400E6C75E /* VerifyUI */,
 				63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */,
 				1C4253702909C178008E871B /* AppDelegate.swift */,
@@ -415,9 +423,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6322CA9A30370A440017B289 /* NFC Capture */ = {
+			isa = PBXGroup;
+			children = (
+				6322CA9830370A440017B289 /* NfcCaptureViewController.swift */,
+				6322CA9930370A440017B289 /* NfcCaptureViewController.xib */,
+			);
+			path = "NFC Capture";
+			sourceTree = "<group>";
+		};
 		638AA5782F72B9F500DA6D81 /* Verify */ = {
 			isa = PBXGroup;
 			children = (
+				63BDA3973052D25200FB447F /* NfcCaptureProvider.xcframework */,
+				63BDA3983052D25200FB447F /* ReadID_UI.xcframework */,
 				63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */,
 				63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */,
 				638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */,
@@ -935,6 +954,7 @@
 		63CBDEA72FEF0F0400E6C75E /* Data Capture */ = {
 			isa = PBXGroup;
 			children = (
+				6322CA9A30370A440017B289 /* NFC Capture */,
 				63CBDE9A2FEF0F0400E6C75E /* Email Capture */,
 				63CBDE9E2FEF0F0400E6C75E /* OTP Capture */,
 				63CBDEA32FEF0F0400E6C75E /* Phone Capture */,
@@ -1099,6 +1119,7 @@
 				63CBDF262FEF0F0400E6C75E /* LabelCell.xib in Resources */,
 				63CBDF272FEF0F0400E6C75E /* DocumentSelectionVC.xib in Resources */,
 				63CBDF282FEF0F0400E6C75E /* CustomMenu.xib in Resources */,
+				6322CA9B30370A440017B289 /* NfcCaptureViewController.xib in Resources */,
 				63CBDF292FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.xib in Resources */,
 				63CBDF2A2FEF0F0400E6C75E /* PreviewViewController.xib in Resources */,
 				63CBDF2B2FEF0F0400E6C75E /* OtpViewController.xib in Resources */,
@@ -1203,6 +1224,7 @@
 				63CBDF082FEF0F0400E6C75E /* SelfieQAResult.swift in Sources */,
 				63CBDF092FEF0F0400E6C75E /* SelfieQAError.swift in Sources */,
 				63CBDF0A2FEF0F0400E6C75E /* GeolocationPermissionViewController.swift in Sources */,
+				6322CA9C30370A440017B289 /* NfcCaptureViewController.swift in Sources */,
 				63CBDF0B2FEF0F0400E6C75E /* PhoneCaptureViewController.swift in Sources */,
 				63CBDF0C2FEF0F0400E6C75E /* LabelCell.swift in Sources */,
 				63CBDF0D2FEF0F0400E6C75E /* GeolocationPermissionRetryViewController.swift in Sources */,
@@ -1370,14 +1392,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_ENTITLEMENTS = "PingOne Verify/PingOne Verify.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				DISABLE_XCFRAMEWORKS_SIGNATURE_CHECKING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PingOne Verify/Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Read an electronic passport or identity card chip to complete your identity verification.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required for scanning your IDs and taking pictures.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Enable location permission to proceed with your identity verification.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access to microphone is required for verifying your voice";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1389,7 +1414,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1407,14 +1432,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_ENTITLEMENTS = "PingOne Verify/PingOne Verify.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				DISABLE_XCFRAMEWORKS_SIGNATURE_CHECKING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PingOne Verify/Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Read an electronic passport or identity card chip to complete your identity verification.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Access to the camera is required for scanning your IDs and taking pictures.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Enable location permission to proceed with your identity verification.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access to microphone is required for verifying your voice";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1426,7 +1454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

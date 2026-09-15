@@ -65,6 +65,9 @@ internal class DocumentCapturePresenter: DocumentCaptureContract {
             case .GEOLOCATION:
                 let geolocationPermissionViewController = GeolocationPermissionViewController.getViewController(coordinator: coordinator)
                 pingOneNavController.pushViewController(geolocationPermissionViewController, animated: true)
+            case .NFC:
+                let nfcCaptureViewController = NfcCaptureViewController.getViewController(coordinator: coordinator, settings: documentCaptureSetting)
+                pingOneNavController.pushViewController(nfcCaptureViewController, animated: true)
             default:
                 let documentCaptureViewController = DocumentCaptureViewController.getViewController(documentCaptureSettings: documentCaptureSetting, coordinator: coordinator)
                 let isAnimated = documentCaptureSetting.isRetry ? false : true
