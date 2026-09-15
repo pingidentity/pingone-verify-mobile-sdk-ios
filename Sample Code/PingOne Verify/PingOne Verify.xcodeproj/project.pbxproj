@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -342,7 +342,7 @@
 		72F04C732E5E334700238971 /* libsecp256k1.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libsecp256k1.xcframework; sourceTree = "<group>"; };
 		72F04C742E5E334700238971 /* secp256k1Wrapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = secp256k1Wrapper.xcframework; sourceTree = "<group>"; };
 		AA000001000000000000AAA1 /* BlinkID.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BlinkID.xcframework; sourceTree = "<group>"; };
-		AA000001000000000000AAA2 /* BlinkIDUX.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BlinkIDUX.xcframework; sourceTree = "<group>"; };
+		AA000001000000000000AAA2 /* BlinkIDUX.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:CQTJWP89J7:Microblink Ltd"; lastKnownFileType = wrapper.xcframework; path = BlinkIDUX.xcframework; sourceTree = "<group>"; };
 		AA000001000000000000AAA3 /* IDLiveFaceCamera.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceCamera.xcframework; sourceTree = "<group>"; };
 		AA000001000000000000AAA4 /* IDLiveFaceDetection.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceDetection.xcframework; sourceTree = "<group>"; };
 		AA000001000000000000AAA5 /* IDLiveFaceIAD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IDLiveFaceIAD.xcframework; sourceTree = "<group>"; };

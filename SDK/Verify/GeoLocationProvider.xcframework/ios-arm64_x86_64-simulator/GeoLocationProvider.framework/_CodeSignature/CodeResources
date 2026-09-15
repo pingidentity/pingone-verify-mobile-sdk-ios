@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oSw3KeZEUhNrZ3cQkjhhaT7l/4g=
+		ST8DjscTJAy6lWc6f500nbmoLU0=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jLiurJZF3BC0Dsnjdn4tFSLeb6U=
+		neF6cuacCV/HpGiUSFujF8FAUBY=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		njgt0pNe+vfx0Dz861GXbhKrs18=
+		eO0h/EyTJoROUE96EvxoywJB6jc=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jLiurJZF3BC0Dsnjdn4tFSLeb6U=
+		neF6cuacCV/HpGiUSFujF8FAUBY=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8D/9tnneFm3RLCA48PU4Pf1C/Zo=
+		NRc3zQ0a31wDMqUo9o8ZbMcAmG8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xSH7RMiHIXHUIdrTODfHN/0T8HM5u5JjZ8QFxr9MoL8=
+			o9KGXJ8/e82VvqQL0lv/98qee5Gs0yoCcj8bv+6xdjU=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gIaWWMPJP64z0HaL0aLSJc6K1BESA2Btt9fyMzinLgI=
+			vaEj5xZClnSFWlzNfUT9gaiXj0+T7v8Xr3siv0y+8PI=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xSH7RMiHIXHUIdrTODfHN/0T8HM5u5JjZ8QFxr9MoL8=
+			o9KGXJ8/e82VvqQL0lv/98qee5Gs0yoCcj8bv+6xdjU=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/iXEFfgUyjEMOkvWMu6ZjAgd0llHcF+azHzoYRiyTd4=
+			H//X1ljRTLRMh3AmID/SmB6upbrin2zfX0moNW/BLUk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

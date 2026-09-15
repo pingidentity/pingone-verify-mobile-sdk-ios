@@ -34,13 +34,6 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "IdCaptureProvider"
-      },
-      {
-        "kind": "Import",
         "name": "NeoInterfaces",
         "printedName": "NeoInterfaces",
         "declKind": "Import",
@@ -885,35 +878,35 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
       "kind": "StringLiteral",
-      "offset": 1403,
+      "offset": 1335,
       "length": 16,
       "value": "\"MB_license_key\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
       "kind": "StringLiteral",
-      "offset": 1454,
+      "offset": 1386,
       "length": 43,
       "value": "\"com.pingidentity.sdk.pingoneverify.sample\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
       "kind": "StringLiteral",
-      "offset": 1534,
-      "length": 7,
-      "value": "\"7.6.2\""
+      "offset": 1466,
+      "length": 10,
+      "value": "\"8001.0.0\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
       "kind": "Array",
       "offset": 2148,
       "length": 116,
       "value": "[\"documentImage\", \"faceImage\", \"inputImage\", \"signatureImage\", \"barcodeInputImage\", \"barcodeInputImageScanningSide\"]"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
       "kind": "StringLiteral",
       "offset": 2438,
       "length": 5,

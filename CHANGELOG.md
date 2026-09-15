@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.1.0 - July 14th, 2026
+
+### Added
+- Third party vendor sdk updated for better image capture.
+
 ## v4.0.1 - July 8th, 2026
 
 ### Fixed

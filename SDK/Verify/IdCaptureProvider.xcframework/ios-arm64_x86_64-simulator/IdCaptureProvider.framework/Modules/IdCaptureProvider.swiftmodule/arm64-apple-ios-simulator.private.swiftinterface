@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import BlinkID
 import BlinkIDUX
-import Combine
 import Foundation
 @_exported import IdCaptureProvider
 import NeoInterfaces
