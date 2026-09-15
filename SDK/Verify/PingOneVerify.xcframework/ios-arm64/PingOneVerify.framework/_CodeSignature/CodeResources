@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PingOneVerify-Swift.h</key>
 		<data>
-		/OL7PvDT3JWp2Otqn1AkJflEfY4=
+		wEMbbghRBxEfLgpoGjk40rnIgpY=
 		</data>
 		<key>Headers/PingOneVerify.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZU2+br7nNP/p/05/ElHMRNxaLQM=
+		TVHKmm5xywPshOMnuQOKDLchzsM=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		jVg7QaSTCVsgvww8kXWAUESM9rY=
+		s430ERwLwmHXU8x7qZp5azTFls0=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		1MxFB2qyY+saB3YPR5GOojUagYg=
+		t0sTYMDxr6/W+4lyIpk9oAKB0aw=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		LkgDAGu/c0s8lUdl66Nw5OwXFTw=
+		ewp7X9uv7dk6ASRXnBg0csLfprw=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		1MxFB2qyY+saB3YPR5GOojUagYg=
+		t0sTYMDxr6/W+4lyIpk9oAKB0aw=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		rDYcBO46dL0dKWsb4YB1+vR+aTM=
+		xWgz0LQJKl93USIw0Ha3tD5dxvs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xE65ojoo1mLgm67dEFR0YIcemlsQ/l2kdvBpmf4Y9M0=
+			JzjCR+H4RIMnRf2khm94pFDwEi8FZMJaViZlaxvoM90=
 			</data>
 		</dict>
 		<key>Headers/PingOneVerify.h</key>
@@ -65,35 +65,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S+fzlgSIb8FaBWiyXo+noCKjAe3dk/nuoXXpM0wdeMo=
+			f3Gka5MoND62zaW8Km7K7q9iggItBwJHQIOsFy9g5uc=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K7UDcDdOxmvEb+ryFMgZx/gzhtC8G/Sjmm0v5iS7Ktc=
+			nvRI1ymQHwN+JtJ4rGaRBy539Szs70xftCnwnRK708g=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FVSDBkW+jlOE5+80MuD/Vn/T3P6GWnh2OZTniAPXZQA=
+			sesoZKRPvQs0dFJLXe/RybTETUBrq2RbBoJxEzvuG9o=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K7UDcDdOxmvEb+ryFMgZx/gzhtC8G/Sjmm0v5iS7Ktc=
+			nvRI1ymQHwN+JtJ4rGaRBy539Szs70xftCnwnRK708g=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eX1xFR8RnUkzTAkkUeTaNcY1VeIw7kYsw98QznqCn3I=
+			wZ/9+hG31ceBx8MAiE4yQx5zsqRncNDH3nM4xjuK4IE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

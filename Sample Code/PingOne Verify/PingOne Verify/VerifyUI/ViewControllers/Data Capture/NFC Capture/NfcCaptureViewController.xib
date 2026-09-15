@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NfcCaptureViewController" customModule="PingOneVerifySample" customModuleProvider="target">
+            <connections>
+                <outlet property="continueButton" destination="bcf-26-FZh" id="A9X-EJ-fhs"/>
+                <outlet property="descriptionLabel" destination="Nan-bZ-dNc" id="EGV-K1-FYI"/>
+                <outlet property="headerLabel" destination="Bhl-81-pkl" id="rBG-md-sTP"/>
+                <outlet property="iconImageView" destination="Lq6-FZ-e2t" id="nfc-icon-outlet"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="nfc-view-outlet"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idv_rfid" translatesAutoresizingMaskIntoConstraints="NO" id="Lq6-FZ-e2t" customClass="IconImageView" customModule="VerifyUI" customModuleProvider="target">
+                    <rect key="frame" x="25" y="149" width="352" height="340"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="340" id="WkC-GZ-tRm"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Your ID" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-81-pkl">
+                    <rect key="frame" x="25" y="610.33333333333337" width="352" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" red="0.14509803921568626" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nan-bZ-dNc">
+                    <rect key="frame" x="25" y="651.33333333333337" width="352" height="107.66666666666663"/>
+                    <string key="text">Your ID contains a secure chip that helps us confirm it's authentic. To ensure a smooth scan, remove any thick or metal cases, wallets, or attachments from the back of your phone.</string>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                    <color key="textColor" red="0.14509803921568626" green="0.21568627450980393" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcf-26-FZh" customClass="VerifyButton" customModule="PingOneVerifySample" customModuleProvider="target">
+                    <rect key="frame" x="25" y="784" width="352" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="DBL-d1-DeP"/>
+                    </constraints>
+                    <state key="normal" title="Read"/>
+                    <connections>
+                        <action selector="continueButtonTapped:" destination="-1" eventType="touchUpInside" id="nfc-continue-action"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="bcf-26-FZh" firstAttribute="top" secondItem="Nan-bZ-dNc" secondAttribute="bottom" constant="25" id="CXd-HE-fsO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bcf-26-FZh" secondAttribute="trailing" constant="25" id="Fw5-WA-ZOI"/>
+                <constraint firstItem="Bhl-81-pkl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Hng-Wu-4Y5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bhl-81-pkl" secondAttribute="trailing" constant="25" id="JLW-HU-lYc"/>
+                <constraint firstItem="Nan-bZ-dNc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="NU9-C8-kge"/>
+                <constraint firstItem="Lq6-FZ-e2t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="UV0-hI-bt7"/>
+                <constraint firstItem="bcf-26-FZh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="gpH-jZ-gTc"/>
+                <constraint firstItem="Lq6-FZ-e2t" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="h0f-SS-czL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nan-bZ-dNc" secondAttribute="trailing" constant="25" id="oUO-2A-IOb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lq6-FZ-e2t" secondAttribute="trailing" constant="25" id="pqF-Yt-xsJ"/>
+                <constraint firstAttribute="bottom" secondItem="bcf-26-FZh" secondAttribute="bottom" constant="40" id="rps-lV-8m3"/>
+                <constraint firstItem="Nan-bZ-dNc" firstAttribute="top" secondItem="Bhl-81-pkl" secondAttribute="bottom" constant="5" id="zct-Wg-srB"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="idv_rfid" width="1020" height="1020"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

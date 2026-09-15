@@ -427,7 +427,7 @@
           {
             "kind": "Function",
             "name": "startCapture",
-            "printedName": "startCapture(from:settings:listener:)",
+            "printedName": "startCapture(from:configuration:listener:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -442,16 +442,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AnyObject?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "AnyObject"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "ProviderConfiguration",
+                "printedName": "NeoInterfaces.ProviderConfiguration",
+                "usr": "s:13NeoInterfaces21ProviderConfigurationC"
               },
               {
                 "kind": "TypeNominal",
@@ -461,8 +454,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13NeoInterfaces25IdCaptureProviderContractP05startD04from8settings8listenerySo16UIViewControllerC_yXlSgAA0cdE8Listener_ptF",
-            "mangledName": "$s13NeoInterfaces25IdCaptureProviderContractP05startD04from8settings8listenerySo16UIViewControllerC_yXlSgAA0cdE8Listener_ptF",
+            "usr": "s:13NeoInterfaces25IdCaptureProviderContractP05startD04from13configuration8listenerySo16UIViewControllerC_AA0E13ConfigurationCAA0cdE8Listener_ptF",
+            "mangledName": "$s13NeoInterfaces25IdCaptureProviderContractP05startD04from13configuration8listenerySo16UIViewControllerC_AA0E13ConfigurationCAA0cdE8Listener_ptF",
             "moduleName": "NeoInterfaces",
             "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.IdCaptureProviderContract>",
             "sugared_genericSig": "<Self where Self : NeoInterfaces.IdCaptureProviderContract>",
@@ -771,7 +764,7 @@
           {
             "kind": "Function",
             "name": "startCapture",
-            "printedName": "startCapture(from:settings:licenseKey:listener:)",
+            "printedName": "startCapture(from:configuration:listener:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -786,22 +779,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AnyObject?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "AnyObject"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "ProviderConfiguration",
+                "printedName": "NeoInterfaces.ProviderConfiguration",
+                "usr": "s:13NeoInterfaces21ProviderConfigurationC"
               },
               {
                 "kind": "TypeNominal",
@@ -811,8 +791,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13NeoInterfaces29SelfieCaptureProviderContractP05startD04from8settings10licenseKey8listenerySo22UINavigationControllerC_yXlSgSSAA0cdE8Listener_ptF",
-            "mangledName": "$s13NeoInterfaces29SelfieCaptureProviderContractP05startD04from8settings10licenseKey8listenerySo22UINavigationControllerC_yXlSgSSAA0cdE8Listener_ptF",
+            "usr": "s:13NeoInterfaces29SelfieCaptureProviderContractP05startD04from13configuration8listenerySo22UINavigationControllerC_AA0E13ConfigurationCAA0cdE8Listener_ptF",
+            "mangledName": "$s13NeoInterfaces29SelfieCaptureProviderContractP05startD04from13configuration8listenerySo22UINavigationControllerC_AA0E13ConfigurationCAA0cdE8Listener_ptF",
             "moduleName": "NeoInterfaces",
             "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.SelfieCaptureProviderContract>",
             "sugared_genericSig": "<Self where Self : NeoInterfaces.SelfieCaptureProviderContract>",
@@ -2011,6 +1991,43 @@
           },
           {
             "kind": "Var",
+            "name": "NFC",
+            "printedName": "NFC",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NeoInterfaces.DocumentClass.Type) -> NeoInterfaces.DocumentClass",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentClass",
+                    "printedName": "NeoInterfaces.DocumentClass",
+                    "usr": "s:13NeoInterfaces13DocumentClassO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NeoInterfaces.DocumentClass.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentClass",
+                        "printedName": "NeoInterfaces.DocumentClass",
+                        "usr": "s:13NeoInterfaces13DocumentClassO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13NeoInterfaces13DocumentClassO3NFCyA2CmF",
+            "mangledName": "$s13NeoInterfaces13DocumentClassO3NFCyA2CmF",
+            "moduleName": "NeoInterfaces"
+          },
+          {
+            "kind": "Var",
             "name": "iconName",
             "printedName": "iconName",
             "children": [
@@ -2413,6 +2430,43 @@
                 "declKind": "EnumElement",
                 "usr": "s:13NeoInterfaces13DocumentClassO10CodingKeysO11geoLocationyA2EmF",
                 "mangledName": "$s13NeoInterfaces13DocumentClassO10CodingKeysO11geoLocationyA2EmF",
+                "moduleName": "NeoInterfaces"
+              },
+              {
+                "kind": "Var",
+                "name": "nfc",
+                "printedName": "nfc",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(NeoInterfaces.DocumentClass.CodingKeys.Type) -> NeoInterfaces.DocumentClass.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "NeoInterfaces.DocumentClass.CodingKeys",
+                        "usr": "s:13NeoInterfaces13DocumentClassO10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "NeoInterfaces.DocumentClass.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "NeoInterfaces.DocumentClass.CodingKeys",
+                            "usr": "s:13NeoInterfaces13DocumentClassO10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13NeoInterfaces13DocumentClassO10CodingKeysO3nfcyA2EmF",
+                "mangledName": "$s13NeoInterfaces13DocumentClassO10CodingKeysO3nfcyA2EmF",
                 "moduleName": "NeoInterfaces"
               },
               {
@@ -3276,6 +3330,86 @@
             "declKind": "EnumElement",
             "usr": "s:13NeoInterfaces12DocumentKeysO7MRZDATAyA2CmF",
             "mangledName": "$s13NeoInterfaces12DocumentKeysO7MRZDATAyA2CmF",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MRZ_DOCUMENT_CODE",
+            "printedName": "MRZ_DOCUMENT_CODE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NeoInterfaces.DocumentKeys.Type) -> NeoInterfaces.DocumentKeys",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentKeys",
+                    "printedName": "NeoInterfaces.DocumentKeys",
+                    "usr": "s:13NeoInterfaces12DocumentKeysO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NeoInterfaces.DocumentKeys.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentKeys",
+                        "printedName": "NeoInterfaces.DocumentKeys",
+                        "usr": "s:13NeoInterfaces12DocumentKeysO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13NeoInterfaces12DocumentKeysO17MRZ_DOCUMENT_CODEyA2CmF",
+            "mangledName": "$s13NeoInterfaces12DocumentKeysO17MRZ_DOCUMENT_CODEyA2CmF",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "MRZ_DOCUMENT_TYPE",
+            "printedName": "MRZ_DOCUMENT_TYPE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NeoInterfaces.DocumentKeys.Type) -> NeoInterfaces.DocumentKeys",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentKeys",
+                    "printedName": "NeoInterfaces.DocumentKeys",
+                    "usr": "s:13NeoInterfaces12DocumentKeysO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NeoInterfaces.DocumentKeys.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentKeys",
+                        "printedName": "NeoInterfaces.DocumentKeys",
+                        "usr": "s:13NeoInterfaces12DocumentKeysO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13NeoInterfaces12DocumentKeysO17MRZ_DOCUMENT_TYPEyA2CmF",
+            "mangledName": "$s13NeoInterfaces12DocumentKeysO17MRZ_DOCUMENT_TYPEyA2CmF",
             "moduleName": "NeoInterfaces",
             "declAttributes": [
               "RawDocComment"
@@ -6649,6 +6783,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "NeoInterfaces"
+      },
+      {
         "kind": "TypeDecl",
         "name": "DocumentCaptureSettings",
         "printedName": "DocumentCaptureSettings",
@@ -6666,13 +6807,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvp",
-            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvp",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvp",
             "moduleName": "NeoInterfaces",
-            "protocolReq": true,
             "declAttributes": [
+              "HasStorage",
+              "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -6687,13 +6830,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvg",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvg",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvg",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -6714,13 +6854,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvs",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvs",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvs",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -6735,14 +6872,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvM",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP12documentTypeAA0C5ClassOvM",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC12documentTypeAA0C5ClassOvM",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
                 "implicit": true,
-                "reqNewWitnessTableEntry": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -6760,13 +6893,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvp",
-            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvp",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvp",
             "moduleName": "NeoInterfaces",
-            "protocolReq": true,
             "declAttributes": [
+              "HasStorage",
+              "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -6781,13 +6916,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvg",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvg",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvg",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -6808,13 +6940,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvs",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvs",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvs",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -6829,14 +6958,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvM",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP8optionalSbvM",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC8optionalSbvM",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
                 "implicit": true,
-                "reqNewWitnessTableEntry": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -6854,13 +6979,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvp",
-            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvp",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvp",
             "moduleName": "NeoInterfaces",
-            "protocolReq": true,
             "declAttributes": [
+              "HasStorage",
+              "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -6875,13 +7002,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvg",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvg",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvg",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -6902,13 +7026,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvs",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvs",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvs",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -6923,14 +7044,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvM",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP10isAuthflowSbvM",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC10isAuthflowSbvM",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
                 "implicit": true,
-                "reqNewWitnessTableEntry": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -6948,13 +7065,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvp",
-            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvp",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvp",
             "moduleName": "NeoInterfaces",
-            "protocolReq": true,
             "declAttributes": [
+              "HasStorage",
+              "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -6969,13 +7088,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvg",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvg",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvg",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -6996,13 +7112,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvs",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvs",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvs",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -7017,14 +7130,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvM",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP7isRetrySbvM",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC7isRetrySbvM",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
                 "implicit": true,
-                "reqNewWitnessTableEntry": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -7042,13 +7151,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0Ovp",
-            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0Ovp",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0Ovp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0Ovp",
             "moduleName": "NeoInterfaces",
-            "protocolReq": true,
             "declAttributes": [
+              "HasStorage",
+              "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -7063,13 +7174,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0Ovg",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0Ovg",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0Ovg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0Ovg",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -7090,13 +7198,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0Ovs",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0Ovs",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0Ovs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0Ovs",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -7111,14 +7216,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0OvM",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP11payloadSizeAA07PayloadG0OvM",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0OvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11payloadSizeAA07PayloadG0OvM",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
                 "implicit": true,
-                "reqNewWitnessTableEntry": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -7152,13 +7253,16 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvp",
-            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvp",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvp",
             "moduleName": "NeoInterfaces",
-            "protocolReq": true,
             "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -7189,13 +7293,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvg",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvg",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvg",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -7232,13 +7333,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvs",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvs",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvs",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -7253,14 +7351,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvM",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP17collectionOptionsSayAA0D16CollectionOptionVGSgvM",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC17collectionOptionsSayAA0D16CollectionOptionVGSgvM",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
                 "implicit": true,
-                "reqNewWitnessTableEntry": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -7294,13 +7388,16 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvp",
-            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvp",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvp",
             "moduleName": "NeoInterfaces",
-            "protocolReq": true,
             "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -7331,13 +7428,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvg",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvg",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvg",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "get"
               },
               {
@@ -7374,13 +7468,10 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvs",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvs",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvs",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
+                "implicit": true,
                 "accessorKind": "set"
               },
               {
@@ -7395,25 +7486,247 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvM",
-                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP18collectionSessionsSayAA0D17CollectionSessionVGSgvM",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC18collectionSessionsSayAA0D17CollectionSessionVGSgvM",
                 "moduleName": "NeoInterfaces",
-                "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.DocumentCaptureSettings>",
-                "sugared_genericSig": "<Self where Self : NeoInterfaces.DocumentCaptureSettings>",
-                "protocolReq": true,
                 "implicit": true,
-                "reqNewWitnessTableEntry": true,
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "themeColors",
+            "printedName": "themeColors",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.CaptureThemeColors?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureThemeColors",
+                    "printedName": "NeoInterfaces.CaptureThemeColors",
+                    "usr": "s:13NeoInterfaces18CaptureThemeColorsV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvp",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "NeoInterfaces.CaptureThemeColors?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureThemeColors",
+                        "printedName": "NeoInterfaces.CaptureThemeColors",
+                        "usr": "s:13NeoInterfaces18CaptureThemeColorsV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvg",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "NeoInterfaces.CaptureThemeColors?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureThemeColors",
+                        "printedName": "NeoInterfaces.CaptureThemeColors",
+                        "usr": "s:13NeoInterfaces18CaptureThemeColorsV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvs",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvs",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvM",
+                "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC11themeColorsAA0d5ThemeG0VSgvM",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(documentType:optional:isAuthflow:isRetry:payloadSize:collectionOptions:collectionSessions:themeColors:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentCaptureSettings",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DocumentClass",
+                "printedName": "NeoInterfaces.DocumentClass",
+                "usr": "s:13NeoInterfaces13DocumentClassO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PayloadSize",
+                "printedName": "NeoInterfaces.PayloadSize",
+                "hasDefaultArg": true,
+                "usr": "s:13NeoInterfaces11PayloadSizeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[NeoInterfaces.CaptureCollectionOption]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[NeoInterfaces.CaptureCollectionOption]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureCollectionOption",
+                        "printedName": "NeoInterfaces.CaptureCollectionOption",
+                        "usr": "s:13NeoInterfaces23CaptureCollectionOptionV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[NeoInterfaces.CaptureCollectionSession]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[NeoInterfaces.CaptureCollectionSession]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureCollectionSession",
+                        "printedName": "NeoInterfaces.CaptureCollectionSession",
+                        "usr": "s:13NeoInterfaces24CaptureCollectionSessionV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.CaptureThemeColors?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureThemeColors",
+                    "printedName": "NeoInterfaces.CaptureThemeColors",
+                    "usr": "s:13NeoInterfaces18CaptureThemeColorsV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC12documentType8optional10isAuthflow0I5Retry11payloadSize17collectionOptions0N8Sessions11themeColorsAcA0C5ClassO_S3bAA07PayloadM0OSayAA0D16CollectionOptionVGSgSayAA0dU7SessionVGSgAA0d5ThemeR0VSgtcfc",
+            "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC12documentType8optional10isAuthflow0I5Retry11payloadSize17collectionOptions0N8Sessions11themeColorsAcA0C5ClassO_S3bAA07PayloadM0OSayAA0D16CollectionOptionVGSgSayAA0dU7SessionVGSgAA0d5ThemeR0VSgtcfc",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
           }
         ],
-        "declKind": "Protocol",
-        "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP",
-        "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsP",
+        "declKind": "Class",
+        "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC",
+        "mangledName": "$s13NeoInterfaces23DocumentCaptureSettingsC",
         "moduleName": "NeoInterfaces",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
+        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
@@ -7421,17 +7734,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -8467,395 +8780,2899 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "NeoInterfaces"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "NeoInterfaces"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NfcCaptureProviderContract",
+        "printedName": "NfcCaptureProviderContract",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "startCapture",
+            "printedName": "startCapture(from:configuration:listener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProviderConfiguration",
+                "printedName": "NeoInterfaces.ProviderConfiguration",
+                "usr": "s:13NeoInterfaces21ProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NfcCaptureProviderListener",
+                "printedName": "any NeoInterfaces.NfcCaptureProviderListener",
+                "usr": "s:13NeoInterfaces26NfcCaptureProviderListenerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces26NfcCaptureProviderContractP05startD04from13configuration8listenerySo16UIViewControllerC_AA0E13ConfigurationCAA0cdE8Listener_ptF",
+            "mangledName": "$s13NeoInterfaces26NfcCaptureProviderContractP05startD04from13configuration8listenerySo16UIViewControllerC_AA0E13ConfigurationCAA0cdE8Listener_ptF",
+            "moduleName": "NeoInterfaces",
+            "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.NfcCaptureProviderContract>",
+            "sugared_genericSig": "<Self where Self : NeoInterfaces.NfcCaptureProviderContract>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cancelCapture",
+            "printedName": "cancelCapture()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces26NfcCaptureProviderContractP06cancelD0yyF",
+            "mangledName": "$s13NeoInterfaces26NfcCaptureProviderContractP06cancelD0yyF",
+            "moduleName": "NeoInterfaces",
+            "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.NfcCaptureProviderContract>",
+            "sugared_genericSig": "<Self where Self : NeoInterfaces.NfcCaptureProviderContract>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13NeoInterfaces26NfcCaptureProviderContractP",
+        "mangledName": "$s13NeoInterfaces26NfcCaptureProviderContractP",
+        "moduleName": "NeoInterfaces",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NfcCaptureProviderListener",
+        "printedName": "NfcCaptureProviderListener",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onNfcCaptured",
+            "printedName": "onNfcCaptured(payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces26NfcCaptureProviderListenerP02onC8Captured7payloadySDyS2SG_tF",
+            "mangledName": "$s13NeoInterfaces26NfcCaptureProviderListenerP02onC8Captured7payloadySDyS2SG_tF",
+            "moduleName": "NeoInterfaces",
+            "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.NfcCaptureProviderListener>",
+            "sugared_genericSig": "<Self where Self : NeoInterfaces.NfcCaptureProviderListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onNfcError",
+            "printedName": "onNfcError(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces26NfcCaptureProviderListenerP02onC5Error5errorys0H0_p_tF",
+            "mangledName": "$s13NeoInterfaces26NfcCaptureProviderListenerP02onC5Error5errorys0H0_p_tF",
+            "moduleName": "NeoInterfaces",
+            "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.NfcCaptureProviderListener>",
+            "sugared_genericSig": "<Self where Self : NeoInterfaces.NfcCaptureProviderListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onNfcCancelled",
+            "printedName": "onNfcCancelled()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces26NfcCaptureProviderListenerP02onC9CancelledyyF",
+            "mangledName": "$s13NeoInterfaces26NfcCaptureProviderListenerP02onC9CancelledyyF",
+            "moduleName": "NeoInterfaces",
+            "genericSig": "<τ_0_0 where τ_0_0 : NeoInterfaces.NfcCaptureProviderListener>",
+            "sugared_genericSig": "<Self where Self : NeoInterfaces.NfcCaptureProviderListener>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13NeoInterfaces26NfcCaptureProviderListenerP",
+        "mangledName": "$s13NeoInterfaces26NfcCaptureProviderListenerP",
+        "moduleName": "NeoInterfaces",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "NeoInterfaces"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProviderConfiguration",
+        "printedName": "ProviderConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "settings",
+            "printedName": "settings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces21ProviderConfigurationC8settingsAA23DocumentCaptureSettingsCSgvp",
+            "mangledName": "$s13NeoInterfaces21ProviderConfigurationC8settingsAA23DocumentCaptureSettingsCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentCaptureSettings",
+                        "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                        "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces21ProviderConfigurationC8settingsAA23DocumentCaptureSettingsCSgvg",
+                "mangledName": "$s13NeoInterfaces21ProviderConfigurationC8settingsAA23DocumentCaptureSettingsCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "update",
+            "printedName": "update(settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces21ProviderConfigurationC6update8settingsyAA23DocumentCaptureSettingsCSg_tF",
+            "mangledName": "$s13NeoInterfaces21ProviderConfigurationC6update8settingsyAA23DocumentCaptureSettingsCSg_tF",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProviderConfiguration",
+                "printedName": "NeoInterfaces.ProviderConfiguration",
+                "usr": "s:13NeoInterfaces21ProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces21ProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "mangledName": "$s13NeoInterfaces21ProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13NeoInterfaces21ProviderConfigurationC",
+        "mangledName": "$s13NeoInterfaces21ProviderConfigurationC",
+        "moduleName": "NeoInterfaces",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SelfieProviderConfiguration",
+        "printedName": "SelfieProviderConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "licenseKey",
+            "printedName": "licenseKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces27SelfieProviderConfigurationC10licenseKeySSvp",
+            "mangledName": "$s13NeoInterfaces27SelfieProviderConfigurationC10licenseKeySSvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces27SelfieProviderConfigurationC10licenseKeySSvg",
+                "mangledName": "$s13NeoInterfaces27SelfieProviderConfigurationC10licenseKeySSvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(licenseKey:settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieProviderConfiguration",
+                "printedName": "NeoInterfaces.SelfieProviderConfiguration",
+                "usr": "s:13NeoInterfaces27SelfieProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces27SelfieProviderConfigurationC10licenseKey8settingsACSS_AA23DocumentCaptureSettingsCSgtcfc",
+            "mangledName": "$s13NeoInterfaces27SelfieProviderConfigurationC10licenseKey8settingsACSS_AA23DocumentCaptureSettingsCSgtcfc",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SelfieProviderConfiguration",
+                "printedName": "NeoInterfaces.SelfieProviderConfiguration",
+                "usr": "s:13NeoInterfaces27SelfieProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces27SelfieProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "mangledName": "$s13NeoInterfaces27SelfieProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "moduleName": "NeoInterfaces",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13NeoInterfaces27SelfieProviderConfigurationC",
+        "mangledName": "$s13NeoInterfaces27SelfieProviderConfigurationC",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "superclassUsr": "s:13NeoInterfaces21ProviderConfigurationC",
+        "superclassNames": [
+          "NeoInterfaces.ProviderConfiguration"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IdProviderConfiguration",
+        "printedName": "IdProviderConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "licenseKey",
+            "printedName": "licenseKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces23IdProviderConfigurationC10licenseKeySSvp",
+            "mangledName": "$s13NeoInterfaces23IdProviderConfigurationC10licenseKeySSvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces23IdProviderConfigurationC10licenseKeySSvg",
+                "mangledName": "$s13NeoInterfaces23IdProviderConfigurationC10licenseKeySSvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(licenseKey:settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IdProviderConfiguration",
+                "printedName": "NeoInterfaces.IdProviderConfiguration",
+                "usr": "s:13NeoInterfaces23IdProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces23IdProviderConfigurationC10licenseKey8settingsACSS_AA23DocumentCaptureSettingsCSgtcfc",
+            "mangledName": "$s13NeoInterfaces23IdProviderConfigurationC10licenseKey8settingsACSS_AA23DocumentCaptureSettingsCSgtcfc",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IdProviderConfiguration",
+                "printedName": "NeoInterfaces.IdProviderConfiguration",
+                "usr": "s:13NeoInterfaces23IdProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces23IdProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "mangledName": "$s13NeoInterfaces23IdProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "moduleName": "NeoInterfaces",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13NeoInterfaces23IdProviderConfigurationC",
+        "mangledName": "$s13NeoInterfaces23IdProviderConfigurationC",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "superclassUsr": "s:13NeoInterfaces21ProviderConfigurationC",
+        "superclassNames": [
+          "NeoInterfaces.ProviderConfiguration"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NfcProviderConfiguration",
+        "printedName": "NfcProviderConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "accessToken",
+            "printedName": "accessToken",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC11accessTokenSSvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC11accessTokenSSvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC11accessTokenSSvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC11accessTokenSSvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "expiresAt",
+            "printedName": "expiresAt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC9expiresAtSSvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC9expiresAtSSvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC9expiresAtSSvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC9expiresAtSSvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "baseUrl",
+            "printedName": "baseUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC7baseUrlSSvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC7baseUrlSSvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC7baseUrlSSvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC7baseUrlSSvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transactionId",
+            "printedName": "transactionId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC13transactionIdSSvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC13transactionIdSSvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC13transactionIdSSvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC13transactionIdSSvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "languageCode",
+            "printedName": "languageCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC12languageCodeSSSgvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC12languageCodeSSSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC12languageCodeSSSgvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC12languageCodeSSSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mrzDocumentNumber",
+            "printedName": "mrzDocumentNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC17mrzDocumentNumberSSSgvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC17mrzDocumentNumberSSSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC17mrzDocumentNumberSSSgvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC17mrzDocumentNumberSSSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mrzDateOfBirth",
+            "printedName": "mrzDateOfBirth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC14mrzDateOfBirthSSSgvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC14mrzDateOfBirthSSSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC14mrzDateOfBirthSSSgvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC14mrzDateOfBirthSSSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mrzDateOfExpiry",
+            "printedName": "mrzDateOfExpiry",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC15mrzDateOfExpirySSSgvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC15mrzDateOfExpirySSSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC15mrzDateOfExpirySSSgvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC15mrzDateOfExpirySSSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mrzDocumentCode",
+            "printedName": "mrzDocumentCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentCodeSSSgvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentCodeSSSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentCodeSSSgvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentCodeSSSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mrzIssuingCountry",
+            "printedName": "mrzIssuingCountry",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC17mrzIssuingCountrySSSgvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC17mrzIssuingCountrySSSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC17mrzIssuingCountrySSSgvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC17mrzIssuingCountrySSSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mrzDocumentType",
+            "printedName": "mrzDocumentType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentTypeSSSgvp",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentTypeSSSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentTypeSSSgvg",
+                "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC15mrzDocumentTypeSSSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(accessToken:expiresAt:baseUrl:transactionId:languageCode:mrzDocumentNumber:mrzDateOfBirth:mrzDateOfExpiry:mrzDocumentCode:mrzIssuingCountry:mrzDocumentType:settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NfcProviderConfiguration",
+                "printedName": "NeoInterfaces.NfcProviderConfiguration",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC11accessToken9expiresAt7baseUrl13transactionId12languageCode17mrzDocumentNumber0P11DateOfBirth0psT6Expiry0pqO00P14IssuingCountry0pQ4Type8settingsACSS_S4SSgA6pA0Q15CaptureSettingsCSgtcfc",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC11accessToken9expiresAt7baseUrl13transactionId12languageCode17mrzDocumentNumber0P11DateOfBirth0psT6Expiry0pqO00P14IssuingCountry0pQ4Type8settingsACSS_S4SSgA6pA0Q15CaptureSettingsCSgtcfc",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "update",
+            "printedName": "update(mrzDocumentNumber:mrzDateOfBirth:mrzDateOfExpiry:mrzDocumentCode:mrzIssuingCountry:mrzDocumentType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC6update17mrzDocumentNumber0G11DateOfBirth0gjK6Expiry0gH4Code0G14IssuingCountry0gH4TypeySSSg_A5KtF",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC6update17mrzDocumentNumber0G11DateOfBirth0gjK6Expiry0gH4Code0G14IssuingCountry0gH4TypeySSSg_A5KtF",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(settings:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NfcProviderConfiguration",
+                "printedName": "NeoInterfaces.NfcProviderConfiguration",
+                "usr": "s:13NeoInterfaces24NfcProviderConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentCaptureSettings",
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces24NfcProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC8settingsAcA23DocumentCaptureSettingsCSg_tcfc",
+            "moduleName": "NeoInterfaces",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13NeoInterfaces24NfcProviderConfigurationC",
+        "mangledName": "$s13NeoInterfaces24NfcProviderConfigurationC",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "superclassUsr": "s:13NeoInterfaces21ProviderConfigurationC",
+        "superclassNames": [
+          "NeoInterfaces.ProviderConfiguration"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "NeoInterfaces"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CaptureThemeColors",
+        "printedName": "CaptureThemeColors",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "backgroundColor",
+            "printedName": "backgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV15backgroundColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV15backgroundColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV15backgroundColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV15backgroundColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "textColor",
+            "printedName": "textColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV9textColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV9textColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV9textColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV9textColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "titleTextColor",
+            "printedName": "titleTextColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV14titleTextColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV14titleTextColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV14titleTextColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV14titleTextColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "primaryButtonColor",
+            "printedName": "primaryButtonColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV18primaryButtonColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV18primaryButtonColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV18primaryButtonColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV18primaryButtonColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "primaryButtonTextColor",
+            "printedName": "primaryButtonTextColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV22primaryButtonTextColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV22primaryButtonTextColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV22primaryButtonTextColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV22primaryButtonTextColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "primaryButtonBorderColor",
+            "printedName": "primaryButtonBorderColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV24primaryButtonBorderColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV24primaryButtonBorderColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV24primaryButtonBorderColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV24primaryButtonBorderColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "secondaryButtonColor",
+            "printedName": "secondaryButtonColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV20secondaryButtonColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV20secondaryButtonColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV20secondaryButtonColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV20secondaryButtonColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "secondaryButtonTextColor",
+            "printedName": "secondaryButtonTextColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV24secondaryButtonTextColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV24secondaryButtonTextColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV24secondaryButtonTextColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV24secondaryButtonTextColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "secondaryButtonBorderColor",
+            "printedName": "secondaryButtonBorderColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV26secondaryButtonBorderColorSo7UIColorCSgvp",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV26secondaryButtonBorderColorSo7UIColorCSgvp",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV26secondaryButtonBorderColorSo7UIColorCSgvg",
+                "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV26secondaryButtonBorderColorSo7UIColorCSgvg",
+                "moduleName": "NeoInterfaces",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(backgroundColor:textColor:titleTextColor:primaryButtonColor:primaryButtonTextColor:primaryButtonBorderColor:secondaryButtonColor:secondaryButtonTextColor:secondaryButtonBorderColor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CaptureThemeColors",
+                "printedName": "NeoInterfaces.CaptureThemeColors",
+                "usr": "s:13NeoInterfaces18CaptureThemeColorsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13NeoInterfaces18CaptureThemeColorsV15backgroundColor04textG009titleTextG0013primaryButtonG00kljG00kl6BorderG009secondarylG00nljG00nlmG0ACSo7UIColorCSg_A8Otcfc",
+            "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV15backgroundColor04textG009titleTextG0013primaryButtonG00kljG00kl6BorderG009secondarylG00nljG00nlmG0ACSo7UIColorCSg_A8Otcfc",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13NeoInterfaces18CaptureThemeColorsV",
+        "mangledName": "$s13NeoInterfaces18CaptureThemeColorsV",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 8,
       "value": "\"selfie\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 515,
       "length": 15,
       "value": "\"driverLicense\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 576,
       "length": 10,
       "value": "\"passport\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 661,
       "length": 14,
       "value": "\"governmentId\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 745,
       "length": 7,
       "value": "\"email\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 821,
       "length": 7,
       "value": "\"phone\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 884,
       "length": 5,
       "value": "\"otp\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 963,
       "length": 7,
       "value": "\"other\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 1037,
       "length": 12,
       "value": "\"credential\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 1106,
       "length": 13,
       "value": "\"geolocation\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "kind": "StringLiteral",
+      "offset": 1140,
+      "length": 5,
+      "value": "\"nfc\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 513,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 633,
       "length": 9,
       "value": "\"otpType\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 779,
       "length": 12,
       "value": "\"frontImage\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 894,
       "length": 11,
       "value": "\"backImage\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 990,
       "length": 9,
       "value": "\"barcode\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1089,
       "length": 9,
       "value": "\"mrzData\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1200,
+      "offset": 1228,
+      "length": 17,
+      "value": "\"mrzDocumentCode\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1412,
+      "length": 17,
+      "value": "\"mrzDocumentType\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 1531,
       "length": 11,
       "value": "\"firstName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1279,
+      "offset": 1610,
       "length": 12,
       "value": "\"middleName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1364,
+      "offset": 1695,
       "length": 10,
       "value": "\"lastName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1465,
+      "offset": 1796,
       "length": 10,
       "value": "\"fullName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1590,
+      "offset": 1921,
       "length": 20,
       "value": "\"additionalNameInfo\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1717,
+      "offset": 2048,
       "length": 15,
       "value": "\"localizedName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1834,
+      "offset": 2165,
       "length": 13,
       "value": "\"fathersName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1949,
+      "offset": 2280,
       "length": 13,
       "value": "\"mothersName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2077,
+      "offset": 2408,
       "length": 9,
       "value": "\"address\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2173,
+      "offset": 2504,
       "length": 15,
       "value": "\"addressStreet\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2271,
+      "offset": 2602,
       "length": 13,
       "value": "\"addressCity\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2381,
+      "offset": 2712,
       "length": 14,
       "value": "\"addressState\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2488,
+      "offset": 2819,
       "length": 12,
       "value": "\"addressZip\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2609,
+      "offset": 2940,
       "length": 9,
       "value": "\"country\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2740,
+      "offset": 3071,
       "length": 32,
       "value": "\"additional_address_information\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 2906,
+      "offset": 3237,
       "length": 41,
       "value": "\"additional_optional_address_information\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3068,
+      "offset": 3399,
       "length": 5,
       "value": "\"sex\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3186,
+      "offset": 3517,
       "length": 13,
       "value": "\"dateOfBirth\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3300,
+      "offset": 3631,
       "length": 14,
       "value": "\"placeOfBirth\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3409,
+      "offset": 3740,
       "length": 13,
       "value": "\"nationality\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3511,
+      "offset": 3842,
       "length": 15,
       "value": "\"maritalStatus\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3620,
+      "offset": 3951,
       "length": 6,
       "value": "\"race\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3719,
+      "offset": 4050,
       "length": 10,
       "value": "\"religion\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 3847,
+      "offset": 4178,
       "length": 19,
       "value": "\"residentialStatus\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4019,
+      "offset": 4350,
       "length": 16,
       "value": "\"documentNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4165,
+      "offset": 4496,
       "length": 26,
       "value": "\"documentAdditionalNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4320,
+      "offset": 4651,
       "length": 34,
       "value": "\"documentOptionalAdditionalNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4454,
+      "offset": 4785,
       "length": 18,
       "value": "\"personalIdNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4541,
+      "offset": 4872,
       "length": 13,
       "value": "\"dateOfIssue\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4621,
+      "offset": 4952,
       "length": 14,
       "value": "\"dateOfExpiry\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4755,
+      "offset": 5086,
       "length": 18,
       "value": "\"issuingAuthority\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4889,
+      "offset": 5220,
       "length": 10,
       "value": "\"employer\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 4994,
+      "offset": 5325,
       "length": 12,
       "value": "\"profession\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 5154,
+      "offset": 5485,
       "length": 9,
       "value": "\"ocrData\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 5271,
+      "offset": 5602,
       "length": 14,
       "value": "\"ocrDataFront\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 5391,
+      "offset": 5722,
       "length": 13,
       "value": "\"ocrDataBack\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
-      "offset": 5527,
+      "offset": 5858,
       "length": 12,
       "value": "\"iadPayload\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
       "kind": "IntegerLiteral",
       "offset": 468,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
       "kind": "IntegerLiteral",
       "offset": 555,
       "length": 1,
       "value": "1"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1660,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1702,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1741,
+      "length": 5,
+      "value": "false"
     }
   ]
 }

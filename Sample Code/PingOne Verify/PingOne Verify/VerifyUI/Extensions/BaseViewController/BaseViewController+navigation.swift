@@ -15,6 +15,9 @@ extension BaseViewController {
                 if let icon = UIImage.loadImage(named: "idv_back") {
                     let backButton = UIBarButtonItem(image: icon, style: .plain, target: self, action: #selector(self.cancelClicked(sender:)))
                     self.navigationItem.leftBarButtonItem = backButton
+                    if #available(iOS 26.0, *) {
+                        self.navigationItem.leftBarButtonItem?.hidesSharedBackground = true
+                    }
                 }  else {
                     logerror("Missing Back image")
                 }

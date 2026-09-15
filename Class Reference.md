@@ -7,6 +7,16 @@ Two-way contract between the verification UI and the SDK core.
 
 ---
 
+## `PingOneVerifyClient`
+
+### SDK version
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `sdkVersion` | `static String` | The SDK's semantic version string (e.g. `"4.1.1"`). Reads `CFBundleShortVersionString` from the framework bundle. ObjC: `[PingOneVerifyClient sdkVersion]` |
+
+---
+
 ## `VerifyTransactionCoordinator`
 
 ### Document submission
@@ -16,7 +26,9 @@ Two-way contract between the verification UI and the SDK core.
 | Submit email | `submitEmail(_ email: String)` | Submits an email address for OTP verification. |
 | Submit phone | `submitPhone(_ phone: String)` | Submits a phone number for OTP verification 
 | Submit selfie | `submitSelfie(_ result: SelfieCaptureResult)` | Submits a captured selfie to PingOne Verify. |
-| Submit government ID | `submitGovernmentId(_ result: IdCaptureResult)` | Submits a captured government ID to PingOne Verify. |
+| Submit government ID | `submitGovernmentId(_ result: IdCaptureResult)` | Submits a captured government ID to PingOne Verify. For NFC-capable policies, submit the provider-produced result so its MRZ data is retained. |
+| Submit NFC result | `submitNfc(_ result: NfcCaptureResult)` | Submits the finalized ReadID outcome — success, or failure with a reason (e.g. `"backgroundTimeout"`, `"resumeTokenExpired"`); call exactly once per attempt. |
+| Report NFC result (provider-facing) | `onNfcCaptured(payload: [String: String])` | Called by `NfcCaptureProviderListener` implementations (or the retry screen abandoning the step) to report an NFC outcome without a finalized ReadID session; forwards to `didCaptureNfc` as an `NfcCaptureResult`. |
 | Submit geolocation | `submitGeolocation(latitude: Double, longitude: Double)` | Submits captured geolocation coordinates. |
 
 ### OTP
@@ -31,15 +43,19 @@ Two-way contract between the verification UI and the SDK core.
 | Method | Signature | Description |
 |--------|-----------|-------------|
 | Launch selfie capture | `captureSelfie(from navigationController: UINavigationController)` | Launches the selfie capture flow. Requires the selfie provider module. |
+| Launch selfie capture (explicit settings) | `captureSelfie(from navigationController: UINavigationController, settings: DocumentCaptureSettings)` | Launches selfie capture using explicit app-facing settings, e.g. for a retake. |
 | Launch ID capture | `captureGovernmentId(from navigationController: UINavigationController)` | Launches the ID capture flow. Requires the ID capture provider module. |
+| Launch ID capture (explicit settings) | `captureGovernmentId(from navigationController: UINavigationController, settings: DocumentCaptureSettings)` | Launches government-ID capture using explicit app-facing settings, e.g. for a retake. |
+| Launch NFC capture | `captureNfc(from viewController: UIViewController, settings: DocumentCaptureSettings)` | Launches the server-directed ReadID chip-read flow using the passed settings unchanged (e.g. the `NfcCaptureSettings` from `shouldCaptureNfc`, optionally modified — see `themeColors` below). Requires `NfcCaptureProvider.xcframework` and `ReadID_UI.xcframework`. |
 | Capture geolocation | `captureGeolocation()` | Asks the geolocation provider to request the device's current location. |
+| Check location permission | `isLocationPermissionGranted() -> LocationPermissionStatus` | Returns the current Core Location authorisation status without importing `CoreLocation`. |
 
 ### Flow control
 
 | Method | Signature | Description |
 |--------|-----------|-------------|
 | Skip step | `skipDocument(type: DocumentClass)` | Skips the current optional step. The server must mark the step optional or the call fails. |
-| End flow | `endVerification()` | Ends the verification flow and releases observers. |
+| End flow | `endVerification()` | Ends the verification flow, cancels any active NFC chip read, and releases observers. |
 
 ---
 
@@ -57,7 +73,9 @@ Two-way contract between the verification UI and the SDK core.
 | Method | Signature | Description |
 |--------|-----------|-------------|
 | Should capture | `coordinator(_:shouldCaptureDocument settings: DocumentCaptureSettings)` | Core needs the user to capture a document or provide OTP/geolocation. Read `settings.documentType` to determine the screen to show. |
-| Should retry | `coordinator(_:shouldRetryCapture feedback: RetryFeedback, settings: DocumentCaptureSettings)` | The previous submission failed due to the quality issues and the user may retry. |
+| Should capture NFC | `coordinator(_:shouldCaptureNfc settings: NfcCaptureSettings)` | **Required** custom-UI callback. Server-directed follow-up after government-ID submission; show NFC instructions and call `captureNfc(from:settings:)` with this settings instance (or a modified copy). Not delivered on a resumed transaction without retained MRZ data — the SDK reports the attempt as failed (`resumeTokenExpired`) instead. |
+| Did capture NFC | `coordinator(_:didCaptureNfc result: NfcCaptureResult)` | ReadID chip read finished (successfully or with a failure reason). Show a processing state, then call `submitNfc(result)` exactly once. |
+| Should retry | `coordinator(_:shouldRetryCapture feedback: RetryFeedback, settings: DocumentCaptureSettings)` | The previous capture attempt failed and the user may retry. Covers document quality retries and NFC retries (`settings.documentType == .NFC`, feedback e.g. `"backgroundTimeout"`); the Retry action calls `captureNfc(from:settings:)` for NFC or the regular capture call otherwise. |
 | Did submit document | `coordinator(_:didSubmitDocument response: DocumentSubmissionResponse)` | Document submitted successfully. |
 | Did capture selfie | `coordinator(_:didCaptureSelfie result: SelfieCaptureResult)` | Selfie camera finished. Show preview if desired, then call `submitSelfie(result)` or `captureSelfie(...)` to retake. |
 | Did capture ID | `coordinator(_:didCaptureGovernmentId result: IdCaptureResult)` | ID scan finished. Show preview if desired, then call `submitGovernmentId(result)` or `captureGovernmentId(...)` to retake. |
@@ -131,8 +149,24 @@ Returned by `didCaptureGovernmentId` and consumed by `submitGovernmentId`.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `documentData` | `let documentData: [String: String]` | Key-value map of OCR fields and base64-encoded images extracted from the document. |
-| `idType` | `let idType: String` | The scanned document type string (e.g. `"DRIVER_LICENSE"`, `"PASSPORT"`). |
+| `documentData` | `let documentData: [String: String]` | Key-value map of OCR fields and base64-encoded images extracted from the document. For NFC-capable policies include MRZ document number, DOB/expiry (`yyMMdd`), code, type, and issuer/country. |
+| `idType` | `let idType: String` | The scanned document type as a `DocumentClass` raw value string (e.g. `"driverLicense"`, `"passport"`, `"governmentId"`). |
+
+### `NfcCaptureResult`
+
+Returned by `didCaptureNfc` and consumed by `submitNfc`.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `readIdSessionId` | `let readIdSessionId: String` | The finalized ReadID session identifier. Empty when the read failed before a session existed (the failure reason still travels separately). |
+| `failed` | `let failed: Bool` | `true` when the chip read failed on-device but the attempt should still be submitted so the server can decide the next step. |
+| `failureReason` | `let failureReason: String?` | Server failure reason (e.g. `"backgroundTimeout"`, `"resumeTokenExpired"`), when failed. |
+
+### `NfcCaptureSettings`
+
+Delivered by the required `shouldCaptureNfc` callback after a government-ID response includes `otherData.nfcSessionData`. This app-facing settings object contains only the capture-step options. ReadID credentials, the PingOne transaction ID, and MRZ values are held by the SDK-owned `NfcProviderConfiguration` and passed directly to `NfcCaptureProvider`; they are never exposed through the UI callback. MRZ birth and expiry dates use ICAO `yyMMdd`.
+
+Pass this instance (or a modified copy) to `captureNfc(from:settings:)` to launch the chip read. Set `themeColors` on it beforehand to theme ReadID's own screens (backgrounds, text, primary/secondary buttons) — see `CaptureThemeColors` below. ReadID's screen *text* localizes separately, driven by `Builder.setLanguageCode(_:)` (falling back to device language) — there's no app-facing override for that today.
 
 ### `DocumentSubmissionResponse`
 
@@ -157,16 +191,36 @@ Server feedback for a failed capture, delivered to `shouldRetryCapture`.
 | `message` | `let message: String` | Human-readable fallback message from the server. |
 | `languagePackKey` | `let languagePackKey: String?` | Language-pack key for the localised error string. `nil` when no language-pack key was provided by the server. |
 
-### `DocumentCaptureSettings`
+### `CaptureThemeColors`
 
-Common base protocol for every capture step. Concrete subtypes — `IdCaptureSettings`, `SelfieCaptureSettings`, `EmailCaptureSettings`, `PhoneCaptureSettings`, `OtpCaptureSettings`, `LocationCaptureSettings` — carry additional fields specific to their step.
+Defined in `NeoInterfaces` (`NeoInterfaces/Types/CaptureThemeColors.swift`). Generic theme colours computed from the app theme configuration, exposed via `DocumentCaptureSettings.themeColors` so any capture provider can theme its own UI without depending on `PingOneVerify`. All fields are `let` — to change one, construct a new instance (optionally copying the others from the existing `themeColors` value) rather than mutating in place.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `documentType` | `DocumentClass` | The data type this step collects. |
-| `optional` | `Bool` | When `true`, the user may skip this step. |
-| `isRetry` | `Bool` | `true` when this step is a retry of a previously failed attempt. |
-| `payloadSize` | `PayloadSize` | Compression level applied to the upload payload. |
+| `backgroundColor` | `let backgroundColor: UIColor?` | Screen background colour. |
+| `textColor` | `let textColor: UIColor?` | Body text colour. |
+| `titleTextColor` | `let titleTextColor: UIColor?` | Title/heading text colour. |
+| `primaryButtonColor` | `let primaryButtonColor: UIColor?` | Primary (solid) button background colour. |
+| `primaryButtonTextColor` | `let primaryButtonTextColor: UIColor?` | Primary button text colour. |
+| `primaryButtonBorderColor` | `let primaryButtonBorderColor: UIColor?` | Primary button border colour. |
+| `secondaryButtonColor` | `let secondaryButtonColor: UIColor?` | Secondary (bordered) button background colour. |
+| `secondaryButtonTextColor` | `let secondaryButtonTextColor: UIColor?` | Secondary button text colour. |
+| `secondaryButtonBorderColor` | `let secondaryButtonBorderColor: UIColor?` | Secondary button border colour. |
+
+### `DocumentCaptureSettings`
+
+Common base **class** (`open class`, defined in `NeoInterfaces`) for every capture step. Concrete subtypes — `IdCaptureSettings`, `SelfieCaptureSettings`, `EmailCaptureSettings`, `PhoneCaptureSettings`, `OtpCaptureSettings`, `NfcCaptureSettings` — carry additional fields specific to their step. Geolocation steps do not have a dedicated subtype; they are constructed via the same factory's default case.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `documentType` | `var documentType: DocumentClass` | The data type this step collects. |
+| `optional` | `var optional: Bool` | When `true`, the user may skip this step. |
+| `isAuthflow` | `var isAuthflow: Bool` | `true` when the flow is authentication rather than first-time verification. |
+| `isRetry` | `var isRetry: Bool` | `true` when this step is a retry of a previously failed attempt. |
+| `payloadSize` | `var payloadSize: PayloadSize` | Compression level applied to the upload payload. |
+| `collectionOptions` | `var collectionOptions: [CaptureCollectionOption]?` | Capture options the user may choose from for this step, if any. |
+| `collectionSessions` | `var collectionSessions: [CaptureCollectionSession]?` | Sessions previously generated for options that required a prior generate-session call. |
+| `themeColors` | `var themeColors: CaptureThemeColors?` | Theme colours computed from the fetched app theme (see `CaptureThemeColors` below). `nil` until the app theme fetch completes. A generic field on the base class so any capture provider can read it; **`NfcCaptureProvider` is currently the only consumer** (it maps this onto ReadID's own colour roles). Mutate it before calling `captureNfc(from:settings:)` to override specific colours for that attempt — the SDK does not recompute this field once you pass the modified instance back in. |
 
 ### `OtpCaptureSettings` (conforms to `DocumentCaptureSettings`)
 
@@ -226,6 +280,18 @@ Live transaction state read from `coordinator.currentTransaction`.
 | `requiredDocuments` | `[String: DocumentStatus]` | Map of document type strings to their current status. |
 | `url` | `VerifyApiLinks` | API endpoint links for submit, poll, etc. |
 
+### `LocationPermissionStatus`
+
+Returned by `isLocationPermissionGranted()`. Abstracts `CLAuthorizationStatus` so callers don't need to import `CoreLocation`.
+
+| Case | Description |
+|------|-------------|
+| `authorizedWhenInUse` | Authorised to use location while the app is in the foreground. |
+| `authorizedAlways` | Authorised to use location at all times. |
+| `denied` | The user has denied location access. |
+| `restricted` | Location access is restricted by parental controls or a device policy. |
+| `notDetermined` | The user has not yet been asked for location permission. |
+
 ### `DocumentSubmissionError`
 
 Delivered to `didFailWith` on unrecoverable failures.
@@ -249,7 +315,7 @@ submit<X>           UI → Core    (UI shows progress screen)
 didSubmitDocument   Core → UI    (UI hides progress, advances)
 ```
 
-Where `<X>` is one of `GovernmentId`, `Selfie`, `Geolocation`. For email/phone/OTP steps the UI shows a text-entry screen instead of a capture provider and skips the `capture<X>` / `didCapture<X>` legs.
+Where `<X>` is one of `GovernmentId`, `Selfie`, `Geolocation`, `Nfc`. For email/phone/OTP steps the UI shows a text-entry screen instead of a capture provider and skips the `capture<X>` / `didCapture<X>` legs.
 
 **Progress screen lifecycle**:
 - Show after `submit<X>`.

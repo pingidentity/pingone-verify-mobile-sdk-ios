@@ -15,16 +15,22 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 @objc @_inheritsConvenienceInitializers public class IdCaptureProviders : ObjectiveC.NSObject, NeoInterfaces.IdCaptureProviderContract {
   @objc override dynamic public init()
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func startCapture(from viewController: UIKit.UIViewController, settings: Swift.AnyObject?, listener: any NeoInterfaces.IdCaptureProviderListener)
-  #endif
+  public func startCapture(from viewController: UIKit.UIViewController, configuration: NeoInterfaces.ProviderConfiguration, listener: any NeoInterfaces.IdCaptureProviderListener)
   @objc deinit
+}
+public enum IdCaptureProviderError : Swift.Error {
+  case invalidConfiguration
+  public static func == (a: IdCaptureProvider.IdCaptureProviderError, b: IdCaptureProvider.IdCaptureProviderError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public class IdCapturePreviewVM : NeoInterfaces.IdCaptureViewModelContract {
   public var id_document: BlinkID.BlinkIDScanningResult?
-  public var documentCaptureSettings: (any NeoInterfaces.DocumentCaptureSettings)?
+  public var documentCaptureSettings: NeoInterfaces.DocumentCaptureSettings?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(result: BlinkID.BlinkIDScanningResult? = nil, documentCaptureSettings: (any NeoInterfaces.DocumentCaptureSettings)?)
+  public init(result: BlinkID.BlinkIDScanningResult? = nil, documentCaptureSettings: NeoInterfaces.DocumentCaptureSettings?)
   #endif
   public func getDocumentTypeRawValue() -> Swift.String
   public func getDocumentType() -> NeoInterfaces.DocumentClass
@@ -34,7 +40,7 @@ public class IdCapturePreviewVM : NeoInterfaces.IdCaptureViewModelContract {
   public func getDocumentNumber() -> Swift.String?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func getDocumentCaptureSettings() -> (any NeoInterfaces.DocumentCaptureSettings)?
+  public func getDocumentCaptureSettings() -> NeoInterfaces.DocumentCaptureSettings?
   #endif
   @objc deinit
 }
@@ -44,3 +50,5 @@ extension BlinkID.BlinkIDScanningResult {
   #endif
   public func getDocumentType() -> NeoInterfaces.DocumentClass
 }
+extension IdCaptureProvider.IdCaptureProviderError : Swift.Equatable {}
+extension IdCaptureProvider.IdCaptureProviderError : Swift.Hashable {}
