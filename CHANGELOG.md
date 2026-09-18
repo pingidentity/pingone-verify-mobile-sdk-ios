@@ -9,6 +9,7 @@
 ### Added
 
 - BlinkID Version Updated to v8001.0.1
+- Support runtime localization switching for document capture
 
 ## v3.2.6 - July 15th, 2026
 

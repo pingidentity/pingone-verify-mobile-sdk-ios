@@ -181,6 +181,10 @@ public class NoRequirements : PingOneVerify.RequirementsProtocol, Swift.Decodabl
   @objc public func showSessionExpiresTimer(_ isTimerShown: Swift.Bool) -> PingOneVerify.UIAppearanceSettings
   @objc public func setNavigationTitle(_ text: Foundation.NSAttributedString) -> PingOneVerify.UIAppearanceSettings
   @objc public func setIconTintColor(_ color: UIKit.UIColor) -> PingOneVerify.UIAppearanceSettings
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setDocCaptureLocalization(bundle: Foundation.Bundle, tableName: Swift.String?) -> PingOneVerify.UIAppearanceSettings
+  #endif
+  @objc public func setDocCaptureLanguage(_ languageCode: Swift.String) -> PingOneVerify.UIAppearanceSettings
   @objc override dynamic public init()
   @objc deinit
 }
@@ -491,6 +495,7 @@ extension UIKit.UINavigationController {
   public func pollForVerificationStatus(_ pollingInterval: Foundation.TimeInterval? = nil)
   #endif
   public func stopPolling()
+  @objc public func switchLanguage(to languageCode: Swift.String)
 }
 @objc public enum OtpStatus : Swift.Int, Swift.Codable, Swift.RawRepresentable {
   case REQUESTED = 0

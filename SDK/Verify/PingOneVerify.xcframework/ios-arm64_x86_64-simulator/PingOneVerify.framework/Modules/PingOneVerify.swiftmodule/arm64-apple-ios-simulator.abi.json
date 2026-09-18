@@ -6669,6 +6669,13 @@
         "moduleName": "PingOneVerify"
       },
       {
+        "kind": "Import",
+        "name": "BlinkIDUX",
+        "printedName": "BlinkIDUX",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
         "kind": "TypeDecl",
         "name": "UIAppearanceSettings",
         "printedName": "UIAppearanceSettings",
@@ -7020,6 +7027,79 @@
             "declAttributes": [
               "AccessControl",
               "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setDocCaptureLocalization",
+            "printedName": "setDocCaptureLocalization(bundle:tableName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIAppearanceSettings",
+                "printedName": "PingOneVerify.UIAppearanceSettings",
+                "usr": "c:@M@PingOneVerify@objc(cs)UIAppearanceSettings"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PingOneVerify@objc(cs)UIAppearanceSettings(im)setDocCaptureLocalizationWithBundle:tableName:",
+            "mangledName": "$s13PingOneVerify20UIAppearanceSettingsC25setDocCaptureLocalization6bundle9tableNameACSo8NSBundleC_SSSgtF",
+            "moduleName": "PingOneVerify",
+            "objc_name": "setDocCaptureLocalizationWithBundle:tableName:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setDocCaptureLanguage",
+            "printedName": "setDocCaptureLanguage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIAppearanceSettings",
+                "printedName": "PingOneVerify.UIAppearanceSettings",
+                "usr": "c:@M@PingOneVerify@objc(cs)UIAppearanceSettings"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PingOneVerify@objc(cs)UIAppearanceSettings(im)setDocCaptureLanguage:",
+            "mangledName": "$s13PingOneVerify20UIAppearanceSettingsC21setDocCaptureLanguageyACSSF",
+            "moduleName": "PingOneVerify",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -17392,6 +17472,13 @@
       },
       {
         "kind": "Import",
+        "name": "BlinkIDUX",
+        "printedName": "BlinkIDUX",
+        "declKind": "Import",
+        "moduleName": "PingOneVerify"
+      },
+      {
+        "kind": "Import",
         "name": "NeoInterfaces",
         "printedName": "NeoInterfaces",
         "declKind": "Import",
@@ -17468,6 +17555,35 @@
             "moduleName": "PingOneVerify",
             "declAttributes": [
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "switchLanguage",
+            "printedName": "switchLanguage(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PingOneVerify@objc(cs)PingOneVerifyClient(im)switchLanguageTo:",
+            "mangledName": "$s13PingOneVerify0abC6ClientC14switchLanguage2toySS_tF",
+            "moduleName": "PingOneVerify",
+            "objc_name": "switchLanguageTo:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -25591,7 +25707,7 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/Appearance\/UIAppearanceSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 738,
+      "offset": 739,
       "length": 4,
       "value": "true"
     },
@@ -27831,21 +27947,21 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Client\/PingOneVerifyClient.swift",
       "kind": "Array",
-      "offset": 747,
+      "offset": 764,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Client\/PingOneVerifyClient.swift",
       "kind": "StringLiteral",
-      "offset": 1753,
+      "offset": 1770,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/PingOneVerify\/PingOneVerifyClient\/Client\/PingOneVerifyClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 28127,
+      "offset": 28144,
       "length": 5,
       "value": "false"
     },

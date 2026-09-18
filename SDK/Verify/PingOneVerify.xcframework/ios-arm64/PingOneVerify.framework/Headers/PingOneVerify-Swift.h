@@ -493,6 +493,11 @@ SWIFT_CLASS("_TtC13PingOneVerify20PhoneCaptureSettings")
 
 SWIFT_CLASS("_TtC13PingOneVerify19PingOneVerifyClient")
 @interface PingOneVerifyClient : NSObject
+/// Switches the document capture (BlinkID) screen’s language at runtime,
+/// without restarting the verification flow.
+/// Safe to call from any queue: the mutation is serialized on the main queue,
+/// the same queue the capture UI reads <code>BlinkIDTheme.shared</code> from.
+- (void)switchLanguageTo:(NSString * _Nonnull)languageCode;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -547,6 +552,7 @@ SWIFT_CLASS("_TtC13PingOneVerify21SelfieCaptureSettings")
 @class UIImage;
 @class UIColor;
 @class NSAttributedString;
+@class NSBundle;
 SWIFT_CLASS("_TtC13PingOneVerify20UIAppearanceSettings")
 @interface UIAppearanceSettings : NSObject
 - (UIAppearanceSettings * _Nonnull)setLogoImage:(UIImage * _Nonnull)image SWIFT_WARN_UNUSED_RESULT;
@@ -561,6 +567,14 @@ SWIFT_CLASS("_TtC13PingOneVerify20UIAppearanceSettings")
 - (UIAppearanceSettings * _Nonnull)showSessionExpiresTimer:(BOOL)isTimerShown SWIFT_WARN_UNUSED_RESULT;
 - (UIAppearanceSettings * _Nonnull)setNavigationTitle:(NSAttributedString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
 - (UIAppearanceSettings * _Nonnull)setIconTintColor:(UIColor * _Nonnull)color SWIFT_WARN_UNUSED_RESULT;
+/// Sets a custom localization bundle and table name used by the document capture UI.
+/// The bundle should contain <code><lang>.lproj/<tableName>.strings</code> for the languages you support.
+/// Pass nil for tableName to use the default table name (“Localizable”).
+- (UIAppearanceSettings * _Nonnull)setDocCaptureLocalizationWithBundle:(NSBundle * _Nonnull)bundle tableName:(NSString * _Nullable)tableName SWIFT_WARN_UNUSED_RESULT;
+/// Overrides the document capture UI language at runtime (e.g. “en”, “de”, “zh-Hans”).
+/// When set, the SDK also applies the same language to its own screens,
+/// overriding the device language.
+- (UIAppearanceSettings * _Nonnull)setDocCaptureLanguage:(NSString * _Nonnull)languageCode SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
