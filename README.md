@@ -462,6 +462,8 @@ A configurable object to customize selfie capture experience
 | `setAttributedStrings(_ attributedStrings: [String: NSAttributedString]) -> UIAppearanceSettings`| Set attributed text for the app texts and customize it as per need.
 | `showSessionExpiresTimer(_ isTimerShown: Bool) -> UIAppearanceSettings`                    | Set visibility for session expiration timer      |
 | `setNavigationTitle(_ text: NSAttributedString) -> UIAppearanceSettings`                   | Set navigation bar title text      |
+| `setDocCaptureLocalization(bundle: Bundle, tableName: String?) -> UIAppearanceSettings`    | Set a custom localization bundle (and optional `.strings` table name) used by the document capture UI |
+| `setDocCaptureLanguage(_ languageCode: String) -> UIAppearanceSettings`                    | Set the language the document capture UI launches in, overriding the device language |
 
 Example usage:
 
@@ -564,6 +566,47 @@ To customize:
  
  ### Customizing localization
  For localization and messages, you can replace the values found in [PingOneVerifyLocalizable.strings](https://github.com/pingidentity/pingone-verify-mobile-sdk-ios/blob/master/Sample%20Code/PingOne%20Verify/PingOne%20Verify/PingOneVerifyLocalizable.strings).
+
+#### Customizing the document capture UI localization
+
+ The document capture screen (ID/passport scanning) is powered by a third-party document capture engine with its own set of localized strings, separate from `PingOneVerifyLocalizable.strings`. Use `UIAppearanceSettings` to override it:
+
+ ```swift
+     let uiAppearanceSetting = UIAppearanceSettings()
+         .setDocCaptureLocalization(bundle: .main, tableName: nil) // supply your own `<lang>.lproj/Localizable.strings`
+         .setDocCaptureLanguage("de") // sets the initial language for the document capture screen
+
+     PingOneVerifyClient.Builder(isOverridingAssets: false)
+         .setListener(self)
+         .setRootViewController(self)
+         .setUIAppearanceSetting(uiAppearanceSetting)
+         .startVerification { pingOneVerifyClient, clientBuilderError in
+             // ...
+         }
+ ```
+
+ - `setDocCaptureLocalization(bundle:tableName:)` points the document capture UI (tooltips, onboarding, alerts) at your own bundle. The bundle should contain a `<lang>.lproj/<tableName>.strings` file for each language you support. Pass `nil` for `tableName` to use the default table name (`"Localizable"`).
+ - `setDocCaptureLanguage(_:)` sets the language the document capture screen launches in, overriding the device language.
+
+ #### Switching the document capture UI language at runtime
+
+ To switch the document capture screen's language *while a verification is already in progress* (without restarting the flow), call `switchLanguage(to:)` on the `PingOneVerifyClient` instance returned from `startVerification`:
+
+ ```swift
+     PingOneVerifyClient.Builder(isOverridingAssets: false)
+         .setListener(self)
+         .setRootViewController(self)
+         .startVerification { [weak self] pingOneVerifyClient, clientBuilderError in
+             self?.verifyClient = pingOneVerifyClient
+         }
+
+     // Later, e.g. from an in-app language picker:
+     self.verifyClient?.switchLanguage(to: "fr")
+ ```
+
+ This only affects the document capture screen. The rest of the SDK's screens are not affected by `switchLanguage(to:)` and continue to use the language they were initialized with.
+
+ This updates the document capture UI's language, re-fetches the SDK's own language pack for the new code, and refreshes any screen currently on-screen — no restart or re-navigation required.
  
  ## UI Customization from PingOne Admin Console
  
