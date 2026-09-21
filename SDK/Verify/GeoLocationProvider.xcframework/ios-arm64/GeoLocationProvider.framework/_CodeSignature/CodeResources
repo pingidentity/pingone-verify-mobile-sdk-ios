@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		RthOFKGT0Q7/fHcXyIYM6VWftDs=
+		IAnn2OqprerTHE7oChcya0fSesA=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		neF6cuacCV/HpGiUSFujF8FAUBY=
+		jLiurJZF3BC0Dsnjdn4tFSLeb6U=
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		lEQ/z8Lhq5iR6IwJSLLPoxHjlAU=
+		B2ve/nQOq8C0ywC8emcZEmMErlE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			o9KGXJ8/e82VvqQL0lv/98qee5Gs0yoCcj8bv+6xdjU=
+			xSH7RMiHIXHUIdrTODfHN/0T8HM5u5JjZ8QFxr9MoL8=
 			</data>
 		</dict>
 		<key>Modules/GeoLocationProvider.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mDLIEbeZKwBnnGP1ne47+novmryU8dbskqGE5fNK+us=
+			QgPZsSP1ByRVLOnv+IBTaUyS2M/TJ1mKQKsPZO53elo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -60,7 +60,6 @@ public class PingOneVerifyHelper: NSObject {
         // This pattern is not required if overriding the UI locally and not using Themes or Branding from PingOne.
         helper.fetchConfigGroup.enter()
         helper.fetchConfigGroup.enter()
-        
         PingOneVerifyClient.Builder(verificationUrl: verificationUrl, coordinatorDelegate: helper)
             .build { client, clientBuilderError in
                 if let clientBuilderError = clientBuilderError {
@@ -162,6 +161,9 @@ public class PingOneVerifyHelper: NSObject {
             forName: NSNotification.Name(PingOneVerifyNotification.CANCELED_NOTIFICATION_CENTER_KEY),
             object: nil, queue: nil) { [weak self] notification in
                 let documentType = notification.object as? DocumentClass
+                // NFC abandonment is handled by core instead (reports a failed attempt to the
+                // server and keeps the flow going, rather than ending the whole transaction).
+                guard documentType != .NFC else { return }
                 self?.handleAbandon(documentType: documentType)
         }
     }

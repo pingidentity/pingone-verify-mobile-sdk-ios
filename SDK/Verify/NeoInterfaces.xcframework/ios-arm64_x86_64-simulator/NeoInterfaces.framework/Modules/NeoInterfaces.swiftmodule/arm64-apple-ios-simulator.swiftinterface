@@ -30,9 +30,7 @@ public protocol GeoLocationProviderListener : AnyObject {
   func onLocationRequestStarted()
 }
 public protocol IdCaptureProviderContract : AnyObject {
-  #if compiler(>=5.3) && $NonescapableTypes
-  func startCapture(from viewController: UIKit.UIViewController, settings: Swift.AnyObject?, listener: any NeoInterfaces.IdCaptureProviderListener)
-  #endif
+  func startCapture(from viewController: UIKit.UIViewController, configuration: NeoInterfaces.ProviderConfiguration, listener: any NeoInterfaces.IdCaptureProviderListener)
 }
 public protocol IdCaptureProviderListener : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -46,9 +44,7 @@ public protocol IdCaptureViewModelContract : AnyObject {
   func getIdDocumentDict() -> [Swift.String : Swift.String]
 }
 public protocol SelfieCaptureProviderContract : AnyObject {
-  #if compiler(>=5.3) && $NonescapableTypes
-  func startCapture(from navigationController: UIKit.UINavigationController, settings: Swift.AnyObject?, licenseKey: Swift.String, listener: any NeoInterfaces.SelfieCaptureProviderListener)
-  #endif
+  func startCapture(from navigationController: UIKit.UINavigationController, configuration: NeoInterfaces.ProviderConfiguration, listener: any NeoInterfaces.SelfieCaptureProviderListener)
   func reassignListener(_ listener: any NeoInterfaces.SelfieCaptureProviderListener)
   func restartCapture()
   func prepareSelfiePayload(jpegData: Foundation.Data) throws -> [Swift.String : Swift.String]
@@ -87,12 +83,13 @@ public enum DocumentClass : Swift.String, Swift.CaseIterable, Swift.Codable {
   case OTHER
   case CREDENTIAL
   case GEOLOCATION
+  case NFC
   public var iconName: Swift.String {
     get
   }
   public static func getDocumentClassFrom(codingKey: NeoInterfaces.DocumentClass.CodingKeys) -> NeoInterfaces.DocumentClass
   public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case selfie, driverLicense, passport, governmentId, phone, email, otp, other, geoLocation
+    case selfie, driverLicense, passport, governmentId, phone, email, otp, other, geoLocation, nfc
     #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
     #endif
@@ -139,6 +136,8 @@ public enum DocumentKeys : Swift.String {
   case BACK_IMAGE
   case BARCODE
   case MRZDATA
+  case MRZ_DOCUMENT_CODE
+  case MRZ_DOCUMENT_TYPE
   case FIRST_NAME
   case MIDDLE_NAME
   case LAST_NAME
@@ -257,18 +256,19 @@ public protocol LicenseProviderContract {
 public protocol RequirementsProtocol : AnyObject {
   var requirementsValue: NeoInterfaces.Requirements { get set }
 }
-public protocol DocumentCaptureSettings : AnyObject {
-  var documentType: NeoInterfaces.DocumentClass { get set }
-  var optional: Swift.Bool { get set }
-  var isAuthflow: Swift.Bool { get set }
-  var isRetry: Swift.Bool { get set }
-  var payloadSize: NeoInterfaces.PayloadSize { get set }
+open class DocumentCaptureSettings {
+  public var documentType: NeoInterfaces.DocumentClass
+  public var optional: Swift.Bool
+  public var isAuthflow: Swift.Bool
+  public var isRetry: Swift.Bool
+  public var payloadSize: NeoInterfaces.PayloadSize
+  public var collectionOptions: [NeoInterfaces.CaptureCollectionOption]?
+  public var collectionSessions: [NeoInterfaces.CaptureCollectionSession]?
+  public var themeColors: NeoInterfaces.CaptureThemeColors?
   #if compiler(>=5.3) && $NonescapableTypes
-  var collectionOptions: [NeoInterfaces.CaptureCollectionOption]? { get set }
+  public init(documentType: NeoInterfaces.DocumentClass, optional: Swift.Bool = false, isAuthflow: Swift.Bool = false, isRetry: Swift.Bool = false, payloadSize: NeoInterfaces.PayloadSize = .default, collectionOptions: [NeoInterfaces.CaptureCollectionOption]? = nil, collectionSessions: [NeoInterfaces.CaptureCollectionSession]? = nil, themeColors: NeoInterfaces.CaptureThemeColors? = nil)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  var collectionSessions: [NeoInterfaces.CaptureCollectionSession]? { get set }
-  #endif
+  @objc deinit
 }
 public struct CaptureCollectionOption {
   public let text: NeoInterfaces.CaptureCollectionOptionText?
@@ -294,6 +294,87 @@ public struct CaptureCollectionSession {
   public let redirectUrl: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
   public init(type: Swift.String?, identifier: Swift.String?, dcApiRequest: [Swift.String : Swift.String]?, redirectUrl: Swift.String?)
+  #endif
+}
+public protocol NfcCaptureProviderContract : AnyObject {
+  func startCapture(from viewController: UIKit.UIViewController, configuration: NeoInterfaces.ProviderConfiguration, listener: any NeoInterfaces.NfcCaptureProviderListener)
+  func cancelCapture()
+}
+public protocol NfcCaptureProviderListener : AnyObject {
+  func onNfcCaptured(payload: [Swift.String : Swift.String])
+  func onNfcError(error: any Swift.Error)
+  func onNfcCancelled()
+}
+open class ProviderConfiguration {
+  public var settings: NeoInterfaces.DocumentCaptureSettings? {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func update(settings: NeoInterfaces.DocumentCaptureSettings?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(settings: NeoInterfaces.DocumentCaptureSettings? = nil)
+  #endif
+  @objc deinit
+}
+final public class SelfieProviderConfiguration : NeoInterfaces.ProviderConfiguration {
+  final public let licenseKey: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(licenseKey: Swift.String, settings: NeoInterfaces.DocumentCaptureSettings? = nil)
+  #endif
+  @objc deinit
+}
+final public class IdProviderConfiguration : NeoInterfaces.ProviderConfiguration {
+  final public let licenseKey: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(licenseKey: Swift.String, settings: NeoInterfaces.DocumentCaptureSettings? = nil)
+  #endif
+  @objc deinit
+}
+final public class NfcProviderConfiguration : NeoInterfaces.ProviderConfiguration {
+  final public let accessToken: Swift.String
+  final public let expiresAt: Swift.String
+  final public let baseUrl: Swift.String
+  final public let transactionId: Swift.String
+  final public let languageCode: Swift.String?
+  final public var mrzDocumentNumber: Swift.String? {
+    get
+  }
+  final public var mrzDateOfBirth: Swift.String? {
+    get
+  }
+  final public var mrzDateOfExpiry: Swift.String? {
+    get
+  }
+  final public var mrzDocumentCode: Swift.String? {
+    get
+  }
+  final public var mrzIssuingCountry: Swift.String? {
+    get
+  }
+  final public var mrzDocumentType: Swift.String? {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(accessToken: Swift.String, expiresAt: Swift.String, baseUrl: Swift.String, transactionId: Swift.String, languageCode: Swift.String? = nil, mrzDocumentNumber: Swift.String?, mrzDateOfBirth: Swift.String?, mrzDateOfExpiry: Swift.String?, mrzDocumentCode: Swift.String?, mrzIssuingCountry: Swift.String?, mrzDocumentType: Swift.String?, settings: NeoInterfaces.DocumentCaptureSettings? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func update(mrzDocumentNumber: Swift.String?, mrzDateOfBirth: Swift.String?, mrzDateOfExpiry: Swift.String?, mrzDocumentCode: Swift.String?, mrzIssuingCountry: Swift.String?, mrzDocumentType: Swift.String?)
+  #endif
+  @objc deinit
+}
+public struct CaptureThemeColors {
+  public let backgroundColor: UIKit.UIColor?
+  public let textColor: UIKit.UIColor?
+  public let titleTextColor: UIKit.UIColor?
+  public let primaryButtonColor: UIKit.UIColor?
+  public let primaryButtonTextColor: UIKit.UIColor?
+  public let primaryButtonBorderColor: UIKit.UIColor?
+  public let secondaryButtonColor: UIKit.UIColor?
+  public let secondaryButtonTextColor: UIKit.UIColor?
+  public let secondaryButtonBorderColor: UIKit.UIColor?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, titleTextColor: UIKit.UIColor? = nil, primaryButtonColor: UIKit.UIColor? = nil, primaryButtonTextColor: UIKit.UIColor? = nil, primaryButtonBorderColor: UIKit.UIColor? = nil, secondaryButtonColor: UIKit.UIColor? = nil, secondaryButtonTextColor: UIKit.UIColor? = nil, secondaryButtonBorderColor: UIKit.UIColor? = nil)
   #endif
 }
 extension NeoInterfaces.LocationPermissionStatus : Swift.Equatable {}

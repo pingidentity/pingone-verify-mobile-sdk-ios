@@ -23,6 +23,27 @@ extension PingOneVerifyHelper: VerifyTransactionCoordinatorDelegate {
     }
 
     public func coordinator(_ coordinator: VerifyTransactionCoordinator,
+                            shouldCaptureNfc settings: NfcCaptureSettings) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.documentCapturePresenter.setProcessing(false, pingOneNavController: self.pingOneNavController)
+            self.documentCapturePresenter.captureDocument(
+                pingOneNavController: self.pingOneNavController,
+                documentCaptureSetting: settings,
+                coordinator: coordinator)
+        }
+    }
+
+    public func coordinator(_ coordinator: VerifyTransactionCoordinator,
+                            didCaptureNfc result: NfcCaptureResult) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.documentCapturePresenter.setProcessing(true, pingOneNavController: self.pingOneNavController)
+            coordinator.submitNfc(result)
+        }
+    }
+
+    public func coordinator(_ coordinator: VerifyTransactionCoordinator,
                             didReceiveLanguagePack languagePackProvider: LanguagePackProviderContract?,
                             error: Error?) {
         guard let languagePackProvider = languagePackProvider else {

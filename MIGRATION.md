@@ -85,7 +85,7 @@ That's it for the built-in UI. The helper:
 | `.setUIAppearance(_:)` + `UIAppearanceSettings` | Removed. Built-in UI applies the theme configured in the PingOne Admin Console automatically. Override individual assets (logo, icons) by updating the app's asset catalogue (see README → "Custom Image Assets"). |
 | `.setLanguagePackProvider(languagePackProvider:)` | Removed as a Builder setter. Language pack fetching is built into core and runs automatically. |
 | `.setDocumentCaptureSettings(documentCaptureSettings:)` | Removed. Capture settings are constructed on demand by the SDK from the server's `requirements` payload. Read the `DocumentCaptureSettings` delivered to your `coordinator(_:shouldCaptureDocument:)` callback. |
-| `.startVerification(onComplete:)` | `Builder.build(onComplete:)` produces the client, then call `client.start()`. |
+| `.startVerification(onComplete:)` | `Builder.build(onComplete:)` produces the client, then call `client.startVerification()`. |
 
 ### Removed listener protocols
 
@@ -112,9 +112,11 @@ That's it for the built-in UI. The helper:
 - `coordinator(_:didReceiveAppTheme:error:)` — server theme delivered. Apply, or fall back to defaults on error.
 - `coordinator(_:didReceiveLanguagePack:error:)` — remote language pack delivered.
 - `coordinator(_:shouldCaptureDocument:)` — fires for every capture step. Drive your UI from `settings.documentType`.
+- `coordinator(_:shouldCaptureNfc:)` — **required breaking addition** for custom UI delegates. The server calls it after a government-ID submission when NFC chip evidence is required. Show an NFC instruction screen, then call `coordinator.captureNfc(from:settings:)` with the delivered settings (or a modified copy). Not delivered on a resumed transaction without retained MRZ data — the SDK reports the attempt as failed (`resumeTokenExpired`) instead.
+- `coordinator(_:didCaptureNfc:)` — **required breaking addition**. After ReadID finalizes a session, show processing and call `coordinator.submitNfc(result)` exactly once with the delivered `NfcCaptureResult`. Core no longer submits this result automatically.
 - `coordinator(_:didCaptureGovernmentId:)` — show a preview screen, then call `coordinator.submitGovernmentId(_:)`.
 - `coordinator(_:didCaptureSelfie:)` — show a preview screen, then call `coordinator.submitSelfie(_:)`.
-- `coordinator(_:shouldRetryCapture:settings:)` — server requested a retry. `feedback` is a `RetryFeedback` value.
+- `coordinator(_:shouldRetryCapture:settings:)` — server requested a retry. `feedback` is a `RetryFeedback` value. Fires for document quality retries and NFC retries (`settings.documentType == .NFC`) — for NFC, the Retry action calls `captureNfc(from:settings:)`.
 - `coordinator(_:didCaptureGeolocation:longitude:)` — location coordinates available. Call `coordinator.submitGeolocation(latitude:longitude:)` from here.
 - `coordinator(_:didSubmitDocument:)` — document was submitted; update progress.
 - `coordinator(_:didSubmitOtp:)` — OTP result. `true` on success; on `false`, show the user the error and let them re-enter (the SDK handles the `OTP_RETRYABLE` / `FAIL` distinction internally — `FAIL` will additionally advance the flow).
@@ -130,8 +132,23 @@ That's it for the built-in UI. The helper:
 - `submitSelfie(_:)` — submits a captured `SelfieCaptureResult`.
 - `captureGovernmentId(from:)` — launches the `IdCapture` capture UI.
 - `submitGovernmentId(_:)` — submits a captured `IdCaptureResult`.
+- `captureNfc(from:settings:)` — launches ReadID NFC chip capture after `shouldCaptureNfc`, using the passed settings unchanged (no settings-less overload exists — always pass the `NfcCaptureSettings` from `shouldCaptureNfc`, optionally with `themeColors` overridden).
+- `submitNfc(_ result: NfcCaptureResult)` — submits the completed ReadID result (success, or a failure such as `backgroundTimeout` / `resumeTokenExpired` carried in `failed`/`failureReason`) to PingOne Verify.
 
 ---
+
+## Capture settings and provider configuration
+
+`DocumentCaptureSettings` is now a superclass for the app-facing settings types. Existing custom settings implementations that conformed to the former protocol must subclass `DocumentCaptureSettings` and call its initializer. Provider credentials are intentionally separated from these settings: NFC access tokens, provider URLs, expiry values, MRZ access data, and provider license keys remain inside SDK-owned provider configuration and are not available through delegate callbacks.
+
+Existing coordinator methods remain available. New additive overloads accept explicit app-facing settings:
+
+```swift
+coordinator.captureGovernmentId(from: navigationController, settings: idSettings)
+coordinator.captureSelfie(from: navigationController, settings: selfieSettings)
+```
+
+Do not copy provider configuration into app UI models or logs.
 
 ## Framework changes
 
@@ -144,15 +161,13 @@ That's it for the built-in UI. The helper:
 | `SelfieCaptureProvider.xcframework` | Depends on `IDLiveFaceCamera`, `IDLiveFaceDetection`, `IDLiveFaceIAD`. Required for selfie steps. |
 | `GeoLocationProvider.xcframework` | Optional (unchanged). Required only for geolocation steps. |
 
-See README → "Removing capture providers" for the exact framework lists per feature.
-
 ---
 
 ## Behaviour changes
 
 ### No auto-start; QR scanner is no longer auto-presented
 
-- `client.start()` is explicit — the SDK does not auto-start after `build`.
+- `client.startVerification()` is explicit — the SDK does not auto-start after `build`.
 - The Builder no longer presents its own QR scanner. The previous `Builder(isOverridingAssets: false)` form, with no `setQrString(...)`, would launch a built-in QR scanner; that auto-presentation is gone.
 - Developers must supply the Verification URL to `Builder.init(verificationUrl:)`. A `QRScannerViewController` is still shipped in the VerifyUI source (see `PingOneVerifySample/VerifyUI/QrScanner/`)
 
@@ -173,4 +188,5 @@ The default images and named colours used by the built-in UI used to live inside
 2. Implementations for `DocumentSubmissionListener`, `BackActionListener`, `DocumentCaptureListener` can be removed. For built-in UI, no new interface implementations are required, it is handled in `PingOneVerifyHelper`.
 3. `setUIAppearance` should be removed if it was used. Configure the theme in the PingOne Admin Console, and override individual assets by replacing the illustrations in the app catalogue.  `isOverridingAssets` Builder flag is removed. The SDK framework no longer ships an asset catalogue, all the assets live in the app target.
 4. Remove `LanguagePackProvider.xcframework` from your target's linked frameworks.
+5. If a policy can request NFC, add the required `shouldCaptureNfc` delegate method, link/embed `NfcCaptureProvider.xcframework` and `ReadID_UI.xcframework`, configure NFC Tag Reading plus the ReadID ISO-7816 identifiers, and submit the provider-produced `IdCaptureResult` so its MRZ values remain available.
 ---

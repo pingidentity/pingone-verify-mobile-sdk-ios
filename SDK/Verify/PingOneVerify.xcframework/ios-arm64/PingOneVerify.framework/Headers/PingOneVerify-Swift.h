@@ -361,27 +361,6 @@ typedef SWIFT_ENUM(NSInteger, DocumentSubmissionStatus, open) {
   DocumentSubmissionStatusPROCESS = 3,
 };
 
-/// Configuration for an email-address collection step.
-/// Delivered to your <code>VerifyTransactionCoordinatorDelegate.coordinator(_:shouldCaptureDocument:)</code>
-/// method when <code>documentType == .EMAIL</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
-/// own email-entry UI, then call <code>coordinator.submitEmail(_:)</code> with the entered address.
-/// Once the OTP session is active, <code>otpSession</code> is populated and you can read
-/// <code>otpExpiryTicker</code> to drive the OTP screen countdown.
-SWIFT_CLASS("_TtC13PingOneVerify20EmailCaptureSettings")
-@interface EmailCaptureSettings : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Configuration for a government-ID capture step.
-/// Create an instance and pass it to <code>PingOneVerifyClient.captureGovernmentId(from:settings:onResult:)</code>
-/// to control how the SDK captures and submits identity document images.
-SWIFT_CLASS("_TtC13PingOneVerify17IdCaptureSettings")
-@interface IdCaptureSettings : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 /// Server-reported status of an OTP (one-time passcode) delivery within a PingOne Verify transaction.
 typedef SWIFT_ENUM(NSInteger, OtpStatus, open) {
 /// An OTP has been requested but delivery has not yet started.
@@ -399,27 +378,6 @@ typedef SWIFT_ENUM(NSInteger, OtpStatus, open) {
 /// The user successfully verified the OTP code.
   OtpStatusOTP_VERIFIED = 6,
 };
-
-/// Configuration for a phone-number collection step.
-/// Delivered to your <code>VerifyTransactionCoordinatorDelegate.coordinator(_:shouldCaptureDocument:)</code>
-/// method when <code>documentType == .PHONE</code>. Read <code>keyboardHint</code>, <code>regex</code>, etc. to drive your
-/// own phone-entry UI, then call <code>coordinator.submitPhone(_:)</code> with the entered number.
-/// Once the OTP session is active, <code>otpSession</code> is populated and you can read
-/// <code>otpExpiryTicker</code> to drive the OTP screen countdown.
-SWIFT_CLASS("_TtC13PingOneVerify20PhoneCaptureSettings")
-@interface PhoneCaptureSettings : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-/// Configuration for a selfie capture step.
-/// Create an instance and pass it to <code>PingOneVerifyClient.captureSelfie(from:settings:onResult:)</code>
-/// to control liveness-capture behaviour and upload quality.
-SWIFT_CLASS("_TtC13PingOneVerify21SelfieCaptureSettings")
-@interface SelfieCaptureSettings : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 #endif
 #if __has_attribute(external_source_symbol)
