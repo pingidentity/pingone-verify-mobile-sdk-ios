@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.4.1 - Sept 30th, 2026
+
+### Fixed
+
+- Added accessibility labels to images on the verify info screen.
+- Added VoiceOver support for selfie camera error messages
+
 ## v3.4.0 - Sept 11th, 2026
 
 ### Fixed

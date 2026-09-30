@@ -179,3 +179,10 @@
 "idv_retry_face_far" = "Move the camera closer to your face and try again.";
 "idv_retry_face_large" = "Position the camera directly in front of your face and try again.";
 "idv_retry_eyes_closed" = "Keep eyes open";
+
+//Accessibility - descriptions of instructional icons for VoiceOver / Speak Screen
+"idv_icon_accessibility_idv_selfie" = "Illustration of a person taking a selfie with a phone";
+"idv_icon_accessibility_idv_gov_id" = "Illustration of a government-issued ID card";
+"idv_icon_accessibility_idv_email" = "Illustration of an envelope";
+"idv_icon_accessibility_idv_phone" = "Illustration of a mobile phone";
+"idv_icon_accessibility_idv_voice" = "Illustration of a person speaking";
