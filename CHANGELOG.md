@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.3.8 - October 1st, 2026
+
+### Hotfix
+
+- Fixed an issue with Passport Card back image not being sent to server.
+
 ## v2.3.7 - April 14th, 2026
 
 ### Hotfix

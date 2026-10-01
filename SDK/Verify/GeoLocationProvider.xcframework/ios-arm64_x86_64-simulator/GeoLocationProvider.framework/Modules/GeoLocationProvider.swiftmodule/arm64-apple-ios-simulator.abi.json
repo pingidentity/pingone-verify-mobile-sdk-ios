@@ -105,12 +105,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[CoreLocation.CLLocation]",
+                "printedName": "[_LocationEssentials.CLLocation]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "CLLocation",
-                    "printedName": "CoreLocation.CLLocation",
+                    "printedName": "_LocationEssentials.CLLocation",
                     "usr": "c:objc(cs)CLLocation"
                   }
                 ],
