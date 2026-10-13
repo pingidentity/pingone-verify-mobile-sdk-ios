@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.3.0 - October 13th, 2026
+
+### Added
+- Third party vendor sdk updated for better ID capture.
+
+### Fixed
+- Improved VoiceOver accessibility across capture screens.
+
 ## v4.2.0 - September 15th, 2026
 
 ### Added

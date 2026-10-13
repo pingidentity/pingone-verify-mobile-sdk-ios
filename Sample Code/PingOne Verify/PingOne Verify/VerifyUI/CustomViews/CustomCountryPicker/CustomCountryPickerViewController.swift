@@ -33,6 +33,21 @@ class CustomCountryPickerViewController: UIViewController {
         countryPickerTableView.rowHeight = UITableView.automaticDimension
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // VoiceOver: keep the nav-bar Cancel button out of the arrival focus; restored shortly
+        // after so it is still read on touch or swipe.
+        guard UIAccessibility.isVoiceOverRunning else { return }
+        self.navigationController?.navigationBar.accessibilityElementsHidden = true
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak navigationBar = self.navigationController?.navigationBar] in
+            navigationBar?.accessibilityElementsHidden = false
+        }
+    }
+
     internal class func getViewController(countryCodePickerListener: CustomCountryCodePickerListener) -> CustomCountryPickerViewController {
         let bundle: Bundle = Bundle(for: CustomCountryPickerViewController.self)
         let customCountryPickerViewController = CustomCountryPickerViewController(nibName: "CustomCountryPickerViewController", bundle: bundle)
@@ -86,6 +101,8 @@ class CustomCountryPickerViewController: UIViewController {
         DispatchQueue.main.async {
             if let cancelImage = UIImage.loadImage(named: "idv_cancel") {
                 let cancelButton = UIBarButtonItem(image: cancelImage, style: .plain, target: self, action: #selector(self.cancelClicked(sender:)))
+                // VoiceOver: read "Cancel", not the image file name.
+                cancelButton.accessibilityLabel = "idv_cancel".localized
                 self.navigationItem.leftBarButtonItem = cancelButton
             } else {
                 logerror("Missing cancel image")

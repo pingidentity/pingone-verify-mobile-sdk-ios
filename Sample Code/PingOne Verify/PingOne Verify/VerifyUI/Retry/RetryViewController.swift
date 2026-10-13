@@ -52,6 +52,9 @@ class RetryViewController: BaseViewController {
         var closeConfig = closeButton.configuration
         closeConfig?.image = UIImage.loadImage(named: "idv_cancel")?.withRenderingMode(.alwaysOriginal)
         closeButton.configuration = closeConfig
+        // VoiceOver: read "Cancel", not the image file name; not on arrival, only on touch/swipe.
+        closeButton.accessibilityLabel = "idv_cancel".localized
+        self.arrivalDeferredAccessibilityViews = [closeButton]
         self.retryButton.setTitle("idv_retry".localized, for: .normal)
         self.cancelButton.setTitle("idv_cancel".localized, for: .normal)
         //NEO-5326: Cancel button is hidden in retry as per design

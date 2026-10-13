@@ -76,6 +76,7 @@ public enum DocumentClass : Swift.String, Swift.CaseIterable, Swift.Codable {
   case SELFIE
   case DRIVER_LICENSE
   case PASSPORT
+  case PASSPORT_CARD
   case GOVERNMENT_ID
   case EMAIL
   case PHONE
@@ -269,6 +270,12 @@ open class DocumentCaptureSettings {
   public init(documentType: NeoInterfaces.DocumentClass, optional: Swift.Bool = false, isAuthflow: Swift.Bool = false, isRetry: Swift.Bool = false, payloadSize: NeoInterfaces.PayloadSize = .default, collectionOptions: [NeoInterfaces.CaptureCollectionOption]? = nil, collectionSessions: [NeoInterfaces.CaptureCollectionSession]? = nil, themeColors: NeoInterfaces.CaptureThemeColors? = nil)
   #endif
   @objc deinit
+}
+extension UIKit.UIAccessibility {
+  public static func announceCaptureGuidance(_ message: Swift.String)
+}
+public enum CaptureUIComponents {
+  public static var primaryButtonFactory: (() -> UIKit.UIButton)?
 }
 public struct CaptureCollectionOption {
   public let text: NeoInterfaces.CaptureCollectionOptionText?

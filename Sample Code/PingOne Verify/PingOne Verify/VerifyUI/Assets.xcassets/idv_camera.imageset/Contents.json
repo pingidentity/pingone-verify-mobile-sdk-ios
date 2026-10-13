@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "idv_camera.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

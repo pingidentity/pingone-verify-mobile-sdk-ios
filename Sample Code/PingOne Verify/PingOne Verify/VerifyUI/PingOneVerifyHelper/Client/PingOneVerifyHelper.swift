@@ -13,6 +13,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+import NeoInterfaces
 
 /// Drives the SDK's built-in UI for a PingOne Verify transaction.
 ///
@@ -54,6 +55,9 @@ public class PingOneVerifyHelper: NSObject {
     public static func initialize(with verificationUrl: String,
                                   rootViewController: UIViewController,
                                   completionHandler: @escaping (PingOneVerifyHelper?, ClientBuilderError?) -> Void) {
+        // Let the shared capture-help sheet use VerifyUI's themed button for its "Continue" action.
+        CaptureUIComponents.primaryButtonFactory = { VerifyButton(type: .custom) }
+
         let helper = PingOneVerifyHelper(rootViewController: rootViewController)
 
         // To wait for both language pack and AppTheme response.

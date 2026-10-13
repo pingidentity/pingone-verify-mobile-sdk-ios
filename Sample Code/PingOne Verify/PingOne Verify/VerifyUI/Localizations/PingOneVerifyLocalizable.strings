@@ -184,3 +184,32 @@
 //NFC
 "idv_nfc_title" = "Verify Your ID";
 "idv_nfc_description" = "Your ID contains a secure chip that helps us confirm it's authentic. To ensure a smooth scan, remove any thick or metal cases, wallets, or attachments from the back of your phone.";
+
+//Accessibility - descriptions of instructional icons for VoiceOver / Speak Screen
+"idv_icon_accessibility_idv_selfie" = "Illustration of a person taking a selfie with a phone";
+"idv_icon_accessibility_idv_gov_id" = "Illustration of a government-issued ID card";
+"idv_icon_accessibility_idv_email" = "Illustration of an envelope";
+"idv_icon_accessibility_idv_phone" = "Illustration of a mobile phone";
+"idv_icon_accessibility_idv_voice" = "Illustration of a person speaking";
+
+//Contextual help on capture screens (NEO-6568)
+"idv_capture_help_button_label" = "Help";
+"idv_capture_help_button_hint" = "Opens help with tips for completing this step";
+"idv_capture_help_document_title" = "Scanning your ID";
+"idv_capture_help_document_body" = "Place your ID on a clear, plain surface without objects nearby. Keep it away from direct spotlights or glare, hold your device steady, and make sure all four corners of the document are visible in the frame.";
+"idv_capture_help_selfie_title" = "Tips for a clear selfie";
+"idv_capture_help_selfie_body" = "Keep your phone at eye level. Find even lighting and a plain background. Wipe your camera lens to clear smudges. Remove glasses, masks, or face coverings.";
+"idv_capture_help_selfie_tip_eye_level" = "Keep your phone at eye level";
+"idv_capture_help_selfie_tip_lighting" = "Find even lighting and a plain background";
+"idv_capture_help_selfie_tip_lens" = "Wipe your camera lens to clear smudges";
+"idv_capture_help_selfie_tip_face_coverings" = "Remove glasses, masks, or face coverings";
+"idv_capture_help_continue" = "Continue";
+
+//VoiceOver announcements on the review screens (NEO-6568 / NEO-6574)
+"idv_selfie_review_announcement" = "Selfie captured. Review your selfie";
+"idv_id_review_announcement" = "ID scan completed. Review your ID";
+"idv_id_front_image_label" = "Front ID Image";
+"idv_id_back_image_label" = "Back ID Image";
+
+//Navigation back button (NEO-6568)
+"idv_back_button_label" = "Back";

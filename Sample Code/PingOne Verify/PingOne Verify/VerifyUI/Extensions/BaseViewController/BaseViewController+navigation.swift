@@ -11,16 +11,19 @@ import UIKit
 extension BaseViewController {
     internal func handleBackAction() {
         if let _ = self.navigationController {
-            DispatchQueue.main.async {
-                if let icon = UIImage.loadImage(named: "idv_back") {
-                    let backButton = UIBarButtonItem(image: icon, style: .plain, target: self, action: #selector(self.cancelClicked(sender:)))
-                    self.navigationItem.leftBarButtonItem = backButton
-                    if #available(iOS 26.0, *) {
-                        self.navigationItem.leftBarButtonItem?.hidesSharedBackground = true
-                    }
-                }  else {
-                    logerror("Missing Back image")
+            // Set synchronously: doing this in an async block can land after the header-focus
+            // post in viewDidAppear, and the nav-item swap makes VoiceOver re-announce the
+            // bar ("Back") right after the header (NEO-6568).
+            if let icon = UIImage.loadImage(named: "idv_back") {
+                let backButton = UIBarButtonItem(image: icon, style: .plain, target: self, action: #selector(self.cancelClicked(sender:)))
+                // VoiceOver: announce the button's purpose instead of a bare "button" (NEO-6568).
+                backButton.accessibilityLabel = "idv_back_button_label".localized
+                self.navigationItem.leftBarButtonItem = backButton
+                if #available(iOS 26.0, *) {
+                    self.navigationItem.leftBarButtonItem?.hidesSharedBackground = true
                 }
+            }  else {
+                logerror("Missing Back image")
             }
         }
     }

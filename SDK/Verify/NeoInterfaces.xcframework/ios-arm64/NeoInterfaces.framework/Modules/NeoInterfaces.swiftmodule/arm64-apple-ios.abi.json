@@ -1711,6 +1711,46 @@
           },
           {
             "kind": "Var",
+            "name": "PASSPORT_CARD",
+            "printedName": "PASSPORT_CARD",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NeoInterfaces.DocumentClass.Type) -> NeoInterfaces.DocumentClass",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentClass",
+                    "printedName": "NeoInterfaces.DocumentClass",
+                    "usr": "s:13NeoInterfaces13DocumentClassO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NeoInterfaces.DocumentClass.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentClass",
+                        "printedName": "NeoInterfaces.DocumentClass",
+                        "usr": "s:13NeoInterfaces13DocumentClassO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13NeoInterfaces13DocumentClassO13PASSPORT_CARDyA2CmF",
+            "mangledName": "$s13NeoInterfaces13DocumentClassO13PASSPORT_CARDyA2CmF",
+            "moduleName": "NeoInterfaces",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "GOVERNMENT_ID",
             "printedName": "GOVERNMENT_ID",
             "children": [
@@ -7750,6 +7790,208 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CaptureUIComponents",
+        "printedName": "CaptureUIComponents",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "primaryButtonFactory",
+            "printedName": "primaryButtonFactory",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> UIKit.UIButton)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> UIKit.UIButton",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvpZ",
+            "mangledName": "$s13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvpZ",
+            "moduleName": "NeoInterfaces",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> UIKit.UIButton)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> UIKit.UIButton",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIButton",
+                            "printedName": "UIKit.UIButton",
+                            "usr": "c:objc(cs)UIButton"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvgZ",
+                "mangledName": "$s13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvgZ",
+                "moduleName": "NeoInterfaces",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> UIKit.UIButton)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> UIKit.UIButton",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIButton",
+                            "printedName": "UIKit.UIButton",
+                            "usr": "c:objc(cs)UIButton"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvsZ",
+                "mangledName": "$s13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvsZ",
+                "moduleName": "NeoInterfaces",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvMZ",
+                "mangledName": "$s13NeoInterfaces19CaptureUIComponentsO20primaryButtonFactorySo8UIButtonCycSgvMZ",
+                "moduleName": "NeoInterfaces",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13NeoInterfaces19CaptureUIComponentsO",
+        "mangledName": "$s13NeoInterfaces19CaptureUIComponentsO",
+        "moduleName": "NeoInterfaces",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -11242,433 +11484,498 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIAccessibility",
+        "printedName": "UIAccessibility",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "announceCaptureGuidance",
+            "printedName": "announceCaptureGuidance(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So15UIAccessibilityV13NeoInterfacesE23announceCaptureGuidanceyySSFZ",
+            "mangledName": "$sSo15UIAccessibilityV13NeoInterfacesE23announceCaptureGuidanceyySSFZ",
+            "moduleName": "NeoInterfaces",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "c:@S@UIAccessibility",
+        "moduleName": "UIKit",
+        "declAttributes": [
+          "NonSendable"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 8,
       "value": "\"selfie\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 515,
       "length": 15,
       "value": "\"driverLicense\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
       "offset": 576,
       "length": 10,
       "value": "\"passport\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 661,
+      "offset": 647,
+      "length": 14,
+      "value": "\"passportCard\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "kind": "StringLiteral",
+      "offset": 736,
       "length": 14,
       "value": "\"governmentId\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 745,
+      "offset": 820,
       "length": 7,
       "value": "\"email\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 821,
+      "offset": 896,
       "length": 7,
       "value": "\"phone\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 884,
+      "offset": 959,
       "length": 5,
       "value": "\"otp\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 963,
+      "offset": 1038,
       "length": 7,
       "value": "\"other\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 1037,
+      "offset": 1112,
       "length": 12,
       "value": "\"credential\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 1106,
+      "offset": 1181,
       "length": 13,
       "value": "\"geolocation\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentClass.swift",
       "kind": "StringLiteral",
-      "offset": 1140,
+      "offset": 1215,
       "length": 5,
       "value": "\"nfc\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 513,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 633,
       "length": 9,
       "value": "\"otpType\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 779,
       "length": 12,
       "value": "\"frontImage\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 894,
       "length": 11,
       "value": "\"backImage\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 990,
       "length": 9,
       "value": "\"barcode\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1089,
       "length": 9,
       "value": "\"mrzData\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1228,
       "length": 17,
       "value": "\"mrzDocumentCode\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1412,
       "length": 17,
       "value": "\"mrzDocumentType\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1531,
       "length": 11,
       "value": "\"firstName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1610,
       "length": 12,
       "value": "\"middleName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1695,
       "length": 10,
       "value": "\"lastName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1796,
       "length": 10,
       "value": "\"fullName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 1921,
       "length": 20,
       "value": "\"additionalNameInfo\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2048,
       "length": 15,
       "value": "\"localizedName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2165,
       "length": 13,
       "value": "\"fathersName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2280,
       "length": 13,
       "value": "\"mothersName\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2408,
       "length": 9,
       "value": "\"address\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2504,
       "length": 15,
       "value": "\"addressStreet\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2602,
       "length": 13,
       "value": "\"addressCity\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2712,
       "length": 14,
       "value": "\"addressState\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2819,
       "length": 12,
       "value": "\"addressZip\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 2940,
       "length": 9,
       "value": "\"country\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3071,
       "length": 32,
       "value": "\"additional_address_information\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3237,
       "length": 41,
       "value": "\"additional_optional_address_information\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3399,
       "length": 5,
       "value": "\"sex\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3517,
       "length": 13,
       "value": "\"dateOfBirth\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3631,
       "length": 14,
       "value": "\"placeOfBirth\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3740,
       "length": 13,
       "value": "\"nationality\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3842,
       "length": 15,
       "value": "\"maritalStatus\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 3951,
       "length": 6,
       "value": "\"race\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4050,
       "length": 10,
       "value": "\"religion\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4178,
       "length": 19,
       "value": "\"residentialStatus\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4350,
       "length": 16,
       "value": "\"documentNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4496,
       "length": 26,
       "value": "\"documentAdditionalNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4651,
       "length": 34,
       "value": "\"documentOptionalAdditionalNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4785,
       "length": 18,
       "value": "\"personalIdNumber\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4872,
       "length": 13,
       "value": "\"dateOfIssue\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 4952,
       "length": 14,
       "value": "\"dateOfExpiry\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5086,
       "length": 18,
       "value": "\"issuingAuthority\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5220,
       "length": 10,
       "value": "\"employer\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5325,
       "length": 12,
       "value": "\"profession\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5485,
       "length": 9,
       "value": "\"ocrData\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5602,
       "length": 14,
       "value": "\"ocrDataFront\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5722,
       "length": 13,
       "value": "\"ocrDataBack\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/DocumentKeys.swift",
       "kind": "StringLiteral",
       "offset": 5858,
       "length": 12,
       "value": "\"iadPayload\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
       "kind": "IntegerLiteral",
       "offset": 468,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Types\/PayloadSize.swift",
       "kind": "IntegerLiteral",
       "offset": 555,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 1660,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 1702,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/NeoInterfaces\/Contracts\/DocumentCaptureSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 1741,
       "length": 5,
