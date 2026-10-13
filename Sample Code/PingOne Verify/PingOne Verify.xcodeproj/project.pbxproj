@@ -212,8 +212,6 @@
 		638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GeoLocationProvider.xcframework; sourceTree = "<group>"; };
 		638AA5762F72B9F500DA6D81 /* NeoInterfaces.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NeoInterfaces.xcframework; sourceTree = "<group>"; };
 		638AA5772F72B9F500DA6D81 /* PingOneVerify.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PingOneVerify.xcframework; sourceTree = "<group>"; };
-		63BDA3973052D25200FB447F /* NfcCaptureProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NfcCaptureProvider.xcframework; sourceTree = "<group>"; };
-		63BDA3983052D25200FB447F /* ReadID_UI.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:PD597TY265:Inverid B.V."; lastKnownFileType = wrapper.xcframework; path = ReadID_UI.xcframework; sourceTree = "<group>"; };
 		63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		63CBDDF52FEE8A0400E6C75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63CBDE032FEF0F0400E6C75E /* AppthemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppthemeHandler.swift; sourceTree = "<group>"; };
@@ -435,8 +433,6 @@
 		638AA5782F72B9F500DA6D81 /* Verify */ = {
 			isa = PBXGroup;
 			children = (
-				63BDA3973052D25200FB447F /* NfcCaptureProvider.xcframework */,
-				63BDA3983052D25200FB447F /* ReadID_UI.xcframework */,
 				63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */,
 				63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */,
 				638AA5712F72B9F500DA6D81 /* GeoLocationProvider.xcframework */,
