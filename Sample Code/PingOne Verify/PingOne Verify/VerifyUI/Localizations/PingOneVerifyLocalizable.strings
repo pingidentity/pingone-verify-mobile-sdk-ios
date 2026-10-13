@@ -160,6 +160,8 @@
 "idv_datacapture_no" = "No";
 
 //Retry
+"idv_nfc_retry_title" = "Couldn’t Verify";
+"idv_nfc_retry_message" = "Your chip could not be read, please try again.";
 "idv_retry_generic_title" = "Make sure your camera lens is clean and all four corners of the ID are visible.";
 "idv_retry_glare" = "Make sure the ID is not reflecting direct light and is in focus.";
 "idv_retry_too_dark" = "Go to a well-lit environment. Make sure the ID is in focus, without glare, and then retry.";
@@ -178,3 +180,7 @@
 "idv_geolocation_retry_description" = "Go to Settings > Privacy & Security > Location Services to allow location for app.";
 "idv_geolocation_retry" = "Try Again";
 "idv_error_title" = "Error";
+
+//NFC
+"idv_nfc_title" = "Verify Your ID";
+"idv_nfc_description" = "Your ID contains a secure chip that helps us confirm it's authentic. To ensure a smooth scan, remove any thick or metal cases, wallets, or attachments from the back of your phone.";

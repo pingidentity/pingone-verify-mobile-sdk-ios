@@ -87,7 +87,7 @@ Requests the device's current location. If the user grants permission the coordi
 
 ### Built-in UI (use open-source `VerifyUI` source)
 
-1. Copy the `VerifyUI/` folder from the sample repository into the App project and add all its source files to the app target. `VerifyUI` depends on `PingOneVerify` and `NeoInterfaces`.
+1. Copy the `VerifyUI/` folder from the sample repository into the App project and add all its source files to the app target. `VerifyUI` depends on `PingOneVerify` and `NeoInterfaces`. No `import VerifyUI` is needed — the source is compiled directly into your target.
 
 2. Link the following XCFrameworks from the `Common` folder in your target's **Frameworks, Libraries, and Embedded Content**:
    - `PingOneVerify.xcframework` *(required)*
@@ -97,9 +97,8 @@ Requests the device's current location. If the user grants permission the coordi
    - `SelfieCaptureProvider.xcframework` *(required for selfie capture)*
    - `GeoLocationProvider.xcframework` *(optional — only if your policy requires geolocation)*
 
-> **Language pack:** Built into `PingOneVerify.xcframework` — no separate framework needed. The SDK fetches the remote language pack automatically during `helper.start()`. Use `Builder.setLanguageCode(_:)` to override the device locale.
 
-3. No `import VerifyUI` needed — the source is compiled directly into your target.
+> **Language pack:** Built into `PingOneVerify.xcframework` — no separate framework needed. The SDK fetches the remote language pack automatically during `helper.start()`. Use `Builder.setLanguageCode(_:)` to override the device locale.
 
 ---
 

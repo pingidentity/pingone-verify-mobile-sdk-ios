@@ -14,9 +14,7 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 @objc @_inheritsConvenienceInitializers public class SelfieCaptureProviders : ObjectiveC.NSObject, NeoInterfaces.SelfieCaptureProviderContract {
   @objc override dynamic public init()
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func startCapture(from navigationController: UIKit.UINavigationController, settings: Swift.AnyObject?, licenseKey: Swift.String, listener: any NeoInterfaces.SelfieCaptureProviderListener)
-  #endif
+  public func startCapture(from navigationController: UIKit.UINavigationController, configuration: NeoInterfaces.ProviderConfiguration, listener: any NeoInterfaces.SelfieCaptureProviderListener)
   public func reassignListener(_ listener: any NeoInterfaces.SelfieCaptureProviderListener)
   public func restartCapture()
   public func prepareSelfiePayload(jpegData: Foundation.Data) throws -> [Swift.String : Swift.String]
@@ -30,6 +28,7 @@ extension SelfieCaptureProvider.SelfieCaptureProviders : SelfieCaptureProvider.S
 }
 public enum SelfieCaptureProviderError : Swift.Error {
   case presenterNotAvailable
+  case invalidConfiguration
   public static func == (a: SelfieCaptureProvider.SelfieCaptureProviderError, b: SelfieCaptureProvider.SelfieCaptureProviderError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -42,7 +41,7 @@ public class SelfieCapturePresenter {
   public var sdkIdentifier: Swift.String
   public var sdkVersion: Swift.String
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(selfieCaptureListener: any SelfieCaptureProvider.SelfieCaptureListener, selfieCaptureSettings: (any NeoInterfaces.DocumentCaptureSettings)?, idCameraControllerDelegate: (any IDLiveFaceCamera.IDCameraControllerDelegate)?, licenseProvider: any NeoInterfaces.LicenseProviderContract) throws
+  public init(selfieCaptureListener: any SelfieCaptureProvider.SelfieCaptureListener, selfieCaptureSettings: NeoInterfaces.DocumentCaptureSettings?, idCameraControllerDelegate: (any IDLiveFaceCamera.IDCameraControllerDelegate)?, licenseProvider: any NeoInterfaces.LicenseProviderContract) throws
   #endif
   public func updateLicense() throws
   @objc deinit

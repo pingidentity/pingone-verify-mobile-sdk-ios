@@ -59,7 +59,7 @@
           {
             "kind": "Function",
             "name": "startCapture",
-            "printedName": "startCapture(from:settings:licenseKey:listener:)",
+            "printedName": "startCapture(from:configuration:listener:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -74,22 +74,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AnyObject?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "AnyObject"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "ProviderConfiguration",
+                "printedName": "NeoInterfaces.ProviderConfiguration",
+                "usr": "s:13NeoInterfaces21ProviderConfigurationC"
               },
               {
                 "kind": "TypeNominal",
@@ -99,8 +86,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC05startB04from8settings10licenseKey8listenerySo22UINavigationControllerC_yXlSgSS13NeoInterfaces0abC8Listener_ptF",
-            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC05startB04from8settings10licenseKey8listenerySo22UINavigationControllerC_yXlSgSS13NeoInterfaces0abC8Listener_ptF",
+            "usr": "s:21SelfieCaptureProvider0aB9ProvidersC05startB04from13configuration8listenerySo22UINavigationControllerC_13NeoInterfaces0C13ConfigurationCAJ0abC8Listener_ptF",
+            "mangledName": "$s21SelfieCaptureProvider0aB9ProvidersC05startB04from13configuration8listenerySo22UINavigationControllerC_13NeoInterfaces0C13ConfigurationCAJ0abC8Listener_ptF",
             "moduleName": "SelfieCaptureProvider",
             "declAttributes": [
               "AccessControl"
@@ -430,6 +417,43 @@
             "declKind": "EnumElement",
             "usr": "s:21SelfieCaptureProvider0abC5ErrorO21presenterNotAvailableyA2CmF",
             "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO21presenterNotAvailableyA2CmF",
+            "moduleName": "SelfieCaptureProvider"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidConfiguration",
+            "printedName": "invalidConfiguration",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SelfieCaptureProvider.SelfieCaptureProviderError.Type) -> SelfieCaptureProvider.SelfieCaptureProviderError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SelfieCaptureProviderError",
+                    "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError",
+                    "usr": "s:21SelfieCaptureProvider0abC5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SelfieCaptureProviderError",
+                        "printedName": "SelfieCaptureProvider.SelfieCaptureProviderError",
+                        "usr": "s:21SelfieCaptureProvider0abC5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21SelfieCaptureProvider0abC5ErrorO20invalidConfigurationyA2CmF",
+            "mangledName": "$s21SelfieCaptureProvider0abC5ErrorO20invalidConfigurationyA2CmF",
             "moduleName": "SelfieCaptureProvider"
           },
           {
@@ -1028,13 +1052,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(any NeoInterfaces.DocumentCaptureSettings)?",
+                "printedName": "NeoInterfaces.DocumentCaptureSettings?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "DocumentCaptureSettings",
-                    "printedName": "any NeoInterfaces.DocumentCaptureSettings",
-                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsP"
+                    "printedName": "NeoInterfaces.DocumentCaptureSettings",
+                    "usr": "s:13NeoInterfaces23DocumentCaptureSettingsC"
                   }
                 ],
                 "usr": "s:Sq"
@@ -1061,8 +1085,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21SelfieCaptureProvider0aB9PresenterC06selfieB8Listener0eB8Settings26idCameraControllerDelegate07licenseC0AcA0abF0_p_13NeoInterfaces08DocumentbG0_pSg010IDLiveFaceI008IDCamerajK0_pSgAI07LicenseC8Contract_ptKcfc",
-            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC06selfieB8Listener0eB8Settings26idCameraControllerDelegate07licenseC0AcA0abF0_p_13NeoInterfaces08DocumentbG0_pSg010IDLiveFaceI008IDCamerajK0_pSgAI07LicenseC8Contract_ptKcfc",
+            "usr": "s:21SelfieCaptureProvider0aB9PresenterC06selfieB8Listener0eB8Settings26idCameraControllerDelegate07licenseC0AcA0abF0_p_13NeoInterfaces08DocumentbG0CSg010IDLiveFaceI008IDCamerajK0_pSgAI07LicenseC8Contract_ptKcfc",
+            "mangledName": "$s21SelfieCaptureProvider0aB9PresenterC06selfieB8Listener0eB8Settings26idCameraControllerDelegate07licenseC0AcA0abF0_p_13NeoInterfaces08DocumentbG0CSg010IDLiveFaceI008IDCamerajK0_pSgAI07LicenseC8Contract_ptKcfc",
             "moduleName": "SelfieCaptureProvider",
             "declAttributes": [
               "AccessControl"
@@ -3159,133 +3183,133 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "StringLiteral",
       "offset": 447,
       "length": 15,
       "value": "\"idFaceCapture\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "StringLiteral",
       "offset": 573,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "BooleanLiteral",
       "offset": 879,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "IntegerLiteral",
       "offset": 935,
       "length": 2,
       "value": "19"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "IntegerLiteral",
       "offset": 983,
       "length": 2,
       "value": "19"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "StringLiteral",
       "offset": 1047,
       "length": 18,
       "value": "\"idv_selfie_error\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "BooleanLiteral",
       "offset": 1106,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/SelfieCapturePresenter.swift",
       "kind": "StringLiteral",
       "offset": 1179,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
       "kind": "IntegerLiteral",
       "offset": 334,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
       "kind": "IntegerLiteral",
       "offset": 344,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
       "kind": "IntegerLiteral",
       "offset": 353,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
       "kind": "FloatLiteral",
       "offset": 363,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/CameraOverlayView.swift",
       "kind": "BooleanLiteral",
       "offset": 403,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
       "kind": "IntegerLiteral",
       "offset": 356,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
       "kind": "IntegerLiteral",
       "offset": 366,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
       "kind": "IntegerLiteral",
       "offset": 375,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
       "kind": "FloatLiteral",
       "offset": 385,
       "length": 4,
       "value": "0.75"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
       "kind": "BooleanLiteral",
       "offset": 426,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/SelfieCaptureProvider\/SelfieCapture\/OvalCameraOverlayView.swift",
       "kind": "IntegerLiteral",
       "offset": 666,
       "length": 1,

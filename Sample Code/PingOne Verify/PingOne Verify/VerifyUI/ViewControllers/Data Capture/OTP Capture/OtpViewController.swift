@@ -118,6 +118,7 @@ class OtpViewController: BaseViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         let stopAppEvent = AppEvent(key: AppEventConstants.DATA_CAPTURE_OTP_STOP, value: self.documentType.rawValue + "_" + DateUtil.getCurrentDate())
         let otpNumberEvent = AppEvent(key: AppEventConstants.DATA_CAPTURE_NUMBER_OF_OTPS, value: self.documentType.rawValue + "_" + String(describing: self.otpCount))
         let otpTriesEvent = AppEvent(key: AppEventConstants.DATA_CAPTURE_OTP_TRIES, value: self.documentType.rawValue + "_" + String(describing: self.otpTries))

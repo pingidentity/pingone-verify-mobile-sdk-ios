@@ -57,27 +57,39 @@ class RetryViewController: BaseViewController {
         //NEO-5326: Cancel button is hidden in retry as per design
         self.cancelButton.isHidden = true
 
-        if let headerAttributedText = AttributedStringProvider.shared.fetchAttributedStringFor("idv_retry") {
+        if documentType == .NFC {
+            headerLabel.text = "idv_nfc_retry_title".localized
+            // The session-expiry countdown is not meaningful on the NFC retry screen — hide it.
+            self.timerLabel?.isHidden = true
+        } else if let headerAttributedText = AttributedStringProvider.shared.fetchAttributedStringFor("idv_retry") {
             self.headerLabel.attributedText = headerAttributedText
         } else {
             self.headerLabel.text = "idv_retry".localized
         }
         if let feedback = retryFeedback {
-            reasonLabel.text = (feedback.languagePackKey ?? feedback.message).localized
+            reasonLabel.text = documentType == .NFC ? "idv_nfc_retry_message".localized : (feedback.languagePackKey ?? feedback.message).localized
         }
     }
-    
+
     @IBAction func closeButtonTapped(_ sender: Any) {
+        // For NFC, core's observer reports the cancelled attempt to the backend (instead of
+        // ending the transaction) and PingOneVerifyHelper's abandonment observer skips it —
+        // see the `documentType == .NFC` checks on both observers of this notification.
         NotificationCenter.default.post(name: Notification.Name(rawValue: PingOneVerifyNotification.CANCELED_NOTIFICATION_CENTER_KEY), object: documentType, userInfo: [:])
     }
-    
+
     @IBAction func retryButtonTapped(_ sender: Any) {
         retryButton.preventRepeatedClicks()
         guard let nav = self.navigationController else { return }
+        guard let documentCaptureSettings else { return }
         if documentType == .SELFIE {
-            coordinator?.captureSelfie(from: nav)
+            coordinator?.captureSelfie(from: nav, settings: documentCaptureSettings)
+        } else if documentType == .NFC {
+            // captureNfc expects the presenting view controller (not the nav itself) and
+            // derives the navigation controller from it.
+            coordinator?.captureNfc(from: self, settings: documentCaptureSettings)
         } else if documentType.isGovernmentIdClass {
-            coordinator?.captureGovernmentId(from: nav)
+            coordinator?.captureGovernmentId(from: nav, settings: documentCaptureSettings)
         }
     }
     
