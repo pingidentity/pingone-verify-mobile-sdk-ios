@@ -1390,7 +1390,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_ENTITLEMENTS = "PingOne Verify/PingOne Verify.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				DISABLE_XCFRAMEWORKS_SIGNATURE_CHECKING = YES;
@@ -1410,7 +1410,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.2.0;
+				MARKETING_VERSION = 4.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1430,7 +1430,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_ENTITLEMENTS = "PingOne Verify/PingOne Verify.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = YZYUGL7S48;
 				DISABLE_XCFRAMEWORKS_SIGNATURE_CHECKING = YES;
@@ -1450,7 +1450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.2.0;
+				MARKETING_VERSION = 4.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pingidentity.sdk.pingoneverify.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
