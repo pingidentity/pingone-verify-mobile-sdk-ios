@@ -47,6 +47,15 @@ class QRScannerViewController: UIViewController, SCImageProcessingDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // VoiceOver: land the cursor on the scan instruction so the screen's purpose is
+        // announced first (NEO-6568). The screen has no nav title; the instruction label is
+        // the header-equivalent.
+        if UIAccessibility.isVoiceOverRunning {
+            DispatchQueue.main.async {
+                UIAccessibility.post(notification: .screenChanged, argument: self.qrLabel)
+            }
+        }
         self.restartScanner()
     }
     

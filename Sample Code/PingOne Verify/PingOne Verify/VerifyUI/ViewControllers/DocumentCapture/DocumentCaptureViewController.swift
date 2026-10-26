@@ -33,9 +33,16 @@ class DocumentCaptureViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpConstraintsForSmallScreenDevices()
-        
+
         self.updateImage(with: IconImageView.appearance().tintColor)
-        
+
+        // VoiceOver: announce this screen's header first on arrival (NEO-6568).
+        self.headerTextLabel.accessibilityTraits = [.staticText, .header]
+        self.accessibilityHeaderElement = self.headerTextLabel
+        // Only the title is announced on arrival; the icon's description ("Illustration of …") is
+        // hidden until shortly after, so it is still read when the user touches or swipes to it.
+        self.arrivalDeferredAccessibilityViews = [self.imageView]
+
         if self.documentType == .SELFIE && documentCaptureSettings?.isAuthflow == true {
             self.startCapture()
         }
@@ -92,6 +99,19 @@ class DocumentCaptureViewController: BaseViewController {
         } else {
             self.imageView.image = UIImage.loadImage(named: self.documentType.iconName)
         }
+        self.updateImageAccessibility()
+    }
+
+    /// Exposes the instructional icon to VoiceOver / Speak Screen (NEO-6533 / NEO-6566). Icon-less types have no image and stay non-accessible.
+    private func updateImageAccessibility() {
+        guard self.imageView.image != nil else {
+            self.imageView.isAccessibilityElement = false
+            self.imageView.accessibilityLabel = nil
+            return
+        }
+        self.imageView.isAccessibilityElement = true
+        self.imageView.accessibilityLabel = "idv_icon_accessibility_\(self.documentType.iconName)".localized
+        self.imageView.accessibilityTraits = .image
     }
     
     internal func setLabelDescriptions() {

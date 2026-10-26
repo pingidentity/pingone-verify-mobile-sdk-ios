@@ -44,7 +44,15 @@ internal class SelfiePreviewViewController: BaseViewController {
         self.previewImageView.contentMode = .scaleAspectFill
         self.previewImageView.image = self.captureResult.selfie.toImage()
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // VoiceOver: tell the user the capture succeeded and what this screen is (NEO-6574).
+        // Invisible — posted as an announcement, no visible label; text is localizable and
+        // overridable via the remote language pack.
+        UIAccessibility.announceCaptureGuidance("idv_selfie_review_announcement".localized)
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
@@ -56,7 +64,10 @@ internal class SelfiePreviewViewController: BaseViewController {
         self.closeButton.setTitle(nil, for: .normal)
         self.closeButton.backgroundColor = .clear
         self.closeButton.setImage(UIImage.loadImage(named: "idv_cancel")?.withTintColor(UIColor.loadColor(named: "idv_selfie_close") ?? .white), for: .normal)
-        
+        // VoiceOver: read "Cancel", not the image file name; not on arrival, only on touch/swipe.
+        self.closeButton.accessibilityLabel = "idv_cancel".localized
+        self.arrivalDeferredAccessibilityViews = [self.closeButton]
+
         self.timerLabel?.isHidden = true
     }
 

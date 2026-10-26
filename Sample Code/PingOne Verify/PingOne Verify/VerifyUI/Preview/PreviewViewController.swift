@@ -27,13 +27,14 @@ class PreviewViewController: BaseViewController {
         super.viewDidLoad()
         setUpUIComponents()
         setUpPreview()
+        setUpAccessibilityAnnouncement()
     }
-    
+
      override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setUpConstraintsForSmallScreenDevices()
     }
-    
+
      override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -70,6 +71,28 @@ class PreviewViewController: BaseViewController {
         self.retakeButton.titleLabel?.textColor = AppthemeHandler.borderedButtonTextColor
     }
     
+    /// VoiceOver: tell the user the scan succeeded and what this screen is (NEO-6568). An invisible
+    /// 1x1 element carries the localizable text (overridable via the remote language pack) and is
+    /// the screen's accessibility header, so BaseViewController moves the VoiceOver cursor to it
+    /// on arrival — ahead of the nav-bar back button.
+    private func setUpAccessibilityAnnouncement() {
+        let announcementElement = UIView()
+        announcementElement.translatesAutoresizingMaskIntoConstraints = false
+        announcementElement.backgroundColor = .clear
+        announcementElement.isAccessibilityElement = true
+        announcementElement.accessibilityLabel = "idv_id_review_announcement".localized
+        announcementElement.accessibilityTraits = [.staticText, .header]
+        view.addSubview(announcementElement)
+        NSLayoutConstraint.activate([
+            announcementElement.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            announcementElement.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            announcementElement.widthAnchor.constraint(equalToConstant: 1),
+            announcementElement.heightAnchor.constraint(equalToConstant: 1)
+        ])
+        accessibilityHeaderElement = announcementElement
+        alwaysPostHeaderFocus = true
+    }
+
     func setUpPreview() {
         if let data = captureResult?.documentData {
             if let frontImage = data["frontImage"] {
@@ -83,6 +106,28 @@ class PreviewViewController: BaseViewController {
                 self.backImage.isHidden = true
             }
         }
+        self.maskImageForVoiceOver(self.frontImage, label: "idv_id_front_image_label".localized)
+        self.maskImageForVoiceOver(self.backImage, label: "idv_id_back_image_label".localized)
+    }
+
+    /// VoiceOver: the ID images contain PII, and VoiceOver's image recognition can read the text
+    /// in an image element aloud. Hide the picture from VoiceOver and expose a plain text-labelled
+    /// element over it instead, so only the label ("Front ID Image") is announced.
+    private func maskImageForVoiceOver(_ imageView: UIImageView, label: String) {
+        imageView.isAccessibilityElement = false
+        let labelElement = UIView()
+        labelElement.translatesAutoresizingMaskIntoConstraints = false
+        labelElement.backgroundColor = .clear
+        labelElement.isAccessibilityElement = true
+        labelElement.accessibilityLabel = label
+        labelElement.accessibilityTraits = .staticText
+        imageView.addSubview(labelElement)
+        NSLayoutConstraint.activate([
+            labelElement.topAnchor.constraint(equalTo: imageView.topAnchor),
+            labelElement.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
+            labelElement.leadingAnchor.constraint(equalTo: imageView.leadingAnchor),
+            labelElement.trailingAnchor.constraint(equalTo: imageView.trailingAnchor)
+        ])
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {

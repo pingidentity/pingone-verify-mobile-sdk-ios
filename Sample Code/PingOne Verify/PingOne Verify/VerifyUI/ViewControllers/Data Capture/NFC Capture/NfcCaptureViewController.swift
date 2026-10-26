@@ -29,6 +29,10 @@ class NfcCaptureViewController: BaseViewController {
         self.continueButton.setTitle("idv_dataCapture_button".localized, for: .normal)
         self.headerLabel.text = "idv_nfc_title".localized
         self.descriptionLabel.text = "idv_nfc_description".localized
+        // VoiceOver: announce this screen's title first on arrival, instead of whatever the
+        // previous screen left focused (e.g. "Is it clear?" from the ID review).
+        self.headerLabel.accessibilityTraits = [.staticText, .header]
+        self.accessibilityHeaderElement = self.headerLabel
         self.updateIconImage()
     }
 

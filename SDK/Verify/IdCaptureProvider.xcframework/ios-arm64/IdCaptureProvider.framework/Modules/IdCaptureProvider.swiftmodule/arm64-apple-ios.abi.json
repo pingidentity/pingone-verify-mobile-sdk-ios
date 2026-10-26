@@ -1069,35 +1069,42 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
       "kind": "StringLiteral",
       "offset": 1777,
       "length": 16,
       "value": "\"MB_license_key\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
       "kind": "StringLiteral",
       "offset": 1828,
       "length": 43,
       "value": "\"com.pingidentity.sdk.pingoneverify.sample\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
       "kind": "StringLiteral",
       "offset": 1908,
       "length": 10,
-      "value": "\"8001.0.0\""
+      "value": "\"8002.0.2\""
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/IdCaptureProviders.swift",
+      "kind": "StringLiteral",
+      "offset": 1967,
+      "length": 29,
+      "value": "\"BlinkIDResourceCacheVersion\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
       "kind": "Array",
       "offset": 2148,
       "length": 116,
       "value": "[\"documentImage\", \"faceImage\", \"inputImage\", \"signatureImage\", \"barcodeInputImage\", \"barcodeInputImageScanningSide\"]"
     },
     {
-      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify_bkp\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
+      "filePath": "\/Users\/amahuri\/Desktop\/Ping_Verify\/idv_sdk_ios\/IdCaptureProvider\/IdCapture\/ResultSanitizer.swift",
       "kind": "StringLiteral",
       "offset": 2438,
       "length": 5,

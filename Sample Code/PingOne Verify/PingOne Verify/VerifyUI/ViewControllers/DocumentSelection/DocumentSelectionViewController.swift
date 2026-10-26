@@ -63,7 +63,7 @@ class DocumentSelectionViewController: BaseViewController {
         return [
             DocumentModel(documentType: .DRIVER_LICENSE, textValue: "idv_documentCapture_option_license".localized),
             DocumentModel(documentType: .PASSPORT, textValue: "idv_documentCapture_option_passport".localized),
-            DocumentModel(documentType: .PASSPORT, textValue: "idv_documentCapture_option_card".localized),
+            DocumentModel(documentType: .PASSPORT_CARD, textValue: "idv_documentCapture_option_card".localized),
             DocumentModel(documentType: .OTHER, textValue: "idv_documentCapture_option_other".localized)
         ]
     }

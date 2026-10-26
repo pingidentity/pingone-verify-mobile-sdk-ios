@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "idv_lightbulb.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
