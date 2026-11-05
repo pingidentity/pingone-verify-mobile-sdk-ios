@@ -42,7 +42,7 @@ internal class DocumentCapturePresenter: DocumentCaptureContract {
                         otpViewController.showProcessing = showProcessing
                         pingOneNavController.pushViewController(otpViewController, animated: false)
                     } else {
-                        CustomToastView.display(isError: true, text: DocumentCaptureError.otpInformationMissing.localizedDescription ?? "")
+                        CustomToastView.display(isError: true, text: DocumentCaptureError.otpInformationMissing.localizedDescription ?? "", in: pingOneNavController.view)
                     }
                 } else {
                     let emailCaptureViewController = EmailCaptureViewController.getViewController(coordinator: coordinator, documentCaptureSettings: documentCaptureSetting, documentType: documentCaptureSetting.documentType)
@@ -55,7 +55,7 @@ internal class DocumentCapturePresenter: DocumentCaptureContract {
                         otpViewController.showProcessing = showProcessing
                         pingOneNavController.pushViewController(otpViewController, animated: false)
                     } else {
-                        CustomToastView.display(isError: true, text: DocumentCaptureError.otpInformationMissing.localizedDescription ?? "")
+                        CustomToastView.display(isError: true, text: DocumentCaptureError.otpInformationMissing.localizedDescription ?? "", in: pingOneNavController.view)
                     }
                 } else {
                     let phoneCaptureViewController = PhoneCaptureViewController.getViewController(coordinator: coordinator, documentCaptureSettings: documentCaptureSetting, documentType: documentCaptureSetting.documentType)
