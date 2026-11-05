@@ -149,6 +149,7 @@
 		63D512262FD80CD400E60C60 /* IdCaptureProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63D512272FD80CDA00E60C60 /* SelfieCaptureProvider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */; };
 		63D512282FD80CDA00E60C60 /* SelfieCaptureProvider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63F5A1B02E0B7C9000A1B2C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5A1AF2E0B7C9000A1B2C3 /* SceneDelegate.swift */; };
 		72F04C782E5E336500238971 /* CryptoTools.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; };
 		72F04C792E5E336500238971 /* CryptoTools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C702E5E334700238971 /* CryptoTools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72F04C822E5E336500238971 /* JOSESwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F04C712E5E334700238971 /* JOSESwift.xcframework */; };
@@ -341,6 +342,7 @@
 		63CBDEB72FEF0F0400E6C75E /* VerifyUIExports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyUIExports.swift; sourceTree = "<group>"; };
 		63D512212FD80CBD00E60C60 /* IdCaptureProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IdCaptureProvider.xcframework; sourceTree = "<group>"; };
 		63D512222FD80CBD00E60C60 /* SelfieCaptureProvider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SelfieCaptureProvider.xcframework; sourceTree = "<group>"; };
+		63F5A1AF2E0B7C9000A1B2C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		72F04C702E5E334700238971 /* CryptoTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoTools.xcframework; sourceTree = "<group>"; };
 		72F04C712E5E334700238971 /* JOSESwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JOSESwift.xcframework; sourceTree = "<group>"; };
 		72F04C722E5E334700238971 /* JoseTools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = JoseTools.xcframework; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				63CBDEB82FEF0F0400E6C75E /* VerifyUI */,
 				63C36EBA2DAF98C800F51EE6 /* CompletedViewController.swift */,
 				1C4253702909C178008E871B /* AppDelegate.swift */,
+				63F5A1AF2E0B7C9000A1B2C3 /* SceneDelegate.swift */,
 				1C4253742909C178008E871B /* ViewController.swift */,
 				1C4253842909C286008E871B /* Main.storyboard */,
 				1C42537B2909C179008E871B /* LaunchScreen.storyboard */,
@@ -1243,6 +1246,7 @@
 				63C36EBB2DAF98C800F51EE6 /* CompletedViewController.swift in Sources */,
 				1C4253752909C178008E871B /* ViewController.swift in Sources */,
 				1C4253712909C178008E871B /* AppDelegate.swift in Sources */,
+				63F5A1B02E0B7C9000A1B2C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

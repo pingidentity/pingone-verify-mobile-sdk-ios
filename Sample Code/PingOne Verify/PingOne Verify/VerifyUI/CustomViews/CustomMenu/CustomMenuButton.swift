@@ -78,11 +78,19 @@ class CustomMenuButton<T: CustomMenuItemCell>: UIButton {
             }
         }
 
+        if self.menuWindow == nil {
+            self.configureMenuWindow()
+        }
+
+        guard let menuWindow = self.menuWindow else {
+            return
+        }
+
         let menuFrame = self.calculateMenuFrame()
         self.menuTable.frame = menuFrame
         self.menuTable.backgroundColor = UIColor.white
 
-        self.menuWindow?.addSubview(self.menuTable)
+        menuWindow.addSubview(self.menuTable)
 
         self.menuTable.setMenuItems(title: self.title, self.cellContent) { index in
             guard index >= 0 else {
@@ -93,11 +101,11 @@ class CustomMenuButton<T: CustomMenuItemCell>: UIButton {
             action.handler?(action)
         }
         
-        self.menuWindow?.makeKeyAndVisible()
+        menuWindow.makeKeyAndVisible()
     }
     
     private func calculateMenuFrame() -> CGRect {
-        let screenSize = UIScreen.main.bounds
+        let screenSize = self.window?.windowScene?.screen.bounds ?? UIScreen.main.bounds
         let safeAreaTopPadding = self.window?.safeAreaInsets.top ?? 0
         let safeAreaBottomPadding = self.window?.safeAreaInsets.bottom ?? 0
         let buttonFrame = self.frame
@@ -130,13 +138,26 @@ class CustomMenuButton<T: CustomMenuItemCell>: UIButton {
     }
     
     private func configureMenuWindow() {
-        self.menuWindow = UIWindow(frame: self.window?.frame ?? UIScreen.main.bounds)
+        guard let windowScene = self.resolveWindowScene() else {
+            return
+        }
+
+        self.menuWindow = UIWindow(windowScene: windowScene)
         self.menuWindow?.windowLevel = .alert
         self.menuWindow?.isUserInteractionEnabled = true
-        
+
         self.tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.onMenuSuperViewTap(_:)))
         self.tapGestureRecognizer.cancelsTouchesInView = false
         self.menuWindow?.addGestureRecognizer(self.tapGestureRecognizer)
+    }
+
+    private func resolveWindowScene() -> UIWindowScene? {
+        if let scene = self.window?.windowScene {
+            return scene
+        }
+
+        let foregroundScenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+        return foregroundScenes.first { $0.activationState == .foregroundActive } ?? foregroundScenes.first
     }
     
     @objc func onMenuSuperViewTap(_ sender: UITapGestureRecognizer) {
