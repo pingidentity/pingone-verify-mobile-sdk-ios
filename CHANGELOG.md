@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.3.1 - November 5th, 2026
+
+### Added
+- Updated the sample app for Xcode 27 scene lifecycle compatibility.
+
 ## v4.3.0 - October 13th, 2026
 
 ### Added

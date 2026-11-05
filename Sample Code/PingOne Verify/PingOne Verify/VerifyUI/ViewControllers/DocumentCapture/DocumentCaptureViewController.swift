@@ -145,7 +145,7 @@ class DocumentCaptureViewController: BaseViewController {
             } else if self.documentType.isGovernmentIdClass {
                 if let nav = self.navigationController { self.coordinator?.captureGovernmentId(from: nav) }
             } else {
-                CustomToastView.display(isError: true, text: DocumentCaptureError.initError("Cannot start capture").localizedDescription ?? "")
+                CustomToastView.display(isError: true, text: DocumentCaptureError.initError("Cannot start capture").localizedDescription ?? "", in: self.view)
             }
         } else {
             self.requestCameraPermission(dismiss: false)

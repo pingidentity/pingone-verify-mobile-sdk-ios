@@ -196,7 +196,7 @@ class OtpViewController: BaseViewController {
 internal func showError() {
         DispatchQueue.main.async {
             self.otpTextField.updateColor(isError: true)
-            CustomToastView.display(isError: true, text: "idv_otp_invalid_code_error_description".localized)
+            CustomToastView.display(isError: true, text: "idv_otp_invalid_code_error_description".localized, in: self.view)
             self.submitButtonEnabled(value: false)
         }
     }
