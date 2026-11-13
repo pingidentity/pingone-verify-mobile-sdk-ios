@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		V/wx+1Jlu4ih+/dRw1h5Qofcn08=
+		6bdQkBivVNij2Vn4QeBnp9bBo48=
 		</data>
 		<key>LabelCell.nib</key>
 		<data>
@@ -150,11 +150,11 @@
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		fwPSuhMpOVyT4PzgIIqHxevth7Y=
+		zJ6Oc7z3FR8X8vbhLv3N1fMavww=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		8QsJWXAn1sAamRudkTuMlCSMUrE=
+		Mp4CgwHqkdeKRNis82kPruEasiM=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -162,19 +162,19 @@
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8QsJWXAn1sAamRudkTuMlCSMUrE=
+		Mp4CgwHqkdeKRNis82kPruEasiM=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		heBH1MYEicy4ifQHutXLNh7mjqU=
+		9xrqUNPYm1u6HcpWjLeGhRjxVwQ=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		fwPSuhMpOVyT4PzgIIqHxevth7Y=
+		zJ6Oc7z3FR8X8vbhLv3N1fMavww=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		RLCNelOxY+chvtS18dySpz0unWE=
+		FEazpdAaEiIO5H5CTU+UB3cPP1c=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -182,11 +182,11 @@
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		RLCNelOxY+chvtS18dySpz0unWE=
+		FEazpdAaEiIO5H5CTU+UB3cPP1c=
 		</data>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eb+YXGrbN/OaVE2TLqahLHe+x/o=
+		Y3tO98k5CCRzIJs4yzV9M2/zdVA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>PingOneVerifyLocalizable.strings</key>
 		<data>
-		ZcNGVvQia+61SFzN4eOwjJIIOqg=
+		Y/S3LNs2lt0c8cCaT38YJK+jqlE=
 		</data>
 		<key>PreviewViewController.nib</key>
 		<data>
@@ -504,14 +504,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q01+ObMoKbVJGaMhweUcQPU9iGvWsbYiwHMw1c8mT5o=
+			GXfj/xPfvrQH/ffzADT7uMSttvZiz38p8SGdLFjq4G0=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xk3xYOp6OduowrNuoHFJsOsBhOnlSfvdeGVrWTYTihw=
+			gUuSBm+S2uzKIoTmzjq3kNRANP3zViHB0kw+xoYtSzs=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -525,28 +525,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xk3xYOp6OduowrNuoHFJsOsBhOnlSfvdeGVrWTYTihw=
+			gUuSBm+S2uzKIoTmzjq3kNRANP3zViHB0kw+xoYtSzs=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IbZNJZZnvcYW77/zEjDX8sIEY2Y0qOlCVR6UKMRVSbw=
+			/BRkqv/I6inI3bALa+otLP4uugXAYB9Phpr5B96RvPo=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q01+ObMoKbVJGaMhweUcQPU9iGvWsbYiwHMw1c8mT5o=
+			GXfj/xPfvrQH/ffzADT7uMSttvZiz38p8SGdLFjq4G0=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WvHzOaaC1gMh6vCDMZuMprIIlekTeQgk2JNB1DsQyqs=
+			3jyAn3Llak/DVK2vNzqh62x2ErNWNuMUVkcx4OvqHmw=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -560,14 +560,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WvHzOaaC1gMh6vCDMZuMprIIlekTeQgk2JNB1DsQyqs=
+			3jyAn3Llak/DVK2vNzqh62x2ErNWNuMUVkcx4OvqHmw=
 			</data>
 		</dict>
 		<key>Modules/PingOneVerify.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vkLdLbsqVAK8ACk5HUXIUPGnOLbDrqEDfshmKmfAjC0=
+			1WiBLz+GShoomIXE6sok8/1V9Ne5mv/YPoCvw+og/4g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -595,7 +595,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G7+ruyYKOk5v1CSdUOt29TEsZRyZqTViiMPetTAdqwI=
+			yEiUDd6jIC7kljUg1LqjjN2GSeNNPwnXRshSeJfc0Ow=
 			</data>
 		</dict>
 		<key>PreviewViewController.nib</key>

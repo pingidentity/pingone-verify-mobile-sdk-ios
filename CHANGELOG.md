@@ -1,13 +1,19 @@
 # Changelog
 
-## v3.4.1 - Sept 30th, 2026
+## v3.4.2 - November 13th, 2026
+
+### Fixed
+
+- Voiceover hierarchy changed to announce headers.
+
+## v3.4.1 - September 30th, 2026
 
 ### Fixed
 
 - Added accessibility labels to images on the verify info screen.
 - Added VoiceOver support for selfie camera error messages
 
-## v3.4.0 - Sept 11th, 2026
+## v3.4.0 - September 11th, 2026
 
 ### Fixed
 
