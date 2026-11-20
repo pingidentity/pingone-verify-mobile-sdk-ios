@@ -1,0 +1,4 @@
+framework module BlinkID {
+  header "BlinkID.h"
+  requires objc
+}
