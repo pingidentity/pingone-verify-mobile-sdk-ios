@@ -25263,21 +25263,28 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIAccessibility\/UIAccessibility+CaptureGuidance.swift",
       "kind": "IntegerLiteral",
-      "offset": 1315,
+      "offset": 1862,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIAccessibility\/UIAccessibility+CaptureGuidance.swift",
       "kind": "IntegerLiteral",
-      "offset": 2031,
+      "offset": 1880,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIAccessibility\/UIAccessibility+CaptureGuidance.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3320,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIAccessibility\/UIAccessibility+CaptureGuidance.swift",
       "kind": "FloatLiteral",
-      "offset": 2095,
+      "offset": 3384,
       "length": 3,
       "value": "0.6"
     },
@@ -25798,6 +25805,34 @@
       "offset": 671,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 816,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 4241,
+      "length": 3,
+      "value": "1.5"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 4384,
+      "length": 4,
+      "value": "0.35"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 6363,
+      "length": 4,
+      "value": "0.35"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/Types\/DocumentPayload.swift",
@@ -27943,52 +27978,101 @@
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 500,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 493,
+      "offset": 603,
       "length": 10,
       "value": "\"8001.0.1\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 549,
+      "offset": 659,
       "length": 43,
       "value": "\"com.pingidentity.sdk.pingoneverify.sample\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 646,
+      "offset": 756,
       "length": 16,
       "value": "\"MB_license_key\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 698,
+      "offset": 808,
       "length": 7,
       "value": "\"2.4.3\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "Array",
+      "offset": 8659,
+      "length": 145,
+      "value": "[\"mb_front_instructions\", \"mb_back_instructions\", \"mb_barcode_instructions\", \"mb_barcode_id_instructions\"]"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7756,
+      "offset": 8852,
+      "length": 23,
+      "value": "\"\u0001__missing__\u0001\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 9139,
       "length": 21,
       "value": "\"BlinkIDUX_BlinkIDUX\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7794,
+      "offset": 9177,
       "length": 8,
       "value": "\"bundle\""
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
       "kind": "StringLiteral",
-      "offset": 9824,
+      "offset": 13444,
       "length": 7,
       "value": "\"error\""
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14719,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14748,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14838,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/IdCapture\/ViewControllers\/IdCaptureViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 14890,
+      "length": 3,
+      "value": "0.3"
     },
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/AppTheme\/Providers\/AppthemeHandler.swift",
