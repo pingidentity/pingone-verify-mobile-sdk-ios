@@ -25420,6 +25420,13 @@
       "value": "0.6"
     },
     {
+      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/Extensions\/UIAccessibility\/UIViewController+ScrollViewEmbed.swift",
+      "kind": "Array",
+      "offset": 6458,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/Utils\/ResultSanitizer.swift",
       "kind": "Array",
       "offset": 2148,
@@ -25947,21 +25954,7 @@
     {
       "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 4149,
-      "length": 3,
-      "value": "1.5"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 4292,
-      "length": 4,
-      "value": "0.35"
-    },
-    {
-      "filePath": "\/Users\/amahuri\/Desktop\/Project Repo Backup\/idv_sdk_ios\/PingOneVerify\/ViewControllers\/BaseViewController.swift",
-      "kind": "FloatLiteral",
-      "offset": 7062,
+      "offset": 7727,
       "length": 4,
       "value": "0.35"
     },
